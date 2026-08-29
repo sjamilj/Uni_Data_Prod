@@ -1,0 +1,1664 @@
+{
+  "university": "University of Hull",
+  "cleaned_at": "2026-08-28",
+  "courses": [
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/accounting-and-finance-research-degrees",
+      "source_html": "course_pages/Accounting and Finance research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/accounting-and-finance-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/accounting-and-finance-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/american-studies-research-degrees",
+      "source_html": "course_pages/American Studies research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/american-studies-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/american-studies-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/biochemistry-research-degrees",
+      "source_html": "course_pages/Biochemistry research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/biochemistry-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/biochemistry-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/biological-and-environmental-sciences-research-degrees",
+      "source_html": "course_pages/Biological and Environmental Science research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/biological-and-environmental-sciences-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/biological-and-environmental-sciences-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/biomedical-science-research-degrees",
+      "source_html": "course_pages/Biomedical Science research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/biomedical-science-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/biomedical-science-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/business-and-management-research-degrees",
+      "source_html": "course_pages/Business and Management research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/business-and-management-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/business-and-management-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/clinical-psychology-doctorate",
+      "source_html": "course_pages/Clinical Psychology Doctorate _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/clinical-psychology-doctorate.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/clinical-psychology-doctorate",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/computer-science-research-degrees",
+      "source_html": "course_pages/Computer Science research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/computer-science-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/computer-science-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/criminology-research-degrees",
+      "source_html": "course_pages/Criminology research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/criminology-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/criminology-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/data-science-research-degrees",
+      "source_html": "course_pages/Data Science research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/data-science-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/data-science-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/digital-media-research-degrees",
+      "source_html": "course_pages/Digital Media research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/digital-media-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/digital-media-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/drama-research-degrees",
+      "source_html": "course_pages/Drama research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/drama-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/drama-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/economics-research-degrees",
+      "source_html": "course_pages/Economics research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/economics-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/economics-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/education-research-degrees",
+      "source_html": "course_pages/Education research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/education-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/education-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/engineering-research-degrees",
+      "source_html": "course_pages/Engineering research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/engineering-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/engineering-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/english-research-degrees",
+      "source_html": "course_pages/English research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/english-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/english-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/film-studies-research-degrees",
+      "source_html": "course_pages/Film Studies research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/film-studies-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/film-studies-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/geography-and-earth-science-research-degrees",
+      "source_html": "course_pages/Geography and Earth Science research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/geography-and-earth-science-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/geography-and-earth-science-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/health-nursing-and-midwifery-research-degrees",
+      "source_html": "course_pages/Health, Nursing and Midwifery research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/health-nursing-and-midwifery-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/health-nursing-and-midwifery-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/history-and-archaeology-research-degrees",
+      "source_html": "course_pages/History and Archaeology research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/history-and-archaeology-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/history-and-archaeology-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/law-research-degrees",
+      "source_html": "course_pages/Law research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/law-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/law-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/marketing-research-degrees",
+      "source_html": "course_pages/Marketing research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/marketing-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/marketing-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/mathematics-research-degrees",
+      "source_html": "course_pages/Mathematics research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/mathematics-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/mathematics-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/medicine-research-degrees",
+      "source_html": "course_pages/Postgraduate research _ Hull York Medical School.html",
+      "clean_md": "clean/courses/postgraduate_research/medicine-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/medicine-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/music-research-degrees",
+      "source_html": "course_pages/Music research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/music-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/music-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/philosophy-research-degrees",
+      "source_html": "course_pages/Philosophy research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/philosophy-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/philosophy-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/physics-and-astrophysics-research-degrees",
+      "source_html": "course_pages/Physics and Astrophysics research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/physics-and-astrophysics-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/physics-and-astrophysics-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/politics-security-and-international-studies-research-degrees",
+      "source_html": "course_pages/Politics, Security and International Studies research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/politics-security-and-international-studies-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/politics-security-and-international-studies-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/psychology-research-degrees",
+      "source_html": "course_pages/Psychology research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/psychology-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/psychology-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/social-work-research-degrees",
+      "source_html": "course_pages/Social Work research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/social-work-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/social-work-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/sociology-and-social-sciences-research-degrees",
+      "source_html": "course_pages/Sociology and Social Sciences research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/sociology-and-social-sciences-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/sociology-and-social-sciences-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/sport-health-and-exercise-science-research-degrees",
+      "source_html": "course_pages/Sport, Health and Exercise Science research degrees _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/sport-health-and-exercise-science-research-degrees.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-research/courses/sport-health-and-exercise-science-research-degrees",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/accounting-and-finance-msc",
+      "source_html": "course_pages/MSc Accounting and Finance _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/accounting-and-finance-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/accounting-and-finance-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/advanced-chemical-engineering-msc",
+      "source_html": "course_pages/MSc Advanced Chemical Engineering _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/advanced-chemical-engineering-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/advanced-chemical-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/advanced-clinical-practice-msc",
+      "source_html": "course_pages/MSc Advanced Clinical Practice _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/advanced-clinical-practice-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/advanced-clinical-practice-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/advanced-computer-science-msc",
+      "source_html": "course_pages/MSc Advanced Computer Science _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/advanced-computer-science-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/advanced-computer-science-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/ai-philosophy-and-ethics-msc",
+      "source_html": "course_pages/MSc AI, Philosophy and Ethics _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/ai-philosophy-and-ethics-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/ai-philosophy-and-ethics-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/artificial-intelligence-and-data-science-msc",
+      "source_html": "course_pages/Msc Artificial Intelligence and Data Science _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/artificial-intelligence-and-data-science-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/artificial-intelligence-and-data-science-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/artificial-intelligence-for-business-msc",
+      "source_html": "course_pages/MSc Artificial Intelligence for Business course _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/artificial-intelligence-for-business-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/artificial-intelligence-for-business-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/artificial-intelligence-for-engineering-msc",
+      "source_html": "course_pages/MSc Artificial Intelligence for Engineering _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/artificial-intelligence-for-engineering-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/artificial-intelligence-for-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/artificial-intelligence-for-healthcare-msc",
+      "source_html": "course_pages/MSc Artificial Intelligence for Healthcare _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/artificial-intelligence-for-healthcare-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/artificial-intelligence-for-healthcare-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/artificial-intelligence-msc-online",
+      "source_html": "course_pages/Online MSc in Artificial Intelligence _ University of Hull Online.html",
+      "clean_md": "clean/courses/postgraduate/msc-artificial-intelligence.md",
+      "source_url": "https://online.hull.ac.uk/courses/msc-artificial-intelligence",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/biomedical-engineering-msc",
+      "source_html": "course_pages/MSc Biomedical Engineering _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/biomedical-engineering-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/biomedical-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/biomedical-sciences-msc",
+      "source_html": "course_pages/MSc Biomedical Sciences _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/biomedical-sciences-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/biomedical-sciences-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/business-analytics-and-artificial-intelligence-msc",
+      "source_html": "course_pages/MSc Business Analytics and Artificial Intelligence _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/business-analytics-and-artificial-intelligence-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/business-analytics-and-artificial-intelligence-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/business-management-msc",
+      "source_html": "course_pages/MSc Business Management course _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/business-management-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/business-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/civil-engineering-msc",
+      "source_html": "course_pages/MSc Civil Engineering _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/civil-engineering-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/civil-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/clinical-anatomy-and-education-msc",
+      "source_html": "course_pages/PGCert, PGDip and MSc in Clinical Anatomy and Education _ Hull York Medical School.html",
+      "clean_md": "clean/courses/postgraduate/clinical-anatomy-and-education-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/clinical-anatomy-and-education-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/clinical-anatomy-msc",
+      "source_html": "course_pages/PGCert, PGDip and MSc in Clinical Anatomy _ Hull York Medical School.html",
+      "clean_md": "clean/courses/postgraduate/clinical-anatomy-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/clinical-anatomy-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/clinical-applications-of-psychology-msc",
+      "source_html": "course_pages/MSc Clinical Applications of Psychology _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/clinical-applications-of-psychology-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/clinical-applications-of-psychology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/clinical-practice-pgcert",
+      "source_html": "course_pages/PGCert Clinical Practice _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/clinical-practice-pgcert.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/clinical-practice-pgcert",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/coaching-and-mentoring-in-education-ma",
+      "source_html": "course_pages/MA Coaching and Mentoring in Education _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/coaching-and-mentoring-in-education-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/coaching-and-mentoring-in-education-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/computer-science-and-cyber-security-msc",
+      "source_html": "course_pages/MSc Computer Science and Cyber Security _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/computer-science-and-cyber-security-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/computer-science-and-cyber-security-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/computer-science-for-games-programming-msc",
+      "source_html": "course_pages/MSc Computer Science for Games Programming _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/computer-science-for-games-programming-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/computer-science-for-games-programming-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/creative-writing-and-english-literature-ma",
+      "source_html": "course_pages/MA Creative Writing and English Literature _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/creative-writing-and-english-literature-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/creative-writing-and-english-literature-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/creative-writing-ma-online",
+      "source_html": "course_pages/MA Creative Writing Online _ University of Hull Online.html",
+      "clean_md": "clean/courses/postgraduate/ma-creative-writing.md",
+      "source_url": "https://online.hull.ac.uk/courses/ma-creative-writing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/criminal-justice-and-crime-control-ma",
+      "source_html": "course_pages/MA Criminal Justice and Crime Control _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/criminal-justice-and-crime-control-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/criminal-justice-and-crime-control-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/data-science-and-artificial-intelligence-for-economics-msc",
+      "source_html": "course_pages/MSc Data Science and Artificial Intelligence for Economics _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/data-science-and-artificial-intelligence-for-economics-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/data-science-and-artificial-intelligence-for-economics-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/dementia-msc-online",
+      "source_html": "course_pages/Online MSc in Dementia Studies _ University of Hull Online.html",
+      "clean_md": "clean/courses/postgraduate/msc-dementia.md",
+      "source_url": "https://online.hull.ac.uk/courses/msc-dementia",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/digital-marketing-and-advertising-msc",
+      "source_html": "course_pages/MSc Digital Marketing and Advertising _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/digital-marketing-and-advertising-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/digital-marketing-and-advertising-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/digital-transformation-msc-online",
+      "source_html": "course_pages/Online MSc in Digital Transformation _ University of Hull Online.html",
+      "clean_md": "clean/courses/postgraduate/msc-digital-transformation.md",
+      "source_url": "https://online.hull.ac.uk/courses/msc-digital-transformation",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/early-childhood-and-education-ma",
+      "source_html": "course_pages/MA Early Childhood and Education _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/early-childhood-and-education-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/early-childhood-and-education-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/education-ma",
+      "source_html": "course_pages/MA Education _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/education-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/education-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/energy-engineering-msc",
+      "source_html": "course_pages/MSc Energy Engineering _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/energy-engineering-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/energy-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/engineering-management-msc-online",
+      "source_html": "course_pages/Online MSc in Engineering Management _ University of Hull Online.html",
+      "clean_md": "clean/courses/postgraduate/msc-engineering-management.md",
+      "source_url": "https://online.hull.ac.uk/courses/msc-engineering-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/english-literature-ma",
+      "source_html": "course_pages/MA English Literature _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/english-literature-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/english-literature-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/environmental-change-management-and-monitoring-msc",
+      "source_html": "course_pages/MSc Environmental Change, Management and Monitoring _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/environmental-change-management-and-monitoring-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/environmental-change-management-and-monitoring-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/financial-management-msc",
+      "source_html": "course_pages/MSc Financial Management _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/financial-management-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/financial-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/flood-risk-management-msc",
+      "source_html": "course_pages/MSc Flood Risk Management _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/flood-risk-management-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/flood-risk-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/forensic-science-msc",
+      "source_html": "course_pages/MSc Forensic Science Degree _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/forensic-science-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/forensic-science-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/global-mba-online",
+      "source_html": "course_pages/Global MBA Online _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/global-mba.md",
+      "source_url": "https://online.hull.ac.uk/courses/global-mba",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/health-and-climate-change-msc",
+      "source_html": "course_pages/MSc Health and Climate Change _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/health-and-climate-change-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/health-and-climate-change-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/health-professions-education-msc",
+      "source_html": "course_pages/PGCert, PGDip and MSc in Health Professions Education _ Hull York Medical School.html",
+      "clean_md": "clean/courses/postgraduate/health-professions-education-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/health-professions-education-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/health-research-msc",
+      "source_html": "course_pages/MSc Health Research _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/health-research-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/health-research-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/healthcare-leadership-msc-online",
+      "source_html": "course_pages/MSc Healthcare Leadership Online _ University of Hull Online.html",
+      "clean_md": "clean/courses/postgraduate/msc-healthcare-leadership.md",
+      "source_url": "https://online.hull.ac.uk/courses/msc-healthcare-leadership",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/higher-education-practice-ma",
+      "source_html": "course_pages/MA Higher Education Practice _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/higher-education-practice-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/higher-education-practice-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/history-ma",
+      "source_html": "course_pages/MA History _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/history-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/history-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/human-resource-management-msc",
+      "source_html": "course_pages/MSc Human Resource Management _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/human-resource-management-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/human-resource-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/immersive-design-in-extended-realities-ma",
+      "source_html": "course_pages/MA Immersive Design in Extended Realities _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/immersive-design-in-extended-realities-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/immersive-design-in-extended-realities-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/international-law",
+      "source_html": "course_pages/LLM International Law _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/international-law.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/international-law",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/international-law-human-rights-conflict-and-security-llm",
+      "source_html": "course_pages/LLM International Law (Human Rights, Conflict and Security) _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/international-law-human-rights-conflict-and-security-llm.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/international-law-human-rights-conflict-and-security-llm",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/international-politics-ma",
+      "source_html": "course_pages/MA International Politics _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/international-politics-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/international-politics-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/leadership-and-management-in-education-ma",
+      "source_html": "course_pages/MA Leadership and Management in Education _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/leadership-and-management-in-education-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/leadership-and-management-in-education-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/logistics-and-supply-chain-management-msc",
+      "source_html": "course_pages/MSc Logistics and Supply Chain Management _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/logistics-and-supply-chain-management-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/logistics-and-supply-chain-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/logistics-and-supply-chain-management-msc-online",
+      "source_html": "course_pages/Online MSc Logistics & Supply Chain Management _ University of Hull Online.html",
+      "clean_md": "clean/courses/postgraduate/msc-logistics-and-supply-chain-management.md",
+      "source_url": "https://online.hull.ac.uk/courses/msc-logistics-and-supply-chain-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/marine-conservation-msc",
+      "source_html": "course_pages/MSc Marine Conservation _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/marine-conservation-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/marine-conservation-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/marketing-management-msc",
+      "source_html": "course_pages/MSc Marketing Management _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/marketing-management-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/marketing-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/mathematics-msc",
+      "source_html": "course_pages/MSc Mathematics _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/mathematics-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/mathematics-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/mba",
+      "source_html": "course_pages/MBA (part time) _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/mba.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/mba",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/mechanical-engineering-msc",
+      "source_html": "course_pages/MSc Mechanical Engineering _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/mechanical-engineering-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/mechanical-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/midwifery-msc",
+      "source_html": "course_pages/MSc Midwifery _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/midwifery-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/midwifery-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/midwifery-short-programme-msc",
+      "source_html": "course_pages/MSc Midwifery (Short Programme) _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/midwifery-short-programme-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/midwifery-short-programme-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/music-mmus",
+      "source_html": "course_pages/MMus Music _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/music-mmus.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/music-mmus",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/nebosh-environmental-management-msc-mres",
+      "source_html": "course_pages/NEBOSH MSc_MRes Environmental Management _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/nebosh-environmental-management-msc-mres.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/nebosh-environmental-management-msc-mres",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/nebosh-occupational-health-and-safety-management-msc-mres-online",
+      "source_html": "course_pages/NEBOSH MSc_MRes Occupational Health and Safety Management _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/nebosh-occupational-health-and-safety-management-msc-mres-online.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/nebosh-occupational-health-and-safety-management-msc-mres-online",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/nebosh-occupational-health-safety-environmental-management-msc-mres-online",
+      "source_html": "course_pages/NEBOSH MSc_Res Occupational Health Safety and Environmental Management _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate_research/nebosh-occupational-health-safety-environmental-management-msc-mres-online.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/nebosh-occupational-health-safety-environmental-management-msc-mres-online",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/nutrition-and-dietetics-msc-pre-registration",
+      "source_html": "course_pages/MSc Nutrition and Dietetics (pre-registration) _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/nutrition-and-dietetics-msc-pre-registration.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/nutrition-and-dietetics-msc-pre-registration",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/palliative-care-implementing-best-practice-msc-pgdip-pgcert",
+      "source_html": "course_pages/PGCert, PGDip and MSc in Palliative Care_ Implementing Best Practice _ Hull York Medical School.html",
+      "clean_md": "clean/courses/postgraduate/palliative-care-implementing-best-practice-msc-pgdip-pgcert.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/palliative-care-implementing-best-practice-msc-pgdip-pgcert",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/pharmacology-and-drug-development-msc",
+      "source_html": "course_pages/MSc in Pharmacology and Drug Development _ Hull York Medical School.html",
+      "clean_md": "clean/courses/postgraduate/pharmacology-and-drug-development-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/pharmacology-and-drug-development-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/pharmacology-and-education-msc",
+      "source_html": "course_pages/MSc in Pharmacology and Education _ Hull York Medical School.html",
+      "clean_md": "clean/courses/postgraduate/pharmacology-and-education-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/pharmacology-and-education-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/physician-associate-studies-msc",
+      "source_html": "course_pages/MSc in Physician Associate Studies 2026 2027 holding statement _ Hull York Medical School.html",
+      "clean_md": "clean/courses/postgraduate/physician-associate-studies-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/physician-associate-studies-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/practice-assessor-community-pgcert",
+      "source_html": "course_pages/PGCert Practice Assessor (Community) _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/practice-assessor-community-pgcert.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/practice-assessor-community-pgcert",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/practice-educator-pgcert",
+      "source_html": "course_pages/PGCert Practice Educator _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/practice-educator-pgcert.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/practice-educator-pgcert",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/professional-practice-in-education-ma",
+      "source_html": "course_pages/MA Professional Practice in Education _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/professional-practice-in-education-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/professional-practice-in-education-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/renewable-energy-and-low-carbon-solutions-msc",
+      "source_html": "course_pages/MSc Renewable Energy and Low Carbon Solutions _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/renewable-energy-and-low-carbon-solutions-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/renewable-energy-and-low-carbon-solutions-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/social-justice-and-community-engagement-ma",
+      "source_html": "course_pages/MA Social Justice and Community Engagement _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/social-justice-and-community-engagement-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/social-justice-and-community-engagement-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/social-research-msc",
+      "source_html": "course_pages/MSc Social Reseach _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/social-research-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/social-research-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/social-work-ma",
+      "source_html": "course_pages/MA_PGDip Social Work _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/social-work-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/social-work-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/special-educational-needs-disabilities-and-inclusion-ma",
+      "source_html": "course_pages/MA Special Educational Needs, Disabilities and Inclusion _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/special-educational-needs-disabilities-and-inclusion-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/special-educational-needs-disabilities-and-inclusion-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/tesol-ma",
+      "source_html": "course_pages/MA TESOL _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/tesol-ma.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/tesol-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/wildlife-conservation-msc",
+      "source_html": "course_pages/MSc Wildlife Conservation _ University of Hull.html",
+      "clean_md": "clean/courses/postgraduate/wildlife-conservation-msc.md",
+      "source_url": "https://www.hull.ac.uk/study/postgraduate-taught/courses/wildlife-conservation-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/accounting-and-financial-management-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Accounting and Financial Management _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/accounting-and-financial-management-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/accounting-and-financial-management-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/accounting-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Accounting _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/accounting-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/accounting-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/acting-ba-hons",
+      "source_html": "course_pages/BA (Hons) Acting _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/acting-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/acting-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/biochemistry-bsc-msci-hons",
+      "source_html": "course_pages/BSc _ MSci (Hons) Biochemistry _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/biochemistry-bsc-msci-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/biochemistry-bsc-msci-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/biology-bsc-msci-hons",
+      "source_html": "course_pages/BSc _ MSci (Hons) Biology _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/biology-bsc-msci-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/biology-bsc-msci-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/biomedical-engineering-beng-meng-hons",
+      "source_html": "course_pages/BEng _ MEng (Hons) Biomedical Engineering _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/biomedical-engineering-beng-meng-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/biomedical-engineering-beng-meng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/biomedical-science-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Biomedical Science _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/biomedical-science-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/biomedical-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/british-politics-and-legislative-studies-ba-hons",
+      "source_html": "course_pages/BA (Hons) British Politics and Legislative Studies _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/british-politics-and-legislative-studies-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/british-politics-and-legislative-studies-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-economics-ba-hons",
+      "source_html": "course_pages/BA (Hons) Business Economics _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/business-economics-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-economics-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-management-ba-hons",
+      "source_html": "course_pages/BA (Hons) Business Management degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/business-management-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-management-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-management-with-accounting-ba-hons",
+      "source_html": "course_pages/BA (Hons) Business Management with Accounting _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/business-management-with-accounting-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-management-with-accounting-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-management-with-entrepreneurship-ba-hons",
+      "source_html": "course_pages/BA (Hons) Business Management with Entrepreneurship _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/business-management-with-entrepreneurship-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-management-with-entrepreneurship-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-management-with-financial-management-ba-hons",
+      "source_html": "course_pages/BA (Hons) Business Management with Financial Management _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/business-management-with-financial-management-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-management-with-financial-management-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-management-with-human-resource-management-ba-hons",
+      "source_html": "course_pages/BA (Hons) Business Management with Human Resource Management _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/business-management-with-human-resource-management-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-management-with-human-resource-management-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-management-with-logistics-and-supply-chain-ba-hons",
+      "source_html": "course_pages/BA (Hons) Business Management with Logistics and Supply Chain _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/business-management-with-logistics-and-supply-chain-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-management-with-logistics-and-supply-chain-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-management-with-marketing-ba-hons",
+      "source_html": "course_pages/BA (Hons) Business Management with Marketing _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/business-management-with-marketing-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/business-management-with-marketing-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/chemical-engineering-beng-meng-hons",
+      "source_html": "course_pages/BEng _ MEng (Hons) Chemical Engineering _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/chemical-engineering-beng-meng-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/chemical-engineering-beng-meng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/civil-engineering-beng-meng-hons",
+      "source_html": "course_pages/BEng _ MEng (Hons) Civil Engineering degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/civil-engineering-beng-meng-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/civil-engineering-beng-meng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/computer-science-and-cyber-security-bsc-meng-hons",
+      "source_html": "course_pages/BSc _ MEng (Hons) Computer Science and Cyber Security _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/computer-science-and-cyber-security-bsc-meng-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/computer-science-and-cyber-security-bsc-meng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/computer-science-bsc-meng-hons",
+      "source_html": "course_pages/BSc _ MEng (Hons) Computer Science degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/computer-science-bsc-meng-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/computer-science-bsc-meng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/computer-science-for-games-programming-bsc-meng-hons",
+      "source_html": "course_pages/BSc _ MEng (Hons) Computer Science for Games Programming _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/computer-science-for-games-programming-bsc-meng-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/computer-science-for-games-programming-bsc-meng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/creative-writing-and-english-ba-hons",
+      "source_html": "course_pages/BA (Hons) Creative Writing and English _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/creative-writing-and-english-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/creative-writing-and-english-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/creative-writing-and-film-studies-ba-hons",
+      "source_html": "course_pages/BA (Hons) Creative Writing and Film Studies _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/creative-writing-and-film-studies-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/creative-writing-and-film-studies-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/criminology-and-sociology-ba-hons",
+      "source_html": "course_pages/BA (Hons) Criminology and Sociology _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/criminology-and-sociology-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/criminology-and-sociology-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/criminology-ba-hons",
+      "source_html": "course_pages/BA (Hons) Criminology degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/criminology-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/criminology-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/criminology-with-forensic-science-ba-hons",
+      "source_html": "course_pages/BA (Hons) Criminology with Forensic Science _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/criminology-with-forensic-science-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/criminology-with-forensic-science-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/criminology-with-law-ba-hons",
+      "source_html": "course_pages/BA (Hons) Criminology with Law _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/criminology-with-law-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/criminology-with-law-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/criminology-with-psychology-ba-hons",
+      "source_html": "course_pages/BA (Hons) Criminology with Psychology _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/criminology-with-psychology-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/criminology-with-psychology-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/diagnostic-radiography-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Diagnostic Radiography _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/diagnostic-radiography-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/diagnostic-radiography-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/drama-ba-hons",
+      "source_html": "course_pages/BA (Hons) Drama _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/drama-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/drama-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/early-childhood-education-and-care-ba-hons",
+      "source_html": "course_pages/BA (Hons) Early Childhood Education and Care (1 year top-up) course _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/early-childhood-education-and-care-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/early-childhood-education-and-care-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/early-childhood-studies-early-years-educator-ba-hons",
+      "source_html": "course_pages/BA (Hons) Early Childhood Studies (Early Years Educator) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/early-childhood-studies-early-years-educator-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/early-childhood-studies-early-years-educator-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/earth-and-environmental-science-bsc-msci-hons",
+      "source_html": "course_pages/BSc _ MSci (Hons) Earth and Environmental Science degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/earth-and-environmental-science-bsc-msci-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/earth-and-environmental-science-bsc-msci-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/economics-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Economics _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/economics-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/economics-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/education-and-childhood-studies-bed",
+      "source_html": "course_pages/BEd (Hons) Education and Childhood Studies (1 year top-up) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/education-and-childhood-studies-bed.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/education-and-childhood-studies-bed",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/education-studies-ba-hons",
+      "source_html": "course_pages/BA (Hons) Education Studies _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/education-studies-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/education-studies-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/education-studies-special-educational-needs-disability-and-inclusion-ba-hons",
+      "source_html": "course_pages/BA (Hons) Education Studies (SENDI) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/education-studies-special-educational-needs-disability-and-inclusion-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/education-studies-special-educational-needs-disability-and-inclusion-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/education-studies-teaching-english-to-speakers-of-other-languages-ba-hons",
+      "source_html": "course_pages/BA (Hons) Education Studies (TESOL) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/education-studies-teaching-english-to-speakers-of-other-languages-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/education-studies-teaching-english-to-speakers-of-other-languages-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/education-studies-youth-and-community-work-ba-hons",
+      "source_html": "course_pages/BA (Hons) Education Studies (Youth and Community Work) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/education-studies-youth-and-community-work-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/education-studies-youth-and-community-work-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/electrical-and-electronic-engineering-beng-meng-hons",
+      "source_html": "course_pages/BEng _ MEng (Hons) Electrical and Electronic Engineering _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/electrical-and-electronic-engineering-beng-meng-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/electrical-and-electronic-engineering-beng-meng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/electrical-and-electronic-engineering-top-up-beng-hons",
+      "source_html": "course_pages/BEng (Hons) Electrical and Electronic Engineering (Top-Up) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/electrical-and-electronic-engineering-top-up-beng-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/electrical-and-electronic-engineering-top-up-beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/english-ba-hons",
+      "source_html": "course_pages/BA (Hons) English _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/english-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/english-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/english-literature-ba-hons",
+      "source_html": "course_pages/BA (Hons) English Literature _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/english-literature-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/english-literature-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/environmental-management-national-diploma",
+      "source_html": "course_pages/NEBOSH National Diploma Environmental Management (part-time) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/environmental-management-national-diploma.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/environmental-management-national-diploma",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/environmental-science-bsc-msci-hons",
+      "source_html": "course_pages/BSc _ MSci (Hons) Environmental Science _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/environmental-science-bsc-msci-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/environmental-science-bsc-msci-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/film-ba-hons",
+      "source_html": "course_pages/BA (Hons) Film _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/film-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/film-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/financial-management-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Financial Management _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/financial-management-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/financial-management-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/forensic-science-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Forensic Science _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/forensic-science-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/forensic-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/game-design-ba-hons",
+      "source_html": "course_pages/BA (Hons) Game Design _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/game-design-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/game-design-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/games-design-and-creative-writing-ba-hons",
+      "source_html": "course_pages/BA (Hons) Games Design and Creative Writing _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/games-design-and-creative-writing-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/games-design-and-creative-writing-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/geography-ba-hons",
+      "source_html": "course_pages/BA (Hons) Geography _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/geography-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/geography-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/geography-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Geography _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/geography-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/geography-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/geology-bsc-hons",
+      "source_html": "course_pages/BSc _ MSci (Hons) Geology degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/geology-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/geology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/graphic-design-ba-hons",
+      "source_html": "course_pages/BA (Hons) Graphic Design _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/graphic-design-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/graphic-design-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/health-safety-and-environmental-management-part-time-bsc-hons",
+      "source_html": "course_pages/Health, Safety & Environmental Management (part-time) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/health-safety-and-environmental-management-part-time-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/health-safety-and-environmental-management-part-time-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/history-and-politics-ba-hons",
+      "source_html": "course_pages/BA (Hons) History and Politics _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/history-and-politics-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/history-and-politics-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/history-ba-hons",
+      "source_html": "course_pages/BA (Hons) History _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/history-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/history-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/international-business-ba-hons",
+      "source_html": "course_pages/BA (Hons) International Business _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/international-business-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/international-business-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/law-and-legislative-studies-llb-hons",
+      "source_html": "course_pages/LLB (Hons) Law and Legislative Studies _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/law-and-legislative-studies-llb-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/law-and-legislative-studies-llb-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/law-llb-hons",
+      "source_html": "course_pages/LLB (Hons) Law degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/law-llb-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/law-llb-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/law-senior-status-llb-hons",
+      "source_html": "course_pages/LLB (Hons) Law (Senior Status) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/law-senior-status-llb-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/law-senior-status-llb-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/law-with-business-management-llb-hons",
+      "source_html": "course_pages/LLB (Hons) Law with Business Management _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/law-with-business-management-llb-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/law-with-business-management-llb-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/law-with-criminology-llb-hons",
+      "source_html": "course_pages/LLB (Hons) Law with Criminology _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/law-with-criminology-llb-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/law-with-criminology-llb-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/law-with-politics-llb-hons",
+      "source_html": "course_pages/LLB (Hons) Law with Politics _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/law-with-politics-llb-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/law-with-politics-llb-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/marine-biology-bsc-msci-hons",
+      "source_html": "course_pages/BSc _ MSci (Hons) Marine Biology _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/marine-biology-bsc-msci-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/marine-biology-bsc-msci-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/marketing-and-management-ba-hons",
+      "source_html": "course_pages/BA (Hons) Marketing and Management _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/marketing-and-management-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/marketing-and-management-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/marketing-ba-hons",
+      "source_html": "course_pages/BA (Hons) Marketing degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/marketing-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/marketing-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/mathematics-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Mathematics _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/mathematics-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/mathematics-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/mechanical-engineering-beng-meng-hons",
+      "source_html": "course_pages/BEng _ MEng (Hons) Mechanical Engineering degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/mechanical-engineering-beng-meng-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/mechanical-engineering-beng-meng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/mechanical-engineering-top-up-beng-hons",
+      "source_html": "course_pages/BEng (Hons) Mechanical Engineering - 2 Year Top-Up _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/mechanical-engineering-top-up-beng-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/mechanical-engineering-top-up-beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/media-and-communication-ba-hons",
+      "source_html": "course_pages/BA (Hons) Media and Communication _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/media-and-communication-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/media-and-communication-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/media-production-ba-hons",
+      "source_html": "course_pages/BA (Hons) Media Production degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/media-production-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/media-production-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/medicine-mbbs",
+      "source_html": "course_pages/MB BS Medicine _ Hull York Medical School.html",
+      "clean_md": "clean/courses/undergraduate/medicine-mbbs.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/medicine-mbbs",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/medicine-with-a-gateway-year-mbbs",
+      "source_html": "course_pages/Medicine with a Gateway Year _ Hull York Medical School.html",
+      "clean_md": "clean/courses/undergraduate/medicine-with-a-gateway-year-mbbs.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/medicine-with-a-gateway-year-mbbs",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/midwifery-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Midwifery degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/midwifery-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/midwifery-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/music-ba-hons",
+      "source_html": "course_pages/BA (Hons) Music _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/music-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/music-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/music-community-and-education-ba-hons",
+      "source_html": "course_pages/BA (Hons) Music (Community and Education) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/music-community-and-education-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/music-community-and-education-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/music-performance-ba-hons",
+      "source_html": "course_pages/BA (Hons) Music Performance _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/music-performance-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/music-performance-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/music-popular-music-ba-hons",
+      "source_html": "course_pages/BA (Hons) Popular Music _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/music-popular-music-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/music-popular-music-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/music-production-ba-hons",
+      "source_html": "course_pages/BA (Hons) Music Production _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/music-production-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/music-production-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/music-songwriting-ba-hons",
+      "source_html": "course_pages/BA (Hons) Music (Songwriting) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/music-songwriting-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/music-songwriting-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/nursing-adult-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Adult Nursing degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/nursing-adult-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/nursing-adult-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/nursing-child-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Child Nursing _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/nursing-child-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/nursing-child-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/nursing-learning-disability-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Learning Disability Nursing _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/nursing-learning-disability-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/nursing-learning-disability-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/nursing-mental-health-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Mental Health Nursing _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/nursing-mental-health-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/nursing-mental-health-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/occupational-health-and-safety-management-professionals-part-time-national-diploma",
+      "source_html": "course_pages/Occupational Health & Safety Management Professionals (part-time) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/occupational-health-and-safety-management-professionals-part-time-national-diploma.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/occupational-health-and-safety-management-professionals-part-time-national-diploma",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/operating-department-practice-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Operating Department Practice _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/operating-department-practice-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/operating-department-practice-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/paramedic-science-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Paramedic Science degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/paramedic-science-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/paramedic-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/philosophy-and-politics-ba-hons",
+      "source_html": "course_pages/BA (Hons) Philosophy and Politics course _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/philosophy-and-politics-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/philosophy-and-politics-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/philosophy-ba-hons",
+      "source_html": "course_pages/BA (Hons) Philosophy _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/philosophy-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/philosophy-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/philosophy-politics-and-economics-ba-hons",
+      "source_html": "course_pages/BA (Hons) Philosophy, Politics and Economics _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/philosophy-politics-and-economics-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/philosophy-politics-and-economics-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/physics-bsc-mphys",
+      "source_html": "course_pages/BSc _ MPhys (Hons) Physics _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/physics-bsc-mphys.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/physics-bsc-mphys",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/physics-with-astrophysics-bsc-mphys-hons",
+      "source_html": "course_pages/BSc _ MPhys (Hons) Physics with Astrophysics _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/physics-with-astrophysics-bsc-mphys-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/physics-with-astrophysics-bsc-mphys-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/physiotherapy-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Physiotherapy degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/physiotherapy-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/physiotherapy-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/politics-and-international-relations-ba-hons",
+      "source_html": "course_pages/BA (Hons) Politics and International Relations _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/politics-and-international-relations-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/politics-and-international-relations-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/politics-ba-hons",
+      "source_html": "course_pages/BA (Hons) Politics degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/politics-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/politics-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/primary-teaching-studies-ba-hons",
+      "source_html": "course_pages/BA (Hons) Primary Teaching Studies _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/primary-teaching-studies-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/primary-teaching-studies-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/professional-policing-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Professional Policing degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/professional-policing-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/professional-policing-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/professional-practice-in-childhood-studies-fded",
+      "source_html": "course_pages/FdEd Professional Practice in Childhood Studies _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/professional-practice-in-childhood-studies-fded.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/professional-practice-in-childhood-studies-fded",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/psychology-and-business-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Psychology and Business _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/psychology-and-business-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/psychology-and-business-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/psychology-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Psychology degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/psychology-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/psychology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/psychology-with-criminology-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Psychology with Criminology _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/psychology-with-criminology-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/psychology-with-criminology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/psychology-with-education-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Psychology with Education _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/psychology-with-education-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/psychology-with-education-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/psychology-with-sports-psychology-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Psychology with Sports Psychology _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/psychology-with-sports-psychology-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/psychology-with-sports-psychology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/robotics-and-artificial-intelligence-bsc-meng-hons",
+      "source_html": "course_pages/BSc _ MEng (Hons) Robotics and Artificial Intelligence _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/robotics-and-artificial-intelligence-bsc-meng-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/robotics-and-artificial-intelligence-bsc-meng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-biology-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Secondary Teaching Studies (Biology) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/secondary-teaching-studies-biology-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-biology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-computer-science-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Secondary Teaching Studies (Computer Science) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/secondary-teaching-studies-computer-science-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-computer-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-english-ba-hons",
+      "source_html": "course_pages/BA (Hons) Secondary Teaching Studies (English) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/secondary-teaching-studies-english-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-english-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-geography-ba-hons",
+      "source_html": "course_pages/BA (Hons) Secondary Teaching Studies (Geography) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/secondary-teaching-studies-geography-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-geography-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-history-ba-hons",
+      "source_html": "course_pages/BA (Hons) Secondary Teaching Studies (History) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/secondary-teaching-studies-history-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-history-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-mathematics-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Secondary Teaching Studies (Mathematics) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/secondary-teaching-studies-mathematics-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-mathematics-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-physics-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Secondary Teaching Studies (Physics) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/secondary-teaching-studies-physics-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-physics-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-psychology-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Secondary Teaching Studies (Psychology) _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/secondary-teaching-studies-psychology-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/secondary-teaching-studies-psychology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/social-work-ba-hons",
+      "source_html": "course_pages/BA (Hons) Social Work _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/social-work-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/social-work-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/software-engineering-bsc-meng-hons",
+      "source_html": "course_pages/BSc _ MEng (Hons) Software Engineering _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/software-engineering-bsc-meng-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/software-engineering-bsc-meng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/sport-and-exercise-science-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Sport & Exercise Science _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/sport-and-exercise-science-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/sport-and-exercise-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/sport-and-exercise-science-with-nutrition-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Sport and Exercise Science with Nutrition _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/sport-and-exercise-science-with-nutrition-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/sport-and-exercise-science-with-nutrition-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/sport-rehabilitation-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Sport Rehabilitation _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/sport-rehabilitation-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/sport-rehabilitation-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/sports-coaching-and-performance-science-bsc-hons",
+      "source_html": "course_pages/BSc (Hons) Sports Coaching & Performance Science _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/sports-coaching-and-performance-science-bsc-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/sports-coaching-and-performance-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/theoretical-physics-bsc-mphys-hons",
+      "source_html": "course_pages/BSc _ MPhys (Hons) Theoretical Physics _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/theoretical-physics-bsc-mphys-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/theoretical-physics-bsc-mphys-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/war-strategy-and-security-ba-hons",
+      "source_html": "course_pages/BA (Hons) War, Strategy and Security _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/war-strategy-and-security-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/war-strategy-and-security-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/working-with-children-young-people-and-families-ba-hons",
+      "source_html": "course_pages/BA (Hons) Working with Children, Young People and Families _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/working-with-children-young-people-and-families-ba-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/working-with-children-young-people-and-families-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/zoology-bsc-msci-hons",
+      "source_html": "course_pages/BSc _ Msci (Hons) Zoology degree _ University of Hull.html",
+      "clean_md": "clean/courses/undergraduate/zoology-bsc-msci-hons.md",
+      "source_url": "https://www.hull.ac.uk/study/undergraduate/courses/zoology-bsc-msci-hons",
+      "study_level": "undergraduate"
+    }
+  ],
+  "uni_pages": [
+    {
+      "source_html": "uni_req/bangladesh-entry.html",
+      "source_url": "https://www.hull.ac.uk/study/international-students/your-country/bangladesh",
+      "clean_md": "clean/uni/bangladesh-entry.md",
+      "page_type": "entry"
+    },
+    {
+      "source_html": "uni_req/english-requirements.html",
+      "source_url": "https://www.hull.ac.uk/study/international-students/how-to-apply/english-language-requirements#accepted-english-qualifications",
+      "clean_md": "clean/uni/english-requirements.md",
+      "page_type": "english"
+    },
+    {
+      "source_html": "uni_req/scholarships.html",
+      "source_url": "",
+      "clean_md": "clean/uni/scholarships.md",
+      "page_type": "scholarship"
+    }
+  ]
+}

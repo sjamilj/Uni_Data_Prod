@@ -1,0 +1,2469 @@
+{
+  "university": "University of Greenwich",
+  "cleaned_at": "2026-08-28",
+  "courses": [
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/eduhea/education-and-special-educational-needs-foundation-degree-harmony",
+      "source_html": "course_pages/Education and Special Educational Needs, Foundation Degree (Learning in Harmony Trust) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-eduhea-education-and-special-educational-needs-foundation-degree-harmony.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/eduhea/education-and-special-educational-needs-foundation-degree-harmony",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/eduhea/education-support-foundation-degree-nescot",
+      "source_html": "course_pages/Supporting Teaching and Learning, Foundation Degree (NESCOT) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-eduhea-education-support-foundation-degree-nescot.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/eduhea/education-support-foundation-degree-nescot",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/eduhea/nursing-associate-higher-apprenticeship",
+      "source_html": "course_pages/Nursing Associate Higher Apprenticeship _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-eduhea-nursing-associate-higher-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/eduhea/nursing-associate-higher-apprenticeship",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/engsci/applied-animal-behaviour-and-conservation-qa-only-fdsc-plumpton-college",
+      "source_html": "course_pages/Applied Animal Behaviour and Conservation (QA only), FdSc (Plumpton College) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-engsci-applied-animal-behaviour-and-conservation-qa-only-fdsc-plumpton-college.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/engsci/applied-animal-behaviour-and-conservation-qa-only-fdsc-plumpton-college",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/engsci/applied-behavioural-science-and-welfare-foundation-degree-hadlow-college",
+      "source_html": "course_pages/Applied Behavioural Science and Welfare, FdSc (Hadlow) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-engsci-applied-behavioural-science-and-welfare-foundation-degree-hadlow-college.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/engsci/applied-behavioural-science-and-welfare-foundation-degree-hadlow-college",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/engsci/equine-training-and-management-foundation-degree-hadlow-college",
+      "source_html": "course_pages/Equine Training and Management, Foundation Degree (Hadlow) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-engsci-equine-training-and-management-foundation-degree-hadlow-college.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/engsci/equine-training-and-management-foundation-degree-hadlow-college",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/engsci/horticulture-fdsc-hadlow",
+      "source_html": "course_pages/Horticulture (Commercial), FdSc (Hadlow) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-engsci-horticulture-fdsc-hadlow.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/engsci/horticulture-fdsc-hadlow",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/engsci/sustainable-horticulture-management-qa-only-fdsc-plumpton-college",
+      "source_html": "course_pages/Sustainable Horticulture Management (QA only), FdSc (Plumpton College) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-engsci-sustainable-horticulture-management-qa-only-fdsc-plumpton-college.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/engsci/sustainable-horticulture-management-qa-only-fdsc-plumpton-college",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/engsci/sustainable-land-management-qa-only-fdsc-plumpton-college",
+      "source_html": "course_pages/Sustainable Land Management (QA only), FdSc (Plumpton College) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-engsci-sustainable-land-management-qa-only-fdsc-plumpton-college.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/engsci/sustainable-land-management-qa-only-fdsc-plumpton-college",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/engsci/veterinary-nursing-fdsc-plumptonqa",
+      "source_html": "course_pages/Veterinary Nursing, FdSc (Plumpton)(QA) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-engsci-veterinary-nursing-fdsc-plumptonqa.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/engsci/veterinary-nursing-fdsc-plumptonqa",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/engsci/veterinary-nursing-qa-only-fdsc-plumpton-college",
+      "source_html": "course_pages/Veterinary Nursing (QA only), FdSc (Plumpton College) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-engsci-veterinary-nursing-qa-only-fdsc-plumpton-college.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/engsci/veterinary-nursing-qa-only-fdsc-plumpton-college",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/engsci/wine-business-qa-only-fda-plumpton-college",
+      "source_html": "course_pages/Wine Business (QA only), FdA (Plumpton College) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-engsci-wine-business-qa-only-fda-plumpton-college.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/engsci/wine-business-qa-only-fda-plumpton-college",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/engsci/wine-production-qa-only-fdsc-plumpton-college",
+      "source_html": "course_pages/Wine Production (QA only), FdSc (Plumpton College) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-engsci-wine-production-qa-only-fdsc-plumpton-college.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/engsci/wine-production-qa-only-fdsc-plumpton-college",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/engsci/zoo-husbandry-and-management-hadlow-fds",
+      "source_html": "course_pages/Zoo Husbandry and Management (Hadlow), FdSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-engsci-zoo-husbandry-and-management-hadlow-fds.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/engsci/zoo-husbandry-and-management-hadlow-fds",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/timetable",
+      "source_html": "course_pages/Location and timetable _ Foundation degrees _ University of Greenwich.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-timetable.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/timetable",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/foundation-degrees/why",
+      "source_html": "course_pages/Why a foundation degree_ _ Foundation degrees _ University of Greenwich.html",
+      "clean_md": "clean/courses/foundation/foundation-degrees-why.md",
+      "source_url": "https://www.gre.ac.uk/foundation-degrees/why",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/applied-linguistics-ma",
+      "source_html": "course_pages/Applied Linguistics, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-applied-linguistics-ma.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/applied-linguistics-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/architectural-practice-pgdip-arb-riba-part-3-exemption",
+      "source_html": "course_pages/Architectural Practice, PGDip (ARB_RIBA Part 3 Exemption) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-architectural-practice-pgdip-arb-riba-part-3-exemption.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/architectural-practice-pgdip-arb-riba-part-3-exemption",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/architecture-part-2-march",
+      "source_html": "course_pages/Architecture Part 2, MArch _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-architecture-part-2-march.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/architecture-part-2-march",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/art-and-design-mphilphd",
+      "source_html": "course_pages/Art & Design, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-art-and-design-mphilphd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/art-and-design-mphilphd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/creative-and-critical-writing-mphilphd",
+      "source_html": "course_pages/Creative & Critical Writing, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-creative-and-critical-writing-mphilphd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/creative-and-critical-writing-mphilphd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/creative-writing-ma",
+      "source_html": "course_pages/Creative Writing, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-creative-writing-ma.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/creative-writing-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/criminology-and-criminal-psychology-msc",
+      "source_html": "course_pages/Criminology and Criminal Psychology, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-criminology-and-criminal-psychology-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/criminology-and-criminal-psychology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/english-literature-ma",
+      "source_html": "course_pages/English Literature, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-english-literature-ma.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/english-literature-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/english-literature-mphilphd",
+      "source_html": "course_pages/English Literature, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-english-literature-mphilphd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/english-literature-mphilphd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/film-and-screen-practices-mphilphd",
+      "source_html": "course_pages/Film and Screen Practices, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-film-and-screen-practices-mphilphd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/film-and-screen-practices-mphilphd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/film-production-ma",
+      "source_html": "course_pages/Film Production, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-film-production-ma.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/film-production-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/international-relations-ma",
+      "source_html": "course_pages/International Relations, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-international-relations-ma.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/international-relations-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/landscape-architecture-ma",
+      "source_html": "course_pages/Landscape Architecture, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-landscape-architecture-ma.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/landscape-architecture-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/landscape-architecture-mla",
+      "source_html": "course_pages/Landscape Architecture, MLA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-landscape-architecture-mla.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/landscape-architecture-mla",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/llm-law",
+      "source_html": "course_pages/LLM Law _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-llm-law.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/llm-law",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/music-and-sound-arts-mphilphd",
+      "source_html": "course_pages/Music and Sound Arts, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-music-and-sound-arts-mphilphd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/music-and-sound-arts-mphilphd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/professional-doctorate-in-social-and-criminal-justice",
+      "source_html": "course_pages/Professional Doctorate in Social and Criminal Justice _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-professional-doctorate-in-social-and-criminal-justice.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/professional-doctorate-in-social-and-criminal-justice",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/ach/web-design-and-development-ma",
+      "source_html": "course_pages/Web Design and Development, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-ach-web-design-and-development-ma.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/ach/web-design-and-development-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/accfin",
+      "source_html": "course_pages/Accounting and Finance, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-accfin.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/accfin",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/accounting-and-finance-mphilphd",
+      "source_html": "course_pages/Accounting and Finance, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-accounting-and-finance-mphilphd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/accounting-and-finance-mphilphd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/business-analytics-msc",
+      "source_html": "course_pages/Business Analytics, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-business-analytics-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/business-analytics-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/business-mphilphd",
+      "source_html": "course_pages/Business, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-business-mphilphd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/business-mphilphd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/business-practice-mphilphd",
+      "source_html": "course_pages/Business Practice, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-business-practice-mphilphd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/business-practice-mphilphd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/digital-marketing-management-msc",
+      "source_html": "course_pages/Digital Marketing Management, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-digital-marketing-management-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/digital-marketing-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/digital-marketing-management-with-placement-year-msc",
+      "source_html": "course_pages/Digital Marketing Management with Placement Year, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-digital-marketing-management-with-placement-year-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/digital-marketing-management-with-placement-year-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/doctor-of-business-administration",
+      "source_html": "course_pages/Doctor of Business Administration _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-doctor-of-business-administration.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/doctor-of-business-administration",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/econ",
+      "source_html": "course_pages/Economics, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-econ.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/econ",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/economics-mphil-phd",
+      "source_html": "course_pages/Economics, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate_research/postgraduate-courses-bus-economics-mphil-phd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/economics-mphil-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/eveman",
+      "source_html": "course_pages/International Events Management, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-eveman.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/eveman",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/execmba",
+      "source_html": "course_pages/Executive Master of Business Administration, MBA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-execmba.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/execmba",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/executive-master-of-business-administration-mba",
+      "source_html": "course_pages/Executive Master of Business Administration, MBA _ University of Greenwich, London_postgraduate-courses_bus_executive-master-of-business-administration-mba.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-executive-master-of-business-administration-mba.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/executive-master-of-business-administration-mba",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/finance-and-investment-with-placement-msc",
+      "source_html": "course_pages/Finance and Investment with Placement, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-finance-and-investment-with-placement-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/finance-and-investment-with-placement-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/finmaninv",
+      "source_html": "course_pages/Finance and Investment, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-finmaninv.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/finmaninv",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/fintech-and-finance-msc",
+      "source_html": "course_pages/Fintech and Finance, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-fintech-and-finance-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/fintech-and-finance-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/human-resources-and-organisational-behaviour-mphilphd",
+      "source_html": "course_pages/Human Resources and Organisational Behaviour, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-human-resources-and-organisational-behaviour-mphilphd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/human-resources-and-organisational-behaviour-mphilphd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/ibf",
+      "source_html": "course_pages/International Banking and Finance, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-ibf.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/ibf",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/intbus",
+      "source_html": "course_pages/International Business, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-intbus.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/intbus",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/international-business-with-placement-ma",
+      "source_html": "course_pages/International Business with Placement, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-international-business-with-placement-ma.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/international-business-with-placement-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/international-events-management-with-placement-ma",
+      "source_html": "course_pages/International Events Management with Placement, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-international-events-management-with-placement-ma.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/international-events-management-with-placement-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/logistics-and-supply-chain-management-msc",
+      "source_html": "course_pages/Logistics and Supply Chain Management, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-logistics-and-supply-chain-management-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/logistics-and-supply-chain-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/management-msc",
+      "source_html": "course_pages/Management, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-management-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/marketing-events-and-tourism-mphilphd",
+      "source_html": "course_pages/Marketing, Events and Tourism, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-marketing-events-and-tourism-mphilphd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/marketing-events-and-tourism-mphilphd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/marketing-management-ma",
+      "source_html": "course_pages/Marketing Management, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-marketing-management-ma.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/marketing-management-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/marketing-management-with-placement-ma",
+      "source_html": "course_pages/Marketing Management with Placement, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-marketing-management-with-placement-ma.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/marketing-management-with-placement-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-finance",
+      "source_html": "course_pages/MBA Finance _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-mba-finance.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-finance",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-finance-with-placement",
+      "source_html": "course_pages/MBA Finance (with Placement) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-mba-finance-with-placement.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-finance-with-placement",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-global",
+      "source_html": "course_pages/MBA Global _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-mba-global.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-global",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-global-with-placement",
+      "source_html": "course_pages/MBA Global with Placement _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-mba-global-with-placement.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-global-with-placement",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-marketing-management",
+      "source_html": "course_pages/MBA Marketing Management _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-mba-marketing-management.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-marketing-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-marketing-management-with-placement",
+      "source_html": "course_pages/MBA Marketing Management (with Placement) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-mba-marketing-management-with-placement.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-marketing-management-with-placement",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-sustainability",
+      "source_html": "course_pages/MBA Sustainability _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-mba-sustainability.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-sustainability",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-sustainability-with-placement-year",
+      "source_html": "course_pages/MBA Sustainability with Placement Year _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-mba-sustainability-with-placement-year.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/mba-sustainability-with-placement-year",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/online-business-analytics-msc",
+      "source_html": "course_pages/Business Analytics (Online), MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-online-business-analytics-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/online-business-analytics-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/online-international-business-ma",
+      "source_html": "course_pages/International Business (Online), MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-online-international-business-ma.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/online-international-business-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/project-management-msc",
+      "source_html": "course_pages/Project Management, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-project-management-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/project-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/strategic-human-resource-management-msc",
+      "source_html": "course_pages/Strategic Human Resource Management, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-strategic-human-resource-management-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/strategic-human-resource-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/strategic-tourism-and-hospitality-management-msc",
+      "source_html": "course_pages/Strategic Tourism and Hospitality Management, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-strategic-tourism-and-hospitality-management-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/strategic-tourism-and-hospitality-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/bus/strategic-tourism-and-hospitality-management-with-placement-msc",
+      "source_html": "course_pages/Strategic Tourism and Hospitality Management with Placement, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-bus-strategic-tourism-and-hospitality-management-with-placement-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/bus/strategic-tourism-and-hospitality-management-with-placement-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/advanced-clinical-practitioner-msc-hons-degree-apprenticeship",
+      "source_html": "course_pages/Advanced Clinical Practitioner, MSc (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-advanced-clinical-practitioner-msc-hons-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/advanced-clinical-practitioner-msc-hons-degree-apprenticeship",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/aphsc",
+      "source_html": "course_pages/Advanced Clinical Practice, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-aphsc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/aphsc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/childadolpsych",
+      "source_html": "course_pages/Child and Adolescent Psychology, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-childadolpsych.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/childadolpsych",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/doctorate-in-education-edd",
+      "source_html": "course_pages/Doctorate in Education, EdD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-doctorate-in-education-edd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/doctorate-in-education-edd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/ed",
+      "source_html": "course_pages/Education, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-ed.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/ed",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/education-and-training-mphil",
+      "source_html": "course_pages/Education and Training, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-education-and-training-mphil.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/education-and-training-mphil",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/education-mphil-phd",
+      "source_html": "course_pages/Education, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate_research/postgraduate-courses-eduhea-education-mphil-phd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/education-mphil-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/enhanced-clinical-practice-pgdip",
+      "source_html": "course_pages/Enhanced Clinical Practice, PGDip _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-enhanced-clinical-practice-pgdip.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/enhanced-clinical-practice-pgdip",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/eyts",
+      "source_html": "course_pages/Early Years (0-5) with EYTS, PGCE _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-eyts.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/eyts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/eytsprof",
+      "source_html": "course_pages/Early Years (0-5) with EYTS, ProfGCE _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-eytsprof.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/eytsprof",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/forensic-psychology-msc",
+      "source_html": "course_pages/Forensic Psychology, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-forensic-psychology-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/forensic-psychology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/global-health-management-msc",
+      "source_html": "course_pages/Global Health Management, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-global-health-management-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/global-health-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/health-science-mphil",
+      "source_html": "course_pages/Health Science, MPhil _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-health-science-mphil.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/health-science-mphil",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/healthcare-practice-ma",
+      "source_html": "course_pages/Healthcare Practice, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-healthcare-practice-ma.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/healthcare-practice-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/hep",
+      "source_html": "course_pages/Higher Education, PGCert _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-hep.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/hep",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/hsc",
+      "source_html": "course_pages/Social Work, MA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-hsc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/hsc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/international-postgraduate-certificate-in-education",
+      "source_html": "course_pages/International PGCE (Online) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-international-postgraduate-certificate-in-education.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/international-postgraduate-certificate-in-education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/mphil-phd-health-sciences",
+      "source_html": "course_pages/Health Sciences, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate_research/postgraduate-courses-eduhea-mphil-phd-health-sciences.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/mphil-phd-health-sciences",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/mphil-phd-human-sciences",
+      "source_html": "course_pages/Human Sciences, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate_research/postgraduate-courses-eduhea-mphil-phd-human-sciences.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/mphil-phd-human-sciences",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/msc-global-public-health",
+      "source_html": "course_pages/Global Public Health MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-msc-global-public-health.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/msc-global-public-health",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/nursing-adult-nursing",
+      "source_html": "course_pages/Nursing (Adult Nursing), MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-nursing-adult-nursing.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/nursing-adult-nursing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/nursing-mental-health-nursing-msc",
+      "source_html": "course_pages/Nursing (Mental Health Nursing), MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-nursing-mental-health-nursing-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/nursing-mental-health-nursing-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/occupational-psychology-msc",
+      "source_html": "course_pages/Occupational Psychology, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-occupational-psychology-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/occupational-psychology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/post-graduate-certificate-in-education-further-education-and-training",
+      "source_html": "course_pages/Post Graduate Certificate in Education (Further Education and Training) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-post-graduate-certificate-in-education-further-education-and-training.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/post-graduate-certificate-in-education-further-education-and-training",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/postgraduate-certificate-in-advanced-forensic-practice-for-health-care-professionals",
+      "source_html": "course_pages/Postgraduate Certificate in Advanced Forensic Practice for Health Care Professionals _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-postgraduate-certificate-in-advanced-forensic-practice-for-health-care-professionals.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/postgraduate-certificate-in-advanced-forensic-practice-for-health-care-professionals",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/postgraduate-certificate-in-education-further-education-and-skills-nescot-qa",
+      "source_html": "course_pages/PGCE (Further Education & Skills) (NESCOT) (QA) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-postgraduate-certificate-in-education-further-education-and-skills-nescot-qa.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/postgraduate-certificate-in-education-further-education-and-skills-nescot-qa",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/postgraduate-diploma-community-specialist-practice-district-nursing-independent-and-supplementary-prescribing-route",
+      "source_html": "course_pages/Postgraduate Diploma Community Specialist Practice_ District Nursing (Independent and Supplementary Prescribing Route) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-postgraduate-diploma-community-specialist-practice-district-nursing-independent-and-supplementary-prescribing-route.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/postgraduate-diploma-community-specialist-practice-district-nursing-independent-and-supplementary-prescribing-route",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/postgraduate-diploma-community-specialist-practice-district-nursing-work-based-learning-route",
+      "source_html": "course_pages/Postgraduate Diploma Community Specialist Practice_ District Nursing (Work Based Learning Route) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-postgraduate-diploma-community-specialist-practice-district-nursing-work-based-learning-route.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/postgraduate-diploma-community-specialist-practice-district-nursing-work-based-learning-route",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/primary-education-3-11-provider-led-school-based-with-qts-pgce",
+      "source_html": "course_pages/Primary Education (3-11) (Provider-led School-based) with QTS, PGCE _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-primary-education-3-11-provider-led-school-based-with-qts-pgce.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/primary-education-3-11-provider-led-school-based-with-qts-pgce",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/primary-education-3-11-provider-led-university-based-with-qts-pgce",
+      "source_html": "course_pages/Primary Education (3-11) (Provider-led University-based) with QTS, PGCE _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-primary-education-3-11-provider-led-university-based-with-qts-pgce.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/primary-education-3-11-provider-led-university-based-with-qts-pgce",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/psych",
+      "source_html": "course_pages/Psychology, MSc (Conversion Degree) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-psych.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/psych",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/psychotherapy-and-counselling-msc",
+      "source_html": "course_pages/Psychotherapy and Counselling, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-psychotherapy-and-counselling-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/psychotherapy-and-counselling-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/secondary-pgce-11-19-provider-led-school-based-with-qts",
+      "source_html": "course_pages/Secondary PGCE (11-19) (Provider-led School-based) with QTS _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-secondary-pgce-11-19-provider-led-school-based-with-qts.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/secondary-pgce-11-19-provider-led-school-based-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/secondary-pgce-with-qts-11-19-provider-led-mathematics",
+      "source_html": "course_pages/Secondary PGCE with QTS (11-19) (Provider-led) (Mathematics) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-secondary-pgce-with-qts-11-19-provider-led-mathematics.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/secondary-pgce-with-qts-11-19-provider-led-mathematics",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/secondary-pgce-with-qts-11-19-provider-led-physical-education",
+      "source_html": "course_pages/Secondary PGCE with QTS (11-19) (Provider-led) (Physical Education) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-secondary-pgce-with-qts-11-19-provider-led-physical-education.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/secondary-pgce-with-qts-11-19-provider-led-physical-education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/secondary-pgce-with-qts-11-19-provider-led-science-with-biology",
+      "source_html": "course_pages/Secondary PGCE with QTS (11-19) (Provider-led) (Science with Biology) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-secondary-pgce-with-qts-11-19-provider-led-science-with-biology.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/secondary-pgce-with-qts-11-19-provider-led-science-with-biology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/secondary-pgce-with-qts-11-19-provider-led-science-with-chemistry",
+      "source_html": "course_pages/Secondary PGCE with QTS (11-19) (Provider-led) (Science with Chemistry) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-secondary-pgce-with-qts-11-19-provider-led-science-with-chemistry.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/secondary-pgce-with-qts-11-19-provider-led-science-with-chemistry",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/sport-and-exercise-psychology",
+      "source_html": "course_pages/Sport and Exercise Psychology, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-eduhea-sport-and-exercise-psychology.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/eduhea/sport-and-exercise-psychology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/advanced-chemical-engineering-msc",
+      "source_html": "course_pages/Advanced Chemical Engineering, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-advanced-chemical-engineering-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/advanced-chemical-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/advanced-chemical-engineering-with-industrial-practice-msc",
+      "source_html": "course_pages/Advanced Chemical Engineering with Industrial Practice, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-advanced-chemical-engineering-with-industrial-practice-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/advanced-chemical-engineering-with-industrial-practice-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/agrsustdev",
+      "source_html": "course_pages/Agriculture for Sustainable Development, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-agrsustdev.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/agrsustdev",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/applied-artificial-intelligence-for-engineering-msc",
+      "source_html": "course_pages/Applied Artificial Intelligence for Engineering, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-applied-artificial-intelligence-for-engineering-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/applied-artificial-intelligence-for-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/applied-food-safety-and-quality-management-with-industrial-practice-msc",
+      "source_html": "course_pages/Applied Food Safety and Quality Management with Industrial Practice, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-applied-food-safety-and-quality-management-with-industrial-practice-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/applied-food-safety-and-quality-management-with-industrial-practice-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/big-data-and-business-intelligence-msc",
+      "source_html": "course_pages/Big Data and Business Intelligence, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-big-data-and-business-intelligence-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/big-data-and-business-intelligence-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/bio",
+      "source_html": "course_pages/Biomedical Science, MSc_PGDip_PGCert _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-bio.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/bio",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/biotech",
+      "source_html": "course_pages/Biotechnology, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-biotech.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/biotech",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/biotechnology-with-placement-year-msc",
+      "source_html": "course_pages/Biotechnology with Placement Year, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-biotechnology-with-placement-year-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/biotechnology-with-placement-year-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/built-environment-mphilphd",
+      "source_html": "course_pages/Built Environment, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-built-environment-mphilphd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/built-environment-mphilphd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/civeng",
+      "source_html": "course_pages/Civil Engineering, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-civeng.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/civeng",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/civil-engineering-with-industrial-practice-msc",
+      "source_html": "course_pages/Civil Engineering with Industrial Practice, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-civil-engineering-with-industrial-practice-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/civil-engineering-with-industrial-practice-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/computer-forensics-and-cyber-security-msc",
+      "source_html": "course_pages/Computer Forensics and Cyber Security, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-computer-forensics-and-cyber-security-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/computer-forensics-and-cyber-security-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/computer-science-data-science-msc",
+      "source_html": "course_pages/Data Science, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-computer-science-data-science-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/computer-science-data-science-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/computer-science-mphilphd",
+      "source_html": "course_pages/Computer Science, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-computer-science-mphilphd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/computer-science-mphilphd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/computer-science-msc",
+      "source_html": "course_pages/Computer Science, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-computer-science-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/computer-science-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/computer-science-with-placement-year-msc",
+      "source_html": "course_pages/Computer Science with Placement Year, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-computer-science-with-placement-year-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/computer-science-with-placement-year-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/computing-and-information-systems-msc",
+      "source_html": "course_pages/Computing and Information Systems, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-computing-and-information-systems-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/computing-and-information-systems-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/computing-and-mathematical-sciences-msc-by-research",
+      "source_html": "course_pages/Computing and Mathematical Sciences, MSc by Research _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-computing-and-mathematical-sciences-msc-by-research.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/computing-and-mathematical-sciences-msc-by-research",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/construction-project-management-msc",
+      "source_html": "course_pages/Construction Project Management, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-construction-project-management-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/construction-project-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/construction-project-management-with-industrial-placement-msc",
+      "source_html": "course_pages/Construction Project Management With Industrial Placement, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-construction-project-management-with-industrial-placement-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/construction-project-management-with-industrial-placement-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/data-science-and-its-applications-msc",
+      "source_html": "course_pages/Data Science and its Applications, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-data-science-and-its-applications-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/data-science-and-its-applications-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/data-science-with-placement-year-msc",
+      "source_html": "course_pages/Data Science with Placement Year, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-data-science-with-placement-year-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/data-science-with-placement-year-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/development-studies-research-mphilphd",
+      "source_html": "course_pages/Development Studies - Research, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-development-studies-research-mphilphd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/development-studies-research-mphilphd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/digital-design-and-manufacturing-msc",
+      "source_html": "course_pages/Digital Design and Manufacturing, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-digital-design-and-manufacturing-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/digital-design-and-manufacturing-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/digital-design-and-manufacturing-with-placement-year-msc",
+      "source_html": "course_pages/Digital Design and Manufacturing with Placement Year, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-digital-design-and-manufacturing-with-placement-year-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/digital-design-and-manufacturing-with-placement-year-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/electrical-and-electronic-engineering-with-industrial-practice-msc",
+      "source_html": "course_pages/Electrical and Electronic Engineering with Industrial Practice, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-electrical-and-electronic-engineering-with-industrial-practice-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/electrical-and-electronic-engineering-with-industrial-practice-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/elelec",
+      "source_html": "course_pages/Electrical and Electronic Engineering, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-elelec.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/elelec",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/engineering-management-with-industrial-practice",
+      "source_html": "course_pages/Engineering Management with Industrial Practice, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-engineering-management-with-industrial-practice.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/engineering-management-with-industrial-practice",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/engineering-msc-by-research",
+      "source_html": "course_pages/Engineering, MSc by Research _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-engineering-msc-by-research.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/engineering-msc-by-research",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/engineering-research-mphilphd",
+      "source_html": "course_pages/Engineering - Research, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-engineering-research-mphilphd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/engineering-research-mphilphd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/engman",
+      "source_html": "course_pages/Engineering Management, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-engman.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/engman",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/food-innovation-with-industrial-practice-msc",
+      "source_html": "course_pages/Food Innovation with Industrial Practice, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-food-innovation-with-industrial-practice-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/food-innovation-with-industrial-practice-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/food-safety-and-quality-management-distance-learning",
+      "source_html": "course_pages/Food Safety and Quality Management e-learning, PGCert_PGDip_MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-food-safety-and-quality-management-distance-learning.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/food-safety-and-quality-management-distance-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/foodinnov",
+      "source_html": "course_pages/Food Innovation, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-foodinnov.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/foodinnov",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/foodsaf",
+      "source_html": "course_pages/Applied Food Safety and Quality Management, PGDip_MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-foodsaf.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/foodsaf",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/forensic-investigation-msc",
+      "source_html": "course_pages/Forensic Investigation, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-forensic-investigation-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/forensic-investigation-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/fs",
+      "source_html": "course_pages/Formulation Science, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-fs.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/fs",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/glob-envi-change",
+      "source_html": "course_pages/Global Environmental Change, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-glob-envi-change.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/glob-envi-change",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/global-environmental-change-with-industrial-placement-msc",
+      "source_html": "course_pages/Global Environmental Change With Industrial Practice, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-global-environmental-change-with-industrial-placement-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/global-environmental-change-with-industrial-placement-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/global-sustainable-development-msc",
+      "source_html": "course_pages/Global Sustainable Development, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-global-sustainable-development-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/global-sustainable-development-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/gpp",
+      "source_html": "course_pages/General Pharmacy Practice, PGCert_PGDip_MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-gpp.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/gpp",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/haematology-msc",
+      "source_html": "course_pages/Haematology, MSc_PGDip_PGCert _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-haematology-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/haematology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/healthcare-management-msc",
+      "source_html": "course_pages/Healthcare Management, MSc_PGDip_PGCert _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-healthcare-management-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/healthcare-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/healthcare-quality-management-msc",
+      "source_html": "course_pages/Healthcare Quality Management, MSc_PGDip_PGCert _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-healthcare-quality-management-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/healthcare-quality-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/isp",
+      "source_html": "course_pages/Independent_Supplementary Prescribing, PGCert _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-isp.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/isp",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/management-of-business-information-technology-msc",
+      "source_html": "course_pages/Management of Business Information Technology, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-management-of-business-information-technology-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/management-of-business-information-technology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/mathematical-sciences-mphilphd",
+      "source_html": "course_pages/Mathematical Sciences, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-mathematical-sciences-mphilphd.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/mathematical-sciences-mphilphd",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/mechanical-and-manufacturing-engineering-with-industrial-practice-msc",
+      "source_html": "course_pages/Mechanical and Manufacturing Engineering with Industrial Practice, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-mechanical-and-manufacturing-engineering-with-industrial-practice-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/mechanical-and-manufacturing-engineering-with-industrial-practice-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/mechmaneng",
+      "source_html": "course_pages/Mechanical and Manufacturing Engineering, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-mechmaneng.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/mechmaneng",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/medical-microbiology-msc",
+      "source_html": "course_pages/Medical Microbiology, MSc_PGDip_PGCert _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-medical-microbiology-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/medical-microbiology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/medopt",
+      "source_html": "course_pages/Medicines Optimisation, PGCert_PGDip_MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-medopt.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/medopt",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/mps",
+      "source_html": "course_pages/Pharmaceutical Sciences, MSc_PGDip _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-mps.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/mps",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/msc-pharmaceutical-sciences-with-industrial-practice",
+      "source_html": "course_pages/Pharmaceutical Sciences with Industrial Practice, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-msc-pharmaceutical-sciences-with-industrial-practice.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/msc-pharmaceutical-sciences-with-industrial-practice",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/natural-resources-msc-by-research",
+      "source_html": "course_pages/Natural Resources, MSc (by Research) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-natural-resources-msc-by-research.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/natural-resources-msc-by-research",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/occupational-hygiene-msc",
+      "source_html": "course_pages/Occupational Hygiene, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-occupational-hygiene-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/occupational-hygiene-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/online-data-science-msc",
+      "source_html": "course_pages/Data Science (Online), MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-online-data-science-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/online-data-science-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/safety-health-and-environment-msc",
+      "source_html": "course_pages/Safety, Health and Environment, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-safety-health-and-environment-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/safety-health-and-environment-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/scires",
+      "source_html": "course_pages/Science - Research, MPhil_PhD _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-scires.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/scires",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/sciresmsc",
+      "source_html": "course_pages/Science, MSc by Research _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-sciresmsc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/sciresmsc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/sustainable-engineering-energy-and-power-msc",
+      "source_html": "course_pages/Sustainable Engineering (Energy & Power), MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-sustainable-engineering-energy-and-power-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/sustainable-engineering-energy-and-power-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/sustainable-engineering-energy-and-power-with-industrial-practice-msc",
+      "source_html": "course_pages/Sustainable Engineering (Energy & Power) with Industrial Practice, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-sustainable-engineering-energy-and-power-with-industrial-practice-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/sustainable-engineering-energy-and-power-with-industrial-practice-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/sustainable-engineering-innovation-and-management-msc",
+      "source_html": "course_pages/Sustainable Engineering (Innovation & Management), MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-sustainable-engineering-innovation-and-management-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/sustainable-engineering-innovation-and-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/sustainable-engineering-innovation-and-management-with-industrial-practice-msc",
+      "source_html": "course_pages/Sustainable Engineering (Innovation & Management) with Industrial Practice, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-sustainable-engineering-innovation-and-management-with-industrial-practice-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/sustainable-engineering-innovation-and-management-with-industrial-practice-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/viticulture-and-oenology-qa-only-msc-by-research-plumpton-college",
+      "source_html": "course_pages/Viticulture & Oenology (QA only), MSc by Research (Plumpton College) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-viticulture-and-oenology-qa-only-msc-by-research-plumpton-college.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/viticulture-and-oenology-qa-only-msc-by-research-plumpton-college",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/viticulture-and-oenology-qa-only-msc-plumpton-college",
+      "source_html": "course_pages/Viticulture and Oenology (QA only), MSc (Plumpton College) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-viticulture-and-oenology-qa-only-msc-plumpton-college.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/viticulture-and-oenology-qa-only-msc-plumpton-college",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/wat-was-env-eng",
+      "source_html": "course_pages/Water, Waste and Environmental Engineering, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-wat-was-env-eng.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/wat-was-env-eng",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/water-waste-and-environmental-engineering-with-industrial-practice-msc",
+      "source_html": "course_pages/Water, Waste and Environmental Engineering with Industrial Practice, MSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-courses-engsci-water-waste-and-environmental-engineering-with-industrial-practice-msc.md",
+      "source_url": "https://www.gre.ac.uk/postgraduate-courses/engsci/water-waste-and-environmental-engineering-with-industrial-practice-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/animation-ba-hons",
+      "source_html": "course_pages/Animation, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-animation-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/animation-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/animation-with-foundation-year-ba-hons",
+      "source_html": "course_pages/Animation with Foundation Year, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/undergraduate-courses-ach-animation-with-foundation-year-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/animation-with-foundation-year-ba-hons",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/architecture-ba-hons",
+      "source_html": "course_pages/Architecture, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-architecture-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/architecture-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/architecture-with-foundation-year-ba-hons",
+      "source_html": "course_pages/Architecture with Foundation Year, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/undergraduate-courses-ach-architecture-with-foundation-year-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/architecture-with-foundation-year-ba-hons",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/creative-writing-and-english-literature-ba-hons",
+      "source_html": "course_pages/Creative Writing and English Literature, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-creative-writing-and-english-literature-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/creative-writing-and-english-literature-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/creative-writing-ba-hons",
+      "source_html": "course_pages/Creative Writing, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-creative-writing-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/creative-writing-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/criminology-and-criminal-justice-ba-hons",
+      "source_html": "course_pages/Criminology and Criminal Justice, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-criminology-and-criminal-justice-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/criminology-and-criminal-justice-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/criminology-and-criminal-psychology-bsc-hons",
+      "source_html": "course_pages/Criminology and Criminal Psychology, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-criminology-and-criminal-psychology-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/criminology-and-criminal-psychology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/criminology-and-criminal-psychology-extended-bsc-hons",
+      "source_html": "course_pages/Criminology and Criminal Psychology (Extended), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-criminology-and-criminal-psychology-extended-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/criminology-and-criminal-psychology-extended-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/drama-ba-hons",
+      "source_html": "course_pages/Drama, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-drama-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/drama-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/drama-with-international-study-ba-hons",
+      "source_html": "course_pages/Drama with International Study, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-drama-with-international-study-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/drama-with-international-study-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/english-language-and-literature-ba-hons",
+      "source_html": "course_pages/English Language and Literature, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-english-language-and-literature-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/english-language-and-literature-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/english-language-and-tesol-ba-hons",
+      "source_html": "course_pages/English Language and TESOL, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-english-language-and-tesol-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/english-language-and-tesol-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/english-literature-ba-hons",
+      "source_html": "course_pages/English Literature, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-english-literature-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/english-literature-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/film-and-television-production-ba-hons",
+      "source_html": "course_pages/Film and Television Production, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-film-and-television-production-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/film-and-television-production-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/film-studies-ba-hons",
+      "source_html": "course_pages/Film Studies, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-film-studies-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/film-studies-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/graphic-and-digital-design-ba-hons",
+      "source_html": "course_pages/Graphic and Digital Design, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-graphic-and-digital-design-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/graphic-and-digital-design-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/graphic-and-digital-design-with-foundation-year-ba-hons",
+      "source_html": "course_pages/Graphic and Digital Design with Foundation Year, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/undergraduate-courses-ach-graphic-and-digital-design-with-foundation-year-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/graphic-and-digital-design-with-foundation-year-ba-hons",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/history-and-politics-ba-hons",
+      "source_html": "course_pages/History and Politics, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-history-and-politics-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/history-and-politics-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/history-ba-hons",
+      "source_html": "course_pages/History, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-history-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/history-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/landscape-architecture-ba-hons",
+      "source_html": "course_pages/Landscape Architecture, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-landscape-architecture-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/landscape-architecture-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/languages-and-international-relations-ba-hons",
+      "source_html": "course_pages/Languages and International Relations, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-languages-and-international-relations-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/languages-and-international-relations-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/law-extended-llb-hons",
+      "source_html": "course_pages/Law (Extended), LLB _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-law-extended-llb-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/law-extended-llb-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/law-in-practice-llb-hons",
+      "source_html": "course_pages/Law in Practice, LLB _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-law-in-practice-llb-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/law-in-practice-llb-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/law-llb-hons",
+      "source_html": "course_pages/Law, LLB _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-law-llb-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/law-llb-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/law-senior-status-llb-hons",
+      "source_html": "course_pages/Law Senior Status, LLB _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-law-senior-status-llb-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/law-senior-status-llb-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/law-with-criminology-llb",
+      "source_html": "course_pages/Law with Criminology, LLB _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-law-with-criminology-llb.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/law-with-criminology-llb",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/media-and-communications-ba-hons",
+      "source_html": "course_pages/Media and Communications, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-media-and-communications-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/media-and-communications-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/musical-theatre-singer-actor-ba-hons",
+      "source_html": "course_pages/Musical Theatre_ Singer-Actor, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-musical-theatre-singer-actor-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/musical-theatre-singer-actor-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/musical-theatre-triple-threat-ba-hons",
+      "source_html": "course_pages/Musical Theatre (Triple Threat), BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-musical-theatre-triple-threat-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/musical-theatre-triple-threat-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/politics-and-international-relations-ba-hons",
+      "source_html": "course_pages/Politics and International Relations, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-politics-and-international-relations-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/politics-and-international-relations-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/professional-dance-and-performance-ba-hons",
+      "source_html": "course_pages/Professional Dance and Performance, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-professional-dance-and-performance-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/professional-dance-and-performance-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/professional-dance-musical-theatre-ba-hons",
+      "source_html": "course_pages/Professional Dance and Musical Theatre, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-professional-dance-musical-theatre-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/professional-dance-musical-theatre-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/sociology-and-criminology-bsc-hons",
+      "source_html": "course_pages/Sociology and Criminology, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-sociology-and-criminology-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/sociology-and-criminology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/sociology-and-psychology-bsc-hons",
+      "source_html": "course_pages/Sociology and Psychology, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-sociology-and-psychology-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/sociology-and-psychology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/sociology-ba-hons",
+      "source_html": "course_pages/Sociology, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-sociology-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/sociology-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/studyabroad",
+      "source_html": "course_pages/Study Abroad, LLB _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-ach-studyabroad.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/ach/studyabroad",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/accounting-and-business-analytics-ba-hons",
+      "source_html": "course_pages/Accounting and Business Analytics, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-accounting-and-business-analytics-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/accounting-and-business-analytics-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/accounting-finance-ba-hons",
+      "source_html": "course_pages/Accounting and Finance, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-accounting-finance-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/accounting-finance-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/accounting-finance-extended-ba-hons",
+      "source_html": "course_pages/Accounting and Finance (Extended), BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-accounting-finance-extended-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/accounting-finance-extended-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-accounting-year-3-direct-entry",
+      "source_html": "course_pages/Business with Accounting (Year 3 Direct Entry), BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-business-accounting-year-3-direct-entry.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-accounting-year-3-direct-entry",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-economics-ba-hons",
+      "source_html": "course_pages/Business Economics, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-business-economics-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-economics-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-finance-ba-hons",
+      "source_html": "course_pages/Business with Finance, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-business-finance-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-finance-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-logistics-and-supply-chain-management-ba-hons",
+      "source_html": "course_pages/Business Logistics and Supply Chain Management, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-business-logistics-and-supply-chain-management-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-logistics-and-supply-chain-management-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-management-ba-hons",
+      "source_html": "course_pages/Business Management, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-business-management-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-management-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-management-ba-hons-ext",
+      "source_html": "course_pages/Business Management (Extended), BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-business-management-ba-hons-ext.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-management-ba-hons-ext",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-management-ba-hons-year-3-direct-entry",
+      "source_html": "course_pages/Business Management, BA (Year 3 Direct Entry) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-business-management-ba-hons-year-3-direct-entry.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-management-ba-hons-year-3-direct-entry",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-management-finance-ba-hons",
+      "source_html": "course_pages/Business Management (Finance), BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-business-management-finance-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-management-finance-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-management-finance-with-foundation-year-ba-hons",
+      "source_html": "course_pages/Business Management (Finance) with Foundation Year, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/undergraduate-courses-business-school-business-management-finance-with-foundation-year-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-management-finance-with-foundation-year-ba-hons",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-management-marketing-ba-hons",
+      "source_html": "course_pages/Business Management (Marketing), BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-business-management-marketing-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-management-marketing-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-management-marketing-with-foundation-year-ba-hons",
+      "source_html": "course_pages/Business Management (Marketing) with Foundation Year, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/foundation/undergraduate-courses-business-school-business-management-marketing-with-foundation-year-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-management-marketing-with-foundation-year-ba-hons",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-marketing-ba-hons",
+      "source_html": "course_pages/Business with Marketing, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-business-marketing-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-marketing-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-studies-ba-hons",
+      "source_html": "course_pages/Business Studies, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-business-studies-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/business-studies-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/digital-marketing-and-advertising-ba-hons",
+      "source_html": "course_pages/Digital Marketing and Advertising, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-digital-marketing-and-advertising-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/digital-marketing-and-advertising-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/economics-bsc-hons",
+      "source_html": "course_pages/Economics, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-economics-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/economics-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/entrepreneurship-and-innovation-ba-hons",
+      "source_html": "course_pages/Entrepreneurship and Innovation, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-entrepreneurship-and-innovation-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/entrepreneurship-and-innovation-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/events-management-and-innovation-ba",
+      "source_html": "course_pages/Events Management and Innovation, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-events-management-and-innovation-ba.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/events-management-and-innovation-ba",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/finance-investment-banking-bsc-hons",
+      "source_html": "course_pages/Finance and Investment Banking, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-finance-investment-banking-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/finance-investment-banking-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/hospitality-management-ba-hons",
+      "source_html": "course_pages/Hospitality Management, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-hospitality-management-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/hospitality-management-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/human-resource-management-and-development-ba-hons",
+      "source_html": "course_pages/Human Resource Management and Development, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-human-resource-management-and-development-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/human-resource-management-and-development-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/human-resource-management-ba-hons",
+      "source_html": "course_pages/Human Resource Management, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-human-resource-management-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/human-resource-management-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/international-business-ba-hons",
+      "source_html": "course_pages/International Business, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-international-business-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/international-business-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/international-business-language-ba-hons",
+      "source_html": "course_pages/International Business with Language, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-international-business-language-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/international-business-language-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/international-tourism-and-hospitality-management-ba-hons",
+      "source_html": "course_pages/International Tourism and Hospitality Management, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-international-tourism-and-hospitality-management-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/international-tourism-and-hospitality-management-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/marketing-and-brand-management-ba-hons",
+      "source_html": "course_pages/Marketing and Brand Management, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-marketing-and-brand-management-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/marketing-and-brand-management-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/tourism-management-ba-hons",
+      "source_html": "course_pages/Tourism Management, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-tourism-management-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/tourism-management-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/tourism-management-language-ba-hons",
+      "source_html": "course_pages/Tourism Management with Language, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-business-school-tourism-management-language-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/business-school/tourism-management-language-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/adult-nursing-bsc-hons",
+      "source_html": "course_pages/Adult Nursing, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-adult-nursing-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/adult-nursing-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/adult-nursing-bsc-hons-degree-apprenticeship",
+      "source_html": "course_pages/Adult Nursing, BSc (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-adult-nursing-bsc-hons-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/adult-nursing-bsc-hons-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/business-psychology-bsc-hons",
+      "source_html": "course_pages/Business Psychology, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-business-psychology-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/business-psychology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/c600",
+      "source_html": "course_pages/Sport and Exercise Science, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-c600.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/c600",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/childrens-nursing-bsc-hons",
+      "source_html": "course_pages/Children's Nursing, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-childrens-nursing-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/childrens-nursing-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/childrens-nursing-bsc-hons-degree-apprenticeship",
+      "source_html": "course_pages/Children's Nursing, BSc (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-childrens-nursing-bsc-hons-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/childrens-nursing-bsc-hons-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/early-years-ba-hons",
+      "source_html": "course_pages/Early Years, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-early-years-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/early-years-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/early-years-ba-hons-top-up",
+      "source_html": "course_pages/Early Years, BA (Top-up) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-early-years-ba-hons-top-up.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/early-years-ba-hons-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/education-studies-ba-hons-top-up-nescot",
+      "source_html": "course_pages/Education Studies, BA (Top up) (NESCOT) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-education-studies-ba-hons-top-up-nescot.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/education-studies-ba-hons-top-up-nescot",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/further-education-and-skill-sector-profgce-qa-only-nescot",
+      "source_html": "course_pages/Further Education and Skill Sector,Prof Cert Ed (FE) (QA Only) (NESCOT) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-further-education-and-skill-sector-profgce-qa-only-nescot.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/further-education-and-skill-sector-profgce-qa-only-nescot",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/graduate-diploma-enhanced-clinical-practice-apprenticeship",
+      "source_html": "course_pages/Graduate Diploma Enhanced Clinical Practice (Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-graduate-diploma-enhanced-clinical-practice-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/graduate-diploma-enhanced-clinical-practice-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/health-social-care-ba-hons-top-up",
+      "source_html": "course_pages/Health and Social Care, BA (Top-up) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-health-social-care-ba-hons-top-up.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/health-social-care-ba-hons-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/mental-health-nursing-bsc-hons",
+      "source_html": "course_pages/Mental Health Nursing, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-mental-health-nursing-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/mental-health-nursing-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/mental-health-nursing-bsc-hons-degree-apprenticeship",
+      "source_html": "course_pages/Mental Health Nursing, BSc (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-mental-health-nursing-bsc-hons-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/mental-health-nursing-bsc-hons-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/mental-health-nursing-degree-apprenticeship",
+      "source_html": "course_pages/Mental Health Nursing (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-mental-health-nursing-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/mental-health-nursing-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/midwifery-bsc-hons",
+      "source_html": "course_pages/Midwifery, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-midwifery-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/midwifery-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/midwifery-degree-apprenticeship",
+      "source_html": "course_pages/Midwifery (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-midwifery-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/midwifery-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/nursing-professional-practice-final-year-entry-bsc-hons",
+      "source_html": "course_pages/Nursing Professional Practice (Final Year Entry), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-nursing-professional-practice-final-year-entry-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/nursing-professional-practice-final-year-entry-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/operating-department-practitioner-bsc-hons",
+      "source_html": "course_pages/Operating Department Practitioner, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-operating-department-practitioner-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/operating-department-practitioner-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/operating-department-practitioner-degree-apprenticeship",
+      "source_html": "course_pages/Operating Department Practitioner, BSc (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-operating-department-practitioner-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/operating-department-practitioner-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/paramedic-science-bsc-hons",
+      "source_html": "course_pages/Paramedic Science, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-paramedic-science-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/paramedic-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/physical-education-sport-ba-hons",
+      "source_html": "course_pages/Physical Education and Sport, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-physical-education-sport-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/physical-education-sport-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/physiotherapy-bsc-hons",
+      "source_html": "course_pages/Physiotherapy, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-physiotherapy-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/physiotherapy-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/physiotherapy-bsc-hons-degree-apprenticeship",
+      "source_html": "course_pages/Physiotherapy, BSc (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-physiotherapy-bsc-hons-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/physiotherapy-bsc-hons-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/preparation-for-health-professions-cert-he",
+      "source_html": "course_pages/Preparation for Health Professions, Cert HE _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-preparation-for-health-professions-cert-he.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/preparation-for-health-professions-cert-he",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/primary-education-ba-hons",
+      "source_html": "course_pages/Primary Education Studies, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-primary-education-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/primary-education-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/primary-education-with-qts-5-11-ba-hons",
+      "source_html": "course_pages/Primary Education with QTS (5-11), BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-primary-education-with-qts-5-11-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/primary-education-with-qts-5-11-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/psychology-bsc-hons",
+      "source_html": "course_pages/Psychology, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-psychology-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/psychology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/psychology-extended-bsc-hons",
+      "source_html": "course_pages/Psychology (Extended), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-psychology-extended-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/psychology-extended-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/psychology-mental-health-and-wellbeing-bsc-hons",
+      "source_html": "course_pages/Mental Health and Wellbeing, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-psychology-mental-health-and-wellbeing-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/psychology-mental-health-and-wellbeing-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/public-health-bsc-hons",
+      "source_html": "course_pages/Public Health, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-public-health-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/public-health-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/public-health-bsc-hons-ext",
+      "source_html": "course_pages/Public Health (Extended), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-public-health-bsc-hons-ext.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/public-health-bsc-hons-ext",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/pyschology-with-counselling-bsc-hons",
+      "source_html": "course_pages/Psychology with Counselling, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-pyschology-with-counselling-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/pyschology-with-counselling-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/social-work-ba-hons",
+      "source_html": "course_pages/Social Work, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-social-work-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/social-work-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/speech-and-language-therapy-bsc-hons",
+      "source_html": "course_pages/Speech and Language Therapy, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-speech-and-language-therapy-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/speech-and-language-therapy-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/speech-and-language-therapy-degree-apprenticeship",
+      "source_html": "course_pages/Speech and Language Therapy (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-speech-and-language-therapy-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/speech-and-language-therapy-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/working-with-vulnerable-children-and-families-ba-hons",
+      "source_html": "course_pages/Working with Vulnerable Children and Families, BA _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-eduhea-working-with-vulnerable-children-and-families-ba-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/eduhea/working-with-vulnerable-children-and-families-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/animal-management-final-year-entry-hadlow",
+      "source_html": "course_pages/Animal Management (Final Year Entry) (Hadlow), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-animal-management-final-year-entry-hadlow.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/animal-management-final-year-entry-hadlow",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/applied-animal-behaviour-and-welfare-final-year-entry-qa-plumpton-bsc",
+      "source_html": "course_pages/Applied Animal Behaviour and Welfare (Final Year Entry) (QA Only), BSc (Plumpton) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-applied-animal-behaviour-and-welfare-final-year-entry-qa-plumpton-bsc.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/applied-animal-behaviour-and-welfare-final-year-entry-qa-plumpton-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/applied-artificial-intelligence-for-engineering-bsc-hons",
+      "source_html": "course_pages/Applied Artificial Intelligence for Engineering, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-applied-artificial-intelligence-for-engineering-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/applied-artificial-intelligence-for-engineering-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/applied-biomedical-science-bsc-hons",
+      "source_html": "course_pages/Applied Biomedical Science, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-applied-biomedical-science-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/applied-biomedical-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/applied-zoology-and-animal-conservation-final-year-entry-qa-only-bsc-plumpton",
+      "source_html": "course_pages/Applied Zoology and Animal Conservation (Final Year Entry) (QA only), BSc (Plumpton) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-applied-zoology-and-animal-conservation-final-year-entry-qa-only-bsc-plumpton.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/applied-zoology-and-animal-conservation-final-year-entry-qa-only-bsc-plumpton",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/biology-bsc-hons",
+      "source_html": "course_pages/Biology, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-biology-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/biology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/biology-bsc-hons-ext",
+      "source_html": "course_pages/Biology (Extended), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-biology-bsc-hons-ext.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/biology-bsc-hons-ext",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/biomedical-science-bsc-hons",
+      "source_html": "course_pages/Biomedical Science, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-biomedical-science-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/biomedical-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/biomedical-science-bsc-hons-apprenticeship",
+      "source_html": "course_pages/Biomedical Science BSc, (Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-biomedical-science-bsc-hons-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/biomedical-science-bsc-hons-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/biomedical-science-bsc-hons-ext",
+      "source_html": "course_pages/Biomedical Science (Extended), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-biomedical-science-bsc-hons-ext.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/biomedical-science-bsc-hons-ext",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/biomedicine-bsc-hons",
+      "source_html": "course_pages/Biomedicine, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-biomedicine-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/biomedicine-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/biomedicine-extended-bsc-hons",
+      "source_html": "course_pages/Biomedicine (Extended), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-biomedicine-extended-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/biomedicine-extended-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/business-computing-bsc-hons",
+      "source_html": "course_pages/Business Computing, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-business-computing-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/business-computing-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/chartered-surveyor-quantity-surveying-and-project-management-bsc-hons-degree-apprenticeship",
+      "source_html": "course_pages/Chartered Surveyor - Quantity Surveying and Project Management, BSc (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-chartered-surveyor-quantity-surveying-and-project-management-bsc-hons-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/chartered-surveyor-quantity-surveying-and-project-management-bsc-hons-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/chemical-engineering-beng-hons",
+      "source_html": "course_pages/Chemical Engineering, BEng _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-chemical-engineering-beng-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/chemical-engineering-beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/civil-and-construction-engineering-bsc-hons",
+      "source_html": "course_pages/Civil and Construction Engineering, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-civil-and-construction-engineering-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/civil-and-construction-engineering-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/civil-engineering-beng-hons",
+      "source_html": "course_pages/Civil Engineering, BEng _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-civil-engineering-beng-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/civil-engineering-beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/civil-engineering-beng-hons-ext",
+      "source_html": "course_pages/Civil Engineering (Extended), BEng _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-civil-engineering-beng-hons-ext.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/civil-engineering-beng-hons-ext",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-engineering-beng-hons",
+      "source_html": "course_pages/Computer Engineering, BEng _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-computer-engineering-beng-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-engineering-beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-artificial-intelligence-bsc-hons",
+      "source_html": "course_pages/Computer Science (Artificial Intelligence), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-computer-science-artificial-intelligence-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-artificial-intelligence-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-bsc-hons",
+      "source_html": "course_pages/Computer Science, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-computer-science-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-cyber-security-bsc-hons",
+      "source_html": "course_pages/Computer Science (Cyber Security), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-computer-science-cyber-security-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-cyber-security-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-data-science-bsc-hons",
+      "source_html": "course_pages/Computer Science (Data Science), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-computer-science-data-science-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-data-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-games-bsc-hons",
+      "source_html": "course_pages/Computer Science (Games), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-computer-science-games-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computer-science-games-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-artificial-intelligence-bsc-hons",
+      "source_html": "course_pages/Computing (Artificial Intelligence), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-computing-artificial-intelligence-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-artificial-intelligence-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-bsc-hons",
+      "source_html": "course_pages/Computing, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-computing-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-bsc-hons-extended",
+      "source_html": "course_pages/Computing, BSc (Extended) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-computing-bsc-hons-extended.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-bsc-hons-extended",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-data-science-bsc-hons",
+      "source_html": "course_pages/Computing (Data Science), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-computing-data-science-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-data-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-information-systems-bsc-hons",
+      "source_html": "course_pages/Computing (Information Systems), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-computing-information-systems-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/computing-information-systems-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/construction-management-bsc-hons",
+      "source_html": "course_pages/Construction Management, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-construction-management-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/construction-management-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/construction-site-management-bsc-hons-degree-apprenticeship",
+      "source_html": "course_pages/Construction Site Management, BSc (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-construction-site-management-bsc-hons-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/construction-site-management-bsc-hons-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/cyber-security-and-digital-forensics-bsc-hons",
+      "source_html": "course_pages/Cyber Security and Digital Forensics, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-cyber-security-and-digital-forensics-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/cyber-security-and-digital-forensics-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/data-science-bsc-hons",
+      "source_html": "course_pages/Data Science, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-data-science-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/data-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/digital-technology-solutions-professional-bsc-hons-degree-apprenticeship",
+      "source_html": "course_pages/Digital and Technology Solutions Professional, BSc (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-digital-technology-solutions-professional-bsc-hons-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/digital-technology-solutions-professional-bsc-hons-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/electrical-electronic-engineering-beng-hons",
+      "source_html": "course_pages/Electrical and Electronic Engineering, BEng _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-electrical-electronic-engineering-beng-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/electrical-electronic-engineering-beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/electrical-electronic-engineering-beng-hons-ext",
+      "source_html": "course_pages/Electrical and Electronic Engineering (Extended), BEng _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-electrical-electronic-engineering-beng-hons-ext.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/electrical-electronic-engineering-beng-hons-ext",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/embedded-electronic-systems-design-and-development-engineer-beng-hons-degree-apprenticeship",
+      "source_html": "course_pages/Embedded Electronic Systems Design and Development Engineer, BEng (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-embedded-electronic-systems-design-and-development-engineer-beng-hons-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/embedded-electronic-systems-design-and-development-engineer-beng-hons-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/financial-mathematics-bsc-hons",
+      "source_html": "course_pages/Financial Mathematics, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-financial-mathematics-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/financial-mathematics-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/forensic-science-bsc-hons",
+      "source_html": "course_pages/Forensic Science, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-forensic-science-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/forensic-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/forensic-science-bsc-hons-ext",
+      "source_html": "course_pages/Forensic Science (Extended), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-forensic-science-bsc-hons-ext.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/forensic-science-bsc-hons-ext",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/forensic-science-criminology-bsc-hons",
+      "source_html": "course_pages/Forensic Science with Criminology, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-forensic-science-criminology-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/forensic-science-criminology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/forensic-science-criminology-bsc-hons-ext",
+      "source_html": "course_pages/Forensic Science with Criminology (Extended), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-forensic-science-criminology-bsc-hons-ext.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/forensic-science-criminology-bsc-hons-ext",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/games-development-bsc-hons",
+      "source_html": "course_pages/Games Development, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-games-development-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/games-development-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/human-nutrition-bsc-hons",
+      "source_html": "course_pages/Human Nutrition & Health, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-human-nutrition-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/human-nutrition-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/mathematics-and-computer-science-bsc-hons",
+      "source_html": "course_pages/Mathematics and Computer Science, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-mathematics-and-computer-science-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/mathematics-and-computer-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/mathematics-bsc-hons",
+      "source_html": "course_pages/Mathematics, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-mathematics-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/mathematics-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/mathematics-for-modern-application-bsc",
+      "source_html": "course_pages/Mathematics for Modern Applications, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-mathematics-for-modern-application-bsc.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/mathematics-for-modern-application-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/mechanical-engineering-beng-hons",
+      "source_html": "course_pages/Mechanical Engineering, BEng _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-mechanical-engineering-beng-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/mechanical-engineering-beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/mechanical-engineering-beng-hons-ext",
+      "source_html": "course_pages/Mechanical Engineering (Extended), BEng _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-mechanical-engineering-beng-hons-ext.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/mechanical-engineering-beng-hons-ext",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/mpharm-with-prep-year",
+      "source_html": "course_pages/Pharmacy (MPharm) with Preparatory Year _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-mpharm-with-prep-year.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/mpharm-with-prep-year",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/occupational-safety-health-and-environment-bsc-hons-top-up",
+      "source_html": "course_pages/Occupational Safety, Health and Environment, BSc (Top-up) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-occupational-safety-health-and-environment-bsc-hons-top-up.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/occupational-safety-health-and-environment-bsc-hons-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/pharmaceutical-sciences-bsc-hons",
+      "source_html": "course_pages/Pharmaceutical Sciences, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-pharmaceutical-sciences-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/pharmaceutical-sciences-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/pharmaceutical-sciences-bsc-hons-ext",
+      "source_html": "course_pages/Pharmaceutical Sciences (Extended), BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-pharmaceutical-sciences-bsc-hons-ext.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/pharmaceutical-sciences-bsc-hons-ext",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/pharmacy-mpharm",
+      "source_html": "course_pages/Pharmacy, MPharm _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-pharmacy-mpharm.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/pharmacy-mpharm",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/product-design-and-development-engineer-degree-apprenticeship",
+      "source_html": "course_pages/Product Design and Development Engineer (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-product-design-and-development-engineer-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/product-design-and-development-engineer-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/quantity-surveying-bsc-hons",
+      "source_html": "course_pages/Quantity Surveying, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-quantity-surveying-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/quantity-surveying-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/robotics-beng-hons",
+      "source_html": "course_pages/Robotics, BEng _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-robotics-beng-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/robotics-beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/rural-land-and-business-management-qa-only-bsc-plumpton-college",
+      "source_html": "course_pages/Rural Land and Business Management (QA only), BSc (Plumpton College) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-rural-land-and-business-management-qa-only-bsc-plumpton-college.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/rural-land-and-business-management-qa-only-bsc-plumpton-college",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/science-industry-process-and-plant-engineer-degree-apprenticeship",
+      "source_html": "course_pages/Science Industry Process and Plant Engineer (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-science-industry-process-and-plant-engineer-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/science-industry-process-and-plant-engineer-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/scientist-bsc-hons-degree-apprenticeship",
+      "source_html": "course_pages/Scientist BSc, (Degree Apprenticeship) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-scientist-bsc-hons-degree-apprenticeship.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/scientist-bsc-hons-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/software-engineering-beng-hons",
+      "source_html": "course_pages/Software Engineering, BEng _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-software-engineering-beng-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/software-engineering-beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/sustainable-agriculture-qa-only-bsc-plumpton-college",
+      "source_html": "course_pages/Sustainable Agriculture (QA only), BSc (Plumpton College) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-sustainable-agriculture-qa-only-bsc-plumpton-college.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/sustainable-agriculture-qa-only-bsc-plumpton-college",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/systems-engineering-bsc-hons",
+      "source_html": "course_pages/Systems Engineering, BSc _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-systems-engineering-bsc-hons.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/systems-engineering-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/veterinary-physiotherapy-qa-only-bsc-plumpton-college",
+      "source_html": "course_pages/Veterinary Physiotherapy (QA only), BSc (Plumpton College) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-veterinary-physiotherapy-qa-only-bsc-plumpton-college.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/veterinary-physiotherapy-qa-only-bsc-plumpton-college",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/viticulture-and-oenology-qa-only-bsc-plumpton-college",
+      "source_html": "course_pages/Viticulture and Oenology (QA only), BSc (Plumpton College) _ University of Greenwich, London.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-courses-engsci-viticulture-and-oenology-qa-only-bsc-plumpton-college.md",
+      "source_url": "https://www.gre.ac.uk/undergraduate-courses/engsci/viticulture-and-oenology-qa-only-bsc-plumpton-college",
+      "study_level": "undergraduate"
+    }
+  ],
+  "uni_pages": [
+    {
+      "source_html": "uni_req/bangladesh-entry.html",
+      "source_url": "https://www.gre.ac.uk/international/countries/bangladesh",
+      "clean_md": "clean/uni/bangladesh-entry.md",
+      "page_type": "entry"
+    },
+    {
+      "source_html": "uni_req/english-requirements.html",
+      "source_url": "https://www.gre.ac.uk/international/support-and-help/courses",
+      "clean_md": "clean/uni/english-requirements.md",
+      "page_type": "english"
+    },
+    {
+      "source_html": "uni_req/scholarships.html",
+      "source_url": "",
+      "clean_md": "clean/uni/scholarships.md",
+      "page_type": "scholarship"
+    }
+  ]
+}

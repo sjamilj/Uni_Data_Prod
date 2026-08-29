@@ -1,0 +1,2720 @@
+{
+  "university": "Aston University",
+  "cleaned_at": "2026-08-26",
+  "courses": [
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-analytics-bsc/september-2027",
+      "source_html": "course_pages/Business Analytics _ Aston University_study_courses_business-analytics-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/business-analytics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-analytics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-analytics-foundation",
+      "source_html": "course_pages/Business Analytics Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/business-analytics-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-analytics-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-analytics-foundation/september-2027",
+      "source_html": "course_pages/Business Analytics Foundation Programme _ Aston University_study_courses_business-analytics-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/business-analytics-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-analytics-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-analytics-msc/april-2027",
+      "source_html": "course_pages/Business Analytics _ Aston University_study_courses_business-analytics-msc_april-2027.html",
+      "clean_md": "clean/courses/postgraduate/business-analytics-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-analytics-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-analytics-msc/january-2027",
+      "source_html": "course_pages/Business Analytics _ Aston University_study_courses_business-analytics-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/business-analytics-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-analytics-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-analytics-msc/september-2026",
+      "source_html": "course_pages/Business Analytics _ Aston University_study_courses_business-analytics-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/business-analytics-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-analytics-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-and-international-relations-bsc/september-2026",
+      "source_html": "course_pages/Business and International Relations _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/business-and-international-relations-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-and-international-relations-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-and-international-relations-bsc/september-2027",
+      "source_html": "course_pages/Business and International Relations _ Aston University_study_courses_business-and-international-relations-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/business-and-international-relations-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-and-international-relations-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-and-management-bsc/september-2025",
+      "source_html": "course_pages/Business and Management _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/business-and-management-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-and-management-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-and-management-bsc/september-2026",
+      "source_html": "course_pages/Business and Management _ Aston University_study_courses_business-and-management-bsc_september-2026.html",
+      "clean_md": "clean/courses/undergraduate/business-and-management-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-and-management-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-and-management-bsc/september-2027",
+      "source_html": "course_pages/Business and Management _ Aston University_study_courses_business-and-management-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/business-and-management-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-and-management-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-and-management-mres/january-2027",
+      "source_html": "course_pages/Business and Management _ Aston University_study_courses_business-and-management-mres_january-2027.html",
+      "clean_md": "clean/courses/postgraduate_research/business-and-management-mres.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-and-management-mres",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-and-management-msc/april-2027",
+      "source_html": "course_pages/Business and Management _ Aston University_study_courses_business-and-management-msc_april-2027.html",
+      "clean_md": "clean/courses/postgraduate/business-and-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-and-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-and-management-msc/january-2027",
+      "source_html": "course_pages/Business and Management _ Aston University_study_courses_business-and-management-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/business-and-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-and-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-and-management-msc/september-2026",
+      "source_html": "course_pages/Business and Management _ Aston University_study_courses_business-and-management-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/business-and-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-and-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-and-supply-chain-management-bsc/september-2026",
+      "source_html": "course_pages/Business and Supply Chain Management _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/business-and-supply-chain-management-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-and-supply-chain-management-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-and-supply-chain-management-bsc/september-2027",
+      "source_html": "course_pages/Business and Supply Chain Management _ Aston University_study_courses_business-and-supply-chain-management-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/business-and-supply-chain-management-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-and-supply-chain-management-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-and-supply-chain-management-foundation",
+      "source_html": "course_pages/Business and Supply Chain Management Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/business-and-supply-chain-management-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-and-supply-chain-management-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-and-supply-chain-management-foundation/september-2027",
+      "source_html": "course_pages/Business and Supply Chain Management Foundation Programme _ Aston University_study_courses_business-and-supply-chain-management-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/business-and-supply-chain-management-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-and-supply-chain-management-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-computing-and-it-bsc/september-2026",
+      "source_html": "course_pages/Business Computing and IT _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/business-computing-and-it-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-computing-and-it-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-computing-and-it-bsc/september-2027",
+      "source_html": "course_pages/Business Computing and IT _ Aston University_study_courses_business-computing-and-it-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/business-computing-and-it-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-computing-and-it-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-computing-it-foundation",
+      "source_html": "course_pages/Business Computing and IT Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/business-computing-it-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-computing-it-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-computing-it-foundation/september-2027",
+      "source_html": "course_pages/Business Computing and IT Foundation Programme _ Aston University_study_courses_business-computing-it-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/business-computing-it-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-computing-it-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-economics-bsc/september-2026",
+      "source_html": "course_pages/Business Economics _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/business-economics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-economics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-economics-bsc/september-2027",
+      "source_html": "course_pages/Business Economics _ Aston University_study_courses_business-economics-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/business-economics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-economics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-economics-foundation",
+      "source_html": "course_pages/Business Economics Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/business-economics-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-economics-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-economics-foundation/september-2027",
+      "source_html": "course_pages/Business Economics Foundation Programme _ Aston University_study_courses_business-economics-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/business-economics-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-economics-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-enterprise-innovation-bsc/september-2027",
+      "source_html": "course_pages/Business Enterprise and Innovation _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/business-enterprise-innovation-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-enterprise-innovation-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-enterprise-innovation-foundation",
+      "source_html": "course_pages/Business Enterprise and Innovation Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/business-enterprise-innovation-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-enterprise-innovation-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-enterprise-innovation-foundation/september-2027",
+      "source_html": "course_pages/Business Enterprise and Innovation Foundation Programme _ Aston University_study_courses_business-enterprise-innovation-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/business-enterprise-innovation-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-enterprise-innovation-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-management-foundation",
+      "source_html": "course_pages/Business and Management Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/business-management-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-management-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-management-foundation/september-2027",
+      "source_html": "course_pages/Business and Management Foundation Programme _ Aston University_study_courses_business-management-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/business-management-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-management-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/chemical-engineering-beng/september-2026",
+      "source_html": "course_pages/Chemical Engineering BEng _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/chemical-engineering-beng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/chemical-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/chemical-engineering-beng/september-2027",
+      "source_html": "course_pages/Chemical Engineering _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/chemical-engineering-beng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/chemical-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/chemical-engineering-foundation/september-2026",
+      "source_html": "course_pages/Chemical Engineering Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/chemical-engineering-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/chemical-engineering-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/chemical-engineering-foundation/september-2027",
+      "source_html": "course_pages/Chemical Engineering Foundation Programme _ Aston University_study_courses_chemical-engineering-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/chemical-engineering-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/chemical-engineering-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/chemical-engineering-meng/september-2026",
+      "source_html": "course_pages/Chemical Engineering MEng _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/chemical-engineering-meng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/chemical-engineering-meng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/chemical-engineering-meng/september-2027",
+      "source_html": "course_pages/Chemical Engineering _ Aston University_study_courses_chemical-engineering-meng_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/chemical-engineering-meng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/chemical-engineering-meng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/civil-engineering-beng/september-2026",
+      "source_html": "course_pages/Civil Engineering BEng _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/civil-engineering-beng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/civil-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/civil-engineering-beng/september-2027",
+      "source_html": "course_pages/Civil Engineering _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/civil-engineering-beng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/civil-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/civil-engineering-foundation",
+      "source_html": "course_pages/Civil Engineering Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/civil-engineering-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/civil-engineering-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/civil-engineering-foundation/september-2027",
+      "source_html": "course_pages/Civil Engineering Foundation Programme _ Aston University_study_courses_civil-engineering-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/civil-engineering-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/civil-engineering-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/civil-engineering-meng/september-2026",
+      "source_html": "course_pages/Civil Engineering MEng _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/civil-engineering-meng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/civil-engineering-meng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/civil-engineering-meng/september-2027",
+      "source_html": "course_pages/Civil Engineering _ Aston University_study_courses_civil-engineering-meng_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/civil-engineering-meng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/civil-engineering-meng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/civil-infrastructure-engineering-msc/april-2027",
+      "source_html": "course_pages/Civil Infrastructure Engineering _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/civil-infrastructure-engineering-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/civil-infrastructure-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/civil-infrastructure-engineering-msc/january-2027",
+      "source_html": "course_pages/Civil Infrastructure Engineering _ Aston University_study_courses_civil-infrastructure-engineering-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/civil-infrastructure-engineering-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/civil-infrastructure-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/civil-infrastructure-engineering-msc/september-2026",
+      "source_html": "course_pages/Civil Infrastructure Engineering _ Aston University_study_courses_civil-infrastructure-engineering-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/civil-infrastructure-engineering-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/civil-infrastructure-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/computer-science-bsc/september-2026",
+      "source_html": "course_pages/Computer Science _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/computer-science-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/computer-science-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/computer-science-bsc/september-2027",
+      "source_html": "course_pages/Computer Science _ Aston University_study_courses_computer-science-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/computer-science-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/computer-science-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/computer-science-foundation/september-2026",
+      "source_html": "course_pages/Computer Science Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/computer-science-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/computer-science-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/computer-science-foundation/september-2027",
+      "source_html": "course_pages/Computer Science Foundation Programme _ Aston University_study_courses_computer-science-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/computer-science-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/computer-science-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/construction-management-and-engineering-msc/april-2027",
+      "source_html": "course_pages/Construction Management and Engineering _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/construction-management-and-engineering-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/construction-management-and-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/construction-management-and-engineering-msc/january-2027",
+      "source_html": "course_pages/Construction Management and Engineering _ Aston University_study_courses_construction-management-and-engineering-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/construction-management-and-engineering-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/construction-management-and-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/construction-management-and-engineering-msc/september-2026",
+      "source_html": "course_pages/Construction Management and Engineering _ Aston University_study_courses_construction-management-and-engineering-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/construction-management-and-engineering-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/construction-management-and-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/construction-project-management-bsc/september-2026",
+      "source_html": "course_pages/Construction Project Management _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/construction-project-management-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/construction-project-management-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/construction-project-management-bsc/september-2027",
+      "source_html": "course_pages/Construction Project Management _ Aston University_study_courses_construction-project-management-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/construction-project-management-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/construction-project-management-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/construction-project-management-foundation",
+      "source_html": "course_pages/Construction Project Management Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/construction-project-management-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/construction-project-management-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/construction-project-management-foundation/september-2027",
+      "source_html": "course_pages/Construction Project Management Foundation Programme _ Aston University_study_courses_construction-project-management-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/construction-project-management-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/construction-project-management-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/criminology-bsc/september-2026",
+      "source_html": "course_pages/Criminology _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/criminology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/criminology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/criminology-bsc/september-2027",
+      "source_html": "course_pages/Criminology _ Aston University_study_courses_criminology-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/criminology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/criminology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/cyber-security-management-msc/april-2027",
+      "source_html": "course_pages/Cyber Security Management _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/cyber-security-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/cyber-security-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/cyber-security-management-msc/january-2027",
+      "source_html": "course_pages/Cyber Security Management _ Aston University_study_courses_cyber-security-management-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/cyber-security-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/cyber-security-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/cyber-security-management-msc/september-2026",
+      "source_html": "course_pages/Cyber Security Management _ Aston University_study_courses_cyber-security-management-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/cyber-security-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/cyber-security-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/cyber-security-msc/april-2027",
+      "source_html": "course_pages/Cyber Security _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/cyber-security-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/cyber-security-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/cyber-security-msc/january-2027",
+      "source_html": "course_pages/Cyber Security _ Aston University_study_courses_cyber-security-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/cyber-security-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/cyber-security-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/cyber-security-msc/september-2026",
+      "source_html": "course_pages/Cyber Security _ Aston University_study_courses_cyber-security-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/cyber-security-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/cyber-security-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/cybersecurity-bsc/september-2026",
+      "source_html": "course_pages/Cybersecurity _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/cybersecurity-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/cybersecurity-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/cybersecurity-bsc/september-2027",
+      "source_html": "course_pages/Cybersecurity _ Aston University_study_courses_cybersecurity-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/cybersecurity-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/cybersecurity-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/cybersecurity-foundation/september-2026",
+      "source_html": "course_pages/Cybersecurity Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/cybersecurity-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/cybersecurity-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/cybersecurity-foundation/september-2027",
+      "source_html": "course_pages/Cybersecurity Foundation Programme _ Aston University_study_courses_cybersecurity-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/cybersecurity-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/cybersecurity-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/data-driven-polarimetric-shape-sensing-composite-laminates-phd/october-2026",
+      "source_html": "course_pages/Data-driven polarimetric shape sensing of composite laminates _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/data-driven-polarimetric-shape-sensing-composite-laminates-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/data-driven-polarimetric-shape-sensing-composite-laminates-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/data-driven-polarimetric-shape-sensing-composite-laminates-phd/october-2026-0",
+      "source_html": "course_pages/Data-driven polarimetric shape sensing of composite laminates _ Aston University_study_courses_data-driven-polarimetric-shape-sensing-composite-laminates-phd_october-2026-0.html",
+      "clean_md": "clean/courses/postgraduate_research/data-driven-polarimetric-shape-sensing-composite-laminates-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/data-driven-polarimetric-shape-sensing-composite-laminates-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/data-science-msc/april-2027",
+      "source_html": "course_pages/Data Science _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/data-science-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/data-science-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/data-science-msc/january-2027",
+      "source_html": "course_pages/Data Science _ Aston University_study_courses_data-science-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/data-science-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/data-science-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/data-science-msc/september-2026",
+      "source_html": "course_pages/Data Science _ Aston University_study_courses_data-science-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/data-science-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/data-science-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/decentralised-task-allocation-multi-agent-systems-under-uncertainty-phd/october-2026",
+      "source_html": "course_pages/Decentralised Task Allocation in Multi-Agent Systems under Uncertainty _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/decentralised-task-allocation-multi-agent-systems-under-uncertainty-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/decentralised-task-allocation-multi-agent-systems-under-uncertainty-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/design-engineering-beng/september-2026",
+      "source_html": "course_pages/Design Engineering _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/design-engineering-beng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/design-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/design-engineering-beng/september-2027",
+      "source_html": "course_pages/Design Engineering _ Aston University_study_courses_design-engineering-beng_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/design-engineering-beng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/design-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/design-engineering-foundation",
+      "source_html": "course_pages/Design Engineering Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/design-engineering-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/design-engineering-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/design-engineering-foundation/september-2027",
+      "source_html": "course_pages/Design Engineering Foundation Programme _ Aston University_study_courses_design-engineering-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/design-engineering-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/design-engineering-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/digital-and-technology-solutions-degree-apprenticeship-bsc/september-2027",
+      "source_html": "course_pages/Digital and Technology Solutions Degree Apprenticeship _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/digital-and-technology-solutions-degree-apprenticeship-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/digital-and-technology-solutions-degree-apprenticeship-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/digital-chemical-engineering-msc/january-2027",
+      "source_html": "course_pages/Digital Chemical Engineering _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/digital-chemical-engineering-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/digital-chemical-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/digital-chemical-engineering-msc/september-2026",
+      "source_html": "course_pages/Digital Chemical Engineering _ Aston University_study_courses_digital-chemical-engineering-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/digital-chemical-engineering-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/digital-chemical-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/digital-marketing-and-analytics-msc/september-2026",
+      "source_html": "course_pages/Digital Marketing and Analytics _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/digital-marketing-and-analytics-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/digital-marketing-and-analytics-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/digital-marketing-bsc/september-2026",
+      "source_html": "course_pages/Digital Marketing _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/digital-marketing-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/digital-marketing-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/digital-marketing-bsc/september-2027",
+      "source_html": "course_pages/Digital Marketing _ Aston University_study_courses_digital-marketing-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/digital-marketing-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/digital-marketing-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/digital-marketing-foundation",
+      "source_html": "course_pages/Digital Marketing Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/digital-marketing-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/digital-marketing-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/digital-marketing-foundation/september-2027",
+      "source_html": "course_pages/Digital Marketing Foundation Programme _ Aston University_study_courses_digital-marketing-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/digital-marketing-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/digital-marketing-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/digital-media-and-communication-ba/september-2026",
+      "source_html": "course_pages/Digital Media and Communication _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/digital-media-and-communication-ba.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/digital-media-and-communication-ba",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/digital-media-and-communication-ba/september-2027",
+      "source_html": "course_pages/Digital Media and Communication _ Aston University_study_courses_digital-media-and-communication-ba_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/digital-media-and-communication-ba.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/digital-media-and-communication-ba",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/drug-delivery-msc/september-2026",
+      "source_html": "course_pages/Drug Delivery _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/drug-delivery-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/drug-delivery-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/dual-comb-microscopy-ultrafast-biological-imaging-phd/january-2027",
+      "source_html": "course_pages/Dual comb microscopy for ultrafast biological imaging _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/dual-comb-microscopy-ultrafast-biological-imaging-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/dual-comb-microscopy-ultrafast-biological-imaging-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/economics-and-finance-bsc/september-2027",
+      "source_html": "course_pages/Economics and Finance _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/economics-and-finance-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/economics-and-finance-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/economics-and-politics-bsc/september-2026",
+      "source_html": "course_pages/Economics and Politics _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/economics-and-politics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/economics-and-politics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/economics-and-politics-bsc/september-2027",
+      "source_html": "course_pages/Economics and Politics _ Aston University_study_courses_economics-and-politics-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/economics-and-politics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/economics-and-politics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/economics-bsc/september-2026",
+      "source_html": "course_pages/Economics _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/economics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/economics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/economics-bsc/september-2027",
+      "source_html": "course_pages/Economics _ Aston University_study_courses_economics-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/economics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/economics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/economics-finance-foundation",
+      "source_html": "course_pages/Economics and Finance Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/economics-finance-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/economics-finance-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/economics-finance-foundation/september-2027",
+      "source_html": "course_pages/Economics and Finance Foundation Programme _ Aston University_study_courses_economics-finance-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/economics-finance-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/economics-finance-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/economics-foundation",
+      "source_html": "course_pages/Economics Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/economics-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/economics-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/economics-foundation/september-2027",
+      "source_html": "course_pages/Economics Foundation Programme _ Aston University_study_courses_economics-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/economics-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/economics-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/electrical-and-electronic-engineering-beng",
+      "source_html": "course_pages/Electrical and Electronic Engineering BEng _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/electrical-and-electronic-engineering-beng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/electrical-and-electronic-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/electrical-and-electronic-engineering-beng/september-2027",
+      "source_html": "course_pages/Electrical and Electronic Engineering _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/electrical-and-electronic-engineering-beng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/electrical-and-electronic-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/electrical-and-electronic-engineering-foundation/september-2026",
+      "source_html": "course_pages/Electrical and Electronic Engineering Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/electrical-and-electronic-engineering-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/electrical-and-electronic-engineering-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/electrical-and-electronic-engineering-foundation/september-2027",
+      "source_html": "course_pages/Electrical and Electronic Engineering Foundation Programme _ Aston University_study_courses_electrical-and-electronic-engineering-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/electrical-and-electronic-engineering-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/electrical-and-electronic-engineering-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/electrical-and-electronic-engineering-meng/september-2026",
+      "source_html": "course_pages/Electrical and Electronic Engineering MEng _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/electrical-and-electronic-engineering-meng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/electrical-and-electronic-engineering-meng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/electrical-and-electronic-engineering-meng/september-2027",
+      "source_html": "course_pages/Electrical and Electronic Engineering _ Aston University_study_courses_electrical-and-electronic-engineering-meng_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/electrical-and-electronic-engineering-meng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/electrical-and-electronic-engineering-meng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/electrical-power-engineering-fdeng-fdeng/september-2026",
+      "source_html": "course_pages/Electrical Power Engineering FdEng _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/electrical-power-engineering-fdeng-fdeng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/electrical-power-engineering-fdeng-fdeng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/electronic-engineering-and-computer-science-beng/september-2026",
+      "source_html": "course_pages/Electronic Engineering and Computer Science BEng _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/electronic-engineering-and-computer-science-beng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/electronic-engineering-and-computer-science-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/electronic-engineering-and-computer-science-beng/september-2027",
+      "source_html": "course_pages/Electronic Engineering and Computer Science _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/electronic-engineering-and-computer-science-beng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/electronic-engineering-and-computer-science-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/electronic-engineering-and-computer-science-foundation/september-2026",
+      "source_html": "course_pages/Electronic Engineering and Computer Science Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/electronic-engineering-and-computer-science-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/electronic-engineering-and-computer-science-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/electronic-engineering-and-computer-science-foundation/september-2027",
+      "source_html": "course_pages/Electronic Engineering and Computer Science Foundation Programme _ Aston University_study_courses_electronic-engineering-and-computer-science-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/electronic-engineering-and-computer-science-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/electronic-engineering-and-computer-science-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/electronic-engineering-and-computer-science-meng/september-2026",
+      "source_html": "course_pages/Electronic Engineering and Computer Science MEng _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/electronic-engineering-and-computer-science-meng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/electronic-engineering-and-computer-science-meng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/electronic-engineering-and-computer-science-meng/september-2027",
+      "source_html": "course_pages/Electronic Engineering and Computer Science _ Aston University_study_courses_electronic-engineering-and-computer-science-meng_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/electronic-engineering-and-computer-science-meng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/electronic-engineering-and-computer-science-meng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/engineering-management-msc/april-2027",
+      "source_html": "course_pages/Engineering Management _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/engineering-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/engineering-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/engineering-management-msc/january-2027",
+      "source_html": "course_pages/Engineering Management _ Aston University_study_courses_engineering-management-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/engineering-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/engineering-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/engineering-management-msc/september-2026",
+      "source_html": "course_pages/Engineering Management _ Aston University_study_courses_engineering-management-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/engineering-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/engineering-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/english-and-sociology-bsc/september-2026",
+      "source_html": "course_pages/English and Sociology _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/english-and-sociology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/english-and-sociology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/english-and-sociology-bsc/september-2027",
+      "source_html": "course_pages/English and Sociology _ Aston University_study_courses_english-and-sociology-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/english-and-sociology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/english-and-sociology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/english-language-and-literature-ba/september-2026",
+      "source_html": "course_pages/English Language and Literature _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/english-language-and-literature-ba.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/english-language-and-literature-ba",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/english-language-and-literature-ba/september-2027",
+      "source_html": "course_pages/English Language and Literature _ Aston University_study_courses_english-language-and-literature-ba_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/english-language-and-literature-ba.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/english-language-and-literature-ba",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/english-language-ba/september-2026",
+      "source_html": "course_pages/English Language _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/english-language-ba.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/english-language-ba",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/english-language-ba/september-2027",
+      "source_html": "course_pages/English Language _ Aston University_study_courses_english-language-ba_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/english-language-ba.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/english-language-ba",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/english-ma/september-2026",
+      "source_html": "course_pages/English _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/english-ma.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/english-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/finance-bsc/september-2026",
+      "source_html": "course_pages/Finance _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/finance-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/finance-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/finance-bsc/september-2027",
+      "source_html": "course_pages/Finance _ Aston University_study_courses_finance-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/finance-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/finance-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/finance-foundation",
+      "source_html": "course_pages/Finance Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/finance-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/finance-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/finance-foundation/september-2027",
+      "source_html": "course_pages/Finance Foundation Programme _ Aston University_study_courses_finance-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/finance-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/finance-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/finance-msc/april-2027",
+      "source_html": "course_pages/Finance _ Aston University_study_courses_finance-msc_april-2027.html",
+      "clean_md": "clean/courses/postgraduate/finance-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/finance-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/finance-msc/january-2027",
+      "source_html": "course_pages/Finance _ Aston University_study_courses_finance-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/finance-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/finance-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/finance-msc/september-2026",
+      "source_html": "course_pages/Finance _ Aston University_study_courses_finance-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/finance-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/finance-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/financial-management-msc/april-2027",
+      "source_html": "course_pages/Financial Management _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/financial-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/financial-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/financial-management-msc/january-2027",
+      "source_html": "course_pages/Financial Management _ Aston University_study_courses_financial-management-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/financial-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/financial-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/financial-management-msc/september-2026",
+      "source_html": "course_pages/Financial Management _ Aston University_study_courses_financial-management-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/financial-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/financial-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/financial-technology-msc/april-2027",
+      "source_html": "course_pages/Financial Technology _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/financial-technology-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/financial-technology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/financial-technology-msc/january-2027",
+      "source_html": "course_pages/Financial Technology _ Aston University_study_courses_financial-technology-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/financial-technology-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/financial-technology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/financial-technology-msc/september-2026",
+      "source_html": "course_pages/Financial Technology _ Aston University_study_courses_financial-technology-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/financial-technology-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/financial-technology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/forensic-linguistics-ma/september-2026",
+      "source_html": "course_pages/Forensic Linguistics _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/forensic-linguistics-ma.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/forensic-linguistics-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/foundation-degree-hearing-aid-audiology-fdsc",
+      "source_html": "course_pages/Foundation Degree Hearing Aid Audiology _ Aston University.html",
+      "clean_md": "clean/courses/foundation/foundation-degree-hearing-aid-audiology-fdsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/foundation-degree-hearing-aid-audiology-fdsc",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/foundation-programme-aerospace-engineering",
+      "source_html": "course_pages/Aerospace Engineering Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/foundation-programme-aerospace-engineering.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/foundation-programme-aerospace-engineering",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/foundation-programme-aerospace-engineering/september-2027",
+      "source_html": "course_pages/Aerospace Engineering Foundation Programme _ Aston University_study_courses_foundation-programme-aerospace-engineering_september-2027.html",
+      "clean_md": "clean/courses/foundation/foundation-programme-aerospace-engineering.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/foundation-programme-aerospace-engineering",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/future-vehicle-technologies-msc/april-2027",
+      "source_html": "course_pages/Future Vehicle Technologies _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/future-vehicle-technologies-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/future-vehicle-technologies-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/future-vehicle-technologies-msc/january-2027",
+      "source_html": "course_pages/Future Vehicle Technologies _ Aston University_study_courses_future-vehicle-technologies-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/future-vehicle-technologies-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/future-vehicle-technologies-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/future-vehicle-technologies-msc/september-2026",
+      "source_html": "course_pages/Future Vehicle Technologies _ Aston University_study_courses_future-vehicle-technologies-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/future-vehicle-technologies-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/future-vehicle-technologies-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/global-business",
+      "source_html": "course_pages/Global Business and Management _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/global-business-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/global-business-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/global-business-and-management-top-bsc/september-2026",
+      "source_html": "course_pages/Global Business and Management (Top-up) _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/global-business-and-management-top-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/global-business-and-management-top-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/global-business-and-management-top-bsc/september-2027",
+      "source_html": "course_pages/Global Business and Management (Top-up) _ Aston University_study_courses_global-business-and-management-top-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/global-business-and-management-top-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/global-business-and-management-top-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/global-business-and-management-top-up-/january-2026",
+      "source_html": "course_pages/Global Business and Management (Top-up) _ Aston University_study_courses_global-business-and-management-top-up-_january-2026.html",
+      "clean_md": "clean/courses/undergraduate/global-business-and-management-top-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/global-business-and-management-top-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/health-psychology-msc/september-2026",
+      "source_html": "course_pages/Health Psychology _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/health-psychology-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/health-psychology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/healthcare-science-audiology-bsc/september-2026",
+      "source_html": "course_pages/Healthcare Science (Audiology) _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/healthcare-science-audiology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/healthcare-science-audiology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/healthcare-science-audiology-bsc/september-2027",
+      "source_html": "course_pages/Healthcare Science (Audiology) _ Aston University_study_courses_healthcare-science-audiology-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/healthcare-science-audiology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/healthcare-science-audiology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/healthcare-science-audiology-degree-apprenticeship-bsc/september-2027",
+      "source_html": "course_pages/Healthcare Science (Audiology)_ Degree Apprenticeship _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/healthcare-science-audiology-degree-apprenticeship-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/healthcare-science-audiology-degree-apprenticeship-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/healthcare-science-audiology-direct-entry-final-year-bsc/september-2026",
+      "source_html": "course_pages/Healthcare Science Audiology (direct entry to final year) _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/healthcare-science-audiology-direct-entry-final-year-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/healthcare-science-audiology-direct-entry-final-year-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/history-and-english-ba/september-2027",
+      "source_html": "course_pages/History and English _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/history-and-english-ba.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/history-and-english-ba",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/history-and-english-bsc/september-2026",
+      "source_html": "course_pages/History and English _ Aston University_study_courses_history-and-english-bsc_september-2026.html",
+      "clean_md": "clean/courses/undergraduate/history-and-english-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/history-and-english-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/history-and-international-relations-bsc/september-2026",
+      "source_html": "course_pages/History and International Relations _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/history-and-international-relations-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/history-and-international-relations-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/history-and-international-relations-bsc/september-2027",
+      "source_html": "course_pages/History and International Relations _ Aston University_study_courses_history-and-international-relations-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/history-and-international-relations-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/history-and-international-relations-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/history-and-politics-bsc/september-2026",
+      "source_html": "course_pages/History and Politics _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/history-and-politics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/history-and-politics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/history-and-politics-bsc/september-2027",
+      "source_html": "course_pages/History and Politics _ Aston University_study_courses_history-and-politics-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/history-and-politics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/history-and-politics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/history-ba/september-2026",
+      "source_html": "course_pages/History _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/history-ba.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/history-ba",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/history-ba/september-2027",
+      "source_html": "course_pages/History _ Aston University_study_courses_history-ba_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/history-ba.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/history-ba",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/human-resource-business-management-foundation",
+      "source_html": "course_pages/Human Resources and Business Management Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/human-resource-business-management-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/human-resource-business-management-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/human-resource-business-management-foundation/september-2027",
+      "source_html": "course_pages/Human Resources and Business Management Foundation Programme _ Aston University_study_courses_human-resource-business-management-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/human-resource-business-management-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/human-resource-business-management-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/human-resource-management-msc/april-2027",
+      "source_html": "course_pages/Human Resource Management _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/human-resource-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/human-resource-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/human-resource-management-msc/january-2027",
+      "source_html": "course_pages/Human Resource Management _ Aston University_study_courses_human-resource-management-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/human-resource-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/human-resource-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/human-resource-management-msc/september-2026",
+      "source_html": "course_pages/Human Resource Management _ Aston University_study_courses_human-resource-management-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/human-resource-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/human-resource-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/human-resources-and-business-management-bsc/september-2026",
+      "source_html": "course_pages/Human Resources and Business Management _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/human-resources-and-business-management-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/human-resources-and-business-management-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/human-resources-and-business-management-bsc/september-2027",
+      "source_html": "course_pages/Human Resources and Business Management _ Aston University_study_courses_human-resources-and-business-management-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/human-resources-and-business-management-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/human-resources-and-business-management-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/information-systems-and-business-analysis-msc/april-2027",
+      "source_html": "course_pages/Information Systems and Business Analysis _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/information-systems-and-business-analysis-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/information-systems-and-business-analysis-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/information-systems-and-business-analysis-msc/january-2027",
+      "source_html": "course_pages/Information Systems and Business Analysis _ Aston University_study_courses_information-systems-and-business-analysis-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/information-systems-and-business-analysis-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/information-systems-and-business-analysis-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/information-systems-and-business-analysis-msc/september-2026",
+      "source_html": "course_pages/Information Systems and Business Analysis _ Aston University_study_courses_information-systems-and-business-analysis-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/information-systems-and-business-analysis-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/information-systems-and-business-analysis-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-accounting-and-finance-msc/april-2027",
+      "source_html": "course_pages/International Accounting and Finance _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/international-accounting-and-finance-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-accounting-and-finance-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-accounting-and-finance-msc/january-2027",
+      "source_html": "course_pages/International Accounting and Finance _ Aston University_study_courses_international-accounting-and-finance-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/international-accounting-and-finance-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-accounting-and-finance-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-accounting-and-finance-msc/september-2026",
+      "source_html": "course_pages/International Accounting and Finance _ Aston University_study_courses_international-accounting-and-finance-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/international-accounting-and-finance-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-accounting-and-finance-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-business-and-economics-bsc/september-2026",
+      "source_html": "course_pages/International Business and Economics _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/international-business-and-economics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-business-and-economics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-business-and-economics-bsc/september-2027",
+      "source_html": "course_pages/International Business and Economics _ Aston University_study_courses_international-business-and-economics-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/international-business-and-economics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-business-and-economics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-business-and-management-bsc/september-2026",
+      "source_html": "course_pages/International Business and Management _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/international-business-and-management-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-business-and-management-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-business-and-management-bsc/september-2027",
+      "source_html": "course_pages/International Business and Management _ Aston University_study_courses_international-business-and-management-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/international-business-and-management-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-business-and-management-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-business-economics-foundation",
+      "source_html": "course_pages/International Business and Economics Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/international-business-economics-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-business-economics-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-business-economics-foundation/september-2027",
+      "source_html": "course_pages/International Business and Economics Foundation Programme _ Aston University_study_courses_international-business-economics-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/international-business-economics-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-business-economics-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-business-management-foundation",
+      "source_html": "course_pages/International Business and Management Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/international-business-management-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-business-management-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-business-management-foundation/september-2027",
+      "source_html": "course_pages/International Business and Management Foundation Programme _ Aston University_study_courses_international-business-management-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/international-business-management-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-business-management-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-business-msc/april-2027",
+      "source_html": "course_pages/International Business _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/international-business-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-business-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-business-msc/january-2027",
+      "source_html": "course_pages/International Business _ Aston University_study_courses_international-business-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/international-business-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-business-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-business-msc/september-2026",
+      "source_html": "course_pages/International Business _ Aston University_study_courses_international-business-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/international-business-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-business-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-relations-and-sociology-bsc/september-2026",
+      "source_html": "course_pages/International Relations and Sociology _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/international-relations-and-sociology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-relations-and-sociology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-relations-and-sociology-bsc/september-2027",
+      "source_html": "course_pages/International Relations and Sociology _ Aston University_study_courses_international-relations-and-sociology-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/international-relations-and-sociology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-relations-and-sociology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/international-relations-msc/september-2026",
+      "source_html": "course_pages/International Relations _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/international-relations-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/international-relations-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/investment-analysis-and-risk-msc/april-2027",
+      "source_html": "course_pages/Investment Analysis and Risk _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/investment-analysis-and-risk-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/investment-analysis-and-risk-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/investment-analysis-and-risk-msc/january-2027",
+      "source_html": "course_pages/Investment Analysis and Risk _ Aston University_study_courses_investment-analysis-and-risk-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/investment-analysis-and-risk-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/investment-analysis-and-risk-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/investment-analysis-and-risk-msc/september-2026",
+      "source_html": "course_pages/Investment Analysis and Risk _ Aston University_study_courses_investment-analysis-and-risk-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/investment-analysis-and-risk-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/investment-analysis-and-risk-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/law-llb/september-2026",
+      "source_html": "course_pages/Law _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/law-llb.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/law-llb",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/law-llb/september-2027",
+      "source_html": "course_pages/Law _ Aston University_study_courses_law-llb_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/law-llb.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/law-llb",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/marketing-bsc/september-2026",
+      "source_html": "course_pages/Marketing _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/marketing-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/marketing-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/marketing-bsc/september-2027",
+      "source_html": "course_pages/Marketing _ Aston University_study_courses_marketing-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/marketing-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/marketing-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/marketing-foundation",
+      "source_html": "course_pages/Marketing Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/marketing-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/marketing-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/marketing-foundation/september-2027",
+      "source_html": "course_pages/Marketing Foundation Programme _ Aston University_study_courses_marketing-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/marketing-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/marketing-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/master-laws-and-legal-practice-llm",
+      "source_html": "course_pages/Master of Laws and Legal Practice (SQE1 and SQE2 Preparation) _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/master-laws-and-legal-practice-llm.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/master-laws-and-legal-practice-llm",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/mathematics-bsc/september-2026",
+      "source_html": "course_pages/Mathematics _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/mathematics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/mathematics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/mathematics-bsc/september-2027",
+      "source_html": "course_pages/Mathematics _ Aston University_study_courses_mathematics-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/mathematics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/mathematics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/mathematics-economics-bsc/september-2026",
+      "source_html": "course_pages/Mathematics with Economics _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/mathematics-economics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/mathematics-economics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/mathematics-economics-bsc/september-2027",
+      "source_html": "course_pages/Mathematics with Economics _ Aston University_study_courses_mathematics-economics-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/mathematics-economics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/mathematics-economics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/mathematics-economics-foundation",
+      "source_html": "course_pages/Mathematics with Economics Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/mathematics-economics-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/mathematics-economics-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/mathematics-economics-foundation/september-2027",
+      "source_html": "course_pages/Mathematics with Economics Foundation Programme _ Aston University_study_courses_mathematics-economics-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/mathematics-economics-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/mathematics-economics-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/mathematics-foundation/september-2026",
+      "source_html": "course_pages/Mathematics Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/mathematics-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/mathematics-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/mathematics-foundation/september-2027",
+      "source_html": "course_pages/Mathematics Foundation Programme _ Aston University_study_courses_mathematics-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/mathematics-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/mathematics-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/mba-full-time-mba/january-2027",
+      "source_html": "course_pages/MBA (Full-time) _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/mba-full-time-mba.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/mba-full-time-mba",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/mba-full-time-mba/september-2026",
+      "source_html": "course_pages/MBA (Full-time) _ Aston University_study_courses_mba-full-time-mba_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/mba-full-time-mba.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/mba-full-time-mba",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/mechanical-engineering-msc/april-2027",
+      "source_html": "course_pages/Mechanical Engineering _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/mechanical-engineering-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/mechanical-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/mechanical-engineering-msc/january-2027",
+      "source_html": "course_pages/Mechanical Engineering _ Aston University_study_courses_mechanical-engineering-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/mechanical-engineering-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/mechanical-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/medical-bioscience-singapore-bsc-12-months",
+      "source_html": "course_pages/Medical Bioscience (Singapore) (12-month Top Up) _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/medical-bioscience-singapore-bsc-12-months.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/medical-bioscience-singapore-bsc-12-months",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/medical-bioscience-singapore-bsc-18-months",
+      "source_html": "course_pages/Medical Bioscience (Singapore) (18-month Top-Up) _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/medical-bioscience-singapore-bsc-18-months.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/medical-bioscience-singapore-bsc-18-months",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/medical-bioscience-singapore-bsc-24-months",
+      "source_html": "course_pages/Medical Bioscience (Singapore) (24-month Top Up) _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/medical-bioscience-singapore-bsc-24-months.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/medical-bioscience-singapore-bsc-24-months",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/medicine-mbchb/september-2026",
+      "source_html": "course_pages/Medicine _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/medicine-mbchb.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/medicine-mbchb",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/medicine-mbchb/september-2027",
+      "source_html": "course_pages/Medicine _ Aston University_study_courses_medicine-mbchb_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/medicine-mbchb.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/medicine-mbchb",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/neuropharmacology-mres/september-2026",
+      "source_html": "course_pages/Neuropharmacology _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/neuropharmacology-mres.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/neuropharmacology-mres",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/neuroscience-bsc/september-2026",
+      "source_html": "course_pages/Neuroscience _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/neuroscience-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/neuroscience-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/neuroscience-bsc/september-2027",
+      "source_html": "course_pages/Neuroscience _ Aston University_study_courses_neuroscience-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/neuroscience-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/neuroscience-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/neuroscience-drug-discovery-msc/september-2026",
+      "source_html": "course_pages/Neuroscience for Drug Discovery _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/neuroscience-drug-discovery-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/neuroscience-drug-discovery-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/novel-functions-epigenetic-cancer-driver-kmt2d-phd/october-2026",
+      "source_html": "course_pages/Novel functions of the epigenetic cancer driver KMT2D _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/novel-functions-epigenetic-cancer-driver-kmt2d-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/novel-functions-epigenetic-cancer-driver-kmt2d-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/nursing-studies-registered-nurse-adult-nursing-bsc/september-2026",
+      "source_html": "course_pages/Nursing Studies (Registered Nurse Adult Nursing) _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/nursing-studies-registered-nurse-adult-nursing-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/nursing-studies-registered-nurse-adult-nursing-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/nursing-studies-registered-nurse-adult-nursing-bsc/september-2027",
+      "source_html": "course_pages/Nursing Studies (Registered Nurse Adult Nursing) _ Aston University_study_courses_nursing-studies-registered-nurse-adult-nursing-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/nursing-studies-registered-nurse-adult-nursing-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/nursing-studies-registered-nurse-adult-nursing-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/nursing-studies-registered-nurse-mental-health-nursing-bsc/september-2026",
+      "source_html": "course_pages/Nursing Studies (Registered Nurse Mental Health Nursing) _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/nursing-studies-registered-nurse-mental-health-nursing-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/nursing-studies-registered-nurse-mental-health-nursing-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/nursing-studies-registered-nurse-mental-health-nursing-bsc/september-2027",
+      "source_html": "course_pages/Nursing Studies (Registered Nurse Mental Health Nursing) _ Aston University_study_courses_nursing-studies-registered-nurse-mental-health-nursing-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/nursing-studies-registered-nurse-mental-health-nursing-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/nursing-studies-registered-nurse-mental-health-nursing-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/optometry-moptom/september-2026",
+      "source_html": "course_pages/Optometry _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/optometry-moptom.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/optometry-moptom",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/optometry-moptom/september-2027",
+      "source_html": "course_pages/Optometry _ Aston University_study_courses_optometry-moptom_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/optometry-moptom.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/optometry-moptom",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/overseas-pharmacists-assessment-programme-ospap-pgdip/september-2026",
+      "source_html": "course_pages/Overseas Pharmacists Assessment Programme (OSPAP) _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/overseas-pharmacists-assessment-programme-ospap-pgdip.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/overseas-pharmacists-assessment-programme-ospap-pgdip",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/pharmaceutical-sciences-msc/september-2026",
+      "source_html": "course_pages/Pharmaceutical Sciences _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/pharmaceutical-sciences-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/pharmaceutical-sciences-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/pharmacokinetics-msc/september-2026",
+      "source_html": "course_pages/Pharmacokinetics _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/pharmacokinetics-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/pharmacokinetics-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/pharmacology-bsc",
+      "source_html": "course_pages/Pharmacology _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/pharmacology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/pharmacology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/pharmacology-bsc/september-2027",
+      "source_html": "course_pages/Pharmacology _ Aston University_study_courses_pharmacology-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/pharmacology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/pharmacology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/pharmacy-mpharm/september-2026",
+      "source_html": "course_pages/Pharmacy _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/pharmacy-mpharm.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/pharmacy-mpharm",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/pharmacy-mpharm/september-2027",
+      "source_html": "course_pages/Pharmacy _ Aston University_study_courses_pharmacy-mpharm_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/pharmacy-mpharm.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/pharmacy-mpharm",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/phd-aston-business-school/october-2026",
+      "source_html": "course_pages/PhD - Aston Business School _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/phd-aston-business-school.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/phd-aston-business-school",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/phd-aston-law-school/october-2026",
+      "source_html": "course_pages/PhD - Aston Law School _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/phd-aston-law-school.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/phd-aston-law-school",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/phd-engineering-and-physical-sciences/october-2026",
+      "source_html": "course_pages/PhD - Engineering and Physical Sciences _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/phd-engineering-and-physical-sciences.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/phd-engineering-and-physical-sciences",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/phd-novel-polymer-systems-ostomy-adhesive-applications-phd/january-2027",
+      "source_html": "course_pages/PhD+_ Novel Polymer Systems for Ostomy Adhesive Applications _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/phd-novel-polymer-systems-ostomy-adhesive-applications-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/phd-novel-polymer-systems-ostomy-adhesive-applications-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/phd-school-social-sciences-and-humanities",
+      "source_html": "course_pages/PhD - Social Sciences and Humanities _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/phd-school-social-sciences-and-humanities.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/phd-school-social-sciences-and-humanities",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/physician-associate-practice-msc",
+      "source_html": "course_pages/Physician Associate Practice _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/physician-associate-practice-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/physician-associate-practice-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/politics-and-sociology-bsc/september-2026",
+      "source_html": "course_pages/Politics and Sociology _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/politics-and-sociology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/politics-and-sociology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/politics-and-sociology-bsc/september-2027",
+      "source_html": "course_pages/Politics and Sociology _ Aston University_study_courses_politics-and-sociology-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/politics-and-sociology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/politics-and-sociology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/politics-international-relations-bsc/september-2026",
+      "source_html": "course_pages/Politics with International Relations _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/politics-international-relations-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/politics-international-relations-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/politics-international-relations-bsc/september-2027",
+      "source_html": "course_pages/Politics and International Relations _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/politics-international-relations-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/politics-international-relations-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/product-design-and-innovation-bsc/september-2026",
+      "source_html": "course_pages/Product Design and Innovation _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/product-design-and-innovation-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/product-design-and-innovation-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/product-design-and-innovation-bsc/september-2027",
+      "source_html": "course_pages/Product Design and Innovation _ Aston University_study_courses_product-design-and-innovation-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/product-design-and-innovation-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/product-design-and-innovation-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/product-design-and-innovation-foundation/september-2026",
+      "source_html": "course_pages/Product Design and Innovation Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/product-design-and-innovation-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/product-design-and-innovation-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/product-design-and-innovation-foundation/september-2027",
+      "source_html": "course_pages/Product Design and Innovation Foundation Programme _ Aston University_study_courses_product-design-and-innovation-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/product-design-and-innovation-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/product-design-and-innovation-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/professional-engineering-controltechnical-support-engineer-beng-degree-apprenticeship/october-2024",
+      "source_html": "course_pages/Professional Engineering (Control Systems Engineer) Degree Apprenticeship _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/professional-engineering-controltechnical-support-engineer-beng-degree-apprenticeship.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/professional-engineering-controltechnical-support-engineer-beng-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/project-management-msc-msc",
+      "source_html": "course_pages/Project Management _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/project-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/project-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/project-management-msc/april-2027",
+      "source_html": "course_pages/Project Management _ Aston University_study_courses_project-management-msc_april-2027.html",
+      "clean_md": "clean/courses/postgraduate/project-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/project-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/project-management-msc/january-2027",
+      "source_html": "course_pages/Project Management _ Aston University_study_courses_project-management-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/project-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/project-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/project-management-msc/september-2026",
+      "source_html": "course_pages/Project Management _ Aston University_study_courses_project-management-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/project-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/project-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/psychology-4-year-bsc/september-2026",
+      "source_html": "course_pages/Psychology _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/psychology-4-year-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/psychology-4-year-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/psychology-and-business-bsc/september-2026",
+      "source_html": "course_pages/Psychology and Business _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/psychology-and-business-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/psychology-and-business-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/psychology-and-business-bsc/september-2027",
+      "source_html": "course_pages/Psychology and Business _ Aston University_study_courses_psychology-and-business-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/psychology-and-business-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/psychology-and-business-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/psychology-and-criminology-bsc/september-2026",
+      "source_html": "course_pages/Psychology and Criminology _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/psychology-and-criminology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/psychology-and-criminology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/psychology-and-criminology/september-2027",
+      "source_html": "course_pages/Psychology and Criminology _ Aston University_study_courses_psychology-and-criminology_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/psychology-and-criminology.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/psychology-and-criminology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/psychology-and-marketing-bsc/september-2026",
+      "source_html": "course_pages/Psychology and Marketing _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/psychology-and-marketing-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/psychology-and-marketing-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/psychology-and-marketing-bsc/september-2027",
+      "source_html": "course_pages/Psychology and Marketing _ Aston University_study_courses_psychology-and-marketing-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/psychology-and-marketing-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/psychology-and-marketing-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/psychology-and-sociology-bsc/september-2026",
+      "source_html": "course_pages/Psychology and Sociology _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/psychology-and-sociology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/psychology-and-sociology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/psychology-and-sociology-bsc/september-2027",
+      "source_html": "course_pages/Psychology and Sociology _ Aston University_study_courses_psychology-and-sociology-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/psychology-and-sociology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/psychology-and-sociology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/psychology-bsc/september-2027",
+      "source_html": "course_pages/Psychology _ Aston University_study_courses_psychology-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/psychology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/psychology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/psychology-conversion-msc/september-2026",
+      "source_html": "course_pages/Psychology (Conversion) _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/psychology-conversion-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/psychology-conversion-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/psychotropic-decision-making-pregnancy-smi-process-phd/january-2027",
+      "source_html": "course_pages/PsychotROpiC dEciSion-making pregnancy-SMI (PROCESS) _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/psychotropic-decision-making-pregnancy-smi-process-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/psychotropic-decision-making-pregnancy-smi-process-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/quantity-surveying-bsc/september-2026",
+      "source_html": "course_pages/Quantity Surveying _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/quantity-surveying-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/quantity-surveying-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/quantity-surveying-bsc/september-2027",
+      "source_html": "course_pages/Quantity Surveying _ Aston University_study_courses_quantity-surveying-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/quantity-surveying-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/quantity-surveying-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/quantity-surveying-foundation/september-2026",
+      "source_html": "course_pages/Quantity Surveying Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/quantity-surveying-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/quantity-surveying-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/quantity-surveying-foundation/september-2027",
+      "source_html": "course_pages/Quantity Surveying Foundation Programme _ Aston University_study_courses_quantity-surveying-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/quantity-surveying-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/quantity-surveying-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/robotics-and-autonomous-systems-msc/april-2027",
+      "source_html": "course_pages/Robotics and Autonomous Systems _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/robotics-and-autonomous-systems-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/robotics-and-autonomous-systems-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/robotics-and-autonomous-systems-msc/january-2027",
+      "source_html": "course_pages/Robotics and Autonomous Systems _ Aston University_study_courses_robotics-and-autonomous-systems-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/robotics-and-autonomous-systems-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/robotics-and-autonomous-systems-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/robotics-and-autonomous-systems-msc/september-2026",
+      "source_html": "course_pages/Robotics and Autonomous Systems _ Aston University_study_courses_robotics-and-autonomous-systems-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/robotics-and-autonomous-systems-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/robotics-and-autonomous-systems-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/science-industry-processplant-engineer-degree-apprenticeship-beng/september-2027",
+      "source_html": "course_pages/Science Industry Process_Plant Engineer Degree Apprenticeship _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/science-industry-processplant-engineer-degree-apprenticeship-beng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/science-industry-processplant-engineer-degree-apprenticeship-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/smart-manufacturing-msc/april-2027",
+      "source_html": "course_pages/Smart Manufacturing _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/smart-manufacturing-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/smart-manufacturing-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/smart-manufacturing-msc/january-2027",
+      "source_html": "course_pages/Smart Manufacturing _ Aston University_study_courses_smart-manufacturing-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/smart-manufacturing-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/smart-manufacturing-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/smart-manufacturing-msc/september-2026",
+      "source_html": "course_pages/Smart Manufacturing _ Aston University_study_courses_smart-manufacturing-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/smart-manufacturing-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/smart-manufacturing-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/sociology-bsc/september-2026",
+      "source_html": "course_pages/Sociology _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/sociology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/sociology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/sociology-bsc/september-2027",
+      "source_html": "course_pages/Sociology _ Aston University_study_courses_sociology-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/sociology-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/sociology-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/stem-cells-and-regenerative-medicine-msc/september-2026",
+      "source_html": "course_pages/Stem Cells and Regenerative Medicine _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/stem-cells-and-regenerative-medicine-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/stem-cells-and-regenerative-medicine-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/strategic-marketing-management-msc/april-2027",
+      "source_html": "course_pages/Strategic Marketing Management _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/strategic-marketing-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/strategic-marketing-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/strategic-marketing-management-msc/january-2027",
+      "source_html": "course_pages/Strategic Marketing Management _ Aston University_study_courses_strategic-marketing-management-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/strategic-marketing-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/strategic-marketing-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/strategic-marketing-management-msc/september-2026",
+      "source_html": "course_pages/Strategic Marketing Management _ Aston University_study_courses_strategic-marketing-management-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/strategic-marketing-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/strategic-marketing-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/supply-chain-management-msc/april-2027",
+      "source_html": "course_pages/Supply Chain Management _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/supply-chain-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/supply-chain-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/supply-chain-management-msc/january-2027",
+      "source_html": "course_pages/Supply Chain Management _ Aston University_study_courses_supply-chain-management-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/supply-chain-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/supply-chain-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/supply-chain-management-msc/september-2026",
+      "source_html": "course_pages/Supply Chain Management _ Aston University_study_courses_supply-chain-management-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/supply-chain-management-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/supply-chain-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/supply-chain-management-professional-practice-degree-apprenticeship-bsc/september-2027",
+      "source_html": "course_pages/Supply Chain Management (Professional Practice) Degree Apprenticeship _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/supply-chain-management-professional-practice-degree-apprenticeship-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/supply-chain-management-professional-practice-degree-apprenticeship-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/surfaces-elimination-clostridiodes-difficile-spores-phd",
+      "source_html": "course_pages/Surfaces for the elimination of Clostridiodes difficile spores _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/surfaces-elimination-clostridiodes-difficile-spores-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/surfaces-elimination-clostridiodes-difficile-spores-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/sustainability-msc/april-2027",
+      "source_html": "course_pages/Sustainability _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/sustainability-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/sustainability-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/sustainability-msc/january-2027",
+      "source_html": "course_pages/Sustainability _ Aston University_study_courses_sustainability-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/sustainability-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/sustainability-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/sustainability-msc/september-2026",
+      "source_html": "course_pages/Sustainability _ Aston University_study_courses_sustainability-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/sustainability-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/sustainability-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/sustainable-bio-based-nanomaterials-next-generation-elastomer-technologies-phd/october",
+      "source_html": "course_pages/Sustainable Bio-Based Nanomaterials for Next-Generation Elastomer Technologies _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/sustainable-bio-based-nanomaterials-next-generation-elastomer-technologies-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/sustainable-bio-based-nanomaterials-next-generation-elastomer-technologies-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/sustainable-chemical-engineering-msc/april-2027",
+      "source_html": "course_pages/Sustainable Chemical Engineering _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/sustainable-chemical-engineering-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/sustainable-chemical-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/sustainable-chemical-engineering-msc/january-2027",
+      "source_html": "course_pages/Sustainable Chemical Engineering _ Aston University_study_courses_sustainable-chemical-engineering-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/sustainable-chemical-engineering-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/sustainable-chemical-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/sustainable-chemical-engineering-msc/september-2026",
+      "source_html": "course_pages/Sustainable Chemical Engineering _ Aston University_study_courses_sustainable-chemical-engineering-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/sustainable-chemical-engineering-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/sustainable-chemical-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/sustainable-nanomaterials-thermal-management-industrial-systems-phd/october-2026",
+      "source_html": "course_pages/Sustainable Nanomaterials for Thermal Management of Industrial Systems _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/sustainable-nanomaterials-thermal-management-industrial-systems-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/sustainable-nanomaterials-thermal-management-industrial-systems-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/uncovering-human-cortical-growth-principles-neuromorphic-computing-phd/october-2026-0",
+      "source_html": "course_pages/Uncovering Human Cortical Growth Principles for Neuromorphic Computing _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/uncovering-human-cortical-growth-principles-neuromorphic-computing-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/uncovering-human-cortical-growth-principles-neuromorphic-computing-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/understanding-role-lipoxidation-tumorigenic-signalling-phd/october-2026-0",
+      "source_html": "course_pages/Understanding the role of lipoxidation in tumorigenic signalling _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/understanding-role-lipoxidation-tumorigenic-signalling-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/understanding-role-lipoxidation-tumorigenic-signalling-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/upcycling-waste-pvc-advanced-membrane-materials-water-separation-applications-phd",
+      "source_html": "course_pages/PhD+_ Tactile Sensing with AI Accelerations for Smart Mobility Systems _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/upcycling-waste-pvc-advanced-membrane-materials-water-separation-applications-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/upcycling-waste-pvc-advanced-membrane-materials-water-separation-applications-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/3d-printing-ocular-films-treatment-ocular-diseases-anterior-segment-phd",
+      "source_html": "course_pages/3D printing of ocular films for treatment of ocular diseases of the anterior segment _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-3d-printing-ocular-films-treatment-ocular-diseases-anterior-segment-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/3d-printing-ocular-films-treatment-ocular-diseases-anterior-segment-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/advancing-episignature-analysis-chromatin-disorders-phd",
+      "source_html": "course_pages/Advancing episignature analysis for chromatin disorders _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-advancing-episignature-analysis-chromatin-disorders-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/advancing-episignature-analysis-chromatin-disorders-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/antimicrobial-resistance-and-gene-regulation-enteroaggregative-escherichia-coli",
+      "source_html": "course_pages/Antimicrobial resistance and gene regulation in Enteroaggregative Escherichia coli. _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-antimicrobial-resistance-and-gene-regulation-enteroaggregative-escherichia-coli.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/antimicrobial-resistance-and-gene-regulation-enteroaggregative-escherichia-coli",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/beyond-h3k4-methylation-mechanistic-insights-how-kmt2d-controls-transcription-dna",
+      "source_html": "course_pages/Beyond H3K4 Methylation_ Mechanistic Insights into How KMT2D Controls Transcription, DNA Repair and Genome Stability _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-beyond-h3k4-methylation-mechanistic-insights-how-kmt2d-controls-transcription-dna.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/beyond-h3k4-methylation-mechanistic-insights-how-kmt2d-controls-transcription-dna",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/bioerodible-inserts-platform-controlled-ocular-drug-delivery-phd",
+      "source_html": "course_pages/Bioerodible inserts as a platform for controlled ocular drug delivery _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-bioerodible-inserts-platform-controlled-ocular-drug-delivery-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/bioerodible-inserts-platform-controlled-ocular-drug-delivery-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/cell-membrane-engineering-biotechnology-phd",
+      "source_html": "course_pages/Cell membrane engineering for biotechnology _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-cell-membrane-engineering-biotechnology-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/cell-membrane-engineering-biotechnology-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/cell-membrane-engineering-biotechnology-phd-2026",
+      "source_html": "course_pages/Cell membrane engineering for biotechnology _ Aston University_study_courses-phd_cell-membrane-engineering-biotechnology-phd-2026.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-cell-membrane-engineering-biotechnology-phd-2026.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/cell-membrane-engineering-biotechnology-phd-2026",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/deciphering-stress-response-healthy-aging-phd",
+      "source_html": "course_pages/Deciphering stress response in healthy aging _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-deciphering-stress-response-healthy-aging-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/deciphering-stress-response-healthy-aging-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/defining-origin-multilocus-imprinting-disturbance-mlid-phd",
+      "source_html": "course_pages/Defining the origin of multilocus imprinting disturbance (MLID) _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-defining-origin-multilocus-imprinting-disturbance-mlid-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/defining-origin-multilocus-imprinting-disturbance-mlid-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/design-construction-and-testing-recombinant-protein-production-systems-industrial",
+      "source_html": "course_pages/Design, construction and testing of recombinant protein production systems for industrial biotechnology applications. _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-design-construction-and-testing-recombinant-protein-production-systems-industrial.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/design-construction-and-testing-recombinant-protein-production-systems-industrial",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/design-synthesis-and-screening-inhibitors-pseudomonas-aeruginosa-phd",
+      "source_html": "course_pages/Design, synthesis and screening of inhibitors of Pseudomonas Aeruginosa _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-design-synthesis-and-screening-inhibitors-pseudomonas-aeruginosa-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/design-synthesis-and-screening-inhibitors-pseudomonas-aeruginosa-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/designing-inclusive-participatory-mapping-tools-user-centred-design-approach",
+      "source_html": "course_pages/Designing Inclusive Participatory Mapping Tools_ A User-Centred Design Approach for Capturing Diverse Urban Experiences _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-designing-inclusive-participatory-mapping-tools-user-centred-design-approach.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/designing-inclusive-participatory-mapping-tools-user-centred-design-approach",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/designing-plastics-disappearance-ai-driven-discovery-degradable-polymers-phd",
+      "source_html": "course_pages/Designing Plastics for Disappearance_ AI-Driven Discovery of Degradable Polymers _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-designing-plastics-disappearance-ai-driven-discovery-degradable-polymers-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/designing-plastics-disappearance-ai-driven-discovery-degradable-polymers-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/development-and-demonstration-laboratory-scale-next-generation-multifunctional",
+      "source_html": "course_pages/Development and demonstration of a laboratory-scale next generation multifunctional reactor for biochar production and bioenergy with carbon capture and storage (BECCS) technology .html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-development-and-demonstration-laboratory-scale-next-generation-multifunctional.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/development-and-demonstration-laboratory-scale-next-generation-multifunctional",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/development-antioxidant-loaded-dermal-formulations-diabetic-wound-healing-phd",
+      "source_html": "course_pages/Development of antioxidant-loaded dermal formulations for diabetic wound healing. _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-development-antioxidant-loaded-dermal-formulations-diabetic-wound-healing-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/development-antioxidant-loaded-dermal-formulations-diabetic-wound-healing-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/development-smart-drug-delivery-systems-targeted-ocular-administration-phd",
+      "source_html": "course_pages/Development of smart drug delivery systems for targeted ocular administration _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-development-smart-drug-delivery-systems-targeted-ocular-administration-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/development-smart-drug-delivery-systems-targeted-ocular-administration-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/disrupted-brain-development-and-stress-response-zebrafish-model-psychiatric-disease",
+      "source_html": "course_pages/Disrupted brain development and stress response in a zebrafish model of psychiatric disease _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-disrupted-brain-development-and-stress-response-zebrafish-model-psychiatric-disease.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/disrupted-brain-development-and-stress-response-zebrafish-model-psychiatric-disease",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/dry-eye-disease-and-eye-drops-retention-dry-eye-management-formulations-eye-phd",
+      "source_html": "course_pages/Dry eye disease and eye drops_ retention of dry eye management formulations in eye _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-dry-eye-disease-and-eye-drops-retention-dry-eye-management-formulations-eye-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/dry-eye-disease-and-eye-drops-retention-dry-eye-management-formulations-eye-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/effect-immunosuppressant-mycophenolic-acid-gene-expression-dna-damage-and-genomic",
+      "source_html": "course_pages/The effect of immunosuppressant mycophenolic acid on gene expression, DNA damage and genomic stability _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-effect-immunosuppressant-mycophenolic-acid-gene-expression-dna-damage-and-genomic.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/effect-immunosuppressant-mycophenolic-acid-gene-expression-dna-damage-and-genomic",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/effective-management-dry-eye-disease-routine-clinical-practice-phd",
+      "source_html": "course_pages/Effective Management of Dry Eye Disease in Routine Clinical Practice _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-effective-management-dry-eye-disease-routine-clinical-practice-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/effective-management-dry-eye-disease-routine-clinical-practice-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/energy-efficient-oxyfuel-combustion-biomass-enabled-oxygen-separation-membranes",
+      "source_html": "course_pages/Energy Efficient Oxyfuel Combustion of Biomass Enabled by Oxygen Separation Membranes _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-energy-efficient-oxyfuel-combustion-biomass-enabled-oxygen-separation-membranes.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/energy-efficient-oxyfuel-combustion-biomass-enabled-oxygen-separation-membranes",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/experimental-and-computational-investigation-stabilisation-drug-molecules-their",
+      "source_html": "course_pages/Experimental and computational investigation of the stabilisation of drug molecules in their amorphous state by mesoporous polymers _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-experimental-and-computational-investigation-stabilisation-drug-molecules-their.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/experimental-and-computational-investigation-stabilisation-drug-molecules-their",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/exploring-health-determinants-biomarkers-and-healthcare-resource-utilisation-across",
+      "source_html": "course_pages/Exploring Health Determinants, Biomarkers, and Healthcare Resource Utilisation Across the Life Course Using the Clinical Practice Research Datalink _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-exploring-health-determinants-biomarkers-and-healthcare-resource-utilisation-across.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/exploring-health-determinants-biomarkers-and-healthcare-resource-utilisation-across",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/functional-analysis-gorlin-syndrome-links-genome-stability-maintenance-and-s-phase",
+      "source_html": "course_pages/Functional analysis of Gorlin Syndrome links to genome stability maintenance and S-phase checkpoints regulation in response to DNA damage _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-functional-analysis-gorlin-syndrome-links-genome-stability-maintenance-and-s-phase.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/functional-analysis-gorlin-syndrome-links-genome-stability-maintenance-and-s-phase",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/genomic-profiling-pheochromocytoma-and-paraganglioma-ppgl-resolve-missing-driver",
+      "source_html": "course_pages/Genomic Profiling of Pheochromocytoma and Paraganglioma (PPGL) to Resolve Missing Driver Mutations _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-genomic-profiling-pheochromocytoma-and-paraganglioma-ppgl-resolve-missing-driver.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/genomic-profiling-pheochromocytoma-and-paraganglioma-ppgl-resolve-missing-driver",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/gtp-depletion-and-genome-stability-mechanistic-insights-mycophenolic-acid-induced",
+      "source_html": "course_pages/GTP Depletion and Genome Stability_ Mechanistic Insights into Mycophenolic Acid-Induced Transcriptional and DNA Damage Responses _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-gtp-depletion-and-genome-stability-mechanistic-insights-mycophenolic-acid-induced.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/gtp-depletion-and-genome-stability-mechanistic-insights-mycophenolic-acid-induced",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/immersive-digital-twin-and-augmented-reality-model-workforce-upskilling-low-carbon",
+      "source_html": "course_pages/Find A PhD _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/postgraduate-research-phd-find-a-phd.md",
+      "source_url": "https://www.aston.ac.uk/postgraduate-research/phd/find-a-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/integrated-formulation-process-strategies-optimised-extrusion-and-printability",
+      "source_html": "course_pages/Integrated formulation\u2013process strategies for optimised extrusion and printability outcomes in additive manufacture of oral solid dosage forms _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-integrated-formulation-process-strategies-optimised-extrusion-and-printability.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/integrated-formulation-process-strategies-optimised-extrusion-and-printability",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/integrative-cancer-genomics-single-cell-transcriptomics-and-oxford-nanopore-long-read",
+      "source_html": "course_pages/Integrative Cancer Genomics_ Single-Cell Transcriptomics and Oxford Nanopore Long-Read Sequencing for Biomarker Discovery _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-integrative-cancer-genomics-single-cell-transcriptomics-and-oxford-nanopore-long-read.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/integrative-cancer-genomics-single-cell-transcriptomics-and-oxford-nanopore-long-read",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/intensified-modular-absorption-carbon-capture-approach-dispersed-small-medium-0",
+      "source_html": "course_pages/An intensified, modular absorption carbon capture approach for dispersed small- to medium-scale industrial emitters _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-intensified-modular-absorption-carbon-capture-approach-dispersed-small-medium-0.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/intensified-modular-absorption-carbon-capture-approach-dispersed-small-medium-0",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/investigating-nano-and-microplastic-induced-neurotoxicity-ipsc-derived-human-models",
+      "source_html": "course_pages/Investigating nano and microplastic induced neurotoxicity in iPSC derived human models of neuronal networks. _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-investigating-nano-and-microplastic-induced-neurotoxicity-ipsc-derived-human-models.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/investigating-nano-and-microplastic-induced-neurotoxicity-ipsc-derived-human-models",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/investigating-role-oxysterols-cholesterol-metabolism-and-myelin-maintenance-phd",
+      "source_html": "course_pages/Investigating the Role of Oxysterols in Cholesterol Metabolism and Myelin Maintenance _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-investigating-role-oxysterols-cholesterol-metabolism-and-myelin-maintenance-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/investigating-role-oxysterols-cholesterol-metabolism-and-myelin-maintenance-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/investigating-role-oxysterols-cholesterol-metabolism-and-myelin-maintenance-phd-2026",
+      "source_html": "course_pages/Investigating the Role of Oxysterols in Cholesterol Metabolism and Myelin Maintenance _ Aston University_study_courses-phd_investigating-role-oxysterols-cholesterol-metabolism-and-myelin-maintenance-phd-2026.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-investigating-role-oxysterols-cholesterol-metabolism-and-myelin-maintenance-phd-2026.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/investigating-role-oxysterols-cholesterol-metabolism-and-myelin-maintenance-phd-2026",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/llm-driven-automated-orchestration-network-services-next-generation-mobile-networks",
+      "source_html": "course_pages/LLM-Driven Automated Orchestration for Network Services in Next-Generation Mobile Networks _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-llm-driven-automated-orchestration-network-services-next-generation-mobile-networks.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/llm-driven-automated-orchestration-network-services-next-generation-mobile-networks",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/longitudinal-study-changes-ocular-surface-and-tear-film-phd",
+      "source_html": "course_pages/Longitudinal Study of Changes to the Ocular Surface and Tear Film _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-longitudinal-study-changes-ocular-surface-and-tear-film-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/longitudinal-study-changes-ocular-surface-and-tear-film-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/multimodal-artificial-intelligence-medical-imaging-and-clinical-decision-0",
+      "source_html": "course_pages/Multimodal Artificial Intelligence for Medical Imaging and Clinical Decision Support _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-multimodal-artificial-intelligence-medical-imaging-and-clinical-decision-0.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/multimodal-artificial-intelligence-medical-imaging-and-clinical-decision-0",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/nanoscale-additive-manufacturing-buccal-microneedle-patches-enhanced-trans-mucosal",
+      "source_html": "course_pages/Nanoscale Additive Manufacturing of Buccal Microneedle Patches for Enhanced Trans-Mucosal Drug Transport _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-nanoscale-additive-manufacturing-buccal-microneedle-patches-enhanced-trans-mucosal.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/nanoscale-additive-manufacturing-buccal-microneedle-patches-enhanced-trans-mucosal",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/optimisation-visual-performance-athletes-using-custom-made-lenses-phd",
+      "source_html": "course_pages/The Optimisation of Visual Performance in Athletes Using Custom-Made Lenses _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-optimisation-visual-performance-athletes-using-custom-made-lenses-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/optimisation-visual-performance-athletes-using-custom-made-lenses-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/prevalence-ocular-biomarkers-and-interventions-myopia-progression-children-phd",
+      "source_html": "course_pages/Prevalence, Ocular Biomarkers and Interventions for Myopia Progression in children _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-prevalence-ocular-biomarkers-and-interventions-myopia-progression-children-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/prevalence-ocular-biomarkers-and-interventions-myopia-progression-children-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/psychological-burden-chronic-spontaneous-urticaria-patient-and-healthcare",
+      "source_html": "course_pages/The Psychological Burden of Chronic Spontaneous Urticaria from Patient and Healthcare Professional Perspectives\u200b _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-psychological-burden-chronic-spontaneous-urticaria-patient-and-healthcare.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/psychological-burden-chronic-spontaneous-urticaria-patient-and-healthcare",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/realist-evaluation-what-works-whom-and-what-circumstances-non-pharmacologically",
+      "source_html": "course_pages/Realist evaluation of what works, for whom and in what circumstances to non-pharmacologically manage antipsychotic weight gain in people with Severe Mental Illness and Learning Dis.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-realist-evaluation-what-works-whom-and-what-circumstances-non-pharmacologically.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/realist-evaluation-what-works-whom-and-what-circumstances-non-pharmacologically",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/regulation-brain-fluid-homeostasis-dynamic-aquaporin-4-subcellular-relocalisation",
+      "source_html": "course_pages/Regulation of brain fluid homeostasis by dynamic aquaporin-4 subcellular relocalisation _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-regulation-brain-fluid-homeostasis-dynamic-aquaporin-4-subcellular-relocalisation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/regulation-brain-fluid-homeostasis-dynamic-aquaporin-4-subcellular-relocalisation",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/shared-decision-making-adhd-medication-management-evaluating-alignment-between",
+      "source_html": "course_pages/Shared Decision-Making in ADHD Medication Management_ Evaluating Alignment Between Patient Values and Prescribing Practice _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-shared-decision-making-adhd-medication-management-evaluating-alignment-between.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/shared-decision-making-adhd-medication-management-evaluating-alignment-between",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/smartwatch-based-prediction-asthma-attacks-validating-digital-alert-system-uk-asthma",
+      "source_html": "course_pages/Smartwatch-based prediction of asthma attacks_ validating a digital alert system for UK asthma care _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-smartwatch-based-prediction-asthma-attacks-validating-digital-alert-system-uk-asthma.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/smartwatch-based-prediction-asthma-attacks-validating-digital-alert-system-uk-asthma",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/understanding-developmental-trajectories-underlying-effects-early-life-stress",
+      "source_html": "course_pages/Understanding developmental trajectories underlying the effects of early life stress on neurodevelopment and function _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-understanding-developmental-trajectories-underlying-effects-early-life-stress.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/understanding-developmental-trajectories-underlying-effects-early-life-stress",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/understanding-developmental-trajectories-underlying-effects-early-life-stress-2026",
+      "source_html": "course_pages/Understanding developmental trajectories underlying the effects of early life stress on neurodevelopment and function _ Aston University_study_courses-phd_understanding-developmental-trajectories-underlying-effects-early-life-stress-2026.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-understanding-developmental-trajectories-underlying-effects-early-life-stress-2026.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/understanding-developmental-trajectories-underlying-effects-early-life-stress-2026",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses-phd/understanding-how-radiotherapy-affects-brain-structure-and-function-children-brain",
+      "source_html": "course_pages/Understanding how Radiotherapy Affects Brain Structure and Function in Children with Brain Tumours using OPM- MEG \u2013 a PhD studentship. _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-understanding-how-radiotherapy-affects-brain-structure-and-function-children-brain.md",
+      "source_url": "https://www.aston.ac.uk/study/courses-phd/understanding-how-radiotherapy-affects-brain-structure-and-function-children-brain",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/accounting-and-finance-bsc/september-2026",
+      "source_html": "course_pages/Accounting and Finance _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/accounting-and-finance-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/accounting-and-finance-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/accounting-and-finance-bsc/september-2027",
+      "source_html": "course_pages/Accounting and Finance _ Aston University_study_courses_accounting-and-finance-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/accounting-and-finance-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/accounting-and-finance-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/accounting-finance-foundation",
+      "source_html": "course_pages/Accounting and Finance Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/accounting-finance-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/accounting-finance-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/accounting-finance-foundation/september-2027",
+      "source_html": "course_pages/Accounting and Finance Foundation Programme _ Aston University_study_courses_accounting-finance-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/accounting-finance-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/accounting-finance-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/addiction-and-mental-health-msc/september-2026",
+      "source_html": "course_pages/Addiction and Mental Health _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/addiction-and-mental-health-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/addiction-and-mental-health-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/advanced-computer-science-msc/april-2027",
+      "source_html": "course_pages/Advanced Computer Science _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/advanced-computer-science-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/advanced-computer-science-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/advanced-computer-science-msc/january-2027",
+      "source_html": "course_pages/Advanced Computer Science _ Aston University_study_courses_advanced-computer-science-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/advanced-computer-science-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/advanced-computer-science-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/advanced-computer-science-msc/september-2026",
+      "source_html": "course_pages/Advanced Computer Science _ Aston University_study_courses_advanced-computer-science-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/advanced-computer-science-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/advanced-computer-science-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/advanced-microwave-technology-development-activated-carbon-reactivation-phd/october-2026",
+      "source_html": "course_pages/Advanced Microwave Technology Development for Activated Carbon Reactivation _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/advanced-microwave-technology-development-activated-carbon-reactivation-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/advanced-microwave-technology-development-activated-carbon-reactivation-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/aerospace-engineering-beng/september-2026",
+      "source_html": "course_pages/Aerospace Engineering _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/aerospace-engineering-beng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/aerospace-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/aerospace-engineering-beng/september-2027",
+      "source_html": "course_pages/Aerospace Engineering _ Aston University_study_courses_aerospace-engineering-beng_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/aerospace-engineering-beng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/aerospace-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/ai-business-transformation-msc",
+      "source_html": "course_pages/AI for Business Transformation with Capgemini _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/ai-business-transformation-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/ai-business-transformation-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/ai-driven-robotic-disassembly-using-mixed-reality-and-haptics-phd/january-2027",
+      "source_html": "course_pages/AI-Driven Robotic Disassembly using Mixed Reality and Haptics _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/ai-driven-robotic-disassembly-using-mixed-reality-and-haptics-phd.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/ai-driven-robotic-disassembly-using-mixed-reality-and-haptics-phd",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/applied-artificial-intelligence-msc/september-2026",
+      "source_html": "course_pages/Applied Artificial Intelligence _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/applied-artificial-intelligence-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/applied-artificial-intelligence-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-and-robotics-bsc/september-2026",
+      "source_html": "course_pages/Artificial Intelligence and Robotics _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/artificial-intelligence-and-robotics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-and-robotics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-and-robotics-bsc/september-2027",
+      "source_html": "course_pages/Artificial Intelligence and Robotics _ Aston University_study_courses_artificial-intelligence-and-robotics-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/artificial-intelligence-and-robotics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-and-robotics-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-and-robotics-foundation/september-2026",
+      "source_html": "course_pages/Artificial Intelligence and Robotics Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/artificial-intelligence-and-robotics-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-and-robotics-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-and-robotics-foundation/september-2027",
+      "source_html": "course_pages/Artificial Intelligence and Robotics Foundation Programme _ Aston University_study_courses_artificial-intelligence-and-robotics-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/artificial-intelligence-and-robotics-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-and-robotics-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-business-strategy-msc/september-2026",
+      "source_html": "course_pages/Artificial Intelligence with Business Strategy _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/artificial-intelligence-business-strategy-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-business-strategy-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-health-msc/september-2026",
+      "source_html": "course_pages/Artificial Intelligence for Health _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/artificial-intelligence-health-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-health-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-msc/april-2027",
+      "source_html": "course_pages/Artificial Intelligence _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/artificial-intelligence-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-msc/january-2027",
+      "source_html": "course_pages/Artificial Intelligence _ Aston University_study_courses_artificial-intelligence-msc_january-2027.html",
+      "clean_md": "clean/courses/postgraduate/artificial-intelligence-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-msc/september-2026",
+      "source_html": "course_pages/Artificial Intelligence _ Aston University_study_courses_artificial-intelligence-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/artificial-intelligence-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/biochemistry-bsc/september-2026",
+      "source_html": "course_pages/Biochemistry _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/biochemistry-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/biochemistry-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/biochemistry-bsc/september-2027",
+      "source_html": "course_pages/Biochemistry _ Aston University_study_courses_biochemistry-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/biochemistry-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/biochemistry-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/bioinformatics-and-genomic-medicine-mres/september-2026",
+      "source_html": "course_pages/Bioinformatics and Genomic Medicine _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/bioinformatics-and-genomic-medicine-mres.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/bioinformatics-and-genomic-medicine-mres",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/bioinformatics-and-genomic-medicine-msc/september-2026",
+      "source_html": "course_pages/Bioinformatics and Genomic Medicine _ Aston University_study_courses_bioinformatics-and-genomic-medicine-msc_september-2026.html",
+      "clean_md": "clean/courses/postgraduate/bioinformatics-and-genomic-medicine-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/bioinformatics-and-genomic-medicine-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/biomedical-engineering-beng/september-2026",
+      "source_html": "course_pages/Biomedical Engineering BEng _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/biomedical-engineering-beng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/biomedical-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/biomedical-engineering-beng/september-2027",
+      "source_html": "course_pages/Biomedical Engineering _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/biomedical-engineering-beng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/biomedical-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/biomedical-engineering-foundation/september-2026",
+      "source_html": "course_pages/Biomedical Engineering Foundation Programme _ Aston University.html",
+      "clean_md": "clean/courses/foundation/biomedical-engineering-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/biomedical-engineering-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/biomedical-engineering-foundation/september-2027",
+      "source_html": "course_pages/Biomedical Engineering Foundation Programme _ Aston University_study_courses_biomedical-engineering-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/biomedical-engineering-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/biomedical-engineering-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/biomedical-engineering-meng/september-2026",
+      "source_html": "course_pages/Biomedical Engineering MEng _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/biomedical-engineering-meng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/biomedical-engineering-meng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/biomedical-engineering-meng/september-2027",
+      "source_html": "course_pages/Biomedical Engineering _ Aston University_study_courses_biomedical-engineering-meng_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/biomedical-engineering-meng.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/biomedical-engineering-meng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/biomedical-science-bsc/september-2026",
+      "source_html": "course_pages/Biomedical Science _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/biomedical-science-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/biomedical-science-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/biomedical-science-bsc/september-2027",
+      "source_html": "course_pages/Biomedical Science _ Aston University_study_courses_biomedical-science-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/biomedical-science-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/biomedical-science-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/biomedicine-bsc",
+      "source_html": "course_pages/Biomedicine _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/biomedicine-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/biomedicine-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/biomedicine-bsc/september-2027",
+      "source_html": "course_pages/Biomedicine _ Aston University_study_courses_biomedicine-bsc_september-2027.html",
+      "clean_md": "clean/courses/undergraduate/biomedicine-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/biomedicine-bsc",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/biosciences-mres/september-2026",
+      "source_html": "course_pages/Biosciences MRes _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate_research/biosciences-mres.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/biosciences-mres",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/biotechnology-msc/september-2026",
+      "source_html": "course_pages/Biotechnology _ Aston University.html",
+      "clean_md": "clean/courses/postgraduate/biotechnology-msc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/biotechnology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/business-analytics-bsc/september-2026",
+      "source_html": "course_pages/Business Analytics _ Aston University.html",
+      "clean_md": "clean/courses/undergraduate/business-analytics-bsc.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/business-analytics-bsc",
+      "study_level": "undergraduate"
+    }
+  ],
+  "uni_pages": [
+    {
+      "source_html": "uni_req/bangladesh-entry.html",
+      "source_url": "https://www.aston.ac.uk/international/aston-in-your-country/south-asia/bangladesh",
+      "clean_md": "clean/uni/bangladesh-entry.md",
+      "page_type": "entry"
+    },
+    {
+      "source_html": "uni_req/deposit.html",
+      "source_url": "0000",
+      "clean_md": "clean/uni/deposit.md",
+      "page_type": "deposit"
+    },
+    {
+      "source_html": "uni_req/english-requirements.html",
+      "source_url": "https://www.aston.ac.uk/international/english-language-requirements",
+      "clean_md": "clean/uni/english-requirements.md",
+      "page_type": "english"
+    },
+    {
+      "source_html": "uni_req/scholarships.html",
+      "source_url": "https://www.aston.ac.uk/international/scholarships",
+      "clean_md": "clean/uni/scholarships.md",
+      "page_type": "scholarship"
+    }
+  ]
+}

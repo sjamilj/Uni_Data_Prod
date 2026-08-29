@@ -1,0 +1,685 @@
+{
+  "university": "University of Suffolk",
+  "cleaned_at": "2026-08-28",
+  "courses": [
+    {
+      "course_url": "https://www.uos.ac.uk/study/ai-and-automation-practitioner-ha",
+      "source_html": "course_pages/AI and Automation Practitioner (Higher Apprenticeship) _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-ai-and-automation-practitioner-ha.md",
+      "source_url": "/study/ai-and-automation-practitioner-ha/",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-applied-care-practice-pr",
+      "source_html": "course_pages/BA (Hons) Applied Care Practice (Progression Route) _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-applied-care-practice-pr.md",
+      "source_url": "/study/ba-applied-care-practice-pr/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-business-management",
+      "source_html": "course_pages/BA (Hons) Business Management _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-business-management.md",
+      "source_url": "/study/ba-business-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-business-management-top-up",
+      "source_html": "course_pages/BA (Hons) Business Management (Top-Up) _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-business-management-top-up.md",
+      "source_url": "/study/ba-business-management-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-childhood-primary-education-qts",
+      "source_html": "course_pages/BA (Hons) Childhood_ Primary Education with QTS _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-childhood-primary-education-qts.md",
+      "source_url": "/study/ba-childhood-primary-education-qts/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-digital-film-production",
+      "source_html": "course_pages/BA (Hons) Digital Film Production _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-digital-film-production.md",
+      "source_url": "/study/ba-digital-film-production/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-early-years-childhood-studies-pr",
+      "source_html": "course_pages/BA (Hons) Early Years and Childhood Studies (Progression route) _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-early-years-childhood-studies-pr.md",
+      "source_url": "/study/ba-early-years-childhood-studies-pr/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-early-years-primary-practice-pr",
+      "source_html": "course_pages/BA (Hons) Early Years and Primary Practice with Early Childhood Graduate Practitioner _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-early-years-primary-practice-pr.md",
+      "source_url": "/study/ba-early-years-primary-practice-pr/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-esports",
+      "source_html": "course_pages/BA (Hons) Esports _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-esports.md",
+      "source_url": "/study/ba-esports/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-fine-art",
+      "source_html": "course_pages/BA (Hons) Fine Art _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-fine-art.md",
+      "source_url": "/study/ba-fine-art/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-graphic-design",
+      "source_html": "course_pages/BA (Hons) Graphic Design _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-graphic-design.md",
+      "source_url": "/study/ba-graphic-design/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-graphic-design-graphic-illustration",
+      "source_html": "course_pages/BA (Hons) Graphic Design (Graphic Illustration) _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-graphic-design-graphic-illustration.md",
+      "source_url": "/study/ba-graphic-design-graphic-illustration/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-history",
+      "source_html": "course_pages/BA (Hons) History _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-history.md",
+      "source_url": "/study/ba-history/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-lit-studies-creative-writing",
+      "source_html": "course_pages/BA (Hons) Literary Studies with Creative Writing _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-lit-studies-creative-writing.md",
+      "source_url": "/study/ba-lit-studies-creative-writing/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-person-centred-counselling",
+      "source_html": "course_pages/BA (Hons) Person-Centred Counselling _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-person-centred-counselling.md",
+      "source_url": "/study/ba-person-centred-counselling/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-photography-and-visual-media",
+      "source_html": "course_pages/BA (Hons) Photography and Visual Media _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-photography-and-visual-media.md",
+      "source_url": "/study/ba-photography-and-visual-media/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-screenwriting",
+      "source_html": "course_pages/BA (Hons) Screenwriting _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-screenwriting.md",
+      "source_url": "/study/ba-screenwriting/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-social-work",
+      "source_html": "course_pages/BA (Hons) Social Work _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-social-work.md",
+      "source_url": "/study/ba-social-work/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-visual-art",
+      "source_html": "course_pages/BA (Hons) Visual Art _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-visual-art.md",
+      "source_url": "/study/ba-visual-art/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ba-visual-effects-post-production-film-pr",
+      "source_html": "course_pages/BA (Hons) Visual Effects and Post-Production (Film) (Progression Route) _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-ba-visual-effects-post-production-film-pr.md",
+      "source_url": "/study/ba-visual-effects-post-production-film-pr/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/beng-operations-engineering-pr",
+      "source_html": "course_pages/BEng (Hons) Operations Engineering (Progression Route) _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-beng-operations-engineering-pr.md",
+      "source_url": "/study/beng-operations-engineering-pr/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-adult-nursing",
+      "source_html": "course_pages/BSc (Hons) Adult Nursing _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-adult-nursing.md",
+      "source_url": "/study/bsc-adult-nursing/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-biology",
+      "source_html": "course_pages/BSc (Hons) Biology _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-biology.md",
+      "source_url": "/study/bsc-biology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-biology-fy",
+      "source_html": "course_pages/BSc (Hons) Biology (with Foundation Year) _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-biology-fy.md",
+      "source_url": "/study/bsc-biology-fy/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-biomedical-science",
+      "source_html": "course_pages/BSc (Hons) Biomedical Science _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-biomedical-science.md",
+      "source_url": "/study/bsc-biomedical-science/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-biomedical-science-fy",
+      "source_html": "course_pages/BSc (Hons) Biomedical Science with Foundation Year _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-biomedical-science-fy.md",
+      "source_url": "/study/bsc-biomedical-science-fy/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-childrens-nursing",
+      "source_html": "course_pages/BSc (Hons) Children's Nursing _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-childrens-nursing.md",
+      "source_url": "/study/bsc-childrens-nursing/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-civil-engineering-apprenticeship",
+      "source_html": "course_pages/BSc (Hons) Civil Engineering (degree apprenticeship) _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-civil-engineering-apprenticeship.md",
+      "source_url": "/study/bsc-civil-engineering-apprenticeship/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-computer-science",
+      "source_html": "course_pages/BSc (Hons) Computer Science _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-computer-science.md",
+      "source_url": "/study/bsc-computer-science/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-computer-science-ai",
+      "source_html": "course_pages/BSc (Hons) Computer Science (Artificial Intelligence) _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-computer-science-ai.md",
+      "source_url": "/study/bsc-computer-science-ai/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-computer-science-cs",
+      "source_html": "course_pages/BSc (Hons) Computer Science (Cyber Security) _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-computer-science-cs.md",
+      "source_url": "/study/bsc-computer-science-cs/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-computer-science-wmd",
+      "source_html": "course_pages/BSc (Hons) Computer Science (Web and Mobile Development) _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-computer-science-wmd.md",
+      "source_url": "/study/bsc-computer-science-wmd/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-criminology",
+      "source_html": "course_pages/BSc (Hons) Criminology _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-criminology.md",
+      "source_url": "/study/bsc-criminology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-criminology-sociology",
+      "source_html": "course_pages/BSc (Hons) Criminology and Sociology _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-criminology-sociology.md",
+      "source_url": "/study/bsc-criminology-sociology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-dental-hygiene-and-therapy",
+      "source_html": "course_pages/BSc (Hons) Dental Hygiene and Therapy _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-dental-hygiene-and-therapy.md",
+      "source_url": "/study/bsc-dental-hygiene-and-therapy/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-diagnostic-radiography",
+      "source_html": "course_pages/BSc (Hons) Diagnostic Radiography _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-diagnostic-radiography.md",
+      "source_url": "/study/bsc-diagnostic-radiography/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-forensic-sciences",
+      "source_html": "course_pages/BSc (Hons) Forensic Sciences (Progression Route) _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-forensic-sciences.md",
+      "source_url": "/study/bsc-forensic-sciences/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-games-development",
+      "source_html": "course_pages/BSc (Hons) Games Development _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-games-development.md",
+      "source_url": "/study/bsc-games-development/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-mental-health-nursing",
+      "source_html": "course_pages/BSc (Hons) Mental Health Nursing _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-mental-health-nursing.md",
+      "source_url": "/study/bsc-mental-health-nursing/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-midwifery",
+      "source_html": "course_pages/BSc (Hons) Midwifery _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-midwifery.md",
+      "source_url": "/study/bsc-midwifery/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-midwifery-shortened",
+      "source_html": "course_pages/BSc (Hons) Midwifery Shortened _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-midwifery-shortened.md",
+      "source_url": "/study/bsc-midwifery-shortened/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-nutrition-human-health",
+      "source_html": "course_pages/BSc (Hons) Nutrition and Human Health _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-nutrition-human-health.md",
+      "source_url": "/study/bsc-nutrition-human-health/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-nutrition-human-health-fy",
+      "source_html": "course_pages/BSc (Hons) Nutrition and Human Health (with Foundation Year) _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-nutrition-human-health-fy.md",
+      "source_url": "/study/bsc-nutrition-human-health-fy/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-paramedic-science",
+      "source_html": "course_pages/BSc (Hons) Paramedic Science _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-paramedic-science.md",
+      "source_url": "/study/bsc-paramedic-science/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-physiotherapy",
+      "source_html": "course_pages/BSc (Hons) Physiotherapy _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-physiotherapy.md",
+      "source_url": "/study/bsc-physiotherapy/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-psychology",
+      "source_html": "course_pages/BSc (Hons) Psychology _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-psychology.md",
+      "source_url": "/study/bsc-psychology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-psychology-counselling",
+      "source_html": "course_pages/BSc (Hons) Psychology and Counselling _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-psychology-counselling.md",
+      "source_url": "/study/bsc-psychology-counselling/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-psychology-criminology",
+      "source_html": "course_pages/BSc (Hons) Psychology and Criminology _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-psychology-criminology.md",
+      "source_url": "/study/bsc-psychology-criminology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-psychology-sociology",
+      "source_html": "course_pages/BSc (Hons) Psychology and Sociology _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-psychology-sociology.md",
+      "source_url": "/study/bsc-psychology-sociology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-radiotherapy-oncology",
+      "source_html": "course_pages/BSc (Hons) Radiotherapy and Oncology _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-radiotherapy-oncology.md",
+      "source_url": "/study/bsc-radiotherapy-oncology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-sociology",
+      "source_html": "course_pages/BSc (Hons) Sociology _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-sociology.md",
+      "source_url": "/study/bsc-sociology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-sport-exercise-science",
+      "source_html": "course_pages/BSc (Hons) Sport and Exercise Science _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-sport-exercise-science.md",
+      "source_url": "/study/bsc-sport-exercise-science/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-sport-health-exercise",
+      "source_html": "course_pages/BSc (Hons) Sport, Health and Exercise _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-sport-health-exercise.md",
+      "source_url": "/study/bsc-sport-health-exercise/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-sport-performance-analysis",
+      "source_html": "course_pages/BSc (Hons) Sport Performance Analysis _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-sport-performance-analysis.md",
+      "source_url": "/study/bsc-sport-performance-analysis/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-wildlife-ecology-conservation-sci-fy",
+      "source_html": "course_pages/BSc (Hons) Wildlife, Ecology and Conservation Science (with Foundation Year) _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-wildlife-ecology-conservation-sci-fy.md",
+      "source_url": "/study/bsc-wildlife-ecology-conservation-sci-fy/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-wildlife-ecology-conservation-science",
+      "source_html": "course_pages/BSc (Hons) Wildlife, Ecology and Conservation Science _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-wildlife-ecology-conservation-science.md",
+      "source_url": "/study/bsc-wildlife-ecology-conservation-science/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-zoo-and-science-management-fy",
+      "source_html": "course_pages/BSc (Hons) Zoo Science and Management (with Foundation Year) _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-zoo-and-science-management-fy.md",
+      "source_url": "/study/bsc-zoo-and-science-management-fy/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/bsc-zoo-science-and-management",
+      "source_html": "course_pages/BSc (Hons) Zoo Science and Management _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-bsc-zoo-science-and-management.md",
+      "source_url": "/study/bsc-zoo-science-and-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/certificate-education-pgce",
+      "source_html": "course_pages/Certificate in Education _ Professional Graduate Certificate in Education (PGCE) _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-certificate-education-pgce.md",
+      "source_url": "/study/certificate-education-pgce/",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/fda-childrens-health-play-wellbeing",
+      "source_html": "course_pages/FdA Children's Health, Play and Wellbeing _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-fda-childrens-health-play-wellbeing.md",
+      "source_url": "/study/fda-childrens-health-play-wellbeing/",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/fda-early-years-childhood-studies",
+      "source_html": "course_pages/FdA Early Years and Childhood Studies _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-fda-early-years-childhood-studies.md",
+      "source_url": "/study/fda-early-years-childhood-studies/",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/fda-early-years-primary-practice",
+      "source_html": "course_pages/FdA Early Years and Primary Practice _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-fda-early-years-primary-practice.md",
+      "source_url": "/study/fda-early-years-primary-practice/",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/fda-health-wellbeing-nursing-associate",
+      "source_html": "course_pages/FdA Health and Wellbeing (Nursing Associate) _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-fda-health-wellbeing-nursing-associate.md",
+      "source_url": "/study/fda-health-wellbeing-nursing-associate/",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/fda-social-welfare-advice-practice",
+      "source_html": "course_pages/FdA Social Welfare, Advice & Guidance Practice _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-fda-social-welfare-advice-practice.md",
+      "source_url": "/study/fda-social-welfare-advice-practice/",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/fda-visual-effects-and-post-production",
+      "source_html": "course_pages/FdA Visual Effects and Post Production _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-fda-visual-effects-and-post-production.md",
+      "source_url": "/study/fda-visual-effects-and-post-production/",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/fdsc-conservation-sci-animal-management",
+      "source_html": "course_pages/FdSc Conservation Science and Animal Management _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-fdsc-conservation-sci-animal-management.md",
+      "source_url": "/study/fdsc-conservation-sci-animal-management/",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/fdsc-forensic-sciences",
+      "source_html": "course_pages/FdSc Forensic Sciences _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-fdsc-forensic-sciences.md",
+      "source_url": "/study/fdsc-forensic-sciences/",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/hnc-engineering-general",
+      "source_html": "course_pages/HNC Engineering (General Engineering) _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-hnc-engineering-general.md",
+      "source_url": "/study/hnc-engineering-general/",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/llb-law",
+      "source_html": "course_pages/LLB (Hons) Law _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-llb-law.md",
+      "source_url": "/study/llb-law/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/llb-law-with-criminology",
+      "source_html": "course_pages/LLB (Hons) Law with Criminology _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-llb-law-with-criminology.md",
+      "source_url": "/study/llb-law-with-criminology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/llm-criminal-law-justice",
+      "source_html": "course_pages/LLM Criminal Law and Justice _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-llm-criminal-law-justice.md",
+      "source_url": "/study/llm-criminal-law-justice/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ma-creative-critical-writing",
+      "source_html": "course_pages/MA Creative and Critical Writing _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-ma-creative-critical-writing.md",
+      "source_url": "/study/ma-creative-critical-writing/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ma-criminology",
+      "source_html": "course_pages/MA Criminology _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-ma-criminology.md",
+      "source_url": "/study/ma-criminology/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ma-education",
+      "source_html": "course_pages/MA_PgD_PgC Education _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-ma-education.md",
+      "source_url": "/study/ma-education/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ma-history",
+      "source_html": "course_pages/MA History _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-ma-history.md",
+      "source_url": "/study/ma-history/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ma-international-relations",
+      "source_html": "course_pages/MA International Relations _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-ma-international-relations.md",
+      "source_url": "/study/ma-international-relations/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/ma-social-work",
+      "source_html": "course_pages/MA Social Work _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-ma-social-work.md",
+      "source_url": "/study/ma-social-work/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/mpharm-pharmacy",
+      "source_html": "course_pages/MPharm Pharmacy _ University of Suffolk.html",
+      "clean_md": "clean/courses/undergraduate/study-mpharm-pharmacy.md",
+      "source_url": "/study/mpharm-pharmacy/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/msc-adult-nursing-preregistration",
+      "source_html": "course_pages/MSc Adult Nursing (Pre-registration) _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-msc-adult-nursing-preregistration.md",
+      "source_url": "/study/msc-adult-nursing-preregistration/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/msc-applications-of-psychology",
+      "source_html": "course_pages/MSc Applications of Psychology _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-msc-applications-of-psychology.md",
+      "source_url": "/study/msc-applications-of-psychology/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/msc-computer-science",
+      "source_html": "course_pages/MSc Computer Science _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-msc-computer-science.md",
+      "source_url": "/study/msc-computer-science/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/msc-data-science-artificial-intelligence",
+      "source_html": "course_pages/MSc Data Science and Artificial Intelligence _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-msc-data-science-artificial-intelligence.md",
+      "source_url": "/study/msc-data-science-artificial-intelligence/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/msc-diagnostic-radiography-preregistration",
+      "source_html": "course_pages/MSc Diagnostic Radiography (Pre-registration) _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-msc-diagnostic-radiography-preregistration.md",
+      "source_url": "/study/msc-diagnostic-radiography-preregistration/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/msc-digital-marketing-data-analytics",
+      "source_html": "course_pages/MSc Digital Marketing and Data Analytics _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-msc-digital-marketing-data-analytics.md",
+      "source_url": "/study/msc-digital-marketing-data-analytics/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/msc-fin-tech",
+      "source_html": "course_pages/MSc Financial Technology _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-msc-fin-tech.md",
+      "source_url": "/study/msc-fin-tech/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/msc-human-resource-management",
+      "source_html": "course_pages/MSc Human Resource Management _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-msc-human-resource-management.md",
+      "source_url": "/study/msc-human-resource-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/msc-international-business-management",
+      "source_html": "course_pages/MSc International Business and Management _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-msc-international-business-management.md",
+      "source_url": "/study/msc-international-business-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/msc-psychology-conversion",
+      "source_html": "course_pages/MSc Psychology (conversion) _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-msc-psychology-conversion.md",
+      "source_url": "/study/msc-psychology-conversion/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/msc-public-health-and-wellbeing",
+      "source_html": "course_pages/MSc Public Health and Wellbeing _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-msc-public-health-and-wellbeing.md",
+      "source_url": "/study/msc-public-health-and-wellbeing/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/pg-business-administration",
+      "source_html": "course_pages/PgC_PgD Business Administration _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-pg-business-administration.md",
+      "source_url": "/study/pg-business-administration/",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/pgc-paediatric-imaging",
+      "source_html": "course_pages/PgC in Paediatric Imaging _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-pgc-paediatric-imaging.md",
+      "source_url": "/study/pgc-paediatric-imaging/",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/pgce",
+      "source_html": "course_pages/Professional Graduate Certificate in Education (PGCE) _Certificate in Education _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-pgce.md",
+      "source_url": "/study/pgce/",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/pgd-specialist-community-practitioner",
+      "source_html": "course_pages/PgD Specialist Community Practitioner (District Nursing) _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-pgd-specialist-community-practitioner.md",
+      "source_url": "/study/pgd-specialist-community-practitioner/",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/suffolk-mba",
+      "source_html": "course_pages/Suffolk MBA (SMBA) _ University of Suffolk.html",
+      "clean_md": "clean/courses/postgraduate/study-suffolk-mba.md",
+      "source_url": "/study/suffolk-mba/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.uos.ac.uk/study/why-choose-the-university-of-suffolk",
+      "source_html": "course_pages/Why Choose the University of Suffolk_ _ University of Suffolk.html",
+      "clean_md": "clean/courses/other/study-why-choose-the-university-of-suffolk.md",
+      "source_url": "/study/why-choose-the-university-of-suffolk/",
+      "study_level": "other"
+    }
+  ],
+  "uni_pages": [
+    {
+      "source_html": "uni_req/bangladesh-entry.html",
+      "source_url": "https://www.uos.ac.uk/international/countries/bangladesh/",
+      "clean_md": "clean/uni/bangladesh-entry.md",
+      "page_type": "entry"
+    },
+    {
+      "source_html": "uni_req/english-requirements.html",
+      "source_url": "https://www.uos.ac.uk/international/english-language-requirements/",
+      "clean_md": "clean/uni/english-requirements.md",
+      "page_type": "english"
+    }
+  ]
+}

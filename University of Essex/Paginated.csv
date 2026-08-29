@@ -1,0 +1,136 @@
+uniName,LISTING_PROGRAMME,Course_listing_Link,COURSE_LISTING_PAGE_1,COURSE_LISTING_PAGE_2,Course Detail page,Bangladesh Req Link,EnglishRequirementLink,ScholarshipLink,Comment
+,,,,,,r.html,e.html,s.html,pdf/ not found
+,,,"https://www.essex.ac.uk/search?collection=essex~sp-all&f.Result%20type%7Cessex~ds-courses,essex~ds-cpd-courses=Courses&start_rank=1","https://www.essex.ac.uk/search?collection=essex~sp-all&f.Result%20type%7Cessex~ds-courses,essex~ds-cpd-courses=Courses&start_rank=11",,https://www.essex.ac.uk/international/country-specific-information/south-asia#bangladesh,"https://www.scribd.com/document/604405368/english-language-requirements
+
+https://www.essex.ac.uk/international/applying-to-essex
+
+",https://www.essex.ac.uk/international/fees-and-funding,
+,,,,,,,"[
+  {
+    ""TestStudyLevel"": ""Undergraduate"",
+    ""ProgramName"": """",
+    ""EntryRoute"": ""Foundation Year"",
+    ""TestRequirements"": [
+      {
+        ""TestName"": ""IELTS (Academic), IELTS Online (Academic), IELTS (Academic) One Skill Retake, IELTS Indicator"",
+        ""ieltsMinOverall"": ""5.5"",
+        ""ieltsMinSection"": ""5.5""
+      },
+      {
+        ""TestName"": ""Pearson Test of English Academic"",
+        ""pteMinOverall"": ""59"",
+        ""pteMinSection"": ""59""
+      },
+      {
+        ""TestName"": ""TOEFL (iBT), TOEFL iBT Online – Special Home Edition, TOEFL – My Best Scores"",
+        ""toeflMinOverall"": ""72"",
+        ""toeflMinSection"": ""17""
+      }
+    ],
+    ""description"": [
+      ""5.5 overall with a minimum of 5.5 in each component"",
+      ""59 overall, with a minimum of 59 in each component"",
+      ""Tests taken before 21 January 2026: 72 overall, with a minimum of 18 in reading, 17 in listening, 20 in speaking and 17 in writing""
+    ]
+  },
+  {
+    ""TestStudyLevel"": ""Undergraduate"",
+    ""ProgramName"": """",
+    ""EntryRoute"": ""First Year entry"",
+    ""TestRequirements"": [
+      {
+        ""TestName"": ""IELTS (Academic), IELTS Online (Academic), IELTS (Academic) One Skill Retake, IELTS Indicator"",
+        ""ieltsMinOverall"": ""6.0"",
+        ""ieltsMinSection"": ""5.5""
+      },
+      {
+        ""TestName"": ""Pearson Test of English Academic"",
+        ""pteMinOverall"": ""60"",
+        ""pteMinSection"": ""59""
+      },
+      {
+        ""TestName"": ""TOEFL (iBT), TOEFL iBT Online – Special Home Edition, TOEFL – My Best Scores"",
+        ""toeflMinOverall"": ""82"",
+        ""toeflMinSection"": ""17""
+      }
+    ],
+    ""description"": [
+      ""6.0 overall with a minimum of 5.5 in each component"",
+      ""60 overall, with a minimum of 59 in each component"",
+      ""Tests taken before 21 January 2026: 82 overall, with a minimum of 18 in reading, 17 in listening, 20 in speaking and 17 in writing""
+    ]
+  },
+  {
+    ""TestStudyLevel"": ""Undergraduate"",
+    ""ProgramName"": """",
+    ""EntryRoute"": ""Second and Final Year Direct Entry"",
+    ""TestRequirements"": [
+      {
+        ""TestName"": ""IELTS (Academic), IELTS Online (Academic), IELTS (Academic) One Skill Retake, IELTS Indicator"",
+        ""ieltsMinOverall"": ""6.5"",
+        ""ieltsMinSection"": ""5.5""
+      },
+      {
+        ""TestName"": ""Pearson Test of English Academic"",
+        ""pteMinOverall"": ""62"",
+        ""pteMinSection"": ""59""
+      },
+      {
+        ""TestName"": ""TOEFL (iBT), TOEFL iBT Online – Special Home Edition, TOEFL – My Best Scores"",
+        ""toeflMinOverall"": ""91"",
+        ""toeflMinSection"": ""17""
+      }
+    ],
+    ""description"": [
+      ""6.5 overall with a minimum of 5.5 in each component"",
+      ""62 overall, with a minimum of 59 in each component"",
+      ""Tests taken before 21 January 2026: 91 overall, with a minimum of 18 in reading, 17 in listening, 20 in speaking and 17 in writing""
+    ]
+  }
+]",,"EnglishRequirementLink
+
+pdf "
+,,,,,,,"[
+  {
+    ""TestStudyLevel"": ""Undergraduate"",
+    ""ProgramName"": ""BSc Nursing (Adult and Mental Health)"",
+    ""EntryRoute"": """",
+    ""TestRequirements"": [
+      {
+        ""TestName"": ""IELTS (Academic), IELTS Online (Academic), IELTS (Academic) One Skill Retake, IELTS Indicator"",
+        ""ieltsMinOverall"": ""7.0"",
+        ""ieltsMinSection"": ""6.5""
+      },
+      {
+        ""TestName"": ""TOEFL (iBT), TOEFL iBT Online – Special Home Edition, TOEFL – My Best Scores"",
+        ""toeflMinOverall"": ""100"",
+        ""toeflMinSection"": ""26""
+      }
+    ],
+    ""description"": [
+      ""7.0 overall with a minimum of 6.5 in Writing and 7.0 in all other components"",
+      ""100 overall with a minimum of 26 in all components""
+    ]
+  },
+  {
+    ""TestStudyLevel"": ""Undergraduate"",
+    ""ProgramName"": ""BA Social Work"",
+    ""EntryRoute"": """",
+    ""TestRequirements"": [
+      {
+        ""TestName"": ""IELTS (Academic), IELTS Online (Academic), IELTS (Academic) One Skill Retake, IELTS Indicator"",
+        ""ieltsMinOverall"": ""7.0"",
+        ""ieltsMinSection"": ""6.5""
+      },
+      {
+        ""TestName"": ""TOEFL (iBT), TOEFL iBT Online – Special Home Edition, TOEFL – My Best Scores"",
+        ""toeflMinOverall"": ""100"",
+        ""toeflMinSection"": ""25""
+      }
+    ],
+    ""description"": [
+      ""7.0 overall with a minimum of 6.5 in each component"",
+      ""100 overall with a minimum of 26 in Writing and 25 in all other components""
+    ]
+  }
+]",,

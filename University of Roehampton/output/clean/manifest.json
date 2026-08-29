@@ -1,0 +1,1475 @@
+{
+  "university": "University of Roehampton",
+  "cleaned_at": "2026-08-28",
+  "courses": [
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/biomedical-science-foundation-studies-certificate-of-higher-education",
+      "source_html": "course_pages/Biomedical Science Foundation Studies_ Certificate of Higher Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-biomedical-science-foundation-studies-certificate-of-higher-education.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/biomedical-science-foundation-studies-certificate-of-higher-education/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/biomedical-science-international-foundation-pathway",
+      "source_html": "course_pages/Biomedical Science International Foundation Pathway _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-biomedical-science-international-foundation-pathway.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/biomedical-science-international-foundation-pathway/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/business",
+      "source_html": "course_pages/Business Foundation Studies_ Certificate of Higher Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-business.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/business/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/business-international-foundation-pathway",
+      "source_html": "course_pages/Business International Foundation Programme _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-business-international-foundation-pathway.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/business-international-foundation-pathway/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/computing",
+      "source_html": "course_pages/Computing Foundation Studies_ Certificate of Higher Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-computing.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/computing/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/computing-international-foundation-pathway",
+      "source_html": "course_pages/Computing International Foundation Programme _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-computing-international-foundation-pathway.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/computing-international-foundation-pathway/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/education",
+      "source_html": "course_pages/Education Foundation Studies_ Certificate of Higher Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-education.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/education/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/education-international-foundation-pathway",
+      "source_html": "course_pages/Education International Foundation Programme _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-education-international-foundation-pathway.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/education-international-foundation-pathway/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/health",
+      "source_html": "course_pages/Health and Life Sciences Foundation Studies_ Certificate of Higher Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-health.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/health/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/health-and-life-sciences-international-foundation-pathway",
+      "source_html": "course_pages/Health and Life Sciences International Foundation Programme _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-health-and-life-sciences-international-foundation-pathway.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/health-and-life-sciences-international-foundation-pathway/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/health-and-social-care-foundation-studies-certificate-of-higher-education",
+      "source_html": "course_pages/Health and Social Care Foundation Studies_ Certificate of Higher Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-health-and-social-care-foundation-studies-certificate-of-higher-education.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/health-and-social-care-foundation-studies-certificate-of-higher-education/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/health-and-social-care-international-foundation-pathway",
+      "source_html": "course_pages/Health and Social Care International Foundation Programme _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-health-and-social-care-international-foundation-pathway.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/health-and-social-care-international-foundation-pathway/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/humanities-and-social-sciences",
+      "source_html": "course_pages/Humanities and Social Sciences Foundation Studies_ Certificate of Higher Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-humanities-and-social-sciences.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/humanities-and-social-sciences/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/humanities-and-social-sciences-international-foundation-pathway",
+      "source_html": "course_pages/Humanities and Social Sciences International Foundation Programme _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-humanities-and-social-sciences-international-foundation-pathway.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/humanities-and-social-sciences-international-foundation-pathway/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/law",
+      "source_html": "course_pages/Law Foundation Studies_ Certificate of Higher Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-law.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/law/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/law-international-foundation-pathway",
+      "source_html": "course_pages/Law International Foundation Programme _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-law-international-foundation-pathway.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/law-international-foundation-pathway/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/media",
+      "source_html": "course_pages/Media Foundation Studies_ Certificate of Higher Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-media.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/media/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/media-international-foundation-pathway",
+      "source_html": "course_pages/Media International Foundation Programme _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-media-international-foundation-pathway.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/media-international-foundation-pathway/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/psychology",
+      "source_html": "course_pages/Psychology Foundation Studies_ Certificate of Higher Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-psychology.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/psychology/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/psychology-international-foundation-pathway",
+      "source_html": "course_pages/Psychology Foundation Studies International Foundation Programme _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-psychology-international-foundation-pathway.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/psychology-international-foundation-pathway/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/sport-foundation-studies-certificate-of-higher-education",
+      "source_html": "course_pages/Sport Foundation Studies_ Certificate of Higher Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-sport-foundation-studies-certificate-of-higher-education.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/sport-foundation-studies-certificate-of-higher-education/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/sport-international-foundation-pathway",
+      "source_html": "course_pages/Sport International Foundation Pathway _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-sport-international-foundation-pathway.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/sport-international-foundation-pathway/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/sustainable-engineering-and-technology-foundation-studies-certificate-of-higher-education",
+      "source_html": "course_pages/Sustainable Engineering and Technology Foundation Studies_ Certificate of Higher Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-sustainable-engineering-and-technology-foundation-studies-certificate-of-higher-education.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/sustainable-engineering-and-technology-foundation-studies-certificate-of-higher-education/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/foundation-studies/sustainable-engineering-and-technology-international-foundation-pathway",
+      "source_html": "course_pages/Sustainable Engineering and Technology International Foundation Programme _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/foundation/study-foundation-studies-sustainable-engineering-and-technology-international-foundation-pathway.md",
+      "source_url": "https://www.roehampton.ac.uk/study/foundation-studies/sustainable-engineering-and-technology-international-foundation-pathway/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-research-courses/dba",
+      "source_html": "course_pages/Doctor of Business Administration (DBA) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate_research/study-postgraduate-research-courses-dba.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-research-courses/dba/",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-research-courses/doctor-of-education",
+      "source_html": "course_pages/Doctor of Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate_research/study-postgraduate-research-courses-doctor-of-education.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-research-courses/doctor-of-education/",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-research-courses/phd-professional-education",
+      "source_html": "course_pages/PhD (Prof) Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate_research/study-postgraduate-research-courses-phd-professional-education.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-research-courses/phd-professional-education/",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/advanced-biomedical-science",
+      "source_html": "course_pages/MSc Advanced Biomedical Science _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-advanced-biomedical-science.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/advanced-biomedical-science/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/ai-and-digital-media",
+      "source_html": "course_pages/MA AI and Digital Media _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-ai-and-digital-media.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/ai-and-digital-media/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/ai-for-business",
+      "source_html": "course_pages/MSc AI for Business _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-ai-for-business.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/ai-for-business/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/applied-sciences",
+      "source_html": "course_pages/Applied Sciences _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-applied-sciences.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/applied-sciences/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/art-psychotherapy",
+      "source_html": "course_pages/MA Art Psychotherapy _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-art-psychotherapy.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/art-psychotherapy/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/artificial-intelligence",
+      "source_html": "course_pages/MSc Artificial Intelligence _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-artificial-intelligence.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/artificial-intelligence/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/banking-and-finance",
+      "source_html": "course_pages/MSc Banking and Finance _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-banking-and-finance.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/banking-and-finance/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/business-analytics",
+      "source_html": "course_pages/Business Analytics MSc _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-business-analytics.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/business-analytics/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/childrens-literature-distance-learning",
+      "source_html": "course_pages/MA Children's Literature (Distance Learning) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-childrens-literature-distance-learning.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/childrens-literature-distance-learning/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/choreography",
+      "source_html": "course_pages/MFA_ MA Choreography _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-choreography.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/choreography/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/choreography-and-performance-mres",
+      "source_html": "course_pages/MRes Choreography and Performance _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate_research/study-postgraduate-taught-courses-choreography-and-performance-mres.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/choreography-and-performance-mres/",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/clinical-neuroscience",
+      "source_html": "course_pages/MSc Clinical Neuroscience _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-clinical-neuroscience.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/clinical-neuroscience/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/clinical-nutrition",
+      "source_html": "course_pages/MSc Clinical Nutrition _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-clinical-nutrition.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/clinical-nutrition/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/clinical-pharmacology",
+      "source_html": "course_pages/MSc Clinical Pharmacology _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-clinical-pharmacology.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/clinical-pharmacology/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/cognitive-behavioural-therapy",
+      "source_html": "course_pages/MA Cognitive Behavioural Therapy _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-cognitive-behavioural-therapy.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/cognitive-behavioural-therapy/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/computing",
+      "source_html": "course_pages/MSc Computing _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-computing.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/computing/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/construction-management-and-digital-innovation",
+      "source_html": "course_pages/MSc Construction Management and Digital Innovation _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-construction-management-and-digital-innovation.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/construction-management-and-digital-innovation/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/construction-project-management",
+      "source_html": "course_pages/MSc Construction Project Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-construction-project-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/construction-project-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/counselling-psychology",
+      "source_html": "course_pages/PsychD Counselling Psychology (HCPC approved) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-counselling-psychology.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/counselling-psychology/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/creative-writing",
+      "source_html": "course_pages/MA Creative Writing _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-creative-writing.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/creative-writing/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/criminology",
+      "source_html": "course_pages/MSc Criminology _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-criminology.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/criminology/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/cyber-security",
+      "source_html": "course_pages/MSc Cyber Security _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-cyber-security.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/cyber-security/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/cyber-security-technology-conversion",
+      "source_html": "course_pages/MSc Cyber Security Technology (Conversion) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-cyber-security-technology-conversion.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/cyber-security-technology-conversion/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/dance-and-embodied-practice",
+      "source_html": "course_pages/MFA_MA Dance and Embodied Practice _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-dance-and-embodied-practice.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/dance-and-embodied-practice/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/dance-education",
+      "source_html": "course_pages/MA Dance Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-dance-education.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/dance-education/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/dance-movement-psychotherapy",
+      "source_html": "course_pages/MA Dance Movement Psychotherapy _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-dance-movement-psychotherapy.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/dance-movement-psychotherapy/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/dance-practice-and-performance",
+      "source_html": "course_pages/MA Dance Practice and Performance _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-dance-practice-and-performance.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/dance-practice-and-performance/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/data-science",
+      "source_html": "course_pages/MSc Data Science _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-data-science.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/data-science/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/data-science-applications-conversion",
+      "source_html": "course_pages/Data Science Applications (Conversion) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-data-science-applications-conversion.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/data-science-applications-conversion/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/developmental-psychology",
+      "source_html": "course_pages/MSc Developmental Psychology _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-developmental-psychology.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/developmental-psychology/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/digital-business",
+      "source_html": "course_pages/MSc Digital Business _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-digital-business.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/digital-business/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/digital-health",
+      "source_html": "course_pages/MSc Digital Health _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-digital-health.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/digital-health/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/digital-marketing",
+      "source_html": "course_pages/MSc Digital Marketing _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-digital-marketing.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/digital-marketing/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/education",
+      "source_html": "course_pages/MA Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-education.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/education/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/education-leadership-and-management",
+      "source_html": "course_pages/MA Education Leadership and Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-education-leadership-and-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/education-leadership-and-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/engineering-project-management",
+      "source_html": "course_pages/MSc Engineering Project Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-engineering-project-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/engineering-project-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/erasmus-mundus-human-rights-policy-and-practice",
+      "source_html": "course_pages/MA Erasmus Mundus Human Rights Policy and Practice _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-erasmus-mundus-human-rights-policy-and-practice.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/erasmus-mundus-human-rights-policy-and-practice/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/filmmaking",
+      "source_html": "course_pages/MA Filmmaking _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-filmmaking.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/filmmaking/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/forensic-psychology",
+      "source_html": "course_pages/MSc Forensic Psychology _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-forensic-psychology.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/forensic-psychology/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/global-business-management",
+      "source_html": "course_pages/MSc Global Business Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-global-business-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/global-business-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/global-financial-management",
+      "source_html": "course_pages/MSc Global Financial Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-global-financial-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/global-financial-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/global-human-resources-management",
+      "source_html": "course_pages/MSc Global Human Resource Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-global-human-resources-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/global-human-resources-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/global-human-resources-management-top-up",
+      "source_html": "course_pages/MSc Global Human Resource Management (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-global-human-resources-management-top-up.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/global-human-resources-management-top-up/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/global-logistics-and-supply-chain-management",
+      "source_html": "course_pages/MSc Global Logistics and Supply Chain Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-global-logistics-and-supply-chain-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/global-logistics-and-supply-chain-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/global-marketing",
+      "source_html": "course_pages/MSc Global Marketing _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-global-marketing.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/global-marketing/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/human-rights",
+      "source_html": "course_pages/MA Human Rights _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-human-rights.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/human-rights/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/integrative-counselling-and-psychotherapy",
+      "source_html": "course_pages/MA Integrative Counselling and Psychotherapy _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-integrative-counselling-and-psychotherapy.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/integrative-counselling-and-psychotherapy/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/international-hospitality-management",
+      "source_html": "course_pages/MSc International Hospitality Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-international-hospitality-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/international-hospitality-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/international-master-in-dance-and-movement-as-practical-knowledge-and-heritage",
+      "source_html": "course_pages/International Master in Dance and Movement as Practical Knowledge and Heritage _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-international-master-in-dance-and-movement-as-practical-knowledge-and-heritage.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/international-master-in-dance-and-movement-as-practical-knowledge-and-heritage/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/international-postgraduate-certificate-in-education",
+      "source_html": "course_pages/iPGCE (International Postgraduate Certificate in Education) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-international-postgraduate-certificate-in-education.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/international-postgraduate-certificate-in-education/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/international-relations",
+      "source_html": "course_pages/MA International Relations _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-international-relations.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/international-relations/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/lead-partner",
+      "source_html": "course_pages/PGCE Lead Partner Route - Primary and Secondary _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-lead-partner.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/lead-partner/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/llm-human-rights-and-international-law",
+      "source_html": "course_pages/LLM Human Rights and International Law _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-llm-human-rights-and-international-law.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/llm-human-rights-and-international-law/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/llm-international-commercial-law",
+      "source_html": "course_pages/LLM International Commercial Law and Legal Practice _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-llm-international-commercial-law.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/llm-international-commercial-law/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/mba",
+      "source_html": "course_pages/MBA _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-mba.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/mba/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/mba-healthcare-management",
+      "source_html": "course_pages/MBA Healthcare Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-mba-healthcare-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/mba-healthcare-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/mba-with-finance",
+      "source_html": "course_pages/MBA with Finance _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-mba-with-finance.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/mba-with-finance/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/mba-with-marketing",
+      "source_html": "course_pages/MBA with Marketing _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-mba-with-marketing.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/mba-with-marketing/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/media-and-communications",
+      "source_html": "course_pages/MA Media and Communications _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-media-and-communications.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/media-and-communications/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/music-and-children-with-special-abilities-and-needs-sounds-of-intent",
+      "source_html": "course_pages/PGCert Music for Children with Special Abilities and Needs_ Sounds of Intent _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-music-and-children-with-special-abilities-and-needs-sounds-of-intent.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/music-and-children-with-special-abilities-and-needs-sounds-of-intent/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/music-therapy",
+      "source_html": "course_pages/MA Music Therapy _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-music-therapy.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/music-therapy/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/neuroscience-and-mental-health",
+      "source_html": "course_pages/MSc Neuroscience and Mental Health _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-neuroscience-and-mental-health.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/neuroscience-and-mental-health/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/occupational-and-business-psychology",
+      "source_html": "course_pages/MSc Occupational and Business Psychology _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-occupational-and-business-psychology.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/occupational-and-business-psychology/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/occupational-therapy",
+      "source_html": "course_pages/MSc Occupational Therapy (Pre-Registration) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-occupational-therapy.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/occupational-therapy/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/pgce-primary",
+      "source_html": "course_pages/PGCE Primary _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-pgce-primary.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/pgce-primary/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/pgce-secondary",
+      "source_html": "course_pages/PGCE Secondary _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-pgce-secondary.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/pgce-secondary/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/physiotherapy",
+      "source_html": "course_pages/MSc Physiotherapy (Pre-Registration) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-physiotherapy.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/physiotherapy/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/play-therapy",
+      "source_html": "course_pages/MA Play Therapy _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-play-therapy.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/play-therapy/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/practical-theology-dth",
+      "source_html": "course_pages/DTh Practical Theology _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-practical-theology-dth.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/practical-theology-dth/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/project-management",
+      "source_html": "course_pages/MSc Project Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-project-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/project-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/psychology-conversion",
+      "source_html": "course_pages/MSc Psychology (Conversion) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-psychology-conversion.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/psychology-conversion/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/psychology-conversion-distance-learning",
+      "source_html": "course_pages/MSc Psychology (Conversion) Distance Learning _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-psychology-conversion-distance-learning.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/psychology-conversion-distance-learning/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/psychology-of-forensic-and-criminal-behaviour",
+      "source_html": "course_pages/MSc Psychology of Forensic and Criminal Behaviour _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-psychology-of-forensic-and-criminal-behaviour.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/psychology-of-forensic-and-criminal-behaviour/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/public-health",
+      "source_html": "course_pages/MPH Public Health _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-public-health.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/public-health/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/send-and-inclusive-education",
+      "source_html": "course_pages/MA SEND and Inclusive Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-send-and-inclusive-education.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/send-and-inclusive-education/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/web-development",
+      "source_html": "course_pages/MSc Web Development _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-taught-courses-web-development.md",
+      "source_url": "https://www.roehampton.ac.uk/study/postgraduate-taught-courses/web-development/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/accounting",
+      "source_html": "course_pages/BSc Accounting _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-accounting.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/accounting/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/accounting-studies",
+      "source_html": "course_pages/BSc Accounting Studies (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-accounting-studies.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/accounting-studies/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/adult-and-mental-health-nursing",
+      "source_html": "course_pages/MSci Adult and Mental Health Nursing _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-adult-and-mental-health-nursing.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/adult-and-mental-health-nursing/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/adult-nursing",
+      "source_html": "course_pages/BSc Adult Nursing _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-adult-nursing.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/adult-nursing/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/ai-and-machine-learning",
+      "source_html": "course_pages/BSc Artificial Intelligence & Machine Learning _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ai-and-machine-learning.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/ai-and-machine-learning/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/architectural-engineering",
+      "source_html": "course_pages/BEng Architectural Engineering _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-architectural-engineering.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/architectural-engineering/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/architectural-technology",
+      "source_html": "course_pages/BSc Architectural Technology _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-architectural-technology.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/architectural-technology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/architecture",
+      "source_html": "course_pages/BSc Architecture _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-architecture.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/architecture/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/biblical-studies-and-theology",
+      "source_html": "course_pages/Biblical Studies and Theology _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-biblical-studies-and-theology.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/biblical-studies-and-theology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/biological-sciences",
+      "source_html": "course_pages/BSc Biological Sciences _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-biological-sciences.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/biological-sciences/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/biomedical-science",
+      "source_html": "course_pages/BSc Biomedical Science _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-biomedical-science.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/biomedical-science/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/building-surveying",
+      "source_html": "course_pages/BSc Building Surveying _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-building-surveying.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/building-surveying/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-analytics",
+      "source_html": "course_pages/BSc Business Analytics _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-business-analytics.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-analytics/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-and-computing",
+      "source_html": "course_pages/BSc Business and Computing _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-business-and-computing.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-and-computing/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-and-law",
+      "source_html": "course_pages/BSc Business and Law _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-business-and-law.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-and-law/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management",
+      "source_html": "course_pages/BSc Business Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-business-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-economics",
+      "source_html": "course_pages/BSc Business Management and Economics _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-business-management-and-economics.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-economics/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-economics-top-up",
+      "source_html": "course_pages/BSc Business Management and Economics (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-business-management-and-economics-top-up.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-economics-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-entrepreneurship",
+      "source_html": "course_pages/BSc Business Management and Entrepreneurship _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-business-management-and-entrepreneurship.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-entrepreneurship/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-entrepreneurship-top-up",
+      "source_html": "course_pages/BSc Business Management and Entrepreneurship (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-business-management-and-entrepreneurship-top-up.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-entrepreneurship-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-finance",
+      "source_html": "course_pages/BSc Business Management and Finance _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-business-management-and-finance.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-finance/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-finance-top-up",
+      "source_html": "course_pages/BSc Business Management and Finance (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-business-management-and-finance-top-up.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-finance-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-marketing",
+      "source_html": "course_pages/BSc Business Management and Marketing _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-business-management-and-marketing.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-marketing/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-marketing-top-up",
+      "source_html": "course_pages/BSc Business Management and Marketing (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-business-management-and-marketing-top-up.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-and-marketing-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-top-up",
+      "source_html": "course_pages/BSc Business Management (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-business-management-top-up.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/business-management-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/childrens-nursing",
+      "source_html": "course_pages/BSc Children's Nursing _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-childrens-nursing.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/childrens-nursing/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/civil-and-environmental-engineering",
+      "source_html": "course_pages/BEng Civil and Environmental Engineering _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-civil-and-environmental-engineering.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/civil-and-environmental-engineering/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/civil-engineering",
+      "source_html": "course_pages/BEng _ MEng Civil Engineering _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-civil-engineering.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/civil-engineering/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/computer-science",
+      "source_html": "course_pages/BSc Computer Science _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-computer-science.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/computer-science/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/computer-science-top-up",
+      "source_html": "course_pages/BSc Computer Science (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-computer-science-top-up.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/computer-science-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/computing-and-digital-technologies",
+      "source_html": "course_pages/BSc Computing and Digital Technologies _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-computing-and-digital-technologies.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/computing-and-digital-technologies/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/construction-management",
+      "source_html": "course_pages/BSc Construction Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-construction-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/construction-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/criminology",
+      "source_html": "course_pages/BSc Criminology _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-criminology.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/criminology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/criminology-and-criminal-psychology",
+      "source_html": "course_pages/Criminology and Criminal Psychology _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-criminology-and-criminal-psychology.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/criminology-and-criminal-psychology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/criminology-and-policing",
+      "source_html": "course_pages/BSc Criminology and Policing _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-criminology-and-policing.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/criminology-and-policing/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/criminology-and-sociology",
+      "source_html": "course_pages/BSc Criminology and Sociology _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-criminology-and-sociology.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/criminology-and-sociology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/criminology-with-digital-forensics",
+      "source_html": "course_pages/BSc Criminology with Digital Forensics _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-criminology-with-digital-forensics.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/criminology-with-digital-forensics/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/cyber-security-top-up",
+      "source_html": "course_pages/Cyber Security (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-cyber-security-top-up.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/cyber-security-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/cybersecurity",
+      "source_html": "course_pages/BSc Cyber Security _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-cybersecurity.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/cybersecurity/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/dance",
+      "source_html": "course_pages/BA Dance _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-dance.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/dance/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/dance-and-fitness",
+      "source_html": "course_pages/BA Dance and Fitness _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-dance-and-fitness.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/dance-and-fitness/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/dance-top-up",
+      "source_html": "course_pages/Dance (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-dance-top-up.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/dance-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/digital-business-management",
+      "source_html": "course_pages/BSc Digital Business Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-digital-business-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/digital-business-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/digital-design",
+      "source_html": "course_pages/BA Digital Design _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-digital-design.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/digital-design/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/digital-marketing",
+      "source_html": "course_pages/BSc Digital Marketing _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-digital-marketing.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/digital-marketing/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/early-childhood-studies",
+      "source_html": "course_pages/BA Early Childhood Studies _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-early-childhood-studies.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/early-childhood-studies/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/early-childhood-studies-top-up",
+      "source_html": "course_pages/BA Early Childhood Studies (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-early-childhood-studies-top-up.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/early-childhood-studies-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/economics",
+      "source_html": "course_pages/BSc Economics _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-economics.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/economics/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/education",
+      "source_html": "course_pages/BA Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-education.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/education/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/engineering-management",
+      "source_html": "course_pages/BEng Engineering Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-engineering-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/engineering-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/english-and-journalism",
+      "source_html": "course_pages/BA English and Journalism _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-english-and-journalism.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/english-and-journalism/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/english-literature",
+      "source_html": "course_pages/BA English Literature _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-english-literature.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/english-literature/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/fda-early-childhood-studies",
+      "source_html": "course_pages/Early Childhood Studies (FdA) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-fda-early-childhood-studies.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/fda-early-childhood-studies/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/film-production",
+      "source_html": "course_pages/BA Film Production _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-film-production.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/film-production/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/finance-and-accounting",
+      "source_html": "course_pages/Finance and Accounting _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-finance-and-accounting.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/finance-and-accounting/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/games-art",
+      "source_html": "course_pages/BSc Games Art _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-games-art.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/games-art/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/graphic-design",
+      "source_html": "course_pages/BA Graphic Design _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-graphic-design.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/graphic-design/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/health-sciences",
+      "source_html": "course_pages/BSc Health Sciences _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-health-sciences.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/health-sciences/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/history",
+      "source_html": "course_pages/BA History _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-history.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/history/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/history-and-english",
+      "source_html": "course_pages/BA History and English _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-history-and-english.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/history-and-english/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/human-resource-management",
+      "source_html": "course_pages/BSc Human Resource Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-human-resource-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/human-resource-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/human-resource-management-top-up",
+      "source_html": "course_pages/BSc Human Resource Management (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-human-resource-management-top-up.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/human-resource-management-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/international-business",
+      "source_html": "course_pages/BSc International Business _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-international-business.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/international-business/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/international-business-and-finance-top-up",
+      "source_html": "course_pages/BSc International Business and Finance (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-international-business-and-finance-top-up.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/international-business-and-finance-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/international-business-top-up",
+      "source_html": "course_pages/BSc International Business (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-international-business-top-up.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/international-business-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/journalism",
+      "source_html": "course_pages/BA Journalism _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-journalism.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/journalism/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/law",
+      "source_html": "course_pages/LLB (Hons) Law _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-law.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/law/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/law-with-criminal-justice",
+      "source_html": "course_pages/LLB (Hons) Law with Criminal Justice _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-law-with-criminal-justice.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/law-with-criminal-justice/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/llb-law-with-politics",
+      "source_html": "course_pages/LLB (Hons) Law with Politics _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-llb-law-with-politics.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/llb-law-with-politics/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/marketing-top-up",
+      "source_html": "course_pages/BSc Marketing (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-marketing-top-up.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/marketing-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/marketing-with-business-analytics",
+      "source_html": "course_pages/BSc Marketing with Business Analytics _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-marketing-with-business-analytics.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/marketing-with-business-analytics/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/media-communications",
+      "source_html": "course_pages/BA Media and Communications _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-media-communications.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/media-communications/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/mental-health-nursing",
+      "source_html": "course_pages/BSc Mental Health Nursing _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-mental-health-nursing.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/mental-health-nursing/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/neuroscience",
+      "source_html": "course_pages/BSc Neuroscience _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-neuroscience.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/neuroscience/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/nursing-associate",
+      "source_html": "course_pages/FdSc Nursing Associate _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-nursing-associate.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/nursing-associate/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/nutrition-and-health",
+      "source_html": "course_pages/BSc Nutrition and Health _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-nutrition-and-health.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/nutrition-and-health/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/occupational-therapy",
+      "source_html": "course_pages/Occupational Therapy _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-occupational-therapy.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/occupational-therapy/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/physiotherapy",
+      "source_html": "course_pages/Physiotherapy (pre-registration) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-physiotherapy.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/physiotherapy/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/politics-and-international-relations",
+      "source_html": "course_pages/BA Politics and International Relations _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-politics-and-international-relations.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/politics-and-international-relations/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/politics-international-relations-and-history",
+      "source_html": "course_pages/BA Politics, International Relations, and History _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-politics-international-relations-and-history.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/politics-international-relations-and-history/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/primary-education-qts",
+      "source_html": "course_pages/BA Primary Education (QTS) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-primary-education-qts.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/primary-education-qts/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology",
+      "source_html": "course_pages/BSc Psychology _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-psychology.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-artificial-intelligence",
+      "source_html": "course_pages/BSc Psychology and Artificial Intelligence _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-psychology-and-artificial-intelligence.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-artificial-intelligence/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-business",
+      "source_html": "course_pages/BSc Psychology and Business _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-psychology-and-business.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-business/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-coaching",
+      "source_html": "course_pages/BSc Psychology and Coaching _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-psychology-and-coaching.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-coaching/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-cognitive-neuroscience",
+      "source_html": "course_pages/BSc Psychology and Cognitive Neuroscience _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-psychology-and-cognitive-neuroscience.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-cognitive-neuroscience/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-digital-marketing",
+      "source_html": "course_pages/BSc Psychology and Digital Marketing _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-psychology-and-digital-marketing.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-digital-marketing/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-education",
+      "source_html": "course_pages/Psychology and Education _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-psychology-and-education.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-education/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-human-resource-management",
+      "source_html": "course_pages/BSc Psychology and Human Resource Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-psychology-and-human-resource-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-human-resource-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-sociology",
+      "source_html": "course_pages/Psychology and Sociology _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-psychology-and-sociology.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-and-sociology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-clinical-and-mental-health",
+      "source_html": "course_pages/BSc Psychology (Clinical and Mental Health) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-psychology-clinical-and-mental-health.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-clinical-and-mental-health/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-forensic-and-criminal",
+      "source_html": "course_pages/BSc Psychology (Forensic and Criminal) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-psychology-forensic-and-criminal.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-forensic-and-criminal/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-sport-and-health",
+      "source_html": "course_pages/BSc Psychology (Sport and Health) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-psychology-sport-and-health.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/psychology-sport-and-health/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/quantity-surveying",
+      "source_html": "course_pages/BSc Quantity Surveying _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-quantity-surveying.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/quantity-surveying/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/software-engineering",
+      "source_html": "course_pages/BEng Software Engineering _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-software-engineering.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/software-engineering/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/software-engineering-top-up",
+      "source_html": "course_pages/Software Engineering (Top-up) _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-software-engineering-top-up.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/software-engineering-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/speech-and-language-therapy",
+      "source_html": "course_pages/BSc Speech and Therapy _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-speech-and-language-therapy.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/speech-and-language-therapy/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/sport-and-exercise-sciences",
+      "source_html": "course_pages/BSc Sport and Exercise Sciences _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-sport-and-exercise-sciences.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/sport-and-exercise-sciences/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/sport-management",
+      "source_html": "course_pages/BA Sport Management _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-sport-management.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/sport-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/sports-therapy",
+      "source_html": "course_pages/Sports Therapy _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-sports-therapy.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/sports-therapy/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/theology-mission-and-practice",
+      "source_html": "course_pages/FdA_BTh Theology, Ministry and Practice _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-theology-mission-and-practice.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/theology-mission-and-practice/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/therapeutic-psychology-and-counselling",
+      "source_html": "course_pages/BSc Therapeutic Psychology and Counselling _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-therapeutic-psychology-and-counselling.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/therapeutic-psychology-and-counselling/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/user-experience-and-interaction-design",
+      "source_html": "course_pages/BA User Experience and Interaction Design _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-user-experience-and-interaction-design.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/user-experience-and-interaction-design/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/zoology",
+      "source_html": "course_pages/BSc Zoology _ University of Roehampton, London.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-zoology.md",
+      "source_url": "https://www.roehampton.ac.uk/study/undergraduate-courses/zoology/",
+      "study_level": "undergraduate"
+    }
+  ],
+  "uni_pages": [
+    {
+      "source_html": "uni_req/bangladesh-entry.html",
+      "source_url": "https://www.roehampton.ac.uk/student-support/international-students/entry-requirements/",
+      "clean_md": "clean/uni/bangladesh-entry.md",
+      "page_type": "entry"
+    },
+    {
+      "source_html": "uni_req/english-requirements.html",
+      "source_url": "https://www.roehampton.ac.uk/student-support/international-students/entry-requirements/",
+      "clean_md": "clean/uni/english-requirements.md",
+      "page_type": "english"
+    },
+    {
+      "source_html": "uni_req/scholarships.html",
+      "source_url": "https://www.roehampton.ac.uk/study/fees-and-funding/international-fees-and-financial-support/",
+      "clean_md": "clean/uni/scholarships.md",
+      "page_type": "scholarship"
+    }
+  ]
+}

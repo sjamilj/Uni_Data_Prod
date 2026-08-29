@@ -1,0 +1,40 @@
+{
+  "ollama_host": "http://localhost:11434",
+  "phases": [
+    {
+      "id": "scrape_urls",
+      "label": "1 Scrape URLs",
+      "python": "shared/scrape_course_urls.py",
+      "resume_args": [],
+      "fresh_args": ["--fresh"],
+      "append_args": ["--append-urls"]
+    },
+    {
+      "id": "uni_clean",
+      "label": "2 Clean Uni Pages",
+      "python": "shared/download_and_clean_course_pages.py",
+      "args": ["--clean-uni-only"]
+    },
+    {
+      "id": "presetup",
+      "label": "3 Presetup (10 mixed)",
+      "python": "shared/run_course_pipeline.py",
+      "args": ["--presetup"],
+      "fresh_args": ["--fresh"]
+    },
+    {
+      "id": "presetup_llm",
+      "label": "4 Presetup LLM",
+      "python": "shared/run_course_pipeline.py",
+      "args": ["--presetup-llm"],
+      "resume_args": ["--resume"]
+    },
+    {
+      "id": "execute",
+      "label": "5 Execute",
+      "python": "shared/run_course_pipeline.py",
+      "args": ["--execute"],
+      "resume_args": ["--resume"]
+    }
+  ]
+}

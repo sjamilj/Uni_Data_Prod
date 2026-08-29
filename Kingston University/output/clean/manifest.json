@@ -1,0 +1,1839 @@
+{
+  "university": "Kingston University",
+  "cleaned_at": "2026-08-28",
+  "courses": [
+    {
+      "course_url": "https://www.kingston.ac.uk/study/degree-apprenticeship/adult-nursing-bsc-hons-integrated-degree-apprenticeship",
+      "source_html": "course_pages/Adult Nursing BSc (Hons) Integrated Degree Apprenticeship _ Kingston University London.html",
+      "clean_md": "clean/courses/undergraduate/study-degree-apprenticeship-adult-nursing-bsc-hons-integrated-degree-apprenticeship.md",
+      "source_url": "https://www.kingston.ac.uk/study/degree-apprenticeship/adult-nursing-bsc-hons-integrated-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/degree-apprenticeship/childrens-nursing-bsc-hons-integrated-degree-apprenticeship",
+      "source_html": "course_pages/Just a moment.html",
+      "clean_md": "clean/courses/undergraduate/study-degree-apprenticeship-childrens-nursing-bsc-hons-integrated-degree-apprenticeship.md",
+      "source_url": "https://www.kingston.ac.uk/study/degree-apprenticeship/childrens-nursing-bsc-hons-integrated-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/degree-apprenticeship/environmental-science-bsc-hons-degree-apprenticeship",
+      "source_html": "course_pages/Just a moment_study_degree-apprenticeship_environmental-science-bsc-hons-degree-apprenticeship.html",
+      "clean_md": "clean/courses/undergraduate/study-degree-apprenticeship-environmental-science-bsc-hons-degree-apprenticeship.md",
+      "source_url": "https://www.kingston.ac.uk/study/degree-apprenticeship/environmental-science-bsc-hons-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/degree-apprenticeship/learning-disabilities-nursing-bsc-hons-integrated-degree-apprenticeship",
+      "source_html": "course_pages/Just a moment_study_degree-apprenticeship_learning-disabilities-nursing-bsc-hons-integrated-degree-apprenticeship.html",
+      "clean_md": "clean/courses/undergraduate/study-degree-apprenticeship-learning-disabilities-nursing-bsc-hons-integrated-degree-apprenticeship.md",
+      "source_url": "https://www.kingston.ac.uk/study/degree-apprenticeship/learning-disabilities-nursing-bsc-hons-integrated-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/degree-apprenticeship/mental-health-nursing-bsc-hons-integrated-degree-apprenticeship",
+      "source_html": "course_pages/Just a moment_study_degree-apprenticeship_mental-health-nursing-bsc-hons-integrated-degree-apprenticeship.html",
+      "clean_md": "clean/courses/undergraduate/study-degree-apprenticeship-mental-health-nursing-bsc-hons-integrated-degree-apprenticeship.md",
+      "source_url": "https://www.kingston.ac.uk/study/degree-apprenticeship/mental-health-nursing-bsc-hons-integrated-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/foundation/applied-aircraft-engineering-foundation-degree",
+      "source_html": "course_pages/Just a moment_study_foundation_applied-aircraft-engineering-foundation-degree.html",
+      "clean_md": "clean/courses/foundation/study-foundation-applied-aircraft-engineering-foundation-degree.md",
+      "source_url": "https://www.kingston.ac.uk/study/foundation/applied-aircraft-engineering-foundation-degree",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/foundation/foundation-diploma-in-art-design-media-practice",
+      "source_html": "course_pages/Just a moment_study_foundation_foundation-diploma-in-art-design-media-practice.html",
+      "clean_md": "clean/courses/foundation/study-foundation-foundation-diploma-in-art-design-media-practice.md",
+      "source_url": "https://www.kingston.ac.uk/study/foundation/foundation-diploma-in-art-design-media-practice",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/foundation/foundation-year-in-built-environment",
+      "source_html": "course_pages/Just a moment_study_foundation_foundation-year-in-built-environment.html",
+      "clean_md": "clean/courses/foundation/study-foundation-foundation-year-in-built-environment.md",
+      "source_url": "https://www.kingston.ac.uk/study/foundation/foundation-year-in-built-environment",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/foundation/foundation-year-in-business",
+      "source_html": "course_pages/Just a moment_study_foundation_foundation-year-in-business.html",
+      "clean_md": "clean/courses/foundation/study-foundation-foundation-year-in-business.md",
+      "source_url": "https://www.kingston.ac.uk/study/foundation/foundation-year-in-business",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/foundation/foundation-year-in-computing",
+      "source_html": "course_pages/Just a moment_study_foundation_foundation-year-in-computing.html",
+      "clean_md": "clean/courses/foundation/study-foundation-foundation-year-in-computing.md",
+      "source_url": "https://www.kingston.ac.uk/study/foundation/foundation-year-in-computing",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/foundation/foundation-year-in-engineering",
+      "source_html": "course_pages/Just a moment_study_foundation_foundation-year-in-engineering.html",
+      "clean_md": "clean/courses/foundation/study-foundation-foundation-year-in-engineering.md",
+      "source_url": "https://www.kingston.ac.uk/study/foundation/foundation-year-in-engineering",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/foundation/foundation-year-in-social-sciences",
+      "source_html": "course_pages/Just a moment_study_foundation_foundation-year-in-social-sciences.html",
+      "clean_md": "clean/courses/foundation/study-foundation-foundation-year-in-social-sciences.md",
+      "source_url": "https://www.kingston.ac.uk/study/foundation/foundation-year-in-social-sciences",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/foundation/nursing-associate-fdsc-apprenticeship",
+      "source_html": "course_pages/Just a moment_study_foundation_nursing-associate-fdsc-apprenticeship.html",
+      "clean_md": "clean/courses/foundation/study-foundation-nursing-associate-fdsc-apprenticeship.md",
+      "source_url": "https://www.kingston.ac.uk/study/foundation/nursing-associate-fdsc-apprenticeship",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/accounting-and-finance-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_accounting-and-finance-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-accounting-and-finance-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/accounting-and-finance-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/adult-nursing-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_adult-nursing-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-adult-nursing-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/adult-nursing-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/advanced-clinical-practice-msc/pgdip",
+      "source_html": "course_pages/Just a moment_study_postgraduate_advanced-clinical-practice-msc_pgdip.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-advanced-clinical-practice-msc-pgdip.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/advanced-clinical-practice-msc/pgdip",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/advanced-therapeutics-and-public-health-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_advanced-therapeutics-and-public-health-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-advanced-therapeutics-and-public-health-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/advanced-therapeutics-and-public-health-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/aerospace-engineering-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_aerospace-engineering-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-aerospace-engineering-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/aerospace-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/ai-for-business-and-innovation-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_ai-for-business-and-innovation-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-ai-for-business-and-innovation-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/ai-for-business-and-innovation-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/analytical-chemistry-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_analytical-chemistry-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-analytical-chemistry-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/analytical-chemistry-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/animation-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_animation-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-animation-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/animation-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/architecture-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_architecture-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-architecture-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/architecture-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/art-business-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_art-business-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-art-business-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/art-business-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/artificial-intelligence-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_artificial-intelligence-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-artificial-intelligence-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/artificial-intelligence-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/assessment-only-route-leading-to-qualified-teacher-status",
+      "source_html": "course_pages/Just a moment_study_postgraduate_assessment-only-route-leading-to-qualified-teacher-status.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-assessment-only-route-leading-to-qualified-teacher-status.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/assessment-only-route-leading-to-qualified-teacher-status",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/automation-and-control-engineering-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_automation-and-control-engineering-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-automation-and-control-engineering-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/automation-and-control-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/banking-and-finance-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_banking-and-finance-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-banking-and-finance-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/banking-and-finance-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/bioinformatics-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_bioinformatics-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-bioinformatics-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/bioinformatics-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/biomedical-science-haematology-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_biomedical-science-haematology-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-biomedical-science-haematology-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/biomedical-science-haematology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/biomedical-science-haematology-with-management-studies-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_biomedical-science-haematology-with-management-studies-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-biomedical-science-haematology-with-management-studies-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/biomedical-science-haematology-with-management-studies-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/biomedical-science-medical-microbiology-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_biomedical-science-medical-microbiology-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-biomedical-science-medical-microbiology-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/biomedical-science-medical-microbiology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/biomedical-science-medical-microbiology-with-management-studies-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_biomedical-science-medical-microbiology-with-management-studies-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-biomedical-science-medical-microbiology-with-management-studies-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/biomedical-science-medical-microbiology-with-management-studies-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/building-surveying-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_building-surveying-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-building-surveying-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/building-surveying-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/business-analytics-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_business-analytics-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-business-analytics-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/business-analytics-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/business-phd-doctor-of-philosophy",
+      "source_html": "course_pages/Just a moment_study_postgraduate_business-phd-doctor-of-philosophy.html",
+      "clean_md": "clean/courses/postgraduate_research/study-postgraduate-business-phd-doctor-of-philosophy.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/business-phd-doctor-of-philosophy",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/cancer-biology-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_cancer-biology-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-cancer-biology-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/cancer-biology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/childrens-nursing-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_childrens-nursing-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-childrens-nursing-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/childrens-nursing-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/civil-and-environmental-engineering-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_civil-and-environmental-engineering-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-civil-and-environmental-engineering-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/civil-and-environmental-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/civil-engineering-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_civil-engineering-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-civil-engineering-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/civil-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/clinical-applications-of-psychology-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_clinical-applications-of-psychology-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-clinical-applications-of-psychology-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/clinical-applications-of-psychology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/computer-animation-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_computer-animation-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-computer-animation-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/computer-animation-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/construction-management-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_construction-management-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-construction-management-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/construction-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/creative-writing-and-publishing-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_creative-writing-and-publishing-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-creative-writing-and-publishing-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/creative-writing-and-publishing-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/creative-writing-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_creative-writing-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-creative-writing-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/creative-writing-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/creative-writing-ma-distance-learning",
+      "source_html": "course_pages/Just a moment_study_postgraduate_creative-writing-ma-distance-learning.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-creative-writing-ma-distance-learning.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/creative-writing-ma-distance-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/creative-writing-mfa",
+      "source_html": "course_pages/Just a moment_study_postgraduate_creative-writing-mfa.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-creative-writing-mfa.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/creative-writing-mfa",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/crime-justice-and-artificial-intelligence-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_crime-justice-and-artificial-intelligence-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-crime-justice-and-artificial-intelligence-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/crime-justice-and-artificial-intelligence-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/criminology-with-forensic-psychology-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_criminology-with-forensic-psychology-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-criminology-with-forensic-psychology-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/criminology-with-forensic-psychology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/curating-contemporary-design-ma-in-partnership-with-the-design-museum",
+      "source_html": "course_pages/Just a moment_study_postgraduate_curating-contemporary-design-ma-in-partnership-with-the-design-museum.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-curating-contemporary-design-ma-in-partnership-with-the-design-museum.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/curating-contemporary-design-ma-in-partnership-with-the-design-museum",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/data-science-conversion-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_data-science-conversion-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-data-science-conversion-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/data-science-conversion-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/data-science-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_data-science-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-data-science-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/data-science-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/design-and-systems-engineering-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_design-and-systems-engineering-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-design-and-systems-engineering-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/design-and-systems-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/digital-marketing-and-analytics-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_digital-marketing-and-analytics-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-digital-marketing-and-analytics-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/digital-marketing-and-analytics-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/early-years-teacher-birth-to-5-leading-to-early-years-teacher-status-eyts-pgce",
+      "source_html": "course_pages/Just a moment_study_postgraduate_early-years-teacher-birth-to-5-leading-to-early-years-teacher-status-eyts-pgce.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-early-years-teacher-birth-to-5-leading-to-early-years-teacher-status-eyts-pgce.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/early-years-teacher-birth-to-5-leading-to-early-years-teacher-status-eyts-pgce",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/education-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_education-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-education-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/education-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/education-phd-doctor-of-philosophy",
+      "source_html": "course_pages/Just a moment_study_postgraduate_education-phd-doctor-of-philosophy.html",
+      "clean_md": "clean/courses/postgraduate_research/study-postgraduate-education-phd-doctor-of-philosophy.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/education-phd-doctor-of-philosophy",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/engineering-management-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_engineering-management-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-engineering-management-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/engineering-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/environmental-management-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_environmental-management-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-environmental-management-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/environmental-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/fashion-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_fashion-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-fashion-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/fashion-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/film-making-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_film-making-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-film-making-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/film-making-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/finance-and-investment-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_finance-and-investment-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-finance-and-investment-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/finance-and-investment-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/fine-art-mfa",
+      "source_html": "course_pages/Just a moment_study_postgraduate_fine-art-mfa.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-fine-art-mfa.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/fine-art-mfa",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/forensic-psychology-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_forensic-psychology-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-forensic-psychology-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/forensic-psychology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/forensic-science-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_forensic-science-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-forensic-science-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/forensic-science-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/game-development-design-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_game-development-design-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-game-development-design-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/game-development-design-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/game-development-programming-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_game-development-programming-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-game-development-programming-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/game-development-programming-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/global-financial-analytics-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_global-financial-analytics-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-global-financial-analytics-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/global-financial-analytics-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/global-human-resource-management-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_global-human-resource-management-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-global-human-resource-management-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/global-human-resource-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/graduate-diploma-creative-practice",
+      "source_html": "course_pages/Just a moment_study_postgraduate_graduate-diploma-creative-practice.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-graduate-diploma-creative-practice.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/graduate-diploma-creative-practice",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/graduate-diploma-in-residential-work-childrens",
+      "source_html": "course_pages/Just a moment_study_postgraduate_graduate-diploma-in-residential-work-childrens.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-graduate-diploma-in-residential-work-childrens.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/graduate-diploma-in-residential-work-childrens",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/graphic-design-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_graphic-design-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-graphic-design-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/graphic-design-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/healthcare-practice-msc/pgdip/pgcert",
+      "source_html": "course_pages/Just a moment_study_postgraduate_healthcare-practice-msc_pgdip_pgcert.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-healthcare-practice-msc-pgdip-pgcert.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/healthcare-practice-msc/pgdip/pgcert",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/historic-building-conservation-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_historic-building-conservation-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-historic-building-conservation-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/historic-building-conservation-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/illustration-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_illustration-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-illustration-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/illustration-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/information-systems-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_information-systems-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-information-systems-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/information-systems-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/intelligent-networks-and-cloud-computing/with-management-studies-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_intelligent-networks-and-cloud-computing_with-management-studies-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-intelligent-networks-and-cloud-computing-with-management-studies-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/intelligent-networks-and-cloud-computing/with-management-studies-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/interior-design-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_interior-design-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-interior-design-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/interior-design-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/international-business-management-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_international-business-management-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-international-business-management-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/international-business-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/journalism-pgdip/ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_journalism-pgdip_ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-journalism-pgdip-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/journalism-pgdip/ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/landscape-architecture-mla-li-accredited",
+      "source_html": "course_pages/Just a moment_study_postgraduate_landscape-architecture-mla-li-accredited.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-landscape-architecture-mla-li-accredited.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/landscape-architecture-mla-li-accredited",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/law-llm",
+      "source_html": "course_pages/Just a moment_study_postgraduate_law-llm.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-law-llm.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/law-llm",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/law-phd-doctor-of-philosophy",
+      "source_html": "course_pages/Just a moment_study_postgraduate_law-phd-doctor-of-philosophy.html",
+      "clean_md": "clean/courses/postgraduate_research/study-postgraduate-law-phd-doctor-of-philosophy.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/law-phd-doctor-of-philosophy",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/leadership-and-management-in-health",
+      "source_html": "course_pages/Just a moment_study_postgraduate_leadership-and-management-in-health.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-leadership-and-management-in-health.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/leadership-and-management-in-health",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/learning-disabilities-nursing-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_learning-disabilities-nursing-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-learning-disabilities-nursing-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/learning-disabilities-nursing-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/logistics-and-supply-chain-management-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_logistics-and-supply-chain-management-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-logistics-and-supply-chain-management-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/logistics-and-supply-chain-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/marketing-and-brand-management-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_marketing-and-brand-management-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-marketing-and-brand-management-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/marketing-and-brand-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/master-of-business-administration-mba",
+      "source_html": "course_pages/Just a moment_study_postgraduate_master-of-business-administration-mba.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-master-of-business-administration-mba.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/master-of-business-administration-mba",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/master-of-social-work-msw",
+      "source_html": "course_pages/Just a moment_study_postgraduate_master-of-social-work-msw.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-master-of-social-work-msw.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/master-of-social-work-msw",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/mechanical-engineering-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_mechanical-engineering-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-mechanical-engineering-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/mechanical-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/media-and-communication-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_media-and-communication-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-media-and-communication-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/media-and-communication-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/mental-health-nursing-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_mental-health-nursing-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-mental-health-nursing-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/mental-health-nursing-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/midwifery-msc-top-up",
+      "source_html": "course_pages/Just a moment_study_postgraduate_midwifery-msc-top-up.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-midwifery-msc-top-up.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/midwifery-msc-top-up",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/midwifery-with-registered-midwife-for-registered-nurses-adult-mmid",
+      "source_html": "course_pages/Just a moment_study_postgraduate_midwifery-with-registered-midwife-for-registered-nurses-adult-mmid.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-midwifery-with-registered-midwife-for-registered-nurses-adult-mmid.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/midwifery-with-registered-midwife-for-registered-nurses-adult-mmid",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/midwifery-with-registered-midwife-mmid",
+      "source_html": "course_pages/Just a moment_study_postgraduate_midwifery-with-registered-midwife-mmid.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-midwifery-with-registered-midwife-mmid.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/midwifery-with-registered-midwife-mmid",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/mobile-networks-and-media-streaming-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_mobile-networks-and-media-streaming-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-mobile-networks-and-media-streaming-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/mobile-networks-and-media-streaming-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/museum-and-gallery-studies-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_museum-and-gallery-studies-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-museum-and-gallery-studies-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/museum-and-gallery-studies-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/music-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_music-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-music-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/music-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/music-ma-composition",
+      "source_html": "course_pages/Just a moment_study_postgraduate_music-ma-composition.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-music-ma-composition.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/music-ma-composition",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/music-ma-education",
+      "source_html": "course_pages/Just a moment_study_postgraduate_music-ma-education.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-music-ma-education.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/music-ma-education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/music-ma-performance",
+      "source_html": "course_pages/Just a moment_study_postgraduate_music-ma-performance.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-music-ma-performance.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/music-ma-performance",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/music-ma-production",
+      "source_html": "course_pages/Just a moment_study_postgraduate_music-ma-production.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-music-ma-production.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/music-ma-production",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/network-information-security/with-management-studies-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_network-information-security_with-management-studies-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-network-information-security-with-management-studies-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/network-information-security/with-management-studies-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/occupational-and-business-psychology-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_occupational-and-business-psychology-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-occupational-and-business-psychology-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/occupational-and-business-psychology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/pharmaceutical-analysis-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_pharmaceutical-analysis-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-pharmaceutical-analysis-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/pharmaceutical-analysis-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/pharmaceutical-analysis-with-regulatory-affairs-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_pharmaceutical-analysis-with-regulatory-affairs-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-pharmaceutical-analysis-with-regulatory-affairs-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/pharmaceutical-analysis-with-regulatory-affairs-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/pharmaceutical-and-chemical-research-mres",
+      "source_html": "course_pages/Just a moment_study_postgraduate_pharmaceutical-and-chemical-research-mres.html",
+      "clean_md": "clean/courses/postgraduate_research/study-postgraduate-pharmaceutical-and-chemical-research-mres.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/pharmaceutical-and-chemical-research-mres",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/pharmaceutical-science-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_pharmaceutical-science-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-pharmaceutical-science-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/pharmaceutical-science-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/photography-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_photography-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-photography-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/photography-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/practice-education-pgcert",
+      "source_html": "course_pages/Just a moment_study_postgraduate_practice-education-pgcert.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-practice-education-pgcert.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/practice-education-pgcert",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/primary-teaching-leading-to-qualified-teacher-status-qts-pgce",
+      "source_html": "course_pages/Just a moment_study_postgraduate_primary-teaching-leading-to-qualified-teacher-status-qts-pgce.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-primary-teaching-leading-to-qualified-teacher-status-qts-pgce.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/primary-teaching-leading-to-qualified-teacher-status-qts-pgce",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/product-furniture-design-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_product-furniture-design-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-product-furniture-design-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/product-furniture-design-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/professional-practice-architecture-arb/riba-part-3-exemption-pgdip",
+      "source_html": "course_pages/Just a moment_study_postgraduate_professional-practice-architecture-arb_riba-part-3-exemption-pgdip.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-professional-practice-architecture-arb-riba-part-3-exemption-pgdip.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/professional-practice-architecture-arb/riba-part-3-exemption-pgdip",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/project-management-for-creative-practitioners-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_project-management-for-creative-practitioners-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-project-management-for-creative-practitioners-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/project-management-for-creative-practitioners-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/project-management-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_project-management-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-project-management-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/project-management-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/project-management-msc-distance-learning",
+      "source_html": "course_pages/Just a moment_study_postgraduate_project-management-msc-distance-learning.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-project-management-msc-distance-learning.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/project-management-msc-distance-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/psychology-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_psychology-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-psychology-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/psychology-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/psychology-msc-conversion-online",
+      "source_html": "course_pages/Just a moment_study_postgraduate_psychology-msc-conversion-online.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-psychology-msc-conversion-online.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/psychology-msc-conversion-online",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/publishing-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_publishing-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-publishing-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/publishing-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/quantity-surveying-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_quantity-surveying-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-quantity-surveying-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/quantity-surveying-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/real-estate-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_real-estate-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-real-estate-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/real-estate-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/renewable-energy-engineering-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_renewable-energy-engineering-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-renewable-energy-engineering-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/renewable-energy-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/robotics-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_robotics-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-robotics-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/robotics-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/secondary-teaching-leading-to-qualified-teacher-status-pgce-citizenship",
+      "source_html": "course_pages/Just a moment_study_postgraduate_secondary-teaching-leading-to-qualified-teacher-status-pgce-citizenship.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-secondary-teaching-leading-to-qualified-teacher-status-pgce-citizenship.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/secondary-teaching-leading-to-qualified-teacher-status-pgce-citizenship",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/secondary-teaching-leading-to-qualified-teacher-status-pgce-physical-education",
+      "source_html": "course_pages/Just a moment_study_postgraduate_secondary-teaching-leading-to-qualified-teacher-status-pgce-physical-education.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-secondary-teaching-leading-to-qualified-teacher-status-pgce-physical-education.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/secondary-teaching-leading-to-qualified-teacher-status-pgce-physical-education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-art-and-design",
+      "source_html": "course_pages/Just a moment_study_postgraduate_secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-art-and-design.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-art-and-design.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-art-and-design",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-english",
+      "source_html": "course_pages/Just a moment_study_postgraduate_secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-english.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-english.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-english",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-mathematics",
+      "source_html": "course_pages/Just a moment_study_postgraduate_secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-mathematics.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-mathematics.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-mathematics",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-science",
+      "source_html": "course_pages/Just a moment_study_postgraduate_secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-science.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-science.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/secondary-teaching-leading-to-qualified-teacher-status-qts-pgce-science",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/social-work-pgdip-apprenticeship",
+      "source_html": "course_pages/Just a moment_study_postgraduate_social-work-pgdip-apprenticeship.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-social-work-pgdip-apprenticeship.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/social-work-pgdip-apprenticeship",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/social-work-post-qualifying-credit-bearing-short-course",
+      "source_html": "course_pages/Just a moment_study_postgraduate_social-work-post-qualifying-credit-bearing-short-course.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-social-work-post-qualifying-credit-bearing-short-course.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/social-work-post-qualifying-credit-bearing-short-course",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/social-work-step-up-pgdip",
+      "source_html": "course_pages/Just a moment_study_postgraduate_social-work-step-up-pgdip.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-social-work-step-up-pgdip.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/social-work-step-up-pgdip",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/software-engineering/with-management-studies-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_software-engineering_with-management-studies-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-software-engineering-with-management-studies-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/software-engineering/with-management-studies-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/special-educational-needs-and-inclusion-pgcert",
+      "source_html": "course_pages/Just a moment_study_postgraduate_special-educational-needs-and-inclusion-pgcert.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-special-educational-needs-and-inclusion-pgcert.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/special-educational-needs-and-inclusion-pgcert",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/structural-engineering-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_structural-engineering-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-structural-engineering-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/structural-engineering-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/sustainable-design-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_sustainable-design-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-sustainable-design-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/sustainable-design-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/sustainable-fashion-business-and-practices-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_sustainable-fashion-business-and-practices-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-sustainable-fashion-business-and-practices-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/sustainable-fashion-business-and-practices-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/technology-maritime-operations-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_technology-maritime-operations-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-technology-maritime-operations-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/technology-maritime-operations-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/urban-design-ma",
+      "source_html": "course_pages/Just a moment_study_postgraduate_urban-design-ma.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-urban-design-ma.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/urban-design-ma",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/postgraduate/user-experience-design-msc",
+      "source_html": "course_pages/Just a moment_study_postgraduate_user-experience-design-msc.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-user-experience-design-msc.md",
+      "source_url": "https://www.kingston.ac.uk/study/postgraduate/user-experience-design-msc",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/3d-design-innovation-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_3d-design-innovation-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-3d-design-innovation-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/3d-design-innovation-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/accounting-and-finance-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_accounting-and-finance-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-accounting-and-finance-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/accounting-and-finance-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/acting-and-performance-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_acting-and-performance-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-acting-and-performance-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/acting-and-performance-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/adult-and-mental-health-nursing-msci",
+      "source_html": "course_pages/Just a moment_study_undergraduate_adult-and-mental-health-nursing-msci.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-adult-and-mental-health-nursing-msci.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/adult-and-mental-health-nursing-msci",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/adult-nursing-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_adult-nursing-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-adult-nursing-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/adult-nursing-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/aerospace-engineering-meng/beng-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_aerospace-engineering-meng_beng-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-aerospace-engineering-meng-beng-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/aerospace-engineering-meng/beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/aircraft-engineering-beng-hons-top-up",
+      "source_html": "course_pages/Just a moment_study_undergraduate_aircraft-engineering-beng-hons-top-up.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-aircraft-engineering-beng-hons-top-up.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/aircraft-engineering-beng-hons-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/architectural-technology-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_architectural-technology-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-architectural-technology-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/architectural-technology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/architecture-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_architecture-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-architecture-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/architecture-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/architecture-march",
+      "source_html": "course_pages/Just a moment_study_undergraduate_architecture-march.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-architecture-march.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/architecture-march",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/artificial-intelligence-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_artificial-intelligence-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-artificial-intelligence-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/artificial-intelligence-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/aviation-engineering-beng-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_aviation-engineering-beng-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-aviation-engineering-beng-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/aviation-engineering-beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/aviation-operations-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_aviation-operations-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-aviation-operations-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/aviation-operations-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/aviation-operations-with-commercial-pilot-training-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_aviation-operations-with-commercial-pilot-training-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-aviation-operations-with-commercial-pilot-training-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/aviation-operations-with-commercial-pilot-training-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/biochemistry-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_biochemistry-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-biochemistry-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/biochemistry-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/biological-sciences-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_biological-sciences-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-biological-sciences-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/biological-sciences-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/biomedical-science-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_biomedical-science-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-biomedical-science-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/biomedical-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/biomedical-science-bsc-hons-standalone-modules",
+      "source_html": "course_pages/Just a moment_study_undergraduate_biomedical-science-bsc-hons-standalone-modules.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-biomedical-science-bsc-hons-standalone-modules.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/biomedical-science-bsc-hons-standalone-modules",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/building-surveying-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_building-surveying-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-building-surveying-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/building-surveying-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/business-economics-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_business-economics-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-business-economics-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/business-economics-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/business-management-and-accounting-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_business-management-and-accounting-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-business-management-and-accounting-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/business-management-and-accounting-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/business-management-and-entrepreneurship-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_business-management-and-entrepreneurship-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-business-management-and-entrepreneurship-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/business-management-and-entrepreneurship-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/business-management-and-finance-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_business-management-and-finance-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-business-management-and-finance-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/business-management-and-finance-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/business-management-and-marketing-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_business-management-and-marketing-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-business-management-and-marketing-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/business-management-and-marketing-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/business-management-and-supply-chain-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_business-management-and-supply-chain-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-business-management-and-supply-chain-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/business-management-and-supply-chain-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/business-management-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_business-management-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-business-management-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/business-management-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/business-psychology-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_business-psychology-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-business-psychology-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/business-psychology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/chemistry-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_chemistry-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-chemistry-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/chemistry-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/childrens-and-learning-disabilities-nursing-msci",
+      "source_html": "course_pages/Just a moment_study_undergraduate_childrens-and-learning-disabilities-nursing-msci.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-childrens-and-learning-disabilities-nursing-msci.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/childrens-and-learning-disabilities-nursing-msci",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/childrens-nursing-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_childrens-nursing-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-childrens-nursing-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/childrens-nursing-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/civil-engineering-beng-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_civil-engineering-beng-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-civil-engineering-beng-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/civil-engineering-beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/civil-engineering-beng-hons-degree-apprenticeship",
+      "source_html": "course_pages/Just a moment_study_undergraduate_civil-engineering-beng-hons-degree-apprenticeship.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-civil-engineering-beng-hons-degree-apprenticeship.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/civil-engineering-beng-hons-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/civil-engineering-meng-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_civil-engineering-meng-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-civil-engineering-meng-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/civil-engineering-meng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/climate-resilience-and-artificial-intelligence-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_climate-resilience-and-artificial-intelligence-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-climate-resilience-and-artificial-intelligence-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/climate-resilience-and-artificial-intelligence-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/computer-science-and-artificial-intelligence-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_computer-science-and-artificial-intelligence-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-computer-science-and-artificial-intelligence-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/computer-science-and-artificial-intelligence-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/computer-science-and-software-engineering-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_computer-science-and-software-engineering-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-computer-science-and-software-engineering-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/computer-science-and-software-engineering-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/computer-science-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_computer-science-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-computer-science-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/computer-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/computer-science-with-cloud-computing-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_computer-science-with-cloud-computing-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-computer-science-with-cloud-computing-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/computer-science-with-cloud-computing-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/computer-science-with-data-science-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_computer-science-with-data-science-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-computer-science-with-data-science-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/computer-science-with-data-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/computer-science-with-quantum-computing-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_computer-science-with-quantum-computing-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-computer-science-with-quantum-computing-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/computer-science-with-quantum-computing-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/construction-project-management-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_construction-project-management-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-construction-project-management-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/construction-project-management-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/creative-and-cultural-industries-art-direction-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_creative-and-cultural-industries-art-direction-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-creative-and-cultural-industries-art-direction-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/creative-and-cultural-industries-art-direction-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/creative-and-cultural-industries-design-marketing-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_creative-and-cultural-industries-design-marketing-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-creative-and-cultural-industries-design-marketing-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/creative-and-cultural-industries-design-marketing-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/creative-and-cultural-industries-events-and-experiences-design-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_creative-and-cultural-industries-events-and-experiences-design-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-creative-and-cultural-industries-events-and-experiences-design-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/creative-and-cultural-industries-events-and-experiences-design-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/creative-writing-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_creative-writing-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-creative-writing-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/creative-writing-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/criminology-and-criminal-justice-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_criminology-and-criminal-justice-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-criminology-and-criminal-justice-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/criminology-and-criminal-justice-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/criminology-and-forensic-psychology-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_criminology-and-forensic-psychology-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-criminology-and-forensic-psychology-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/criminology-and-forensic-psychology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/cyber-security-digital-forensics-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_cyber-security-digital-forensics-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-cyber-security-digital-forensics-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/cyber-security-digital-forensics-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/dance-and-drama-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_dance-and-drama-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-dance-and-drama-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/dance-and-drama-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/dance-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_dance-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-dance-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/dance-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/digital-media-technology-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_digital-media-technology-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-digital-media-technology-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/digital-media-technology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/drama-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_drama-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-drama-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/drama-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/early-years-teaching-learning-ba-hons-top-up",
+      "source_html": "course_pages/Just a moment_study_undergraduate_early-years-teaching-learning-ba-hons-top-up.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-early-years-teaching-learning-ba-hons-top-up.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/early-years-teaching-learning-ba-hons-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/economics-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_economics-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-economics-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/economics-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/education-early-years-teaching-and-learning-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_education-early-years-teaching-and-learning-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-education-early-years-teaching-and-learning-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/education-early-years-teaching-and-learning-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/education-special-educational-needs-inclusion-and-wellbeing-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_education-special-educational-needs-inclusion-and-wellbeing-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-education-special-educational-needs-inclusion-and-wellbeing-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/education-special-educational-needs-inclusion-and-wellbeing-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/education-special-educational-needs-inclusion-and-wellbeing-ba-hons-distance",
+      "source_html": "course_pages/Just a moment_study_undergraduate_education-special-educational-needs-inclusion-and-wellbeing-ba-hons-distance.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-education-special-educational-needs-inclusion-and-wellbeing-ba-hons-distance.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/education-special-educational-needs-inclusion-and-wellbeing-ba-hons-distance",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/electrical-and-electronic-engineering-meng/beng-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_electrical-and-electronic-engineering-meng_beng-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-electrical-and-electronic-engineering-meng-beng-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/electrical-and-electronic-engineering-meng/beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/electronic-design-engineering-meng/beng-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_electronic-design-engineering-meng_beng-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-electronic-design-engineering-meng-beng-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/electronic-design-engineering-meng/beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/environmental-science-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_environmental-science-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-environmental-science-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/environmental-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/environmental-science-with-hazards-and-disasters-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_environmental-science-with-hazards-and-disasters-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-environmental-science-with-hazards-and-disasters-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/environmental-science-with-hazards-and-disasters-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/fashion-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_fashion-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-fashion-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/fashion-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/fashion-promotion-and-communication-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_fashion-promotion-and-communication-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-fashion-promotion-and-communication-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/fashion-promotion-and-communication-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/filmmaking-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_filmmaking-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-filmmaking-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/filmmaking-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/financial-economics-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_financial-economics-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-financial-economics-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/financial-economics-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/fine-art-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_fine-art-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-fine-art-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/fine-art-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/forensic-psychology-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_forensic-psychology-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-forensic-psychology-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/forensic-psychology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/forensic-science-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_forensic-science-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-forensic-science-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/forensic-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/game-creation-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_game-creation-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-game-creation-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/game-creation-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/game-development-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_game-development-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-game-development-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/game-development-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/geography-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_geography-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-geography-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/geography-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/graphic-design-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_graphic-design-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-graphic-design-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/graphic-design-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/hand-embroidery-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_hand-embroidery-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-hand-embroidery-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/hand-embroidery-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/healthcare-practice-bsc-hons-top-up/gradcert",
+      "source_html": "course_pages/Just a moment_study_undergraduate_healthcare-practice-bsc-hons-top-up_gradcert.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-healthcare-practice-bsc-hons-top-up-gradcert.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/healthcare-practice-bsc-hons-top-up/gradcert",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/illustration-animation-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_illustration-animation-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-illustration-animation-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/illustration-animation-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/interaction-design-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_interaction-design-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-interaction-design-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/interaction-design-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/interior-design-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_interior-design-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-interior-design-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/interior-design-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/international-business-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_international-business-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-international-business-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/international-business-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/international-law-llb-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_international-law-llb-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-international-law-llb-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/international-law-llb-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/law-and-criminal-justice-llb-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_law-and-criminal-justice-llb-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-law-and-criminal-justice-llb-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/law-and-criminal-justice-llb-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/law-llb-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_law-llb-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-law-llb-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/law-llb-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/learning-disabilities-nursing-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_learning-disabilities-nursing-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-learning-disabilities-nursing-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/learning-disabilities-nursing-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/marketing-and-advertising-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_marketing-and-advertising-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-marketing-and-advertising-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/marketing-and-advertising-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/mechanical-engineering-meng/beng-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_mechanical-engineering-meng_beng-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-mechanical-engineering-meng-beng-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/mechanical-engineering-meng/beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/media-content-and-communications-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_media-content-and-communications-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-media-content-and-communications-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/media-content-and-communications-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/media-skills-ba-hons-top-up",
+      "source_html": "course_pages/Just a moment_study_undergraduate_media-skills-ba-hons-top-up.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-media-skills-ba-hons-top-up.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/media-skills-ba-hons-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/mental-health-and-learning-disabilities-nursing-msci",
+      "source_html": "course_pages/Just a moment_study_undergraduate_mental-health-and-learning-disabilities-nursing-msci.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-mental-health-and-learning-disabilities-nursing-msci.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/mental-health-and-learning-disabilities-nursing-msci",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/mental-health-nursing-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_mental-health-nursing-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-mental-health-nursing-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/mental-health-nursing-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/midwifery-foundation-year",
+      "source_html": "course_pages/Just a moment_study_undergraduate_midwifery-foundation-year.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-midwifery-foundation-year.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/midwifery-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/midwifery-with-registered-midwife-bmid-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_midwifery-with-registered-midwife-bmid-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-midwifery-with-registered-midwife-bmid-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/midwifery-with-registered-midwife-bmid-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/midwifery-with-registered-midwife-bmid-hons-degree-apprenticeship",
+      "source_html": "course_pages/Just a moment_study_undergraduate_midwifery-with-registered-midwife-bmid-hons-degree-apprenticeship.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-midwifery-with-registered-midwife-bmid-hons-degree-apprenticeship.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/midwifery-with-registered-midwife-bmid-hons-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/midwifery-with-registered-midwife-bmid-hons-for-registered-nurses-adult",
+      "source_html": "course_pages/Just a moment_study_undergraduate_midwifery-with-registered-midwife-bmid-hons-for-registered-nurses-adult.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-midwifery-with-registered-midwife-bmid-hons-for-registered-nurses-adult.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/midwifery-with-registered-midwife-bmid-hons-for-registered-nurses-adult",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/music-technology-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_music-technology-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-music-technology-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/music-technology-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/nursing-foundation-year",
+      "source_html": "course_pages/Just a moment_study_undergraduate_nursing-foundation-year.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-nursing-foundation-year.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/nursing-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/pharmaceutical-science-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_pharmaceutical-science-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-pharmaceutical-science-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/pharmaceutical-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/pharmaceutical-science-mpharmsci-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_pharmaceutical-science-mpharmsci-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-pharmaceutical-science-mpharmsci-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/pharmaceutical-science-mpharmsci-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/pharmaceutical-science-with-regulatory-affairs-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_pharmaceutical-science-with-regulatory-affairs-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-pharmaceutical-science-with-regulatory-affairs-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/pharmaceutical-science-with-regulatory-affairs-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/pharmacology-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_pharmacology-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-pharmacology-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/pharmacology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/pharmacy-mpharm-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_pharmacy-mpharm-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-pharmacy-mpharm-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/pharmacy-mpharm-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/pharmacy-mpharm-hons-with-preparatory-year",
+      "source_html": "course_pages/Just a moment_study_undergraduate_pharmacy-mpharm-hons-with-preparatory-year.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-pharmacy-mpharm-hons-with-preparatory-year.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/pharmacy-mpharm-hons-with-preparatory-year",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/pharmacy-with-biopharmaceutics-mpharm-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_pharmacy-with-biopharmaceutics-mpharm-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-pharmacy-with-biopharmaceutics-mpharm-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/pharmacy-with-biopharmaceutics-mpharm-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/photography-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_photography-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-photography-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/photography-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/pre-sessional-english-courses",
+      "source_html": "course_pages/Just a moment_study_undergraduate_pre-sessional-english-courses.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-pre-sessional-english-courses.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/pre-sessional-english-courses",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/primary-education-qts-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_primary-education-qts-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-primary-education-qts-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/primary-education-qts-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/product-and-furniture-design-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_product-and-furniture-design-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-product-and-furniture-design-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/product-and-furniture-design-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/psychology-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_psychology-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-psychology-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/psychology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/psychology-with-counselling-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_psychology-with-counselling-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-psychology-with-counselling-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/psychology-with-counselling-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/psychology-with-criminology-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_psychology-with-criminology-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-psychology-with-criminology-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/psychology-with-criminology-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/quantity-surveying-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_quantity-surveying-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-quantity-surveying-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/quantity-surveying-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/real-estate-management-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_real-estate-management-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-real-estate-management-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/real-estate-management-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/robotic-engineering-and-artificial-intelligence-meng/beng-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_robotic-engineering-and-artificial-intelligence-meng_beng-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-robotic-engineering-and-artificial-intelligence-meng-beng-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/robotic-engineering-and-artificial-intelligence-meng/beng-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/science-foundation-year",
+      "source_html": "course_pages/Just a moment_study_undergraduate_science-foundation-year.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-science-foundation-year.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/science-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/science-foundation-year-sport-and-exercise-science",
+      "source_html": "course_pages/Just a moment_study_undergraduate_science-foundation-year-sport-and-exercise-science.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-science-foundation-year-sport-and-exercise-science.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/science-foundation-year-sport-and-exercise-science",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/social-work-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_social-work-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-social-work-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/social-work-ba-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/social-work-ba-hons-integrated-degree-apprenticeship",
+      "source_html": "course_pages/Just a moment_study_undergraduate_social-work-ba-hons-integrated-degree-apprenticeship.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-social-work-ba-hons-integrated-degree-apprenticeship.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/social-work-ba-hons-integrated-degree-apprenticeship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/special-educational-needs-inclusive-practice-ba-hons-top-up",
+      "source_html": "course_pages/Just a moment_study_undergraduate_special-educational-needs-inclusive-practice-ba-hons-top-up.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-special-educational-needs-inclusive-practice-ba-hons-top-up.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/special-educational-needs-inclusive-practice-ba-hons-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/sport-and-exercise-science-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_sport-and-exercise-science-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-sport-and-exercise-science-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/sport-and-exercise-science-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/sport-and-exercise-science-coaching-and-physical-education-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_sport-and-exercise-science-coaching-and-physical-education-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-sport-and-exercise-science-coaching-and-physical-education-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/sport-and-exercise-science-coaching-and-physical-education-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/sport-and-exercise-science-nutrition-bsc-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_sport-and-exercise-science-nutrition-bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-sport-and-exercise-science-nutrition-bsc-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/sport-and-exercise-science-nutrition-bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.kingston.ac.uk/study/undergraduate/working-with-children-young-people-social-pedagogy-ba-hons",
+      "source_html": "course_pages/Just a moment_study_undergraduate_working-with-children-young-people-social-pedagogy-ba-hons.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-working-with-children-young-people-social-pedagogy-ba-hons.md",
+      "source_url": "https://www.kingston.ac.uk/study/undergraduate/working-with-children-young-people-social-pedagogy-ba-hons",
+      "study_level": "undergraduate"
+    }
+  ],
+  "uni_pages": [
+    {
+      "source_html": "uni_req/bangladesh-entry.html",
+      "source_url": "https://www.kingston.ac.uk/study/international-students/country-specific-information#asia",
+      "clean_md": "clean/uni/bangladesh-entry.md",
+      "page_type": "entry"
+    },
+    {
+      "source_html": "uni_req/english-requirements.html",
+      "source_url": "https://www.kingston.ac.uk/study/international-students/english-language-entry-requirements",
+      "clean_md": "clean/uni/english-requirements.md",
+      "page_type": "english"
+    },
+    {
+      "source_html": "uni_req/scholarships.html",
+      "source_url": "https://www.kingston.ac.uk/study/fees-and-funding/international-scholarships-and-bursaries",
+      "clean_md": "clean/uni/scholarships.md",
+      "page_type": "scholarship"
+    }
+  ]
+}

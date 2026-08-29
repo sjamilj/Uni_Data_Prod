@@ -1,0 +1,1307 @@
+{
+  "university": "Cardiff Metropolitan University",
+  "cleaned_at": "2026-08-27",
+  "courses": [
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/executive-mba",
+      "source_html": "course_pages/Executive MBA _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-executive-mba.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/executive-mba/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/llm-international-business",
+      "source_html": "course_pages/LLM International Business _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-llm-international-business.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/llm-international-business/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-ceramics-and-maker",
+      "source_html": "course_pages/MA Ceramics and Maker _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-ceramics-and-maker.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-ceramics-and-maker/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-creative-enterprise-and-innovation",
+      "source_html": "course_pages/MA Creative Enterprise and Innovation _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-creative-enterprise-and-innovation.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-creative-enterprise-and-innovation/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-creative-writing",
+      "source_html": "course_pages/MA Creative Writing _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-creative-writing.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-creative-writing/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-education",
+      "source_html": "course_pages/MA Education _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-education.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-education/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-education-wales",
+      "source_html": "course_pages/MA Education (Wales) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-education-wales.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-education-wales/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-english-literature",
+      "source_html": "course_pages/MA English Literature _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-english-literature.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-english-literature/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-english-literature-and-creative-writing",
+      "source_html": "course_pages/MA English Literature and Creative Writing _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-english-literature-and-creative-writing.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-english-literature-and-creative-writing/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-fashion-design",
+      "source_html": "course_pages/MA Fashion Design _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-fashion-design.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-fashion-design/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-illustration-and-animation",
+      "source_html": "course_pages/MA Illustration and Animation _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-illustration-and-animation.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-illustration-and-animation/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-interior-design",
+      "source_html": "course_pages/MA Interior Design _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-interior-design.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-interior-design/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-photography",
+      "source_html": "course_pages/MA Photography _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-photography.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-photography/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-specialist-journalism",
+      "source_html": "course_pages/MA Specialist Journalism _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-specialist-journalism.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-specialist-journalism/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-sport-ethics-and-society",
+      "source_html": "course_pages/MA Sport, Ethics and Society _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-sport-ethics-and-society.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-sport-ethics-and-society/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-tesol",
+      "source_html": "course_pages/MA TESOL _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-tesol.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-tesol/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-visual-communication-design",
+      "source_html": "course_pages/MA Visual Communication Design _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-visual-communication-design.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-visual-communication-design/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-youth-and-community-work",
+      "source_html": "course_pages/MA Youth and Community Work _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-ma-youth-and-community-work.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/ma-youth-and-community-work/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/master-of-fine-art",
+      "source_html": "course_pages/Master of Fine Art _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-master-of-fine-art.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/master-of-fine-art/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/mba---advanced-entry-top-up",
+      "source_html": "course_pages/MBA - Advanced Entry (Top-up) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-mba---advanced-entry-top-up.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/mba---advanced-entry-top-up/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/mba---master-of-business-administration",
+      "source_html": "course_pages/MBA - Master of Business Administration _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-mba---master-of-business-administration.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/mba---master-of-business-administration/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/mdes-global-design",
+      "source_html": "course_pages/MDes Global Design _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-mdes-global-design.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/mdes-global-design/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc--mres-strength-and-conditioning",
+      "source_html": "course_pages/MSc _ MRes Strength and Conditioning _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate_research/postgraduate-msc--mres-strength-and-conditioning.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc--mres-strength-and-conditioning/",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-accounting-and-finance",
+      "source_html": "course_pages/MSc Accounting and Finance _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-accounting-and-finance.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-accounting-and-finance/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-advanced-computer-science",
+      "source_html": "course_pages/MSc Advanced Computer Science _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-advanced-computer-science.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-advanced-computer-science/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-advanced-computer-science-and-engineering",
+      "source_html": "course_pages/MSc Advanced Computer Science and Engineering _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-advanced-computer-science-and-engineering.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-advanced-computer-science-and-engineering/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-advanced-cyber-security",
+      "source_html": "course_pages/MSc Advanced Cyber Security _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-advanced-cyber-security.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-advanced-cyber-security/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-advanced-practice-in-healthcare",
+      "source_html": "course_pages/MSc Advanced Practice in Healthcare _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-advanced-practice-in-healthcare.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-advanced-practice-in-healthcare/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-applied-public-health",
+      "source_html": "course_pages/MSc Applied Public Health _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-applied-public-health.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-applied-public-health/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-banking-and-finance",
+      "source_html": "course_pages/MSc Banking and Finance _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-banking-and-finance.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-banking-and-finance/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-biomedical-science",
+      "source_html": "course_pages/MSc Biomedical Science _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-biomedical-science.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-biomedical-science/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-cloud-computing",
+      "source_html": "course_pages/MSc Cloud Computing _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-cloud-computing.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-cloud-computing/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-computing-and-information-technology",
+      "source_html": "course_pages/MSc Computing and Information Technology _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-computing-and-information-technology.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-computing-and-information-technology/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-criminal-justice-and-security",
+      "source_html": "course_pages/MSc Criminal Justice and Security _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-criminal-justice-and-security.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-criminal-justice-and-security/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-criminology-and-criminal-investigations",
+      "source_html": "course_pages/MSc Criminology and Criminal Investigations _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-criminology-and-criminal-investigations.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-criminology-and-criminal-investigations/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-data-science",
+      "source_html": "course_pages/MSc Data Science _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-data-science.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-data-science/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-data-science-and-artificial-intelligence",
+      "source_html": "course_pages/MSc Data Science and Artificial Intelligence _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-data-science-and-artificial-intelligence.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-data-science-and-artificial-intelligence/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-dietetics",
+      "source_html": "course_pages/MSc Dietetics _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-dietetics.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-dietetics/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-digital-marketing-management",
+      "source_html": "course_pages/MSc Digital Marketing Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-digital-marketing-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-digital-marketing-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-economics-and-finance",
+      "source_html": "course_pages/MSc Economics and Finance _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-economics-and-finance.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-economics-and-finance/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-electrical-and-electronic-engineering",
+      "source_html": "course_pages/MSc Electrical and Electronic Engineering _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-electrical-and-electronic-engineering.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-electrical-and-electronic-engineering/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-entrepreneurship-and-innovation-management",
+      "source_html": "course_pages/MSc Entrepreneurship and Innovation Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-entrepreneurship-and-innovation-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-entrepreneurship-and-innovation-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-fashion-marketing-management",
+      "source_html": "course_pages/MSc Fashion Marketing Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-fashion-marketing-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-fashion-marketing-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-financial-management",
+      "source_html": "course_pages/MSc Financial Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-financial-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-financial-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-food-science-and-technology",
+      "source_html": "course_pages/MSc Food Science and Technology _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-food-science-and-technology.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-food-science-and-technology/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-forensic-psychology",
+      "source_html": "course_pages/MSc Forensic Psychology _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-forensic-psychology.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-forensic-psychology/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-health-psychology",
+      "source_html": "course_pages/MSc Health Psychology _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-health-psychology.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-health-psychology/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-human-resource-management",
+      "source_html": "course_pages/MSc Human Resource Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-human-resource-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-human-resource-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-international-business-management",
+      "source_html": "course_pages/MSc International Business Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-international-business-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-international-business-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-international-destination-management",
+      "source_html": "course_pages/MSc International Destination Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-international-destination-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-international-destination-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-international-events-management",
+      "source_html": "course_pages/MSc International Events Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-international-events-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-international-events-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-international-hotel-and-hospitality-management",
+      "source_html": "course_pages/MSc International Hotel and Hospitality Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-international-hotel-and-hospitality-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-international-hotel-and-hospitality-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-international-supply-chain-and-logistics-management",
+      "source_html": "course_pages/MSc International Supply Chain and Logistics Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-international-supply-chain-and-logistics-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-international-supply-chain-and-logistics-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-nutrition-for-sport-and-exercise",
+      "source_html": "course_pages/MSc Nutrition for Sport and Exercise _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-nutrition-for-sport-and-exercise.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-nutrition-for-sport-and-exercise/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-product-design",
+      "source_html": "course_pages/MSc Product Design _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-product-design.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-product-design/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-professional-practice-sport-performance-analysis",
+      "source_html": "course_pages/MSc Professional Practice (Sport Performance Analysis) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-professional-practice-sport-performance-analysis.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-professional-practice-sport-performance-analysis/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-project-management",
+      "source_html": "course_pages/MSc Project Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-project-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-project-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-psychology-in-education",
+      "source_html": "course_pages/MSc Psychology in Education _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-psychology-in-education.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-psychology-in-education/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-psychology-in-education-online",
+      "source_html": "course_pages/MSc Psychology in Education (Online) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-psychology-in-education-online.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-psychology-in-education-online/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-psychology-of-applied-behaviour-change",
+      "source_html": "course_pages/MSc Psychology of Applied Behaviour Change _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-psychology-of-applied-behaviour-change.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-psychology-of-applied-behaviour-change/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-robotics-and-artificial-intelligence",
+      "source_html": "course_pages/MSc Robotics and Artificial Intelligence _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-robotics-and-artificial-intelligence.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-robotics-and-artificial-intelligence/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-sport-and-exercise-science",
+      "source_html": "course_pages/MSc Sport and Exercise Science _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-sport-and-exercise-science.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-sport-and-exercise-science/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-sport-broadcast",
+      "source_html": "course_pages/MSc Sport Broadcast _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-sport-broadcast.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-sport-broadcast/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-sport-coaching",
+      "source_html": "course_pages/MSc Sport Coaching _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-sport-coaching.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-sport-coaching/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-sport-psychology",
+      "source_html": "course_pages/MSc Sport Psychology _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-sport-psychology.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-sport-psychology/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-sport-rehabilitation",
+      "source_html": "course_pages/MSc Sport Rehabilitation _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-sport-rehabilitation.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-sport-rehabilitation/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-strategic-marketing",
+      "source_html": "course_pages/MSc Strategic Marketing _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-strategic-marketing.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-strategic-marketing/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-youth-athletic-development",
+      "source_html": "course_pages/MSc Youth Athletic Development _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-msc-youth-athletic-development.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/msc-youth-athletic-development/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/pgc-circular-economy-innovation",
+      "source_html": "course_pages/PgC Circular Economy Innovation _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-pgc-circular-economy-innovation.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/pgc-circular-economy-innovation/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/pgc-counter-terrorism-risk-management",
+      "source_html": "course_pages/PgC Counter Terrorism Risk Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-pgc-counter-terrorism-risk-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/pgc-counter-terrorism-risk-management/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/pgc-sustainable-leadership",
+      "source_html": "course_pages/PgC Sustainable Leadership _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-pgc-sustainable-leadership.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/pgc-sustainable-leadership/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/pgce--pce-post-compulsory-education-and-training",
+      "source_html": "course_pages/PGCE _ PCE Post Compulsory Education and Training _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-pgce--pce-post-compulsory-education-and-training.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/pgce--pce-post-compulsory-education-and-training/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/pgce-primary",
+      "source_html": "course_pages/PGCE Primary _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-pgce-primary.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/pgce-primary/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/pgce-secondary",
+      "source_html": "course_pages/PGCE Secondary _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-pgce-secondary.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/pgce-secondary/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/pgd-forensic-psychology-practitioner-programme",
+      "source_html": "course_pages/PgD Forensic Psychology (Practitioner Programme) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-pgd-forensic-psychology-practitioner-programme.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/pgd-forensic-psychology-practitioner-programme/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/secondary-route-to-qts-pgce",
+      "source_html": "course_pages/Secondary Route to QTS PGCE _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/postgraduate-secondary-route-to-qts-pgce.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/postgraduate/secondary-route-to-qts-pgce/",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba--bsc-product-design",
+      "source_html": "course_pages/BA _ BSc Product Design _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba--bsc-product-design.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba--bsc-product-design/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-accounting",
+      "source_html": "course_pages/BA Accounting _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-accounting.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-accounting/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-accounting-and-economics",
+      "source_html": "course_pages/BA Accounting and Economics _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-accounting-and-economics.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-accounting-and-economics/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-accounting-and-finance",
+      "source_html": "course_pages/BA Accounting and Finance _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-accounting-and-finance.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-accounting-and-finance/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-advertising-and-marketing-management",
+      "source_html": "course_pages/BA Advertising and Marketing Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-advertising-and-marketing-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-advertising-and-marketing-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-animation",
+      "source_html": "course_pages/BA Animation _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-animation.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-animation/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-architecture",
+      "source_html": "course_pages/BA Architecture _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-architecture.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-architecture/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-artist-designer-maker",
+      "source_html": "course_pages/BA Artist Designer_ Maker _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-artist-designer-maker.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-artist-designer-maker/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-aviation-management",
+      "source_html": "course_pages/BA Aviation Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-aviation-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-aviation-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-brand-and-marketing-management",
+      "source_html": "course_pages/BA Brand and Marketing Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-brand-and-marketing-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-brand-and-marketing-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-business-and-management",
+      "source_html": "course_pages/BA Business and Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-business-and-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-business-and-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-business-law-and-management",
+      "source_html": "course_pages/BA Business Law and Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-business-law-and-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-business-law-and-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-ceramics",
+      "source_html": "course_pages/BA Ceramics _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-ceramics.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-ceramics/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-digital-art",
+      "source_html": "course_pages/BA Digital Art _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-digital-art.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-digital-art/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-digital-marketing-management",
+      "source_html": "course_pages/BA Digital Marketing Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-digital-marketing-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-digital-marketing-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-early-years-education-and-professional-practice-with-eyps",
+      "source_html": "course_pages/BA Early Years Education and Professional Practice with EYPS _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-early-years-education-and-professional-practice-with-eyps.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-early-years-education-and-professional-practice-with-eyps/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-economics-and-finance",
+      "source_html": "course_pages/BA Economics and Finance _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-economics-and-finance.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-economics-and-finance/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-english-and-creative-writing",
+      "source_html": "course_pages/BA English and Creative Writing _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-english-and-creative-writing.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-english-and-creative-writing/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-english-literature",
+      "source_html": "course_pages/BA English Literature _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-english-literature.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-english-literature/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-events-management",
+      "source_html": "course_pages/BA Events Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-events-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-events-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-fashion-buying-and-brand-management",
+      "source_html": "course_pages/BA Fashion Buying and Brand Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-fashion-buying-and-brand-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-fashion-buying-and-brand-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-fashion-design",
+      "source_html": "course_pages/BA Fashion Design _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-fashion-design.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-fashion-design/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-fashion-marketing-management",
+      "source_html": "course_pages/BA Fashion Marketing Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-fashion-marketing-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-fashion-marketing-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-fine-art",
+      "source_html": "course_pages/BA Fine Art _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-fine-art.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-fine-art/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-game-art",
+      "source_html": "course_pages/BA Game Art _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-game-art.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-game-art/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-global-business-management-top-up",
+      "source_html": "course_pages/BA Global Business Management (Top-up) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-global-business-management-top-up.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-global-business-management-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-graphic-design-and-communication",
+      "source_html": "course_pages/BA Graphic Design and Communication _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-graphic-design-and-communication.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-graphic-design-and-communication/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-illustration",
+      "source_html": "course_pages/BA Illustration _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-illustration.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-illustration/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-interior-architecture",
+      "source_html": "course_pages/BA Interior Architecture _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-interior-architecture.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-interior-architecture/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-interior-design",
+      "source_html": "course_pages/BA Interior Design _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-interior-design.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-interior-design/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-international-business-management-tne-only",
+      "source_html": "course_pages/BA International Business Management (TNE Only) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-international-business-management-tne-only.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-international-business-management-tne-only/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-international-hospitality-management-tne-only",
+      "source_html": "course_pages/BA International Hospitality Management (TNE Only) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-international-hospitality-management-tne-only.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-international-hospitality-management-tne-only/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-international-hotel-and-hospitality-management",
+      "source_html": "course_pages/BA International Hotel and Hospitality Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-international-hotel-and-hospitality-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-international-hotel-and-hospitality-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-international-tourism-management",
+      "source_html": "course_pages/BA International Tourism Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-international-tourism-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-international-tourism-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-law-and-criminology",
+      "source_html": "course_pages/BA Law and Criminology _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-law-and-criminology.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-law-and-criminology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-making-and-material-science",
+      "source_html": "course_pages/BA Making and Material Science _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-making-and-material-science.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-making-and-material-science/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-marketing-management",
+      "source_html": "course_pages/BA Marketing Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-marketing-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-marketing-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-media-and-communications",
+      "source_html": "course_pages/BA Media and Communications _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-media-and-communications.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-media-and-communications/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-photography",
+      "source_html": "course_pages/BA Photography _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-photography.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-photography/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-politics-and-international-relations",
+      "source_html": "course_pages/BA Politics and International Relations _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-politics-and-international-relations.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-politics-and-international-relations/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-primary-education-studies",
+      "source_html": "course_pages/BA Primary Education Studies _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-primary-education-studies.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-primary-education-studies/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-primary-education-with-qualified-teacher-status",
+      "source_html": "course_pages/BA Primary Education (with Qualified Teacher Status) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-primary-education-with-qualified-teacher-status.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-primary-education-with-qualified-teacher-status/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-professional-policing",
+      "source_html": "course_pages/BA Professional Policing _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-professional-policing.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-professional-policing/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-public-relations-and-marketing-management",
+      "source_html": "course_pages/BA Public Relations and Marketing Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-public-relations-and-marketing-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-public-relations-and-marketing-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-sales-and-marketing-management",
+      "source_html": "course_pages/BA Sales and Marketing Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-sales-and-marketing-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-sales-and-marketing-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-textile-design",
+      "source_html": "course_pages/BA Textile Design _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-textile-design.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-textile-design/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-youth-and-community-work",
+      "source_html": "course_pages/BA Youth and Community Work _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-ba-youth-and-community-work.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-youth-and-community-work/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/beng--meng-computer-science-and-engineering",
+      "source_html": "course_pages/BEng _ MEng Computer Science and Engineering _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-beng--meng-computer-science-and-engineering.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/beng--meng-computer-science-and-engineering/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/beng--meng-electrical-and-electronic-engineering",
+      "source_html": "course_pages/BEng _ MEng Electrical and Electronic Engineering _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-beng--meng-electrical-and-electronic-engineering.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/beng--meng-electrical-and-electronic-engineering/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/beng--meng-electronic-and-computer-systems-engineering",
+      "source_html": "course_pages/BEng _ MEng Electronic and Computer Systems Engineering _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-beng--meng-electronic-and-computer-systems-engineering.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/beng--meng-electronic-and-computer-systems-engineering/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/beng--meng-robotics-engineering",
+      "source_html": "course_pages/BEng _ MEng Robotics Engineering _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-beng--meng-robotics-engineering.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/beng--meng-robotics-engineering/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-applied-cyber-security-degree-apprenticeship",
+      "source_html": "course_pages/BSc Applied Cyber Security (Degree Apprenticeship) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-applied-cyber-security-degree-apprenticeship.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-applied-cyber-security-degree-apprenticeship/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-applied-data-science-degree-apprenticeship",
+      "source_html": "course_pages/BSc Applied Data Science (Degree Apprenticeship) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-applied-data-science-degree-apprenticeship.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-applied-data-science-degree-apprenticeship/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-applied-data-statistical-and-economic-analysis-degree-apprenticeship",
+      "source_html": "course_pages/BSc Applied Data, Statistical and Economic Analysis (Degree Apprenticeship) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-applied-data-statistical-and-economic-analysis-degree-apprenticeship.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-applied-data-statistical-and-economic-analysis-degree-apprenticeship/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-applied-software-engineering-degree-apprenticeship",
+      "source_html": "course_pages/BSc Applied Software Engineering (Degree Apprenticeship) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-applied-software-engineering-degree-apprenticeship.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-applied-software-engineering-degree-apprenticeship/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-architectural-design-and-technology",
+      "source_html": "course_pages/BSc Architectural Design and Technology _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-architectural-design-and-technology.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-architectural-design-and-technology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-astudiaethau-chwaraeon-ac-addysg-gorfforol",
+      "source_html": "course_pages/BSc Astudiaethau Chwaraeon ac Addysg Gorfforol _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-astudiaethau-chwaraeon-ac-addysg-gorfforol.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-astudiaethau-chwaraeon-ac-addysg-gorfforol/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-banking-and-finance",
+      "source_html": "course_pages/BSc Banking and Finance _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-banking-and-finance.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-banking-and-finance/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-biomedical-science",
+      "source_html": "course_pages/BSc Biomedical Science _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-biomedical-science.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-biomedical-science/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-biomedical-science-health-exercise-and-nutrition",
+      "source_html": "course_pages/BSc Biomedical Science (Health, Exercise and Nutrition) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-biomedical-science-health-exercise-and-nutrition.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-biomedical-science-health-exercise-and-nutrition/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-business-information-systems",
+      "source_html": "course_pages/BSc Business Information Systems _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-business-information-systems.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-business-information-systems/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-computer-and-data-science",
+      "source_html": "course_pages/BSc Computer and Data Science _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-computer-and-data-science.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-computer-and-data-science/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-computer-games-design-and-development",
+      "source_html": "course_pages/BSc Computer Games Design and Development _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-computer-games-design-and-development.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-computer-games-design-and-development/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-computer-science",
+      "source_html": "course_pages/BSc Computer Science _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-computer-science.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-computer-science/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-computer-science-and-artificial-intelligence",
+      "source_html": "course_pages/BSc Computer Science and Artificial Intelligence _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-computer-science-and-artificial-intelligence.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-computer-science-and-artificial-intelligence/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-computer-security",
+      "source_html": "course_pages/BSc Computer Security _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-computer-security.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-computer-security/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-computing-with-creative-design",
+      "source_html": "course_pages/BSc Computing with Creative Design _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-computing-with-creative-design.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-computing-with-creative-design/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-cricket-performance-management",
+      "source_html": "course_pages/BSc Cricket Performance Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-cricket-performance-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-cricket-performance-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-criminology",
+      "source_html": "course_pages/BSc Criminology _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-criminology.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-criminology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-dental-technology",
+      "source_html": "course_pages/BSc Dental Technology _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-dental-technology.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-dental-technology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-economics",
+      "source_html": "course_pages/BSc Economics _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-economics.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-economics/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-education-psychology-and-special-educational-needs",
+      "source_html": "course_pages/BSc Education, Psychology and Special Educational Needs _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-education-psychology-and-special-educational-needs.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-education-psychology-and-special-educational-needs/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-environmental-health",
+      "source_html": "course_pages/BSc Environmental Health _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-environmental-health.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-environmental-health/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-food-science-and-nutrition",
+      "source_html": "course_pages/BSc Food Science and Nutrition _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-food-science-and-nutrition.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-food-science-and-nutrition/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-football-coaching-and-performance",
+      "source_html": "course_pages/BSc Football Coaching and Performance _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-football-coaching-and-performance.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-football-coaching-and-performance/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-healthcare-science",
+      "source_html": "course_pages/BSc Healthcare Science _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-healthcare-science.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-healthcare-science/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-human-nutrition-and-dietetics",
+      "source_html": "course_pages/BSc Human Nutrition and Dietetics _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-human-nutrition-and-dietetics.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-human-nutrition-and-dietetics/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-information-technology",
+      "source_html": "course_pages/BSc Information Technology _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-information-technology.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-information-technology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-international-accounting-and-finance-top-up",
+      "source_html": "course_pages/BSc International Accounting and Finance (Top-up) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-international-accounting-and-finance-top-up.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-international-accounting-and-finance-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-international-banking-and-finance-top-up",
+      "source_html": "course_pages/BSc International Banking and Finance (Top-up) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-international-banking-and-finance-top-up.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-international-banking-and-finance-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-podiatry",
+      "source_html": "course_pages/BSc Podiatry _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-podiatry.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-podiatry/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-psychology",
+      "source_html": "course_pages/BSc Psychology _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-psychology.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-psychology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-psychology-and-criminology",
+      "source_html": "course_pages/BSc Psychology and Criminology _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-psychology-and-criminology.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-psychology-and-criminology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-social-work",
+      "source_html": "course_pages/BSc Social Work _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-social-work.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-social-work/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sociology-and-social-policy",
+      "source_html": "course_pages/BSc Sociology and Social Policy _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-sociology-and-social-policy.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sociology-and-social-policy/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-software-engineering",
+      "source_html": "course_pages/BSc Software Engineering _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-software-engineering.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-software-engineering/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-speech-and-language-therapy",
+      "source_html": "course_pages/BSc Speech and Language Therapy _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-speech-and-language-therapy.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-speech-and-language-therapy/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-and-exercise-science",
+      "source_html": "course_pages/BSc Sport and Exercise Science _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-sport-and-exercise-science.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-and-exercise-science/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-and-exercise-science-intercalated",
+      "source_html": "course_pages/BSc Sport and Exercise Science (Intercalated) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-sport-and-exercise-science-intercalated.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-and-exercise-science-intercalated/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-and-physical-education",
+      "source_html": "course_pages/BSc Sport and Physical Education _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-sport-and-physical-education.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-and-physical-education/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-and-physical-education-dance",
+      "source_html": "course_pages/BSc Sport and Physical Education (Dance) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-sport-and-physical-education-dance.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-and-physical-education-dance/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-coaching",
+      "source_html": "course_pages/BSc Sport Coaching _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-sport-coaching.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-coaching/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-conditioning-rehabilitation-and-massage",
+      "source_html": "course_pages/BSc Sport Conditioning, Rehabilitation and Massage _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-sport-conditioning-rehabilitation-and-massage.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-conditioning-rehabilitation-and-massage/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-management",
+      "source_html": "course_pages/BSc Sport Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-sport-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-management/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-media",
+      "source_html": "course_pages/BSc Sport Media _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-sport-media.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-media/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-performance-analysis",
+      "source_html": "course_pages/BSc Sport Performance Analysis _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-sport-performance-analysis.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-performance-analysis/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-top-up",
+      "source_html": "course_pages/BSc Sport (Top-up) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-bsc-sport-top-up.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/bsc-sport-top-up/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/dental-technology-higher-apprenticeship",
+      "source_html": "course_pages/Dental Technology (Higher Apprenticeship) _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-dental-technology-higher-apprenticeship.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/dental-technology-higher-apprenticeship/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/fdsc-dental-technology",
+      "source_html": "course_pages/FdSc Dental Technology _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-fdsc-dental-technology.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/fdsc-dental-technology/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/foundation-in-management",
+      "source_html": "course_pages/Foundation in Management _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/undergraduate-foundation-in-management.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/foundation-in-management/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/foundation-in-youth-and-community-work",
+      "source_html": "course_pages/Foundation in Youth and Community Work _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/undergraduate-foundation-in-youth-and-community-work.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/foundation-in-youth-and-community-work/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/foundation-leading-to-engineering-and-computer-science",
+      "source_html": "course_pages/Foundation Leading to Engineering and Computer Science _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/undergraduate-foundation-leading-to-engineering-and-computer-science.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/foundation-leading-to-engineering-and-computer-science/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/foundation-leading-to-health-sciences",
+      "source_html": "course_pages/Foundation Leading to Health Sciences _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/undergraduate-foundation-leading-to-health-sciences.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/foundation-leading-to-health-sciences/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/foundation-leading-to-social-sciences",
+      "source_html": "course_pages/Foundation Leading to Social Sciences _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/undergraduate-foundation-leading-to-social-sciences.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/foundation-leading-to-social-sciences/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/foundation-leading-to-sport",
+      "source_html": "course_pages/Foundation Leading to Sport _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/undergraduate-foundation-leading-to-sport.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/foundation-leading-to-sport/",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/hnd--bsc-health-and-social-care",
+      "source_html": "course_pages/HND _ BSc Health and Social Care _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-hnd--bsc-health-and-social-care.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/hnd--bsc-health-and-social-care/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/llb-law",
+      "source_html": "course_pages/LLB Law _ Cardiff Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/undergraduate-llb-law.md",
+      "source_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/llb-law/",
+      "study_level": "undergraduate"
+    }
+  ],
+  "uni_pages": [
+    {
+      "source_html": "uni_req/deposit.html",
+      "source_url": "0000",
+      "clean_md": "clean/uni/deposit.md",
+      "page_type": "deposit"
+    },
+    {
+      "source_html": "uni_req/english-requirements.html",
+      "source_url": "https://www.cardiffmet.ac.uk/international-students/english-language-requirements/accepted-secure-english-language-tests/",
+      "clean_md": "clean/uni/english-requirements.md",
+      "page_type": "english"
+    },
+    {
+      "source_html": "uni_req/scholarships.html",
+      "source_url": "https://www.cardiffmet.ac.uk/international-students/fees-and-finance/international-scholarships/",
+      "clean_md": "clean/uni/scholarships.md",
+      "page_type": "scholarship"
+    }
+  ]
+}

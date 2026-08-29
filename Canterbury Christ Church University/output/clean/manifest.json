@@ -1,0 +1,1146 @@
+{
+  "university": "Canterbury Christ Church University",
+  "cleaned_at": "2026-08-27",
+  "courses": [
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/accounting-and-finance",
+      "source_html": "course_pages/Accounting & Finance BSc _ CCCU_study-here_courses_accounting-and-finance.html",
+      "clean_md": "clean/courses/other/accounting-and-finance.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/accounting-and-finance",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/accounting-and-finance-with-foundation-year",
+      "source_html": "course_pages/Accounting & Finance with Foundation Year BSc _ CCCU_study-here_courses_accounting-and-finance-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/accounting-and-finance-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/accounting-and-finance-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/adult-nursing",
+      "source_html": "course_pages/Nursing (Adult) BSc _ CCCU_study-here_courses_adult-nursing.html",
+      "clean_md": "clean/courses/other/adult-nursing.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/adult-nursing",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/animal-science",
+      "source_html": "course_pages/Animal Science BSc _ CCCU_study-here_courses_animal-science.html",
+      "clean_md": "clean/courses/other/animal-science.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/animal-science",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/animal-science-with-foundation-year",
+      "source_html": "course_pages/Animal Science with Foundation Year BSc _ CCCU_study-here_courses_animal-science-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/animal-science-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/animal-science-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/applied-criminology",
+      "source_html": "course_pages/Applied Criminology BSc _ CCCU_study-here_courses_applied-criminology.html",
+      "clean_md": "clean/courses/other/applied-criminology.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/applied-criminology",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/applied-criminology-criminal-investigation-foundation-year",
+      "source_html": "course_pages/Applied Criminology with Criminal Investigation with Foundation Year BSc _ CCCU_study-here_courses_applied-criminology-criminal-investigation-foundation-year.html",
+      "clean_md": "clean/courses/foundation/applied-criminology-criminal-investigation-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/applied-criminology-criminal-investigation-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/applied-criminology-with-criminal-investigation",
+      "source_html": "course_pages/Applied Criminology with Criminal Investigation BSc _ CCCU_study-here_courses_applied-criminology-with-criminal-investigation.html",
+      "clean_md": "clean/courses/other/applied-criminology-with-criminal-investigation.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/applied-criminology-with-criminal-investigation",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/applied-criminology-with-forensic-investigation",
+      "source_html": "course_pages/Applied Criminology with Forensic Investigation BSc _ CCCU_study-here_courses_applied-criminology-with-forensic-investigation.html",
+      "clean_md": "clean/courses/other/applied-criminology-with-forensic-investigation.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/applied-criminology-with-forensic-investigation",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/applied-criminology-with-forensic-investigation-with-foundation-year",
+      "source_html": "course_pages/Applied Criminology with Forensic Investigation with Foundation Year BSc _ CCCU_study-here_courses_applied-criminology-with-forensic-investigation-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/applied-criminology-with-forensic-investigation-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/applied-criminology-with-forensic-investigation-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/applied-criminology-with-foundation-year",
+      "source_html": "course_pages/Applied Criminology with Foundation Year BSc _ CCCU_study-here_courses_applied-criminology-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/applied-criminology-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/applied-criminology-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/archaeology",
+      "source_html": "course_pages/Archaeology BA _ CCCU_study-here_courses_archaeology.html",
+      "clean_md": "clean/courses/other/archaeology.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/archaeology",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/archaeology-with-foundation-year",
+      "source_html": "course_pages/Archaeology with Foundation Year BA _ CCCU_study-here_courses_archaeology-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/archaeology-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/archaeology-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/architectural-engineering",
+      "source_html": "course_pages/Architectural Engineering BEng _ CCCU_study-here_courses_architectural-engineering.html",
+      "clean_md": "clean/courses/other/architectural-engineering.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/architectural-engineering",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/architecture-engineering-with-foundation-year",
+      "source_html": "course_pages/Architectural Engineering with Foundation Year BEng _ CCCU_study-here_courses_architecture-engineering-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/architecture-engineering-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/architecture-engineering-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/biochemistry",
+      "source_html": "course_pages/Biochemistry BSc _ CCCU_study-here_courses_biochemistry.html",
+      "clean_md": "clean/courses/other/biochemistry.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/biochemistry",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/biochemistry-with-foundation-year",
+      "source_html": "course_pages/Biochemistry with Foundation Year BSc _ CCCU_study-here_courses_biochemistry-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/biochemistry-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/biochemistry-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/biomedical-engineering-beng",
+      "source_html": "course_pages/Biomedical Engineering BEng _ CCCU_study-here_courses_biomedical-engineering-beng.html",
+      "clean_md": "clean/courses/undergraduate/biomedical-engineering-beng.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/biomedical-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/biomedical-engineering-with-foundation-year",
+      "source_html": "course_pages/Biomedical Engineering with Foundation Year BEng _ CCCU_study-here_courses_biomedical-engineering-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/biomedical-engineering-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/biomedical-engineering-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/biomedical-science",
+      "source_html": "course_pages/Biomedical Science BSc _ CCCU_study-here_courses_biomedical-science.html",
+      "clean_md": "clean/courses/other/biomedical-science.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/biomedical-science",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/biomedical-science-with-foundation-year",
+      "source_html": "course_pages/Biomedical Science with Foundation Year BSc _ CCCU_study-here_courses_biomedical-science-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/biomedical-science-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/biomedical-science-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/building-services-engineering",
+      "source_html": "course_pages/Building Services Engineering BEng _ CCCU_study-here_courses_building-services-engineering.html",
+      "clean_md": "clean/courses/other/building-services-engineering.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/building-services-engineering",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/building-services-engineering-with-foundation-year",
+      "source_html": "course_pages/Building Services Engineering with Foundation Year BEng _ CCCU_study-here_courses_building-services-engineering-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/building-services-engineering-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/building-services-engineering-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/business-economics",
+      "source_html": "course_pages/Business Economics BSc _ CCCU_study-here_courses_business-economics.html",
+      "clean_md": "clean/courses/other/business-economics.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/business-economics",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/business-economics-foundation-year",
+      "source_html": "course_pages/Business Economics with Foundation Year BSc _ CCCU_study-here_courses_business-economics-foundation-year.html",
+      "clean_md": "clean/courses/foundation/business-economics-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/business-economics-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/business-information-technology",
+      "source_html": "course_pages/Business Information Technology BSc _ CCCU_study-here_courses_business-information-technology.html",
+      "clean_md": "clean/courses/other/business-information-technology.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/business-information-technology",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/business-information-technology-with-foundation-year",
+      "source_html": "course_pages/Business Information Technology with Foundation Year BSc _ CCCU_study-here_courses_business-information-technology-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/business-information-technology-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/business-information-technology-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/business-management",
+      "source_html": "course_pages/Business Management BSc _ CCCU_study-here_courses_business-management.html",
+      "clean_md": "clean/courses/other/business-management.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/business-management",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/business-management-and-leadership-foundation-year",
+      "source_html": "course_pages/Business Management & Leadership with Foundation Year BSc _ CCCU_study-here_courses_business-management-and-leadership-foundation-year.html",
+      "clean_md": "clean/courses/foundation/business-management-and-leadership-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/business-management-and-leadership-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/business-management-with-foundation-year",
+      "source_html": "course_pages/Business Management with Foundation Year BSc _ CCCU_study-here_courses_business-management-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/business-management-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/business-management-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/chemical-engineering-beng",
+      "source_html": "course_pages/Chemical Engineering BEng _ CCCU_study-here_courses_chemical-engineering-beng.html",
+      "clean_md": "clean/courses/undergraduate/chemical-engineering-beng.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/chemical-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/chemical-engineering-with-foundation-year",
+      "source_html": "course_pages/Chemical Engineering with Foundation Year BEng _ CCCU_study-here_courses_chemical-engineering-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/chemical-engineering-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/chemical-engineering-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/child-nursing",
+      "source_html": "course_pages/Nursing (Child) BSc _ CCCU_study-here_courses_child-nursing.html",
+      "clean_md": "clean/courses/other/child-nursing.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/child-nursing",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/childhood-youth-communities-ba-hons-top-up",
+      "source_html": "course_pages/Childhood, Youth & Communities top-up BA _ CCCU_study-here_courses_childhood-youth-communities-ba-hons-top-up.html",
+      "clean_md": "clean/courses/undergraduate/childhood-youth-communities-ba-hons-top-up.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/childhood-youth-communities-ba-hons-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/childhood-youth-communities-foundation-degree",
+      "source_html": "course_pages/Childhood, Youth & Communities Fd _ CCCU_study-here_courses_childhood-youth-communities-foundation-degree.html",
+      "clean_md": "clean/courses/foundation/childhood-youth-communities-foundation-degree.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/childhood-youth-communities-foundation-degree",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/childhood-youth-special-educational-needs-foundation-degree",
+      "source_html": "course_pages/Childhood, Youth & Special Educational Needs Fd _ CCCU_study-here_courses_childhood-youth-special-educational-needs-foundation-degree.html",
+      "clean_md": "clean/courses/foundation/childhood-youth-special-educational-needs-foundation-degree.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/childhood-youth-special-educational-needs-foundation-degree",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/childhood-youth-special-educational-needs-top-up",
+      "source_html": "course_pages/Childhood, Youth & Special Educational Needs top-up BA _ CCCU_study-here_courses_childhood-youth-special-educational-needs-top-up.html",
+      "clean_md": "clean/courses/other/childhood-youth-special-educational-needs-top-up.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/childhood-youth-special-educational-needs-top-up",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/computer-science",
+      "source_html": "course_pages/Computer Science BSc _ CCCU_study-here_courses_computer-science.html",
+      "clean_md": "clean/courses/other/computer-science.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/computer-science",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/computer-science-and-artificial-intelligence",
+      "source_html": "course_pages/Computer Science & Artificial Intelligence BSc _ CCCU_study-here_courses_computer-science-and-artificial-intelligence.html",
+      "clean_md": "clean/courses/other/computer-science-and-artificial-intelligence.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/computer-science-and-artificial-intelligence",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/computer-science-artificial-intelligence-with-foundation-year",
+      "source_html": "course_pages/Computer Science & Artificial Intelligence with Foundation Year BSc _ CCCU_study-here_courses_computer-science-artificial-intelligence-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/computer-science-artificial-intelligence-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/computer-science-artificial-intelligence-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/computer-science-with-foundation-year",
+      "source_html": "course_pages/Computer Science with Foundation Year BSc _ CCCU_study-here_courses_computer-science-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/computer-science-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/computer-science-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/computer-security-and-computer-forensics",
+      "source_html": "course_pages/Cyber Security & Computer Forensics BSc _ CCCU_study-here_courses_computer-security-and-computer-forensics.html",
+      "clean_md": "clean/courses/other/computer-security-and-computer-forensics.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/computer-security-and-computer-forensics",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/countering-terrorism-and-extremism",
+      "source_html": "course_pages/Countering Terrorism & Extremism BSc _ CCCU_study-here_courses_countering-terrorism-and-extremism.html",
+      "clean_md": "clean/courses/other/countering-terrorism-and-extremism.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/countering-terrorism-and-extremism",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/countering-terrorism-and-extremism-with-foundation-year",
+      "source_html": "course_pages/Countering Terrorism & Extremism with Foundation Year BSc _ CCCU_study-here_courses_countering-terrorism-and-extremism-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/countering-terrorism-and-extremism-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/countering-terrorism-and-extremism-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/creative-writing",
+      "source_html": "course_pages/Creative Writing BA _ CCCU_study-here_courses_creative-writing.html",
+      "clean_md": "clean/courses/other/creative-writing.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/creative-writing",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/creative-writing-with-foundation-year",
+      "source_html": "course_pages/Creative Writing with Foundation Year BA _ CCCU_study-here_courses_creative-writing-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/creative-writing-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/creative-writing-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/criminal-investigation",
+      "source_html": "course_pages/Criminal Investigation BSc _ CCCU_study-here_courses_criminal-investigation.html",
+      "clean_md": "clean/courses/other/criminal-investigation.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/criminal-investigation",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/criminal-investigation-with-foundation-year",
+      "source_html": "course_pages/Criminal Investigation with Foundation Year BSc _ CCCU_study-here_courses_criminal-investigation-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/criminal-investigation-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/criminal-investigation-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/criminology-and-psychology-with-foundation-year",
+      "source_html": "course_pages/Criminology and Psychology with Foundation Year BSc _ CCCU_study-here_courses_criminology-and-psychology-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/criminology-and-psychology-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/criminology-and-psychology-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/criminology-psychology",
+      "source_html": "course_pages/Criminology and Psychology BSc _ CCCU_study-here_courses_criminology-psychology.html",
+      "clean_md": "clean/courses/other/criminology-psychology.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/criminology-psychology",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/cyber-security-and-computer-forensics-with-foundation-year",
+      "source_html": "course_pages/Cyber Security & Computer Forensics with Foundation Year BSc _ CCCU_study-here_courses_cyber-security-and-computer-forensics-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/cyber-security-and-computer-forensics-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/cyber-security-and-computer-forensics-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/dental-hygiene-dental-therapy",
+      "source_html": "course_pages/Dental Hygiene & Dental Therapy BSc _ CCCU_study-here_courses_dental-hygiene-dental-therapy.html",
+      "clean_md": "clean/courses/other/dental-hygiene-dental-therapy.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/dental-hygiene-dental-therapy",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/diagnostic-radiography",
+      "source_html": "course_pages/Diagnostic Radiography BSc _ CCCU_study-here_courses_diagnostic-radiography.html",
+      "clean_md": "clean/courses/other/diagnostic-radiography.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/diagnostic-radiography",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/diagnostic-radiography-foundation-year",
+      "source_html": "course_pages/Diagnostic Radiography with Foundation Year BSc _ CCCU_study-here_courses_diagnostic-radiography-foundation-year.html",
+      "clean_md": "clean/courses/foundation/diagnostic-radiography-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/diagnostic-radiography-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/early-childhood-studies",
+      "source_html": "course_pages/Early Childhood Studies BA _ CCCU_study-here_courses_early-childhood-studies.html",
+      "clean_md": "clean/courses/other/early-childhood-studies.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/early-childhood-studies",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/early-childhood-studies-with-foundation-year",
+      "source_html": "course_pages/Early Childhood Studies with Foundation Year BA _ CCCU_study-here_courses_early-childhood-studies-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/early-childhood-studies-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/early-childhood-studies-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/education-society-culture",
+      "source_html": "course_pages/Education, Society and Culture BA _ CCCU_study-here_courses_education-society-culture.html",
+      "clean_md": "clean/courses/other/education-society-culture.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/education-society-culture",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/education-studies",
+      "source_html": "course_pages/Education Studies BA _ CCCU_study-here_courses_education-studies.html",
+      "clean_md": "clean/courses/other/education-studies.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/education-studies",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/education-studies-with-foundation-year",
+      "source_html": "course_pages/Education Studies with Foundation Year BA _ CCCU_study-here_courses_education-studies-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/education-studies-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/education-studies-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/education-studies-with-foundation-year-copy",
+      "source_html": "course_pages/404 - Canterbury Christ Church University.html",
+      "clean_md": "clean/courses/foundation/education-studies-with-foundation-year-copy.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/education-studies-with-foundation-year-copy",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/english-language-cultural-studies",
+      "source_html": "course_pages/English Language & Cultural Studies CertHE _ CCCU_study-here_courses_english-language-cultural-studies.html",
+      "clean_md": "clean/courses/other/english-language-cultural-studies.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/english-language-cultural-studies",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/events-management",
+      "source_html": "course_pages/Events Management BA _ CCCU_study-here_courses_events-management.html",
+      "clean_md": "clean/courses/other/events-management.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/events-management",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/events-management-foundation-year",
+      "source_html": "course_pages/Events Management with Foundation Year BA _ CCCU_study-here_courses_events-management-foundation-year.html",
+      "clean_md": "clean/courses/foundation/events-management-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/events-management-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/film-production",
+      "source_html": "course_pages/Film Production BA _ CCCU_study-here_courses_film-production.html",
+      "clean_md": "clean/courses/other/film-production.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/film-production",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/film-production-with-foundation-year",
+      "source_html": "course_pages/Film Production with Foundation Year BA _ CCCU_study-here_courses_film-production-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/film-production-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/film-production-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/finance-and-accounting-foundation-year",
+      "source_html": "course_pages/Finance & Accounting with Foundation Year BSc _ CCCU_study-here_courses_finance-and-accounting-foundation-year.html",
+      "clean_md": "clean/courses/foundation/finance-and-accounting-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/finance-and-accounting-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/finance-and-investment",
+      "source_html": "course_pages/Finance & Investment BSc _ CCCU_study-here_courses_finance-and-investment.html",
+      "clean_md": "clean/courses/other/finance-and-investment.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/finance-and-investment",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/finance-and-investment-with-foundation-year",
+      "source_html": "course_pages/Finance & Investment with Foundation Year BSc _ CCCU_study-here_courses_finance-and-investment-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/finance-and-investment-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/finance-and-investment-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/forensic-investigation",
+      "source_html": "course_pages/Forensic Investigation BSc _ CCCU_study-here_courses_forensic-investigation.html",
+      "clean_md": "clean/courses/other/forensic-investigation.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/forensic-investigation",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/forensic-investigation-criminal-investigation",
+      "source_html": "course_pages/Forensic Investigation with Criminal Investigation BSc _ CCCU_study-here_courses_forensic-investigation-criminal-investigation.html",
+      "clean_md": "clean/courses/other/forensic-investigation-criminal-investigation.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/forensic-investigation-criminal-investigation",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/forensic-investigation-with-criminal-investigation-foundation-year",
+      "source_html": "course_pages/Forensic Investigation with Criminal Investigation with Foundation Year BSc _ CCCU_study-here_courses_forensic-investigation-with-criminal-investigation-foundation-year.html",
+      "clean_md": "clean/courses/foundation/forensic-investigation-with-criminal-investigation-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/forensic-investigation-with-criminal-investigation-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/forensic-investigation-with-foundation-year",
+      "source_html": "course_pages/Forensic Investigation with Foundation Year BSc _ CCCU_study-here_courses_forensic-investigation-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/forensic-investigation-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/forensic-investigation-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/further-education-and-skills",
+      "source_html": "course_pages/Further Education and Skills Diploma _ CCCU_study-here_courses_further-education-and-skills.html",
+      "clean_md": "clean/courses/other/further-education-and-skills.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/further-education-and-skills",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/games-design",
+      "source_html": "course_pages/Games Design BA _ CCCU_study-here_courses_games-design.html",
+      "clean_md": "clean/courses/other/games-design.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/games-design",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/games-design-with-foundation-year",
+      "source_html": "course_pages/Games Design with Foundation Year BA _ CCCU_study-here_courses_games-design-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/games-design-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/games-design-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/general-engineering-beng",
+      "source_html": "course_pages/General Engineering BEng _ CCCU_study-here_courses_general-engineering-beng.html",
+      "clean_md": "clean/courses/undergraduate/general-engineering-beng.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/general-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/general-engineering-with-foundation-year",
+      "source_html": "course_pages/General Engineering with Foundation Year BEng _ CCCU_study-here_courses_general-engineering-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/general-engineering-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/general-engineering-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/general-english-course",
+      "source_html": "course_pages/General English Course null _ CCCU_study-here_courses_general-english-course.html",
+      "clean_md": "clean/courses/other/general-english-course.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/general-english-course",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/geography",
+      "source_html": "course_pages/Geography BSc _ CCCU_study-here_courses_geography.html",
+      "clean_md": "clean/courses/other/geography.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/geography",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/geography-with-foundation-year",
+      "source_html": "course_pages/Geography with Foundation Year BSc _ CCCU_study-here_courses_geography-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/geography-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/geography-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/graphic-design",
+      "source_html": "course_pages/Graphic Design BA _ CCCU_study-here_courses_graphic-design.html",
+      "clean_md": "clean/courses/other/graphic-design.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/graphic-design",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/graphic-design-with-foundation-year",
+      "source_html": "course_pages/Graphic Design with Foundation Year BA _ CCCU_study-here_courses_graphic-design-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/graphic-design-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/graphic-design-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/history",
+      "source_html": "course_pages/History BA _ CCCU_study-here_courses_history.html",
+      "clean_md": "clean/courses/other/history.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/history",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/history-with-foundation-year",
+      "source_html": "course_pages/History with Foundation Year BA _ CCCU_study-here_courses_history-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/history-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/history-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/human-biology",
+      "source_html": "course_pages/Human Biology BSc _ CCCU_study-here_courses_human-biology.html",
+      "clean_md": "clean/courses/other/human-biology.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/human-biology",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/human-biology-with-foundation-year",
+      "source_html": "course_pages/Human Biology with Foundation Year BSc _ CCCU_study-here_courses_human-biology-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/human-biology-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/human-biology-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/human-resource-management",
+      "source_html": "course_pages/Human Resource Management BSc _ CCCU_study-here_courses_human-resource-management.html",
+      "clean_md": "clean/courses/other/human-resource-management.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/human-resource-management",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/human-resource-management-with-foundation-year",
+      "source_html": "course_pages/Human Resource Management with Foundation Year BSc _ CCCU_study-here_courses_human-resource-management-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/human-resource-management-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/human-resource-management-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/international-foundation-year",
+      "source_html": "course_pages/International Foundation Programme null _ CCCU_study-here_courses_international-foundation-year.html",
+      "clean_md": "clean/courses/foundation/international-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/international-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/international-tourism-and-hospitality-management",
+      "source_html": "course_pages/International Tourism & Hospitality Management BSc _ CCCU_study-here_courses_international-tourism-and-hospitality-management.html",
+      "clean_md": "clean/courses/other/international-tourism-and-hospitality-management.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/international-tourism-and-hospitality-management",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/international-tourism-and-hospitality-management-foundation-year",
+      "source_html": "course_pages/International Tourism & Hospitality Management with Foundation Year BSc _ CCCU_study-here_courses_international-tourism-and-hospitality-management-foundation-year.html",
+      "clean_md": "clean/courses/foundation/international-tourism-and-hospitality-management-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/international-tourism-and-hospitality-management-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/law",
+      "source_html": "course_pages/Law LL.B. _ CCCU_study-here_courses_law.html",
+      "clean_md": "clean/courses/other/law.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/law",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/law-with-criminology",
+      "source_html": "course_pages/Law with Criminology LL.B. _ CCCU_study-here_courses_law-with-criminology.html",
+      "clean_md": "clean/courses/other/law-with-criminology.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/law-with-criminology",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/law-with-criminology-foundation-year",
+      "source_html": "course_pages/Law with Criminology with Foundation Year LL.B. _ CCCU_study-here_courses_law-with-criminology-foundation-year.html",
+      "clean_md": "clean/courses/foundation/law-with-criminology-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/law-with-criminology-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/law-with-foundation-year",
+      "source_html": "course_pages/Law with Foundation Year LL.B. _ CCCU_study-here_courses_law-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/law-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/law-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/marketing",
+      "source_html": "course_pages/Marketing BA _ CCCU_study-here_courses_marketing.html",
+      "clean_md": "clean/courses/other/marketing.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/marketing",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/marketing-with-foundation-year",
+      "source_html": "course_pages/Marketing with Foundation Year BA _ CCCU_study-here_courses_marketing-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/marketing-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/marketing-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/mechanical-engineering",
+      "source_html": "course_pages/Mechanical Engineering BEng _ CCCU_study-here_courses_mechanical-engineering.html",
+      "clean_md": "clean/courses/other/mechanical-engineering.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/mechanical-engineering",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/mechanical-engineering-with-foundation-year",
+      "source_html": "course_pages/Mechanical Engineering with Foundation Year BEng _ CCCU_study-here_courses_mechanical-engineering-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/mechanical-engineering-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/mechanical-engineering-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/media-production",
+      "source_html": "course_pages/Media Production BA _ CCCU_study-here_courses_media-production.html",
+      "clean_md": "clean/courses/other/media-production.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/media-production",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/media-production-foundation-year",
+      "source_html": "course_pages/Media Production with Foundation Year BA _ CCCU_study-here_courses_media-production-foundation-year.html",
+      "clean_md": "clean/courses/foundation/media-production-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/media-production-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/medicine",
+      "source_html": "course_pages/Medicine BM BS _ CCCU_study-here_courses_medicine.html",
+      "clean_md": "clean/courses/other/medicine.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/medicine",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/mental-health-nursing",
+      "source_html": "course_pages/Nursing (Mental Health) BSc _ CCCU_study-here_courses_mental-health-nursing.html",
+      "clean_md": "clean/courses/other/mental-health-nursing.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/mental-health-nursing",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/midwifery",
+      "source_html": "course_pages/Midwifery BSc _ CCCU_study-here_courses_midwifery.html",
+      "clean_md": "clean/courses/other/midwifery.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/midwifery",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/music-production",
+      "source_html": "course_pages/Music Production BA _ CCCU_study-here_courses_music-production.html",
+      "clean_md": "clean/courses/other/music-production.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/music-production",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/music-production-foundation-year",
+      "source_html": "course_pages/Music Production with Foundation Year BA _ CCCU_study-here_courses_music-production-foundation-year.html",
+      "clean_md": "clean/courses/foundation/music-production-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/music-production-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/nursing-adult-foundation-year",
+      "source_html": "course_pages/Nursing (Adult) with Foundation Year BSc _ CCCU_study-here_courses_nursing-adult-foundation-year.html",
+      "clean_md": "clean/courses/foundation/nursing-adult-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/nursing-adult-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/nursing-child-foundation-year",
+      "source_html": "course_pages/Nursing (Child) with Foundation Year BSc _ CCCU_study-here_courses_nursing-child-foundation-year.html",
+      "clean_md": "clean/courses/foundation/nursing-child-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/nursing-child-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/nursing-mental-health-foundation-year",
+      "source_html": "course_pages/Nursing (Mental Health) with Foundation Year BSc _ CCCU_study-here_courses_nursing-mental-health-foundation-year.html",
+      "clean_md": "clean/courses/foundation/nursing-mental-health-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/nursing-mental-health-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/occupational-therapy",
+      "source_html": "course_pages/Occupational Therapy BSc _ CCCU_study-here_courses_occupational-therapy.html",
+      "clean_md": "clean/courses/other/occupational-therapy.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/occupational-therapy",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/occupational-therapy-foundation-year",
+      "source_html": "course_pages/Occupational Therapy with Foundation Year BSc _ CCCU_study-here_courses_occupational-therapy-foundation-year.html",
+      "clean_md": "clean/courses/foundation/occupational-therapy-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/occupational-therapy-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/operating-department-practice",
+      "source_html": "course_pages/Operating Department Practice BSc _ CCCU_study-here_courses_operating-department-practice.html",
+      "clean_md": "clean/courses/other/operating-department-practice.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/operating-department-practice",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/operating-department-practice-foundation-year",
+      "source_html": "course_pages/Operating Department Practice with Foundation Year BSc _ CCCU_study-here_courses_operating-department-practice-foundation-year.html",
+      "clean_md": "clean/courses/foundation/operating-department-practice-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/operating-department-practice-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/paramedic-science",
+      "source_html": "course_pages/Paramedic Science BSc _ CCCU_study-here_courses_paramedic-science.html",
+      "clean_md": "clean/courses/other/paramedic-science.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/paramedic-science",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/paramedic-science-foundation-year",
+      "source_html": "course_pages/Paramedic Science with Foundation Year BSc _ CCCU_study-here_courses_paramedic-science-foundation-year.html",
+      "clean_md": "clean/courses/foundation/paramedic-science-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/paramedic-science-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/photography",
+      "source_html": "course_pages/Photography BA _ CCCU_study-here_courses_photography.html",
+      "clean_md": "clean/courses/other/photography.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/photography",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/photography-with-foundation-year",
+      "source_html": "course_pages/Photography with Foundation Year BA _ CCCU_study-here_courses_photography-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/photography-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/photography-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/physical-education-and-physical-activity",
+      "source_html": "course_pages/Physical Education, Physical Activity and Sport (top up) BA _ CCCU_study-here_courses_physical-education-and-physical-activity.html",
+      "clean_md": "clean/courses/other/physical-education-and-physical-activity.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/physical-education-and-physical-activity",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/physical-education-and-sport-exercise-science",
+      "source_html": "course_pages/Physical Education and Sport & Exercise Science BSc _ CCCU_study-here_courses_physical-education-and-sport-exercise-science.html",
+      "clean_md": "clean/courses/other/physical-education-and-sport-exercise-science.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/physical-education-and-sport-exercise-science",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/physical-education-and-sport-exercise-science-with-foundation-year",
+      "source_html": "course_pages/Physical Education and Sport & Exercise Science with Foundation Year BSc _ CCCU_study-here_courses_physical-education-and-sport-exercise-science-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/physical-education-and-sport-exercise-science-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/physical-education-and-sport-exercise-science-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/physiotherapy",
+      "source_html": "course_pages/Physiotherapy BSc _ CCCU_study-here_courses_physiotherapy.html",
+      "clean_md": "clean/courses/other/physiotherapy.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/physiotherapy",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/physiotherapy-with-foundation-year",
+      "source_html": "course_pages/Physiotherapy with Foundation Year BSc _ CCCU_study-here_courses_physiotherapy-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/physiotherapy-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/physiotherapy-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/politics-and-international-relations",
+      "source_html": "course_pages/Politics & International Relations BSc _ CCCU_study-here_courses_politics-and-international-relations.html",
+      "clean_md": "clean/courses/other/politics-and-international-relations.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/politics-and-international-relations",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/popular-music",
+      "source_html": "course_pages/Popular Music BA _ CCCU_study-here_courses_popular-music.html",
+      "clean_md": "clean/courses/other/popular-music.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/popular-music",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/popular-music-foundation-year",
+      "source_html": "course_pages/Popular Music with Foundation Year BA _ CCCU_study-here_courses_popular-music-foundation-year.html",
+      "clean_md": "clean/courses/foundation/popular-music-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/popular-music-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/postgraduate",
+      "source_html": "course_pages/Search _ CCCU_study-here_courses_postgraduate.html",
+      "clean_md": "clean/courses/other/postgraduate.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/postgraduate",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/pre-sessional-course-in-academic-english",
+      "source_html": "course_pages/Pre-sessional course in Academic English Skills null _ CCCU_study-here_courses_pre-sessional-course-in-academic-english.html",
+      "clean_md": "clean/courses/other/pre-sessional-course-in-academic-english.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/pre-sessional-course-in-academic-english",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/primary-education",
+      "source_html": "course_pages/Primary Education (QTS) BA _ CCCU_study-here_courses_primary-education.html",
+      "clean_md": "clean/courses/other/primary-education.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/primary-education",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/product-design-engineering-beng",
+      "source_html": "course_pages/Product Design Engineering BEng _ CCCU_study-here_courses_product-design-engineering-beng.html",
+      "clean_md": "clean/courses/undergraduate/product-design-engineering-beng.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/product-design-engineering-beng",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/product-design-engineering-with-foundation-year",
+      "source_html": "course_pages/Product Design Engineering with Foundation Year BEng _ CCCU_study-here_courses_product-design-engineering-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/product-design-engineering-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/product-design-engineering-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/professional-policing",
+      "source_html": "course_pages/Professional Policing BSc _ CCCU_study-here_courses_professional-policing.html",
+      "clean_md": "clean/courses/other/professional-policing.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/professional-policing",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/professional-policing-with-foundation-year",
+      "source_html": "course_pages/Professional Policing with Foundation Year BSc _ CCCU_study-here_courses_professional-policing-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/professional-policing-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/professional-policing-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/psychology",
+      "source_html": "course_pages/Psychology BSc _ CCCU_study-here_courses_psychology.html",
+      "clean_md": "clean/courses/other/psychology.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/psychology",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/psychology-clinical-forensic-studies",
+      "source_html": "course_pages/Psychology (Clinical & Forensic Studies) BSc _ CCCU_study-here_courses_psychology-clinical-forensic-studies.html",
+      "clean_md": "clean/courses/other/psychology-clinical-forensic-studies.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/psychology-clinical-forensic-studies",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/psychology-clinical-forensic-studies-with-foundation-year",
+      "source_html": "course_pages/Psychology (Clinical & Forensic Studies) with Foundation Year BSc _ CCCU_study-here_courses_psychology-clinical-forensic-studies-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/psychology-clinical-forensic-studies-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/psychology-clinical-forensic-studies-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/psychology-sport-exercise-studies",
+      "source_html": "course_pages/Psychology (Sport & Exercise Studies) BSc _ CCCU_study-here_courses_psychology-sport-exercise-studies.html",
+      "clean_md": "clean/courses/other/psychology-sport-exercise-studies.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/psychology-sport-exercise-studies",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/psychology-sport-exercise-with-foundation-year-studies",
+      "source_html": "course_pages/Psychology (Sport & Exercise Studies) with Foundation Year BSc _ CCCU_study-here_courses_psychology-sport-exercise-with-foundation-year-studies.html",
+      "clean_md": "clean/courses/foundation/psychology-sport-exercise-with-foundation-year-studies.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/psychology-sport-exercise-with-foundation-year-studies",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/psychology-with-education-studies",
+      "source_html": "course_pages/Psychology with Education Studies BSc _ CCCU_study-here_courses_psychology-with-education-studies.html",
+      "clean_md": "clean/courses/other/psychology-with-education-studies.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/psychology-with-education-studies",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/psychology-with-education-studies-with-foundation-year",
+      "source_html": "course_pages/Psychology with Education Studies with Foundation Year BSc _ CCCU_study-here_courses_psychology-with-education-studies-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/psychology-with-education-studies-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/psychology-with-education-studies-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/psychology-with-foundation-year",
+      "source_html": "course_pages/Psychology with Foundation Year BSc _ CCCU_study-here_courses_psychology-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/psychology-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/psychology-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/public-health",
+      "source_html": "course_pages/Public Health BSc _ CCCU_study-here_courses_public-health.html",
+      "clean_md": "clean/courses/other/public-health.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/public-health",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/public-health-with-foundation-year",
+      "source_html": "course_pages/Public Health with Foundation Year BSc _ CCCU_study-here_courses_public-health-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/public-health-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/public-health-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/social-work",
+      "source_html": "course_pages/Social Work BA _ CCCU_study-here_courses_social-work.html",
+      "clean_md": "clean/courses/other/social-work.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/social-work",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/social-work-foundation-year",
+      "source_html": "course_pages/Social Work with Foundation Year BA _ CCCU_study-here_courses_social-work-foundation-year.html",
+      "clean_md": "clean/courses/foundation/social-work-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/social-work-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/software-engineering",
+      "source_html": "course_pages/Software Engineering BEng _ CCCU_study-here_courses_software-engineering.html",
+      "clean_md": "clean/courses/other/software-engineering.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/software-engineering",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/software-engineering-with-foundation-year",
+      "source_html": "course_pages/Software Engineering with Foundation Year BEng _ CCCU_study-here_courses_software-engineering-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/software-engineering-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/software-engineering-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/sport-and-exercise-science",
+      "source_html": "course_pages/Sport and Exercise Science BSc _ CCCU_study-here_courses_sport-and-exercise-science.html",
+      "clean_md": "clean/courses/other/sport-and-exercise-science.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/sport-and-exercise-science",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/sport-and-exercise-science-with-foundation-year",
+      "source_html": "course_pages/Sport & Exercise Science with Foundation Year BSc _ CCCU_study-here_courses_sport-and-exercise-science-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/sport-and-exercise-science-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/sport-and-exercise-science-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/sport-coaching-and-development",
+      "source_html": "course_pages/Sport Coaching and Development BSc _ CCCU_study-here_courses_sport-coaching-and-development.html",
+      "clean_md": "clean/courses/other/sport-coaching-and-development.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/sport-coaching-and-development",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/sport-coaching-and-development-with-foundation-year",
+      "source_html": "course_pages/Sport Coaching and Development with Foundation Year BSc _ CCCU_study-here_courses_sport-coaching-and-development-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/sport-coaching-and-development-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/sport-coaching-and-development-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/sport-management",
+      "source_html": "course_pages/Sport Management BSc _ CCCU_study-here_courses_sport-management.html",
+      "clean_md": "clean/courses/other/sport-management.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/sport-management",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/sport-management-foundation-year",
+      "source_html": "course_pages/Sport Management with Foundation Year BSc _ CCCU_study-here_courses_sport-management-foundation-year.html",
+      "clean_md": "clean/courses/foundation/sport-management-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/sport-management-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/sports-therapy-and-rehabilitation",
+      "source_html": "course_pages/Sports Therapy & Rehabilitation BSc _ CCCU_study-here_courses_sports-therapy-and-rehabilitation.html",
+      "clean_md": "clean/courses/other/sports-therapy-and-rehabilitation.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/sports-therapy-and-rehabilitation",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/sports-therapy-and-rehabilitation-with-foundation-year",
+      "source_html": "course_pages/Sports Therapy and Rehabilitation with Foundation Year BSc _ CCCU_study-here_courses_sports-therapy-and-rehabilitation-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/sports-therapy-and-rehabilitation-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/sports-therapy-and-rehabilitation-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/theatre-and-performance",
+      "source_html": "course_pages/Theatre and Performance BA _ CCCU_study-here_courses_theatre-and-performance.html",
+      "clean_md": "clean/courses/other/theatre-and-performance.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/theatre-and-performance",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/theatre-and-performance-foundation-year",
+      "source_html": "course_pages/Theatre and Performance with Foundation Year BA _ CCCU_study-here_courses_theatre-and-performance-foundation-year.html",
+      "clean_md": "clean/courses/foundation/theatre-and-performance-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/theatre-and-performance-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/theology-philosophy-and-religion",
+      "source_html": "course_pages/Theology, Philosophy & Religion BA _ CCCU_study-here_courses_theology-philosophy-and-religion.html",
+      "clean_md": "clean/courses/other/theology-philosophy-and-religion.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/theology-philosophy-and-religion",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/theology-philosophy-and-religion-with-foundation-year",
+      "source_html": "course_pages/Theology, Philosophy & Religion with Foundation Year BA _ CCCU_study-here_courses_theology-philosophy-and-religion-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/theology-philosophy-and-religion-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/theology-philosophy-and-religion-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/wildlife-ecology-conservation-science",
+      "source_html": "course_pages/Wildlife Ecology & Conservation Science BSc _ CCCU_study-here_courses_wildlife-ecology-conservation-science.html",
+      "clean_md": "clean/courses/other/wildlife-ecology-conservation-science.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/wildlife-ecology-conservation-science",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/wildlife-ecology-conservation-science-with-foundation-year",
+      "source_html": "course_pages/Wildlife Ecology and Conservation Science with Foundation Year BSc _ CCCU_study-here_courses_wildlife-ecology-conservation-science-with-foundation-year.html",
+      "clean_md": "clean/courses/foundation/wildlife-ecology-conservation-science-with-foundation-year.md",
+      "source_url": "https://www.canterbury.ac.uk/study-here/courses/wildlife-ecology-conservation-science-with-foundation-year",
+      "study_level": "foundation"
+    }
+  ],
+  "uni_pages": [
+    {
+      "page_type": "english",
+      "source_html": "English language requirements _ CCCU.html",
+      "source_url": "https://www.canterbury.ac.uk/study-here/international/english-language-requirements",
+      "clean_md": "clean/uni/english-requirements.md"
+    },
+    {
+      "page_type": "bangladesh",
+      "source_html": "Bangladesh _ CCCU.html",
+      "source_url": "https://www.canterbury.ac.uk/study-here/international/find-your-country/bangladesh",
+      "clean_md": "clean/uni/bangladesh-entry.md"
+    },
+    {
+      "page_type": "scholarship",
+      "source_html": "International student scholarships at CCCU _ CCCU.html",
+      "source_url": "https://www.canterbury.ac.uk/blogs/2025/international-student-scholarships-at-cccu",
+      "clean_md": "clean/uni/scholarships.md"
+    }
+  ]
+}

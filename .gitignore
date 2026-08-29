@@ -1,0 +1,90 @@
+# =============================================================================
+# UK Universities F1 — .gitignore
+# =============================================================================
+#
+# PIPELINE (run from {University}/code/):
+#   scrape_course_urls.py  →  output/course_urls.csv
+#   download_and_clean     →  output/course_pages/, output/clean/
+#   llm_extract.py         →  output/extracted/, output/courses.csv
+#   export_dev_courses.py  →  output/dev_courses_{UNI}.csv
+#
+# COMMIT (source, slow-to-rebuild, or import artifacts):
+#   shared/                          — scripts, prompts, requirements.txt
+#   _university_template/            — copy to add a new university
+#   {University}/code/ENV.MD         — config template (mirror of .env)
+#   {University}/code/*.py           — per-uni wrappers (if any)
+#   {University}/uni_req/*.html      — source requirement pages
+#   {University}/course_listing/     — saved listing/catalogue HTML
+#   {University}/course_detail/      — saved sample course HTML
+#   {University}/*.csv               — portal / degree-scope CSVs
+#   output/course_urls.csv           — scraped URL list
+#   output/clean/uni/                — cleaned university requirement markdown
+#   output/dev_courses_{UNI}.csv     — export
+#
+# IGNORE (large, resume state, or rebuilt every run):
+#   output/course_pages/             — downloaded HTML
+#   output/course_listing_pages/     — listing HTML snapshots
+#   output/clean/courses/**/*.md     — cleaned course pages (re-run download_and_clean)
+#   output/clean/pre_setup_course/   — 10-course presetup markdown (same as above)
+#   output/courses.csv               — rebuilt by --build-index
+#   output/extracted_courses.csv     — rebuilt by normalize / extract
+#   output/extracted/                — LLM extract JSON (re-run llm_extract.py)
+#
+# =============================================================================
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.cursor/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Secrets (commit ENV.MD instead) ---
+**/.env
+
+# --- Browser-save junk folders ---
+**/*_files/
+
+# --- Experimental / scratch ---
+**/Claude_Output/
+
+# --- OUTPUT: large HTML (re-download / re-scrape) ---
+**/output/course_pages/
+**/output/course_listing_pages/
+
+# --- OUTPUT: cleaned course markdown (keep output/clean/uni/) ---
+**/output/clean/courses/**/*.md
+**/output/clean/pre_setup_course/**/*.md
+
+# --- OUTPUT: rebuilt indexes (not the export CSV) ---
+**/output/courses.csv
+**/output/extracted_courses.csv
+
+# --- OUTPUT: runtime logs & resume state ---
+**/output/browser_profile/
+**/output/scrape.log
+**/output/scrape_progress.json
+**/output/failed_urls.csv
+**/output/clean_warnings.csv
+**/output/course_page_map.csv
+**/output/presetup_sample.json
+**/output/execute_selection.json
+all_download_clean_progress.json
+
+# --- OUTPUT: LLM extract tree (re-run llm_extract.py) ---
+**/output/extracted/

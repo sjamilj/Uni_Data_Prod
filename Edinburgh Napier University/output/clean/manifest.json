@@ -1,0 +1,1769 @@
+{
+  "university": "Edinburgh Napier University",
+  "cleaned_at": "2026-08-27",
+  "courses": [
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-accounting-west-lothian-college-ug-full-time",
+      "source_html": "course_pages/Accounting BA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-accounting-west-lothian-college-ug-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-accounting-west-lothian-college-ug-full-time",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-business-and-enterprise-online-undergraduate-online-learning",
+      "source_html": "course_pages/Business & Enterprise BA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-business-and-enterprise-online-undergraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-business-and-enterprise-online-undergraduate-online-learning",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-business-management-ba-topup-undergraduate-online-learning",
+      "source_html": "course_pages/Business Management BA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-business-management-ba-topup-undergraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-business-management-ba-topup-undergraduate-online-learning",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-business-management-west-lothian-college-undergraduate-fulltime",
+      "source_html": "course_pages/Business Management (West Lothian College) BA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-business-management-west-lothian-college-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-business-management-west-lothian-college-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-business-management-with-finance-online-undergraduate-online-learning",
+      "source_html": "course_pages/Business Management With Finance BA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-business-management-with-finance-online-undergraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-business-management-with-finance-online-undergraduate-online-learning",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-business-management-with-hospitality-undergraduate-online-learning",
+      "source_html": "course_pages/Business Management with Hospitality BA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-business-management-with-hospitality-undergraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-business-management-with-hospitality-undergraduate-online-learning",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-business-management-with-hrm-undergraduate-online-fulltime",
+      "source_html": "course_pages/Business Management With HRM BA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-business-management-with-hrm-undergraduate-online-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-business-management-with-hrm-undergraduate-online-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-business-management-with-marketing-online-undergraduate-online-learning",
+      "source_html": "course_pages/Business Management With Marketing BA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-business-management-with-marketing-online-undergraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-business-management-with-marketing-online-undergraduate-online-learning",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-business-management-with-sustainability-undergraduate-online-learning",
+      "source_html": "course_pages/Business Management with Sustainability BA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-business-management-with-sustainability-undergraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-business-management-with-sustainability-undergraduate-online-learning",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons--bsc-hons-psychology-undergraduate-fulltime",
+      "source_html": "course_pages/Psychology BA (Hons) _ BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons--bsc-hons-psychology-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons--bsc-hons-psychology-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-accounting-and-finance-undergraduate-fulltime",
+      "source_html": "course_pages/Accounting & Finance BA_BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-accounting-and-finance-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-accounting-and-finance-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-accounting-undergraduate-fulltime",
+      "source_html": "course_pages/Accounting BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-accounting-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-accounting-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-accounting-with-corporate-finance-undergraduate-fulltime",
+      "source_html": "course_pages/Accounting With Corporate Finance BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-accounting-with-corporate-finance-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-accounting-with-corporate-finance-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-acting-and-english-undergraduate-fulltime",
+      "source_html": "course_pages/Acting & English BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-acting-and-english-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-acting-and-english-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-ba-hons-stage-and-screen-acting-ft-undergraduate-fulltime",
+      "source_html": "course_pages/Stage and Screen Acting BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-ba-hons-stage-and-screen-acting-ft-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-ba-hons-stage-and-screen-acting-ft-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-business-management-with-entrepreneurship-undergraduate-fulltime",
+      "source_html": "course_pages/Business Management With Entrepreneurship BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-business-management-with-entrepreneurship-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-business-management-with-entrepreneurship-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-business-management-with-human-resource-management-undergraduate-fulltime",
+      "source_html": "course_pages/Business Management With Human Resource Management BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-business-management-with-human-resource-management-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-business-management-with-human-resource-management-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-business-management-with-marketing-undergraduate-fulltime",
+      "source_html": "course_pages/Business Management With Marketing BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-business-management-with-marketing-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-business-management-with-marketing-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-business-management-with-project-management-undergraduate-fulltime",
+      "source_html": "course_pages/Business Management with Project Management BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-business-management-with-project-management-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-business-management-with-project-management-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-criminology-undergraduate-fulltime",
+      "source_html": "course_pages/Criminology BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-criminology-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-criminology-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-english-and-film-undergraduate-fulltime",
+      "source_html": "course_pages/English & Film BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-english-and-film-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-english-and-film-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-english-undergraduate-fulltime",
+      "source_html": "course_pages/English BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-english-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-english-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-film-undergraduate-fulltime",
+      "source_html": "course_pages/Film BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-film-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-film-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-financial-services-undergraduate-fulltime",
+      "source_html": "course_pages/Financial Services BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-financial-services-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-financial-services-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-intercultural-business-communication-and-marketing-management-undergraduate-fulltime",
+      "source_html": "course_pages/Intercultural Business Communication and Marketing Management BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-intercultural-business-communication-and-marketing-management-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-intercultural-business-communication-and-marketing-management-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-intercultural-business-communication-and-tourism-management-undergraduate-fulltime",
+      "source_html": "course_pages/Intercultural Business Communication and Tourism Management BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-intercultural-business-communication-and-tourism-management-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-intercultural-business-communication-and-tourism-management-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-international-business-management-undergraduate-fulltime",
+      "source_html": "course_pages/International Business Management BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-international-business-management-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-international-business-management-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-international-festival--event-management-and-marketing-undergraduate-fulltime",
+      "source_html": "course_pages/International Festival & Event Management and Marketing BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-international-festival--event-management-and-marketing-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-international-festival--event-management-and-marketing-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-international-festival--event-management-undergraduate-fulltime",
+      "source_html": "course_pages/International Festival & Event Management BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-international-festival--event-management-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-international-festival--event-management-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-international-hospitality-management-and-festival--event-undergraduate-fulltime",
+      "source_html": "course_pages/International Hospitality Management & Festival & Event BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-international-hospitality-management-and-festival--event-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-international-hospitality-management-and-festival--event-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-international-hospitality-management-undergraduate-fulltime",
+      "source_html": "course_pages/International Hospitality Management BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-international-hospitality-management-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-international-hospitality-management-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-international-tourism-and-airline-management-undergraduate-fulltime",
+      "source_html": "course_pages/International Tourism & Airline Management BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-international-tourism-and-airline-management-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-international-tourism-and-airline-management-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-international-tourism-management-undergraduate-fulltime",
+      "source_html": "course_pages/International Tourism Management BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-international-tourism-management-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-international-tourism-management-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-journalism-undergraduate-fulltime",
+      "source_html": "course_pages/Journalism BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-journalism-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-journalism-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-marketing-management-undergraduate-fulltime",
+      "source_html": "course_pages/Marketing Management BA_BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-marketing-management-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-marketing-management-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-marketing-with-digital-media-undergraduate-fulltime",
+      "source_html": "course_pages/Marketing With Digital Media BA_BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-marketing-with-digital-media-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-marketing-with-digital-media-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-mass-communications-advertising-and-public-relations-undergraduate-fulltime",
+      "source_html": "course_pages/Mass Communications Advertising and Public Relations BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-mass-communications-advertising-and-public-relations-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-mass-communications-advertising-and-public-relations-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-media-and-communication-undergraduate-fulltime",
+      "source_html": "course_pages/Media and Communication BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-media-and-communication-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-media-and-communication-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-music-undergraduate-fulltime",
+      "source_html": "course_pages/Music BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-music-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-music-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-photography-undergraduate-fulltime",
+      "source_html": "course_pages/Photography BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-photography-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-photography-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-psychology-with-sociology-undergraduate-fulltime",
+      "source_html": "course_pages/Psychology With Sociology BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-psychology-with-sociology-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-psychology-with-sociology-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-social-sciences-undergraduate-fulltime",
+      "source_html": "course_pages/Social Sciences BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-social-sciences-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-social-sciences-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hons-television-undergraduate-fulltime",
+      "source_html": "course_pages/Television BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-television-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hons-television-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-hospitality--and-tourism-management-top-up",
+      "source_html": "course_pages/Hospitality & Tourism Management BA Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-hospitality--and-tourism-management-top-up.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-hospitality--and-tourism-management-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-human-resource-management-with-organisational-psychology-undergraduate-parttime",
+      "source_html": "course_pages/Human Resource Management with Organisational Psychology BA Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-human-resource-management-with-organisational-psychology-undergraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-human-resource-management-with-organisational-psychology-undergraduate-parttime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-international-hospitality-management-city-of-glasgow-college-undergraduate-full-time",
+      "source_html": "course_pages/International Hospitality Management BA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-international-hospitality-management-city-of-glasgow-college-undergraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-international-hospitality-management-city-of-glasgow-college-undergraduate-full-time",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-international-tourism-and-airline-management-undergraduate-full-time",
+      "source_html": "course_pages/International Tourism and Airline Management (City of Glasgow College) BA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-international-tourism-and-airline-management-undergraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-international-tourism-and-airline-management-undergraduate-full-time",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ba-marketing-management-undergraduate-online-learning",
+      "source_html": "course_pages/Marketing Management BA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/ba-marketing-management-undergraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/ba-marketing-management-undergraduate-online-learning",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/baba-hons-business-management-undergraduate-fulltime",
+      "source_html": "course_pages/Business Management BA_BA (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/baba-hons-business-management-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/baba-hons-business-management-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bdes-hons-graphic-design-undergraduate-fulltime",
+      "source_html": "course_pages/Graphic Design BDes (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bdes-hons-graphic-design-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bdes-hons-graphic-design-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bdes-hons-interactive-media-design-undergraduate-fulltime",
+      "source_html": "course_pages/Interactive Media Design BDes (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bdes-hons-interactive-media-design-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bdes-hons-interactive-media-design-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bdes-hons-interior--spatial-design-undergraduate-fulltime",
+      "source_html": "course_pages/Interior & Spatial Design BDes (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bdes-hons-interior--spatial-design-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bdes-hons-interior--spatial-design-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bdes-hons-product-design-undergraduate-fulltime",
+      "source_html": "course_pages/Product Design BDes (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bdes-hons-product-design-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bdes-hons-product-design-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/beng-hons-cybersecurity-and-forensics-undergraduate-fulltime",
+      "source_html": "course_pages/Cybersecurity & Forensics BEng (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/beng-hons-cybersecurity-and-forensics-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/beng-hons-cybersecurity-and-forensics-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/beng-hons-electrical-and-electronic-engineering-undergraduate-fulltime",
+      "source_html": "course_pages/Electrical & Electronic Engineering BEng_BEng (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/beng-hons-electrical-and-electronic-engineering-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/beng-hons-electrical-and-electronic-engineering-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/beng-hons-electrical-and-electronic-engineering-undergraduate-parttime",
+      "source_html": "course_pages/Electrical & Electronic Engineering BEng_BEng (Hons) Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bengbeng--hons--electrical-and-electronic-engineering-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bengbeng-(hons)-electrical-and-electronic-engineering-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/beng-hons-electrical-engineering-undergraduate-fulltime",
+      "source_html": "course_pages/Electrical Engineering BEng (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/beng-hons-electrical-engineering-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/beng-hons-electrical-engineering-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/beng-hons-electronic-engineering-undergraduate-fulltime",
+      "source_html": "course_pages/Electronic Engineering BEng (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/beng-hons-electronic-engineering-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/beng-hons-electronic-engineering-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/beng-hons-network-engineering-and-cyber-security-undergraduate-fulltime",
+      "source_html": "course_pages/Network Engineering and Cyber Security BEng (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/beng-hons-network-engineering-and-cyber-security-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/beng-hons-network-engineering-and-cyber-security-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bengbeng-hons-civil-engineering-undergraduate-fulltime",
+      "source_html": "course_pages/Civil Engineering BEng_BEng (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bengbeng-hons-civil-engineering-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bengbeng-hons-civil-engineering-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bengbeng-hons-computing-undergraduate-fulltime",
+      "source_html": "course_pages/Computing BEng_BEng (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bengbeng-hons-computing-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bengbeng-hons-computing-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bengbeng-hons-energy-and-environmental-engineering-undergraduate-fulltime",
+      "source_html": "course_pages/Energy & Environmental Engineering BEng_BEng (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bengbeng-hons-energy-and-environmental-engineering-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bengbeng-hons-energy-and-environmental-engineering-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bengbeng-hons-mechanical-engineering-undergraduate-fulltime",
+      "source_html": "course_pages/Mechanical Engineering BEng_BEng (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bengbeng-hons-mechanical-engineering-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bengbeng-hons-mechanical-engineering-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bengbeng-hons-software-engineering-undergraduate-fulltime",
+      "source_html": "course_pages/Software Engineering BEng_BEng (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bengbeng-hons-software-engineering-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bengbeng-hons-software-engineering-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bm-midwifery-undergraduate-fulltime",
+      "source_html": "course_pages/Midwifery BM _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bm-midwifery-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bm-midwifery-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bn-nursing-adult-undergraduate-fulltime",
+      "source_html": "course_pages/Bachelor Of Nursing (Adult) BN _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bn-nursing-adult-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bn-nursing-adult-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bn-nursing-child-undergraduate-fulltime",
+      "source_html": "course_pages/Nursing (Child Health) BN _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bn-nursing-child-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bn-nursing-child-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bn-nursing-learning-disabilities-undergraduate-fulltime",
+      "source_html": "course_pages/Nursing (Learning Disabilities) BN _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bn-nursing-learning-disabilities-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bn-nursing-learning-disabilities-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bn-nursing-mental-health-undergraduate-fulltime",
+      "source_html": "course_pages/Nursing (Mental Health) BN _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bn-nursing-mental-health-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bn-nursing-mental-health-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-bsc-computing-global-online-topup-ft-undergraduate-online-learning",
+      "source_html": "course_pages/BSc Computing BSc Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-bsc-computing-global-online-topup-ft-undergraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-bsc-computing-global-online-topup-ft-undergraduate-online-learning",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-animal-and-conservation-biology-undergraduate-fulltime",
+      "source_html": "course_pages/Animal & Conservation Biology BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-animal-and-conservation-biology-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-animal-and-conservation-biology-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-animation-for-games-undergraduate-fulltime",
+      "source_html": "course_pages/Animation for Games BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-animation-for-games-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-animation-for-games-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-applied-microbiology-undergraduate-fulltime",
+      "source_html": "course_pages/Applied Microbiology BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-applied-microbiology-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-applied-microbiology-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-applied-microbiology-undergraduate-parttime",
+      "source_html": "course_pages/Biological Sciences BSc (Hons) Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-biological-science-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-biological-science-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-architectural-technology-undergraduate-fulltime",
+      "source_html": "course_pages/Architectural Technology BSc_BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-architectural-technology-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-architectural-technology-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-architectural-technology-undergraduate-parttime",
+      "source_html": "course_pages/Architectural Technology BSc_BSc (Hons) Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/bscbsc-hons-architectural-technology-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bscbsc-hons-architectural-technology-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-biomedical-science-undergraduate-fulltime",
+      "source_html": "course_pages/Biomedical Science BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-biomedical-science-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-biomedical-science-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-building-surveying-undergraduate-fulltime",
+      "source_html": "course_pages/Building Surveying BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-building-surveying-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-building-surveying-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-computer-science-artificial-intelligence---undergraduate-fulltime",
+      "source_html": "course_pages/Computer Science (Artificial Intelligence) BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-computer-science-artificial-intelligence---undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-computer-science-artificial-intelligence---undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-data-science---undergraduate-fulltime",
+      "source_html": "course_pages/Data Science BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-data-science---undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-data-science---undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-digital-media-and-interaction-design-undergraduate-fulltime",
+      "source_html": "course_pages/Digital Media & Interaction Design BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-digital-media-and-interaction-design-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-digital-media-and-interaction-design-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-football-coaching-performance-and-development-undergraduate-fulltime",
+      "source_html": "course_pages/Football Coaching Performance and Development (with Scottish FA) BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-football-coaching-performance-and-development-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-football-coaching-performance-and-development-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-games-development-undergraduate-fulltime",
+      "source_html": "course_pages/Games Development BSc_BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-games-development-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-games-development-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-marine--freshwater-biology-undergraduate-fulltime",
+      "source_html": "course_pages/Marine & Freshwater Biology BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-marine--freshwater-biology-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-marine--freshwater-biology-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-physical-activity-and-health-undergraduate-fulltime",
+      "source_html": "course_pages/Physical Activity & Health BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-physical-activity-and-health-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-physical-activity-and-health-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-policing-and-criminology-undergraduate-fulltime",
+      "source_html": "course_pages/Policing & Criminology BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-policing-and-criminology-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-policing-and-criminology-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-quantity-surveying-undergraduate-fulltime",
+      "source_html": "course_pages/Quantity Surveying BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-quantity-surveying-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-quantity-surveying-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-real-estate-surveying-undergraduate-parttime",
+      "source_html": "course_pages/Real Estate Surveying BSc (Hons) Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-real-estate-surveying-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-real-estate-surveying-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-sound-design-undergraduate-fulltime",
+      "source_html": "course_pages/Sound Design BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-sound-design-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-sound-design-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-sport-and-exercise-science-undergraduate-fulltime",
+      "source_html": "course_pages/Sport & Exercise Science BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-sport-and-exercise-science-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-sport-and-exercise-science-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-sports-coaching-undergraduate-fulltime",
+      "source_html": "course_pages/Sports Coaching BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-sports-coaching-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-sports-coaching-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-user-experience-ux-design-undergraduate-fulltime",
+      "source_html": "course_pages/User Experience (UX) Design BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-user-experience-ux-design-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-user-experience-ux-design-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-hons-web-design-and-development-undergraduate-fulltime",
+      "source_html": "course_pages/Web Design & Development BSc (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-web-design-and-development-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-hons-web-design-and-development-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-nursing-studies-global-online-undergraduate-online-learning",
+      "source_html": "course_pages/Nursing Studies BSc Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-nursing-studies-global-online-undergraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-nursing-studies-global-online-undergraduate-online-learning",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/bsc-nursing-studies-undergraduate-full-time",
+      "source_html": "course_pages/Nursing Studies BSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/bsc-nursing-studies-undergraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/bsc-nursing-studies-undergraduate-full-time",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/certificate-of-credit-english-as-a-foreign-language--8-month-programme-undergraduate-fulltime",
+      "source_html": "course_pages/English as a Foreign Language (8 Month). Certificate of credit _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/certificate-of-credit-english-as-a-foreign-language--8-month-programme-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/certificate-of-credit-english-as-a-foreign-language--8-month-programme-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/certificate-of-credit-english-as-a-foreign-language--year-long-programme-undergraduate-fulltime",
+      "source_html": "course_pages/English as a Foreign Language (EFL) 1 Year Certificate of credit _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/certificate-of-credit-english-as-a-foreign-language--year-long-programme-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/certificate-of-credit-english-as-a-foreign-language--year-long-programme-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/llb--hons-law-undergraduate-fulltime",
+      "source_html": "course_pages/Law LLB _ LLB (Hons) _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/llb--hons-law-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/llb--hons-law-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/llb-law-graduate-entry-undergraduate-fulltime",
+      "source_html": "course_pages/LLB Graduate Entry LLB _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/undergraduate/llb-law-graduate-entry-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/llb-law-graduate-entry-undergraduate-fulltime",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-creative-documentary-filmmaking-postgraduate-distance-learning",
+      "source_html": "course_pages/Creative Documentary Filmmaking MA Part Time Distance learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-creative-documentary-filmmaking-postgraduate-distance-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-creative-documentary-filmmaking-postgraduate-distance-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-creative-documentary-filmmaking-postgraduate-distance-learning-full-time",
+      "source_html": "course_pages/Creative Documentary Filmmaking MA Distance learning Full-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-creative-documentary-filmmaking-postgraduate-distance-learning-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-creative-documentary-filmmaking-postgraduate-distance-learning-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-creative-studies-postgraduate-full-time",
+      "source_html": "course_pages/Creative Studies MA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-creative-studies-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-creative-studies-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-creative-studies-postgraduate-part-time",
+      "source_html": "course_pages/Creative Studies MA Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-creative-studies-postgraduate-part-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-creative-studies-postgraduate-part-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-creative-writing-postgraduate-fulltime",
+      "source_html": "course_pages/Creative Writing MA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-creative-writing-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-creative-writing-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-design-for-interactive-experience-postgraduate-full-time",
+      "source_html": "course_pages/Design for Interactive Experience MA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-design-for-interactive-experience-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-design-for-interactive-experience-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-film-postgraduate-fulltime",
+      "source_html": "course_pages/Film MA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-film-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-film-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-heritage-and-exhibition-design-postgraduate-fulltime",
+      "source_html": "course_pages/Heritage and Exhibition Design MA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-heritage-and-exhibition-design-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-heritage-and-exhibition-design-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-journalism-postgraduate-fulltime",
+      "source_html": "course_pages/Journalism MA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-journalism-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-journalism-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-lighting-design-postgraduate-fulltime",
+      "source_html": "course_pages/Lighting Design MA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-lighting-design-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-lighting-design-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-lighting-design-postgraduate-parttime",
+      "source_html": "course_pages/Lighting Design MA Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-lighting-design-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-lighting-design-postgraduate-parttime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-motion-graphics-postgraduate-fulltime",
+      "source_html": "course_pages/Motion Graphics MA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-motion-graphics-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-motion-graphics-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-motion-graphics-postgraduate-parttime",
+      "source_html": "course_pages/Motion Graphics MA Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-motion-graphics-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-motion-graphics-postgraduate-parttime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-music-postgraduate-fulltime",
+      "source_html": "course_pages/Music MA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-music-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-music-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-screenwriting-global-online-postgraduate-online-learning",
+      "source_html": "course_pages/Screenwriting (Global Online) MA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-screenwriting-global-online-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-screenwriting-global-online-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-screenwriting-postgraduate-fulltime",
+      "source_html": "course_pages/Screenwriting MA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-screenwriting-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-screenwriting-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-service-design-postgraduate-full-time",
+      "source_html": "course_pages/Service Design MA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-service-design-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-service-design-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-sports-journalism-postgraduate-full-time",
+      "source_html": "course_pages/Sports Journalism MA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-sports-journalism-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-sports-journalism-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-writing-genre-fiction-postgraduate-online-learning",
+      "source_html": "course_pages/Writing Genre Fiction MA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-writing-genre-fiction-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-writing-genre-fiction-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/ma-writing-popular-fiction-postgraduate-fulltime",
+      "source_html": "course_pages/Writing Popular Fiction MA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/ma-writing-popular-fiction-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/ma-writing-popular-fiction-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/master-of-public-health",
+      "source_html": "course_pages/Public Health MPH Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/master-of-public-health.md",
+      "source_url": "https://www.napier.ac.uk/courses/master-of-public-health",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mba--banking-postgraduate-online-learning",
+      "source_html": "course_pages/MBA (Banking) MBA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/mba--banking-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/mba--banking-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mba-business-analytics-postgraduate-online-learning",
+      "source_html": "course_pages/MBA (Business Analytics) MBA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/mba-business-analytics-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/mba-business-analytics-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mba-business-leadership-and-practice-postgraduate-fulltime",
+      "source_html": "course_pages/MBA (Business Leadership and Practice) MBA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/mba-business-leadership-and-practice-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/mba-business-leadership-and-practice-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mba-events-management-postgraduate-online-learning",
+      "source_html": "course_pages/MBA (Events Management) MBA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/mba-events-management-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/mba-events-management-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mba-finance-postgraduate-online-learning",
+      "source_html": "course_pages/MBA (Finance) MBA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/mba-finance-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/mba-finance-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mba-health-management-postgraduate-online-learning",
+      "source_html": "course_pages/MBA (Health Management) MBA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/mba-health-management-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/mba-health-management-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mba-hospitality-and-tourism-management-postgraduate-online-learning",
+      "source_html": "course_pages/MBA (Hospitality & Tourism Management) MBA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/mba-hospitality-and-tourism-management-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/mba-hospitality-and-tourism-management-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mba-human-resource-management-postgraduate-online-learning",
+      "source_html": "course_pages/MBA (Human Resource Management) MBA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/mba-human-resource-management-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/mba-human-resource-management-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mba-information-systems-strategy-and-governance-postgraduate-online-learning",
+      "source_html": "course_pages/MBA (Information Systems Strategy & Governance) MBA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/mba-information-systems-strategy-and-governance-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/mba-information-systems-strategy-and-governance-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mba-leadership-and-innovation-postgraduate-online-learning",
+      "source_html": "course_pages/MBA (Leadership & Innovation) MBA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/mba-leadership-and-innovation-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/mba-leadership-and-innovation-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mba-logistics-and-supply-chain-management-postgraduate-online-learning",
+      "source_html": "course_pages/MBA (Logistics and Supply Chain Management) MBA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/mba-logistics-and-supply-chain-management-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/mba-logistics-and-supply-chain-management-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mba-marketing-postgraduate-online-learning",
+      "source_html": "course_pages/MBA (Marketing) MBA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/mba-marketing-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/mba-marketing-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mba-postgraduate-online-learning",
+      "source_html": "course_pages/MBA MBA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/mba-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/mba-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mba-project-management-postgraduate-online-learning",
+      "source_html": "course_pages/MBA (Project Management) MBA Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/mba-project-management-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/mba-project-management-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mba-strategic-project-management---postgraduate-fulltime",
+      "source_html": "course_pages/MBA (Strategic Project Management) MBA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/mba-strategic-project-management---postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/mba-strategic-project-management---postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/meng-civil--transportation-engineering-undergraduate-fulltime",
+      "source_html": "course_pages/Civil & Transportation Engineering MEng _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/meng-civil--transportation-engineering-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/meng-civil--transportation-engineering-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/meng-civil-engineering-undergraduate-fulltime",
+      "source_html": "course_pages/Civil Engineering MEng _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/meng-civil-engineering-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/meng-civil-engineering-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/meng-electrical-and-electronic-engineering-undergraduate-fulltime",
+      "source_html": "course_pages/Electrical & Electronic Engineering MEng _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/meng-electrical-and-electronic-engineering-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/meng-electrical-and-electronic-engineering-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/meng-energy-and-environmental-engineering-undergraduate-full-time",
+      "source_html": "course_pages/Energy and Environmental Engineering MEng _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/meng-energy-and-environmental-engineering-undergraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/meng-energy-and-environmental-engineering-undergraduate-full-time",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/meng-mechanical-engineering-undergraduate-fulltime",
+      "source_html": "course_pages/Mechanical Engineering MEng _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/meng-mechanical-engineering-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/meng-mechanical-engineering-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/meng-software-engineering-undergraduate-fulltime",
+      "source_html": "course_pages/Software Engineering MEng _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/meng-software-engineering-undergraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/meng-software-engineering-undergraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mfa-acting-for-stage-and-screen-postgraduate-fulltime",
+      "source_html": "course_pages/Acting for Stage and Screen MFA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/mfa-acting-for-stage-and-screen-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/mfa-acting-for-stage-and-screen-postgraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mfa-design-for-interactive-art--experiences-postgraduate-fulltime",
+      "source_html": "course_pages/Design for Interactive Art & Experiences MFA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/mfa-design-for-interactive-art--experiences-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/mfa-design-for-interactive-art--experiences-postgraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mfa-design-for-interactive-art--experiences-postgraduate-parttime",
+      "source_html": "course_pages/Design for Interactive Art & Experiences MFA Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/mfa-design-for-interactive-art--experiences-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/mfa-design-for-interactive-art--experiences-postgraduate-parttime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mfa-directing-postgraduate-fulltime",
+      "source_html": "course_pages/Directing MFA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/mfa-directing-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/mfa-directing-postgraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mfa-heritage-and-exhibition-design-postgraduate-fulltime",
+      "source_html": "course_pages/Heritage and Exhibition Design MFA _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/mfa-heritage-and-exhibition-design-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/mfa-heritage-and-exhibition-design-postgraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mfa-heritage-and-exhibition-design-postgraduate-parttime",
+      "source_html": "course_pages/Heritage and Exhibition Design MFA Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/mfa-heritage-and-exhibition-design-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/mfa-heritage-and-exhibition-design-postgraduate-parttime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mm-masters-in-midwifery",
+      "source_html": "course_pages/Midwifery (Long) MM _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/mm-masters-in-midwifery.md",
+      "source_url": "https://www.napier.ac.uk/courses/mm-masters-in-midwifery",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/mph-public-health-postgraduate-full-time",
+      "source_html": "course_pages/Public Health MPH _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/mph-public-health-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/mph-public-health-postgraduate-full-time",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-accounting-postgraduate-fulltime",
+      "source_html": "course_pages/Accounting MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-accounting-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-accounting-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-advanced-clinical-practice-named-speciality---postgraduate-parttime",
+      "source_html": "course_pages/Advanced Clinical Practice (named speciality) MSc Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-advanced-clinical-practice-named-speciality---postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-advanced-clinical-practice-named-speciality---postgraduate-parttime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-advanced-materials-engineering-postgraduate-fulltime",
+      "source_html": "course_pages/Advanced Materials Engineering MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-advanced-materials-engineering-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-advanced-materials-engineering-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-advanced-mechanical-engineering-postgraduate-full-time",
+      "source_html": "course_pages/Advanced Mechanical Engineering MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-advanced-mechanical-engineering-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-advanced-mechanical-engineering-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-advanced-structural-engineering-postgraduate-fulltime",
+      "source_html": "course_pages/Advanced Structural Engineering MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/mscpgdippgcert-advanced-structural-engineering-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/mscpgdippgcert-advanced-structural-engineering-postgraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-applied-criminology-and-forensic-psychology-postgraduate-fulltime",
+      "source_html": "course_pages/Applied Criminology & Forensic Psychology MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-applied-criminology-and-forensic-psychology-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-applied-criminology-and-forensic-psychology-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-applied-sport-science-postgraduate-full-time",
+      "source_html": "course_pages/Applied Sport Science MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-applied-sport-science-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-applied-sport-science-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-applied-sport-science-postgraduate-part-time",
+      "source_html": "course_pages/Applied Sport Science MSc Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-applied-sport-science-postgraduate-part-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-applied-sport-science-postgraduate-part-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-architectural-technology--sustainable-building-performance-postgraduate-fulltime",
+      "source_html": "course_pages/Architectural Technology & Sustainable Building Performance MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-architectural-technology--sustainable-building-performance-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-architectural-technology--sustainable-building-performance-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-architectural-technology--sustainable-building-performance-postgraduate-parttime",
+      "source_html": "course_pages/Architectural Technology & Sustainable Building Performance MSc Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-architectural-technology--sustainable-building-performance-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-architectural-technology--sustainable-building-performance-postgraduate-parttime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-artificial-intelligence-and-data-science-postgraduate-full-time",
+      "source_html": "course_pages/Artificial Intelligence and Data Science MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-artificial-intelligence-and-data-science-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-artificial-intelligence-and-data-science-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-automation-and-control-postgraduate-fulltime",
+      "source_html": "course_pages/Automation & Control MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-automation-and-control-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-automation-and-control-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-biomedical-science-postgraduate-fulltime",
+      "source_html": "course_pages/Biomedical Science MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-biomedical-science-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-biomedical-science-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-biomedical-science-postgraduate-parttime",
+      "source_html": "course_pages/Biomedical Science MSc Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-biomedical-science-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-biomedical-science-postgraduate-parttime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-business-analytics-postgraduate-full-time",
+      "source_html": "course_pages/Business Analytics MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-business-analytics-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-business-analytics-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-business-information-technology-postgraduate-fulltime",
+      "source_html": "course_pages/Business Information Technology MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-business-information-technology-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-business-information-technology-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-business-management-finance-postgraduate-online-learning",
+      "source_html": "course_pages/Business Management (Finance) MSc Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-business-management-finance-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-business-management-finance-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-business-management-hrm-postgraduate-online-learning",
+      "source_html": "course_pages/Business Management (Human Resource Management) MSc Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-business-management-hrm-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-business-management-hrm-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-business-management-logistics-and-supply-chains-postgraduate-online-learning",
+      "source_html": "course_pages/Business Management (Logistics & Supply Chains) MSc Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-business-management-logistics-and-supply-chains-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-business-management-logistics-and-supply-chains-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-business-management-marketing-postgraduate-online-learning",
+      "source_html": "course_pages/Business Management (Marketing) MSc Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-business-management-marketing-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-business-management-marketing-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-business-management-postgraduate-fulltime",
+      "source_html": "course_pages/Business Management MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-business-management-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-business-management-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-business-management-postgraduate-online-learning",
+      "source_html": "course_pages/Business Management MSc Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-business-management-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-business-management-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-business-management-project-management-postgraduate-online-learning",
+      "source_html": "course_pages/Business Management (Project Management) MSc Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-business-management-project-management-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-business-management-project-management-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-business-management-tourism-and-hospitality-postgraduate-online-learning",
+      "source_html": "course_pages/Business Management (Tourism & Hospitality) MSc Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-business-management-tourism-and-hospitality-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-business-management-tourism-and-hospitality-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-clinical-exercise-physiology-postgraduate-full-time",
+      "source_html": "course_pages/Clinical Exercise Physiology MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-clinical-exercise-physiology-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-clinical-exercise-physiology-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-clinical-exercise-physiology-postgraduate-part-time",
+      "source_html": "course_pages/Clinical Exercise Physiology MSc Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-clinical-exercise-physiology-postgraduate-part-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-clinical-exercise-physiology-postgraduate-part-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-clinical-healthcare-technology-postgraduate-online-learning",
+      "source_html": "course_pages/Clinical Healthcare Technology MSc Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-clinical-healthcare-technology-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-clinical-healthcare-technology-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-computing-postgraduate-fulltime",
+      "source_html": "course_pages/Computing MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-computing-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-computing-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-computing-with-professional-placement-postgraduate-fulltime",
+      "source_html": "course_pages/Computing with Professional Placement MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-computing-with-professional-placement-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-computing-with-professional-placement-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-construction-project-management-postgraduate-fulltime",
+      "source_html": "course_pages/Construction Project Management MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-construction-project-management-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-construction-project-management-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-construction-project-management-postgraduate-online-learning",
+      "source_html": "course_pages/Construction Project Management MSc Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-construction-project-management-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-construction-project-management-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-creative-advertising-postgraduate-fulltime",
+      "source_html": "course_pages/Creative Advertising MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-creative-advertising-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-creative-advertising-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-crime-and-justice-in-practice-postgraduate-full-time",
+      "source_html": "course_pages/Crime and Justice in Practice MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-crime-and-justice-in-practice-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-crime-and-justice-in-practice-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-cyber-security-postgraduate-distance-learning",
+      "source_html": "course_pages/Cyber Security MSc Part Time Distance learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-cyber-security-postgraduate-distance-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-cyber-security-postgraduate-distance-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-cyber-security-postgraduate-full-time",
+      "source_html": "course_pages/Cyber Security MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-cyber-security-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-cyber-security-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-design-research-postgraduate-full-time",
+      "source_html": "course_pages/Design Research MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-design-research-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-design-research-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-drug-design-and-biomedical-science-postgraduate-fulltime",
+      "source_html": "course_pages/Drug Design & Biomedical Science MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-drug-design-and-biomedical-science-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-drug-design-and-biomedical-science-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-environmental-sustainability-postgraduate-fulltime",
+      "source_html": "course_pages/Environmental Sustainability MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-environmental-sustainability-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-environmental-sustainability-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-environmental-sustainability-postgraduate-parttime",
+      "source_html": "course_pages/Environmental Sustainability MSc Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-environmental-sustainability-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-environmental-sustainability-postgraduate-parttime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-global-hospitality-management-extended-postgraduate-fulltime",
+      "source_html": "course_pages/Global Hospitality Management (extended) MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-global-hospitality-management-extended-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-global-hospitality-management-extended-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-global-logistics-and-supply-chain-analytics-postgraduate-fulltime",
+      "source_html": "course_pages/Global Logistics And Supply Chain Analytics MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-global-logistics-and-supply-chain-analytics-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-global-logistics-and-supply-chain-analytics-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-healthcare-management-postgraduate-fulltime",
+      "source_html": "course_pages/Healthcare Management MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-healthcare-management-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-healthcare-management-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-human-resource-management-online-postgraduate-online-learning",
+      "source_html": "course_pages/Human Resource Management MSc Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-human-resource-management-online-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-human-resource-management-online-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-human-resource-management-postgraduate-fulltime",
+      "source_html": "course_pages/Human Resource Management MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-human-resource-management-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-human-resource-management-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-human-resource-management-topup-blended-postgraduate-parttime",
+      "source_html": "course_pages/MSc Human Resource Management (Top-up) MSc Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-human-resource-management-topup-blended-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-human-resource-management-topup-blended-postgraduate-parttime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-human-resource-management-with-artificial-intelligence-postgraduate-full-time",
+      "source_html": "course_pages/Human Resource Management with Artificial Intelligence MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-human-resource-management-with-ai-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-human-resource-management-with-ai-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-information-science-postgraduate-full-time",
+      "source_html": "course_pages/Information Science MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-information-science-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-information-science-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-intercultural-business-communication-postgraduate-fulltime",
+      "source_html": "course_pages/Intercultural Business Communication MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-intercultural-business-communication-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-intercultural-business-communication-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-international-business-management-postgraduate-fulltime",
+      "source_html": "course_pages/International Business Management MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-international-business-management-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-international-business-management-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-international-finance-postgraduate-fulltime",
+      "source_html": "course_pages/International Finance MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-international-finance-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-international-finance-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-international-human-resource-management-postgraduate-fulltime",
+      "source_html": "course_pages/International Human Resource Management MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-international-human-resource-management-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-international-human-resource-management-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-international-marketing-postgraduate-fulltime",
+      "source_html": "course_pages/International Marketing MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-international-marketing-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-international-marketing-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-international-marketing-with-tourism-postgraduate-fulltime",
+      "source_html": "course_pages/International Marketing with Tourism MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-international-marketing-with-tourism-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-international-marketing-with-tourism-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-international-tourism-destination-management-postgraduate-fulltime",
+      "source_html": "course_pages/International Tourism Destination Management MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-international-tourism-destination-management-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-international-tourism-destination-management-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-marketing-postgraduate-fulltime",
+      "source_html": "course_pages/Marketing MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-marketing-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-marketing-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-marketing-with-digital-strategy-ft-postgraduate-fulltime",
+      "source_html": "course_pages/Marketing With Digital Strategy MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-marketing-with-digital-strategy-ft-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-marketing-with-digital-strategy-ft-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-marketing-with-sustainability-postgraduate-full-time",
+      "source_html": "course_pages/Marketing with Sustainability MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-marketing-with-sustainability-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-marketing-with-sustainability-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-medical-biotechnology-postgraduate-fulltime",
+      "source_html": "course_pages/Medical Biotechnology MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-medical-biotechnology-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-medical-biotechnology-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-msc-applied-forensic-psychology-ft-postgraduate-fulltime",
+      "source_html": "course_pages/Applied Forensic Psychology MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-msc-applied-forensic-psychology-ft-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-msc-applied-forensic-psychology-ft-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-nursing-adult-health-postgraduate-fulltime",
+      "source_html": "course_pages/Nursing (Pre-registration) Adult Health MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-nursing-adult-health-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-nursing-adult-health-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-nursing-mental-health-postgraduate-fulltime",
+      "source_html": "course_pages/Nursing (Pre-registration) Mental Health MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-nursing-mental-health-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-nursing-mental-health-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-occupational-therapy-postgraduate-fulltime",
+      "source_html": "course_pages/Occupational Therapy (Pre-registration) MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-occupational-therapy-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-occupational-therapy-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-performance-enhancement-in-sports-officiating-postgraduate-parttime",
+      "source_html": "course_pages/Performance Enhancement in Sports Officiating MSc Part Time Distance learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-performance-enhancement-in-sports-officiating-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-performance-enhancement-in-sports-officiating-postgraduate-parttime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-pgdip--pgcert-blended-and-online-education-postgraduate-distance-learning",
+      "source_html": "course_pages/Blended and Online Education MSc _ PgDip _ PgCert Part Time Distance learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-pgdip--pgcert-blended-and-online-education-postgraduate-distance-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-pgdip--pgcert-blended-and-online-education-postgraduate-distance-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-pharmaceutical-and-analytical-science-postgraduate-fulltime",
+      "source_html": "course_pages/Pharmaceutical & Analytical Science MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-pharmaceutical-and-analytical-science-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-pharmaceutical-and-analytical-science-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-physiotherapy-postgraduate-fulltime",
+      "source_html": "course_pages/Physiotherapy (Pre-registration) MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-physiotherapy-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-physiotherapy-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-publishing-postgraduate-fulltime",
+      "source_html": "course_pages/Publishing MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-publishing-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-publishing-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-real-estate-management-and-investment-postgraduate-distance-learning",
+      "source_html": "course_pages/Real Estate Management & Investment MSc Part Time Distance learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-real-estate-management-and-investment-postgraduate-distance-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-real-estate-management-and-investment-postgraduate-distance-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-real-estate-management-and-investment-postgraduate-fulltime",
+      "source_html": "course_pages/Real Estate Management & Investment MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-real-estate-management-and-investment-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-real-estate-management-and-investment-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-real-estate-management-and-investment-postgraduate-parttime",
+      "source_html": "course_pages/Real Estate Management & Investment MSc Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-real-estate-management-and-investment-postgraduate-partime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-real-estate-management-and-investment-postgraduate-partime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-renewable-energy-postgraduate-fulltime",
+      "source_html": "course_pages/Renewable Energy MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-renewable-energy-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-renewable-energy-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-robotics-and-autonomous-systems-engineering-postgraduate-full-time",
+      "source_html": "course_pages/Robotics and Autonomous Systems Engineering MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-robotics-and-autonomous-systems-engineering-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-robotics-and-autonomous-systems-engineering-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-social-research-and-policy-postgraduate-full-time",
+      "source_html": "course_pages/Social Research and Policy MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-social-research-and-policy-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-social-research-and-policy-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-sound-design-postgraduate-distance-learning",
+      "source_html": "course_pages/Sound Design MSc Part Time Distance learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-sound-design-postgraduate-distance-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-sound-design-postgraduate-distance-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-sound-design-postgraduate-distance-learning-full-time",
+      "source_html": "course_pages/Sound Design MSc Distance learning Full-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-sound-design-postgraduate-distance-learning-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-sound-design-postgraduate-distance-learning-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-sound-design-postgraduate-full-time",
+      "source_html": "course_pages/Sound Design MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-sound-design-postgraduate-full-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-sound-design-postgraduate-full-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-sound-design-postgraduate-part-time",
+      "source_html": "course_pages/Sound Design MSc Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-sound-design-postgraduate-part-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-sound-design-postgraduate-part-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-transport-planning-and-engineering-postgraduate-fulltime",
+      "source_html": "course_pages/Transport Planning & Engineering MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-transport-planning-and-engineering-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-transport-planning-and-engineering-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-transport-planning-and-engineering-postgraduate-online-learning",
+      "source_html": "course_pages/Transport Planning & Engineering MSc Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-transport-planning-and-engineering-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-transport-planning-and-engineering-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-transport-planning-and-engineering-postgraduate-parttime",
+      "source_html": "course_pages/Transport Planning & Engineering MSc Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-transport-planning-and-engineering-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-transport-planning-and-engineering-postgraduate-parttime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-user-experience-design-postgraduate-fulltime",
+      "source_html": "course_pages/User Experience Design MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-user-experience-design-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-user-experience-design-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-user-experience-design-postgraduate-parttime",
+      "source_html": "course_pages/User Experience Design MSc Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-user-experience-design-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-user-experience-design-postgraduate-parttime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-wildlife-biology-and-conservation-postgraduate-distance-learning",
+      "source_html": "course_pages/Wildlife Biology & Conservation MSc Part Time Distance learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-wildlife-biology-and-conservation-postgraduate-distance-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-wildlife-biology-and-conservation-postgraduate-distance-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-wildlife-biology-and-conservation-postgraduate-fulltime",
+      "source_html": "course_pages/Wildlife Biology & Conservation MSc _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-wildlife-biology-and-conservation-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-wildlife-biology-and-conservation-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/msc-wildlife-biology-and-conservation-postgraduate-parttime",
+      "source_html": "course_pages/Wildlife Biology & Conservation MSc Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/msc-wildlife-biology-and-conservation-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/msc-wildlife-biology-and-conservation-postgraduate-parttime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/pgcert-career-guidance-and-development-postgraduate-online-learning",
+      "source_html": "course_pages/Career Guidance and Development PgCert Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-career-guidance-and-development-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/pgcert-career-guidance-and-development-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/pgcert-epilepsy-studies-postgraduate-part-time",
+      "source_html": "course_pages/Epilepsy Studies PgCert Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-epilepsy-studies-postgraduate-part-time.md",
+      "source_url": "https://www.napier.ac.uk/courses/pgcert-epilepsy-studies-postgraduate-part-time",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/pgcert-neonatal-care-qualified-in-speciality-postgraduate-online-learning",
+      "source_html": "course_pages/Neonatal Care_ Qualified in Speciality PgCert Online learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-neonatal-care-qualified-in-speciality-postgraduate-online-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/pgcert-neonatal-care-qualified-in-speciality-postgraduate-online-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/pgcert-teaching-and-supporting-learning-in-higher-education-postgraduate-parttime",
+      "source_html": "course_pages/Teaching and Supporting Learning in Higher Education PgCert Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-teaching-and-supporting-learning-in-higher-education-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/pgcert-teaching-and-supporting-learning-in-higher-education-postgraduate-parttime",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-biology-postgraduate-fulltime",
+      "source_html": "course_pages/Professional Graduate Diploma in Education (Biology) PGDE _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/pgde-professional-graduate-diploma-in-education-biology-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-biology-postgraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-biology-postgraduate-parttime",
+      "source_html": "course_pages/Professional Graduate Diploma in Education (Biology) PGDE Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/pgde-professional-graduate-diploma-in-education-biology-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-biology-postgraduate-parttime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-chemistry-postgraduate-fulltime",
+      "source_html": "course_pages/Professional Graduate Diploma in Education (Chemistry) PGDE _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/pgde-professional-graduate-diploma-in-education-chemistry-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-chemistry-postgraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-chemistry-postgraduate-parttime",
+      "source_html": "course_pages/Professional Graduate Diploma in Education (Chemistry) PGDE Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/pgde-professional-graduate-diploma-in-education-chemistry-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-chemistry-postgraduate-parttime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-english-postgraduate-parttime",
+      "source_html": "course_pages/Professional Graduate Diploma in Education (English) PGDE Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/pgde-professional-graduate-diploma-in-education-english-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-english-postgraduate-parttime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-mathematics-postgraduate-fulltime",
+      "source_html": "course_pages/Professional Graduate Diploma in Education (Mathematics) PGDE _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/pgde-professional-graduate-diploma-in-education-mathematics-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-mathematics-postgraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-mathematics-postgraduate-parttime",
+      "source_html": "course_pages/Professional Graduate Diploma in Education (Mathematics) PGDE Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/pgde-professional-graduate-diploma-in-education-mathematics-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-mathematics-postgraduate-parttime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-physics-postgraduate-fulltime",
+      "source_html": "course_pages/Professional Graduate Diploma in Education (Physics) PGDE _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/pgde-professional-graduate-diploma-in-education-physics-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-physics-postgraduate-fulltime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-physics-postgraduate-parttime",
+      "source_html": "course_pages/Professional Graduate Diploma in Education (Physics) PGDE Part-time _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/other/pgde-professional-graduate-diploma-in-education-physics-postgraduate-parttime.md",
+      "source_url": "https://www.napier.ac.uk/courses/pgde-professional-graduate-diploma-in-education-physics-postgraduate-parttime",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/pgdip-career-guidance-and-development-dl-postgraduate-distance-learning",
+      "source_html": "course_pages/Career Guidance and Development PgDip Part Time Distance learning _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-career-guidance-and-development-dl-postgraduate-distance-learning.md",
+      "source_url": "https://www.napier.ac.uk/courses/pgdip-career-guidance-and-development-dl-postgraduate-distance-learning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.napier.ac.uk/courses/pgdip-career-guidance-and-development-postgraduate-fulltime",
+      "source_html": "course_pages/Career Guidance & Development PgDip _ Edinburgh Napier University.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-career-guidance-and-development-postgraduate-fulltime.md",
+      "source_url": "https://www.napier.ac.uk/courses/pgdip-career-guidance-and-development-postgraduate-fulltime",
+      "study_level": "postgraduate"
+    }
+  ],
+  "uni_pages": [
+    {
+      "source_html": "uni_req/bangladesh-entry.html",
+      "source_url": "",
+      "clean_md": "clean/uni/bangladesh-entry.md",
+      "page_type": "entry"
+    },
+    {
+      "source_html": "uni_req/english-requirements.html",
+      "source_url": "https://www.napier.ac.uk/study-with-us/international-students/english-language/english-language-requirements",
+      "clean_md": "clean/uni/english-requirements.md",
+      "page_type": "english"
+    },
+    {
+      "source_html": "uni_req/scholarships.html",
+      "source_url": "",
+      "clean_md": "clean/uni/scholarships.md",
+      "page_type": "scholarship"
+    }
+  ]
+}

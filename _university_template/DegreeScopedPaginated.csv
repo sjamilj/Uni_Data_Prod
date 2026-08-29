@@ -1,0 +1,6 @@
+uniName,LISTING_PROGRAMME,Course_listing_Link,COURSE_LISTING_PAGE_1,COURSE_LISTING_PAGE_2,Course Detail page,Bangladesh Req Link,EnglishRequirementLink,ScholarshipLink,DepositLink,Comment
+{UNIVERSITY_NAME},,,,,,,,,,
+,Undergraduate,,,,,,,,,One sample UG course URL in Course Detail page column
+,Postgraduate,,,,,,,,,One sample PG taught course URL
+,Postgraduate Research,,,,,,,,,One sample research course URL (omit row if N/A)
+,Foundation,,,,,,,,,One sample foundation course URL (omit row if N/A)

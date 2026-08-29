@@ -1,0 +1,284 @@
+{
+  "Anglia Ruskin University - ARU": {
+    "skip": true
+  },
+  "Aston University": {
+    "skip": true
+  },
+  "Birmingham City University": {
+    "title": ".course__title h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Overview :: #overview",
+      "Entry requirements :: #entry_requirements",
+      "Fees and how to apply :: #fees_how_to_apply",
+      "Course in depth :: #course_in_depth"
+    ],
+    "strip": ["script", "noscript", ".course__menu", ".course__actions", ".course-function-btns", ".course__image-container"]
+  },
+  "Brunel University London": {
+    "title": "main h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Overview :: #main",
+      "Entry requirements :: #entryRequirements",
+      "Fees and funding :: #fees"
+    ],
+    "strip": ["script", "noscript", ".scroll-top-break__link", ".accreditation-logos", ".carousel-root"]
+  },
+  "Buckinghamshire New University": {
+    "title": "#main-content h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Course overview :: #main-content",
+      "Entry requirements :: section[id*=\"entry\"]",
+      "Fees and funding :: section[id*=\"fee\"]"
+    ],
+    "strip": ["script", "noscript", "nav"]
+  },
+  "Canterbury Christ Church University": {
+    "title": "main h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Course overview :: .course-intro-composer",
+      "Entry requirements :: #courseEntryRequirements",
+      "Fees :: #courseFees",
+      "Modules :: #courseModules"
+    ],
+    "strip": ["script", "noscript", "#courseRelatedCourses", ".related-courses", ".carousel-root"]
+  },
+  "Cardiff Metropolitan University": {
+    "title": "#main-content h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Course overview :: #main-content",
+      "Entry requirements :: section[id*=\"entry\"]",
+      "Fees and funding :: section[id*=\"fee\"]"
+    ],
+    "strip": ["script", "noscript", "nav"]
+  },
+  "Edinburgh Napier University": {
+    "title": "h1.courseHeaderText",
+    "expand_tabs": true,
+    "blocks": [
+      "Course overview :: section.courseOverview",
+      "Course details :: #courseDetails",
+      "Entry requirements :: #courseEntry",
+      "Fees :: #courseFees"
+    ],
+    "strip": ["script", "noscript", ".r-tabs-nav", ".courseHeader", "#toolbar-logo"]
+  },
+  "Keele University": {
+    "title": "#page-wrapper h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Course overview :: .ug-summary-container",
+      "Course content :: .module.layout-content-module",
+      "Entry requirements :: .module--course",
+      "Fees and funding :: .module--coursekfacts"
+    ],
+    "strip": ["script", "noscript", "#related-courses-list", ".auto-related-courses", ".tab__button"]
+  },
+  "Kingston University": {
+    "title": "#main-content h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Why choose this course :: #why-choose-this-course",
+      "Course content :: #course-content",
+      "Entry requirements :: #entry-requirements",
+      "Fees and funding :: #fees-and-funding"
+    ],
+    "strip": ["script", "noscript", "nav", ".c-accordion-item__icon-wrapper"]
+  },
+  "London South Bank University": {
+    "title": "h1.top-banner__main-title",
+    "expand_tabs": true,
+    "blocks": [
+      "Overview :: #overview",
+      "Entry requirements :: #entry-requirements",
+      "Fees :: #fees",
+      "Course content :: #course-content"
+    ],
+    "strip": ["script", "noscript", ".main-tabs__tab-label", ".js-tablist__link"]
+  },
+  "Ravensbourne University London": {
+    "title": "h1[data-js-hook=\"hero-title\"]",
+    "expand_tabs": true,
+    "blocks": [
+      "Main content :: #main-content",
+      "Entry requirements :: #entry-requirements",
+      "Overview slices :: .slice--type--slice-content"
+    ],
+    "strip": ["script", "noscript", "nav"]
+  },
+  "Teesside University": {
+    "title": "#coursepage h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Course page :: #coursepage",
+      "Header summary :: .coursepageheadercontent",
+      "Main content :: #coursepage .coursecontent"
+    ],
+    "strip": ["script", "noscript", "#sectionmenu", "#mainmenu"]
+  },
+  "University of Birmingham": {
+    "title": "h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Course summary :: #course-summary",
+      "Entry requirements :: #entry-requirements",
+      "Fees and funding :: #fees-and-funding",
+      "Modules :: #modules-and-programme-structure"
+    ],
+    "strip": ["script", "noscript", ".staff-listing-carousel", ".related-courses__card-item", ".scroll-top-break__link"]
+  },
+  "University of Derby": {
+    "title": ".course-hero h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Course hero :: .course-hero",
+      "Entry requirements :: #entry-requirements",
+      "Course sections :: .text-block-course-page-heading"
+    ],
+    "strip": ["script", "noscript", ".course-hero-navigation", ".share-button"]
+  },
+  "University of East London": {
+    "title": ".postgraduate--course-page h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Course page :: .page-node-type-course-page main",
+      "Overview :: .coh-ce-cpt_course_page_progressive_reve-89a86a32",
+      "Entry requirements :: section[id*=\"entry-requirements\"]",
+      "Fees :: section[id*=\"fees\"]"
+    ],
+    "strip": ["script", "noscript", "nav", ".progressive-reveal-modal", ".coh-modal"]
+  },
+  "University of Essex": {
+    "title": "#main-content h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Course overview :: #main-content",
+      "Entry requirements :: section[id*=\"entry\"]",
+      "Fees and funding :: section[id*=\"fee\"]"
+    ],
+    "strip": ["script", "noscript", "nav"]
+  },
+  "University of Greenwich": {
+    "title": "h1.gre-long-title",
+    "expand_tabs": true,
+    "blocks": [
+      "Overview :: .gre-prog-overview",
+      "Entry requirements :: .prog-entry-requirements",
+      "Fees :: .prog-fees",
+      "Main content :: #gre-main-content"
+    ],
+    "strip": ["script", "noscript", "nav", ".prog-country-entry-requirements select"]
+  },
+  "University of Huddersfield": {
+    "title": ".coursefinder-course-overview h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Overview :: .coursefinder-course-overview",
+      "Entry requirements :: #section-entry-requirements",
+      "Fees and finance :: #section-fees-and-finance"
+    ],
+    "strip": ["script", "noscript", ".coursefinder-accordion-btn", "#accred", ".content-tabs__nav"]
+  },
+  "University of Hull": {
+    "title": "main h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Course content :: main"
+    ],
+    "strip": ["script", "noscript", ".carousel", "youtube-video", "#main-menu"]
+  },
+  "University of Law": {
+    "title": ".course-details-header h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Course intro :: #course-details-header-intro",
+      "Course details :: .accordion--course-details",
+      "Fees and applying :: #fees-and-applying"
+    ],
+    "strip": ["script", "noscript", "nav", ".course-details-header img"]
+  },
+  "University of Roehampton": {
+    "title": "#wrapper h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Course overview :: #wrapper > section:first-of-type",
+      "Main content :: #wrapper main"
+    ],
+    "strip": ["script", "noscript", ".accordion-input", "#navigation", "#search-bar"]
+  },
+  "University of Salford": {
+    "title": "h1.uos-course__header__title",
+    "expand_tabs": true,
+    "blocks": [
+      "Overview :: #overview",
+      "Entry requirements :: section[id*=\"entry\"]",
+      "Fees :: #fees",
+      "Main content :: .uos-course__main-content"
+    ],
+    "strip": ["script", "noscript", "nav", ".uos-course-accordion__trigger"]
+  },
+  "University of South Wales": {
+    "title": "main h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Main content :: #main-content",
+      "Course detail :: .course-detail-switcher"
+    ],
+    "strip": ["script", "noscript", "nav"]
+  },
+  "University of Suffolk": {
+    "title": "main h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Overview :: .accordion-container",
+      "Entry requirements :: section[id^=\"entry-requirements\"]",
+      "Fees :: section[id^=\"fees\"]"
+    ],
+    "strip": ["script", "noscript", "nav", ".accordion-button"]
+  },
+  "University of Surrey": {
+    "title": "#main-content h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Main content :: #main-content",
+      "Course sections :: .layout-container .region-content"
+    ],
+    "strip": ["script", "noscript", "nav", ".country-btn"]
+  },
+  "University of Wales Trinity Saint David": {
+    "title": "#main-content h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Main content :: #main-content",
+      "Course body :: .main-content"
+    ],
+    "strip": ["script", "noscript", "nav"]
+  },
+  "University of West London": {
+    "title": ".page-header h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Overview :: #overview",
+      "Course content :: #course-content",
+      "Entry requirements :: section[id*=\"entry\"]",
+      "Fees :: section[id*=\"fees\"]"
+    ],
+    "strip": ["script", "noscript", ".accordion-title", ".mobile-expander--bar"]
+  },
+  "University of Winchester": {
+    "title": "#main-content h1",
+    "expand_tabs": true,
+    "blocks": [
+      "Course overview :: #uow-course-overview",
+      "Entry requirements :: #uow-course-entry-requirements-link",
+      "Fees :: #uow-course-tuition-fees",
+      "Course features :: #uow-course-features-link"
+    ],
+    "strip": ["script", "noscript", ".uow-course-content__nav", ".clearing-banner"]
+  }
+}

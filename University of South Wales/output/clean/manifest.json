@@ -1,0 +1,2371 @@
+{
+  "university": "University of South Wales",
+  "cleaned_at": "2026-08-28",
+  "courses": [
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/-bsc-hons-nursing-learning-disabilities",
+      "source_html": "course_pages/BSc (Hons) Nursing (Learning Disabilities) - University of South Wales.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-nursing-learning-disabilities.md",
+      "source_url": "https://www.southwales.ac.uk/courses/-bsc-hons-nursing-learning-disabilities/",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/acerthe-critical-care",
+      "source_html": "course_pages/Just a moment.html",
+      "clean_md": "clean/courses/other/acerthe-critical-care.md",
+      "source_url": "https://www.southwales.ac.uk/courses/acerthe-critical-care",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/association-of-chartered-certified-accountants-acca",
+      "source_html": "course_pages/Just a moment_courses_association-of-chartered-certified-accountants-acca.html",
+      "clean_md": "clean/courses/other/association-of-chartered-certified-accountants-acca.md",
+      "source_url": "https://www.southwales.ac.uk/courses/association-of-chartered-certified-accountants-acca",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-fashion-marketing",
+      "source_html": "course_pages/Just a moment_courses_ba-fashion-marketing.html",
+      "clean_md": "clean/courses/undergraduate/ba-fashion-marketing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-fashion-marketing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-accounting-and-finance",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-accounting-and-finance.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-accounting-and-finance.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-accounting-and-finance",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-accounting-and-finance-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-accounting-and-finance-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/ba-hons-accounting-and-finance-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-accounting-and-finance-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-advertising",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-advertising.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-advertising.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-advertising",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-animation",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-animation.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-animation.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-animation",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-animation-2d-and-stop-motion",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-animation-2d-and-stop-motion.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-animation-2d-and-stop-motion.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-animation-2d-and-stop-motion",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-business-and-management",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-business-and-management.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-business-and-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-business-and-management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-business-and-management-creative-industries",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-business-and-management-creative-industries.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-business-and-management-creative-industries.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-business-and-management-creative-industries",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-business-and-management-entrepreneurship",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-business-and-management-entrepreneurship.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-business-and-management-entrepreneurship.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-business-and-management-entrepreneurship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-business-and-management-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-business-and-management-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/ba-hons-business-and-management-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-business-and-management-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-business-management-accounting-and-finance-top-up",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-business-management-accounting-and-finance-top-up.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-business-management-accounting-and-finance-top-up.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-business-management-accounting-and-finance-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-business-management-human-resource-management-top-up",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-business-management-human-resource-management-top-up.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-business-management-human-resource-management-top-up.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-business-management-human-resource-management-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-business-management-marketing-top-up",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-business-management-marketing-top-up.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-business-management-marketing-top-up.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-business-management-marketing-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-business-management-supply-chain-management-top-up",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-business-management-supply-chain-management-top-up.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-business-management-supply-chain-management-top-up.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-business-management-supply-chain-management-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-business-management-top-up",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-business-management-top-up.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-business-management-top-up.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-business-management-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-counselling-and-therapeutic-practice",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-counselling-and-therapeutic-practice.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-counselling-and-therapeutic-practice.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-counselling-and-therapeutic-practice",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-creative-and-therapeutic-arts",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-creative-and-therapeutic-arts.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-creative-and-therapeutic-arts.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-creative-and-therapeutic-arts",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-documentary-photography",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-documentary-photography.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-documentary-photography.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-documentary-photography",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-early-years-education-top-up",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-early-years-education-top-up.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-early-years-education-top-up.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-early-years-education-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-education",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-education.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-education.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-education",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-fashion-design",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-fashion-design.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-fashion-design.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-fashion-design",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-film",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-film.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-film.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-film",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-game-art",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-game-art.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-game-art.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-game-art",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-games-design",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-games-design.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-games-design.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-games-design",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-graphic-communication",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-graphic-communication.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-graphic-communication.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-graphic-communication",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-history",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-history.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-history.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-history",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-history-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-history-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/ba-hons-history-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-history-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-illustration",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-illustration.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-illustration.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-illustration",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-interior-design",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-interior-design.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-interior-design.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-interior-design",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-international-business-top-up",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-international-business-top-up.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-international-business-top-up.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-international-business-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-media-culture-and-journalism",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-media-culture-and-journalism.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-media-culture-and-journalism.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-media-culture-and-journalism",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-media-production",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-media-production.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-media-production.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-media-production",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-music-producing",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-music-producing.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-music-producing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-music-producing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-performance-and-media",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-performance-and-media.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-performance-and-media.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-performance-and-media",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-photography",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-photography.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-photography.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-photography",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-popular-and-commercial-music",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-popular-and-commercial-music.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-popular-and-commercial-music.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-popular-and-commercial-music",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-primary-initial-teacher-education-with-qts",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-primary-initial-teacher-education-with-qts.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-primary-initial-teacher-education-with-qts.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-primary-initial-teacher-education-with-qts",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-primary-initial-teacher-education-with-qts-welsh-medium",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-primary-initial-teacher-education-with-qts-welsh-medium.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-primary-initial-teacher-education-with-qts-welsh-medium.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-primary-initial-teacher-education-with-qts-welsh-medium",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-public-services",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-public-services.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-public-services.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-public-services",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-public-services-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-public-services-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/ba-hons-public-services-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-public-services-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-sports-business-and-management",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-sports-business-and-management.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-sports-business-and-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-sports-business-and-management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-sports-journalism",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-sports-journalism.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-sports-journalism.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-sports-journalism",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-theatre-and-drama",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-theatre-and-drama.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-theatre-and-drama.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-theatre-and-drama",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-tv-and-film-set-design",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-tv-and-film-set-design.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-tv-and-film-set-design.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-tv-and-film-set-design",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-visual-effects-and-motion-graphics",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-visual-effects-and-motion-graphics.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-visual-effects-and-motion-graphics.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-visual-effects-and-motion-graphics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ba-hons-working-with-children-and-families",
+      "source_html": "course_pages/Just a moment_courses_ba-hons-working-with-children-and-families.html",
+      "clean_md": "clean/courses/undergraduate/ba-hons-working-with-children-and-families.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ba-hons-working-with-children-and-families",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/beng-hons-aeronautical-engineering",
+      "source_html": "course_pages/Just a moment_courses_beng-hons-aeronautical-engineering.html",
+      "clean_md": "clean/courses/undergraduate/beng-hons-aeronautical-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/beng-hons-aeronautical-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/beng-hons-aeronautical-engineering-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_beng-hons-aeronautical-engineering-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/beng-hons-aeronautical-engineering-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/beng-hons-aeronautical-engineering-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/beng-hons-aerospace-engineering",
+      "source_html": "course_pages/Just a moment_courses_beng-hons-aerospace-engineering.html",
+      "clean_md": "clean/courses/undergraduate/beng-hons-aerospace-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/beng-hons-aerospace-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/beng-hons-aerospace-engineering-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_beng-hons-aerospace-engineering-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/beng-hons-aerospace-engineering-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/beng-hons-aerospace-engineering-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/beng-hons-civil-and-construction-engineering",
+      "source_html": "course_pages/Just a moment_courses_beng-hons-civil-and-construction-engineering.html",
+      "clean_md": "clean/courses/undergraduate/beng-hons-civil-and-construction-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/beng-hons-civil-and-construction-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/beng-hons-civil-engineering",
+      "source_html": "course_pages/Just a moment_courses_beng-hons-civil-engineering.html",
+      "clean_md": "clean/courses/undergraduate/beng-hons-civil-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/beng-hons-civil-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/beng-hons-electrical-and-electronic-engineering",
+      "source_html": "course_pages/Just a moment_courses_beng-hons-electrical-and-electronic-engineering.html",
+      "clean_md": "clean/courses/undergraduate/beng-hons-electrical-and-electronic-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/beng-hons-electrical-and-electronic-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/beng-hons-electrical-and-electronic-engineering-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_beng-hons-electrical-and-electronic-engineering-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/beng-hons-electrical-and-electronic-engineering-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/beng-hons-electrical-and-electronic-engineering-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/beng-hons-mechanical-engineering",
+      "source_html": "course_pages/Just a moment_courses_beng-hons-mechanical-engineering.html",
+      "clean_md": "clean/courses/undergraduate/beng-hons-mechanical-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/beng-hons-mechanical-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/beng-hons-mechanical-engineering-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_beng-hons-mechanical-engineering-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/beng-hons-mechanical-engineering-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/beng-hons-mechanical-engineering-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/beng-hons-mechanical-systems-engineering",
+      "source_html": "course_pages/Just a moment_courses_beng-hons-mechanical-systems-engineering.html",
+      "clean_md": "clean/courses/undergraduate/beng-hons-mechanical-systems-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/beng-hons-mechanical-systems-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-aircraft-engineering-and-maintenance-systems-top-up",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-aircraft-engineering-and-maintenance-systems-top-up.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-aircraft-engineering-and-maintenance-systems-top-up.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-aircraft-engineering-and-maintenance-systems-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-aircraft-maintenance-engineering",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-aircraft-maintenance-engineering.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-aircraft-maintenance-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-aircraft-maintenance-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-aircraft-maintenance-engineering-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-aircraft-maintenance-engineering-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-aircraft-maintenance-engineering-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-aircraft-maintenance-engineering-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-applied-computing-top-up",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-applied-computing-top-up.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-applied-computing-top-up.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-applied-computing-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-applied-cyber-security",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-applied-cyber-security.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-applied-cyber-security.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-applied-cyber-security",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-applied-cyber-security-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-applied-cyber-security-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-applied-cyber-security-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-applied-cyber-security-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-biology",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-biology.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-biology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-biology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-biology-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-biology-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-biology-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-biology-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-biomedical-science",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-biomedical-science.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-biomedical-science.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-biomedical-science",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-biomedical-science-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-biomedical-science-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-biomedical-science-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-biomedical-science-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-building-surveying",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-building-surveying.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-building-surveying.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-building-surveying",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-building-surveying-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-building-surveying-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-building-surveying-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-building-surveying-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-childhood-development",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-childhood-development.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-childhood-development.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-childhood-development",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-childhood-development-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-childhood-development-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-childhood-development-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-childhood-development-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-childhood-studies-top-up",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-childhood-studies-top-up.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-childhood-studies-top-up.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-childhood-studies-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-civil-engineering-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-civil-engineering-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-civil-engineering-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-civil-engineering-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-community-football-coaching-and-administration-top-up",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-community-football-coaching-and-administration-top-up.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-community-football-coaching-and-administration-top-up.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-community-football-coaching-and-administration-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-computer-science",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-computer-science.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-computer-science.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-computer-science",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-computer-science-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-computer-science-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-computer-science-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-computer-science-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-computing",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-computing.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-computing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-computing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-computing-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-computing-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-computing-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-computing-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-construction-project-management",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-construction-project-management.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-construction-project-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-construction-project-management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-construction-project-management-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-construction-project-management-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-construction-project-management-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-construction-project-management-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-criminology",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-criminology.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-criminology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-criminology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-criminology-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-criminology-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-criminology-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-criminology-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-criminology-with-psychology",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-criminology-with-psychology.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-criminology-with-psychology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-criminology-with-psychology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-criminology-with-youth-justice",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-criminology-with-youth-justice.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-criminology-with-youth-justice.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-criminology-with-youth-justice",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-criminology-with-youth-justice-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-criminology-with-youth-justice-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-criminology-with-youth-justice-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-criminology-with-youth-justice-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-digital-forensics",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-digital-forensics.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-digital-forensics.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-digital-forensics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-digital-forensics-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-digital-forensics-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-digital-forensics-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-digital-forensics-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-electrical-and-electronic-engineering-top-up",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-electrical-and-electronic-engineering-top-up.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-electrical-and-electronic-engineering-top-up.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-electrical-and-electronic-engineering-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-football-coaching-and-performance",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-football-coaching-and-performance.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-football-coaching-and-performance.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-football-coaching-and-performance",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-football-coaching-development-and-administration",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-football-coaching-development-and-administration.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-football-coaching-development-and-administration.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-football-coaching-development-and-administration",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-forensic-investigation",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-forensic-investigation.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-forensic-investigation.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-forensic-investigation",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-forensic-investigation-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-forensic-investigation-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-forensic-investigation-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-forensic-investigation-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-forensic-science",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-forensic-science.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-forensic-science.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-forensic-science",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-forensic-science-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-forensic-science-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-forensic-science-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-forensic-science-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-health-wellbeing-and-social-care-management",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-health-wellbeing-and-social-care-management.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-health-wellbeing-and-social-care-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-health-wellbeing-and-social-care-management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-health-wellbeing-and-social-care-management-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-health-wellbeing-and-social-care-management-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-health-wellbeing-and-social-care-management-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-health-wellbeing-and-social-care-management-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-logistics-procurement-and-supply-chain-management",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-logistics-procurement-and-supply-chain-management.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-logistics-procurement-and-supply-chain-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-logistics-procurement-and-supply-chain-management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-marketing",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-marketing.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-marketing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-marketing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-marketing-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-marketing-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-marketing-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-marketing-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-medical-sciences",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-medical-sciences.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-medical-sciences.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-medical-sciences",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-medicinal-and-biological-chemistry",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-medicinal-and-biological-chemistry.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-medicinal-and-biological-chemistry.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-medicinal-and-biological-chemistry",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-medicinal-and-biological-chemistry-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-medicinal-and-biological-chemistry-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-medicinal-and-biological-chemistry-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-medicinal-and-biological-chemistry-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-midwifery",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-midwifery.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-midwifery.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-midwifery",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-nursing-adult",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-nursing-adult.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-nursing-adult.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-nursing-adult",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-nursing-adult-flexible-learning",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-nursing-adult-flexible-learning.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-nursing-adult-flexible-learning.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-nursing-adult-flexible-learning",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-nursing-child",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-nursing-child.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-nursing-child.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-nursing-child",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-nursing-mental-health",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-nursing-mental-health.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-nursing-mental-health.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-nursing-mental-health",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-nursing-mental-health-flexible-learning",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-nursing-mental-health-flexible-learning.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-nursing-mental-health-flexible-learning.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-nursing-mental-health-flexible-learning",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-occupational-therapy",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-occupational-therapy.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-occupational-therapy.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-occupational-therapy",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-operating-department-practice-odp",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-operating-department-practice-odp.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-operating-department-practice-odp.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-operating-department-practice-odp",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-pharmaceutical-science",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-pharmaceutical-science.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-pharmaceutical-science.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-pharmaceutical-science",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-pharmaceutical-science-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-pharmaceutical-science-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-pharmaceutical-science-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-pharmaceutical-science-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-physiotherapy",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-physiotherapy.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-physiotherapy.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-physiotherapy",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-professional-policing",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-professional-policing.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-professional-policing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-professional-policing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-professional-policing-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-professional-policing-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-professional-policing-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-professional-policing-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-project-management-construction",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-project-management-construction.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-project-management-construction.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-project-management-construction",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-psychology",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-psychology.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-psychology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-psychology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-psychology-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-psychology-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-psychology-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-psychology-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-psychology-with-counselling",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-psychology-with-counselling.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-psychology-with-counselling.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-psychology-with-counselling",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-psychology-with-developmental-disorders",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-psychology-with-developmental-disorders.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-psychology-with-developmental-disorders.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-psychology-with-developmental-disorders",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-quantity-surveying-and-commercial-management",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-quantity-surveying-and-commercial-management.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-quantity-surveying-and-commercial-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-quantity-surveying-and-commercial-management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-quantity-surveying-and-commercial-management-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-quantity-surveying-and-commercial-management-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-quantity-surveying-and-commercial-management-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-quantity-surveying-and-commercial-management-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-real-estate",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-real-estate.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-real-estate.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-real-estate",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-real-estate-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-real-estate-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-real-estate-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-real-estate-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-social-work",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-social-work.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-social-work.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-social-work",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-sound-lighting-and-live-event-technology",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-sound-lighting-and-live-event-technology.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-sound-lighting-and-live-event-technology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-sound-lighting-and-live-event-technology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-sport-and-exercise-science",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-sport-and-exercise-science.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-sport-and-exercise-science.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-sport-and-exercise-science",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-sport-and-exercise-therapy",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-sport-and-exercise-therapy.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-sport-and-exercise-therapy.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-sport-and-exercise-therapy",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-sports-coaching-and-development-top-up",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-sports-coaching-and-development-top-up.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-sports-coaching-and-development-top-up.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-sports-coaching-and-development-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-sports-coaching-and-physical-education",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-sports-coaching-and-physical-education.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-sports-coaching-and-physical-education.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-sports-coaching-and-physical-education",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-strength-and-conditioning",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-strength-and-conditioning.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-strength-and-conditioning.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-strength-and-conditioning",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-wildlife-ecology-and-conservation",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-wildlife-ecology-and-conservation.html",
+      "clean_md": "clean/courses/undergraduate/bsc-hons-wildlife-ecology-and-conservation.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-wildlife-ecology-and-conservation",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/bsc-hons-wildlife-ecology-and-conservation-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_bsc-hons-wildlife-ecology-and-conservation-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/bsc-hons-wildlife-ecology-and-conservation-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/bsc-hons-wildlife-ecology-and-conservation-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/certhe-community-health-and-wellbeing",
+      "source_html": "course_pages/Just a moment_courses_certhe-community-health-and-wellbeing.html",
+      "clean_md": "clean/courses/other/certhe-community-health-and-wellbeing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/certhe-community-health-and-wellbeing",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/certhe-health-care-nursing-support-worker-education",
+      "source_html": "course_pages/Just a moment_courses_certhe-health-care-nursing-support-worker-education.html",
+      "clean_md": "clean/courses/other/certhe-health-care-nursing-support-worker-education.md",
+      "source_url": "https://www.southwales.ac.uk/courses/certhe-health-care-nursing-support-worker-education",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/course-listing",
+      "source_html": "course_pages/Just a moment_courses_course-listing.html",
+      "clean_md": "clean/courses/other/course-listing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/course-listing",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/doctor-of-business-administration-dba",
+      "source_html": "course_pages/Just a moment_courses_doctor-of-business-administration-dba.html",
+      "clean_md": "clean/courses/other/doctor-of-business-administration-dba.md",
+      "source_url": "https://www.southwales.ac.uk/courses/doctor-of-business-administration-dba",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/essential-english-for-teaching",
+      "source_html": "course_pages/Just a moment_courses_essential-english-for-teaching.html",
+      "clean_md": "clean/courses/other/essential-english-for-teaching.md",
+      "source_url": "https://www.southwales.ac.uk/courses/essential-english-for-teaching",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/essential-mathematics-for-teaching",
+      "source_html": "course_pages/Just a moment_courses_essential-mathematics-for-teaching.html",
+      "clean_md": "clean/courses/other/essential-mathematics-for-teaching.md",
+      "source_url": "https://www.southwales.ac.uk/courses/essential-mathematics-for-teaching",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/essential-science-for-teaching",
+      "source_html": "course_pages/Just a moment_courses_essential-science-for-teaching.html",
+      "clean_md": "clean/courses/other/essential-science-for-teaching.md",
+      "source_url": "https://www.southwales.ac.uk/courses/essential-science-for-teaching",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/foundation-degree-fdsc-community-football-coaching-and-development",
+      "source_html": "course_pages/Just a moment_courses_foundation-degree-fdsc-community-football-coaching-and-development.html",
+      "clean_md": "clean/courses/foundation/foundation-degree-fdsc-community-football-coaching-and-development.md",
+      "source_url": "https://www.southwales.ac.uk/courses/foundation-degree-fdsc-community-football-coaching-and-development",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/hnc-built-environment",
+      "source_html": "course_pages/Just a moment_courses_hnc-built-environment.html",
+      "clean_md": "clean/courses/other/hnc-built-environment.md",
+      "source_url": "https://www.southwales.ac.uk/courses/hnc-built-environment",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/hnc-civil-engineering",
+      "source_html": "course_pages/Just a moment_courses_hnc-civil-engineering.html",
+      "clean_md": "clean/courses/other/hnc-civil-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/hnc-civil-engineering",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/hnc-mechanical-engineering",
+      "source_html": "course_pages/Just a moment_courses_hnc-mechanical-engineering.html",
+      "clean_md": "clean/courses/other/hnc-mechanical-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/hnc-mechanical-engineering",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/hnd-mechanical-engineering",
+      "source_html": "course_pages/Just a moment_courses_hnd-mechanical-engineering.html",
+      "clean_md": "clean/courses/other/hnd-mechanical-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/hnd-mechanical-engineering",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/law-and-criminology-llb-hons",
+      "source_html": "course_pages/Just a moment_courses_law-and-criminology-llb-hons.html",
+      "clean_md": "clean/courses/undergraduate/law-and-criminology-llb-hons.md",
+      "source_url": "https://www.southwales.ac.uk/courses/law-and-criminology-llb-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/law-including-foundation-year---llb-hons",
+      "source_html": "course_pages/Just a moment_courses_law-including-foundation-year---llb-hons.html",
+      "clean_md": "clean/courses/foundation/law-including-foundation-year---llb-hons.md",
+      "source_url": "https://www.southwales.ac.uk/courses/law-including-foundation-year---llb-hons",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/llb-hons-law",
+      "source_html": "course_pages/Just a moment_courses_llb-hons-law.html",
+      "clean_md": "clean/courses/undergraduate/llb-hons-law.md",
+      "source_url": "https://www.southwales.ac.uk/courses/llb-hons-law",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/llb-hons-law-accelerated-route",
+      "source_html": "course_pages/Just a moment_courses_llb-hons-law-accelerated-route.html",
+      "clean_md": "clean/courses/undergraduate/llb-hons-law-accelerated-route.md",
+      "source_url": "https://www.southwales.ac.uk/courses/llb-hons-law-accelerated-route",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/llb-hons-law-and-legal-practice-sqe",
+      "source_html": "course_pages/Just a moment_courses_llb-hons-law-and-legal-practice-sqe.html",
+      "clean_md": "clean/courses/undergraduate/llb-hons-law-and-legal-practice-sqe.md",
+      "source_url": "https://www.southwales.ac.uk/courses/llb-hons-law-and-legal-practice-sqe",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/llm-laws",
+      "source_html": "course_pages/Just a moment_courses_llm-laws.html",
+      "clean_md": "clean/courses/postgraduate/llm-laws.md",
+      "source_url": "https://www.southwales.ac.uk/courses/llm-laws",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/llm-laws-international-commercial-law",
+      "source_html": "course_pages/Just a moment_courses_llm-laws-international-commercial-law.html",
+      "clean_md": "clean/courses/postgraduate/llm-laws-international-commercial-law.md",
+      "source_url": "https://www.southwales.ac.uk/courses/llm-laws-international-commercial-law",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/llm-legal-practice",
+      "source_html": "course_pages/Just a moment_courses_llm-legal-practice.html",
+      "clean_md": "clean/courses/postgraduate/llm-legal-practice.md",
+      "source_url": "https://www.southwales.ac.uk/courses/llm-legal-practice",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/llm-professional-practice-sqe",
+      "source_html": "course_pages/Just a moment_courses_llm-professional-practice-sqe.html",
+      "clean_md": "clean/courses/postgraduate/llm-professional-practice-sqe.md",
+      "source_url": "https://www.southwales.ac.uk/courses/llm-professional-practice-sqe",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-animation",
+      "source_html": "course_pages/Just a moment_courses_ma-animation.html",
+      "clean_md": "clean/courses/postgraduate/ma-animation.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-animation",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-art-psychotherapy",
+      "source_html": "course_pages/Just a moment_courses_ma-art-psychotherapy.html",
+      "clean_md": "clean/courses/postgraduate/ma-art-psychotherapy.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-art-psychotherapy",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-arts-health-and-wellbeing",
+      "source_html": "course_pages/Just a moment_courses_ma-arts-health-and-wellbeing.html",
+      "clean_md": "clean/courses/postgraduate/ma-arts-health-and-wellbeing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-arts-health-and-wellbeing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-buddhist-studies",
+      "source_html": "course_pages/Just a moment_courses_ma-buddhist-studies.html",
+      "clean_md": "clean/courses/postgraduate/ma-buddhist-studies.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-buddhist-studies",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-camh-child-and-adolescent-mental-health",
+      "source_html": "course_pages/Just a moment_courses_ma-camh-child-and-adolescent-mental-health.html",
+      "clean_md": "clean/courses/postgraduate/ma-camh-child-and-adolescent-mental-health.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-camh-child-and-adolescent-mental-health",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-education-innovation-in-learning-and-teaching",
+      "source_html": "course_pages/Just a moment_courses_ma-education-innovation-in-learning-and-teaching.html",
+      "clean_md": "clean/courses/postgraduate/ma-education-innovation-in-learning-and-teaching.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-education-innovation-in-learning-and-teaching",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-education-wales",
+      "source_html": "course_pages/Just a moment_courses_ma-education-wales.html",
+      "clean_md": "clean/courses/postgraduate/ma-education-wales.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-education-wales",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-education-wales-additional-learning-needs",
+      "source_html": "course_pages/Just a moment_courses_ma-education-wales-additional-learning-needs.html",
+      "clean_md": "clean/courses/postgraduate/ma-education-wales-additional-learning-needs.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-education-wales-additional-learning-needs",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-education-wales-curriculum",
+      "source_html": "course_pages/Just a moment_courses_ma-education-wales-curriculum.html",
+      "clean_md": "clean/courses/postgraduate/ma-education-wales-curriculum.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-education-wales-curriculum",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-education-wales-equity-in-education",
+      "source_html": "course_pages/Just a moment_courses_ma-education-wales-equity-in-education.html",
+      "clean_md": "clean/courses/postgraduate/ma-education-wales-equity-in-education.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-education-wales-equity-in-education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-education-wales-leadership",
+      "source_html": "course_pages/Just a moment_courses_ma-education-wales-leadership.html",
+      "clean_md": "clean/courses/postgraduate/ma-education-wales-leadership.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-education-wales-leadership",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-film-cinematography",
+      "source_html": "course_pages/Just a moment_courses_ma-film-cinematography.html",
+      "clean_md": "clean/courses/postgraduate/ma-film-cinematography.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-film-cinematography",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-film-directing",
+      "source_html": "course_pages/Just a moment_courses_ma-film-directing.html",
+      "clean_md": "clean/courses/postgraduate/ma-film-directing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-film-directing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-film-documentary",
+      "source_html": "course_pages/Just a moment_courses_ma-film-documentary.html",
+      "clean_md": "clean/courses/postgraduate/ma-film-documentary.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-film-documentary",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-film-editing",
+      "source_html": "course_pages/Just a moment_courses_ma-film-editing.html",
+      "clean_md": "clean/courses/postgraduate/ma-film-editing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-film-editing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-film-production-management",
+      "source_html": "course_pages/Just a moment_courses_ma-film-production-management.html",
+      "clean_md": "clean/courses/postgraduate/ma-film-production-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-film-production-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-film-screenwriting",
+      "source_html": "course_pages/Just a moment_courses_ma-film-screenwriting.html",
+      "clean_md": "clean/courses/postgraduate/ma-film-screenwriting.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-film-screenwriting",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-games",
+      "source_html": "course_pages/Just a moment_courses_ma-games.html",
+      "clean_md": "clean/courses/postgraduate/ma-games.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-games",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-graphic-communication",
+      "source_html": "course_pages/Just a moment_courses_ma-graphic-communication.html",
+      "clean_md": "clean/courses/postgraduate/ma-graphic-communication.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-graphic-communication",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-integrative-counselling-and-psychotherapy",
+      "source_html": "course_pages/Just a moment_courses_ma-integrative-counselling-and-psychotherapy.html",
+      "clean_md": "clean/courses/postgraduate/ma-integrative-counselling-and-psychotherapy.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-integrative-counselling-and-psychotherapy",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-leadership-and-management-education",
+      "source_html": "course_pages/Just a moment_courses_ma-leadership-and-management-education.html",
+      "clean_md": "clean/courses/postgraduate/ma-leadership-and-management-education.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-leadership-and-management-education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-leadership-in-sport",
+      "source_html": "course_pages/Just a moment_courses_ma-leadership-in-sport.html",
+      "clean_md": "clean/courses/postgraduate/ma-leadership-in-sport.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-leadership-in-sport",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-msc-masters-by-research",
+      "source_html": "course_pages/Just a moment_courses_ma-msc-masters-by-research.html",
+      "clean_md": "clean/courses/postgraduate/ma-msc-masters-by-research.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-msc-masters-by-research",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-music-production-and-songwriting",
+      "source_html": "course_pages/Just a moment_courses_ma-music-production-and-songwriting.html",
+      "clean_md": "clean/courses/postgraduate/ma-music-production-and-songwriting.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-music-production-and-songwriting",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-music-therapy",
+      "source_html": "course_pages/Just a moment_courses_ma-music-therapy.html",
+      "clean_md": "clean/courses/postgraduate/ma-music-therapy.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-music-therapy",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-sen-aln-autism",
+      "source_html": "course_pages/Just a moment_courses_ma-sen-aln-autism.html",
+      "clean_md": "clean/courses/postgraduate/ma-sen-aln-autism.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-sen-aln-autism",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-senaln-additional-learning-needs",
+      "source_html": "course_pages/Just a moment_courses_ma-senaln-additional-learning-needs.html",
+      "clean_md": "clean/courses/postgraduate/ma-senaln-additional-learning-needs.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-senaln-additional-learning-needs",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-tesol-teaching-english-to-speakers-of-other-languages",
+      "source_html": "course_pages/Just a moment_courses_ma-tesol-teaching-english-to-speakers-of-other-languages.html",
+      "clean_md": "clean/courses/postgraduate/ma-tesol-teaching-english-to-speakers-of-other-languages.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-tesol-teaching-english-to-speakers-of-other-languages",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-theatre-and-performance",
+      "source_html": "course_pages/Just a moment_courses_ma-theatre-and-performance.html",
+      "clean_md": "clean/courses/postgraduate/ma-theatre-and-performance.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-theatre-and-performance",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/ma-working-for-children-and-young-people-youth-work-initial-qualifying",
+      "source_html": "course_pages/Just a moment_courses_ma-working-for-children-and-young-people-youth-work-initial-qualifying.html",
+      "clean_md": "clean/courses/postgraduate/ma-working-for-children-and-young-people-youth-work-initial-qualifying.md",
+      "source_url": "https://www.southwales.ac.uk/courses/ma-working-for-children-and-young-people-youth-work-initial-qualifying",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/mba-master-of-business-administration",
+      "source_html": "course_pages/Just a moment_courses_mba-master-of-business-administration.html",
+      "clean_md": "clean/courses/postgraduate/mba-master-of-business-administration.md",
+      "source_url": "https://www.southwales.ac.uk/courses/mba-master-of-business-administration",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/mba-master-of-business-administration-global",
+      "source_html": "course_pages/Just a moment_courses_mba-master-of-business-administration-global.html",
+      "clean_md": "clean/courses/postgraduate/mba-master-of-business-administration-global.md",
+      "source_url": "https://www.southwales.ac.uk/courses/mba-master-of-business-administration-global",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/mba-master-of-business-administration-global-financial-services",
+      "source_html": "course_pages/Just a moment_courses_mba-master-of-business-administration-global-financial-services.html",
+      "clean_md": "clean/courses/postgraduate/mba-master-of-business-administration-global-financial-services.md",
+      "source_url": "https://www.southwales.ac.uk/courses/mba-master-of-business-administration-global-financial-services",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/mba-master-of-business-administration-global-hospitality-management",
+      "source_html": "course_pages/Just a moment_courses_mba-master-of-business-administration-global-hospitality-management.html",
+      "clean_md": "clean/courses/postgraduate/mba-master-of-business-administration-global-hospitality-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/mba-master-of-business-administration-global-hospitality-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/mba-master-of-business-administration-global-operations-and-supply-chain-management",
+      "source_html": "course_pages/Just a moment_courses_mba-master-of-business-administration-global-operations-and-supply-chain-management.html",
+      "clean_md": "clean/courses/postgraduate/mba-master-of-business-administration-global-operations-and-supply-chain-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/mba-master-of-business-administration-global-operations-and-supply-chain-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/mba-master-of-business-administration-global-sales-and-marketing",
+      "source_html": "course_pages/Just a moment_courses_mba-master-of-business-administration-global-sales-and-marketing.html",
+      "clean_md": "clean/courses/postgraduate/mba-master-of-business-administration-global-sales-and-marketing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/mba-master-of-business-administration-global-sales-and-marketing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/mba-master-of-business-administration-human-resource-management",
+      "source_html": "course_pages/Just a moment_courses_mba-master-of-business-administration-human-resource-management.html",
+      "clean_md": "clean/courses/postgraduate/mba-master-of-business-administration-human-resource-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/mba-master-of-business-administration-human-resource-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/mchiro-master-of-chiropractic",
+      "source_html": "course_pages/Just a moment_courses_mchiro-master-of-chiropractic.html",
+      "clean_md": "clean/courses/other/mchiro-master-of-chiropractic.md",
+      "source_url": "https://www.southwales.ac.uk/courses/mchiro-master-of-chiropractic",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/mchiro-master-of-chiropractic-including-foundation-year",
+      "source_html": "course_pages/Just a moment_courses_mchiro-master-of-chiropractic-including-foundation-year.html",
+      "clean_md": "clean/courses/foundation/mchiro-master-of-chiropractic-including-foundation-year.md",
+      "source_url": "https://www.southwales.ac.uk/courses/mchiro-master-of-chiropractic-including-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/meng-aeronautical-engineering",
+      "source_html": "course_pages/Just a moment_courses_meng-aeronautical-engineering.html",
+      "clean_md": "clean/courses/other/meng-aeronautical-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/meng-aeronautical-engineering",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/meng-civil-engineering",
+      "source_html": "course_pages/Just a moment_courses_meng-civil-engineering.html",
+      "clean_md": "clean/courses/other/meng-civil-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/meng-civil-engineering",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/meng-electrical-and-electronic-engineering",
+      "source_html": "course_pages/Just a moment_courses_meng-electrical-and-electronic-engineering.html",
+      "clean_md": "clean/courses/other/meng-electrical-and-electronic-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/meng-electrical-and-electronic-engineering",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/meng-hons-aerospace-engineering",
+      "source_html": "course_pages/Just a moment_courses_meng-hons-aerospace-engineering.html",
+      "clean_md": "clean/courses/other/meng-hons-aerospace-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/meng-hons-aerospace-engineering",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/meng-mechanical-engineering",
+      "source_html": "course_pages/Just a moment_courses_meng-mechanical-engineering.html",
+      "clean_md": "clean/courses/other/meng-mechanical-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/meng-mechanical-engineering",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/mphil-master-of-philosophy",
+      "source_html": "course_pages/Just a moment_courses_mphil-master-of-philosophy.html",
+      "clean_md": "clean/courses/other/mphil-master-of-philosophy.md",
+      "source_url": "https://www.southwales.ac.uk/courses/mphil-master-of-philosophy",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-acute-medicine",
+      "source_html": "course_pages/Just a moment_courses_msc-acute-medicine.html",
+      "clean_md": "clean/courses/postgraduate/msc-acute-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-acute-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-advanced-computer-science",
+      "source_html": "course_pages/Just a moment_courses_msc-advanced-computer-science.html",
+      "clean_md": "clean/courses/postgraduate/msc-advanced-computer-science.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-advanced-computer-science",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-advanced-performance-football-coaching",
+      "source_html": "course_pages/Just a moment_courses_msc-advanced-performance-football-coaching.html",
+      "clean_md": "clean/courses/postgraduate/msc-advanced-performance-football-coaching.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-advanced-performance-football-coaching",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-advanced-practice",
+      "source_html": "course_pages/Just a moment_courses_msc-advanced-practice.html",
+      "clean_md": "clean/courses/postgraduate/msc-advanced-practice.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-advanced-practice",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-aeronautical-engineering",
+      "source_html": "course_pages/Just a moment_courses_msc-aeronautical-engineering.html",
+      "clean_md": "clean/courses/postgraduate/msc-aeronautical-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-aeronautical-engineering",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-analytical-and-forensic-science",
+      "source_html": "course_pages/Just a moment_courses_msc-analytical-and-forensic-science.html",
+      "clean_md": "clean/courses/postgraduate/msc-analytical-and-forensic-science.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-analytical-and-forensic-science",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-applied-cyber-security",
+      "source_html": "course_pages/Just a moment_courses_msc-applied-cyber-security.html",
+      "clean_md": "clean/courses/postgraduate/msc-applied-cyber-security.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-applied-cyber-security",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-applied-health-economics",
+      "source_html": "course_pages/Just a moment_courses_msc-applied-health-economics.html",
+      "clean_md": "clean/courses/postgraduate/msc-applied-health-economics.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-applied-health-economics",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-artificial-intelligence",
+      "source_html": "course_pages/Just a moment_courses_msc-artificial-intelligence.html",
+      "clean_md": "clean/courses/postgraduate/msc-artificial-intelligence.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-artificial-intelligence",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-aviation-engineering-and-management",
+      "source_html": "course_pages/Just a moment_courses_msc-aviation-engineering-and-management.html",
+      "clean_md": "clean/courses/postgraduate/msc-aviation-engineering-and-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-aviation-engineering-and-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-behaviour-analysis-and-therapy",
+      "source_html": "course_pages/Just a moment_courses_msc-behaviour-analysis-and-therapy.html",
+      "clean_md": "clean/courses/postgraduate/msc-behaviour-analysis-and-therapy.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-behaviour-analysis-and-therapy",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-civil-engineering",
+      "source_html": "course_pages/Just a moment_courses_msc-civil-engineering.html",
+      "clean_md": "clean/courses/postgraduate/msc-civil-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-civil-engineering",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-clinical-physiology",
+      "source_html": "course_pages/Just a moment_courses_msc-clinical-physiology.html",
+      "clean_md": "clean/courses/postgraduate/msc-clinical-physiology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-clinical-physiology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-clinical-psychiatry",
+      "source_html": "course_pages/Just a moment_courses_msc-clinical-psychiatry.html",
+      "clean_md": "clean/courses/postgraduate/msc-clinical-psychiatry.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-clinical-psychiatry",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-clinical-psychology",
+      "source_html": "course_pages/Just a moment_courses_msc-clinical-psychology.html",
+      "clean_md": "clean/courses/postgraduate/msc-clinical-psychology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-clinical-psychology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-computing-and-information-systems",
+      "source_html": "course_pages/Just a moment_courses_msc-computing-and-information-systems.html",
+      "clean_md": "clean/courses/postgraduate/msc-computing-and-information-systems.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-computing-and-information-systems",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-construction-project-management",
+      "source_html": "course_pages/Just a moment_courses_msc-construction-project-management.html",
+      "clean_md": "clean/courses/postgraduate/msc-construction-project-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-construction-project-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-cosmetic-and-aesthetic-medicine",
+      "source_html": "course_pages/Just a moment_courses_msc-cosmetic-and-aesthetic-medicine.html",
+      "clean_md": "clean/courses/postgraduate/msc-cosmetic-and-aesthetic-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-cosmetic-and-aesthetic-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-crime-and-justice",
+      "source_html": "course_pages/Just a moment_courses_msc-crime-and-justice.html",
+      "clean_md": "clean/courses/postgraduate/msc-crime-and-justice.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-crime-and-justice",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-cyber-security-risk-and-resilience",
+      "source_html": "course_pages/Just a moment_courses_msc-cyber-security-risk-and-resilience.html",
+      "clean_md": "clean/courses/postgraduate/msc-cyber-security-risk-and-resilience.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-cyber-security-risk-and-resilience",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-data-science",
+      "source_html": "course_pages/Just a moment_courses_msc-data-science.html",
+      "clean_md": "clean/courses/postgraduate/msc-data-science.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-data-science",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-dermatology-clinical-practice",
+      "source_html": "course_pages/Just a moment_courses_msc-dermatology-clinical-practice.html",
+      "clean_md": "clean/courses/postgraduate/msc-dermatology-clinical-practice.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-dermatology-clinical-practice",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-diabetes",
+      "source_html": "course_pages/Just a moment_courses_msc-diabetes.html",
+      "clean_md": "clean/courses/postgraduate/msc-diabetes.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-diabetes",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-digital-forensics",
+      "source_html": "course_pages/Just a moment_courses_msc-digital-forensics.html",
+      "clean_md": "clean/courses/postgraduate/msc-digital-forensics.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-digital-forensics",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-electronics-and-information-technology",
+      "source_html": "course_pages/Just a moment_courses_msc-electronics-and-information-technology.html",
+      "clean_md": "clean/courses/postgraduate/msc-electronics-and-information-technology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-electronics-and-information-technology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-endocrinology",
+      "source_html": "course_pages/Just a moment_courses_msc-endocrinology.html",
+      "clean_md": "clean/courses/postgraduate/msc-endocrinology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-endocrinology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-engineering-management",
+      "source_html": "course_pages/Just a moment_courses_msc-engineering-management.html",
+      "clean_md": "clean/courses/postgraduate/msc-engineering-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-engineering-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-expedition-and-wilderness-medicine",
+      "source_html": "course_pages/Just a moment_courses_msc-expedition-and-wilderness-medicine.html",
+      "clean_md": "clean/courses/postgraduate/msc-expedition-and-wilderness-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-expedition-and-wilderness-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-finance-and-investment",
+      "source_html": "course_pages/Just a moment_courses_msc-finance-and-investment.html",
+      "clean_md": "clean/courses/postgraduate/msc-finance-and-investment.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-finance-and-investment",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-forensic-audit-and-accounting",
+      "source_html": "course_pages/Just a moment_courses_msc-forensic-audit-and-accounting.html",
+      "clean_md": "clean/courses/postgraduate/msc-forensic-audit-and-accounting.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-forensic-audit-and-accounting",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-forensic-investigation",
+      "source_html": "course_pages/Just a moment_courses_msc-forensic-investigation.html",
+      "clean_md": "clean/courses/postgraduate/msc-forensic-investigation.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-forensic-investigation",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-gastroenterology",
+      "source_html": "course_pages/Just a moment_courses_msc-gastroenterology.html",
+      "clean_md": "clean/courses/postgraduate/msc-gastroenterology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-gastroenterology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-health-and-public-service-management",
+      "source_html": "course_pages/Just a moment_courses_msc-health-and-public-service-management.html",
+      "clean_md": "clean/courses/postgraduate/msc-health-and-public-service-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-health-and-public-service-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-human-resource-management",
+      "source_html": "course_pages/Just a moment_courses_msc-human-resource-management.html",
+      "clean_md": "clean/courses/postgraduate/msc-human-resource-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-human-resource-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-international-logistics-and-supply-chain-management",
+      "source_html": "course_pages/Just a moment_courses_msc-international-logistics-and-supply-chain-management.html",
+      "clean_md": "clean/courses/postgraduate/msc-international-logistics-and-supply-chain-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-international-logistics-and-supply-chain-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-international-security-and-risk-management",
+      "source_html": "course_pages/Just a moment_courses_msc-international-security-and-risk-management.html",
+      "clean_md": "clean/courses/postgraduate/msc-international-security-and-risk-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-international-security-and-risk-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-international-security-and-risk-management-counter-terrorism",
+      "source_html": "course_pages/Just a moment_courses_msc-international-security-and-risk-management-counter-terrorism.html",
+      "clean_md": "clean/courses/postgraduate/msc-international-security-and-risk-management-counter-terrorism.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-international-security-and-risk-management-counter-terrorism",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-leadership-and-management",
+      "source_html": "course_pages/Just a moment_courses_msc-leadership-and-management.html",
+      "clean_md": "clean/courses/postgraduate/msc-leadership-and-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-leadership-and-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-leadership-in-healthcare",
+      "source_html": "course_pages/Just a moment_courses_msc-leadership-in-healthcare.html",
+      "clean_md": "clean/courses/postgraduate/msc-leadership-in-healthcare.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-leadership-in-healthcare",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-leadership-in-professional-policing",
+      "source_html": "course_pages/Just a moment_courses_msc-leadership-in-professional-policing.html",
+      "clean_md": "clean/courses/postgraduate/msc-leadership-in-professional-policing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-leadership-in-professional-policing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-leading-digital-transformation",
+      "source_html": "course_pages/Just a moment_courses_msc-leading-digital-transformation.html",
+      "clean_md": "clean/courses/postgraduate/msc-leading-digital-transformation.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-leading-digital-transformation",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-management",
+      "source_html": "course_pages/Just a moment_courses_msc-management.html",
+      "clean_md": "clean/courses/postgraduate/msc-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-mechanical-engineering",
+      "source_html": "course_pages/Just a moment_courses_msc-mechanical-engineering.html",
+      "clean_md": "clean/courses/postgraduate/msc-mechanical-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-mechanical-engineering",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-medical-education",
+      "source_html": "course_pages/Just a moment_courses_msc-medical-education.html",
+      "clean_md": "clean/courses/postgraduate/msc-medical-education.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-medical-education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-music-engineering-and-production",
+      "source_html": "course_pages/Just a moment_courses_msc-music-engineering-and-production.html",
+      "clean_md": "clean/courses/postgraduate/msc-music-engineering-and-production.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-music-engineering-and-production",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-obesity-and-weight-management",
+      "source_html": "course_pages/Just a moment_courses_msc-obesity-and-weight-management.html",
+      "clean_md": "clean/courses/postgraduate/msc-obesity-and-weight-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-obesity-and-weight-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-pain-management",
+      "source_html": "course_pages/Just a moment_courses_msc-pain-management.html",
+      "clean_md": "clean/courses/postgraduate/msc-pain-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-pain-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-pharmaceutical-chemistry",
+      "source_html": "course_pages/Just a moment_courses_msc-pharmaceutical-chemistry.html",
+      "clean_md": "clean/courses/postgraduate/msc-pharmaceutical-chemistry.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-pharmaceutical-chemistry",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-play-therapy",
+      "source_html": "course_pages/Just a moment_courses_msc-play-therapy.html",
+      "clean_md": "clean/courses/postgraduate/msc-play-therapy.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-play-therapy",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-preventative-cardiovascular-medicine",
+      "source_html": "course_pages/Just a moment_courses_msc-preventative-cardiovascular-medicine.html",
+      "clean_md": "clean/courses/postgraduate/msc-preventative-cardiovascular-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-preventative-cardiovascular-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-professional-accounting-with-acca-tuition",
+      "source_html": "course_pages/Just a moment_courses_msc-professional-accounting-with-acca-tuition.html",
+      "clean_md": "clean/courses/postgraduate/msc-professional-accounting-with-acca-tuition.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-professional-accounting-with-acca-tuition",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-professional-accounting-with-acca-tuition-fast-track",
+      "source_html": "course_pages/Just a moment_courses_msc-professional-accounting-with-acca-tuition-fast-track.html",
+      "clean_md": "clean/courses/postgraduate/msc-professional-accounting-with-acca-tuition-fast-track.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-professional-accounting-with-acca-tuition-fast-track",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-professional-engineering",
+      "source_html": "course_pages/Just a moment_courses_msc-professional-engineering.html",
+      "clean_md": "clean/courses/postgraduate/msc-professional-engineering.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-professional-engineering",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-professional-practice",
+      "source_html": "course_pages/Just a moment_courses_msc-professional-practice.html",
+      "clean_md": "clean/courses/postgraduate/msc-professional-practice.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-professional-practice",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-project-management",
+      "source_html": "course_pages/Just a moment_courses_msc-project-management.html",
+      "clean_md": "clean/courses/postgraduate/msc-project-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-project-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-project-management-fast-track",
+      "source_html": "course_pages/Just a moment_courses_msc-project-management-fast-track.html",
+      "clean_md": "clean/courses/postgraduate/msc-project-management-fast-track.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-project-management-fast-track",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-psychology-conversion",
+      "source_html": "course_pages/Just a moment_courses_msc-psychology-conversion.html",
+      "clean_md": "clean/courses/postgraduate/msc-psychology-conversion.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-psychology-conversion",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-public-health",
+      "source_html": "course_pages/Just a moment_courses_msc-public-health.html",
+      "clean_md": "clean/courses/postgraduate/msc-public-health.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-public-health",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-public-health-online",
+      "source_html": "course_pages/Just a moment_courses_msc-public-health-online.html",
+      "clean_md": "clean/courses/postgraduate/msc-public-health-online.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-public-health-online",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-renal-medicine",
+      "source_html": "course_pages/Just a moment_courses_msc-renal-medicine.html",
+      "clean_md": "clean/courses/postgraduate/msc-renal-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-renal-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-renewable-energy-and-sustainable-technology",
+      "source_html": "course_pages/Just a moment_courses_msc-renewable-energy-and-sustainable-technology.html",
+      "clean_md": "clean/courses/postgraduate/msc-renewable-energy-and-sustainable-technology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-renewable-energy-and-sustainable-technology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-respiratory-medicine",
+      "source_html": "course_pages/Just a moment_courses_msc-respiratory-medicine.html",
+      "clean_md": "clean/courses/postgraduate/msc-respiratory-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-respiratory-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-rheumatology",
+      "source_html": "course_pages/Just a moment_courses_msc-rheumatology.html",
+      "clean_md": "clean/courses/postgraduate/msc-rheumatology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-rheumatology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-safety-health-and-environmental-management",
+      "source_html": "course_pages/Just a moment_courses_msc-safety-health-and-environmental-management.html",
+      "clean_md": "clean/courses/postgraduate/msc-safety-health-and-environmental-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-safety-health-and-environmental-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-sexual-and-reproductive-medicine",
+      "source_html": "course_pages/Just a moment_courses_msc-sexual-and-reproductive-medicine.html",
+      "clean_md": "clean/courses/postgraduate/msc-sexual-and-reproductive-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-sexual-and-reproductive-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-sport-health-and-exercise-science",
+      "source_html": "course_pages/Just a moment_courses_msc-sport-health-and-exercise-science.html",
+      "clean_md": "clean/courses/postgraduate/msc-sport-health-and-exercise-science.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-sport-health-and-exercise-science",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-sports-and-exercise-medicine",
+      "source_html": "course_pages/Just a moment_courses_msc-sports-and-exercise-medicine.html",
+      "clean_md": "clean/courses/postgraduate/msc-sports-and-exercise-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-sports-and-exercise-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-sports-coaching-and-performance",
+      "source_html": "course_pages/Just a moment_courses_msc-sports-coaching-and-performance.html",
+      "clean_md": "clean/courses/postgraduate/msc-sports-coaching-and-performance.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-sports-coaching-and-performance",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-strategic-digital-marketing",
+      "source_html": "course_pages/Just a moment_courses_msc-strategic-digital-marketing.html",
+      "clean_md": "clean/courses/postgraduate/msc-strategic-digital-marketing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-strategic-digital-marketing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-wildlife-and-conservation-management",
+      "source_html": "course_pages/Just a moment_courses_msc-wildlife-and-conservation-management.html",
+      "clean_md": "clean/courses/postgraduate/msc-wildlife-and-conservation-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-wildlife-and-conservation-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/msc-working-with-adult-and-young-people-who-offend",
+      "source_html": "course_pages/Just a moment_courses_msc-working-with-adult-and-young-people-who-offend.html",
+      "clean_md": "clean/courses/postgraduate/msc-working-with-adult-and-young-people-who-offend.md",
+      "source_url": "https://www.southwales.ac.uk/courses/msc-working-with-adult-and-young-people-who-offend",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgce-post-compulsory-education-and-training-pcet",
+      "source_html": "course_pages/Just a moment_courses_pgce-post-compulsory-education-and-training-pcet.html",
+      "clean_md": "clean/courses/other/pgce-post-compulsory-education-and-training-pcet.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgce-post-compulsory-education-and-training-pcet",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgce-primary-initial-teacher-education-with-qts",
+      "source_html": "course_pages/Just a moment_courses_pgce-primary-initial-teacher-education-with-qts.html",
+      "clean_md": "clean/courses/other/pgce-primary-initial-teacher-education-with-qts.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgce-primary-initial-teacher-education-with-qts",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgce-primary-initial-teacher-education-with-qts-welsh-medium",
+      "source_html": "course_pages/Just a moment_courses_pgce-primary-initial-teacher-education-with-qts-welsh-medium.html",
+      "clean_md": "clean/courses/other/pgce-primary-initial-teacher-education-with-qts-welsh-medium.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgce-primary-initial-teacher-education-with-qts-welsh-medium",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-anti-ageing-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgcert-anti-ageing-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-anti-ageing-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-anti-ageing-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-artificial-intelligence-in-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgcert-artificial-intelligence-in-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-artificial-intelligence-in-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-artificial-intelligence-in-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-calcium-and-bone-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgcert-calcium-and-bone-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-calcium-and-bone-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-calcium-and-bone-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-cosmetic-and-aesthetic-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgcert-cosmetic-and-aesthetic-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-cosmetic-and-aesthetic-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-cosmetic-and-aesthetic-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-counselling-skills",
+      "source_html": "course_pages/Just a moment_courses_pgcert-counselling-skills.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-counselling-skills.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-counselling-skills",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-critical-care",
+      "source_html": "course_pages/Just a moment_courses_pgcert-critical-care.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-critical-care.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-critical-care",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-education-for-healthcare-professionals",
+      "source_html": "course_pages/Just a moment_courses_pgcert-education-for-healthcare-professionals.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-education-for-healthcare-professionals.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-education-for-healthcare-professionals",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-independent-prescribing-practice",
+      "source_html": "course_pages/Just a moment_courses_pgcert-independent-prescribing-practice.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-independent-prescribing-practice.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-independent-prescribing-practice",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-medical-education",
+      "source_html": "course_pages/Just a moment_courses_pgcert-medical-education.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-medical-education.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-medical-education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-menopause-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgcert-menopause-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-menopause-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-menopause-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-metabolic-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgcert-metabolic-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-metabolic-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-metabolic-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-palliative-care",
+      "source_html": "course_pages/Just a moment_courses_pgcert-palliative-care.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-palliative-care.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-palliative-care",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-sexual-health-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgcert-sexual-health-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-sexual-health-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-sexual-health-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-sports-and-exercise-nutrition",
+      "source_html": "course_pages/Just a moment_courses_pgcert-sports-and-exercise-nutrition.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-sports-and-exercise-nutrition.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-sports-and-exercise-nutrition",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-teaching-in-higher-education",
+      "source_html": "course_pages/Just a moment_courses_pgcert-teaching-in-higher-education.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-teaching-in-higher-education.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-teaching-in-higher-education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-thyroid-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgcert-thyroid-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-thyroid-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-thyroid-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgcert-trichology-and-hair-sciences",
+      "source_html": "course_pages/Just a moment_courses_pgcert-trichology-and-hair-sciences.html",
+      "clean_md": "clean/courses/postgraduate/pgcert-trichology-and-hair-sciences.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgcert-trichology-and-hair-sciences",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-acute-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgdip-acute-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-acute-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-acute-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-applied-health-economics",
+      "source_html": "course_pages/Just a moment_courses_pgdip-applied-health-economics.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-applied-health-economics.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-applied-health-economics",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-behaviour-analysis-supervised-practice",
+      "source_html": "course_pages/Just a moment_courses_pgdip-behaviour-analysis-supervised-practice.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-behaviour-analysis-supervised-practice.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-behaviour-analysis-supervised-practice",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-clinical-physiology",
+      "source_html": "course_pages/Just a moment_courses_pgdip-clinical-physiology.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-clinical-physiology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-clinical-physiology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-clinical-psychiatry",
+      "source_html": "course_pages/Just a moment_courses_pgdip-clinical-psychiatry.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-clinical-psychiatry.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-clinical-psychiatry",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-community-health-studies-specialist-practitioner-community-childrens-nursing",
+      "source_html": "course_pages/Just a moment_courses_pgdip-community-health-studies-specialist-practitioner-community-childrens-nursing.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-community-health-studies-specialist-practitioner-community-childrens-nursing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-community-health-studies-specialist-practitioner-community-childrens-nursing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-community-health-studies-specialist-practitioner-district-nursing",
+      "source_html": "course_pages/Just a moment_courses_pgdip-community-health-studies-specialist-practitioner-district-nursing.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-community-health-studies-specialist-practitioner-district-nursing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-community-health-studies-specialist-practitioner-district-nursing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-cosmetic-and-aesthetic-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgdip-cosmetic-and-aesthetic-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-cosmetic-and-aesthetic-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-cosmetic-and-aesthetic-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-dermatology-in-clinical-practice",
+      "source_html": "course_pages/Just a moment_courses_pgdip-dermatology-in-clinical-practice.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-dermatology-in-clinical-practice.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-dermatology-in-clinical-practice",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-diabetes",
+      "source_html": "course_pages/Just a moment_courses_pgdip-diabetes.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-diabetes.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-diabetes",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-endocrinology",
+      "source_html": "course_pages/Just a moment_courses_pgdip-endocrinology.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-endocrinology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-endocrinology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-expedition-and-wilderness-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgdip-expedition-and-wilderness-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-expedition-and-wilderness-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-expedition-and-wilderness-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-gastroenterology",
+      "source_html": "course_pages/Just a moment_courses_pgdip-gastroenterology.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-gastroenterology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-gastroenterology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-genomic-medicine-and-healthcare",
+      "source_html": "course_pages/Just a moment_courses_pgdip-genomic-medicine-and-healthcare.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-genomic-medicine-and-healthcare.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-genomic-medicine-and-healthcare",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-hypertension",
+      "source_html": "course_pages/Just a moment_courses_pgdip-hypertension.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-hypertension.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-hypertension",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-integrative-counselling-and-psychotherapy",
+      "source_html": "course_pages/Just a moment_courses_pgdip-integrative-counselling-and-psychotherapy.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-integrative-counselling-and-psychotherapy.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-integrative-counselling-and-psychotherapy",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-leadership-in-healthcare",
+      "source_html": "course_pages/Just a moment_courses_pgdip-leadership-in-healthcare.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-leadership-in-healthcare.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-leadership-in-healthcare",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-legal-practice-course",
+      "source_html": "course_pages/Just a moment_courses_pgdip-legal-practice-course.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-legal-practice-course.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-legal-practice-course",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-medical-education",
+      "source_html": "course_pages/Just a moment_courses_pgdip-medical-education.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-medical-education.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-medical-education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-nursing-adult",
+      "source_html": "course_pages/Just a moment_courses_pgdip-nursing-adult.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-nursing-adult.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-nursing-adult",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-nursing-learning-disabilities",
+      "source_html": "course_pages/Just a moment_courses_pgdip-nursing-learning-disabilities.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-nursing-learning-disabilities.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-nursing-learning-disabilities",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-nursing-mental-health",
+      "source_html": "course_pages/Just a moment_courses_pgdip-nursing-mental-health.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-nursing-mental-health.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-nursing-mental-health",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-obesity-and-weight-management",
+      "source_html": "course_pages/Just a moment_courses_pgdip-obesity-and-weight-management.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-obesity-and-weight-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-obesity-and-weight-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-pain-management",
+      "source_html": "course_pages/Just a moment_courses_pgdip-pain-management.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-pain-management.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-pain-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-preventative-cardiovascular-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgdip-preventative-cardiovascular-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-preventative-cardiovascular-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-preventative-cardiovascular-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-public-health",
+      "source_html": "course_pages/Just a moment_courses_pgdip-public-health.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-public-health.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-public-health",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-renal-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgdip-renal-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-renal-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-renal-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-respiratory-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgdip-respiratory-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-respiratory-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-respiratory-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-rheumatology",
+      "source_html": "course_pages/Just a moment_courses_pgdip-rheumatology.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-rheumatology.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-rheumatology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-senaln-specific-learning-difficulties",
+      "source_html": "course_pages/Just a moment_courses_pgdip-senaln-specific-learning-difficulties.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-senaln-specific-learning-difficulties.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-senaln-specific-learning-difficulties",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-sexual-and-reproductive-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgdip-sexual-and-reproductive-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-sexual-and-reproductive-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-sexual-and-reproductive-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-specialist-community-public-health-nursing-health-visiting",
+      "source_html": "course_pages/Just a moment_courses_pgdip-specialist-community-public-health-nursing-health-visiting.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-specialist-community-public-health-nursing-health-visiting.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-specialist-community-public-health-nursing-health-visiting",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-specialist-community-public-health-nursing-school-nursing",
+      "source_html": "course_pages/Just a moment_courses_pgdip-specialist-community-public-health-nursing-school-nursing.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-specialist-community-public-health-nursing-school-nursing.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-specialist-community-public-health-nursing-school-nursing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pgdip-sports-and-exercise-medicine",
+      "source_html": "course_pages/Just a moment_courses_pgdip-sports-and-exercise-medicine.html",
+      "clean_md": "clean/courses/postgraduate/pgdip-sports-and-exercise-medicine.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pgdip-sports-and-exercise-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/phd-doctor-of-philosophy",
+      "source_html": "course_pages/Just a moment_courses_phd-doctor-of-philosophy.html",
+      "clean_md": "clean/courses/postgraduate_research/phd-doctor-of-philosophy.md",
+      "source_url": "https://www.southwales.ac.uk/courses/phd-doctor-of-philosophy",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/pre-sessional-english-language",
+      "source_html": "course_pages/Just a moment_courses_pre-sessional-english-language.html",
+      "clean_md": "clean/courses/other/pre-sessional-english-language.md",
+      "source_url": "https://www.southwales.ac.uk/courses/pre-sessional-english-language",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/profce-post-compulsory-education-and-training-pcet",
+      "source_html": "course_pages/Just a moment_courses_profce-post-compulsory-education-and-training-pcet.html",
+      "clean_md": "clean/courses/other/profce-post-compulsory-education-and-training-pcet.md",
+      "source_url": "https://www.southwales.ac.uk/courses/profce-post-compulsory-education-and-training-pcet",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/profgce-post-compulsory-education-and-training-pcet",
+      "source_html": "course_pages/Just a moment_courses_profgce-post-compulsory-education-and-training-pcet.html",
+      "clean_md": "clean/courses/other/profgce-post-compulsory-education-and-training-pcet.md",
+      "source_url": "https://www.southwales.ac.uk/courses/profgce-post-compulsory-education-and-training-pcet",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/psychology-with-criminology---bsc-hons",
+      "source_html": "course_pages/Just a moment_courses_psychology-with-criminology---bsc-hons.html",
+      "clean_md": "clean/courses/undergraduate/psychology-with-criminology---bsc-hons.md",
+      "source_url": "https://www.southwales.ac.uk/courses/psychology-with-criminology---bsc-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/return-to-practice",
+      "source_html": "course_pages/Just a moment_courses_return-to-practice.html",
+      "clean_md": "clean/courses/other/return-to-practice.md",
+      "source_url": "https://www.southwales.ac.uk/courses/return-to-practice",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/return-to-teaching",
+      "source_html": "course_pages/Just a moment_courses_return-to-teaching.html",
+      "clean_md": "clean/courses/other/return-to-teaching.md",
+      "source_url": "https://www.southwales.ac.uk/courses/return-to-teaching",
+      "study_level": "other"
+    },
+    {
+      "course_url": "https://www.southwales.ac.uk/courses/sports-coaching-and-development-foundation-degree-fdsc",
+      "source_html": "course_pages/Just a moment_courses_sports-coaching-and-development-foundation-degree-fdsc.html",
+      "clean_md": "clean/courses/foundation/sports-coaching-and-development-foundation-degree-fdsc.md",
+      "source_url": "https://www.southwales.ac.uk/courses/sports-coaching-and-development-foundation-degree-fdsc",
+      "study_level": "foundation"
+    }
+  ],
+  "uni_pages": [
+    {
+      "source_html": "uni_req/bangladesh-entry.html",
+      "source_url": "https://www.southwales.ac.uk/international/your-country/bangladesh/",
+      "clean_md": "clean/uni/bangladesh-entry.md",
+      "page_type": "entry"
+    },
+    {
+      "source_html": "uni_req/english-requirements.html",
+      "source_url": "",
+      "clean_md": "clean/uni/english-requirements.md",
+      "page_type": "english"
+    },
+    {
+      "source_html": "uni_req/scholarships.html",
+      "source_url": "https://www.southwales.ac.uk/international/fees-scholarships/international-scholarships/",
+      "clean_md": "clean/uni/scholarships.md",
+      "page_type": "scholarship"
+    }
+  ]
+}

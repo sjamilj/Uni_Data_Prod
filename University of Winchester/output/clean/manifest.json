@@ -1,0 +1,817 @@
+{
+  "university": "University of Winchester",
+  "cleaned_at": "2026-08-28",
+  "courses": [
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/LLM-Law",
+      "source_html": "course_pages/LLM Law - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-llm-law.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/LLM-Law",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/LLM-Legal-Practice",
+      "source_html": "course_pages/LLM Legal Practice - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-llm-legal-practice.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/LLM-Legal-Practice",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MA-Creative-Writing",
+      "source_html": "course_pages/MA Creative Writing - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-ma-creative-writing.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MA-Creative-Writing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MA-Cultural-Heritage-and-Resource-Management",
+      "source_html": "course_pages/MA Cultural Heritage and Resource Management - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-ma-cultural-heritage-and-resource-management.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MA-Cultural-Heritage-and-Resource-Management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MA-Education",
+      "source_html": "course_pages/MA Education - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-ma-education.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MA-Education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MA-History",
+      "source_html": "course_pages/MA History - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-ma-history.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MA-History",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MA-Politics-and-International-Relations",
+      "source_html": "course_pages/MA Politics and International Relations - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-ma-politics-and-international-relations.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MA-Politics-and-International-Relations",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MBA-Master-of-Business-Administration",
+      "source_html": "course_pages/MBA (Master of Business Administration) - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-mba-master-of-business-administration.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MBA-Master-of-Business-Administration",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MPH-Public-Health",
+      "source_html": "course_pages/MPH Public Health - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-mph-public-health.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MPH-Public-Health",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MRes-Psychology",
+      "source_html": "course_pages/MRes Psychology - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate_research/study-postgraduate-courses-mres-psychology.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MRes-Psychology",
+      "study_level": "postgraduate_research"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Applied-Sport-Psychology",
+      "source_html": "course_pages/MSc Applied Sport Psychology - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-msc-applied-sport-psychology.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Applied-Sport-Psychology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Criminal-Justice-and-Investigation",
+      "source_html": "course_pages/MSc Criminal Justice and Investigation - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-msc-criminal-justice-and-investigation.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Criminal-Justice-and-Investigation",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Cyber-Security",
+      "source_html": "course_pages/MSc Cyber Security - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-msc-cyber-security.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Cyber-Security",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Digital-Marketing-and-Analytics",
+      "source_html": "course_pages/MSc Digital Marketing and Analytics - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-msc-digital-marketing-and-analytics.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Digital-Marketing-and-Analytics",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Forensic-Psychology",
+      "source_html": "course_pages/MSc Forensic Psychology - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-msc-forensic-psychology.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Forensic-Psychology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-International-Business-Management",
+      "source_html": "course_pages/MSc International Business Management - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-msc-international-business-management.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-International-Business-Management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-International-Financial-Management",
+      "source_html": "course_pages/MSc International Financial Management - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-msc-international-financial-management.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-International-Financial-Management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Marketing",
+      "source_html": "course_pages/MSc Marketing - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-msc-marketing.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Marketing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Project-Management",
+      "source_html": "course_pages/MSc Project Management - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-msc-project-management.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Project-Management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Psychology",
+      "source_html": "course_pages/MSc Psychology - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-msc-psychology.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Psychology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Social-Work",
+      "source_html": "course_pages/MSc Social Work - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-msc-social-work.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Social-Work",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Strength-and-Conditioning-with-Rehabilitation",
+      "source_html": "course_pages/MSc Strength and Conditioning with Rehabilitation - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-msc-strength-and-conditioning-with-rehabilitation.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/MSc-Strength-and-Conditioning-with-Rehabilitation",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Primary-3-7",
+      "source_html": "course_pages/PGCE Primary 3-7 - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-pgce-primary-3-7.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Primary-3-7",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Primary-5-11",
+      "source_html": "course_pages/PGCE Primary 5-11 - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-pgce-primary-5-11.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Primary-5-11",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Primary-School-Led",
+      "source_html": "course_pages/PGCE Primary School Led - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-pgce-primary-school-led.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Primary-School-Led",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Primary-with-Mathematics",
+      "source_html": "course_pages/PGCE Primary with Mathematics - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-pgce-primary-with-mathematics.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Primary-with-Mathematics",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Primary-with-Physical-Education",
+      "source_html": "course_pages/PGCE Primary with Physical Education - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-pgce-primary-with-physical-education.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Primary-with-Physical-Education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Primary-with-SEND",
+      "source_html": "course_pages/PGCE Primary with SEND - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-pgce-primary-with-send.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Primary-with-SEND",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Secondary-Geography-with-History",
+      "source_html": "course_pages/PGCE Secondary Geography with History - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-pgce-secondary-geography-with-history.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Secondary-Geography-with-History",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Secondary-Geography-with-Religious-Education",
+      "source_html": "course_pages/PGCE Secondary Geography with Religious Education - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-pgce-secondary-geography-with-religious-education.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Secondary-Geography-with-Religious-Education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Secondary-History-with-Geography",
+      "source_html": "course_pages/PGCE Secondary History with Geography - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-pgce-secondary-history-with-geography.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Secondary-History-with-Geography",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Secondary-History-with-Religious-Education",
+      "source_html": "course_pages/PGCE Secondary History with Religious Education - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-pgce-secondary-history-with-religious-education.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Secondary-History-with-Religious-Education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Secondary-Religious-Education-with-Geography",
+      "source_html": "course_pages/PGCE Secondary Religious Education with Geography - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-pgce-secondary-religious-education-with-geography.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Secondary-Religious-Education-with-Geography",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Secondary-Religious-Education-with-History",
+      "source_html": "course_pages/PGCE Secondary Religious Education with History - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-pgce-secondary-religious-education-with-history.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Secondary-Religious-Education-with-History",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Secondary-School-Led",
+      "source_html": "course_pages/PGCE Secondary School Led - University of Winchester.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-courses-pgce-secondary-school-led.md",
+      "source_url": "https://www.winchester.ac.uk/study/Postgraduate/Courses/PGCE-Secondary-School-Led",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Accounting-and-Finance",
+      "source_html": "course_pages/BA (Hons) Accounting and Finance - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-accounting-and-finance.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Accounting-and-Finance",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Accounting-and-Finance-2-year-Accelerated",
+      "source_html": "course_pages/BA (Hons) Accounting and Finance (2 year Accelerated) - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-accounting-and-finance-2-year-accelerated.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Accounting-and-Finance-2-year-Accelerated",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Acting",
+      "source_html": "course_pages/BA (Hons) Acting - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-acting.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Acting",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Ancient-Classical-and-Medieval-Studies",
+      "source_html": "course_pages/BA (Hons) Ancient Classical and Medieval Studies - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-ancient-classical-and-medieval-studies.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Ancient-Classical-and-Medieval-Studies",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Anthropology",
+      "source_html": "course_pages/BA (Hons) Anthropology - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-anthropology.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Anthropology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Anthropology-and-Archaeology",
+      "source_html": "course_pages/BA (Hons) Anthropology and Archaeology - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-anthropology-and-archaeology.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Anthropology-and-Archaeology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Archaeology",
+      "source_html": "course_pages/BA (Hons) Archaeology - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-archaeology.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Archaeology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Business-Management",
+      "source_html": "course_pages/BA (Hons) Business Management - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-business-management.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Business-Management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Business-Management-Top-up",
+      "source_html": "course_pages/BA (Hons) Business Management (Top up) - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-business-management-top-up.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Business-Management-Top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Classical-Studies",
+      "source_html": "course_pages/BA (Hons) Classical Studies - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-classical-studies.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Classical-Studies",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Creative-Writing",
+      "source_html": "course_pages/BA (Hons) Creative Writing - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-creative-writing.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Creative-Writing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Creative-Writing-and-English-Literature",
+      "source_html": "course_pages/BA (Hons) Creative Writing and English Literature - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-creative-writing-and-english-literature.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Creative-Writing-and-English-Literature",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Digital-Media-Design",
+      "source_html": "course_pages/BA (Hons) Digital Media Design - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-digital-media-design.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Digital-Media-Design",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Early-Years-Education",
+      "source_html": "course_pages/BA (Hons) Early Years Education - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-early-years-education.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Early-Years-Education",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Education",
+      "source_html": "course_pages/BA (Hons) Education - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-education.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Education",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-English-Literature",
+      "source_html": "course_pages/BA (Hons) English Literature - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-english-literature.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-English-Literature",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-English-Literature-and-Film",
+      "source_html": "course_pages/BA (Hons) English Literature and Film - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-english-literature-and-film.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-English-Literature-and-Film",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Event-Management",
+      "source_html": "course_pages/BA (Hons) Event Management - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-event-management.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Event-Management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Fashion-Business-and-Marketing",
+      "source_html": "course_pages/BA (Hons) Fashion Business and Marketing - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-fashion-business-and-marketing.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Fashion-Business-and-Marketing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Film-Production",
+      "source_html": "course_pages/BA (Hons) Film Production - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-film-production.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Film-Production",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Film-Production-Top-up",
+      "source_html": "course_pages/BA (Hons) Film Production (Top up) - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-film-production-top-up.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Film-Production-Top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Film-and-Media",
+      "source_html": "course_pages/BA (Hons) Film and Media - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-film-and-media.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Film-and-Media",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-History",
+      "source_html": "course_pages/BA (Hons) History - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-history.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-History",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-History-and-Archaeology",
+      "source_html": "course_pages/BA (Hons) History and Archaeology - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-history-and-archaeology.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-History-and-Archaeology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-History-and-Politics",
+      "source_html": "course_pages/BA (Hons) History and Politics - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-history-and-politics.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-History-and-Politics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Journalism",
+      "source_html": "course_pages/BA (Hons) Journalism - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-journalism.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Journalism",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Marketing",
+      "source_html": "course_pages/BA (Hons) Marketing - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-marketing.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Marketing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Media-and-Communication",
+      "source_html": "course_pages/BA (Hons) Media and Communication - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-media-and-communication.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Media-and-Communication",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Medieval-History",
+      "source_html": "course_pages/BA (Hons) Medieval History - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-medieval-history.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Medieval-History",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Modern-History",
+      "source_html": "course_pages/BA (Hons) Modern History - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-modern-history.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Modern-History",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Music-and-Sound-Production",
+      "source_html": "course_pages/BA (Hons) Music and Sound Production - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-music-and-sound-production.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Music-and-Sound-Production",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Music-and-Sound-Production-Top-up",
+      "source_html": "course_pages/BA (Hons) Music and Sound Production (Top-up) - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-music-and-sound-production-top-up.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Music-and-Sound-Production-Top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Musical-Theatre",
+      "source_html": "course_pages/BA (Hons) Musical Theatre - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-musical-theatre.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Musical-Theatre",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Philosophy",
+      "source_html": "course_pages/BA (Hons) Philosophy - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-philosophy.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Philosophy",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Philosophy-Religion-and-Ethics",
+      "source_html": "course_pages/BA (Hons) Philosophy, Religion and Ethics - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-philosophy-religion-and-ethics.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Philosophy-Religion-and-Ethics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Politics-with-International-Relations",
+      "source_html": "course_pages/BA (Hons) Politics with International Relations - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-politics-with-international-relations.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Politics-with-International-Relations",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Popular-Music-Production-and-Performance",
+      "source_html": "course_pages/BA (Hons) Popular Music_ Production and Performance - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-popular-music-production-and-performance.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Popular-Music-Production-and-Performance",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Popular-Music-Production-and-Performance-Top-up",
+      "source_html": "course_pages/BA (Hons) Popular Music_ Production and Performance (Top up) - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-popular-music-production-and-performance-top-up.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Popular-Music-Production-and-Performance-Top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Primary-Education-with-QTS",
+      "source_html": "course_pages/BA (Hons) Primary Education with QTS - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-primary-education-with-qts.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Primary-Education-with-QTS",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Sociology",
+      "source_html": "course_pages/BA (Hons) Sociology - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-sociology.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Sociology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Sports-Journalism",
+      "source_html": "course_pages/BA (Hons) Sports Journalism - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-ba-hons-sports-journalism.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BA-Hons-Sports-Journalism",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BN-Hons-Nursing-Adult",
+      "source_html": "course_pages/BN (Hons) Nursing (Adult) - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bn-hons-nursing-adult.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BN-Hons-Nursing-Adult",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BN-Hons-Nursing-Child",
+      "source_html": "course_pages/BN (Hons) Nursing (Child) - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bn-hons-nursing-child.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BN-Hons-Nursing-Child",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BN-Hons-Nursing-Mental-Health",
+      "source_html": "course_pages/BN (Hons) Nursing (Mental Health) - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bn-hons-nursing-mental-health.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BN-Hons-Nursing-Mental-Health",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Archaeological-Practice",
+      "source_html": "course_pages/BSc (Hons) Archaeological Practice - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-archaeological-practice.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Archaeological-Practice",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Archaeological-Practice-with-Professional-Placement",
+      "source_html": "course_pages/BSc (Hons) Archaeological Practice (with Professional Placement) - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-archaeological-practice-with-professional-placement.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Archaeological-Practice-with-Professional-Placement",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Archaeology",
+      "source_html": "course_pages/BSc (Hons) Archaeology - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-archaeology.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Archaeology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Computer-Science",
+      "source_html": "course_pages/BSc (Hons) Computer Science - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-computer-science.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Computer-Science",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Computer-Science-Top-up",
+      "source_html": "course_pages/BSc (Hons) Computer Science (Top-up) - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-computer-science-top-up.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Computer-Science-Top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Criminology",
+      "source_html": "course_pages/BSc (Hons) Criminology - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-criminology.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Criminology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Criminology-with-Law",
+      "source_html": "course_pages/BSc (Hons) Criminology with Law - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-criminology-with-law.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Criminology-with-Law",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Criminology-with-Psychology",
+      "source_html": "course_pages/BSc (Hons) Criminology with Psychology - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-criminology-with-psychology.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Criminology-with-Psychology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Criminology-with-Sociology",
+      "source_html": "course_pages/BSc (Hons) Criminology with Sociology - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-criminology-with-sociology.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Criminology-with-Sociology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Cyber-Security",
+      "source_html": "course_pages/BSc (Hons) Cyber Security - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-cyber-security.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Cyber-Security",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Cyber-Security-Top-up",
+      "source_html": "course_pages/BSc (Hons) Cyber Security (Top-up) - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-cyber-security-top-up.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Cyber-Security-Top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Economics-and-Finance",
+      "source_html": "course_pages/BSc (Hons) Economics and Finance - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-economics-and-finance.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Economics-and-Finance",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Forensic-Investigation",
+      "source_html": "course_pages/BSc (Hons) Forensic Investigation - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-forensic-investigation.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Forensic-Investigation",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Forensic-Investigative-Psychology",
+      "source_html": "course_pages/BSc (Hons) Forensic Investigative Psychology - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-forensic-investigative-psychology.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Forensic-Investigative-Psychology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Forensic-Science",
+      "source_html": "course_pages/BSc (Hons) Forensic Science - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-forensic-science.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Forensic-Science",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Geography",
+      "source_html": "course_pages/BSc (Hons) Geography - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-geography.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Geography",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Health-and-Social-Care",
+      "source_html": "course_pages/BSc (Hons) Health and Social Care - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-health-and-social-care.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Health-and-Social-Care",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Midwifery",
+      "source_html": "course_pages/BSc (Hons) Midwifery - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-midwifery.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Midwifery",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Nutrition-and-Dietetics",
+      "source_html": "course_pages/BSc (Hons) Nutrition and Dietetics - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-nutrition-and-dietetics.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Nutrition-and-Dietetics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Physiotherapy",
+      "source_html": "course_pages/BSc (Hons) Physiotherapy - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-physiotherapy.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Physiotherapy",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Professional-Policing",
+      "source_html": "course_pages/BSc (Hons) Professional Policing - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-professional-policing.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Professional-Policing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Psychology",
+      "source_html": "course_pages/BSc (Hons) Psychology - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-psychology.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Psychology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Psychology-and-Child-Development",
+      "source_html": "course_pages/BSc (Hons) Psychology and Child Development - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-psychology-and-child-development.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Psychology-and-Child-Development",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Psychology-with-Criminology",
+      "source_html": "course_pages/BSc (Hons) Psychology with Criminology - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-psychology-with-criminology.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Psychology-with-Criminology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Social-Work",
+      "source_html": "course_pages/BSc (Hons) Social Work - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-social-work.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Social-Work",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Software-Engineering",
+      "source_html": "course_pages/BSc (Hons) Software Engineering - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-software-engineering.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Software-Engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Software-Engineering-Top-up",
+      "source_html": "course_pages/BSc (Hons) Software Engineering (Top-up) - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-software-engineering-top-up.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Software-Engineering-Top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Sport-Coaching-and-Physical-Education",
+      "source_html": "course_pages/BSc (Hons) Sport Coaching and Physical Education - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-sport-coaching-and-physical-education.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Sport-Coaching-and-Physical-Education",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Sport-and-Exercise-Psychology",
+      "source_html": "course_pages/BSc (Hons) Sport and Exercise Psychology - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-sport-and-exercise-psychology.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Sport-and-Exercise-Psychology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Sport-and-Exercise-Science",
+      "source_html": "course_pages/BSc (Hons) Sport and Exercise Science - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-sport-and-exercise-science.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Sport-and-Exercise-Science",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Sports-Therapy",
+      "source_html": "course_pages/BSc (Hons) Sports Therapy - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-bsc-hons-sports-therapy.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/BSc-Hons-Sports-Therapy",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/FdA-Integrative-Counselling",
+      "source_html": "course_pages/FdA Integrative Counselling - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-fda-integrative-counselling.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/FdA-Integrative-Counselling",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/LLB-Hons-Law",
+      "source_html": "course_pages/LLB (Hons) Law - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-llb-hons-law.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/LLB-Hons-Law",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/LLB-Hons-Law-with-Criminology",
+      "source_html": "course_pages/LLB (Hons) Law with Criminology - University of Winchester.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-courses-llb-hons-law-with-criminology.md",
+      "source_url": "https://www.winchester.ac.uk/study/undergraduate/Courses/LLB-Hons-Law-with-Criminology",
+      "study_level": "undergraduate"
+    }
+  ],
+  "uni_pages": [
+    {
+      "source_html": "uni_req/bangladesh-entry.html",
+      "source_url": "https://www.winchester.ac.uk/international/International-Entry-Requirements/",
+      "clean_md": "clean/uni/bangladesh-entry.md",
+      "page_type": "entry"
+    },
+    {
+      "source_html": "uni_req/english-requirements.html",
+      "source_url": "https://www.winchester.ac.uk/international/english-language-requirements/",
+      "clean_md": "clean/uni/english-requirements.md",
+      "page_type": "english"
+    },
+    {
+      "source_html": "uni_req/scholarships.html",
+      "source_url": "https://www.winchester.ac.uk/student-life/Scholarships-bursaries-and-awards/International-scholarships-bursaries-and-awards/",
+      "clean_md": "clean/uni/scholarships.md",
+      "page_type": "scholarship"
+    }
+  ]
+}

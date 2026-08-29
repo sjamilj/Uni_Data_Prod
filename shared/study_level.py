@@ -1,0 +1,683 @@
+"""Study-level tagging for scrape CSVs, clean folders, and LLM extract."""
+
+from __future__ import annotations
+
+import csv
+import json
+import random
+import re
+from dataclasses import dataclass, field
+from datetime import datetime, timezone
+from pathlib import Path
+from urllib.parse import urlparse
+
+DEGREE_SCOPES = (
+    "UNDERGRADUATE",
+    "POSTGRADUATE",
+    "POSTGRADUATE_RESEARCH",
+    "FOUNDATION",
+)
+
+STUDY_LEVELS = (
+    "undergraduate",
+    "postgraduate",
+    "postgraduate_research",
+    "foundation",
+    "other",
+)
+
+SCOPE_TO_LEVEL = {
+    "UNDERGRADUATE": "undergraduate",
+    "POSTGRADUATE": "postgraduate",
+    "POSTGRADUATE_RESEARCH": "postgraduate_research",
+    "FOUNDATION": "foundation",
+}
+
+LEVEL_CSV_NAMES = {
+    "undergraduate": "undergraduate_course_urls.csv",
+    "postgraduate": "postgraduate_course_urls.csv",
+    "postgraduate_research": "postgraduate_research_course_urls.csv",
+    "foundation": "foundation_course_urls.csv",
+    "other": "other_course_urls.csv",
+}
+
+ENV_PATTERN_KEYS = {
+    "undergraduate": "UNDERGRADUATE_URL_PATTERNS",
+    "postgraduate": "POSTGRADUATE_URL_PATTERNS",
+    "postgraduate_research": "POSTGRADUATE_RESEARCH_URL_PATTERNS",
+    "foundation": "FOUNDATION_URL_PATTERNS",
+}
+
+LEVEL_MATCH_ORDER = (
+    "foundation",
+    "postgraduate_research",
+    "postgraduate",
+    "undergraduate",
+)
+
+LEVEL_CSV_COLUMNS = ("course_url", "study_level", "source_scope")
+
+PRESETUP_SAMPLE_JSON = "presetup_sample.json"
+PRESETUP_SAMPLE_SIZE = 10
+CLEAN_COURSES_SUBDIR = "courses"
+PRESETUP_CLEAN_SUBDIR = "pre_setup_course"
+PRESETUP_EXTRACT_SUBDIR = "pre_setup_course_extracted"
+
+LEVEL_ALIASES = {
+    "ug": "undergraduate",
+    "under": "undergraduate",
+    "undergrad": "undergraduate",
+    "undergraduate": "undergraduate",
+    "pg": "postgraduate",
+    "post": "postgraduate",
+    "postgrad": "postgraduate",
+    "postgraduate": "postgraduate",
+    "pgr": "postgraduate_research",
+    "research": "postgraduate_research",
+    "postgraduate_research": "postgraduate_research",
+    "foundation": "foundation",
+    "other": "other",
+}
+
+EXECUTE_LEVEL_ORDER = (
+    "foundation",
+    "undergraduate",
+    "postgraduate",
+    "postgraduate_research",
+    "other",
+)
+
+_DEFAULT_FOUNDATION_RE = re.compile(r"foundation", re.I)
+_DEFAULT_RESEARCH_RE = re.compile(
+    r"courses-phd|(?:^|[-_/])(?:phd|mres)(?:[-_/]|$)",
+    re.I,
+)
+_DEFAULT_POSTGRADUATE_RE = re.compile(
+    r"(?:^|[-_/])(?:msc|mba|llm|pgdip|pgcert|ma)(?:[-_/]|$)",
+    re.I,
+)
+
+_INTAKE_YEAR_SUFFIX_RE = re.compile(r"-(\d{4})-(\d{2})$")
+_INTAKE_YEAR_FOLDER_RE = re.compile(r"^\d{4} - \d{4}$")
+
+
+def scope_to_level(scope: str | None) -> str:
+    raw = (scope or "").strip()
+    if not raw:
+        return ""
+    key = raw.replace("-", "_").replace(" ", "_").upper()
+    if key in SCOPE_TO_LEVEL:
+        return SCOPE_TO_LEVEL[key]
+    lower = raw.replace("-", "_").replace(" ", "_").lower()
+    if lower in STUDY_LEVELS:
+        return lower
+    return ""
+
+
+def folder_for_level(study_level: str | None) -> str:
+    level = (study_level or "").strip().lower().replace("-", "_")
+    if level in STUDY_LEVELS and level != "other":
+        return level
+    if level == "other":
+        return "other"
+    return "undergraduate"
+
+
+def llm_course_level(study_level: str | None) -> str:
+    """Map folder/scrape level onto the three LLM entry/english buckets."""
+    level = (study_level or "").strip().lower().replace("-", "_")
+    if level in {"foundation"}:
+        return "foundation"
+    if level in {"postgraduate", "postgraduate_research"}:
+        return "postgraduate"
+    return "undergraduate"
+
+
+def extraction_resume_key(study_level: str | None, slug: str) -> str:
+    return f"{folder_for_level(study_level)}::{slug}"
+
+
+def is_resume_completed(completed: set[str], *, study_level: str | None, slug: str) -> bool:
+    key = extraction_resume_key(study_level, slug)
+    return key in completed or slug in completed
+
+
+@dataclass
+class StudyLevelClassifier:
+    """Classify a course URL into undergraduate / postgraduate / foundation / research."""
+
+    custom_patterns: dict[str, list[re.Pattern[str]]] = field(default_factory=dict)
+
+    @property
+    def has_custom_patterns(self) -> bool:
+        return any(self.custom_patterns.values())
+
+    @classmethod
+    def from_env_lists(cls, pattern_lists: dict[str, list[str]]) -> StudyLevelClassifier:
+        compiled: dict[str, list[re.Pattern[str]]] = {}
+        for level, raw_patterns in pattern_lists.items():
+            compiled[level] = []
+            for pattern in raw_patterns:
+                try:
+                    compiled[level].append(re.compile(pattern, re.I))
+                except re.error:
+                    compiled[level].append(re.compile(re.escape(pattern), re.I))
+        return cls(custom_patterns=compiled)
+
+    @classmethod
+    def from_env_file(cls, env: object, env_path: Path | None = None) -> StudyLevelClassifier:
+        pattern_lists: dict[str, list[str]] = {}
+        get_list = getattr(env, "get_list", None)
+        if callable(get_list):
+            for level, key in ENV_PATTERN_KEYS.items():
+                pattern_lists[level] = get_list(key)
+        else:
+            getter = getattr(env, "get", None)
+            for level, key in ENV_PATTERN_KEYS.items():
+                raw = getter(key, "") if callable(getter) else ""
+                pattern_lists[level] = [
+                    item.strip()
+                    for item in re.split(r"[\n;]+", str(raw or ""))
+                    if item.strip() and not item.strip().startswith("#")
+                ]
+        _ = env_path
+        return cls.from_env_lists(pattern_lists)
+
+    @classmethod
+    def from_code_dir(cls, code_dir: Path) -> StudyLevelClassifier:
+        from scrape_course_urls import ENV_FILE, EnvFile
+
+        return cls.from_env_file(EnvFile(code_dir / ENV_FILE), code_dir / ENV_FILE)
+
+    def classify(self, url: str, *, course_name: str = "") -> str:
+        path = urlparse(url).path
+        haystack = f"{url}\n{path}\n{course_name}"
+        if self.has_custom_patterns:
+            for level in LEVEL_MATCH_ORDER:
+                for pattern in self.custom_patterns.get(level, []):
+                    if pattern.search(path) or pattern.search(haystack):
+                        return level
+            return "other"
+        if _DEFAULT_FOUNDATION_RE.search(haystack):
+            return "foundation"
+        if _DEFAULT_RESEARCH_RE.search(path) or _DEFAULT_RESEARCH_RE.search(url):
+            return "postgraduate_research"
+        if _DEFAULT_POSTGRADUATE_RE.search(path):
+            return "postgraduate"
+        return "undergraduate"
+
+
+@dataclass
+class UrlLevelMap:
+    """url -> {study_level: source_scope}."""
+
+    levels: dict[str, dict[str, str]] = field(default_factory=dict)
+
+    def add(self, url: str, study_level: str, source_scope: str = "") -> None:
+        url = (url or "").strip()
+        level = (study_level or "").strip()
+        if not url or not level:
+            return
+        bucket = self.levels.setdefault(url, {})
+        if level not in bucket or source_scope:
+            bucket[level] = source_scope or bucket.get(level, "")
+
+    def add_many(self, urls: list[str] | set[str], study_level: str, source_scope: str = "") -> None:
+        for url in urls:
+            self.add(url, study_level, source_scope)
+
+    def tag_urls(
+        self,
+        urls: list[str] | set[str],
+        *,
+        scope: str = "",
+        classifier: StudyLevelClassifier | None = None,
+        source_scope: str = "",
+    ) -> None:
+        level = scope_to_level(scope)
+        if level:
+            self.add_many(urls, level, source_scope or scope)
+            return
+        classifier = classifier or StudyLevelClassifier()
+        label = source_scope or "ALL_COURSE"
+        for url in urls:
+            self.add(url, classifier.classify(url), label)
+
+    def urls(self) -> list[str]:
+        return sorted(self.levels)
+
+    def levels_for(self, url: str) -> list[str]:
+        return list(self.levels.get(url, {}))
+
+    def records(self) -> list[dict[str, str]]:
+        rows: list[dict[str, str]] = []
+        for url in sorted(self.levels):
+            for level, source_scope in sorted(self.levels[url].items()):
+                rows.append(
+                    {
+                        "course_url": url,
+                        "study_level": level,
+                        "source_scope": source_scope,
+                    }
+                )
+        return rows
+
+    def to_progress(self) -> dict[str, dict[str, str]]:
+        return {url: dict(levels) for url, levels in self.levels.items()}
+
+    @classmethod
+    def from_progress(cls, payload: object) -> UrlLevelMap:
+        mapping = cls()
+        if isinstance(payload, dict):
+            for url, levels in payload.items():
+                if isinstance(levels, dict):
+                    for level, source_scope in levels.items():
+                        mapping.add(str(url), str(level), str(source_scope or ""))
+                elif isinstance(levels, list):
+                    for level in levels:
+                        mapping.add(str(url), str(level), "")
+        return mapping
+
+    def merge(self, other: UrlLevelMap) -> None:
+        for url, levels in other.levels.items():
+            for level, source_scope in levels.items():
+                self.add(url, level, source_scope)
+
+
+def write_level_csvs(output_dir: Path, url_levels: UrlLevelMap) -> None:
+    records_by_level: dict[str, list[dict[str, str]]] = {level: [] for level in LEVEL_CSV_NAMES}
+    for record in url_levels.records():
+        level = record["study_level"]
+        records_by_level.setdefault(level, []).append(record)
+
+    for level, filename in LEVEL_CSV_NAMES.items():
+        path = output_dir / filename
+        rows = records_by_level.get(level, [])
+        with path.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=list(LEVEL_CSV_COLUMNS), quoting=csv.QUOTE_ALL)
+            writer.writeheader()
+            for row in rows:
+                writer.writerow(row)
+
+
+def read_level_csvs(output_dir: Path) -> UrlLevelMap:
+    mapping = UrlLevelMap()
+    for filename in LEVEL_CSV_NAMES.values():
+        path = output_dir / filename
+        if not path.exists():
+            continue
+        with path.open(newline="", encoding="utf-8-sig") as handle:
+            for row in csv.DictReader(handle):
+                url = (row.get("course_url") or row.get("url") or "").strip()
+                level = (row.get("study_level") or "").strip()
+                source_scope = (row.get("source_scope") or "").strip()
+                mapping.add(url, level, source_scope)
+    return mapping
+
+
+def load_url_levels(output_dir: Path) -> UrlLevelMap:
+    mapping = read_level_csvs(output_dir)
+    progress_path = output_dir / "scrape_progress.json"
+    if progress_path.exists():
+        try:
+            progress = json.loads(progress_path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            progress = {}
+        mapping.merge(UrlLevelMap.from_progress(progress.get("url_levels")))
+    return mapping
+
+
+def levels_for_url(
+    url: str,
+    *,
+    url_levels: UrlLevelMap | None = None,
+    classifier: StudyLevelClassifier | None = None,
+    course_name: str = "",
+) -> list[str]:
+    if url_levels:
+        found = url_levels.levels_for(url)
+        if found:
+            return found
+    classifier = classifier or StudyLevelClassifier()
+    return [classifier.classify(url, course_name=course_name)]
+
+
+def intake_start_year_from_md_path(md_path: Path) -> int:
+    """Start year from intake folder (e.g. '2027 - 2028') or slug suffix (-2027-28)."""
+    parent = (md_path.parent.name or "").strip()
+    if is_intake_year_folder(parent):
+        return int(parent.split(" - ")[0].strip())
+    year_folder = intake_year_folder_from_stem(md_path.stem)
+    if year_folder:
+        return int(year_folder.split(" - ")[0].strip())
+    return 0
+
+
+def intake_year_folder_from_stem(stem: str) -> str:
+    """Map slug stem suffix -2026-27 → folder name '2026 - 2027'."""
+    match = _INTAKE_YEAR_SUFFIX_RE.search((stem or "").strip())
+    if not match:
+        return ""
+    start_year = int(match.group(1))
+    end_suffix = int(match.group(2))
+    end_year = (start_year // 100) * 100 + end_suffix
+    if end_year <= start_year:
+        end_year += 100
+    return f"{start_year} - {end_year}"
+
+
+def is_intake_year_folder(name: str) -> bool:
+    return bool(_INTAKE_YEAR_FOLDER_RE.match((name or "").strip()))
+
+
+def study_level_folder_from_path(md_path: Path, courses_dir: Path | None = None) -> str:
+    """Return study-level folder (undergraduate, foundation, …) for a course markdown path."""
+    if courses_dir:
+        try:
+            rel = md_path.relative_to(courses_dir)
+            if rel.parts and rel.parts[0] in STUDY_LEVELS:
+                return rel.parts[0]
+        except ValueError:
+            pass
+    parent_name = md_path.parent.name
+    if parent_name in STUDY_LEVELS:
+        return parent_name
+    grandparent_name = md_path.parent.parent.name if md_path.parent.parent else ""
+    if grandparent_name in STUDY_LEVELS:
+        return grandparent_name
+    return parent_name
+
+
+def clean_course_md_relative_path(
+    study_level: str,
+    slug_base: str,
+    *,
+    clean_dir: str = "clean",
+    courses_subdir: str = CLEAN_COURSES_SUBDIR,
+) -> str:
+    folder = folder_for_level(study_level)
+    year_folder = intake_year_folder_from_stem(slug_base)
+    parts = [clean_dir, courses_subdir, folder]
+    if year_folder:
+        parts.append(year_folder)
+    parts.append(f"{slug_base}.md")
+    return "/".join(parts)
+
+
+def clean_courses_root(output_dir: Path, *, presetup: bool = False) -> Path:
+    subdir = PRESETUP_CLEAN_SUBDIR if presetup else CLEAN_COURSES_SUBDIR
+    return output_dir / "clean" / subdir
+
+
+def iter_course_markdown(courses_dir: Path) -> list[Path]:
+    if not courses_dir.is_dir():
+        return []
+    return sorted(
+        (path for path in courses_dir.rglob("*.md") if path.is_file()),
+        key=lambda path: path.as_posix().lower(),
+    )
+
+
+def relative_course_md(md_path: Path, courses_dir: Path) -> str:
+    try:
+        return md_path.relative_to(courses_dir).as_posix()
+    except ValueError:
+        return md_path.name
+
+
+def study_level_from_markdown(
+    md_path: Path,
+    meta: dict[str, str] | None = None,
+    *,
+    courses_dir: Path | None = None,
+    course_url: str = "",
+    course_name: str = "",
+    classifier: StudyLevelClassifier | None = None,
+) -> str:
+    meta = meta or {}
+    from_meta = scope_to_level(meta.get("study_level", ""))
+    if from_meta:
+        return from_meta
+    level_folder = study_level_folder_from_path(md_path, courses_dir=courses_dir)
+    normalized = level_folder.lower().replace("-", "_")
+    if normalized in STUDY_LEVELS:
+        return normalized
+    if course_url or course_name:
+        classifier = classifier or StudyLevelClassifier()
+        return classifier.classify(course_url, course_name=course_name)
+    return "undergraduate"
+
+
+def extraction_dir(
+    output_dir: Path,
+    slug: str,
+    study_level: str | None,
+    *,
+    extract_root: str | None = None,
+) -> Path:
+    folder = folder_for_level(study_level)
+    if extract_root:
+        return output_dir / "extracted" / extract_root / folder / slug
+    nested = output_dir / "extracted" / folder / slug
+    legacy = output_dir / "extracted" / slug
+    if nested.exists() or not legacy.exists():
+        return nested
+    return legacy
+
+
+def iter_extracted_json(extracted_dir: Path, filename: str) -> list[Path]:
+    if not extracted_dir.is_dir():
+        return []
+    paths = list(extracted_dir.glob(f"*/{filename}"))
+    paths.extend(extracted_dir.glob(f"*/*/{filename}"))
+    return sorted({path for path in paths if path.is_file()})
+
+
+def normalize_url(url: str) -> str:
+    return (url or "").strip().rstrip("/")
+
+
+def parse_study_level(raw: str) -> str:
+    key = (raw or "").strip().lower().replace(" ", "_").replace("-", "_")
+    if key in LEVEL_ALIASES:
+        return LEVEL_ALIASES[key]
+    via_scope = scope_to_level(raw)
+    if via_scope:
+        return via_scope
+    raise ValueError(
+        f"Unknown study level {raw!r}. Expected one of: "
+        f"foundation, undergraduate, postgraduate, postgraduate_research, other."
+    )
+
+
+def parse_study_levels(values: list[str] | None) -> list[str]:
+    seen: list[str] = []
+    for raw in values or []:
+        level = parse_study_level(raw)
+        if level not in seen:
+            seen.append(level)
+    return seen
+
+
+def unique_urls(urls: list[str]) -> list[str]:
+    seen: set[str] = set()
+    out: list[str] = []
+    for url in urls:
+        key = normalize_url(url)
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        out.append(url.strip())
+    return out
+
+
+def read_urls_file(path: Path) -> list[str]:
+    """Read URLs from JSON (presetup sample / list), CSV, or one-URL-per-line text."""
+    text = path.read_text(encoding="utf-8-sig")
+    stripped = text.strip()
+    if not stripped:
+        return []
+    if stripped[0] in "{[":
+        payload = json.loads(stripped)
+        if isinstance(payload, dict):
+            rows = payload.get("courses") or payload.get("urls") or []
+            urls: list[str] = []
+            if isinstance(rows, list):
+                for item in rows:
+                    if isinstance(item, str):
+                        urls.append(item)
+                    elif isinstance(item, dict):
+                        urls.append(str(item.get("course_url") or item.get("url") or ""))
+            return unique_urls(urls)
+        if isinstance(payload, list):
+            urls = []
+            for item in payload:
+                if isinstance(item, str):
+                    urls.append(item)
+                elif isinstance(item, dict):
+                    urls.append(str(item.get("course_url") or item.get("url") or ""))
+            return unique_urls(urls)
+    if "course_url" in stripped.splitlines()[0].lower() or path.suffix.lower() == ".csv":
+        import io
+
+        handle = io.StringIO(text)
+        urls = []
+        for row in csv.DictReader(handle):
+            urls.append((row.get("course_url") or row.get("url") or "").strip())
+        return unique_urls(urls)
+    return unique_urls(
+        [line.strip() for line in stripped.splitlines() if line.strip() and not line.strip().startswith("#")]
+    )
+
+
+def urls_for_levels(url_levels: UrlLevelMap, levels: list[str]) -> list[dict[str, str]]:
+    allowed = set(levels)
+    records: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for level in EXECUTE_LEVEL_ORDER:
+        if level not in allowed:
+            continue
+        for record in url_levels.records():
+            if record["study_level"] != level:
+                continue
+            key = normalize_url(record["course_url"])
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            records.append(record)
+    return records
+
+
+def sample_urls_stratified(
+    url_levels: UrlLevelMap,
+    n: int = PRESETUP_SAMPLE_SIZE,
+    seed: int | None = None,
+    levels: list[str] | None = None,
+) -> list[dict[str, str]]:
+    """Shuffle each non-empty level, then round-robin until n unique URLs."""
+    if n <= 0:
+        return []
+    rng = random.Random(seed)
+    order = [level for level in EXECUTE_LEVEL_ORDER if not levels or level in levels]
+    buckets: dict[str, list[str]] = {level: [] for level in order}
+    seen_in_bucket: dict[str, set[str]] = {level: set() for level in order}
+    for record in url_levels.records():
+        level = record["study_level"]
+        if level not in buckets:
+            continue
+        url = record["course_url"].strip()
+        key = normalize_url(url)
+        if not key or key in seen_in_bucket[level]:
+            continue
+        seen_in_bucket[level].add(key)
+        buckets[level].append(url)
+    for level in order:
+        rng.shuffle(buckets[level])
+
+    queues = {level: list(urls) for level, urls in buckets.items() if urls}
+    chosen: list[dict[str, str]] = []
+    seen: set[str] = set()
+    while len(chosen) < n:
+        progressed = False
+        for level in order:
+            queue = queues.get(level)
+            if not queue:
+                continue
+            while queue:
+                url = queue.pop(0)
+                key = normalize_url(url)
+                if key in seen:
+                    continue
+                seen.add(key)
+                chosen.append({"course_url": url, "study_level": level})
+                progressed = True
+                break
+            if len(chosen) >= n:
+                break
+        if not progressed:
+            break
+    return chosen
+
+
+def presetup_sample_path(output_dir: Path) -> Path:
+    return output_dir / PRESETUP_SAMPLE_JSON
+
+
+def load_presetup_sample(output_dir: Path) -> dict:
+    path = presetup_sample_path(output_dir)
+    if not path.is_file():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
+def save_presetup_sample(
+    output_dir: Path,
+    courses: list[dict[str, str]],
+    *,
+    seed: int,
+    n: int = PRESETUP_SAMPLE_SIZE,
+) -> Path:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "n": n,
+        "seed": seed,
+        "sampled_at": datetime.now(timezone.utc).isoformat(),
+        "courses": courses,
+    }
+    path = presetup_sample_path(output_dir)
+    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    return path
+
+
+def presetup_sample_urls(payload: dict | None) -> list[str]:
+    courses = (payload or {}).get("courses") or []
+    urls: list[str] = []
+    for item in courses:
+        if isinstance(item, dict):
+            urls.append(str(item.get("course_url") or ""))
+        elif isinstance(item, str):
+            urls.append(item)
+    return unique_urls(urls)
+
+
+def level_url_counts(output_dir: Path) -> dict[str, int]:
+    mapping = load_url_levels(output_dir)
+    counts = {level: 0 for level in STUDY_LEVELS}
+    seen: dict[str, set[str]] = {level: set() for level in STUDY_LEVELS}
+    for record in mapping.records():
+        level = record["study_level"]
+        key = normalize_url(record["course_url"])
+        if not key:
+            continue
+        if level not in seen:
+            seen[level] = set()
+            counts[level] = 0
+        if key in seen[level]:
+            continue
+        seen[level].add(key)
+        counts[level] = counts.get(level, 0) + 1
+    return counts
