@@ -749,7 +749,7 @@ def group_course_md_paths(courses_dir: Path) -> dict[tuple[str, str], list[Path]
     groups: dict[tuple[str, str], list[Path]] = {}
     for md_path in iter_course_markdown(courses_dir):
         meta, body = split_frontmatter(md_path.read_text(encoding="utf-8"))
-        course_url = meta.get("source_url", "").strip()
+        course_url = meta.get("course_url", "").strip() or meta.get("source_url", "").strip()
         if not course_url:
             continue
         course_name = infer_course_name(body, course_url)
@@ -782,7 +782,7 @@ def select_canonical_course_md_paths(courses_dir: Path) -> list[Path]:
     by_name: dict[tuple[str, str], list[Path]] = {}
     for md_path in url_picks:
         meta, body = split_frontmatter(md_path.read_text(encoding="utf-8"))
-        course_url = meta.get("source_url", "").strip()
+        course_url = meta.get("course_url", "").strip() or meta.get("source_url", "").strip()
         if not course_url:
             continue
         course_name = infer_course_name(body, course_url)
@@ -860,7 +860,7 @@ def build_course_index(code_dir: Path) -> Path:
     total_md_files = len(iter_course_markdown(courses_dir))
     for md_path in canonical_paths:
         meta, body = split_frontmatter(md_path.read_text(encoding="utf-8"))
-        course_url = meta.get("source_url", "").strip()
+        course_url = meta.get("course_url", "").strip() or meta.get("source_url", "").strip()
         if not course_url:
             continue
         course_name = infer_course_name(body, course_url)
@@ -1086,7 +1086,7 @@ def normalize_fee_numeric(value: str) -> str:
     return f"{number:.2f}".rstrip("0").rstrip(".")
 
 
-UG_ENTRY_DEGREES = {"HSC", "A Level", "Diploma"}
+UG_ENTRY_DEGREES = {"HSC", "A Level", "Diploma", "BA", "BSc", "BBA", "BEng", "BCom"}
 FOUNDATION_ENTRY_DEGREES = {"HSC"}
 PG_ENTRY_DEGREES = {
     "BA",

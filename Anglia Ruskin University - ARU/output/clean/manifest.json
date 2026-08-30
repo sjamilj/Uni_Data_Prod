@@ -1,6 +1,6 @@
 {
   "university": "Anglia Ruskin University - ARU",
-  "cleaned_at": "2026-08-30",
+  "cleaned_at": "2026-08-31",
   "courses": [
     {
       "course_url": "https://www.aru.ac.uk/study/undergraduate/psychology-with-clinical-applications",
@@ -2220,6 +2220,762 @@
       "clean_md": "clean/courses/undergraduate/study-undergraduate-psychology.md",
       "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/undergraduate/psychology",
       "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/acting",
+      "source_html": "course_pages/Acting degree - BA (Hons) - ARU_study_undergraduate_acting.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-acting.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/acting",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/animal-management-zoo-and-wildlife-conservation",
+      "source_html": "course_pages/Animal Management (Zoo and Wildlife Conservation) - BSc (Hons) - ARU_study_undergraduate_animal-management-zoo-and-wildlife-conservation.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-animal-management-zoo-and-wildlife-conservation.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/animal-management-zoo-and-wildlife-conservation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/marketing",
+      "source_html": "course_pages/Marketing degree course - BSc (Hons) - ARU_study_undergraduate_marketing.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-marketing.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/marketing",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/biology",
+      "source_html": "course_pages/Biology - BSc (Hons) - ARU_study_undergraduate_biology.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-biology.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/biology",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/animation-and-illustration",
+      "source_html": "course_pages/Animation and Illustration - BA (Hons) - ARU_study_undergraduate_animation-and-illustration.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-animation-and-illustration.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/animation-and-illustration",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/psychology-with-clinical-applications",
+      "source_html": "course_pages/Psychology with Clinical Applications degree course - BSc (Hons) - ARU_study_undergraduate_psychology-with-clinical-applications.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-psychology-with-clinical-applications.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/psychology-with-clinical-applications",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/psychology-with-criminology",
+      "source_html": "course_pages/Psychology with Criminology - BSc (Hons) - ARU_study_undergraduate_psychology-with-criminology.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-psychology-with-criminology.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/psychology-with-criminology",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/psychology-with-education",
+      "source_html": "course_pages/Psychology with Education - BSc (Hons) - ARU_study_undergraduate_psychology-with-education.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-psychology-with-education.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/psychology-with-education",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/public-health",
+      "source_html": "course_pages/Public Health degree - BSc (Hons) - ARU_study_undergraduate_public-health.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-public-health.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/public-health",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/quantity-surveying",
+      "source_html": "course_pages/Quantity Surveying degree course - BSc (Hons) - ARU_study_undergraduate_quantity-surveying.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-quantity-surveying.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/quantity-surveying",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/sociology",
+      "source_html": "course_pages/Sociology BA (Hons) degree course - BA (Hons) - ARU_study_undergraduate_sociology.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-sociology.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/sociology",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/software-development",
+      "source_html": "course_pages/Software Development - BSc (Hons) - ARU_study_undergraduate_software-development.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-software-development.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/software-development",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/software-engineering",
+      "source_html": "course_pages/Software Engineering degree - BSc (Hons) - ARU_study_undergraduate_software-engineering.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-software-engineering.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/software-engineering",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/sport-and-exercise-science",
+      "source_html": "course_pages/Sports and Exercise Science Degree _ BSc (Hons) - BSc (Hons) - ARU_study_undergraduate_sport-and-exercise-science.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-sport-and-exercise-science.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/sport-and-exercise-science",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/sport-coaching-and-physical-education",
+      "source_html": "course_pages/Sport Coaching and Physical Education degree course - BSc (Hons) - ARU_study_undergraduate_sport-coaching-and-physical-education.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-sport-coaching-and-physical-education.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/sport-coaching-and-physical-education",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/sports-therapy",
+      "source_html": "course_pages/Sports Therapy BSc (Hons) degree course - BSc (Hons) - ARU_study_undergraduate_sports-therapy.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-sports-therapy.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/sports-therapy",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/strategic-business-and-project-management",
+      "source_html": "course_pages/Strategic Business and Project Management - BSc (Hons) - ARU_study_undergraduate_strategic-business-and-project-management.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-strategic-business-and-project-management.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/strategic-business-and-project-management",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/strength-and-conditioning-with-rehabilitation",
+      "source_html": "course_pages/Strength and Conditioning with Rehabilitation degree - BSc (Hons) - ARU_study_undergraduate_strength-and-conditioning-with-rehabilitation.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-strength-and-conditioning-with-rehabilitation.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/strength-and-conditioning-with-rehabilitation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/supply-chain-management-and-international-business",
+      "source_html": "course_pages/Supply Chain Management and International Business - BSc (Hons) - ARU_study_undergraduate_supply-chain-management-and-international-business.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-supply-chain-management-and-international-business.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/supply-chain-management-and-international-business",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/working-with-children-families-and-communities",
+      "source_html": "course_pages/Working with Children, Families and Communities - BA (Hons) - ARU_study_undergraduate_working-with-children-families-and-communities.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-working-with-children-families-and-communities.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/working-with-children-families-and-communities",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/writing-and-english-literature",
+      "source_html": "course_pages/Writing and English Literature BA (Hons) degree course - BA (Hons) - ARU_study_undergraduate_writing-and-english-literature.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-writing-and-english-literature.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/writing-and-english-literature",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/writing-and-film",
+      "source_html": "course_pages/Writing and Film BA (Hons) degree course - BA (Hons) - ARU_study_undergraduate_writing-and-film.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-writing-and-film.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/writing-and-film",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/zoology",
+      "source_html": "course_pages/Zoology degree _ BSc (Hons) Zoology course - BSc (Hons) - ARU_study_undergraduate_zoology.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-zoology.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/zoology",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/accounting-and-finance",
+      "source_html": "course_pages/Accounting & Finance Degree _ BSc Finance courses - BSc (Hons) - ARU_study_undergraduate_accounting-and-finance.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-accounting-and-finance.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/accounting-and-finance",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/agriculture",
+      "source_html": "course_pages/Agriculture degree - BSc (Hons) - ARU_study_undergraduate_agriculture.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-agriculture.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/agriculture",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/animal-management-pet-behaviour-and-welfare",
+      "source_html": "course_pages/Animal Management (Pet Behaviour and Welfare) - BSc (Hons) - ARU_study_undergraduate_animal-management-pet-behaviour-and-welfare.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-animal-management-pet-behaviour-and-welfare.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/animal-management-pet-behaviour-and-welfare",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/animal-science",
+      "source_html": "course_pages/Animal Science - BSc (Hons) - ARU_study_undergraduate_animal-science.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-animal-science.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/animal-science",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/architecture",
+      "source_html": "course_pages/Architecture degree course - BA (Hons) - ARU_study_undergraduate_architecture.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-architecture.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/architecture",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/artificial-intelligence",
+      "source_html": "course_pages/Artificial Intelligence degree - BSc (Hons) - ARU_study_undergraduate_artificial-intelligence.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-artificial-intelligence.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/artificial-intelligence",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/audio-and-music-technology",
+      "source_html": "course_pages/Audio and Music Technology degree course - BSc (Hons) - ARU_study_undergraduate_audio-and-music-technology.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-audio-and-music-technology.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/audio-and-music-technology",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/banking-finance-and-fintech",
+      "source_html": "course_pages/Banking, Finance and Fintech _ Finance courses - BSc (Hons) - ARU_study_undergraduate_banking-finance-and-fintech.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-banking-finance-and-fintech.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/banking-finance-and-fintech",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/biomedical-engineering",
+      "source_html": "course_pages/Biomedical Engineering - BEng (Hons) - ARU_study_undergraduate_biomedical-engineering.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-biomedical-engineering.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/biomedical-engineering",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/biomedical-science",
+      "source_html": "course_pages/Biomedical Science degree - BSc (Hons) - ARU_study_undergraduate_biomedical-science.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-biomedical-science.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/biomedical-science",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/biomedical-sciences",
+      "source_html": "course_pages/Biomedical Sciences degree - BSc (Hons) - ARU_study_undergraduate_biomedical-sciences.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-biomedical-sciences.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/biomedical-sciences",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/building-surveying",
+      "source_html": "course_pages/Building Surveying - BSc (Hons) - ARU_study_undergraduate_building-surveying.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-building-surveying.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/building-surveying",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/business-and-human-resource-management-london",
+      "source_html": "course_pages/Business and Human Resource Management - BSc (Hons) - ARU_study_undergraduate_business-and-human-resource-management-london.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-business-and-human-resource-management-london.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/business-and-human-resource-management-london",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/business-and-law-london",
+      "source_html": "course_pages/Business and Law - BSc (Hons) - ARU_study_undergraduate_business-and-law-london.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-business-and-law-london.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/business-and-law-london",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/business-and-management",
+      "source_html": "course_pages/Business and Management degree course - BSc (Hons) - ARU_study_undergraduate_business-and-management.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-business-and-management.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/business-and-management",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/business-and-tourism-management-london",
+      "source_html": "course_pages/Business and Tourism Management - BSc (Hons) - ARU_study_undergraduate_business-and-tourism-management-london.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-business-and-tourism-management-london.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/business-and-tourism-management-london",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/business-hospitality-and-events-management-london",
+      "source_html": "course_pages/Business, Hospitality and Events Management - BSc (Hons) - ARU_study_undergraduate_business-hospitality-and-events-management-london.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-business-hospitality-and-events-management-london.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/business-hospitality-and-events-management-london",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/business-management",
+      "source_html": "course_pages/Business Management Degree _ BSc (Hons) - BSc (Hons) - ARU_study_undergraduate_business-management.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-business-management.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/business-management",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/business-management-and-business-analytics",
+      "source_html": "course_pages/Business Management and Business Analytics degree - BSc (Hons) - ARU_study_undergraduate_business-management-and-business-analytics.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-business-management-and-business-analytics.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/business-management-and-business-analytics",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/business-management-and-digital-marketing",
+      "source_html": "course_pages/Business Management and Digital Marketing _ Business Degree - BSc (Hons) - ARU_study_undergraduate_business-management-and-digital-marketing.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-business-management-and-digital-marketing.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/business-management-and-digital-marketing",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/business-management-and-entrepreneurship-and-innovation",
+      "source_html": "course_pages/Business Management and Entrepreneurship and Innovation - BSc (Hons) - ARU_study_undergraduate_business-management-and-entrepreneurship-and-innovation.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-business-management-and-entrepreneurship-and-innovation.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/business-management-and-entrepreneurship-and-innovation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/business-management-and-finance",
+      "source_html": "course_pages/Business Management and Finance - BSc (Hons) - ARU_study_undergraduate_business-management-and-finance.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-business-management-and-finance.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/business-management-and-finance",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/business-management-and-human-resource-management",
+      "source_html": "course_pages/Business Management and Human Resource Management - BSc (Hons) - ARU_study_undergraduate_business-management-and-human-resource-management.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-business-management-and-human-resource-management.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/business-management-and-human-resource-management",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/business-management-and-tourism",
+      "source_html": "course_pages/Business Management and Tourism - BSc (Hons) - ARU_study_undergraduate_business-management-and-tourism.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-business-management-and-tourism.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/business-management-and-tourism",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/civil-engineering-beng",
+      "source_html": "course_pages/Civil Engineering - BEng (Hons) - ARU_study_undergraduate_civil-engineering-beng.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-civil-engineering-beng.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/civil-engineering-beng",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/commercial-law",
+      "source_html": "course_pages/Commercial Law - LLB (Hons) - ARU_study_undergraduate_commercial-law.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-commercial-law.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/commercial-law",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/computer-games-art",
+      "source_html": "course_pages/Computer Games Art degree - BA (Hons) - ARU_study_undergraduate_computer-games-art.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-computer-games-art.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/computer-games-art",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/computer-games-design",
+      "source_html": "course_pages/Computer Games Design degree - BA (Hons) - ARU_study_undergraduate_computer-games-design.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-computer-games-design.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/computer-games-design",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/computer-games-programming",
+      "source_html": "course_pages/Computer Games Programming degree course - BSc (Hons) - ARU_study_undergraduate_computer-games-programming.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-computer-games-programming.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/computer-games-programming",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/computer-networking",
+      "source_html": "course_pages/Computer Networking - BSc (Hons) - ARU_study_undergraduate_computer-networking.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-computer-networking.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/computer-networking",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/computer-science-beng",
+      "source_html": "course_pages/Computer Science degree course (BEng) - BEng (Hons) - ARU_study_undergraduate_computer-science-beng.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-computer-science-beng.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/computer-science-beng",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/computing",
+      "source_html": "course_pages/Computing - BSc (Hons) - ARU_study_undergraduate_computing.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-computing.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/computing",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/construction-management",
+      "source_html": "course_pages/Construction Management degree - BSc (Hons) - ARU_study_undergraduate_construction-management.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-construction-management.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/construction-management",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/crime-and-investigative-studies",
+      "source_html": "course_pages/Crime and Investigative Studies _ Criminology degree - BSc (Hons) - ARU_study_undergraduate_crime-and-investigative-studies.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-crime-and-investigative-studies.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/crime-and-investigative-studies",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/criminology",
+      "source_html": "course_pages/Criminology degree - BA (Hons) - ARU_study_undergraduate_criminology.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-criminology.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/criminology",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/criminology-and-policing",
+      "source_html": "course_pages/Criminology and Policing BA (Hons) degree course - BA (Hons) - ARU_study_undergraduate_criminology-and-policing.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-criminology-and-policing.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/criminology-and-policing",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/cyber-security",
+      "source_html": "course_pages/Cyber Security degree - BSc (Hons) - ARU_study_undergraduate_cyber-security.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-cyber-security.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/cyber-security",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/cyber-security-and-digital-forensics",
+      "source_html": "course_pages/Cyber Security and Digital Forensics - BSc (Hons) - ARU_study_undergraduate_cyber-security-and-digital-forensics.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-cyber-security-and-digital-forensics.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/cyber-security-and-digital-forensics",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/cyber-security-with-forensic-computing",
+      "source_html": "course_pages/Cyber Security and Forensic Computing - BSc (Hons) - ARU_study_undergraduate_cyber-security-with-forensic-computing.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-cyber-security-with-forensic-computing.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/cyber-security-with-forensic-computing",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/digital-marketing-and-management-london",
+      "source_html": "course_pages/Digital Marketing and Management - BSc (Hons) - ARU_study_undergraduate_digital-marketing-and-management-london.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-digital-marketing-and-management-london.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/digital-marketing-and-management-london",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/digital-media",
+      "source_html": "course_pages/Digital Media Production - BA (Hons) - ARU_study_undergraduate_digital-media.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-digital-media.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/digital-media",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/drama",
+      "source_html": "course_pages/Drama - BA (Hons) - ARU_study_undergraduate_drama.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-drama.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/drama",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/drama-and-english-literature",
+      "source_html": "course_pages/Drama and English Literature degree course - BA (Hons) - ARU_study_undergraduate_drama-and-english-literature.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-drama-and-english-literature.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/drama-and-english-literature",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/drama-and-film",
+      "source_html": "course_pages/Drama and Film degree - BA (Hons) - ARU_study_undergraduate_drama-and-film.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-drama-and-film.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/drama-and-film",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/education-with-sustainability",
+      "source_html": "course_pages/Education with Sustainability - BA (Hons) - ARU_study_undergraduate_education-with-sustainability.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-education-with-sustainability.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/education-with-sustainability",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/electronic-and-electrical-engineering-beng",
+      "source_html": "course_pages/Electronic and Electrical Engineering - BEng (Hons) - ARU_study_undergraduate_electronic-and-electrical-engineering-beng.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-electronic-and-electrical-engineering-beng.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/electronic-and-electrical-engineering-beng",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/english",
+      "source_html": "course_pages/English degree course - BA (Hons) - ARU_study_undergraduate_english.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-english.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/english",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/english-language-and-communication",
+      "source_html": "course_pages/English Language and Communication degree course - BA (Hons) - ARU_study_undergraduate_english-language-and-communication.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-english-language-and-communication.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/english-language-and-communication",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/english-literature",
+      "source_html": "course_pages/English Literature BA (Hons) degree course - BA (Hons) - ARU_study_undergraduate_english-literature.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-english-literature.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/english-literature",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/equine-science",
+      "source_html": "course_pages/Equine Science - BSc (Hons) - ARU_study_undergraduate_equine-science.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-equine-science.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/equine-science",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/fashion-design",
+      "source_html": "course_pages/Fashion Design degree course - BA (Hons) - ARU_study_undergraduate_fashion-design.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-fashion-design.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/fashion-design",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/film",
+      "source_html": "course_pages/Film - BA (Hons) - ARU_study_undergraduate_film.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-film.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/film",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/film-and-media",
+      "source_html": "course_pages/Film and Media - BA (Hons) - ARU_study_undergraduate_film-and-media.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-film-and-media.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/film-and-media",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/finance-with-economics",
+      "source_html": "course_pages/Finance with Economics BSc (Hons) - BSc (Hons) - ARU_study_undergraduate_finance-with-economics.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-finance-with-economics.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/finance-with-economics",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/fine-art",
+      "source_html": "course_pages/Fine Art BA (Hons) degree course - BA (Hons) - ARU_study_undergraduate_fine-art.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-fine-art.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/fine-art",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/forensic-science",
+      "source_html": "course_pages/Forensic Science degree - BSc (Hons) - ARU_study_undergraduate_forensic-science.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-forensic-science.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/forensic-science",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/game-design-and-development",
+      "source_html": "course_pages/Game Design and Development - BSc (Hons) - ARU_study_undergraduate_game-design-and-development.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-game-design-and-development.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/game-design-and-development",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/game-design-and-digital-art",
+      "source_html": "course_pages/Game Design and Digital Art - BA (Hons) - ARU_study_undergraduate_game-design-and-digital-art.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-game-design-and-digital-art.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/game-design-and-digital-art",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/graphic-design",
+      "source_html": "course_pages/Graphic Design BA (Hons) degree course - BA (Hons) - ARU_study_undergraduate_graphic-design.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-graphic-design.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/graphic-design",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/health-and-social-care-london",
+      "source_html": "course_pages/Health and Social Care - BSc (Hons) - ARU_study_undergraduate_health-and-social-care-london.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-health-and-social-care-london.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/health-and-social-care-london",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/history",
+      "source_html": "course_pages/History BA (Hons) degree course - BA (Hons) - ARU_study_undergraduate_history.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-history.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/history",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/horticulture",
+      "source_html": "course_pages/Horticulture degree - BSc (Hons) - ARU_study_undergraduate_horticulture.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-horticulture.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/horticulture",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/human-resource-management",
+      "source_html": "course_pages/Human Resource Management degree - BSc (Hons) - ARU_study_undergraduate_human-resource-management.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-human-resource-management.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/human-resource-management",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/illustration",
+      "source_html": "course_pages/Illustration BA (Hons) degree course - BA (Hons) - ARU_study_undergraduate_illustration.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-illustration.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/illustration",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/interior-design",
+      "source_html": "course_pages/Interior Design BA (Hons) degree course - BA (Hons) - ARU_study_undergraduate_interior-design.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-interior-design.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/interior-design",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/international-business-and-artificial-intelligence",
+      "source_html": "course_pages/International Business & Artificial Intelligence degree course - BSc (Hons) - ARU_study_undergraduate_international-business-and-artificial-intelligence.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-international-business-and-artificial-intelligence.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/international-business-and-artificial-intelligence",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/international-business-management",
+      "source_html": "course_pages/International Business Management - BSc (Hons) - ARU_study_undergraduate_international-business-management.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-international-business-management.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/international-business-management",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/law",
+      "source_html": "course_pages/Law degree - LLB (Hons) - ARU_study_undergraduate_law.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-law.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/law",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/law-with-business-management",
+      "source_html": "course_pages/Law with Business Management - LLB (Hons) - ARU_study_undergraduate_law-with-business-management.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-law-with-business-management.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/law-with-business-management",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/law-with-criminal-justice",
+      "source_html": "course_pages/Law with Criminal Justice - LLB (Hons) - ARU_study_undergraduate_law-with-criminal-justice.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-law-with-criminal-justice.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/law-with-criminal-justice",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/law-with-criminology",
+      "source_html": "course_pages/Law with Criminology - LLB (Hons) - ARU_study_undergraduate_law-with-criminology.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-law-with-criminology.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/law-with-criminology",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/law-with-politics-and-international-relations",
+      "source_html": "course_pages/Law with Politics and International Relations - LLB (Hons) - ARU_study_undergraduate_law-with-politics-and-international-relations.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-law-with-politics-and-international-relations.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/law-with-politics-and-international-relations",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/law-with-sociology",
+      "source_html": "course_pages/Law with Sociology degree - LLB (Hons) - ARU_study_undergraduate_law-with-sociology.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-law-with-sociology.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/law-with-sociology",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/liberal-arts",
+      "source_html": "course_pages/Liberal Arts - BA (Hons) - ARU_study_undergraduate_liberal-arts.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-liberal-arts.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/liberal-arts",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/mechanical-engineering-beng",
+      "source_html": "course_pages/Mechanical Engineering Course _ BEng (Hons) Degree - BEng (Hons) - ARU_study_undergraduate_mechanical-engineering-beng.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-mechanical-engineering-beng.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/mechanical-engineering-beng",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/mechanical-engineering-peterborough",
+      "source_html": "course_pages/Mechanical Engineering (ARU Peterborough) - BEng (Hons) - ARU_study_undergraduate_mechanical-engineering-peterborough.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-mechanical-engineering-peterborough.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/mechanical-engineering-peterborough",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/mechatronics-and-robotics-engineering-beng",
+      "source_html": "course_pages/Mechatronics and Robotics Engineering degree - BEng (Hons) - ARU_study_undergraduate_mechatronics-and-robotics-engineering-beng.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-mechatronics-and-robotics-engineering-beng.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/mechatronics-and-robotics-engineering-beng",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/medical-science",
+      "source_html": "course_pages/Medical Science degree - BSc (Hons) - ARU_study_undergraduate_medical-science.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-medical-science.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/medical-science",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/music-production",
+      "source_html": "course_pages/Music Production degree course - BA (Hons) - ARU_study_undergraduate_music-production.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-music-production.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/music-production",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/musical-theatre",
+      "source_html": "course_pages/Musical Theatre BA (Hons) degree course - BA (Hons) - ARU_study_undergraduate_musical-theatre.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-musical-theatre.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/musical-theatre",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/pharmaceutical-science",
+      "source_html": "course_pages/Pharmaceutical Science degree course - BSc (Hons) - ARU_study_undergraduate_pharmaceutical-science.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-pharmaceutical-science.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/pharmaceutical-science",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/philosophy",
+      "source_html": "course_pages/Philosophy BA (Hons) degree course - BA (Hons) - ARU_study_undergraduate_philosophy.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-philosophy.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/philosophy",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/philosophy-and-english-literature",
+      "source_html": "course_pages/Philosophy and English Literature BA (Hons) degree course - BA (Hons) - ARU_study_undergraduate_philosophy-and-english-literature.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-philosophy-and-english-literature.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/philosophy-and-english-literature",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/politics-and-international-relations",
+      "source_html": "course_pages/Politics and International Relations - BA (Hons) - ARU_study_undergraduate_politics-and-international-relations.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-politics-and-international-relations.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/politics-and-international-relations",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/psychology",
+      "source_html": "course_pages/Psychology degree - BSc (Hons) - ARU_study_undergraduate_psychology.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-psychology.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/psychology",
+      "study_level": "foundation"
     }
   ],
   "uni_pages": [

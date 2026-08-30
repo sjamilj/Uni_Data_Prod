@@ -115,8 +115,20 @@ python shared/run_llm_to_dev_csv.py --university $UNI --resume --model llama3.1:
 
 **Resume file:** `{University}/output/extracted/extraction_progress.json`
 
+## Foundation Url clean, html - .md
+python "..\..\shared\download_and_clean_course_pages.py" --code-dir "D:\DATA SCOL\output\UK_Uni_Data\Anglia Ruskin University - ARU\code" --clean-only --study-level foundation
 ---
 
+D:\DATA SCOL\output\UK_Uni_Data\Anglia Ruskin University - ARU\code
+
+### Use these 3 commands
+
+```powershell
+python "..\..\shared\download_and_clean_course_pages.py" --clean-only --study-level foundation
+
+python "..\..\shared\llm_extract.py" . --build-index
+
+python "..\..\shared\llm_extract.py" . --study-level foundation --resume
 ## Full pipeline — scrape through Execute
 
 ```powershell

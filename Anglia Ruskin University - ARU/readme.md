@@ -272,7 +272,8 @@ When changing scrape URLs or clean selectors, update **both** `.env` and `ENV.MD
 - [ ] Review `dev_courses_*.csv` against portal
 
 ---
-
+## Foundation Url clean, html - .md
+python "..\..\shared\download_and_clean_course_pages.py" --code-dir "D:\DATA SCOL\output\UK_Uni_Data\Anglia Ruskin University - ARU\code" --clean-only --study-level foundation
 ## Related docs
 
 | Doc | Topic |

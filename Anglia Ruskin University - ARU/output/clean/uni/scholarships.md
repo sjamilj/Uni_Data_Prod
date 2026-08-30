@@ -26,6 +26,14 @@ cleaned_at: 2026-08-30
     "description": "A scholarship for international postgraduate students. International students studying for an MBA, or who are an ARU graduate. Up to £4,000. You’ll automatically receive our International Postgraduate Scholarship if you meet the eligibility criteria."
   },
   {
+    "scholarshipName": "ARU International Progression Scholarship",
+    "scholarshipType": "Amount",
+    "scholarshipStudyLevel": "Foundation",
+    "Eligibility": "Current international students with ARU College who have successfully completed pathway programmes, are studying full-time, and are starting ARU Year 2 or Year 3 of an undergraduate course, or joining a masters postgraduate degree.",
+    "Amount": "£1,000",
+    "description": "Students progressing from ARU College to their ARU course can take advantage of a special discount. £1,000 for students who have successfully completed the Foundation or First Year programme with ARU College. £1,000 for students who have successfully completed the Pre Master programme with ARU College. There is no need to apply. This discount will be automatically applied."
+  },
+  {
     "scholarshipName": "MBA Scholarship",
     "scholarshipType": "Amount",
     "scholarshipStudyLevel": "Postgraduate",

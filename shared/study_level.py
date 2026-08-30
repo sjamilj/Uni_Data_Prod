@@ -139,7 +139,7 @@ def extraction_resume_key(study_level: str | None, slug: str) -> str:
 
 def is_resume_completed(completed: set[str], *, study_level: str | None, slug: str) -> bool:
     key = extraction_resume_key(study_level, slug)
-    return key in completed or slug in completed
+    return key in completed
 
 
 @dataclass

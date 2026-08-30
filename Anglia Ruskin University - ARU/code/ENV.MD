@@ -66,7 +66,8 @@ courses-phd
 "
 
 FOUNDATION_URL_PATTERNS="
-foundation
+^/study/undergraduate(?:/|$)
+(?:^|[-_/])(?:bsc|ba|beng|llb|mbchb|moptom|mpharm)(?:[-_/]|$)
 "
 
  
@@ -90,10 +91,9 @@ EXCLUDED_PATH_PREFIXES="
 "
  
 # --- Course page cleaning (download_and_clean_course_pages.py — course_detail/) ---
- 
+
 COURSE_PAGE_TITLE_SELECTOR=#course-page-title
 
-# generic (default) | utopian (ARU) | plugin | auto
 COURSE_CLEAN_ENGINE=utopian
 
 # One CSS selector per line; optional heading with :: or |
@@ -110,14 +110,14 @@ noscript
 .hero-image
 img
 "
- 
+
 COURSE_CLEAN_EXPAND_TABS=true
 
 # --- Course markdown cleanup (shared/course_markdown_cleanup.py) ---
-# level :: heading  (removes that section until the next heading at the same level)
 COURSE_MARKDOWN_REMOVE_SECTIONS="
 4 :: With placement
-4 :: With foundation year
+4 :: BSc (Hons)
+4 :: BA (Hons)
 4 :: Important additional notes
 4 :: *part-time*
 3 :: UK students
@@ -128,7 +128,6 @@ COURSE_MARKDOWN_REMOVE_SECTIONS="
 "
 
 # --- uni_req source URLs (for JSON saves without browser URL metadata) ---
-# html_stem :: canonical page URL (matches uni_req/*.html filename stem)
 UNI_REQ_SOURCE_URLS="
 bangladesh-entry :: https://www.aru.ac.uk/international/south-asia
 english-requirements :: https://www.aru.ac.uk/international/entry-requirements

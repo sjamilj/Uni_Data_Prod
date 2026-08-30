@@ -45,7 +45,7 @@ cleaned_at: 2026-08-30
     ]
   },
   {
-    "TestStudyLevel": "Foundation year",
+    "TestStudyLevel": "Foundation",
     "ProgramName": "",
     "TestRequirements": [
       {

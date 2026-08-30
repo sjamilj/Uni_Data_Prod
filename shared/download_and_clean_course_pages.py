@@ -387,6 +387,7 @@ class ManifestWriter:
         page_type: str,
         university: str,
         study_level: str = "",
+        course_url: str = "",
     ) -> str:
         lines = [
             "---",
@@ -396,6 +397,8 @@ class ManifestWriter:
             f"university: {university}",
             f"cleaned_at: {date.today().isoformat()}",
         ]
+        if course_url:
+            lines.append(f"course_url: {course_url}")
         if study_level:
             lines.append(f"study_level: {study_level}")
         lines.extend(["---", ""])
@@ -600,6 +603,7 @@ class CoursePagesCleaner:
                         page_type="course",
                         university=self.university_name,
                         study_level=folder,
+                        course_url=course_url,
                     )
                     + markdown
                     + "\n",

@@ -6,10 +6,26 @@ university: Anglia Ruskin University - ARU
 cleaned_at: 2026-08-30
 ---
 # Bangladesh Entry Requirements
-
 ```json
 {
   "studyLevels": [
+    {
+      "studyLevel": "Foundation",
+      "programs": [
+        {
+          "program": "",
+          "requirements": [
+            {
+              "degree": "HSC",
+              "grade": "3.0 or 60%"
+            }
+          ],
+          "description": [
+            "Completion of HSC with grade average of 3.0 or 60%"
+          ]
+        }
+      ]
+    },
     {
       "studyLevel": "Undergraduate",
       "programs": [
@@ -74,4 +90,3 @@ cleaned_at: 2026-08-30
   ]
 }
 ```
-
