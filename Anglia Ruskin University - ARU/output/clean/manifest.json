@@ -1,6 +1,6 @@
 {
   "university": "Anglia Ruskin University - ARU",
-  "cleaned_at": "2026-08-25",
+  "cleaned_at": "2026-08-30",
   "courses": [
     {
       "course_url": "https://www.aru.ac.uk/study/undergraduate/psychology-with-clinical-applications",
@@ -186,9 +186,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/animal-and-environmental-sciences",
-      "source_html": "course_pages/Biology - MPhil, PhD - ARU.html",
-      "clean_md": "clean/courses/postgraduate/study-postgraduate-animal-and-environmental-sciences.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/animal-and-environmental-sciences",
+      "source_html": "course_pages/Biology - MPhil, PhD - ARU_study_postgraduate_animal-and-environmental-sciences.html",
+      "clean_md": "clean/pre_setup_course/postgraduate/study-postgraduate-animal-and-environmental-sciences.md",
+      "source_url": "https://aru.ac.uk/study/postgraduate/animal-and-environmental-sciences",
       "study_level": "postgraduate"
     },
     {
@@ -214,9 +214,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/applied-data-science",
-      "source_html": "course_pages/Applied Data Science (Conversion) MSc - MSc - ARU.html",
-      "clean_md": "clean/courses/postgraduate/study-postgraduate-applied-data-science.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/applied-data-science",
+      "source_html": "course_pages/Applied Data Science (Conversion) MSc - MSc - ARU_study_postgraduate_applied-data-science.html",
+      "clean_md": "clean/pre_setup_course/postgraduate/study-postgraduate-applied-data-science.md",
+      "source_url": "https://aru.ac.uk/study/postgraduate/applied-data-science",
       "study_level": "postgraduate"
     },
     {
@@ -319,9 +319,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/business-and-management",
-      "source_html": "course_pages/School of Management - MPhil, PhD - ARU.html",
-      "clean_md": "clean/courses/postgraduate/study-postgraduate-business-and-management.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/business-and-management",
+      "source_html": "course_pages/School of Management - MPhil, PhD - ARU_study_postgraduate_business-and-management.html",
+      "clean_md": "clean/pre_setup_course/postgraduate/study-postgraduate-business-and-management.md",
+      "source_url": "https://aru.ac.uk/study/postgraduate/business-and-management",
       "study_level": "postgraduate"
     },
     {
@@ -662,9 +662,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/fine-art",
-      "source_html": "course_pages/Fine Art - MA - ARU.html",
-      "clean_md": "clean/courses/postgraduate/study-postgraduate-fine-art.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/fine-art",
+      "source_html": "course_pages/Fine Art - MA - ARU_study_postgraduate_fine-art.html",
+      "clean_md": "clean/pre_setup_course/postgraduate/study-postgraduate-fine-art.md",
+      "source_url": "https://aru.ac.uk/study/postgraduate/fine-art",
       "study_level": "postgraduate"
     },
     {
@@ -1320,9 +1320,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/undergraduate/acting",
-      "source_html": "course_pages/Acting degree - BA (Hons) - ARU.html",
-      "clean_md": "clean/courses/undergraduate/study-undergraduate-acting.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/undergraduate/acting",
+      "source_html": "course_pages/Acting degree - BA (Hons) - ARU_study_undergraduate_acting.html",
+      "clean_md": "clean/pre_setup_course/undergraduate/study-undergraduate-acting.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/acting",
       "study_level": "undergraduate"
     },
     {
@@ -1341,9 +1341,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/undergraduate/animal-management-zoo-and-wildlife-conservation",
-      "source_html": "course_pages/Animal Management (Zoo and Wildlife Conservation) - BSc (Hons) - ARU.html",
-      "clean_md": "clean/courses/undergraduate/study-undergraduate-animal-management-zoo-and-wildlife-conservation.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/undergraduate/animal-management-zoo-and-wildlife-conservation",
+      "source_html": "course_pages/Animal Management (Zoo and Wildlife Conservation) - BSc (Hons) - ARU_study_undergraduate_animal-management-zoo-and-wildlife-conservation.html",
+      "clean_md": "clean/pre_setup_course/undergraduate/study-undergraduate-animal-management-zoo-and-wildlife-conservation.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/animal-management-zoo-and-wildlife-conservation",
       "study_level": "undergraduate"
     },
     {
@@ -1362,9 +1362,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/undergraduate/animation-and-illustration",
-      "source_html": "course_pages/Animation and Illustration - BA (Hons) - ARU.html",
-      "clean_md": "clean/courses/undergraduate/study-undergraduate-animation-and-illustration.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/undergraduate/animation-and-illustration",
+      "source_html": "course_pages/Animation and Illustration - BA (Hons) - ARU_study_undergraduate_animation-and-illustration.html",
+      "clean_md": "clean/pre_setup_course/undergraduate/study-undergraduate-animation-and-illustration.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/animation-and-illustration",
       "study_level": "undergraduate"
     },
     {
@@ -1418,9 +1418,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/undergraduate/biology",
-      "source_html": "course_pages/Biology - BSc (Hons) - ARU.html",
-      "clean_md": "clean/courses/undergraduate/study-undergraduate-biology.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/undergraduate/biology",
+      "source_html": "course_pages/Biology - BSc (Hons) - ARU_study_undergraduate_biology.html",
+      "clean_md": "clean/pre_setup_course/undergraduate/study-undergraduate-biology.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/biology",
       "study_level": "undergraduate"
     },
     {
@@ -1621,9 +1621,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/undergraduate/computer-science-bsc",
-      "source_html": "course_pages/Computer Science BSc (Hons) degree course - BSc (Hons) - ARU.html",
-      "clean_md": "clean/courses/undergraduate/study-undergraduate-computer-science-bsc.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/undergraduate/computer-science-bsc",
+      "source_html": "course_pages/Computer Science BSc (Hons) degree course - BSc (Hons) - ARU_study_undergraduate_computer-science-bsc.html",
+      "clean_md": "clean/pre_setup_course/undergraduate/study-undergraduate-computer-science-bsc.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/computer-science-bsc",
       "study_level": "undergraduate"
     },
     {
@@ -2034,9 +2034,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/undergraduate/marketing",
-      "source_html": "course_pages/Marketing degree course - BSc (Hons) - ARU.html",
-      "clean_md": "clean/courses/undergraduate/study-undergraduate-marketing.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/undergraduate/marketing",
+      "source_html": "course_pages/Marketing degree course - BSc (Hons) - ARU_study_undergraduate_marketing.html",
+      "clean_md": "clean/pre_setup_course/undergraduate/study-undergraduate-marketing.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/marketing",
       "study_level": "undergraduate"
     },
     {

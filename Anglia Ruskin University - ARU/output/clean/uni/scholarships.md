@@ -3,7 +3,7 @@ source_html: uni_req/scholarships.html
 source_url: https://www.aru.ac.uk/student-life/preparing-for-study/help-with-finances/scholarships
 page_type: uni
 university: Anglia Ruskin University - ARU
-cleaned_at: 2026-08-25
+cleaned_at: 2026-08-30
 ---
 # Scholarships
 

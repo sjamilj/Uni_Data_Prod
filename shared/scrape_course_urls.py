@@ -47,6 +47,8 @@ Run from a university code/ folder (uses .env in cwd, or pass --code-dir):
   cd "{University}/code"
   python "../../shared/scrape_course_urls.py" --fresh
   python "../../shared/scrape_course_urls.py" --fresh --append-urls
+  python "../../shared/scrape_course_urls.py" --append-urls --study-level foundation
+  python "../../shared/scrape_course_urls.py" --pick-levels
 """
 
 from __future__ import annotations
@@ -74,9 +76,12 @@ from uni_paths import resolve_code_dir, resolve_output_dir
 from course_type_filter import CourseTypeFilter
 from study_level import (
     LEVEL_CSV_NAMES,
+    SCOPE_TO_LEVEL,
     StudyLevelClassifier,
     UrlLevelMap,
+    parse_study_levels,
     read_level_csvs,
+    scope_to_level,
     write_level_csvs,
 )
 
@@ -399,6 +404,15 @@ class UrlNormalizer:
     def group_state_key(scope: str, path_key: str) -> str:
         return f"{scope}::{path_key}"
 
+    @staticmethod
+    def listing_family_key(url: str) -> str:
+        """Listing identity with the page number normalized, so page 1 and page 9 match."""
+        param = UrlNormalizer.detect_pagination_param(url)
+        return UrlNormalizer.normalize(
+            UrlNormalizer.set_page_number(url, 1, param),
+            keep_query=True,
+        )
+
 
 # ============================================================================
 # Catalogue-URL inference from a saved HTML file
@@ -719,6 +733,18 @@ class ListingConfigLoader:
                 ListingConfig(scope=scope, programme=scope, seeds=seeds, search_path=search_paths[0])
             )
         return configs
+
+    @staticmethod
+    def scopes_for_levels(study_levels: list[str]) -> set[str]:
+        wanted = set()
+        for level in study_levels:
+            for scope, mapped in SCOPE_TO_LEVEL.items():
+                if mapped == level:
+                    wanted.add(scope)
+            via_scope = (level or "").strip().replace("-", "_").replace(" ", "_").upper()
+            if via_scope in DEGREE_SCOPES:
+                wanted.add(via_scope)
+        return wanted
 
     @staticmethod
     def fingerprint(listing_configs: list[ListingConfig]) -> list[dict]:
@@ -1327,12 +1353,17 @@ class PaginatedListingExtractor:
         page_index = int(state.get("page_index", 1))
         max_pages = state.get("max_pages")
         empty_streak = int(state.get("empty_streak", 0))
+        same_page_streak = int(state.get("same_page_streak", 0))
+        previous_page_urls = set(state.get("previous_page_urls") or [])
         pagination_param = state.get("pagination_param") or pagination_param
         page_step = int(state.get("page_step") or page_step)
 
         print(f"  [{scope}] Search listing: {label} ({base_listing_url.split('?')[0]})")
 
-        while empty_streak < PAGINATION_EMPTY_LIMIT:
+        while (
+            empty_streak < PAGINATION_EMPTY_LIMIT
+            and same_page_streak < PAGINATION_EMPTY_LIMIT
+        ):
             if max_pages is not None and page_index > int(max_pages):
                 print(f"    [{scope}] Reached last page ({max_pages}) for {label}")
                 break
@@ -1368,6 +1399,7 @@ class PaginatedListingExtractor:
                 print(f"    [{scope}] {label}: {total} results, ~{max_pages} pages ({page_size} per page)")
 
             page_urls = matcher.extract_from_html(html, base_url)
+            page_url_set = set(page_urls)
             before_count = len(all_urls)
             if page_urls:
                 all_urls.update(page_urls)
@@ -1378,33 +1410,59 @@ class PaginatedListingExtractor:
                     source_scope=scope,
                 )
             new_count = len(all_urls) - before_count
-            if new_count > 0:
-                empty_streak = 0
-                print(
-                    f"    [{scope}] Found {new_count} new course URLs on page "
-                    f"({len(page_urls)} on page, total {len(all_urls)})"
-                )
-                self.logger.ok(
-                    f"[{scope}] Listing page {page_counter}: {new_count} new URLs "
-                    f"from {listing_url}"
-                )
-            else:
+            if not page_urls:
                 empty_streak += 1
-                reason = "no course URLs" if not page_urls else "no new course URLs"
+                same_page_streak = 0
                 print(
-                    f"    [{scope}] {reason} ({empty_streak}/{PAGINATION_EMPTY_LIMIT}): "
-                    f"{listing_url}"
-                )
-                self.logger.error(
-                    f"[{scope}] Listing page {page_counter} {reason} "
+                    f"    [{scope}] no course URLs "
                     f"({empty_streak}/{PAGINATION_EMPTY_LIMIT}): {listing_url}"
                 )
+                self.logger.error(
+                    f"[{scope}] Listing page {page_counter} no course URLs "
+                    f"({empty_streak}/{PAGINATION_EMPTY_LIMIT}): {listing_url}"
+                )
+            else:
+                empty_streak = 0
+                if previous_page_urls and page_url_set == previous_page_urls:
+                    same_page_streak += 1
+                    print(
+                        f"    [{scope}] same course URLs as previous page "
+                        f"({same_page_streak}/{PAGINATION_EMPTY_LIMIT}): {listing_url}"
+                    )
+                    self.logger.error(
+                        f"[{scope}] Listing page {page_counter} repeated listing "
+                        f"({same_page_streak}/{PAGINATION_EMPTY_LIMIT}): {listing_url}"
+                    )
+                else:
+                    same_page_streak = 0
+                    if new_count > 0:
+                        print(
+                            f"    [{scope}] Found {new_count} new course URLs on page "
+                            f"({len(page_urls)} on page, total {len(all_urls)})"
+                        )
+                        self.logger.ok(
+                            f"[{scope}] Listing page {page_counter}: {new_count} new URLs "
+                            f"from {listing_url}"
+                        )
+                    else:
+                        print(
+                            f"    [{scope}] {len(page_urls)} course URLs already known "
+                            f"(+{new_count} new, total {len(all_urls)}); continuing pagination"
+                        )
+                        self.logger.ok(
+                            f"[{scope}] Listing page {page_counter}: "
+                            f"{len(page_urls)} already-known URLs, continuing "
+                            f"from {listing_url}"
+                        )
+                previous_page_urls = page_url_set
 
             page_index += page_step
             state.update(
                 page_index=page_index,
                 max_pages=max_pages,
                 empty_streak=empty_streak,
+                same_page_streak=same_page_streak,
+                previous_page_urls=sorted(previous_page_urls),
                 pagination_param=pagination_param,
                 page_step=page_step,
             )
@@ -1438,15 +1496,93 @@ class CourseUrlScraper:
         self.artifacts = ArtifactStore(self.output_dir)
         self.logger = ScrapeLogger(self.output_dir)
 
-    def run(self, fresh: bool = False, append: bool = False) -> list[str]:
-        strategy = self.config.strategy
-        self.logger.start("urls-only", strategy=strategy, fresh=fresh, append=append)
+    def _filter_to_study_levels(self, study_levels: list[str] | None) -> set[str]:
+        if not study_levels:
+            return set()
+        wanted = ListingConfigLoader.scopes_for_levels(study_levels)
+        listings = [
+            item
+            for item in self.config.degree_listings
+            if item.scope in wanted or scope_to_level(item.scope) in study_levels
+        ]
+        catalogues = [
+            item
+            for item in self.config.degree_scopes
+            if item.scope in wanted or scope_to_level(item.scope) in study_levels
+        ]
+        if self.config.degree_listings:
+            if not listings:
+                available = ", ".join(item.scope for item in self.config.degree_listings) or "none"
+                raise ValueError(
+                    f"No listing URLs for study level(s): {', '.join(study_levels)}. "
+                    f"Configured scopes: {available}."
+                )
+            self.config.degree_listings = listings
+        if self.config.degree_scopes:
+            if not catalogues:
+                available = ", ".join(item.scope or "?" for item in self.config.degree_scopes) or "none"
+                raise ValueError(
+                    f"No catalogue sources for study level(s): {', '.join(study_levels)}. "
+                    f"Configured scopes: {available}."
+                )
+            self.config.degree_scopes = catalogues
+        return wanted
 
-        if fresh and not append:
+    def _reset_selected_scope_progress(
+        self,
+        completed: set[str],
+        group_state: dict[str, dict],
+    ) -> None:
+        prefixes = [f"{item.scope}::" for item in self.config.degree_listings]
+        prefixes.extend(f"{item.scope}::" for item in self.config.degree_scopes if item.scope)
+        for key in list(group_state):
+            if any(key.startswith(prefix) for prefix in prefixes):
+                del group_state[key]
+
+        family_keys = {
+            UrlNormalizer.listing_family_key(seed)
+            for item in self.config.degree_listings
+            for seed in item.seeds
+        }
+        if not family_keys:
+            return
+        keep = {
+            url
+            for url in completed
+            if UrlNormalizer.listing_family_key(url) not in family_keys
+        }
+        completed.clear()
+        completed.update(keep)
+
+    def run(
+        self,
+        fresh: bool = False,
+        append: bool = False,
+        study_levels: list[str] | None = None,
+    ) -> list[str]:
+        strategy = self.config.strategy
+        selected_scopes = self._filter_to_study_levels(study_levels)
+        scoped = bool(selected_scopes)
+        keep_existing = append or scoped
+        self.logger.start(
+            "urls-only",
+            strategy=strategy,
+            fresh=fresh,
+            append=keep_existing,
+            study_levels=",".join(study_levels or []) or "all",
+        )
+
+        if fresh and not scoped and not append:
             self.progress_store.clear()
 
         progress = self.progress_store.load()
-        if progress and progress.get("phase") == "urls_complete" and not fresh and not append:
+        if (
+            progress
+            and progress.get("phase") == "urls_complete"
+            and not fresh
+            and not append
+            and not scoped
+        ):
             urls = progress.get("course_urls") or self.artifacts.read_course_urls()
             print(f"URLs already complete ({len(urls)}). Use --fresh to re-extract.")
             print("Or add more degree scopes and run: --append-urls")
@@ -1459,21 +1595,26 @@ class CourseUrlScraper:
 
         all_urls: set[str] = set()
         url_levels = UrlLevelMap()
-        if append:
+        if keep_existing:
             existing = self.artifacts.read_course_urls()
             all_urls.update(existing)
             url_levels.merge(UrlLevelMap.from_progress((progress or {}).get("url_levels")))
             url_levels.merge(read_level_csvs(self.output_dir))
-            print(f"Append mode: starting with {len(existing)} existing URLs")
+            print(f"Keeping {len(existing)} existing URLs")
             progress = progress or ProgressStore.new("extracting_urls", strategy)
             progress["phase"] = "extracting_urls"
         else:
             progress = ProgressStore.new("extracting_urls", strategy)
 
         completed: set[str] = set(progress.get("listing_completed", []))
-        group_state: dict[str, dict] = progress.get("group_state", {})
+        group_state: dict[str, dict] = dict(progress.get("group_state", {}))
         if progress.get("url_levels"):
             url_levels.merge(UrlLevelMap.from_progress(progress.get("url_levels")))
+        if scoped:
+            self._reset_selected_scope_progress(completed, group_state)
+            print(f"Study levels: {', '.join(study_levels or [])}")
+        progress["listing_completed"] = sorted(completed)
+        progress["group_state"] = group_state
         self.progress_store.save(progress)
 
         print(f"STRATEGY={strategy}")
@@ -1485,7 +1626,13 @@ class CourseUrlScraper:
             self._run_all_course(listing_dir, all_urls, completed, url_levels)
         elif strategy == STRATEGY_DEGREE_SCOPED_PAGINATED:
             self._run_paginated(
-                listing_dir, all_urls, completed, group_state, progress, url_levels
+                listing_dir,
+                all_urls,
+                completed,
+                group_state,
+                progress,
+                url_levels,
+                scoped=scoped,
             )
         else:
             raise ValueError(f"Unsupported STRATEGY: {strategy}")
@@ -1544,6 +1691,7 @@ class CourseUrlScraper:
         group_state: dict[str, dict],
         progress: dict,
         url_levels: UrlLevelMap,
+        scoped: bool = False,
     ) -> None:
         listing_configs = self.config.degree_listings
         fingerprint = ListingConfigLoader.fingerprint(listing_configs)
@@ -1553,22 +1701,42 @@ class CourseUrlScraper:
             and saved_fingerprint
             and saved_fingerprint != fingerprint
         ):
-            raise ValueError(
-                ".env listing URLs changed since the last run. "
-                "Use --fresh to restart, or restore the previous .env to resume."
-            )
+            saved_by_scope = {
+                item.get("scope"): item
+                for item in saved_fingerprint
+                if isinstance(item, dict)
+            }
+            if scoped:
+                for item, item_fp in zip(listing_configs, fingerprint):
+                    saved = saved_by_scope.get(item.scope)
+                    if saved and saved != item_fp:
+                        raise ValueError(
+                            f".env {item.scope} listing URLs changed since the last run. "
+                            "Use --fresh to restart, or restore the previous .env to resume."
+                        )
+            else:
+                raise ValueError(
+                    ".env listing URLs changed since the last run. "
+                    "Use --fresh to restart, or restore the previous .env to resume."
+                )
 
         if progress.get("phase") == "extracting_urls":
             all_urls.update(progress.get("course_urls", []))
+            saved_completed = list(progress.get("listing_completed", []))
+            saved_group = {
+                key: dict(value) if isinstance(value, dict) else value
+                for key, value in dict(progress.get("group_state", {})).items()
+            }
             completed.clear()
-            completed.update(progress.get("listing_completed", []))
+            completed.update(saved_completed)
             group_state.clear()
-            group_state.update(progress.get("group_state", {}))
+            group_state.update(saved_group)
             page_counter = len(completed)
             print(f"Resuming paginated extraction ({len(all_urls)} URLs, {page_counter} pages done)")
         else:
             page_counter = 0
-            progress["listing_configs"] = fingerprint
+            if not scoped or not saved_fingerprint:
+                progress["listing_configs"] = fingerprint
             for listing_config in listing_configs:
                 groups = SearchGroupBuilder.build(listing_config.seeds)
                 for path_key, base_url_seed in groups.items():
@@ -1580,6 +1748,8 @@ class CourseUrlScraper:
                             "page_index": UrlNormalizer.get_page_number(base_url_seed, param),
                             "max_pages": None,
                             "empty_streak": 0,
+                            "same_page_streak": 0,
+                            "previous_page_urls": [],
                             "pagination_param": param,
                             "page_step": UrlNormalizer.infer_page_step(listing_config.seeds, param),
                         },
@@ -1807,8 +1977,57 @@ class ScraperCLI:
                 "(use after changing COURSE_CATALOGUE_HTML / URL to a second source)"
             ),
         )
+        parser.add_argument(
+            "--study-level",
+            action="append",
+            dest="study_level",
+            metavar="LEVEL",
+            help=(
+                "Scrape only this study level (repeatable): "
+                "foundation, undergraduate, postgraduate, postgraduate_research"
+            ),
+        )
+        parser.add_argument(
+            "--pick-levels",
+            action="store_true",
+            help="Prompt in the terminal for which study level listing(s) to scrape",
+        )
         add_code_dir_argument(parser)
         return parser
+
+    @staticmethod
+    def available_scopes(config: ScraperConfig) -> list[str]:
+        scopes: list[str] = []
+        for item in config.degree_listings:
+            if item.scope and item.scope not in scopes:
+                scopes.append(item.scope)
+        for item in config.degree_scopes:
+            if item.scope and item.scope not in scopes:
+                scopes.append(item.scope)
+        return scopes or list(DEGREE_SCOPES)
+
+    @staticmethod
+    def prompt_study_levels(available_scopes: list[str]) -> list[str]:
+        print("Study levels to scrape:")
+        print("  0) all")
+        for index, scope in enumerate(available_scopes, start=1):
+            level = SCOPE_TO_LEVEL.get(scope, scope_to_level(scope) or scope.lower())
+            print(f"  {index}) {level}  ({scope})")
+        raw = input("Enter numbers or names (comma-separated): ").strip()
+        if not raw or raw in {"0", "*", "all"}:
+            return []
+        chosen: list[str] = []
+        tokens = [part.strip() for part in raw.split(",") if part.strip()]
+        for token in tokens:
+            if token.isdigit():
+                number = int(token)
+                if number == 0:
+                    return []
+                if 1 <= number <= len(available_scopes):
+                    chosen.append(SCOPE_TO_LEVEL.get(available_scopes[number - 1], available_scopes[number - 1]))
+                    continue
+            chosen.append(token)
+        return parse_study_levels(chosen)
 
     @staticmethod
     def main(work_dir: Path | None = None) -> int:
@@ -1816,8 +2035,15 @@ class ScraperCLI:
         code_dir = resolve_work_dir(work_dir if work_dir is not None else args.code_dir)
         try:
             config = ConfigLoader.load(code_dir)
+            study_levels = parse_study_levels(args.study_level) if args.study_level else []
+            if args.pick_levels:
+                study_levels = ScraperCLI.prompt_study_levels(ScraperCLI.available_scopes(config))
             scraper = CourseUrlScraper(code_dir, config)
-            scraper.run(fresh=args.fresh, append=args.append_urls)
+            scraper.run(
+                fresh=args.fresh,
+                append=args.append_urls,
+                study_levels=study_levels or None,
+            )
         except Exception as exc:
             print(f"Error: {exc}", file=sys.stderr)
             try:

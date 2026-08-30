@@ -3,7 +3,7 @@ source_html: uni_req/deposit.html
 source_url: https://www.aru.ac.uk/international/how-to-apply/step-4---receive-our-decision-on-your-application
 page_type: uni
 university: Anglia Ruskin University - ARU
-cleaned_at: 2026-08-25
+cleaned_at: 2026-08-30
 ---
 # Tuition Fee Deposit
 

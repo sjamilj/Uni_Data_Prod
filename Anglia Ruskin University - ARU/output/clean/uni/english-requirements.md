@@ -3,7 +3,7 @@ source_html: uni_req/english-requirements.html
 source_url: https://www.aru.ac.uk/international/entry-requirements
 page_type: uni
 university: Anglia Ruskin University - ARU
-cleaned_at: 2026-08-25
+cleaned_at: 2026-08-30
 ---
 # English Language Requirements
 

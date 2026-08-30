@@ -204,7 +204,7 @@ class MainWindow(QMainWindow):
             buttons.addWidget(button)
         layout.addLayout(buttons)
 
-        execute_box = QGroupBox("Execute: study levels and how many courses")
+        execute_box = QGroupBox("Study levels (Scrape URLs and Execute) and how many courses")
         execute_layout = QVBoxLayout(execute_box)
         level_row = QHBoxLayout()
         self.level_checks: dict[str, QCheckBox] = {}
@@ -235,6 +235,7 @@ class MainWindow(QMainWindow):
         layout.addWidget(execute_box)
 
         self.note_label = QLabel(
+            "Tick study levels before Scrape URLs to scrape only those listings; leave them unticked to scrape all. "
             "After Presetup, review HTML and markdown, then edit .env / cleanup code before Presetup LLM. "
             "Execute downloads, cleans, and sends each course to the LLM one at a time. "
             "Cloudflare unis (South Wales, UWTSD, West London) may need a headed scrape."
@@ -500,11 +501,14 @@ class MainWindow(QMainWindow):
             if ok != QMessageBox.StandardButton.Yes:
                 return None
         if phase_id == "scrape_urls":
+            extra: list[str] = []
             if mode == "fresh":
-                return ["--fresh"]
-            if mode == "append":
-                return ["--append-urls"]
-            return []
+                extra.append("--fresh")
+            elif mode == "append":
+                extra.append("--append-urls")
+            for level in self._selected_levels():
+                extra.extend(["--study-level", level])
+            return extra
         if phase_id == "uni_clean":
             return []
         if phase_id == "presetup":
