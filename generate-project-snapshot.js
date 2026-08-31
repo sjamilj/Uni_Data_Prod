@@ -2,22 +2,50 @@
 /**
  * generate-project-snapshot.js
  *
- * Walks a project folder, builds a directory tree, and dumps every file's
- * content underneath it into a single Markdown file — useful for sharing
- * your whole project structure + code in one file (e.g. to paste into a
- * chat, or keep as a dated snapshot).
+ * Walks a project folder (or a set of them), builds a directory tree, and
+ * dumps every file's content underneath it into a single Markdown file —
+ * useful for sharing your whole project structure + code in one file
+ * (e.g. to paste into a chat, or keep as a dated snapshot).
  *
- * USAGE:
- *   node generate-project-snapshot.js [rootPath] [outputFile]
+ * ── TWO MODES ────────────────────────────────────────────────────────────
  *
- * EXAMPLES:
- *   node generate-project-snapshot.js
- *   node generate-project-snapshot.js . snapshot.md
- *   node generate-project-snapshot.js "E:\Project Next\Personal Digital Document Vault\document-vault" project-snapshot.md
+ * 1) ALL-UNI MODE — snapshot every university's `code/` folder in one go,
+ *    plus the shared `shared/` and `dashboard/` folders.
  *
- * Defaults:
- *   rootPath   = current directory (".")
- *   outputFile = "project-snapshot.md"
+ *      node generate-project-snapshot.js --mode all --root "E:\Project Next\UK UNIVERSITIES\UNI\Uni_Data_Prod"
+ *
+ *    This expects a layout like:
+ *      <root>\Aston University\code\...
+ *      <root>\<Other University>\code\...
+ *      <root>\shared\...
+ *      <root>\dashboard\...
+ *
+ *    Every immediate subfolder of <root> that itself contains a `code`
+ *    subfolder is treated as a university and included automatically —
+ *    you don't need to list university names anywhere.
+ *
+ * 2) SINGLE-UNI MODE — snapshot just one university's `code/` folder
+ *    (still includes shared/ and dashboard/ by default, since the code
+ *    usually depends on them — turn that off with --no-shared).
+ *
+ *      node generate-project-snapshot.js --mode uni --uni "Aston University" --root "E:\Project Next\UK UNIVERSITIES\UNI\Uni_Data_Prod"
+ *
+ * 3) LEGACY / PLAIN MODE — original behaviour, snapshot any single folder
+ *    directly (no university structure assumed):
+ *
+ *      node generate-project-snapshot.js [rootPath] [outputFile]
+ *      node generate-project-snapshot.js .
+ *      node generate-project-snapshot.js "E:\Project Next\Personal Digital Document Vault\document-vault"
+ *
+ * ── FLAGS ────────────────────────────────────────────────────────────────
+ *   --mode <all|uni|plain>   default: plain
+ *   --root <path>            root folder (Uni_Data_Prod for all/uni modes)
+ *   --uni "<Name>"           required for --mode uni; must match a folder
+ *                            name directly under --root
+ *   --output <file>          output markdown path (default project-snapshot.md)
+ *   --no-shared              (uni mode only) skip shared/ and dashboard/
+ *   --code-dir <name>        subfolder name that holds the code, per
+ *                            university (default: "code")
  *
  * CHANGES vs original:
  *   - Writes to disk via a stream instead of building one giant in-memory
@@ -28,15 +56,13 @@
  *     — edit these lists for your project.
  *   - Caps any single file's dumped content at MAX_FILE_BYTES; oversized
  *     files are noted but not dumped in full.
+ *   - NEW: --mode all / --mode uni for multi-university project layouts.
  */
 
 const fs = require('fs');
 const path = require('path');
 
 // ── Config ────────────────────────────────────────────────────────────────
-
-const rootPath = path.resolve(process.argv[2] || '.');
-const outputFile = path.resolve(process.argv[3] || 'project-snapshot.md');
 
 // Don't include more than this many bytes of any single file's content.
 const MAX_FILE_BYTES = 200 * 1024; // 200 KB per file
@@ -104,6 +130,39 @@ const LANG_MAP = {
   '.env': 'env',
 };
 
+// ── CLI arg parsing ──────────────────────────────────────────────────────
+
+function parseArgs(argv) {
+  const args = { _: [] };
+  for (let i = 0; i < argv.length; i++) {
+    const a = argv[i];
+    if (a === '--no-shared') {
+      args.noShared = true;
+    } else if (a.startsWith('--')) {
+      const key = a.slice(2);
+      const val = argv[i + 1];
+      args[key] = val;
+      i++;
+    } else {
+      args._.push(a);
+    }
+  }
+  return args;
+}
+
+const cliArgs = parseArgs(process.argv.slice(2));
+
+const mode = (cliArgs.mode || 'plain').toLowerCase(); // 'all' | 'uni' | 'plain'
+const codeDirName = cliArgs['code-dir'] || 'code';
+
+// root: explicit --root, else first positional arg (plain mode), else cwd
+const rootPath = path.resolve(cliArgs.root || cliArgs._[0] || '.');
+
+// output: explicit --output, else second positional arg (plain mode), else default
+const outputFile = path.resolve(
+  cliArgs.output || cliArgs._[1] || 'project-snapshot.md'
+);
+
 // ── Helpers ───────────────────────────────────────────────────────────────
 
 function getLang(filePath) {
@@ -164,7 +223,7 @@ function buildTree(dir, prefix = '') {
   return output;
 }
 
-/** Recursively collect all file paths (relative to rootPath), in tree order. */
+/** Recursively collect all file paths (relative to a base dir), in tree order. */
 function collectFiles(dir, relBase = '') {
   const { dirs, files } = walk(dir);
   let result = [];
@@ -178,39 +237,48 @@ function collectFiles(dir, relBase = '') {
   return result;
 }
 
-// ── Main ──────────────────────────────────────────────────────────────────
+/** Discover university folders under root: any immediate subfolder that
+ *  itself contains a `codeDirName` subfolder. */
+function discoverUniversities(root) {
+  if (!fs.existsSync(root)) return [];
+  const entries = fs.readdirSync(root, { withFileTypes: true });
+  const unis = [];
+  for (const entry of entries.sort((a, b) => a.name.localeCompare(b.name))) {
+    if (!entry.isDirectory()) continue;
+    if (IGNORE_DIRS.has(entry.name)) continue;
+    if (entry.name === 'shared' || entry.name === 'dashboard') continue;
+    const candidateCodeDir = path.join(root, entry.name, codeDirName);
+    if (fs.existsSync(candidateCodeDir) && fs.statSync(candidateCodeDir).isDirectory()) {
+      unis.push(entry.name);
+    }
+  }
+  return unis;
+}
 
-function main() {
-  if (!fs.existsSync(rootPath)) {
-    console.error(`Path does not exist: ${rootPath}`);
-    process.exit(1);
+/**
+ * Write one "section" of the snapshot: a heading, its folder tree, and
+ * every file's content underneath it.
+ */
+function writeSection(out, sectionTitle, sectionDir) {
+  out.write(`## ${sectionTitle}\n\n`);
+  out.write(`Path: \`${sectionDir}\`\n\n`);
+
+  if (!fs.existsSync(sectionDir)) {
+    out.write(`_Folder not found — skipped._\n\n`);
+    return { count: 0, skippedLarge: 0, skippedContentType: 0 };
   }
 
-  const projectName = path.basename(rootPath);
-  const timestamp = new Date().toISOString();
-
-  const out = fs.createWriteStream(outputFile, { encoding: 'utf8' });
-
-  out.write(`# Project Snapshot: ${projectName}\n\n`);
-  out.write(`Generated: ${timestamp}\n\n`);
-  out.write(`Root: \`${rootPath}\`\n\n`);
-
-  // ── Tree section ──
-  out.write(`## Folder Structure\n\n`);
   out.write('```\n');
-  out.write(`${projectName}/\n`);
-  out.write(buildTree(rootPath));
+  out.write(`${path.basename(sectionDir)}/\n`);
+  out.write(buildTree(sectionDir));
   out.write('```\n\n');
 
-  // ── File contents section ──
-  out.write(`## File Contents\n\n`);
-
-  const allFiles = collectFiles(rootPath);
+  const allFiles = collectFiles(sectionDir);
   let skippedLarge = 0;
   let skippedContentType = 0;
 
   for (const relFile of allFiles) {
-    const fullPath = path.join(rootPath, relFile);
+    const fullPath = path.join(sectionDir, relFile);
     const displayPath = relFile.split(path.sep).join('/');
 
     out.write(`### \`${displayPath}\`\n\n`);
@@ -258,12 +326,97 @@ function main() {
     out.write('```\n\n');
   }
 
+  return { count: allFiles.length, skippedLarge, skippedContentType };
+}
+
+// ── Main ──────────────────────────────────────────────────────────────────
+
+function main() {
+  if (!fs.existsSync(rootPath)) {
+    console.error(`Path does not exist: ${rootPath}`);
+    process.exit(1);
+  }
+
+  const timestamp = new Date().toISOString();
+  const out = fs.createWriteStream(outputFile, { encoding: 'utf8' });
+
+  let totals = { count: 0, skippedLarge: 0, skippedContentType: 0 };
+  const addTotals = (t) => {
+    totals.count += t.count;
+    totals.skippedLarge += t.skippedLarge;
+    totals.skippedContentType += t.skippedContentType;
+  };
+
+  if (mode === 'all') {
+    // ── ALL universities' code/ + shared/ + dashboard/ ──
+    const unis = discoverUniversities(rootPath);
+    if (unis.length === 0) {
+      console.error(
+        `No university folders found under ${rootPath} ` +
+          `(looked for subfolders containing a "${codeDirName}" folder).`
+      );
+      process.exit(1);
+    }
+
+    out.write(`# Project Snapshot: All Universities (${unis.length})\n\n`);
+    out.write(`Generated: ${timestamp}\n\n`);
+    out.write(`Root: \`${rootPath}\`\n\n`);
+    out.write(`Universities included: ${unis.join(', ')}\n\n`);
+
+    for (const uniName of unis) {
+      addTotals(
+        writeSection(out, `${uniName} — code/`, path.join(rootPath, uniName, codeDirName))
+      );
+    }
+
+    addTotals(writeSection(out, 'shared/', path.join(rootPath, 'shared')));
+    addTotals(writeSection(out, 'dashboard/', path.join(rootPath, 'dashboard')));
+
+    finish(out, outputFile, totals, `all ${unis.length} universities + shared/dashboard`);
+  } else if (mode === 'uni') {
+    // ── ONE university's code/ (+ shared/ + dashboard/ by default) ──
+    const uniName = cliArgs.uni;
+    if (!uniName) {
+      console.error('--mode uni requires --uni "<University Name>"');
+      process.exit(1);
+    }
+
+    out.write(`# Project Snapshot: ${uniName}\n\n`);
+    out.write(`Generated: ${timestamp}\n\n`);
+    out.write(`Root: \`${rootPath}\`\n\n`);
+
+    addTotals(
+      writeSection(out, `${uniName} — code/`, path.join(rootPath, uniName, codeDirName))
+    );
+
+    if (!cliArgs.noShared) {
+      addTotals(writeSection(out, 'shared/', path.join(rootPath, 'shared')));
+      addTotals(writeSection(out, 'dashboard/', path.join(rootPath, 'dashboard')));
+    }
+
+    finish(out, outputFile, totals, uniName);
+  } else {
+    // ── PLAIN / legacy: snapshot rootPath directly ──
+    const projectName = path.basename(rootPath);
+    out.write(`# Project Snapshot: ${projectName}\n\n`);
+    out.write(`Generated: ${timestamp}\n\n`);
+    out.write(`Root: \`${rootPath}\`\n\n`);
+
+    addTotals(writeSection(out, 'Folder Contents', rootPath));
+
+    finish(out, outputFile, totals, projectName);
+  }
+}
+
+function finish(out, outputFile, totals, label) {
   out.end();
   out.on('finish', () => {
     console.log(`✅ Snapshot written to: ${outputFile}`);
-    console.log(`   Files included: ${allFiles.length}`);
-    if (skippedLarge) console.log(`   Skipped (too large): ${skippedLarge}`);
-    if (skippedContentType) console.log(`   Skipped (excluded extension): ${skippedContentType}`);
+    console.log(`   Scope: ${label}`);
+    console.log(`   Files included: ${totals.count}`);
+    if (totals.skippedLarge) console.log(`   Skipped (too large): ${totals.skippedLarge}`);
+    if (totals.skippedContentType)
+      console.log(`   Skipped (excluded extension): ${totals.skippedContentType}`);
   });
 }
 

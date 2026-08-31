@@ -73,6 +73,7 @@ KNOWN_DEGREES = frozenset(DEGREE_ALIASES.values()) | {
     "PgCert",
     "FdSc",
     "Fd",
+    "FDA",
     "CertHE",
     "BM BS",
 }
@@ -480,7 +481,7 @@ def validate_row(
 @dataclass
 class DevCoursesValidationResult:
     csv_path: Path
-    errors_path: Path
+    reviewed_path: Path
     row_count: int
     error_rows: int
     inferred_rows: int = 0
@@ -502,16 +503,17 @@ def empty_column_counts(rows: list[dict[str, str]], headers: list[str]) -> dict[
     return counts
 
 
-def write_errors_csv(
-    errors_path: Path,
+def write_reviewed_csv(
+    reviewed_path: Path,
     headers: list[str],
-    failed_rows: list[dict[str, str]],
+    rows: list[dict[str, str]],
 ) -> None:
+    """Write every row (passing and failing) with an errorReason column."""
     fieldnames = list(headers) + ["errorReason"]
-    with errors_path.open("w", newline="", encoding="utf-8-sig") as handle:
+    with reviewed_path.open("w", newline="", encoding="utf-8-sig") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames, extrasaction="ignore")
         writer.writeheader()
-        for row in failed_rows:
+        for row in rows:
             writer.writerow({col: row.get(col, "") for col in fieldnames})
 
 
@@ -535,10 +537,9 @@ def print_validation_report(result: DevCoursesValidationResult) -> None:
         return
     if result.error_rows:
         print(f"VALIDATION FAILED: {result.error_rows} row(s)")
-        print(f"Wrote errors CSV ({result.errors_path.name}): {result.errors_path}")
     else:
         print("VALIDATION OK: 0 row errors")
-        print(f"Wrote errors CSV ({result.errors_path.name}): {result.errors_path}")
+    print(f"Wrote reviewed CSV ({result.reviewed_path.name}): {result.reviewed_path}")
 
 
 def validate_dev_courses_csv(
@@ -550,12 +551,12 @@ def validate_dev_courses_csv(
     code_dir = resolve_code_dir(code_dir)
     output_dir = resolve_output_dir(code_dir)
     university_name, _base = load_env_config(code_dir)
-    errors_path = csv_path.parent / f"dev_courses_{university_name}_errors.csv"
+    reviewed_path = csv_path.parent / f"dev_courses_{university_name}_reviewed.csv"
 
     if not csv_path.is_file():
         result = DevCoursesValidationResult(
             csv_path=csv_path,
-            errors_path=errors_path,
+            reviewed_path=reviewed_path,
             row_count=0,
             error_rows=0,
             file_error=f"CSV not found: {csv_path}",
@@ -571,7 +572,7 @@ def validate_dev_courses_csv(
     if missing_headers:
         return DevCoursesValidationResult(
             csv_path=csv_path,
-            errors_path=errors_path,
+            reviewed_path=reviewed_path,
             row_count=len(rows),
             error_rows=0,
             empty_counts={},
@@ -583,7 +584,7 @@ def validate_dev_courses_csv(
     if not rows:
         return DevCoursesValidationResult(
             csv_path=csv_path,
-            errors_path=errors_path,
+            reviewed_path=reviewed_path,
             row_count=0,
             error_rows=0,
             empty_counts={col: 0 for col in DEV_COURSE_CSV_COLUMNS},
@@ -620,7 +621,7 @@ def validate_dev_courses_csv(
                 llm_inferred_rows += 1
                 comments[index] = llm_comment
 
-    failed: list[dict[str, str]] = []
+    reviewed_rows: list[dict[str, str]] = []
     for row, inferred in zip(rows, comments):
         issues = validate_row(
             row,
@@ -629,26 +630,26 @@ def validate_dev_courses_csv(
         )
         if inferred:
             issues.append(inferred)
-        if issues:
-            out = dict(row)
-            out["errorReason"] = " | ".join(issues)
-            failed.append(out)
+        out = dict(row)
+        out["errorReason"] = " | ".join(issues)
+        reviewed_rows.append(out)
 
     if inferred_rows or llm_inferred_rows:
         write_dev_courses_csv(csv_path, rows)
 
-    write_errors_csv(errors_path, list(DEV_COURSE_CSV_COLUMNS), failed)
+    write_reviewed_csv(reviewed_path, list(DEV_COURSE_CSV_COLUMNS), reviewed_rows)
     real_errors = sum(
         1
-        for row in failed
-        if any(
+        for row in reviewed_rows
+        if row.get("errorReason")
+        and any(
             not part.strip().startswith("COMMENT:")
-            for part in (row.get("errorReason") or "").split(" | ")
+            for part in row["errorReason"].split(" | ")
         )
     )
     return DevCoursesValidationResult(
         csv_path=csv_path,
-        errors_path=errors_path,
+        reviewed_path=reviewed_path,
         row_count=len(rows),
         error_rows=real_errors,
         inferred_rows=inferred_rows,
