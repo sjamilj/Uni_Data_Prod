@@ -1,6 +1,6 @@
 {
   "university": "Anglia Ruskin University - ARU",
-  "cleaned_at": "2026-08-31",
+  "cleaned_at": "2026-09-01",
   "courses": [
     {
       "course_url": "https://www.aru.ac.uk/study/undergraduate/psychology-with-clinical-applications",
@@ -187,7 +187,7 @@
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/animal-and-environmental-sciences",
       "source_html": "course_pages/Biology - MPhil, PhD - ARU_study_postgraduate_animal-and-environmental-sciences.html",
-      "clean_md": "clean/pre_setup_course/postgraduate/study-postgraduate-animal-and-environmental-sciences.md",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-animal-and-environmental-sciences.md",
       "source_url": "https://aru.ac.uk/study/postgraduate/animal-and-environmental-sciences",
       "study_level": "postgraduate"
     },
@@ -312,15 +312,15 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/built-environment",
-      "source_html": "course_pages/Engineering and the Built Environment - MPhil, PhD - ARU.html",
+      "source_html": "course_pages/Engineering and the Built Environment - MPhil, PhD - ARU_study_postgraduate_built-environment.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-built-environment.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/built-environment",
+      "source_url": "https://aru.ac.uk/study/postgraduate/built-environment",
       "study_level": "postgraduate"
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/business-and-management",
       "source_html": "course_pages/School of Management - MPhil, PhD - ARU_study_postgraduate_business-and-management.html",
-      "clean_md": "clean/pre_setup_course/postgraduate/study-postgraduate-business-and-management.md",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-business-and-management.md",
       "source_url": "https://aru.ac.uk/study/postgraduate/business-and-management",
       "study_level": "postgraduate"
     },
@@ -333,9 +333,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/business-economics-finance-and-law",
-      "source_html": "course_pages/School of Economics, Finance and Law - MPhil, PhD - ARU.html",
+      "source_html": "course_pages/School of Economics, Finance and Law - MPhil, PhD - ARU_study_postgraduate_business-economics-finance-and-law.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-business-economics-finance-and-law.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/business-economics-finance-and-law",
+      "source_url": "https://aru.ac.uk/study/postgraduate/business-economics-finance-and-law",
       "study_level": "postgraduate"
     },
     {
@@ -648,9 +648,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/film-studies-and-media-studies",
-      "source_html": "course_pages/Film Studies and Media Studies - MPhil, PhD - ARU.html",
+      "source_html": "course_pages/Film Studies and Media Studies - MPhil, PhD - ARU_study_postgraduate_film-studies-and-media-studies.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-film-studies-and-media-studies.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/film-studies-and-media-studies",
+      "source_url": "https://aru.ac.uk/study/postgraduate/film-studies-and-media-studies",
       "study_level": "postgraduate"
     },
     {
@@ -928,9 +928,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/life-sciences",
-      "source_html": "course_pages/Life Sciences - MRes - ARU.html",
+      "source_html": "course_pages/Life Sciences - MRes - ARU_study_postgraduate_life-sciences.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-life-sciences.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/life-sciences",
+      "source_url": "https://aru.ac.uk/study/postgraduate/life-sciences",
       "study_level": "postgraduate"
     },
     {
@@ -984,9 +984,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/midwifery-and-community-health",
-      "source_html": "course_pages/Midwifery and Community Health research degree - MPhil, PhD - ARU.html",
+      "source_html": "course_pages/Midwifery and Community Health research degree - MPhil, PhD - ARU_study_postgraduate_midwifery-and-community-health.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-midwifery-and-community-health.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/midwifery-and-community-health",
+      "source_url": "https://aru.ac.uk/study/postgraduate/midwifery-and-community-health",
       "study_level": "postgraduate"
     },
     {
@@ -1026,9 +1026,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/optometry-and-vision-sciences",
-      "source_html": "course_pages/Optometry and Vision Sciences - MPhil, PhD - ARU.html",
+      "source_html": "course_pages/Optometry and Vision Sciences - MPhil, PhD - ARU_study_postgraduate_optometry-and-vision-sciences.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-optometry-and-vision-sciences.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/optometry-and-vision-sciences",
+      "source_url": "https://aru.ac.uk/study/postgraduate/optometry-and-vision-sciences",
       "study_level": "postgraduate"
     },
     {
@@ -1082,37 +1082,37 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/professional-doctorate-in-business-and-management",
-      "source_html": "course_pages/Professional Doctorate in Business and Management - DBA - ARU.html",
+      "source_html": "course_pages/Professional Doctorate in Business and Management - DBA - ARU_study_postgraduate_professional-doctorate-in-business-and-management.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-professional-doctorate-in-business-and-management.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/professional-doctorate-in-business-and-management",
+      "source_url": "https://aru.ac.uk/study/postgraduate/professional-doctorate-in-business-and-management",
       "study_level": "postgraduate"
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/professional-doctorate-in-education",
-      "source_html": "course_pages/Professional Doctorate in Education - EdD - ARU.html",
+      "source_html": "course_pages/Professional Doctorate in Education - EdD - ARU_study_postgraduate_professional-doctorate-in-education.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-professional-doctorate-in-education.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/professional-doctorate-in-education",
+      "source_url": "https://aru.ac.uk/study/postgraduate/professional-doctorate-in-education",
       "study_level": "postgraduate"
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/professional-doctorate-in-health-and-social-care",
-      "source_html": "course_pages/Professional Doctorate in Health and Social Care - DProf - ARU.html",
+      "source_html": "course_pages/Professional Doctorate in Health and Social Care - DProf - ARU_study_postgraduate_professional-doctorate-in-health-and-social-care.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-professional-doctorate-in-health-and-social-care.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/professional-doctorate-in-health-and-social-care",
+      "source_url": "https://aru.ac.uk/study/postgraduate/professional-doctorate-in-health-and-social-care",
       "study_level": "postgraduate"
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/professional-doctorate-in-practical-theology",
-      "source_html": "course_pages/Professional Doctorate in Practical Theology - DProf - ARU.html",
+      "source_html": "course_pages/Professional Doctorate in Practical Theology - DProf - ARU_study_postgraduate_professional-doctorate-in-practical-theology.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-professional-doctorate-in-practical-theology.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/professional-doctorate-in-practical-theology",
+      "source_url": "https://aru.ac.uk/study/postgraduate/professional-doctorate-in-practical-theology",
       "study_level": "postgraduate"
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/professional-doctorate-in-science-and-technology",
-      "source_html": "course_pages/Professional Doctorate in Science and Engineering - DProf - ARU.html",
+      "source_html": "course_pages/Professional Doctorate in Science and Engineering - DProf - ARU_study_postgraduate_professional-doctorate-in-science-and-technology.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-professional-doctorate-in-science-and-technology.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/professional-doctorate-in-science-and-technology",
+      "source_url": "https://aru.ac.uk/study/postgraduate/professional-doctorate-in-science-and-technology",
       "study_level": "postgraduate"
     },
     {
@@ -1138,9 +1138,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/psychology",
-      "source_html": "course_pages/Psychology - MPhil, PhD - ARU.html",
+      "source_html": "course_pages/Psychology - MPhil, PhD - ARU_study_postgraduate_psychology.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-psychology.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/psychology",
+      "source_url": "https://aru.ac.uk/study/postgraduate/psychology",
       "study_level": "postgraduate"
     },
     {
@@ -1187,23 +1187,23 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/school-of-allied-health",
-      "source_html": "course_pages/Allied Health and Social Care - MPhil, PhD - ARU.html",
+      "source_html": "course_pages/Allied Health and Social Care - MPhil, PhD - ARU_study_postgraduate_school-of-allied-health.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-school-of-allied-health.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/school-of-allied-health",
+      "source_url": "https://aru.ac.uk/study/postgraduate/school-of-allied-health",
       "study_level": "postgraduate"
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/school-of-education",
-      "source_html": "course_pages/School of Education - MPhil, PhD - ARU.html",
+      "source_html": "course_pages/School of Education - MPhil, PhD - ARU_study_postgraduate_school-of-education.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-school-of-education.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/school-of-education",
+      "source_url": "https://aru.ac.uk/study/postgraduate/school-of-education",
       "study_level": "postgraduate"
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/school-of-nursing-and-midwifery",
-      "source_html": "course_pages/Nursing research degree - MPhil, PhD - ARU.html",
+      "source_html": "course_pages/Nursing research degree - MPhil, PhD - ARU_study_postgraduate_school-of-nursing-and-midwifery.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-school-of-nursing-and-midwifery.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/school-of-nursing-and-midwifery",
+      "source_url": "https://aru.ac.uk/study/postgraduate/school-of-nursing-and-midwifery",
       "study_level": "postgraduate"
     },
     {
@@ -1292,9 +1292,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/theology",
-      "source_html": "course_pages/Theology - MPhil, PhD - ARU.html",
+      "source_html": "course_pages/Theology - MPhil, PhD - ARU_study_postgraduate_theology.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-theology.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/theology",
+      "source_url": "https://aru.ac.uk/study/postgraduate/theology",
       "study_level": "postgraduate"
     },
     {
@@ -1306,9 +1306,9 @@
     },
     {
       "course_url": "https://www.aru.ac.uk/study/postgraduate/writtle-school-of-agriculture-animal-and-environmental-sciences",
-      "source_html": "course_pages/Writtle School of Agriculture, Animal and Environmental Sciences research degree - MPhil, PhD - ARU.html",
+      "source_html": "course_pages/Writtle School of Agriculture, Animal and Environmental Sciences research degree - MPhil, PhD - ARU_study_postgraduate_writtle-school-of-agriculture-animal-and-environmental-sciences.html",
       "clean_md": "clean/courses/postgraduate/study-postgraduate-writtle-school-of-agriculture-animal-and-environmental-sciences.md",
-      "source_url": "https://aru-sc104-prod-uksouth-cd.azurewebsites.net/study/postgraduate/writtle-school-of-agriculture-animal-and-environmental-sciences",
+      "source_url": "https://aru.ac.uk/study/postgraduate/writtle-school-of-agriculture-animal-and-environmental-sciences",
       "study_level": "postgraduate"
     },
     {
@@ -2975,6 +2975,41 @@
       "source_html": "course_pages/Psychology degree - BSc (Hons) - ARU_study_undergraduate_psychology.html",
       "clean_md": "clean/courses/foundation/study-undergraduate-psychology.md",
       "source_url": "https://aru.ac.uk/study/undergraduate/psychology",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/electrical-and-electronics-engineering",
+      "source_html": "course_pages/Electronic and Electrical Engineering degree course - MEng (Hons) - ARU_study_undergraduate_electrical-and-electronics-engineering.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-electrical-and-electronics-engineering.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/electrical-and-electronics-engineering",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/international-business-management-london",
+      "source_html": "course_pages/International Business Management - BSc (Hons) - ARU_study_undergraduate_international-business-management-london.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-international-business-management-london.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/international-business-management-london",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/mechanical-engineering-meng",
+      "source_html": "course_pages/Mechanical Engineering - MEng (Hons) - ARU_study_undergraduate_mechanical-engineering-meng.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-mechanical-engineering-meng.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/mechanical-engineering-meng",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/osteopathy-most",
+      "source_html": "course_pages/Osteopathy - MOst - ARU_study_undergraduate_osteopathy-most.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-osteopathy-most.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/osteopathy-most",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aru.ac.uk/study/undergraduate/social-work-peterborough",
+      "source_html": "course_pages/Social Work - Peterborough - BA (Hons) - ARU_study_undergraduate_social-work-peterborough.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-social-work-peterborough.md",
+      "source_url": "https://aru.ac.uk/study/undergraduate/social-work-peterborough",
       "study_level": "foundation"
     }
   ],
