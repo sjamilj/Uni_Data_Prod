@@ -29,8 +29,11 @@ Set-Location ".\code"   # run all pipeline commands from here
 ```
 Anglia Ruskin University - ARU/
   code/
-    .env                              # live config (gitignored — copy from ENV.MD)
-    ENV.MD                            # committed template / documentation
+    .env                              # live config (gitignored — built from code/env/*.env)
+    ENV.MD                            # committed merged template (build_env.py)
+    env/
+      common.env                      # shared keys
+      foundation.env                  # foundation listing + URL patterns
     download_and_clean_course_pages.py
     course_markdown_cleanup.py        # ARU-only markdown post-clean rules
   uni_req/                            # 4 fixed HTML pages (browser save)
@@ -251,11 +254,23 @@ python "..\..\shared\export_dev_courses.py" .
 
 | File | Purpose |
 |------|---------|
-| `code/.env` | Live secrets + selectors (do not commit) |
-| `code/ENV.MD` | Committed template; copy to `.env` when setting up |
+| `code/env/common.env` | Shared keys (strategy, paths, clean selectors, uni_req URLs) |
+| `code/env/foundation.env` | Foundation listing URLs + `FOUNDATION_URL_PATTERNS` |
+| `code/.env` | Live config (gitignored) — built from `env/*.env` |
+| `code/ENV.MD` | Committed merged template (same content as `.env`) |
 | `DegreeScopedPaginated.csv` | Human reference: listing URLs + sample course per programme |
 
-When changing scrape URLs or clean selectors, update **both** `.env` and `ENV.MD` (keep them in sync).
+Build `.env` and sync `ENV.MD` from fragments:
+
+```powershell
+python "..\..\shared\build_env.py" --code-dir .
+# or from repo root:
+python shared/build_env.py --university "Anglia Ruskin University - ARU" --force
+```
+
+Merge order: `common.env` → `foundation.env` → other `code/env/*.env` (if added later).
+
+When changing scrape URLs or clean selectors, edit the matching fragment under `code/env/`, then re-run `build_env.py`.
 
 ---
 
