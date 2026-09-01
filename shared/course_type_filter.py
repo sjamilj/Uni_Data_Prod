@@ -20,57 +20,61 @@ DEFAULT_COURSE_TYPE_SELECTORS = (
 _COURSE_TYPE_MARKDOWN_RE = re.compile(r"^\*\*Course type:\*\*\s*(.+)\s*$", re.M | re.I)
 
 
-def _parse_env_list(value: str | None) -> list[str]:
-    if not value or not str(value).strip():
-        return []
-    items: list[str] = []
-    for part in re.split(r"[\n;]+", str(value)):
-        item = part.strip().strip('"').strip("'")
-        if not item:
-            continue
-        if item.startswith("#") and not re.match(r"#\w", item):
-            continue
-        items.append(item)
-    return items
+class CourseTypePatternMatcher:
+    """Parse .env lists and match course-type / URL exclusion patterns."""
+
+    @staticmethod
+    def parse_env_list(value: str | None) -> list[str]:
+        if not value or not str(value).strip():
+            return []
+        items: list[str] = []
+        for part in re.split(r"[\n;]+", str(value)):
+            item = part.strip().strip('"').strip("'")
+            if not item:
+                continue
+            if item.startswith("#") and not re.match(r"#\w", item):
+                continue
+            items.append(item)
+        return items
+
+    @staticmethod
+    def pattern_matches(actual: str, pattern: str) -> bool:
+        actual_l = actual.strip().casefold()
+        pattern_l = pattern.strip().casefold()
+        if not pattern_l:
+            return False
+        if pattern_l.startswith("*") and pattern_l.endswith("*") and len(pattern_l) > 1:
+            needle = pattern_l[1:-1]
+            return bool(needle) and needle in actual_l
+        if pattern_l.endswith("*"):
+            return actual_l.startswith(pattern_l[:-1])
+        if pattern_l.startswith("*"):
+            return actual_l.endswith(pattern_l[1:])
+        return actual_l == pattern_l
 
 
-def _pattern_matches(actual: str, pattern: str) -> bool:
-    actual_l = actual.strip().casefold()
-    pattern_l = pattern.strip().casefold()
-    if not pattern_l:
-        return False
-    if pattern_l.startswith("*") and pattern_l.endswith("*") and len(pattern_l) > 1:
-        needle = pattern_l[1:-1]
-        return bool(needle) and needle in actual_l
-    if pattern_l.endswith("*"):
-        return actual_l.startswith(pattern_l[:-1])
-    if pattern_l.startswith("*"):
-        return actual_l.endswith(pattern_l[1:])
-    return actual_l == pattern_l
+class CourseTypeExtractor:
+    """Extract course type labels from HTML or markdown."""
 
-
-def extract_course_type_from_html(
-    html: str,
-    *,
-    selectors: list[str] | None = None,
-) -> str | None:
-    soup = BeautifulSoup(html, "html.parser")
-    for selector in selectors or list(DEFAULT_COURSE_TYPE_SELECTORS):
-        node = soup.select_one(selector.strip())
-        if not node:
-            continue
-        text = node.get_text(" ", strip=True)
-        if text:
-            return text
-    return None
-
-
-def extract_course_type_from_markdown(markdown: str) -> str | None:
-    match = _COURSE_TYPE_MARKDOWN_RE.search(markdown)
-    if not match:
+    @staticmethod
+    def from_html(html: str, *, selectors: list[str] | None = None) -> str | None:
+        soup = BeautifulSoup(html, "html.parser")
+        for selector in selectors or list(DEFAULT_COURSE_TYPE_SELECTORS):
+            node = soup.select_one(selector.strip())
+            if not node:
+                continue
+            text = node.get_text(" ", strip=True)
+            if text:
+                return text
         return None
-    text = match.group(1).strip()
-    return text or None
+
+    @staticmethod
+    def from_markdown(markdown: str) -> str | None:
+        match = _COURSE_TYPE_MARKDOWN_RE.search(markdown)
+        if not match:
+            return None
+        text = match.group(1).strip()
+        return text or None
 
 
 @dataclass
@@ -84,10 +88,14 @@ class CourseTypeFilter:
         from scrape_course_urls import load_env_file
 
         env = load_env_file(code_dir / ENV_FILE)
-        selectors = _parse_env_list(env.get("COURSE_TYPE_HTML_SELECTORS"))
+        selectors = CourseTypePatternMatcher.parse_env_list(env.get("COURSE_TYPE_HTML_SELECTORS"))
         return cls(
-            exclude_course_types=_parse_env_list(env.get("COURSE_EXCLUDE_COURSE_TYPES")),
-            exclude_url_patterns=_parse_env_list(env.get("COURSE_EXCLUDE_URL_PATTERNS")),
+            exclude_course_types=CourseTypePatternMatcher.parse_env_list(
+                env.get("COURSE_EXCLUDE_COURSE_TYPES")
+            ),
+            exclude_url_patterns=CourseTypePatternMatcher.parse_env_list(
+                env.get("COURSE_EXCLUDE_URL_PATTERNS")
+            ),
             course_type_selectors=selectors or list(DEFAULT_COURSE_TYPE_SELECTORS),
         )
 
@@ -100,7 +108,7 @@ class CourseTypeFilter:
             return False
         path = urlparse(url).path.casefold()
         for pattern in self.exclude_url_patterns:
-            if _pattern_matches(path, pattern):
+            if CourseTypePatternMatcher.pattern_matches(path, pattern):
                 return True
         return False
 
@@ -108,7 +116,7 @@ class CourseTypeFilter:
         if not course_type or not self.exclude_course_types:
             return False
         for pattern in self.exclude_course_types:
-            if _pattern_matches(course_type, pattern):
+            if CourseTypePatternMatcher.pattern_matches(course_type, pattern):
                 return True
         return False
 
@@ -117,7 +125,7 @@ class CourseTypeFilter:
             return False
         if self.url_is_excluded(url):
             return True
-        course_type = extract_course_type_from_html(
+        course_type = CourseTypeExtractor.from_html(
             html,
             selectors=self.course_type_selectors,
         )
@@ -128,7 +136,14 @@ class CourseTypeFilter:
             return False
         if self.url_is_excluded(url):
             return True
-        course_type = extract_course_type_from_markdown(markdown)
+        course_type = CourseTypeExtractor.from_markdown(markdown)
         if course_type:
             return self.course_type_is_excluded(course_type)
         return False
+
+
+# Backward-compatible aliases
+_parse_env_list = CourseTypePatternMatcher.parse_env_list
+_pattern_matches = CourseTypePatternMatcher.pattern_matches
+extract_course_type_from_html = CourseTypeExtractor.from_html
+extract_course_type_from_markdown = CourseTypeExtractor.from_markdown

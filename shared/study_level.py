@@ -342,89 +342,6 @@ def levels_for_url(
     return [classifier.classify(url, course_name=course_name)]
 
 
-def intake_start_year_from_md_path(md_path: Path) -> int:
-    """Start year from intake folder (e.g. '2027 - 2028') or slug suffix (-2027-28)."""
-    parent = (md_path.parent.name or "").strip()
-    if is_intake_year_folder(parent):
-        return int(parent.split(" - ")[0].strip())
-    year_folder = intake_year_folder_from_stem(md_path.stem)
-    if year_folder:
-        return int(year_folder.split(" - ")[0].strip())
-    return 0
-
-
-def intake_year_folder_from_stem(stem: str) -> str:
-    """Map slug stem suffix -2026-27 → folder name '2026 - 2027'."""
-    match = _INTAKE_YEAR_SUFFIX_RE.search((stem or "").strip())
-    if not match:
-        return ""
-    start_year = int(match.group(1))
-    end_suffix = int(match.group(2))
-    end_year = (start_year // 100) * 100 + end_suffix
-    if end_year <= start_year:
-        end_year += 100
-    return f"{start_year} - {end_year}"
-
-
-def is_intake_year_folder(name: str) -> bool:
-    return bool(_INTAKE_YEAR_FOLDER_RE.match((name or "").strip()))
-
-
-def study_level_folder_from_path(md_path: Path, courses_dir: Path | None = None) -> str:
-    """Return study-level folder (undergraduate, foundation, …) for a course markdown path."""
-    if courses_dir:
-        try:
-            rel = md_path.relative_to(courses_dir)
-            if rel.parts and rel.parts[0] in STUDY_LEVELS:
-                return rel.parts[0]
-        except ValueError:
-            pass
-    parent_name = md_path.parent.name
-    if parent_name in STUDY_LEVELS:
-        return parent_name
-    grandparent_name = md_path.parent.parent.name if md_path.parent.parent else ""
-    if grandparent_name in STUDY_LEVELS:
-        return grandparent_name
-    return parent_name
-
-
-def clean_course_md_relative_path(
-    study_level: str,
-    slug_base: str,
-    *,
-    clean_dir: str = "clean",
-    courses_subdir: str = CLEAN_COURSES_SUBDIR,
-) -> str:
-    folder = folder_for_level(study_level)
-    year_folder = intake_year_folder_from_stem(slug_base)
-    parts = [clean_dir, courses_subdir, folder]
-    if year_folder:
-        parts.append(year_folder)
-    parts.append(f"{slug_base}.md")
-    return "/".join(parts)
-
-
-def clean_courses_root(output_dir: Path, *, presetup: bool = False) -> Path:
-    subdir = PRESETUP_CLEAN_SUBDIR if presetup else CLEAN_COURSES_SUBDIR
-    return output_dir / "clean" / subdir
-
-
-def iter_course_markdown(courses_dir: Path) -> list[Path]:
-    if not courses_dir.is_dir():
-        return []
-    return sorted(
-        (path for path in courses_dir.rglob("*.md") if path.is_file()),
-        key=lambda path: path.as_posix().lower(),
-    )
-
-
-def relative_course_md(md_path: Path, courses_dir: Path) -> str:
-    try:
-        return md_path.relative_to(courses_dir).as_posix()
-    except ValueError:
-        return md_path.name
-
-
 def study_level_from_markdown(
     md_path: Path,
     meta: dict[str, str] | None = None,
@@ -446,35 +363,6 @@ def study_level_from_markdown(
         classifier = classifier or StudyLevelClassifier()
         return classifier.classify(course_url, course_name=course_name)
     return "undergraduate"
-
-
-def extraction_dir(
-    output_dir: Path,
-    slug: str,
-    study_level: str | None,
-    *,
-    extract_root: str | None = None,
-) -> Path:
-    folder = folder_for_level(study_level)
-    if extract_root:
-        return output_dir / "extracted" / extract_root / folder / slug
-    nested = output_dir / "extracted" / folder / slug
-    legacy = output_dir / "extracted" / slug
-    if nested.exists() or not legacy.exists():
-        return nested
-    return legacy
-
-
-def iter_extracted_json(extracted_dir: Path, filename: str) -> list[Path]:
-    if not extracted_dir.is_dir():
-        return []
-    paths = list(extracted_dir.glob(f"*/{filename}"))
-    paths.extend(extracted_dir.glob(f"*/*/{filename}"))
-    return sorted({path for path in paths if path.is_file()})
-
-
-def normalize_url(url: str) -> str:
-    return (url or "").strip().rstrip("/")
 
 
 def parse_study_level(raw: str) -> str:
@@ -499,185 +387,334 @@ def parse_study_levels(values: list[str] | None) -> list[str]:
     return seen
 
 
-def unique_urls(urls: list[str]) -> list[str]:
-    seen: set[str] = set()
-    out: list[str] = []
-    for url in urls:
-        key = normalize_url(url)
-        if not key or key in seen:
-            continue
-        seen.add(key)
-        out.append(url.strip())
-    return out
+class StudyLevelPathResolver:
+    """Resolve study-level folder paths for clean markdown and extraction."""
+
+    INTAKE_YEAR_SUFFIX_RE = _INTAKE_YEAR_SUFFIX_RE
+    INTAKE_YEAR_FOLDER_RE = _INTAKE_YEAR_FOLDER_RE
+
+    @staticmethod
+    def intake_start_year_from_md_path(md_path: Path) -> int:
+        """Start year from intake folder (e.g. '2027 - 2028') or slug suffix (-2027-28)."""
+        parent = (md_path.parent.name or "").strip()
+        if StudyLevelPathResolver.is_intake_year_folder(parent):
+            return int(parent.split(" - ")[0].strip())
+        year_folder = StudyLevelPathResolver.intake_year_folder_from_stem(md_path.stem)
+        if year_folder:
+            return int(year_folder.split(" - ")[0].strip())
+        return 0
+
+    @staticmethod
+    def intake_year_folder_from_stem(stem: str) -> str:
+        """Map slug stem suffix -2026-27 → folder name '2026 - 2027'."""
+        match = _INTAKE_YEAR_SUFFIX_RE.search((stem or "").strip())
+        if not match:
+            return ""
+        start_year = int(match.group(1))
+        end_suffix = int(match.group(2))
+        end_year = (start_year // 100) * 100 + end_suffix
+        if end_year <= start_year:
+            end_year += 100
+        return f"{start_year} - {end_year}"
+
+    @staticmethod
+    def is_intake_year_folder(name: str) -> bool:
+        return bool(_INTAKE_YEAR_FOLDER_RE.match((name or "").strip()))
+
+    @staticmethod
+    def study_level_folder_from_path(md_path: Path, courses_dir: Path | None = None) -> str:
+        """Return study-level folder (undergraduate, foundation, …) for a course markdown path."""
+        if courses_dir:
+            try:
+                rel = md_path.relative_to(courses_dir)
+                if rel.parts and rel.parts[0] in STUDY_LEVELS:
+                    return rel.parts[0]
+            except ValueError:
+                pass
+        parent_name = md_path.parent.name
+        if parent_name in STUDY_LEVELS:
+            return parent_name
+        grandparent_name = md_path.parent.parent.name if md_path.parent.parent else ""
+        if grandparent_name in STUDY_LEVELS:
+            return grandparent_name
+        return parent_name
+
+    @staticmethod
+    def clean_course_md_relative_path(
+        study_level: str,
+        slug_base: str,
+        *,
+        clean_dir: str = "clean",
+        courses_subdir: str = CLEAN_COURSES_SUBDIR,
+    ) -> str:
+        folder = folder_for_level(study_level)
+        year_folder = StudyLevelPathResolver.intake_year_folder_from_stem(slug_base)
+        parts = [clean_dir, courses_subdir, folder]
+        if year_folder:
+            parts.append(year_folder)
+        parts.append(f"{slug_base}.md")
+        return "/".join(parts)
+
+    @staticmethod
+    def clean_courses_root(output_dir: Path, *, presetup: bool = False) -> Path:
+        subdir = PRESETUP_CLEAN_SUBDIR if presetup else CLEAN_COURSES_SUBDIR
+        return output_dir / "clean" / subdir
+
+    @staticmethod
+    def iter_course_markdown(courses_dir: Path) -> list[Path]:
+        if not courses_dir.is_dir():
+            return []
+        return sorted(
+            (path for path in courses_dir.rglob("*.md") if path.is_file()),
+            key=lambda path: path.as_posix().lower(),
+        )
+
+    @staticmethod
+    def relative_course_md(md_path: Path, courses_dir: Path) -> str:
+        try:
+            return md_path.relative_to(courses_dir).as_posix()
+        except ValueError:
+            return md_path.name
+
+    @staticmethod
+    def extraction_dir(
+        output_dir: Path,
+        slug: str,
+        study_level: str | None,
+        *,
+        extract_root: str | None = None,
+    ) -> Path:
+        folder = folder_for_level(study_level)
+        if extract_root:
+            return output_dir / "extracted" / extract_root / folder / slug
+        nested = output_dir / "extracted" / folder / slug
+        legacy = output_dir / "extracted" / slug
+        if nested.exists() or not legacy.exists():
+            return nested
+        return legacy
+
+    @staticmethod
+    def iter_extracted_json(extracted_dir: Path, filename: str) -> list[Path]:
+        if not extracted_dir.is_dir():
+            return []
+        paths = list(extracted_dir.glob(f"*/{filename}"))
+        paths.extend(extracted_dir.glob(f"*/*/{filename}"))
+        return sorted({path for path in paths if path.is_file()})
 
 
-def read_urls_file(path: Path) -> list[str]:
-    """Read URLs from JSON (presetup sample / list), CSV, or one-URL-per-line text."""
-    text = path.read_text(encoding="utf-8-sig")
-    stripped = text.strip()
-    if not stripped:
-        return []
-    if stripped[0] in "{[":
-        payload = json.loads(stripped)
-        if isinstance(payload, dict):
-            rows = payload.get("courses") or payload.get("urls") or []
-            urls: list[str] = []
-            if isinstance(rows, list):
-                for item in rows:
+class PresetupSampler:
+    """Presetup sample selection and URL list helpers."""
+
+    PRESETUP_SAMPLE_JSON = PRESETUP_SAMPLE_JSON
+    PRESETUP_SAMPLE_SIZE = PRESETUP_SAMPLE_SIZE
+
+    @staticmethod
+    def normalize_url(url: str) -> str:
+        return (url or "").strip().rstrip("/")
+
+    @staticmethod
+    def unique_urls(urls: list[str]) -> list[str]:
+        seen: set[str] = set()
+        out: list[str] = []
+        for url in urls:
+            key = PresetupSampler.normalize_url(url)
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            out.append(url.strip())
+        return out
+
+    @staticmethod
+    def presetup_sample_path(output_dir: Path) -> Path:
+        return output_dir / PRESETUP_SAMPLE_JSON
+
+    @staticmethod
+    def load_presetup_sample(output_dir: Path) -> dict:
+        path = PresetupSampler.presetup_sample_path(output_dir)
+        if not path.is_file():
+            return {}
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            return {}
+        return payload if isinstance(payload, dict) else {}
+
+    @staticmethod
+    def save_presetup_sample(
+        output_dir: Path,
+        courses: list[dict[str, str]],
+        *,
+        seed: int,
+        n: int = PRESETUP_SAMPLE_SIZE,
+    ) -> Path:
+        output_dir.mkdir(parents=True, exist_ok=True)
+        payload = {
+            "n": n,
+            "seed": seed,
+            "sampled_at": datetime.now(timezone.utc).isoformat(),
+            "courses": courses,
+        }
+        path = PresetupSampler.presetup_sample_path(output_dir)
+        path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        return path
+
+    @staticmethod
+    def presetup_sample_urls(payload: dict | None) -> list[str]:
+        courses = (payload or {}).get("courses") or []
+        urls: list[str] = []
+        for item in courses:
+            if isinstance(item, dict):
+                urls.append(str(item.get("course_url") or ""))
+            elif isinstance(item, str):
+                urls.append(item)
+        return PresetupSampler.unique_urls(urls)
+
+    @staticmethod
+    def urls_for_levels(url_levels: UrlLevelMap, levels: list[str]) -> list[dict[str, str]]:
+        allowed = set(levels)
+        records: list[dict[str, str]] = []
+        seen: set[str] = set()
+        for level in EXECUTE_LEVEL_ORDER:
+            if level not in allowed:
+                continue
+            for record in url_levels.records():
+                if record["study_level"] != level:
+                    continue
+                key = PresetupSampler.normalize_url(record["course_url"])
+                if not key or key in seen:
+                    continue
+                seen.add(key)
+                records.append(record)
+        return records
+
+    @staticmethod
+    def sample_urls_stratified(
+        url_levels: UrlLevelMap,
+        n: int = PRESETUP_SAMPLE_SIZE,
+        seed: int | None = None,
+        levels: list[str] | None = None,
+    ) -> list[dict[str, str]]:
+        """Shuffle each non-empty level, then round-robin until n unique URLs."""
+        if n <= 0:
+            return []
+        rng = random.Random(seed)
+        order = [level for level in EXECUTE_LEVEL_ORDER if not levels or level in levels]
+        buckets: dict[str, list[str]] = {level: [] for level in order}
+        seen_in_bucket: dict[str, set[str]] = {level: set() for level in order}
+        for record in url_levels.records():
+            level = record["study_level"]
+            if level not in buckets:
+                continue
+            url = record["course_url"].strip()
+            key = PresetupSampler.normalize_url(url)
+            if not key or key in seen_in_bucket[level]:
+                continue
+            seen_in_bucket[level].add(key)
+            buckets[level].append(url)
+        for level in order:
+            rng.shuffle(buckets[level])
+
+        queues = {level: list(urls) for level, urls in buckets.items() if urls}
+        chosen: list[dict[str, str]] = []
+        seen: set[str] = set()
+        while len(chosen) < n:
+            progressed = False
+            for level in order:
+                queue = queues.get(level)
+                if not queue:
+                    continue
+                while queue:
+                    url = queue.pop(0)
+                    key = PresetupSampler.normalize_url(url)
+                    if key in seen:
+                        continue
+                    seen.add(key)
+                    chosen.append({"course_url": url, "study_level": level})
+                    progressed = True
+                    break
+                if len(chosen) >= n:
+                    break
+            if not progressed:
+                break
+        return chosen
+
+    @staticmethod
+    def read_urls_file(path: Path) -> list[str]:
+        """Read URLs from JSON (presetup sample / list), CSV, or one-URL-per-line text."""
+        text = path.read_text(encoding="utf-8-sig")
+        stripped = text.strip()
+        if not stripped:
+            return []
+        if stripped[0] in "{[":
+            payload = json.loads(stripped)
+            if isinstance(payload, dict):
+                rows = payload.get("courses") or payload.get("urls") or []
+                urls: list[str] = []
+                if isinstance(rows, list):
+                    for item in rows:
+                        if isinstance(item, str):
+                            urls.append(item)
+                        elif isinstance(item, dict):
+                            urls.append(str(item.get("course_url") or item.get("url") or ""))
+                return PresetupSampler.unique_urls(urls)
+            if isinstance(payload, list):
+                urls = []
+                for item in payload:
                     if isinstance(item, str):
                         urls.append(item)
                     elif isinstance(item, dict):
                         urls.append(str(item.get("course_url") or item.get("url") or ""))
-            return unique_urls(urls)
-        if isinstance(payload, list):
+                return PresetupSampler.unique_urls(urls)
+        if "course_url" in stripped.splitlines()[0].lower() or path.suffix.lower() == ".csv":
+            import io
+
+            handle = io.StringIO(text)
             urls = []
-            for item in payload:
-                if isinstance(item, str):
-                    urls.append(item)
-                elif isinstance(item, dict):
-                    urls.append(str(item.get("course_url") or item.get("url") or ""))
-            return unique_urls(urls)
-    if "course_url" in stripped.splitlines()[0].lower() or path.suffix.lower() == ".csv":
-        import io
+            for row in csv.DictReader(handle):
+                urls.append((row.get("course_url") or row.get("url") or "").strip())
+            return PresetupSampler.unique_urls(urls)
+        return PresetupSampler.unique_urls(
+            [line.strip() for line in stripped.splitlines() if line.strip() and not line.strip().startswith("#")]
+        )
 
-        handle = io.StringIO(text)
-        urls = []
-        for row in csv.DictReader(handle):
-            urls.append((row.get("course_url") or row.get("url") or "").strip())
-        return unique_urls(urls)
-    return unique_urls(
-        [line.strip() for line in stripped.splitlines() if line.strip() and not line.strip().startswith("#")]
-    )
-
-
-def urls_for_levels(url_levels: UrlLevelMap, levels: list[str]) -> list[dict[str, str]]:
-    allowed = set(levels)
-    records: list[dict[str, str]] = []
-    seen: set[str] = set()
-    for level in EXECUTE_LEVEL_ORDER:
-        if level not in allowed:
-            continue
-        for record in url_levels.records():
-            if record["study_level"] != level:
+    @staticmethod
+    def level_url_counts(output_dir: Path) -> dict[str, int]:
+        mapping = load_url_levels(output_dir)
+        counts = {level: 0 for level in STUDY_LEVELS}
+        seen: dict[str, set[str]] = {level: set() for level in STUDY_LEVELS}
+        for record in mapping.records():
+            level = record["study_level"]
+            key = PresetupSampler.normalize_url(record["course_url"])
+            if not key:
                 continue
-            key = normalize_url(record["course_url"])
-            if not key or key in seen:
+            if level not in seen:
+                seen[level] = set()
+                counts[level] = 0
+            if key in seen[level]:
                 continue
-            seen.add(key)
-            records.append(record)
-    return records
+            seen[level].add(key)
+            counts[level] = counts.get(level, 0) + 1
+        return counts
 
 
-def sample_urls_stratified(
-    url_levels: UrlLevelMap,
-    n: int = PRESETUP_SAMPLE_SIZE,
-    seed: int | None = None,
-    levels: list[str] | None = None,
-) -> list[dict[str, str]]:
-    """Shuffle each non-empty level, then round-robin until n unique URLs."""
-    if n <= 0:
-        return []
-    rng = random.Random(seed)
-    order = [level for level in EXECUTE_LEVEL_ORDER if not levels or level in levels]
-    buckets: dict[str, list[str]] = {level: [] for level in order}
-    seen_in_bucket: dict[str, set[str]] = {level: set() for level in order}
-    for record in url_levels.records():
-        level = record["study_level"]
-        if level not in buckets:
-            continue
-        url = record["course_url"].strip()
-        key = normalize_url(url)
-        if not key or key in seen_in_bucket[level]:
-            continue
-        seen_in_bucket[level].add(key)
-        buckets[level].append(url)
-    for level in order:
-        rng.shuffle(buckets[level])
-
-    queues = {level: list(urls) for level, urls in buckets.items() if urls}
-    chosen: list[dict[str, str]] = []
-    seen: set[str] = set()
-    while len(chosen) < n:
-        progressed = False
-        for level in order:
-            queue = queues.get(level)
-            if not queue:
-                continue
-            while queue:
-                url = queue.pop(0)
-                key = normalize_url(url)
-                if key in seen:
-                    continue
-                seen.add(key)
-                chosen.append({"course_url": url, "study_level": level})
-                progressed = True
-                break
-            if len(chosen) >= n:
-                break
-        if not progressed:
-            break
-    return chosen
-
-
-def presetup_sample_path(output_dir: Path) -> Path:
-    return output_dir / PRESETUP_SAMPLE_JSON
-
-
-def load_presetup_sample(output_dir: Path) -> dict:
-    path = presetup_sample_path(output_dir)
-    if not path.is_file():
-        return {}
-    try:
-        payload = json.loads(path.read_text(encoding="utf-8"))
-    except (json.JSONDecodeError, OSError):
-        return {}
-    return payload if isinstance(payload, dict) else {}
-
-
-def save_presetup_sample(
-    output_dir: Path,
-    courses: list[dict[str, str]],
-    *,
-    seed: int,
-    n: int = PRESETUP_SAMPLE_SIZE,
-) -> Path:
-    output_dir.mkdir(parents=True, exist_ok=True)
-    payload = {
-        "n": n,
-        "seed": seed,
-        "sampled_at": datetime.now(timezone.utc).isoformat(),
-        "courses": courses,
-    }
-    path = presetup_sample_path(output_dir)
-    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-    return path
-
-
-def presetup_sample_urls(payload: dict | None) -> list[str]:
-    courses = (payload or {}).get("courses") or []
-    urls: list[str] = []
-    for item in courses:
-        if isinstance(item, dict):
-            urls.append(str(item.get("course_url") or ""))
-        elif isinstance(item, str):
-            urls.append(item)
-    return unique_urls(urls)
-
-
-def level_url_counts(output_dir: Path) -> dict[str, int]:
-    mapping = load_url_levels(output_dir)
-    counts = {level: 0 for level in STUDY_LEVELS}
-    seen: dict[str, set[str]] = {level: set() for level in STUDY_LEVELS}
-    for record in mapping.records():
-        level = record["study_level"]
-        key = normalize_url(record["course_url"])
-        if not key:
-            continue
-        if level not in seen:
-            seen[level] = set()
-            counts[level] = 0
-        if key in seen[level]:
-            continue
-        seen[level].add(key)
-        counts[level] = counts.get(level, 0) + 1
-    return counts
+# Backward-compatible module-level aliases for path resolver / presetup sampler
+intake_start_year_from_md_path = StudyLevelPathResolver.intake_start_year_from_md_path
+intake_year_folder_from_stem = StudyLevelPathResolver.intake_year_folder_from_stem
+is_intake_year_folder = StudyLevelPathResolver.is_intake_year_folder
+study_level_folder_from_path = StudyLevelPathResolver.study_level_folder_from_path
+clean_course_md_relative_path = StudyLevelPathResolver.clean_course_md_relative_path
+clean_courses_root = StudyLevelPathResolver.clean_courses_root
+iter_course_markdown = StudyLevelPathResolver.iter_course_markdown
+relative_course_md = StudyLevelPathResolver.relative_course_md
+extraction_dir = StudyLevelPathResolver.extraction_dir
+iter_extracted_json = StudyLevelPathResolver.iter_extracted_json
+normalize_url = PresetupSampler.normalize_url
+unique_urls = PresetupSampler.unique_urls
+presetup_sample_path = PresetupSampler.presetup_sample_path
+load_presetup_sample = PresetupSampler.load_presetup_sample
+save_presetup_sample = PresetupSampler.save_presetup_sample
+presetup_sample_urls = PresetupSampler.presetup_sample_urls
+urls_for_levels = PresetupSampler.urls_for_levels
+sample_urls_stratified = PresetupSampler.sample_urls_stratified
+read_urls_file = PresetupSampler.read_urls_file
+level_url_counts = PresetupSampler.level_url_counts

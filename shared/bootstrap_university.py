@@ -11,41 +11,49 @@ from pathlib import Path
 TEMPLATE_DIR_NAME = "_university_template"
 
 
-def bootstrap_university(repo_root: Path, university_name: str, *, force: bool) -> Path:
-    template_dir = repo_root / TEMPLATE_DIR_NAME
-    if not template_dir.is_dir():
-        raise FileNotFoundError(f"Template not found: {template_dir}")
+class UniversityBootstrapper:
+    """Create a new university folder from the shared template."""
 
-    target_dir = repo_root / university_name
-    if target_dir.exists():
-        if not force:
-            raise FileExistsError(f"Already exists: {target_dir} (use --force to replace)")
-        shutil.rmtree(target_dir)
+    TEMPLATE_DIR_NAME = TEMPLATE_DIR_NAME
 
-    shutil.copytree(template_dir, target_dir)
+    def __init__(self, repo_root: Path) -> None:
+        self.repo_root = repo_root
 
-    replacements = {
-        "{University Name - SHORT}": university_name,
-        "{UNIVERSITY_NAME}": university_name,
-    }
-    for path in target_dir.rglob("*"):
-        if not path.is_file():
-            continue
-        if path.suffix.lower() not in {".md", ".csv", ".html"}:
-            continue
-        text = path.read_text(encoding="utf-8")
-        updated = text
-        for old, new in replacements.items():
-            updated = updated.replace(old, new)
-        if updated != text:
-            path.write_text(updated, encoding="utf-8")
+    def bootstrap(self, university_name: str, *, force: bool) -> Path:
+        template_dir = self.repo_root / self.TEMPLATE_DIR_NAME
+        if not template_dir.is_dir():
+            raise FileNotFoundError(f"Template not found: {template_dir}")
 
-    env_md = target_dir / "code" / "ENV.MD"
-    env_file = target_dir / "code" / ".env"
-    if env_md.is_file() and not env_file.exists():
-        env_file.write_text(env_md.read_text(encoding="utf-8"), encoding="utf-8")
+        target_dir = self.repo_root / university_name
+        if target_dir.exists():
+            if not force:
+                raise FileExistsError(f"Already exists: {target_dir} (use --force to replace)")
+            shutil.rmtree(target_dir)
 
-    return target_dir
+        shutil.copytree(template_dir, target_dir)
+
+        replacements = {
+            "{University Name - SHORT}": university_name,
+            "{UNIVERSITY_NAME}": university_name,
+        }
+        for path in target_dir.rglob("*"):
+            if not path.is_file():
+                continue
+            if path.suffix.lower() not in {".md", ".csv", ".html"}:
+                continue
+            text = path.read_text(encoding="utf-8")
+            updated = text
+            for old, new in replacements.items():
+                updated = updated.replace(old, new)
+            if updated != text:
+                path.write_text(updated, encoding="utf-8")
+
+        env_md = target_dir / "code" / "ENV.MD"
+        env_file = target_dir / "code" / ".env"
+        if env_md.is_file() and not env_file.exists():
+            env_file.write_text(env_md.read_text(encoding="utf-8"), encoding="utf-8")
+
+        return target_dir
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -73,7 +81,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     try:
-        target = bootstrap_university(args.repo_root, args.university_name, force=args.force)
+        target = UniversityBootstrapper(args.repo_root).bootstrap(
+            args.university_name, force=args.force
+        )
     except (FileNotFoundError, FileExistsError, ValueError) as exc:
         print(exc, file=sys.stderr)
         return 1
@@ -82,6 +92,10 @@ def main(argv: list[str] | None = None) -> int:
     print("Next: edit code/.env, save uni_req/ + course_listing/ + course_detail/ HTML")
     return 0
 
+
+# Backward-compatible module-level aliases
+def bootstrap_university(repo_root: Path, university_name: str, *, force: bool) -> Path:
+    return UniversityBootstrapper(repo_root).bootstrap(university_name, force=force)
 
 if __name__ == "__main__":
     raise SystemExit(main())

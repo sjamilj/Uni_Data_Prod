@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- saved from url=(0000)https://www.example.ac.uk/courses?page=2 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paginated course listing (reference)</title>
+</head>
+<body>
+<main>
+  <h1>Paginated course listing — reference stub</h1>
+  <p>
+  Replace this file with a <strong>browser-saved listing page that includes pagination</strong>
+  (page 2 or later is ideal so prev/next links are visible).
+  </p>
+  <p>
+  Used with <code>STRATEGY=DEGREE_SCOPED_PAGINATED</code> (<code>Paginated.csv</code> or
+  <code>DegreeScopedPaginated.csv</code>). Live listing URLs in <code>code/.env</code> drive scraping;
+  this HTML is for studying pagination markup and tuning selectors — it is not read by the scraper.
+  </p>
+  <p>Filename: <code>pagination.html</code> (optional reference; keep per-programme listing saves too).</p>
+
+  <h2>Sample course links (for selector tuning)</h2>
+  <ul class="course-results">
+    <li><a href="/study/undergraduate/example-course-bsc">Example Course - BSc (Hons)</a></li>
+    <li><a href="/study/postgraduate/example-course-msc">Example Course - MSc</a></li>
+  </ul>
+
+  <h2>Sample pagination patterns</h2>
+  <p>Real sites vary. Inspect your saved page for one of these (or similar):</p>
+
+  <nav class="pagination" aria-label="Pagination">
+    <a class="pagination__link pagination__link--prev" rel="prev"
+       href="https://www.example.ac.uk/courses?page=1">Previous</a>
+    <ol class="pagination__list">
+      <li><a href="https://www.example.ac.uk/courses?page=1">1</a></li>
+      <li><span aria-current="page">2</span></li>
+      <li><a href="https://www.example.ac.uk/courses?page=3">3</a></li>
+    </ol>
+    <a class="pagination__link pagination__link--next" rel="next"
+       href="https://www.example.ac.uk/courses?page=3">Next</a>
+  </nav>
+
+  <nav aria-label="pagination">
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+      <li class="page-item active"><span class="page-link">2</span></li>
+      <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
+      <li class="page-item page-item--next">
+        <a class="page-link" href="?page=3">Next</a>
+      </li>
+    </ul>
+  </nav>
+
+  <p>
+  Common query params: <code>page=</code>, <code>pageIndex=</code>, <code>start_rank=</code>
+  (see <code>shared/scrape_course_urls.py</code>).
+  </p>
+</main>
+</body>
+</html>

@@ -503,5 +503,24 @@ def main() -> int:
     return 0
 
 
+class EntryRequirementRerunner:
+    """Re-run Stage 2a (Bangladesh entry requirements) for extracted courses."""
+
+    ENTRY_RERUN_PROGRESS = ENTRY_RERUN_PROGRESS
+    PROMPT_2_ENTRY = PROMPT_2_ENTRY
+
+    load_entry_rerun_progress = staticmethod(load_entry_rerun_progress)
+    save_entry_rerun_progress = staticmethod(save_entry_rerun_progress)
+    load_json_dict = staticmethod(load_json_dict)
+    load_existing_stage2_parts = staticmethod(load_existing_stage2_parts)
+    upsert_extracted_csv_row = staticmethod(upsert_extracted_csv_row)
+    finalize_extracted_course = staticmethod(finalize_extracted_course)
+    rerun_entry_requirements_course = staticmethod(rerun_entry_requirements_course)
+    run_entry_rerun = staticmethod(run_entry_rerun)
+
+
+# Backward-compatible module-level aliases
+
+
 if __name__ == "__main__":
     raise SystemExit(main())

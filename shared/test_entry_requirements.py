@@ -16,14 +16,17 @@ from llm_extract import (  # noqa: E402
     derive_uk_equivalent_requirements,
     enrich_stage1_from_markdown,
     extract_entry_lines_from_course_markdown,
+    extract_stage1_fields_from_md,
     filter_bangladesh_descriptions_for_course,
     merge_requirement_lists,
     parse_bangladesh_json_requirements,
 )
 from normalize_admission_data import (  # noqa: E402
+    _extract_gbp_fee_from_metadata,
     alevel_combo_to_hsc_gpa,
     derive_hsc_gpa_from_uk_entry_text,
     process_record,
+    sanitize_international_tuition_fee,
     ucas_points_to_alevel_combo,
 )
 from validate_uni_clean import validate_uni_clean  # noqa: E402
@@ -40,6 +43,69 @@ BCU_CODE = Path("Birmingham City University/code")
 class EntryRequirementsTests(unittest.TestCase):
     def test_hsc_alim_maps_to_hsc(self) -> None:
         self.assertEqual(canonicalize_requirement_degree("HSC (Alim)"), "HSC")
+
+    def test_aru_stage1_parser_extracts_intake_and_tuition(self) -> None:
+        md_path = Path(
+            "Anglia Ruskin University - ARU/output/clean/courses/foundation/"
+            "study-undergraduate-accounting-and-finance.md"
+        )
+        if not md_path.exists():
+            self.skipTest("ARU sample markdown not in workspace")
+        body = md_path.read_text(encoding="utf-8")
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["tuitionFee"], "17500")
+        self.assertEqual(hints["intakeInfo"], "January 2027, September 2026")
+        self.assertEqual(hints["courseDuration"], "4 years with foundation")
+
+    def test_enrich_stage1_promotes_fees_metadata_object(self) -> None:
+        md_path = Path(
+            "Anglia Ruskin University - ARU/output/clean/courses/foundation/"
+            "study-undergraduate-accounting-and-finance.md"
+        )
+        if not md_path.exists():
+            self.skipTest("ARU sample markdown not in workspace")
+        body = md_path.read_text(encoding="utf-8")
+        stage1 = {
+            "feesMetaData": {
+                "tuitionFee": 17500,
+                "currency": "GBP",
+                "placementYearFee": 1700,
+            }
+        }
+        enriched = enrich_stage1_from_markdown(
+            stage1,
+            course_body=body,
+            course_name="Accounting and Finance",
+            course_url="https://www.aru.ac.uk/study/undergraduate/accounting-and-finance",
+        )
+        self.assertEqual(enriched["tuitionFee"], "17500")
+        self.assertEqual(enriched["intakeInfo"], "January 2027, September 2026")
+        self.assertTrue(enriched["feesMetaData"])
+        self.assertIn("17,500", str(enriched["feesMetaData"]))
+
+    def test_extract_gbp_fee_ignores_placement_year_amount(self) -> None:
+        meta_text = (
+            "International tuition fee: £18,000 (full-time, per year)\n"
+            "During placement year: £2,500"
+        )
+        fee, currency = _extract_gbp_fee_from_metadata(meta_text)
+        self.assertEqual(fee, "18000")
+        self.assertEqual(currency, "GBP")
+
+    def test_sanitize_keeps_parser_tuition_when_metadata_is_deposit_only(self) -> None:
+        record = {
+            "tuitionFee": "18000",
+            "currency": "GBP",
+            "feesMetaData": [
+                {
+                    "subtitle": "Initial Deposit",
+                    "description": ["You'll pay a £4,000 deposit before CAS."],
+                }
+            ],
+        }
+        sanitize_international_tuition_fee(record, fee_from_candidates=False)
+        self.assertEqual(record["tuitionFee"], "18000")
+        self.assertEqual(record["currency"], "GBP")
 
     def test_bangladesh_json_requirements_foundation(self) -> None:
         data = {

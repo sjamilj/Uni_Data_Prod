@@ -706,5 +706,41 @@ def main() -> int:
     return 0 if result["patterns"] else 2
 
 
+class CatalogueHtmlAnalyzer:
+    """Analyze a university catalogue HTML page and suggest .env match rules."""
+
+    SAVED_URL_RE = SAVED_URL_RE
+    CANONICAL_RE = CANONICAL_RE
+    BASE_HREF_RE = BASE_HREF_RE
+    NOISE_FRAGMENTS = NOISE_FRAGMENTS
+    DEFAULT_EXCLUDED_PREFIXES = DEFAULT_EXCLUDED_PREFIXES
+    COURSEISH_ROOTS = COURSEISH_ROOTS
+    WEAK_BROAD_ROOTS = WEAK_BROAD_ROOTS
+    LIST_ITEM_HINTS = LIST_ITEM_HINTS
+    MENU_HINTS = MENU_HINTS
+    LinkInfo = LinkInfo
+
+    infer_base_url = staticmethod(infer_base_url)
+    css_escape_ident = staticmethod(css_escape_ident)
+    ancestor_class_selectors = staticmethod(ancestor_class_selectors)
+    normalize_path = staticmethod(normalize_path)
+    path_depth = staticmethod(path_depth)
+    path_template = staticmethod(path_template)
+    broad_path_template = staticmethod(broad_path_template)
+    is_noise_path = staticmethod(is_noise_path)
+    collect_links = staticmethod(collect_links)
+    suggest_path_patterns = staticmethod(suggest_path_patterns)
+    selector_quality = staticmethod(selector_quality)
+    suggest_link_selector = staticmethod(suggest_link_selector)
+    suggest_exclusions = staticmethod(suggest_exclusions)
+    format_env_block = staticmethod(format_env_block)
+    merge_into_env = staticmethod(merge_into_env)
+    analyze = staticmethod(analyze)
+    print_report = staticmethod(print_report)
+
+
+# Backward-compatible module-level aliases
+
+
 if __name__ == "__main__":
     raise SystemExit(main())

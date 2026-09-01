@@ -1,0 +1,9 @@
+Course Type,DegreeScopedPaginated.csv,,,,,,,,
+Uni Name,Anglia Ruskin University - ARU,,,,,,,,
+Uni Link,https://www.aru.ac.uk,,,,,,,,
+Programme,ALL Course Listing URL,Paginated Course Listing URL - Page 1,Paginated Course Listing URL - Page 2,Course Detail Page URL,Bangladesh Entry Requirements URL,English Language Requirements URL,Scholarship Information URL,Deposit Information URL,Comments
+All,,,,,,,,,
+Foundation,,https://www.aru.ac.uk/study/undergraduate/clearing/clearing-courses?levelofstudy=Undergraduate&modeofstudy=Foundation+year&page=1,https://www.aru.ac.uk/study/undergraduate/clearing/clearing-courses?levelofstudy=Undergraduate&modeofstudy=Foundation+year&page=2,https://www.aru.ac.uk/study/undergraduate/biomedical-engineering,,,,
+Undergraduate,,https://www.aru.ac.uk/study/undergraduate/clearing/clearing-courses?levelofstudy=Undergraduate&modeofstudy=Full-time&page=1,https://www.aru.ac.uk/study/undergraduate/clearing/clearing-courses?levelofstudy=Undergraduate&modeofstudy=Full-time&page=2,https://www.aru.ac.uk/study/undergraduate/animation-and-illustration,https://www.aru.ac.uk/international/south-asia,https://www.aru.ac.uk/international/entry-requirements,https://www.aru.ac.uk/student-life/preparing-for-study/help-with-finances/scholarships,
+Postgraduate,,https://www.aru.ac.uk/study/course-search?levelofstudy=Postgraduate&modeofstudy=Full-time&page=1,https://www.aru.ac.uk/study/course-search?levelofstudy=Postgraduate&modeofstudy=Full-time&page=2,https://www.aru.ac.uk/study/postgraduate/artificial-intelligence,,,,
+Postgraduate Research,,https://www.aru.ac.uk/study/course-search?levelofstudy=Research&page=1,https://www.aru.ac.uk/study/course-search?levelofstudy=Research&page=2,https://www.aru.ac.uk/study/postgraduate/school-of-allied-health,,,,

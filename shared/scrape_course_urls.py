@@ -108,7 +108,6 @@ COURSE_URLS_CSV = "course_urls.csv"
 FAILED_URLS_CSV = "failed_urls.csv"
 COURSE_PAGE_MAP_CSV = "course_page_map.csv"
 COURSE_PAGES_DIR = "course_pages"
-LISTING_PAGES_DIR = "course_listing_pages"
 PROGRESS_FILE = "scrape_progress.json"
 LOG_FILE = "scrape.log"
 
@@ -1147,7 +1146,6 @@ class CatalogueUrlExtractor:
         self,
         source: CatalogueSource,
         *,
-        listing_dir: Path,
         all_urls: set[str],
         completed: set[str],
         browser: BrowserSession | None,
@@ -1169,11 +1167,7 @@ class CatalogueUrlExtractor:
             print(f"{scope_prefix}Downloading catalogue page with Playwright…")
             if browser is None:
                 raise RuntimeError("Browser session required for live catalogue download")
-            title, html = browser.download_html(catalogue_url)
-            out_name = f"course_catalogue_{scope + '_' if scope else ''}{Utils.sanitize_filename(title)}.html"
-            # (listing_dir / out_name).write_text(html, encoding="utf-8")
-            # print(f"  Saved listing HTML -> {LISTING_PAGES_DIR}/{out_name}")
-            # self.logger.ok(f"Catalogue HTML saved: {out_name}")
+            _title, html = browser.download_html(catalogue_url)
 
         # Step 2: pull every course link off the catalogue page.
         page_urls = matcher.extract_from_html(html, base_url)
@@ -1199,7 +1193,6 @@ class CatalogueUrlExtractor:
             catalogue_url,
             scope,
             scope_prefix,
-            listing_dir,
             all_urls,
             completed,
             browser,
@@ -1214,7 +1207,6 @@ class CatalogueUrlExtractor:
         catalogue_url: str,
         scope: str,
         scope_prefix: str,
-        listing_dir: Path,
         all_urls: set[str],
         completed: set[str],
         browser: BrowserSession | None,
@@ -1239,12 +1231,7 @@ class CatalogueUrlExtractor:
         try:
             for index, letter_url in enumerate(pending_letters, start=1):
                 print(f"{scope_prefix}  Letter page {index}/{len(pending_letters)}: {letter_url}")
-                title, letter_html = letter_browser.download_html(letter_url)
-                filename = (
-                    f"course_listing_{scope + '_' if scope else ''}{index:02d}_"
-                    f"{Utils.sanitize_filename(title)}.html"
-                )
-                # (listing_dir / filename).write_text(letter_html, encoding="utf-8")
+                _title, letter_html = letter_browser.download_html(letter_url)
                 found = matcher.extract_from_html(letter_html, base_url)
                 all_urls.update(found)
                 url_levels.tag_urls(
@@ -1272,7 +1259,6 @@ class PaginatedListingExtractor:
         self,
         work_dir: Path,
         config: ScraperConfig,
-        listing_dir: Path,
         browser: BrowserSession,
         progress: dict,
         progress_store: ProgressStore,
@@ -1281,7 +1267,6 @@ class PaginatedListingExtractor:
     ):
         self.work_dir = work_dir
         self.config = config
-        self.listing_dir = listing_dir
         self.browser = browser
         self.progress = progress
         self.progress_store = progress_store
@@ -1377,7 +1362,7 @@ class PaginatedListingExtractor:
             page_counter += 1
             print(f"  [{scope}] Downloading listing page {page_counter}: {listing_url}")
             try:
-                title, html = self.browser.download_html(listing_url, wait_for_results=True)
+                _title, html = self.browser.download_html(listing_url, wait_for_results=True)
             except RuntimeError as exc:
                 empty_streak += 1
                 print(f"    [{scope}] No HTML ({empty_streak}/{PAGINATION_EMPTY_LIMIT}): {exc}")
@@ -1386,11 +1371,6 @@ class PaginatedListingExtractor:
                 continue
 
             completed.add(normalized)
-            # listing_filename = (
-            #     f"course_listing_{page_counter:02d}_{scope}_p{page_index}_"
-            #     f"{Utils.sanitize_filename(title)}.html"
-            # )
-            # (self.listing_dir / listing_filename).write_text(html, encoding="utf-8")
 
             start, end, total = ListingResultParser.get_result_info(html)
             if total is not None and max_pages is None:
@@ -1590,9 +1570,6 @@ class CourseUrlScraper:
             self.logger.end("ok", urls=len(urls))
             return urls
 
-        listing_dir = self.output_dir / LISTING_PAGES_DIR
-        listing_dir.mkdir(parents=True, exist_ok=True)
-
         all_urls: set[str] = set()
         url_levels = UrlLevelMap()
         if keep_existing:
@@ -1623,10 +1600,9 @@ class CourseUrlScraper:
             print(f"COURSE_LINK_SELECTOR={self.config.link_selector}")
 
         if strategy == STRATEGY_ALL_COURSE:
-            self._run_all_course(listing_dir, all_urls, completed, url_levels)
+            self._run_all_course(all_urls, completed, url_levels)
         elif strategy == STRATEGY_DEGREE_SCOPED_PAGINATED:
             self._run_paginated(
-                listing_dir,
                 all_urls,
                 completed,
                 group_state,
@@ -1653,7 +1629,6 @@ class CourseUrlScraper:
 
     def _run_all_course(
         self,
-        listing_dir: Path,
         all_urls: set[str],
         completed: set[str],
         url_levels: UrlLevelMap,
@@ -1673,7 +1648,6 @@ class CourseUrlScraper:
                     print(f"--- Degree scope: {source.scope} ---")
                 extractor.extract(
                     source,
-                    listing_dir=listing_dir,
                     all_urls=all_urls,
                     completed=completed,
                     browser=browser,
@@ -1685,7 +1659,6 @@ class CourseUrlScraper:
 
     def _run_paginated(
         self,
-        listing_dir: Path,
         all_urls: set[str],
         completed: set[str],
         group_state: dict[str, dict],
@@ -1766,7 +1739,6 @@ class CourseUrlScraper:
             extractor = PaginatedListingExtractor(
                 self.code_dir,
                 self.config,
-                listing_dir,
                 browser,
                 progress,
                 self.progress_store,

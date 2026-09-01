@@ -598,5 +598,36 @@ def main() -> int:
     return 0
 
 
+class StudyLevelRetrofit:
+    """One-off retrofit: split existing artifacts by study level."""
+
+    DEFAULT_UNIVERSITIES = DEFAULT_UNIVERSITIES
+    PROGRESS_FILENAMES = PROGRESS_FILENAMES
+    ARU_RESEARCH_SUFFIX_RE = _ARU_RESEARCH_SUFFIX_RE
+
+    utc_now = staticmethod(utc_now)
+    resolve_university_code_dir = staticmethod(resolve_university_code_dir)
+    read_course_urls = staticmethod(read_course_urls)
+    is_aru = staticmethod(is_aru)
+    apply_path_heuristics = staticmethod(apply_path_heuristics)
+    levels_matching_url = staticmethod(levels_matching_url)
+    classify_url_levels = staticmethod(classify_url_levels)
+    refine_university_levels = staticmethod(refine_university_levels)
+    primary_level_for_url = staticmethod(primary_level_for_url)
+    upsert_study_level = staticmethod(upsert_study_level)
+    canonical_md_priority = staticmethod(canonical_md_priority)
+    url_from_extract_dir = staticmethod(url_from_extract_dir)
+    split_urls = staticmethod(split_urls)
+    split_clean_courses = staticmethod(split_clean_courses)
+    build_slug_level_map = staticmethod(build_slug_level_map)
+    split_extracted = staticmethod(split_extracted)
+    rewrite_progress_keys = staticmethod(rewrite_progress_keys)
+    split_extract_progress = staticmethod(split_extract_progress)
+    update_manifest = staticmethod(update_manifest)
+    rebuild_index = staticmethod(rebuild_index)
+    retrofit_university = staticmethod(retrofit_university)
+
+
+# Backward-compatible module-level aliases (functions above remain canonical)
 if __name__ == "__main__":
     raise SystemExit(main())
