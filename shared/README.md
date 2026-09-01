@@ -35,7 +35,6 @@ AI Driven/
     ├── course_urls.csv                            # generated
     ├── scrape_progress.json                       # generated (resume checkpoint)
     ├── scrape.log                                 # generated (timestamped run log)
-    ├── course_listing_pages/                      # generated (paginated / A–Z letters)
     └── course_pages/                              # generated
 ```
 
@@ -140,7 +139,6 @@ Log levels: `START`, `INFO`, `OK`, `ERROR`, `END`.
 | `course_urls.csv` | Deduplicated course URLs (tab-separated, Excel-friendly) |
 | `scrape_progress.json` | Checkpoint: phase, completed listing pages, downloaded URLs |
 | `scrape.log` | Timestamped log of each run (append-only) |
-| `course_listing_pages/` | Rendered HTML for each listing/search page |
 | `course_pages/` | Rendered HTML for each individual course page |
 
 ### `course_urls.csv` format

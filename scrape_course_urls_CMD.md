@@ -13,7 +13,7 @@ Run these from the repo root. Paths are relative, not machine-specific.
 | `--fresh` | Clear progress and re-extract URLs |
 | `--append-urls` | Keep existing `course_urls.csv` and merge new URLs |
 
-**Outputs (in `{University}\output\`):** `course_urls.csv`, `course_listing_pages\`, `scrape_progress.json`, `scrape.log`
+**Outputs (in `{University}\output\`):** `course_urls.csv`, `scrape_progress.json`, `scrape.log`
 
 ---
 

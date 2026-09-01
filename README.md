@@ -21,3 +21,7 @@ Supporting modules: `shared/markdown_converter.py`, `shared/clean_config.py`. `C
 Markdown cleanup (after HTML→MD) stays in `shared/course_markdown_cleanup.py` + optional `{University}/code/course_markdown_cleanup.py`.
 
 See also [shared/course_markdown_cleanup.md](shared/course_markdown_cleanup.md).
+
+## Learning the codebase
+
+Start at [docs/00-start-here.md](docs/00-start-here.md) for a guided path through architecture, feature flows, and per-module docs for `shared/` and `dashboard/`.
