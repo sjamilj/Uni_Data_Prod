@@ -11,6 +11,7 @@ _SHARED = Path(__file__).resolve().parent
 if str(_SHARED) not in sys.path:
     sys.path.insert(0, str(_SHARED))
 
+from export_dev_courses import PortalLookup  # noqa: E402
 from llm_extract import (  # noqa: E402
     canonicalize_requirement_degree,
     derive_uk_equivalent_requirements,
@@ -18,6 +19,7 @@ from llm_extract import (  # noqa: E402
     extract_entry_lines_from_course_markdown,
     extract_stage1_fields_from_md,
     filter_bangladesh_descriptions_for_course,
+    infer_degree_name_from_md,
     merge_requirement_lists,
     parse_bangladesh_json_requirements,
 )
@@ -56,6 +58,55 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(hints["tuitionFee"], "17500")
         self.assertEqual(hints["intakeInfo"], "January 2027, September 2026")
         self.assertEqual(hints["courseDuration"], "4 years with foundation")
+        self.assertEqual(hints["degreeName"], "BSc")
+
+    def test_aru_infer_degree_name_from_course_overview_line(self) -> None:
+        md_path = Path(
+            "Anglia Ruskin University - ARU/output/clean/courses/foundation/"
+            "study-undergraduate-accounting-and-finance.md"
+        )
+        if not md_path.exists():
+            self.skipTest("ARU sample markdown not in workspace")
+        body = md_path.read_text(encoding="utf-8")
+        self.assertEqual(infer_degree_name_from_md(body), "BSc")
+
+    def test_enrich_stage1_sets_degree_name_from_markdown(self) -> None:
+        md_path = Path(
+            "Anglia Ruskin University - ARU/output/clean/courses/foundation/"
+            "study-undergraduate-accounting-and-finance.md"
+        )
+        if not md_path.exists():
+            self.skipTest("ARU sample markdown not in workspace")
+        body = md_path.read_text(encoding="utf-8")
+        enriched = enrich_stage1_from_markdown(
+            {},
+            course_body=body,
+            course_name="Accounting and Finance",
+            course_url="https://www.aru.ac.uk/study/undergraduate/accounting-and-finance",
+        )
+        self.assertEqual(enriched["degreeName"], "BSc")
+
+    def test_portal_degree_name_only_when_row_empty(self) -> None:
+        lookup = PortalLookup()
+        lookup.by_url["/study/undergraduate/accounting-and-finance"] = {
+            "programmeName": "Accounting and Finance",
+            "degreeName": "FDA",
+        }
+        row = {
+            "courseName": "Accounting and Finance",
+            "courseUrlExternal": "https://www.aru.ac.uk/study/undergraduate/accounting-and-finance",
+            "degreeName": "",
+        }
+        lookup.apply_to_row(row)
+        self.assertEqual(row["degreeName"], "FDA")
+
+        row_with_degree = {
+            "courseName": "Accounting and Finance",
+            "courseUrlExternal": "https://www.aru.ac.uk/study/undergraduate/accounting-and-finance",
+            "degreeName": "BSc",
+        }
+        lookup.apply_to_row(row_with_degree)
+        self.assertEqual(row_with_degree["degreeName"], "BSc")
 
     def test_enrich_stage1_promotes_fees_metadata_object(self) -> None:
         md_path = Path(

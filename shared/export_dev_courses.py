@@ -144,7 +144,7 @@ class PortalLookup:
             row["programmeName"] = portal_row["programmeName"]
         else:
             row["programmeName"] = ""
-        if portal_row.get("degreeName"):
+        if portal_row.get("degreeName") and not str(row.get("degreeName") or "").strip():
             row["degreeName"] = portal_row["degreeName"]
         return row
 

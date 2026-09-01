@@ -202,6 +202,10 @@ POSTGRADUATE_AWARD_RE = re.compile(
     re.I,
 )
 INTAKE_YEAR_RE = re.compile(r"\b(19|20)\d{2}\b")
+AWARD_TOKEN_RE = re.compile(
+    r"\b(BSc|BA|BBA|BEng|LLB|MSc|MA|MBA|MFA|PhD|MRes|PGDip|PGCert|FdSc|Fd|CertHE|MEng|MArch|BM BS)\b",
+    re.I,
+)
 MONTH_YEAR_RE = re.compile(
     r"\b(january|february|march|april|may|june|july|august|september|october|november|december)\b",
     re.I,
@@ -651,6 +655,56 @@ class ExtractionPathConfig:
         return {role: load_uni_section(output_dir, filename) for role, filename in UNI_MD_BY_ROLE.items()}
 
     @staticmethod
+    def normalize_award_label(text: str) -> str:
+        cleaned = re.sub(r"\s+", " ", (text or "").strip())
+        if not cleaned:
+            return ""
+        lower = cleaned.lower()
+        if lower in DEGREE_ALIASES:
+            return DEGREE_ALIASES[lower]
+        for alias, degree in sorted(DEGREE_ALIASES.items(), key=lambda item: -len(item[0])):
+            if alias in lower:
+                return degree
+        match = AWARD_TOKEN_RE.search(cleaned)
+        if match:
+            key = match.group(1).lower()
+            return DEGREE_ALIASES.get(key, match.group(1))
+        return ""
+
+    @staticmethod
+    def infer_degree_name_from_md(body: str) -> str:
+        award_match = re.search(r"- Award\s+([^\n]+)", body, re.I)
+        if award_match:
+            return ExtractionPathConfig.normalize_award_label(award_match.group(1))
+
+        overview_parts = re.split(r"##\s*Course overview\s*\n", body, maxsplit=1, flags=re.I)
+        if len(overview_parts) > 1:
+            section = overview_parts[1].split("\n##", 1)[0]
+            for line in section.splitlines():
+                stripped = line.strip()
+                if not stripped or stripped.startswith("- "):
+                    continue
+                lower = stripped.lower()
+                if lower.startswith(("placement year", "with foundation")):
+                    continue
+                award = ExtractionPathConfig.normalize_award_label(stripped)
+                if award:
+                    return award
+                break
+
+        frontmatter = re.match(r"---\s*\n(.*?)\n---", body, re.S)
+        if frontmatter:
+            for line in frontmatter.group(1).splitlines():
+                if not line.lower().startswith("source_html:"):
+                    continue
+                value = line.split(":", 1)[1].strip().replace(".html", "")
+                for part in reversed(value.split(" - ")):
+                    award = ExtractionPathConfig.normalize_award_label(part)
+                    if award:
+                        return award
+        return ""
+
+    @staticmethod
     def infer_degree_name(course_name: str) -> str:
         leading = re.match('^(BSc|BA|BBA|BEng|LLB|MSc|MA|MBA|MFA|PhD|MRes|PGDip|PGCert|FdSc|Fd|CertHE|MEng|BM BS)\\b', course_name, re.I)
         if leading:
@@ -902,6 +956,9 @@ class Stage1MarkdownParser:
         if ielts_match:
             fields['ieltsMinOverall'] = ielts_match.group(1)
             fields['ieltsMinSection'] = ielts_match.group(2)
+        degree = ExtractionPathConfig.infer_degree_name_from_md(body)
+        if degree:
+            fields['degreeName'] = degree
         return fields
 
     @staticmethod
@@ -1196,7 +1253,10 @@ class CourseIndexManager:
             if not course_url:
                 continue
             course_name = ExtractionPathConfig.infer_course_name(body, course_url)
-            degree_name = ExtractionPathConfig.infer_degree_name(course_name)
+            degree_name = (
+                ExtractionPathConfig.infer_degree_name_from_md(body)
+                or ExtractionPathConfig.infer_degree_name(course_name)
+            )
             uni_name = meta.get('university', university_name).strip() or university_name
             study_level = study_level_from_markdown(md_path, meta, courses_dir=courses_dir, course_url=course_url, course_name=course_name)
             expected_from_md = Stage1MarkdownParser.extract_expected_from_md(body, course_name=course_name, course_url=course_url, degree_name=degree_name)
@@ -1512,6 +1572,9 @@ class Stage1Enricher:
             parsed['courseUrl'] = course_url
         hints = Stage1MarkdownParser.extract_stage1_fields_from_md(course_body)
         apply_parser_owned_stage1_fields(parsed, hints, course_body=course_body)
+        degree = hints.get('degreeName') or ExtractionPathConfig.infer_degree_name_from_md(course_body)
+        if degree and not str(parsed.get('degreeName', '') or '').strip():
+            parsed['degreeName'] = degree
         dropped = drop_ungrounded_stage1_scalars(parsed, course_body)
         if warnings is not None:
             warnings.extend(dropped)
@@ -2483,7 +2546,11 @@ class CourseExtractor:
         uni_sections = ExtractionPathConfig.load_uni_sections(output_dir)
         uni_content = ExtractionPathConfig.load_uni_content(output_dir)
         course_level = Stage2Enricher.infer_course_level(course_name, course_url, study_level)
-        degree_name = course_entry.get('degreeName') or ExtractionPathConfig.infer_degree_name(course_name)
+        degree_name = (
+            course_entry.get('degreeName')
+            or ExtractionPathConfig.infer_degree_name_from_md(course_body)
+            or ExtractionPathConfig.infer_degree_name(course_name)
+        )
         stage1_json_text = ''
         parser_hints = Stage1MarkdownParser.extract_stage1_fields_from_md(course_body)
         ExtractionPathConfig.save_audit(audit_dir, 'parser_hints.json', json.dumps(Stage1Enricher.parser_hints_payload(parser_hints, course_body), indent=2, ensure_ascii=False))
@@ -2504,6 +2571,8 @@ class CourseExtractor:
             ExtractionPathConfig.save_audit(audit_dir, 'stage1_response.json', json.dumps(stage1_raw, indent=2))
         grounding_warnings: list[str] = []
         stage1_json = Stage1Enricher.enrich_stage1_from_markdown(stage1_json, course_body=course_body, course_name=course_name, course_url=course_url, warnings=grounding_warnings)
+        if not degree_name and str(stage1_json.get('degreeName', '') or '').strip():
+            degree_name = str(stage1_json['degreeName']).strip()
         ExtractionPathConfig.save_audit(audit_dir, 'extraction_warnings.json', json.dumps({'grounding': grounding_warnings}, indent=2, ensure_ascii=False))
         ExtractionPathConfig.save_audit(audit_dir, 'stage1_parsed.json', json.dumps(stage1_json, indent=2))
         stage1_json_text = json.dumps(stage1_json, indent=2, ensure_ascii=False)
@@ -2702,6 +2771,8 @@ load_uni_section = ExtractionPathConfig.load_uni_section
 load_uni_content = ExtractionPathConfig.load_uni_content
 load_uni_sections = ExtractionPathConfig.load_uni_sections
 infer_degree_name = ExtractionPathConfig.infer_degree_name
+infer_degree_name_from_md = ExtractionPathConfig.infer_degree_name_from_md
+normalize_award_label = ExtractionPathConfig.normalize_award_label
 extract_response_content = ExtractionPathConfig.extract_response_content
 response_content_from_file = ExtractionPathConfig.response_content_from_file
 stage_response_paths = ExtractionPathConfig.stage_response_paths
