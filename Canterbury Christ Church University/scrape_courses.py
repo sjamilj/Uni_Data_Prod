@@ -28,7 +28,6 @@ COURSE_URLS_CSV = "course_urls.csv"
 FAILED_URLS_CSV = "failed_urls.csv"
 COURSE_PAGE_MAP_CSV = "course_page_map.csv"
 COURSE_PAGES_DIR = "course_pages"
-LISTING_PAGES_DIR = "course_listing_pages"
 PROGRESS_FILE = "scrape_progress.json"
 LOG_FILE = "scrape.log"
 
@@ -567,8 +566,6 @@ def extract_urls_from_search_listings(
 ) -> list[str]:
     seed_urls = listing_config["seeds"]
     search_groups = build_search_groups(seed_urls)
-    listing_dir = university_dir / LISTING_PAGES_DIR
-    listing_dir.mkdir(parents=True, exist_ok=True)
     programme = listing_config["programme"]
     search_path = listing_config["search_path"]
     group_state: dict[str, dict] = {}
@@ -652,7 +649,7 @@ def extract_urls_from_search_listings(
                 page_counter += 1
                 print(f"  Downloading listing page {page_counter}: {listing_url}", flush=True)
                 try:
-                    title, html = download_html_with_playwright(
+                    _title, html = download_html_with_playwright(
                         page, listing_url, wait_for_results=True
                     )
                 except RuntimeError as exc:
@@ -667,11 +664,6 @@ def extract_urls_from_search_listings(
                     continue
 
                 completed.add(normalized)
-                listing_filename = (
-                    f"course_listing_{page_counter:02d}_{label}_p{page_index}_"
-                    f"{sanitize_filename(title)}.html"
-                )
-                (listing_dir / listing_filename).write_text(html, encoding="utf-8")
 
                 start, end, total = get_listing_result_info(html)
                 if total is not None and max_pages is None:
