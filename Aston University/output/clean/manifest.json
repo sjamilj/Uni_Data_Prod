@@ -1,6 +1,6 @@
 {
   "university": "Aston University",
-  "cleaned_at": "2026-08-26",
+  "cleaned_at": "2026-09-01",
   "courses": [
     {
       "course_url": "https://www.aston.ac.uk/study/courses/business-analytics-bsc/september-2027",
@@ -11,7 +11,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/business-analytics-foundation",
-      "source_html": "course_pages/Business Analytics Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Business Analytics Foundation Programme _ Aston University_study_courses_business-analytics-foundation.html",
       "clean_md": "clean/courses/foundation/business-analytics-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/business-analytics-foundation",
       "study_level": "foundation"
@@ -123,7 +123,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/business-and-supply-chain-management-foundation",
-      "source_html": "course_pages/Business and Supply Chain Management Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Business and Supply Chain Management Foundation Programme _ Aston University_study_courses_business-and-supply-chain-management-foundation.html",
       "clean_md": "clean/courses/foundation/business-and-supply-chain-management-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/business-and-supply-chain-management-foundation",
       "study_level": "foundation"
@@ -151,7 +151,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/business-computing-it-foundation",
-      "source_html": "course_pages/Business Computing and IT Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Business Computing and IT Foundation Programme _ Aston University_study_courses_business-computing-it-foundation.html",
       "clean_md": "clean/courses/foundation/business-computing-it-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/business-computing-it-foundation",
       "study_level": "foundation"
@@ -179,7 +179,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/business-economics-foundation",
-      "source_html": "course_pages/Business Economics Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Business Economics Foundation Programme _ Aston University_study_courses_business-economics-foundation.html",
       "clean_md": "clean/courses/foundation/business-economics-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/business-economics-foundation",
       "study_level": "foundation"
@@ -200,7 +200,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/business-enterprise-innovation-foundation",
-      "source_html": "course_pages/Business Enterprise and Innovation Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Business Enterprise and Innovation Foundation Programme _ Aston University_study_courses_business-enterprise-innovation-foundation.html",
       "clean_md": "clean/courses/foundation/business-enterprise-innovation-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/business-enterprise-innovation-foundation",
       "study_level": "foundation"
@@ -214,7 +214,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/business-management-foundation",
-      "source_html": "course_pages/Business and Management Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Business and Management Foundation Programme _ Aston University_study_courses_business-management-foundation.html",
       "clean_md": "clean/courses/foundation/business-management-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/business-management-foundation",
       "study_level": "foundation"
@@ -242,7 +242,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/chemical-engineering-foundation/september-2026",
-      "source_html": "course_pages/Chemical Engineering Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Chemical Engineering Foundation Programme _ Aston University_study_courses_chemical-engineering-foundation_september-2026.html",
       "clean_md": "clean/courses/foundation/chemical-engineering-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/chemical-engineering-foundation",
       "study_level": "foundation"
@@ -284,7 +284,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/civil-engineering-foundation",
-      "source_html": "course_pages/Civil Engineering Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Civil Engineering Foundation Programme _ Aston University_study_courses_civil-engineering-foundation.html",
       "clean_md": "clean/courses/foundation/civil-engineering-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/civil-engineering-foundation",
       "study_level": "foundation"
@@ -347,7 +347,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/computer-science-foundation/september-2026",
-      "source_html": "course_pages/Computer Science Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Computer Science Foundation Programme _ Aston University_study_courses_computer-science-foundation_september-2026.html",
       "clean_md": "clean/courses/foundation/computer-science-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/computer-science-foundation",
       "study_level": "foundation"
@@ -396,7 +396,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/construction-project-management-foundation",
-      "source_html": "course_pages/Construction Project Management Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Construction Project Management Foundation Programme _ Aston University_study_courses_construction-project-management-foundation.html",
       "clean_md": "clean/courses/foundation/construction-project-management-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/construction-project-management-foundation",
       "study_level": "foundation"
@@ -480,7 +480,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/cybersecurity-foundation/september-2026",
-      "source_html": "course_pages/Cybersecurity Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Cybersecurity Foundation Programme _ Aston University_study_courses_cybersecurity-foundation_september-2026.html",
       "clean_md": "clean/courses/foundation/cybersecurity-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/cybersecurity-foundation",
       "study_level": "foundation"
@@ -523,7 +523,7 @@
     {
       "course_url": "https://www.aston.ac.uk/study/courses/data-science-msc/september-2026",
       "source_html": "course_pages/Data Science _ Aston University_study_courses_data-science-msc_september-2026.html",
-      "clean_md": "clean/courses/postgraduate/data-science-msc.md",
+      "clean_md": "clean/pre_setup_course/postgraduate/data-science-msc.md",
       "source_url": "https://www.aston.ac.uk/study/courses/data-science-msc",
       "study_level": "postgraduate"
     },
@@ -550,7 +550,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/design-engineering-foundation",
-      "source_html": "course_pages/Design Engineering Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Design Engineering Foundation Programme _ Aston University_study_courses_design-engineering-foundation.html",
       "clean_md": "clean/courses/foundation/design-engineering-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/design-engineering-foundation",
       "study_level": "foundation"
@@ -606,7 +606,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/digital-marketing-foundation",
-      "source_html": "course_pages/Digital Marketing Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Digital Marketing Foundation Programme _ Aston University_study_courses_digital-marketing-foundation.html",
       "clean_md": "clean/courses/foundation/digital-marketing-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/digital-marketing-foundation",
       "study_level": "foundation"
@@ -669,8 +669,8 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/economics-bsc/september-2026",
-      "source_html": "course_pages/Economics _ Aston University.html",
-      "clean_md": "clean/courses/undergraduate/economics-bsc.md",
+      "source_html": "course_pages/Economics _ Aston University_study_courses_economics-bsc_september-2026.html",
+      "clean_md": "clean/pre_setup_course/undergraduate/economics-bsc.md",
       "source_url": "https://www.aston.ac.uk/study/courses/economics-bsc",
       "study_level": "undergraduate"
     },
@@ -683,7 +683,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/economics-finance-foundation",
-      "source_html": "course_pages/Economics and Finance Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Economics and Finance Foundation Programme _ Aston University_study_courses_economics-finance-foundation.html",
       "clean_md": "clean/courses/foundation/economics-finance-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/economics-finance-foundation",
       "study_level": "foundation"
@@ -697,7 +697,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/economics-foundation",
-      "source_html": "course_pages/Economics Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Economics Foundation Programme _ Aston University_study_courses_economics-foundation.html",
       "clean_md": "clean/courses/foundation/economics-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/economics-foundation",
       "study_level": "foundation"
@@ -725,7 +725,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/electrical-and-electronic-engineering-foundation/september-2026",
-      "source_html": "course_pages/Electrical and Electronic Engineering Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Electrical and Electronic Engineering Foundation Programme _ Aston University_study_courses_electrical-and-electronic-engineering-foundation_september-2026.html",
       "clean_md": "clean/courses/foundation/electrical-and-electronic-engineering-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/electrical-and-electronic-engineering-foundation",
       "study_level": "foundation"
@@ -774,7 +774,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/electronic-engineering-and-computer-science-foundation/september-2026",
-      "source_html": "course_pages/Electronic Engineering and Computer Science Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Electronic Engineering and Computer Science Foundation Programme _ Aston University_study_courses_electronic-engineering-and-computer-science-foundation_september-2026.html",
       "clean_md": "clean/courses/foundation/electronic-engineering-and-computer-science-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/electronic-engineering-and-computer-science-foundation",
       "study_level": "foundation"
@@ -886,7 +886,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/finance-foundation",
-      "source_html": "course_pages/Finance Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Finance Foundation Programme _ Aston University_study_courses_finance-foundation.html",
       "clean_md": "clean/courses/foundation/finance-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/finance-foundation",
       "study_level": "foundation"
@@ -970,14 +970,14 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/foundation-degree-hearing-aid-audiology-fdsc",
-      "source_html": "course_pages/Foundation Degree Hearing Aid Audiology _ Aston University.html",
+      "source_html": "course_pages/Foundation Degree Hearing Aid Audiology _ Aston University_study_courses_foundation-degree-hearing-aid-audiology-fdsc.html",
       "clean_md": "clean/courses/foundation/foundation-degree-hearing-aid-audiology-fdsc.md",
       "source_url": "https://www.aston.ac.uk/study/courses/foundation-degree-hearing-aid-audiology-fdsc",
       "study_level": "foundation"
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/foundation-programme-aerospace-engineering",
-      "source_html": "course_pages/Aerospace Engineering Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Aerospace Engineering Foundation Programme _ Aston University_study_courses_foundation-programme-aerospace-engineering.html",
       "clean_md": "clean/courses/foundation/foundation-programme-aerospace-engineering.md",
       "source_url": "https://www.aston.ac.uk/study/courses/foundation-programme-aerospace-engineering",
       "study_level": "foundation"
@@ -1027,7 +1027,7 @@
     {
       "course_url": "https://www.aston.ac.uk/study/courses/global-business-and-management-top-bsc/september-2027",
       "source_html": "course_pages/Global Business and Management (Top-up) _ Aston University_study_courses_global-business-and-management-top-bsc_september-2027.html",
-      "clean_md": "clean/courses/undergraduate/global-business-and-management-top-bsc.md",
+      "clean_md": "clean/pre_setup_course/undergraduate/global-business-and-management-top-bsc.md",
       "source_url": "https://www.aston.ac.uk/study/courses/global-business-and-management-top-bsc",
       "study_level": "undergraduate"
     },
@@ -1131,7 +1131,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/human-resource-business-management-foundation",
-      "source_html": "course_pages/Human Resources and Business Management Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Human Resources and Business Management Foundation Programme _ Aston University_study_courses_human-resource-business-management-foundation.html",
       "clean_md": "clean/courses/foundation/human-resource-business-management-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/human-resource-business-management-foundation",
       "study_level": "foundation"
@@ -1250,7 +1250,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/international-business-economics-foundation",
-      "source_html": "course_pages/International Business and Economics Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/International Business and Economics Foundation Programme _ Aston University_study_courses_international-business-economics-foundation.html",
       "clean_md": "clean/courses/foundation/international-business-economics-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/international-business-economics-foundation",
       "study_level": "foundation"
@@ -1264,7 +1264,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/international-business-management-foundation",
-      "source_html": "course_pages/International Business and Management Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/International Business and Management Foundation Programme _ Aston University_study_courses_international-business-management-foundation.html",
       "clean_md": "clean/courses/foundation/international-business-management-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/international-business-management-foundation",
       "study_level": "foundation"
@@ -1369,7 +1369,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/marketing-foundation",
-      "source_html": "course_pages/Marketing Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Marketing Foundation Programme _ Aston University_study_courses_marketing-foundation.html",
       "clean_md": "clean/courses/foundation/marketing-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/marketing-foundation",
       "study_level": "foundation"
@@ -1418,7 +1418,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/mathematics-economics-foundation",
-      "source_html": "course_pages/Mathematics with Economics Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Mathematics with Economics Foundation Programme _ Aston University_study_courses_mathematics-economics-foundation.html",
       "clean_md": "clean/courses/foundation/mathematics-economics-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/mathematics-economics-foundation",
       "study_level": "foundation"
@@ -1432,7 +1432,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/mathematics-foundation/september-2026",
-      "source_html": "course_pages/Mathematics Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Mathematics Foundation Programme _ Aston University_study_courses_mathematics-foundation_september-2026.html",
       "clean_md": "clean/courses/foundation/mathematics-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/mathematics-foundation",
       "study_level": "foundation"
@@ -1635,8 +1635,8 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/phd-aston-business-school/october-2026",
-      "source_html": "course_pages/PhD - Aston Business School _ Aston University.html",
-      "clean_md": "clean/courses/postgraduate_research/phd-aston-business-school.md",
+      "source_html": "course_pages/PhD - Aston Business School _ Aston University_study_courses_phd-aston-business-school_october-2026.html",
+      "clean_md": "clean/pre_setup_course/postgraduate_research/phd-aston-business-school.md",
       "source_url": "https://www.aston.ac.uk/study/courses/phd-aston-business-school",
       "study_level": "postgraduate_research"
     },
@@ -1719,7 +1719,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/product-design-and-innovation-foundation/september-2026",
-      "source_html": "course_pages/Product Design and Innovation Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Product Design and Innovation Foundation Programme _ Aston University_study_courses_product-design-and-innovation-foundation_september-2026.html",
       "clean_md": "clean/courses/foundation/product-design-and-innovation-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/product-design-and-innovation-foundation",
       "study_level": "foundation"
@@ -1866,7 +1866,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/quantity-surveying-foundation/september-2026",
-      "source_html": "course_pages/Quantity Surveying Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Quantity Surveying Foundation Programme _ Aston University_study_courses_quantity-surveying-foundation_september-2026.html",
       "clean_md": "clean/courses/foundation/quantity-surveying-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/quantity-surveying-foundation",
       "study_level": "foundation"
@@ -2251,8 +2251,8 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses-phd/genomic-profiling-pheochromocytoma-and-paraganglioma-ppgl-resolve-missing-driver",
-      "source_html": "course_pages/Genomic Profiling of Pheochromocytoma and Paraganglioma (PPGL) to Resolve Missing Driver Mutations _ Aston University.html",
-      "clean_md": "clean/courses/postgraduate_research/study-courses-phd-genomic-profiling-pheochromocytoma-and-paraganglioma-ppgl-resolve-missing-driver.md",
+      "source_html": "course_pages/Genomic Profiling of Pheochromocytoma and Paraganglioma (PPGL) to Resolve Missing Driver Mutations _ Aston University_study_courses-phd_genomic-profiling-pheochromocytoma-and-paraganglioma-ppgl-resolve-missing-driver.html",
+      "clean_md": "clean/pre_setup_course/postgraduate_research/study-courses-phd-genomic-profiling-pheochromocytoma-and-paraganglioma-ppgl-resolve-missing-driver.md",
       "source_url": "https://www.aston.ac.uk/study/courses-phd/genomic-profiling-pheochromocytoma-and-paraganglioma-ppgl-resolve-missing-driver",
       "study_level": "postgraduate_research"
     },
@@ -2412,7 +2412,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/accounting-and-finance-bsc/september-2026",
-      "source_html": "course_pages/Accounting and Finance _ Aston University.html",
+      "source_html": "course_pages/Accounting and Finance _ Aston University_study_courses_accounting-and-finance-bsc_september-2026.html",
       "clean_md": "clean/courses/undergraduate/accounting-and-finance-bsc.md",
       "source_url": "https://www.aston.ac.uk/study/courses/accounting-and-finance-bsc",
       "study_level": "undergraduate"
@@ -2426,7 +2426,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/accounting-finance-foundation",
-      "source_html": "course_pages/Accounting and Finance Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Accounting and Finance Foundation Programme _ Aston University_study_courses_accounting-finance-foundation.html",
       "clean_md": "clean/courses/foundation/accounting-finance-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/accounting-finance-foundation",
       "study_level": "foundation"
@@ -2475,7 +2475,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/aerospace-engineering-beng/september-2026",
-      "source_html": "course_pages/Aerospace Engineering _ Aston University.html",
+      "source_html": "course_pages/Aerospace Engineering _ Aston University_study_courses_aerospace-engineering-beng_september-2026.html",
       "clean_md": "clean/courses/undergraduate/aerospace-engineering-beng.md",
       "source_url": "https://www.aston.ac.uk/study/courses/aerospace-engineering-beng",
       "study_level": "undergraduate"
@@ -2510,7 +2510,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-and-robotics-bsc/september-2026",
-      "source_html": "course_pages/Artificial Intelligence and Robotics _ Aston University.html",
+      "source_html": "course_pages/Artificial Intelligence and Robotics _ Aston University_study_courses_artificial-intelligence-and-robotics-bsc_september-2026.html",
       "clean_md": "clean/courses/undergraduate/artificial-intelligence-and-robotics-bsc.md",
       "source_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-and-robotics-bsc",
       "study_level": "undergraduate"
@@ -2524,7 +2524,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-and-robotics-foundation/september-2026",
-      "source_html": "course_pages/Artificial Intelligence and Robotics Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Artificial Intelligence and Robotics Foundation Programme _ Aston University_study_courses_artificial-intelligence-and-robotics-foundation_september-2026.html",
       "clean_md": "clean/courses/foundation/artificial-intelligence-and-robotics-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/artificial-intelligence-and-robotics-foundation",
       "study_level": "foundation"
@@ -2615,7 +2615,7 @@
     },
     {
       "course_url": "https://www.aston.ac.uk/study/courses/biomedical-engineering-foundation/september-2026",
-      "source_html": "course_pages/Biomedical Engineering Foundation Programme _ Aston University.html",
+      "source_html": "course_pages/Biomedical Engineering Foundation Programme _ Aston University_study_courses_biomedical-engineering-foundation_september-2026.html",
       "clean_md": "clean/courses/foundation/biomedical-engineering-foundation.md",
       "source_url": "https://www.aston.ac.uk/study/courses/biomedical-engineering-foundation",
       "study_level": "foundation"
@@ -2689,6 +2689,34 @@
       "clean_md": "clean/courses/undergraduate/business-analytics-bsc.md",
       "source_url": "https://www.aston.ac.uk/study/courses/business-analytics-bsc",
       "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/mechanical-engineering-foundation/september-2026",
+      "source_html": "course_pages/Mechanical Engineering Foundation Programme _ Aston University_study_courses_mechanical-engineering-foundation_september-2026.html",
+      "clean_md": "clean/courses/foundation/mechanical-engineering-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/mechanical-engineering-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/logistics-supply-chain-management-foundation/september-2027",
+      "source_html": "course_pages/Logistics with Supply Chain Management Foundation Programme _ Aston University_study_courses_logistics-supply-chain-management-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/logistics-supply-chain-management-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/logistics-supply-chain-management-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/logistics-supply-chain-management-foundation/september-2026",
+      "source_html": "course_pages/Logistics with Supply Chain Management Foundation Programme _ Aston University_study_courses_logistics-supply-chain-management-foundation_september-2026.html",
+      "clean_md": "clean/courses/foundation/logistics-supply-chain-management-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/logistics-supply-chain-management-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.aston.ac.uk/study/courses/mechanical-engineering-foundation/september-2027",
+      "source_html": "course_pages/Mechanical Engineering Foundation Programme _ Aston University_study_courses_mechanical-engineering-foundation_september-2027.html",
+      "clean_md": "clean/courses/foundation/mechanical-engineering-foundation.md",
+      "source_url": "https://www.aston.ac.uk/study/courses/mechanical-engineering-foundation",
+      "study_level": "foundation"
     }
   ],
   "uni_pages": [

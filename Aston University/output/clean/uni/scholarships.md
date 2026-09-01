@@ -24,14 +24,7 @@ cleaned_at: 2026-08-25
     "Amount": "Gold Scholarship - £12,500 Silver Scholarship - £6,500",
     "description": "We offer MBA scholarships to candidates who demonstrate the potential to make a transformational impact on the MBA cohort and a global impact through their subsequent career. Scholarship value: Gold Scholarship - £12,500 Silver Scholarship - £6,500. Who can apply: Applicants to the Full-Time MBA (in-person, Aston University Birmingham campus). How to apply: You will be invited to an MBA interview. The interview is an opportunity for us to get to know you, and for you to ask us anything about our MBA programme. During the interview we will also assess your suitability for a scholarship. All scholarships are awarded on the basis of a recommendation to an award panel after interview."
   },
-  {
-    "scholarshipName": "Global Articulation and Progression",
-    "scholarshipType": "Amount",
-    "scholarshipStudyLevel": "Undergraduate, Postgraduate",
-    "Eligibility": "Open to self-funded international offer holders progressing/articulating through an approved articulation or progression agreement Applicants must hold an offer for a full-time Undergraduate or Postgraduate Taught programme at Aston University Applicants must meet all academic and English language entry requirements Subject to programme exclusions, as outlined below and in the Terms and Conditions",
-    "Amount": "£5,000 tuition fee reduction",
-    "description": "The Global Articulation and Progression Scholarship supports international students progressing/articulating to Aston University through recognised partner institutions. This scholarship provides a tuition fee reduction, applied to the first year of study at Aston University, Birmingham. Scholarship value: £5,000 tuition fee reduction. How to apply: Complete the scholarship application form below after receiving an offer to study at Aston University. Application requirements: Submit the application form and a short statement explaining why you should be considered for the scholarship (300-400 words). Key dates: Submission deadline: 14th June 2026 (midnight UK time), Scholarship outcome: 30th June 2026, Deposit deadline: 21st July 2026 (midnight UK time). Programme exclusions: BSc Nursing Studies (Adult Nursing or Mental Health), MBChB Medicine, MOptom Optometry, BSc Healthcare Science (Audiology), PGDip / MSc OSPAP, MPH, MSc Physician Associate Practice, all MRes programmes, all PhD programmes, all MBA programmes."
-  },
+ 
   {
     "scholarshipName": "International Community Scholarship (Postgraduate)",
     "scholarshipType": "Amount",
@@ -55,5 +48,13 @@ cleaned_at: 2026-08-25
     "Eligibility": "Open to self-funded international offer-holders on postgraduate taught course (excludes MRes, MBA, OSPAP, Physician Associate Programmes)",
     "Amount": "£10,000",
     "description": "Named after Sir Adrian Cadbury, a champion of ethical business and education, this scholarship backs international students who want to use their studies and career to make a positive difference. Scholarship value: £10,000 tuition fee reduction. Who can apply: Open to self-funded international offer-holders on postgraduate taught course (excludes MRes, MBA, OSPAP, Physician Associate Programmes). How to apply: You will receive a personal application link by email after you receive your offer to study. Application requirements: Submit an application form and a 500-word statement on how you will make a positive impact and use your degree to support communities. Statement of 550 or more, or 450 or fewer, will not be assessed. Deadline to apply: TBC. Decision date: TBC."
+  },
+    {
+    "scholarshipName": "International Excellence Scholarship",
+    "scholarshipType": "Amount",
+    "scholarshipStudyLevel": "Foundation",
+    "Eligibility": "Students achieving 85%+ overall in their UFP with at least 70% in every subject.",
+    "Amount": "£3,000 for each year of study",
+    "description": "Automatically applied to students achieving 85%+ overall in your UFP with at least 70% in every subject."
   }
 ]

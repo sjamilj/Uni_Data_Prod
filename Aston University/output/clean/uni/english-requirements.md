@@ -8,6 +8,32 @@ cleaned_at: 2026-08-25
 # English Language Requirements
 [
   {
+    "TestStudyLevel": "Foundation",
+    "ProgramName": "",
+    "TestRequirements": [
+      {
+        "TestName": "IELTS Academic (UKVI/non-UKVI) or IELTS Indicator",
+        "ieltsMinOverall": "5.5",
+        "ieltsMinSection": "5.5"
+      },
+      {
+        "TestName": "TOEFL iBT & Online version",
+        "toeflMinOverall": "73",
+        "toeflMinSection": "11"
+      },
+      {
+        "TestName": "Pearson PTE",
+        "pteMinOverall": "59",
+        "pteMinSection": "59"
+      }
+    ],
+    "description": [
+      "IELTS Academic (UKVI/non-UKVI) or IELTS Indicator 5.5 overall with no less than 5.5 in each component",
+      "TOEFL iBT & Online version 73 overall with no less than 11 in Listening, 12 in Reading, 20 in Writing and 17 in Speaking",
+      "Pearson PTE 59 overall with no less than 59 in Listening, Reading, Writing and Speaking"
+    ]
+  },
+  {
     "TestStudyLevel": "Undergraduate",
     "ProgramName": "Aston Medical School",
     "TestRequirements": [

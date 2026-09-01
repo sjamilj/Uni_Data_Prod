@@ -60,15 +60,7 @@ cleaned_at: 2026-08-25
               "grade": "CGPA 2.0"
             },
             {
-              "degree": "SSC",
-              "grade": "CGPA 4.0"
-            },
-            {
-              "degree": "SSC",
-              "grade": "CGPA 3.0"
-            },
-            {
-              "degree": "Technical/Polytechnic Diploma",
+              "degree": "Diploma",
               "grade": "70% or above"
             }
           ],
@@ -100,7 +92,7 @@ cleaned_at: 2026-08-25
           "requirements": [
             {
               "degree": "HSC",
-              "grade": "70% / Grade B / Grade 3.5"
+              "grade": "GPA 3.5"
             }
           ],
           "description": [
