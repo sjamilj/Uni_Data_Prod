@@ -16,7 +16,6 @@ from course_markdown_cleanup import parse_uni_json_payload
 from export_dev_courses import DEV_COURSE_CSV_COLUMNS, load_env_config, write_dev_courses_csv
 from programme_name_dictionary import (
     ProgrammeNameDictionary,
-    infer_programme_names_with_llm,
     load_programme_name_dictionary,
 )
 from llm_extract import (
@@ -369,7 +368,7 @@ class DevCoursesValidator:
 
         has_pg = bool(re.search(r"\bpostgraduate\b|\bmasters?\b", haystack))
         has_ug = bool(re.search(r"\bundergraduate\b", haystack))
-        if match_level in cls.UG_LIKE and has_pg:
+        if match_level in cls.UG_LIKE and has_pg and not has_ug:
             return (
                 "scholarship study level does not match course "
                 "(undergraduate/foundation got postgraduate scholarship)"
@@ -627,9 +626,8 @@ class DevCoursesValidator:
                     f"LLM programmeName lookup for {len(empties)} empty row(s) "
                     f"using {len(programme_dict.unique_programme_names())} closed names"
                 )
-                picks = infer_programme_names_with_llm(
+                picks = programme_dict.infer_with_llm(
                     [self.cell(row, "courseName") for row in empties],
-                    programme_dict,
                 )
                 for index, row in enumerate(rows):
                     llm_comment = self.infer_programme_name_from_llm(row, picks)

@@ -180,7 +180,7 @@ DATE_TOKEN_RE = re.compile(
 )
 
 FINAL_SCHEMA_KEYS = [
-    "courseName", "courseUrl", "minDegreeName", "minGpa", "higherDegreeName",
+    "courseName", "courseUrl", "degreeName", "minDegreeName", "minGpa", "higherDegreeName",
     "higherGpa", "AcademicRequirementsMetaData", "intakeInfo", "courseDuration",
     "tuitionFee", "currency", "initialDeposit", "applicationFee", "feesMetaData",
     "applicationDeadline", "ieltsMinOverall", "ieltsMinSection", "toeflMinOverall",
@@ -859,6 +859,7 @@ class AdmissionRecordNormalizer:
 
         out["courseName"] = raw.get("courseName", "")
         out["courseUrl"] = raw.get("courseUrl", "")
+        out["degreeName"] = str(raw.get("degreeName") or "").strip()
 
         uni_key = raw.get("uni_key")
 

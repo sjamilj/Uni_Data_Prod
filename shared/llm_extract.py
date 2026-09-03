@@ -2493,11 +2493,18 @@ class OutputJsonBuilder:
     university_name: str,
     course_name: str,
     course_url: str,
+    degree_name: str = "",
     requirements: list[dict[str, str]] | None = None,
     academic_metadata: list[dict[str, object]] | None = None,
 ) -> dict[str, object]:
         """Merge Stage 1 course fields + Stage 2 LLM parts into extracted/{slug}/output.json."""
+        award = (
+            (degree_name or "").strip()
+            or str(stage1_json.get("degreeName", "") or "").strip()
+        )
         output: dict[str, object] = {'uniName': university_name, 'courseName': course_name or str(stage1_json.get('courseName', '') or '').strip(), 'courseUrl': course_url or str(stage1_json.get('courseUrl', '') or stage1_json.get('courseUrlExternal', '') or '').strip(), 'intakeInfo': str(stage1_json.get('intakeInfo', '') or '').strip(), 'courseDuration': str(stage1_json.get('courseDuration', '') or '').strip(), 'tuitionFee': str(stage1_json.get('tuitionFee', '') or '').strip(), 'currency': str(stage1_json.get('currency', '') or '').strip(), 'initialDeposit': str(stage1_json.get('initialDeposit', '') or '').strip(), 'applicationFee': str(stage1_json.get('applicationFee', '') or '').strip(), 'feesMetaData': Stage2Enricher.merge_fees_metadata(Stage2Enricher.normalize_metadata_array(stage1_json.get('feesMetaData')), Stage2Enricher.normalize_metadata_array(llm_json.get('feesMetaData'), default_subtitle='Initial tuition Deposit')), 'applicationDeadline': str(stage1_json.get('applicationDeadline', '') or '').strip(), 'requirements': requirements if requirements is not None else Stage2Enricher.normalize_requirements_list(llm_json.get('requirements')), 'AcademicRequirementsMetaData': Stage2Enricher.filter_academic_metadata(Stage2Enricher.normalize_metadata_array(academic_metadata if academic_metadata is not None else llm_json.get('AcademicRequirementsMetaData'))), 'scholarshipName': str(llm_json.get('scholarshipName', '') or '').strip(), 'scholarshipAmount': Stage1MarkdownParser.normalize_fee_numeric(str(llm_json.get('scholarshipAmount', '') or '')), 'scholarshipType': str(llm_json.get('scholarshipType', '') or '').strip(), 'scholarshipMetaData': Stage2Enricher.normalize_metadata_array(llm_json.get('scholarshipMetaData'), default_subtitle='Scholarships')}
+        if award:
+            output["degreeName"] = award
         for key in ENGLISH_TEST_KEYS:
             value = str(llm_json.get(key, '') or '').strip()
             if not value:
@@ -2599,7 +2606,7 @@ class CourseExtractor:
         stage2_json['courseUrlExternal'] = course_url
         stage2_json['courseScraped'] = course_url
         ExtractionPathConfig.save_audit(audit_dir, 'stage2_parsed.json', json.dumps(stage2_json, indent=2, default=str))
-        output_json = OutputJsonBuilder.build_output_json(stage1_json, llm_json, university_name=university_name, course_name=course_name, course_url=course_url, requirements=stage2_json.get('requirements'), academic_metadata=stage2_json.get('AcademicRequirementsMetaData'))
+        output_json = OutputJsonBuilder.build_output_json(stage1_json, llm_json, university_name=university_name, course_name=course_name, course_url=course_url, degree_name=degree_name or str(stage1_json.get('degreeName', '') or '').strip(), requirements=stage2_json.get('requirements'), academic_metadata=stage2_json.get('AcademicRequirementsMetaData'))
         output_json_text = json.dumps(output_json, ensure_ascii=False, default=str)
         ExtractionPathConfig.save_audit(audit_dir, 'output.json', json.dumps(output_json, indent=2, ensure_ascii=False, default=str))
         row = Stage2Enricher.normalize_row(stage2_json, university_name, course_url)

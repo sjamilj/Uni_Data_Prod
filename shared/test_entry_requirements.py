@@ -13,6 +13,7 @@ if str(_SHARED) not in sys.path:
 
 from export_dev_courses import PortalLookup  # noqa: E402
 from llm_extract import (  # noqa: E402
+    build_output_json,
     canonicalize_requirement_degree,
     derive_uk_equivalent_requirements,
     enrich_stage1_from_markdown,
@@ -107,6 +108,28 @@ class EntryRequirementsTests(unittest.TestCase):
         }
         lookup.apply_to_row(row_with_degree)
         self.assertEqual(row_with_degree["degreeName"], "BSc")
+
+    def test_build_output_json_includes_degree_name(self) -> None:
+        output = build_output_json(
+            {"degreeName": "BSc", "intakeInfo": "September 2026"},
+            {},
+            university_name="Test Uni",
+            course_name="Accounting and Finance",
+            course_url="https://example.ac.uk/course",
+            degree_name="BSc",
+        )
+        self.assertEqual(output["degreeName"], "BSc")
+
+    def test_process_record_passes_degree_name(self) -> None:
+        result = process_record(
+            {
+                "courseName": "Accounting and Finance",
+                "courseUrl": "https://example.ac.uk/course",
+                "degreeName": "BSc",
+                "requirements": [{"degree": "HSC", "grade": "3.0"}],
+            }
+        )
+        self.assertEqual(result["degreeName"], "BSc")
 
     def test_enrich_stage1_promotes_fees_metadata_object(self) -> None:
         md_path = Path(
