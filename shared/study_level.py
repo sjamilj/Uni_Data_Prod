@@ -247,7 +247,24 @@ class UrlLevelMap:
         return sorted(self.levels)
 
     def levels_for(self, url: str) -> list[str]:
-        return list(self.levels.get(url, {}))
+        url = (url or "").strip()
+        if not url:
+            return []
+        direct = list(self.levels.get(url, {}))
+        if direct:
+            return direct
+        normalized = normalize_url(url)
+        if normalized != url:
+            direct = list(self.levels.get(normalized, {}))
+            if direct:
+                return direct
+        path_key = url_path_key(url)
+        if not path_key:
+            return []
+        for known_url, levels in self.levels.items():
+            if url_path_key(known_url) == path_key:
+                return list(levels)
+        return []
 
     def records(self) -> list[dict[str, str]]:
         rows: list[dict[str, str]] = []
@@ -313,6 +330,14 @@ def read_level_csvs(output_dir: Path) -> UrlLevelMap:
                 source_scope = (row.get("source_scope") or "").strip()
                 mapping.add(url, level, source_scope)
     return mapping
+
+
+def url_path_key(url: str) -> str:
+    """Path-only key so scraped www.aru.ac.uk URLs match saved HTML source URLs."""
+    from urllib.parse import urlparse
+
+    path = urlparse((url or "").strip()).path.rstrip("/")
+    return path.lower() if path else ""
 
 
 def load_url_levels(output_dir: Path) -> UrlLevelMap:

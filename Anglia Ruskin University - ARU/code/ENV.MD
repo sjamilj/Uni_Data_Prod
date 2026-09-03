@@ -98,6 +98,7 @@ COURSE_CLEAN_ENGINE=utopian
 # One CSS selector per line; optional heading with :: or |
 COURSE_CLEAN_BLOCKS="
 Course overview :: #utopian-course-overview
+Full description :: #summary
 Entry requirements :: #entry_requirements
 Fees and funding :: #fees_and_funding
 "

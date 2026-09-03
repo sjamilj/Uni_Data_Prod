@@ -29,6 +29,12 @@ class UtopianCourseHtmlEngine(GenericCourseHtmlEngine):
         "entry requirements": ["#entry_requirements", "#entryrequirements"],
         "fees and funding": ["#fees_and_funding", "#feesfunding"],
         "fees & funding": ["#fees_and_funding", "#feesfunding"],
+        "full description": [
+            "#summary",
+            "#overview #summary",
+            "#overview .nested-accordion__section#summary",
+            "#overview",
+        ],
     }
 
     @classmethod
@@ -293,7 +299,14 @@ class UtopianCourseHtmlEngine(GenericCourseHtmlEngine):
             return cls.research_overview_to_markdown(soup)
         if resolved_selector == "#utopian-course-overview":
             return cls.overview_to_markdown(block_root, soup)
-        if resolved_selector in ("#overview", "#entryrequirements", "#feesfunding"):
+        if resolved_selector in (
+            "#overview",
+            "#summary",
+            "#entryrequirements",
+            "#feesfunding",
+        ):
+            return cls.research_accordion_to_markdown(block_root)
+        if heading_key == "full description":
             return cls.research_accordion_to_markdown(block_root)
         if resolved_selector == "section.course-summary":
             return cls.research_summary_to_markdown(block_root)

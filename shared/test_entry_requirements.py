@@ -61,6 +61,39 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(hints["courseDuration"], "4 years with foundation")
         self.assertEqual(hints["degreeName"], "BSc")
 
+    def test_aru_research_overview_start_label_parses_intake(self) -> None:
+        md_path = Path(
+            "Anglia Ruskin University - ARU/output/clean/courses/postgraduate_research/"
+            "study-postgraduate-animal-and-environmental-sciences.md"
+        )
+        if not md_path.exists():
+            self.skipTest("ARU research sample markdown not in workspace")
+        body = md_path.read_text(encoding="utf-8")
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["intakeInfo"], "January 2027, April, September 2026")
+
+    def test_aru_research_completion_dates_parse_duration(self) -> None:
+        md_path = Path(
+            "Anglia Ruskin University - ARU/output/clean/courses/postgraduate_research/"
+            "study-postgraduate-animal-and-environmental-sciences.md"
+        )
+        if not md_path.exists():
+            self.skipTest("ARU research sample markdown not in workspace")
+        body = md_path.read_text(encoding="utf-8")
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["courseDuration"], "2-4 years")
+
+    def test_aru_professional_doctorate_type_line_parses_duration(self) -> None:
+        md_path = Path(
+            "Anglia Ruskin University - ARU/output/clean/courses/postgraduate_research/"
+            "study-postgraduate-professional-doctorate-in-health-and-social-care.md"
+        )
+        if not md_path.exists():
+            self.skipTest("ARU professional doctorate sample markdown not in workspace")
+        body = md_path.read_text(encoding="utf-8")
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["courseDuration"], "6 years part-time")
+
     def test_aru_infer_degree_name_from_course_overview_line(self) -> None:
         md_path = Path(
             "Anglia Ruskin University - ARU/output/clean/courses/foundation/"
