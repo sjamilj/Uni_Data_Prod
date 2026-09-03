@@ -172,6 +172,16 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(hints["tuitionFee"], "18400")
         self.assertEqual(hints["currency"], "GBP")
 
+    def test_aston_partially_funded_phd_parses_duration_and_fee_difference(self) -> None:
+        body = (
+            "Programme length: 3 years\n"
+            "Currently, the difference between 'Home' and the 'Overseas' tuition fees is £17,712 for 2026/7.\n"
+        )
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["courseDuration"], "3 years")
+        self.assertEqual(hints["tuitionFee"], "17712")
+        self.assertEqual(hints["currency"], "GBP")
+
     def test_enrich_stage1_promotes_nested_international_fees_metadata(self) -> None:
         md_path = Path(
             "Anglia Ruskin University - ARU/output/clean/courses/undergraduate/"

@@ -860,10 +860,23 @@ class Stage1MarkdownParser:
         return normalize_short_month_date(text)
 
     @staticmethod
+    def extract_research_fee_difference(body: str) -> str:
+        """Partially-funded PhD: difference between Home and Overseas tuition fees is £17,712."""
+        match = re.search(
+            r'difference between.*?tuition fees is\s*£([\d,]+)',
+            body,
+            re.I | re.S,
+        )
+        if match:
+            return match.group(1).replace(',', '')
+        return ''
+
+    @staticmethod
     def extract_research_course_duration(body: str) -> str:
         """Parse ARU research / professional doctorate durations from clean markdown."""
         for pattern in (
             r'\*\*Duration:\*\*\s*([^\n]+)',
+            r'Programme length:\s*([^\n]+)',
             r'-\s*\*\*Type:\*\*\s*Research\s*\(([^)]+)\)',
         ):
             match = re.search(pattern, body, re.I)
@@ -1019,6 +1032,11 @@ class Stage1MarkdownParser:
             aru_fee = extract_aru_international_tuition_fee(body)
             if aru_fee:
                 fields['tuitionFee'] = aru_fee
+                fields['currency'] = 'GBP'
+        if not fields.get('tuitionFee'):
+            research_fee = Stage1MarkdownParser.extract_research_fee_difference(body)
+            if research_fee:
+                fields['tuitionFee'] = research_fee
                 fields['currency'] = 'GBP'
         intl_section = extract_international_fees_section(body)
         if intl_section:
