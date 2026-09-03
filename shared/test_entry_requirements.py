@@ -131,6 +131,46 @@ class EntryRequirementsTests(unittest.TestCase):
         )
         self.assertEqual(result["degreeName"], "BSc")
 
+    def test_aru_parser_extracts_fee_before_international_students(self) -> None:
+        body = (
+            "£18,400 International students starting 2026/27 (full-time, per year)\n"
+        )
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["tuitionFee"], "18400")
+        self.assertEqual(hints["currency"], "GBP")
+
+    def test_enrich_stage1_promotes_nested_international_fees_metadata(self) -> None:
+        md_path = Path(
+            "Anglia Ruskin University - ARU/output/clean/courses/undergraduate/"
+            "study-undergraduate-applied-sport-science-and-coaching-top-up.md"
+        )
+        if not md_path.exists():
+            self.skipTest("ARU top-up sample markdown not in workspace")
+        body = md_path.read_text(encoding="utf-8")
+        stage1 = {
+            "tuitionFee": 0,
+            "currency": "",
+            "feesMetaData": {
+                "UK students starting 2026/27 (full-time, per year)": {
+                    "fee": 9790,
+                    "currency": "GBP",
+                },
+                "International students starting 2026/27 (full-time, per year)": {
+                    "fee": 18400,
+                    "currency": "GBP",
+                },
+            },
+        }
+        enriched = enrich_stage1_from_markdown(
+            stage1,
+            course_body=body,
+            course_name="Applied Sport Science and Coaching (Top Up)",
+            course_url="https://www.aru.ac.uk/study/undergraduate/applied-sport-science-and-coaching-top-up",
+        )
+        self.assertEqual(enriched["tuitionFee"], "18400")
+        self.assertEqual(enriched["currency"], "GBP")
+        self.assertEqual(enriched["intakeInfo"], "September 2026")
+
     def test_enrich_stage1_promotes_fees_metadata_object(self) -> None:
         md_path = Path(
             "Anglia Ruskin University - ARU/output/clean/courses/foundation/"
