@@ -46,6 +46,7 @@ Run from a university code/ folder (uses .env in cwd, or pass --code-dir):
 
   cd "{University}/code"
   python "../../shared/scrape_course_urls.py" --fresh
+  python "../../shared/scrape_course_urls.py" --fresh --presetup
   python "../../shared/scrape_course_urls.py" --fresh --append-urls
   python "../../shared/scrape_course_urls.py" --append-urls --study-level foundation
   python "../../shared/scrape_course_urls.py" --pick-levels
@@ -56,6 +57,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import random
 import re
 import sys
 import time
@@ -75,14 +77,25 @@ if str(_SHARED_DIR) not in sys.path:
 from uni_paths import resolve_code_dir, resolve_output_dir
 from course_type_filter import CourseTypeFilter
 from study_level import (
+    EXECUTE_LEVEL_ORDER,
     LEVEL_CSV_NAMES,
+    PRESETUP_SCRAPE_PROGRESS_JSON,
+    PRESETUP_URLS_CSV,
     SCOPE_TO_LEVEL,
+    SCRAPE_PRESETUP_PER_LEVEL,
     StudyLevelClassifier,
     UrlLevelMap,
+    load_url_levels,
     parse_study_levels,
+    presetup_level_counts,
+    presetup_should_stop_pagination,
     read_level_csvs,
+    save_presetup_scrape_sample,
+    sample_urls_per_level,
     scope_to_level,
+    unique_urls,
     write_level_csvs,
+    write_presetup_urls_csv,
 )
 
 
@@ -887,10 +900,10 @@ class ConfigLoader:
 # ============================================================================
 
 class ProgressStore:
-    """Reads/writes scrape_progress.json so a run can resume after interruption."""
+    """Reads/writes scrape progress JSON so a run can resume after interruption."""
 
-    def __init__(self, output_dir: Path):
-        self.path = output_dir / PROGRESS_FILE
+    def __init__(self, output_dir: Path, filename: str = PROGRESS_FILE):
+        self.path = output_dir / filename
 
     def load(self) -> dict | None:
         if not self.path.exists():
@@ -1264,6 +1277,10 @@ class PaginatedListingExtractor:
         progress_store: ProgressStore,
         artifacts: ArtifactStore,
         logger: ScrapeLogger,
+        *,
+        presetup: bool = False,
+        presetup_per_level: int = SCRAPE_PRESETUP_PER_LEVEL,
+        presetup_levels: list[str] | None = None,
     ):
         self.work_dir = work_dir
         self.config = config
@@ -1272,6 +1289,9 @@ class PaginatedListingExtractor:
         self.progress_store = progress_store
         self.artifacts = artifacts
         self.logger = logger
+        self.presetup = presetup
+        self.presetup_per_level = presetup_per_level
+        self.presetup_levels = presetup_levels
 
     def extract_group(
         self,
@@ -1436,6 +1456,23 @@ class PaginatedListingExtractor:
                         )
                 previous_page_urls = page_url_set
 
+            if self.presetup and presetup_should_stop_pagination(
+                url_levels,
+                self.presetup_per_level,
+                self.presetup_levels,
+            ):
+                counts = presetup_level_counts(url_levels, self.presetup_levels)
+                summary = ", ".join(
+                    f"{level}={count}"
+                    for level, count in counts.items()
+                    if count > 0
+                )
+                print(
+                    f"    [{scope}] Presetup scrape: enough URLs per active study level "
+                    f"({summary}); stopping pagination"
+                )
+                break
+
             page_index += page_step
             state.update(
                 page_index=page_index,
@@ -1451,12 +1488,17 @@ class PaginatedListingExtractor:
             self.progress["course_urls"] = sorted(all_urls)
             self.progress["listing_completed"] = sorted(completed)
             self.progress["group_state"] = group_state
-            self.artifacts.persist_urls(
-                self.progress["course_urls"],
-                self.progress,
-                self.progress_store,
-                url_levels=url_levels,
-            )
+            if self.presetup:
+                if url_levels is not None:
+                    self.progress["url_levels"] = url_levels.to_progress()
+                self.progress_store.save(self.progress)
+            else:
+                self.artifacts.persist_urls(
+                    self.progress["course_urls"],
+                    self.progress,
+                    self.progress_store,
+                    url_levels=url_levels,
+                )
 
         return page_counter
 
@@ -1534,15 +1576,114 @@ class CourseUrlScraper:
         completed.clear()
         completed.update(keep)
 
+    def _reclassify_url_levels(self, url_levels: UrlLevelMap) -> UrlLevelMap:
+        classifier = self.config.level_classifier
+        if not classifier.has_custom_patterns:
+            return url_levels
+        rebuilt = UrlLevelMap()
+        for record in url_levels.records():
+            url = record["course_url"]
+            source = record.get("source_scope") or ""
+            classified = classifier.classify(url)
+            level = classified if classified != "other" else record["study_level"]
+            rebuilt.add(url, level, source)
+        return rebuilt
+
+    def _warn_presetup_listing_gaps(self, study_levels: list[str] | None) -> None:
+        if self.config.strategy != STRATEGY_DEGREE_SCOPED_PAGINATED:
+            return
+        configured = {item.scope for item in self.config.degree_listings}
+        wanted_levels = study_levels or list(SCOPE_TO_LEVEL.values())
+        missing_scopes = []
+        for scope in DEGREE_SCOPES:
+            level = scope_to_level(scope)
+            if level in wanted_levels and scope not in configured:
+                missing_scopes.append(scope)
+        if missing_scopes:
+            print(
+                "Presetup scrape warning: no listing pages configured for "
+                f"{', '.join(missing_scopes)}. Add *_COURSE_LISTING_PAGE_1 keys in .env "
+                "or use a mixed catalogue with URL patterns."
+            )
+
+    def _complete_presetup_scrape(
+        self,
+        url_levels: UrlLevelMap,
+        *,
+        study_levels: list[str] | None,
+        presetup_per_level: int,
+        presetup_seed: int | None,
+        progress_store: ProgressStore,
+        progress: dict,
+    ) -> list[str]:
+        url_levels = self._reclassify_url_levels(url_levels)
+        used_seed = presetup_seed if presetup_seed is not None else random.randrange(1, 2**31)
+        courses = sample_urls_per_level(
+            url_levels,
+            n=presetup_per_level,
+            seed=used_seed,
+            levels=study_levels,
+        )
+        if not courses:
+            raise ValueError(
+                "Presetup scrape sample produced no URLs. Check catalogue/listing sources."
+            )
+        save_presetup_scrape_sample(
+            self.output_dir,
+            courses,
+            seed=used_seed,
+            n=presetup_per_level,
+        )
+        write_presetup_urls_csv(self.output_dir, courses)
+        urls = unique_urls([row["course_url"] for row in courses])
+        progress["phase"] = "urls_complete"
+        progress["course_urls"] = urls
+        progress_store.save(progress)
+
+        full_count = self.artifacts.read_course_urls()
+        full_count_n = len(full_count)
+        print(
+            f"Presetup scrape: kept {len(courses)} URL(s) "
+            f"({presetup_per_level} per study level, seed={used_seed})"
+        )
+        print(f"Wrote presetup URL list -> {PRESETUP_URLS_CSV}")
+        if full_count_n:
+            print(
+                f"Full catalogue preserved: {full_count_n} URL(s) in {COURSE_URLS_CSV} (unchanged)"
+            )
+        for row in courses:
+            print(f"  [{row['study_level']}] {row['course_url']}")
+        for level in EXECUTE_LEVEL_ORDER:
+            if level == "other":
+                continue
+            if study_levels and level not in study_levels:
+                continue
+            count = sum(1 for row in courses if row["study_level"] == level)
+            if count < presetup_per_level:
+                print(
+                    f"  Warning: only {count}/{presetup_per_level} URL(s) for {level}"
+                )
+        self.logger.ok(f"Presetup scrape urls={len(courses)}")
+        self.logger.end("ok", urls=len(courses))
+        return urls
+
     def run(
         self,
         fresh: bool = False,
         append: bool = False,
         study_levels: list[str] | None = None,
+        presetup: bool = False,
+        presetup_per_level: int = SCRAPE_PRESETUP_PER_LEVEL,
+        presetup_seed: int | None = None,
     ) -> list[str]:
         strategy = self.config.strategy
         selected_scopes = self._filter_to_study_levels(study_levels)
         scoped = bool(selected_scopes)
+        progress_store = (
+            ProgressStore(self.output_dir, PRESETUP_SCRAPE_PROGRESS_JSON)
+            if presetup
+            else self.progress_store
+        )
         keep_existing = append or scoped
         self.logger.start(
             "urls-only",
@@ -1550,14 +1691,33 @@ class CourseUrlScraper:
             fresh=fresh,
             append=keep_existing,
             study_levels=",".join(study_levels or []) or "all",
+            presetup=presetup,
         )
 
-        if fresh and not scoped and not append:
-            self.progress_store.clear()
+        if presetup and not fresh and not append and not scoped:
+            full_catalogue = load_url_levels(self.output_dir)
+            if full_catalogue.urls():
+                print(
+                    f"Presetup scrape: sampling from existing full catalogue "
+                    f"({len(full_catalogue.urls())} URLs in {COURSE_URLS_CSV})"
+                )
+                progress = progress_store.load() or ProgressStore.new("extracting_urls", strategy)
+                return self._complete_presetup_scrape(
+                    full_catalogue,
+                    study_levels=study_levels,
+                    presetup_per_level=presetup_per_level,
+                    presetup_seed=presetup_seed,
+                    progress_store=progress_store,
+                    progress=progress,
+                )
 
-        progress = self.progress_store.load()
+        if fresh and not scoped and not append:
+            progress_store.clear()
+
+        progress = progress_store.load()
         if (
-            progress
+            not presetup
+            and progress
             and progress.get("phase") == "urls_complete"
             and not fresh
             and not append
@@ -1572,7 +1732,7 @@ class CourseUrlScraper:
 
         all_urls: set[str] = set()
         url_levels = UrlLevelMap()
-        if keep_existing:
+        if keep_existing and not presetup:
             existing = self.artifacts.read_course_urls()
             all_urls.update(existing)
             url_levels.merge(UrlLevelMap.from_progress((progress or {}).get("url_levels")))
@@ -1580,19 +1740,26 @@ class CourseUrlScraper:
             print(f"Keeping {len(existing)} existing URLs")
             progress = progress or ProgressStore.new("extracting_urls", strategy)
             progress["phase"] = "extracting_urls"
+        elif presetup and progress and progress.get("url_levels"):
+            url_levels.merge(UrlLevelMap.from_progress(progress.get("url_levels")))
+            all_urls.update(progress.get("course_urls") or [])
+            progress = progress or ProgressStore.new("extracting_urls", strategy)
+            progress["phase"] = "extracting_urls"
         else:
             progress = ProgressStore.new("extracting_urls", strategy)
 
         completed: set[str] = set(progress.get("listing_completed", []))
         group_state: dict[str, dict] = dict(progress.get("group_state", {}))
-        if progress.get("url_levels"):
+        if not presetup and progress.get("url_levels"):
             url_levels.merge(UrlLevelMap.from_progress(progress.get("url_levels")))
         if scoped:
             self._reset_selected_scope_progress(completed, group_state)
             print(f"Study levels: {', '.join(study_levels or [])}")
+        if presetup:
+            self._warn_presetup_listing_gaps(study_levels)
         progress["listing_completed"] = sorted(completed)
         progress["group_state"] = group_state
-        self.progress_store.save(progress)
+        progress_store.save(progress)
 
         print(f"STRATEGY={strategy}")
         print(f"COURSE_PATH_PATTERNS={len(self.config.path_pattern_sources)} rule(s)")
@@ -1609,15 +1776,29 @@ class CourseUrlScraper:
                 progress,
                 url_levels,
                 scoped=scoped,
+                presetup=presetup,
+                presetup_per_level=presetup_per_level,
+                study_levels=study_levels,
+                progress_store=progress_store,
             )
         else:
             raise ValueError(f"Unsupported STRATEGY: {strategy}")
+
+        if presetup:
+            return self._complete_presetup_scrape(
+                url_levels,
+                study_levels=study_levels,
+                presetup_per_level=presetup_per_level,
+                presetup_seed=presetup_seed,
+                progress_store=progress_store,
+                progress=progress,
+            )
 
         urls = sorted(all_urls)
         progress["phase"] = "urls_complete"
         progress["listing_completed"] = sorted(completed)
         progress["group_state"] = group_state
-        self.artifacts.persist_urls(urls, progress, self.progress_store, url_levels=url_levels)
+        self.artifacts.persist_urls(urls, progress, progress_store, url_levels=url_levels)
         print(f"Wrote {len(urls)} unique URLs -> {COURSE_URLS_CSV}")
         for level, filename in LEVEL_CSV_NAMES.items():
             count = sum(1 for record in url_levels.records() if record["study_level"] == level)
@@ -1665,7 +1846,12 @@ class CourseUrlScraper:
         progress: dict,
         url_levels: UrlLevelMap,
         scoped: bool = False,
+        presetup: bool = False,
+        presetup_per_level: int = SCRAPE_PRESETUP_PER_LEVEL,
+        study_levels: list[str] | None = None,
+        progress_store: ProgressStore | None = None,
     ) -> None:
+        active_progress_store = progress_store or self.progress_store
         listing_configs = self.config.degree_listings
         fingerprint = ListingConfigLoader.fingerprint(listing_configs)
         saved_fingerprint = progress.get("listing_configs")
@@ -1741,9 +1927,12 @@ class CourseUrlScraper:
                 self.config,
                 browser,
                 progress,
-                self.progress_store,
+                active_progress_store,
                 self.artifacts,
                 self.logger,
+                presetup=presetup,
+                presetup_per_level=presetup_per_level,
+                presetup_levels=study_levels,
             )
             for listing_config in listing_configs:
                 print(f"--- Degree scope: {listing_config.scope} ---")
@@ -1755,6 +1944,12 @@ class CourseUrlScraper:
                     page_counter=page_counter,
                     url_levels=url_levels,
                 )
+                if presetup and presetup_should_stop_pagination(
+                    url_levels,
+                    presetup_per_level,
+                    study_levels,
+                ):
+                    break
 
 
 # ============================================================================
@@ -1965,6 +2160,26 @@ class ScraperCLI:
             help="Prompt in the terminal for which study level listing(s) to scrape",
         )
         add_code_dir_argument(parser)
+        parser.add_argument(
+            "--presetup",
+            action="store_true",
+            help=(
+                "After extraction, keep only N URLs per study level for presetup workflow "
+                f"(default {SCRAPE_PRESETUP_PER_LEVEL}; writes {PRESETUP_URLS_CSV} and presetup_scrape_sample.json)"
+            ),
+        )
+        parser.add_argument(
+            "--presetup-per-level",
+            type=int,
+            default=SCRAPE_PRESETUP_PER_LEVEL,
+            help=f"Presetup scrape: URLs per study level (default: {SCRAPE_PRESETUP_PER_LEVEL})",
+        )
+        parser.add_argument(
+            "--seed",
+            type=int,
+            default=None,
+            help="Presetup scrape RNG seed (default: random)",
+        )
         return parser
 
     @staticmethod
@@ -2015,6 +2230,9 @@ class ScraperCLI:
                 fresh=args.fresh,
                 append=args.append_urls,
                 study_levels=study_levels or None,
+                presetup=args.presetup,
+                presetup_per_level=args.presetup_per_level,
+                presetup_seed=args.seed,
             )
         except Exception as exc:
             print(f"Error: {exc}", file=sys.stderr)
