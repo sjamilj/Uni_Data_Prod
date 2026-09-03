@@ -13,6 +13,7 @@ if str(_SHARED) not in sys.path:
     sys.path.insert(0, str(_SHARED))
 
 from package_review_output import REVIEW_DIR_NAME, ReviewPackageBuilder  # noqa: E402
+from missing_field_stats import REPORT_TXT_NAME  # noqa: E402
 
 
 class ReviewPackageTests(unittest.TestCase):
@@ -37,6 +38,7 @@ class ReviewPackageTests(unittest.TestCase):
 
         self.assertTrue(result.variant_csv.is_file())
         self.assertTrue(result.reviewed_csv.is_file())
+        self.assertTrue(result.missing_field_report_txt.is_file())
         self.assertEqual(
             result.review_dir,
             self.root / REVIEW_DIR_NAME / self.uni_name,
@@ -46,6 +48,7 @@ class ReviewPackageTests(unittest.TestCase):
             result.reviewed_csv.name,
             f"dev_courses_{self.uni_name}_reviewed.csv",
         )
+        self.assertEqual(result.missing_field_report_txt.name, REPORT_TXT_NAME)
 
     def test_missing_reviewed_csv_raises(self) -> None:
         (self.uni_dir / "output" / f"dev_courses_{self.uni_name}_reviewed.csv").unlink()
@@ -71,6 +74,7 @@ class ReviewPackageTests(unittest.TestCase):
         result = self.builder.package(self.uni_name, force=True)
         self.assertTrue(result.variant_csv.is_file())
         self.assertTrue(result.reviewed_csv.is_file())
+        self.assertTrue(result.missing_field_report_txt.is_file())
 
 
 if __name__ == "__main__":
