@@ -59,6 +59,10 @@ LEVEL_CSV_COLUMNS = ("course_url", "study_level", "source_scope")
 
 PRESETUP_SAMPLE_JSON = "presetup_sample.json"
 PRESETUP_SAMPLE_SIZE = 10
+SCRAPE_PRESETUP_SAMPLE_JSON = "presetup_scrape_sample.json"
+SCRAPE_PRESETUP_PER_LEVEL = 5
+PRESETUP_URLS_CSV = "presetup_urls.csv"
+PRESETUP_SCRAPE_PROGRESS_JSON = "presetup_scrape_progress.json"
 CLEAN_COURSES_SUBDIR = "courses"
 PRESETUP_CLEAN_SUBDIR = "pre_setup_course"
 PRESETUP_EXTRACT_SUBDIR = "pre_setup_course_extracted"
@@ -234,12 +238,21 @@ class UrlLevelMap:
         classifier: StudyLevelClassifier | None = None,
         source_scope: str = "",
     ) -> None:
-        level = scope_to_level(scope)
-        if level:
-            self.add_many(urls, level, source_scope or scope)
-            return
         classifier = classifier or StudyLevelClassifier()
-        label = source_scope or "ALL_COURSE"
+        level_from_scope = scope_to_level(scope)
+        label = source_scope or scope or "ALL_COURSE"
+        if classifier.has_custom_patterns:
+            for url in urls:
+                classified = classifier.classify(url)
+                if classified == "other" and level_from_scope:
+                    level = level_from_scope
+                else:
+                    level = classified
+                self.add(url, level, label)
+            return
+        if level_from_scope:
+            self.add_many(urls, level_from_scope, label)
+            return
         for url in urls:
             self.add(url, classifier.classify(url), label)
 
@@ -247,7 +260,24 @@ class UrlLevelMap:
         return sorted(self.levels)
 
     def levels_for(self, url: str) -> list[str]:
-        return list(self.levels.get(url, {}))
+        url = (url or "").strip()
+        if not url:
+            return []
+        direct = list(self.levels.get(url, {}))
+        if direct:
+            return direct
+        normalized = normalize_url(url)
+        if normalized != url:
+            direct = list(self.levels.get(normalized, {}))
+            if direct:
+                return direct
+        path_key = url_path_key(url)
+        if not path_key:
+            return []
+        for known_url, levels in self.levels.items():
+            if url_path_key(known_url) == path_key:
+                return list(levels)
+        return []
 
     def records(self) -> list[dict[str, str]]:
         rows: list[dict[str, str]] = []
@@ -284,6 +314,75 @@ class UrlLevelMap:
                 self.add(url, level, source_scope)
 
 
+def read_presetup_urls_csv(output_dir: Path) -> list[dict[str, str]]:
+    path = output_dir / PRESETUP_URLS_CSV
+    if not path.is_file():
+        return []
+    rows: list[dict[str, str]] = []
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        for row in csv.DictReader(handle):
+            url = (row.get("course_url") or row.get("url") or "").strip()
+            if not url:
+                continue
+            rows.append(
+                {
+                    "course_url": url,
+                    "study_level": (row.get("study_level") or "").strip(),
+                    "source_scope": (row.get("source_scope") or "PRESETUP_SCRAPE").strip(),
+                }
+            )
+    return rows
+
+
+def load_presetup_url_levels(output_dir: Path) -> UrlLevelMap:
+    mapping = UrlLevelMap()
+    for row in read_presetup_urls_csv(output_dir):
+        mapping.add(row["course_url"], row["study_level"], row.get("source_scope") or "PRESETUP_SCRAPE")
+    return mapping
+
+
+def count_presetup_scrape_urls(output_dir: Path) -> int:
+    return len(read_presetup_urls_csv(output_dir))
+
+
+def select_presetup_download_courses(
+    output_dir: Path,
+    *,
+    sample_size: int = PRESETUP_SAMPLE_SIZE,
+    seed: int | None = None,
+) -> tuple[list[dict[str, str]], int, str]:
+    """Pick URLs for presetup download/clean.
+
+    When presetup_urls.csv exists, use every URL from that file (no subsampling).
+    Otherwise stratified sample from the full catalogue.
+    Returns (courses, seed, source_label).
+    """
+    presetup_scrape = read_presetup_urls_csv(output_dir)
+    if presetup_scrape:
+        scrape_sample = PresetupSampler.load_presetup_scrape_sample(output_dir)
+        used_seed = seed if seed is not None else int(scrape_sample.get("seed") or 0)
+        return presetup_scrape, used_seed, PRESETUP_URLS_CSV
+
+    mapping = load_url_levels(output_dir)
+    if not mapping.urls():
+        return [], 0, ""
+    used_seed = seed if seed is not None else random.randrange(1, 2**31)
+    courses = PresetupSampler.sample_urls_stratified(mapping, n=sample_size, seed=used_seed)
+    return courses, used_seed, "full_catalogue"
+
+
+def presetup_download_sample_stale(output_dir: Path, existing_urls: list[str]) -> bool:
+    """True when presetup_urls.csv exists and differs from presetup_sample.json."""
+    scrape_rows = read_presetup_urls_csv(output_dir)
+    if not scrape_rows:
+        return False
+    scrape_set = {
+        PresetupSampler.normalize_url(row["course_url"]) for row in scrape_rows if row.get("course_url")
+    }
+    existing_set = {PresetupSampler.normalize_url(url) for url in existing_urls if url}
+    return scrape_set != existing_set
+
+
 def write_level_csvs(output_dir: Path, url_levels: UrlLevelMap) -> None:
     records_by_level: dict[str, list[dict[str, str]]] = {level: [] for level in LEVEL_CSV_NAMES}
     for record in url_levels.records():
@@ -300,6 +399,28 @@ def write_level_csvs(output_dir: Path, url_levels: UrlLevelMap) -> None:
                 writer.writerow(row)
 
 
+def write_presetup_urls_csv(output_dir: Path, courses: list[dict[str, str]]) -> Path:
+    """Write presetup scrape sample URLs with study_level to presetup_urls.csv."""
+    output_dir.mkdir(parents=True, exist_ok=True)
+    path = output_dir / PRESETUP_URLS_CSV
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=list(LEVEL_CSV_COLUMNS),
+            quoting=csv.QUOTE_ALL,
+        )
+        writer.writeheader()
+        for row in courses:
+            writer.writerow(
+                {
+                    "course_url": row.get("course_url", ""),
+                    "study_level": row.get("study_level", ""),
+                    "source_scope": row.get("source_scope") or "PRESETUP_SCRAPE",
+                }
+            )
+    return path
+
+
 def read_level_csvs(output_dir: Path) -> UrlLevelMap:
     mapping = UrlLevelMap()
     for filename in LEVEL_CSV_NAMES.values():
@@ -313,6 +434,14 @@ def read_level_csvs(output_dir: Path) -> UrlLevelMap:
                 source_scope = (row.get("source_scope") or "").strip()
                 mapping.add(url, level, source_scope)
     return mapping
+
+
+def url_path_key(url: str) -> str:
+    """Path-only key so scraped www.aru.ac.uk URLs match saved HTML source URLs."""
+    from urllib.parse import urlparse
+
+    path = urlparse((url or "").strip()).path.rstrip("/")
+    return path.lower() if path else ""
 
 
 def load_url_levels(output_dir: Path) -> UrlLevelMap:
@@ -507,6 +636,46 @@ class PresetupSampler:
 
     PRESETUP_SAMPLE_JSON = PRESETUP_SAMPLE_JSON
     PRESETUP_SAMPLE_SIZE = PRESETUP_SAMPLE_SIZE
+    SCRAPE_PRESETUP_SAMPLE_JSON = SCRAPE_PRESETUP_SAMPLE_JSON
+    SCRAPE_PRESETUP_PER_LEVEL = SCRAPE_PRESETUP_PER_LEVEL
+
+    @staticmethod
+    def presetup_scrape_sample_path(output_dir: Path) -> Path:
+        return output_dir / SCRAPE_PRESETUP_SAMPLE_JSON
+
+    @staticmethod
+    def load_presetup_scrape_sample(output_dir: Path) -> dict:
+        path = PresetupSampler.presetup_scrape_sample_path(output_dir)
+        if not path.is_file():
+            return {}
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            return {}
+        return payload if isinstance(payload, dict) else {}
+
+    @staticmethod
+    def save_presetup_scrape_sample(
+        output_dir: Path,
+        courses: list[dict[str, str]],
+        *,
+        seed: int,
+        n: int = SCRAPE_PRESETUP_PER_LEVEL,
+    ) -> Path:
+        output_dir.mkdir(parents=True, exist_ok=True)
+        payload = {
+            "per_level": n,
+            "seed": seed,
+            "sampled_at": datetime.now(timezone.utc).isoformat(),
+            "courses": courses,
+        }
+        path = PresetupSampler.presetup_scrape_sample_path(output_dir)
+        path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        return path
+
+    @staticmethod
+    def presetup_scrape_sample_urls(payload: dict | None) -> list[str]:
+        return PresetupSampler.presetup_sample_urls(payload)
 
     @staticmethod
     def normalize_url(url: str) -> str:
@@ -639,6 +808,40 @@ class PresetupSampler:
         return chosen
 
     @staticmethod
+    def sample_urls_per_level(
+        url_levels: UrlLevelMap,
+        n: int = SCRAPE_PRESETUP_PER_LEVEL,
+        seed: int | None = None,
+        levels: list[str] | None = None,
+    ) -> list[dict[str, str]]:
+        """Pick up to n shuffled URLs from each non-empty study level."""
+        if n <= 0:
+            return []
+        rng = random.Random(seed)
+        order = [level for level in EXECUTE_LEVEL_ORDER if not levels or level in levels]
+        chosen: list[dict[str, str]] = []
+        for level in order:
+            urls = [
+                record["course_url"]
+                for record in url_levels.records()
+                if record["study_level"] == level
+            ]
+            rng.shuffle(urls)
+            seen: set[str] = set()
+            level_chosen: list[str] = []
+            for url in urls:
+                key = PresetupSampler.normalize_url(url)
+                if not key or key in seen:
+                    continue
+                seen.add(key)
+                level_chosen.append(url)
+                if len(level_chosen) >= n:
+                    break
+            for url in level_chosen:
+                chosen.append({"course_url": url, "study_level": level})
+        return chosen
+
+    @staticmethod
     def read_urls_file(path: Path) -> list[str]:
         """Read URLs from JSON (presetup sample / list), CSV, or one-URL-per-line text."""
         text = path.read_text(encoding="utf-8-sig")
@@ -697,6 +900,40 @@ class PresetupSampler:
         return counts
 
 
+def presetup_level_counts(
+    url_levels: UrlLevelMap,
+    levels: list[str] | None = None,
+) -> dict[str, int]:
+    order = [level for level in EXECUTE_LEVEL_ORDER if not levels or level in levels]
+    counts = {level: 0 for level in order}
+    seen: dict[str, set[str]] = {level: set() for level in order}
+    for record in url_levels.records():
+        level = record["study_level"]
+        if level not in counts:
+            continue
+        key = PresetupSampler.normalize_url(record["course_url"])
+        if not key or key in seen[level]:
+            continue
+        seen[level].add(key)
+        counts[level] += 1
+    return counts
+
+
+def presetup_should_stop_pagination(
+    url_levels: UrlLevelMap,
+    n: int,
+    levels: list[str] | None = None,
+) -> bool:
+    """Stop listing pagination when every level seen so far has at least n URLs."""
+    if n <= 0:
+        return False
+    counts = presetup_level_counts(url_levels, levels)
+    present = [(level, count) for level, count in counts.items() if count > 0]
+    if not present:
+        return False
+    return all(count >= n for _, count in present)
+
+
 # Backward-compatible module-level aliases for path resolver / presetup sampler
 intake_start_year_from_md_path = StudyLevelPathResolver.intake_start_year_from_md_path
 intake_year_folder_from_stem = StudyLevelPathResolver.intake_year_folder_from_stem
@@ -716,5 +953,16 @@ save_presetup_sample = PresetupSampler.save_presetup_sample
 presetup_sample_urls = PresetupSampler.presetup_sample_urls
 urls_for_levels = PresetupSampler.urls_for_levels
 sample_urls_stratified = PresetupSampler.sample_urls_stratified
+sample_urls_per_level = PresetupSampler.sample_urls_per_level
 read_urls_file = PresetupSampler.read_urls_file
 level_url_counts = PresetupSampler.level_url_counts
+presetup_scrape_sample_path = PresetupSampler.presetup_scrape_sample_path
+load_presetup_scrape_sample = PresetupSampler.load_presetup_scrape_sample
+save_presetup_scrape_sample = PresetupSampler.save_presetup_scrape_sample
+presetup_scrape_sample_urls = PresetupSampler.presetup_scrape_sample_urls
+write_presetup_urls_csv = write_presetup_urls_csv
+load_presetup_url_levels = load_presetup_url_levels
+count_presetup_scrape_urls = count_presetup_scrape_urls
+read_presetup_urls_csv = read_presetup_urls_csv
+select_presetup_download_courses = select_presetup_download_courses
+presetup_download_sample_stale = presetup_download_sample_stale

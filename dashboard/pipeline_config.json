@@ -2,8 +2,15 @@
   "ollama_host": "http://localhost:11434",
   "phases": [
     {
+      "id": "scrape_presetup",
+      "label": "1 Presetup Scrape (5/level)",
+      "python": "shared/scrape_course_urls.py",
+      "args": ["--presetup"],
+      "fresh_args": ["--fresh", "--presetup"]
+    },
+    {
       "id": "scrape_urls",
-      "label": "1 Scrape URLs",
+      "label": "1 Scrape URLs (full)",
       "python": "shared/scrape_course_urls.py",
       "resume_args": [],
       "fresh_args": ["--fresh"],
@@ -17,7 +24,7 @@
     },
     {
       "id": "presetup",
-      "label": "3 Presetup (10 mixed)",
+      "label": "3 Presetup (scrape URLs)",
       "python": "shared/run_course_pipeline.py",
       "args": ["--presetup"],
       "fresh_args": ["--fresh"]

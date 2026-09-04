@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 import sys
 from pathlib import Path
 from urllib.parse import urlparse
@@ -18,7 +19,13 @@ from llm_extract import (
 )
 from scrape_course_urls import ENV_FILE, load_env_file
 from study_level import extraction_dir, intake_start_year_from_md_path, iter_extracted_json
+from uni_pages import split_frontmatter
 from uni_paths import resolve_code_dir, resolve_output_dir
+
+FOUNDATION_YEAR_MD_RE = re.compile(
+    r"\bwith foundation year\b|\bfoundation year\b",
+    re.I,
+)
 
 DEV_COURSE_CSV_COLUMNS = [
     "uniName",
@@ -220,11 +227,79 @@ class DevCoursesExporter:
             )
         return sorted(selected, key=lambda path: path.as_posix().lower())
 
+    @staticmethod
+    def _resolve_index_md_path(output_dir: Path, row: dict[str, str]) -> Path | None:
+        md_file = (row.get("md_file") or "").strip().replace("\\", "/")
+        if not md_file:
+            return None
+        if md_file.startswith("clean/"):
+            path = output_dir / md_file
+        else:
+            path = output_dir / "clean" / "courses" / md_file
+        return path if path.is_file() else None
+
+    @classmethod
+    def markdown_indicates_foundation_year(cls, output_dir: Path, row: dict[str, str]) -> bool:
+        md_path = cls._resolve_index_md_path(output_dir, row)
+        if not md_path:
+            return False
+        _meta, body = split_frontmatter(md_path.read_text(encoding="utf-8"))
+        return bool(FOUNDATION_YEAR_MD_RE.search(body))
+
+    @classmethod
+    def normalized_path_for_index_row(cls, output_dir: Path, row: dict[str, str]) -> Path:
+        course_url = row.get("courseUrlExternal", "").strip()
+        study_level = row.get("study_level", "").strip()
+        slug = course_slug_from_url(course_url)
+        return extraction_dir(output_dir, slug, study_level) / "normalized.json"
+
+    @classmethod
+    def pick_export_index_row(
+        cls,
+        output_dir: Path,
+        rows: list[dict[str, str]],
+    ) -> dict[str, str]:
+        """One export row per course path — foundation md for foundation courses, else undergraduate."""
+        if len(rows) == 1:
+            return rows[0]
+
+        want_foundation = any(cls.markdown_indicates_foundation_year(output_dir, row) for row in rows)
+        preferred_level = "foundation" if want_foundation else "undergraduate"
+
+        def sort_key(row: dict[str, str]) -> tuple[int, int, str]:
+            level = (row.get("study_level") or "").strip().lower()
+            norm_exists = 0 if cls.normalized_path_for_index_row(output_dir, row).is_file() else 1
+            level_match = 0 if level == preferred_level else 1
+            return (level_match, norm_exists, level)
+
+        return min(rows, key=sort_key)
+
+    @classmethod
+    def dedupe_index_rows_for_export(
+        cls,
+        output_dir: Path,
+        rows: list[dict[str, str]],
+    ) -> list[dict[str, str]]:
+        """Collapse duplicate index rows that share the same course URL path."""
+        grouped: dict[str, list[dict[str, str]]] = {}
+        for row in rows:
+            path_key = PortalLookup.normalize_course_url_key(row.get("courseUrlExternal", ""))
+            if not path_key:
+                grouped.setdefault(row.get("md_file", ""), []).append(row)
+                continue
+            grouped.setdefault(path_key, []).append(row)
+
+        selected: list[dict[str, str]] = []
+        for _key in sorted(grouped):
+            selected.append(cls.pick_export_index_row(output_dir, grouped[_key]))
+        return selected
+
     def normalized_paths_from_course_index(self, output_dir: Path) -> list[Path]:
         """Resolve normalized.json paths for each row in courses.csv (canonical index)."""
         paths: list[Path] = []
         missing: list[str] = []
-        for row in read_course_index_csv(output_dir):
+        index_rows = self.dedupe_index_rows_for_export(output_dir, read_course_index_csv(output_dir))
+        for row in index_rows:
             entry = index_row_to_entry(row)
             course_url = entry.get("course_url") or entry.get("courseUrlExternal", "")
             slug = course_slug_from_url(course_url)

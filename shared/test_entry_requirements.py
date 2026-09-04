@@ -61,6 +61,39 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(hints["courseDuration"], "4 years with foundation")
         self.assertEqual(hints["degreeName"], "BSc")
 
+    def test_aru_research_overview_start_label_parses_intake(self) -> None:
+        md_path = Path(
+            "Anglia Ruskin University - ARU/output/clean/courses/postgraduate_research/"
+            "study-postgraduate-animal-and-environmental-sciences.md"
+        )
+        if not md_path.exists():
+            self.skipTest("ARU research sample markdown not in workspace")
+        body = md_path.read_text(encoding="utf-8")
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["intakeInfo"], "January 2027, April, September 2026")
+
+    def test_aru_research_completion_dates_parse_duration(self) -> None:
+        md_path = Path(
+            "Anglia Ruskin University - ARU/output/clean/courses/postgraduate_research/"
+            "study-postgraduate-animal-and-environmental-sciences.md"
+        )
+        if not md_path.exists():
+            self.skipTest("ARU research sample markdown not in workspace")
+        body = md_path.read_text(encoding="utf-8")
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["courseDuration"], "2-4 years")
+
+    def test_aru_professional_doctorate_type_line_parses_duration(self) -> None:
+        md_path = Path(
+            "Anglia Ruskin University - ARU/output/clean/courses/postgraduate_research/"
+            "study-postgraduate-professional-doctorate-in-health-and-social-care.md"
+        )
+        if not md_path.exists():
+            self.skipTest("ARU professional doctorate sample markdown not in workspace")
+        body = md_path.read_text(encoding="utf-8")
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["courseDuration"], "6 years part-time")
+
     def test_aru_infer_degree_name_from_course_overview_line(self) -> None:
         md_path = Path(
             "Anglia Ruskin University - ARU/output/clean/courses/foundation/"
@@ -130,6 +163,56 @@ class EntryRequirementsTests(unittest.TestCase):
             }
         )
         self.assertEqual(result["degreeName"], "BSc")
+
+    def test_aru_parser_extracts_fee_before_international_students(self) -> None:
+        body = (
+            "£18,400 International students starting 2026/27 (full-time, per year)\n"
+        )
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["tuitionFee"], "18400")
+        self.assertEqual(hints["currency"], "GBP")
+
+    def test_aston_partially_funded_phd_parses_duration_and_fee_difference(self) -> None:
+        body = (
+            "Programme length: 3 years\n"
+            "Currently, the difference between 'Home' and the 'Overseas' tuition fees is £17,712 for 2026/7.\n"
+        )
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["courseDuration"], "3 years")
+        self.assertEqual(hints["tuitionFee"], "17712")
+        self.assertEqual(hints["currency"], "GBP")
+
+    def test_enrich_stage1_promotes_nested_international_fees_metadata(self) -> None:
+        md_path = Path(
+            "Anglia Ruskin University - ARU/output/clean/courses/undergraduate/"
+            "study-undergraduate-applied-sport-science-and-coaching-top-up.md"
+        )
+        if not md_path.exists():
+            self.skipTest("ARU top-up sample markdown not in workspace")
+        body = md_path.read_text(encoding="utf-8")
+        stage1 = {
+            "tuitionFee": 0,
+            "currency": "",
+            "feesMetaData": {
+                "UK students starting 2026/27 (full-time, per year)": {
+                    "fee": 9790,
+                    "currency": "GBP",
+                },
+                "International students starting 2026/27 (full-time, per year)": {
+                    "fee": 18400,
+                    "currency": "GBP",
+                },
+            },
+        }
+        enriched = enrich_stage1_from_markdown(
+            stage1,
+            course_body=body,
+            course_name="Applied Sport Science and Coaching (Top Up)",
+            course_url="https://www.aru.ac.uk/study/undergraduate/applied-sport-science-and-coaching-top-up",
+        )
+        self.assertEqual(enriched["tuitionFee"], "18400")
+        self.assertEqual(enriched["currency"], "GBP")
+        self.assertEqual(enriched["intakeInfo"], "September 2026")
 
     def test_enrich_stage1_promotes_fees_metadata_object(self) -> None:
         md_path = Path(

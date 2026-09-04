@@ -15,6 +15,7 @@ if str(_SHARED) not in sys.path:
     sys.path.insert(0, str(_SHARED))
 
 from build_university_from_template import VARIANT_FILES  # noqa: E402
+from missing_field_stats import MissingFieldStats, REPORT_TXT_NAME  # noqa: E402
 
 REVIEW_DIR_NAME = "REVIEW"
 
@@ -25,6 +26,7 @@ class ReviewPackageResult:
     review_dir: Path
     variant_csv: Path
     reviewed_csv: Path
+    missing_field_report_txt: Path
 
 
 class ReviewPackageBuilder:
@@ -77,25 +79,38 @@ class ReviewPackageBuilder:
         review_dir = self.repo_root / REVIEW_DIR_NAME / university_name
         dest_variant = review_dir / variant_csv.name
         dest_reviewed = review_dir / reviewed_csv.name
+        dest_report = review_dir / REPORT_TXT_NAME
+
+        stats = MissingFieldStats(self.repo_root)
+        report_result = stats.generate(
+            university_name,
+            force=force,
+            dry_run=dry_run,
+            reviewed_csv=reviewed_csv,
+            report_txt=uni_dir / "output" / REPORT_TXT_NAME,
+        )
 
         if not dry_run:
             review_dir.mkdir(parents=True, exist_ok=True)
-            for dest in (dest_variant, dest_reviewed):
+            for dest in (dest_variant, dest_reviewed, dest_report):
                 if dest.exists() and not force:
                     raise FileExistsError(
                         f"Already exists: {dest} (use --force to overwrite)"
                     )
             shutil.copy2(variant_csv, dest_variant)
             shutil.copy2(reviewed_csv, dest_reviewed)
+            shutil.copy2(report_result.report_txt, dest_report)
         else:
             dest_variant = review_dir / variant_csv.name
             dest_reviewed = review_dir / reviewed_csv.name
+            dest_report = review_dir / REPORT_TXT_NAME
 
         return ReviewPackageResult(
             university_name=university_name,
             review_dir=review_dir,
             variant_csv=dest_variant,
             reviewed_csv=dest_reviewed,
+            missing_field_report_txt=dest_report,
         )
 
 
@@ -145,6 +160,7 @@ def main(argv: list[str] | None = None) -> int:
     prefix = "Would write" if args.dry_run else "Wrote"
     print(f"{prefix} {result.variant_csv}")
     print(f"{prefix} {result.reviewed_csv}")
+    print(f"{prefix} {result.missing_field_report_txt}")
     return 0
 
 

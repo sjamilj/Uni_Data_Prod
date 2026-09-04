@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Presetup sample + per-course execute orchestrator.
 
-Presetup downloads and cleans a stratified sample of 10 courses (no LLM).
-After you review HTML / markdown / .env, --presetup-llm extracts those 10.
+Presetup downloads and cleans presetup scrape URLs (all of presetup_urls.csv when
+present, otherwise a stratified sample of 10 from the full catalogue). No LLM.
+After you review HTML / markdown / .env, --presetup-llm extracts those courses.
 Execute then downloads, cleans, and LLM-extracts one course at a time.
 
 Examples (from repo root):
@@ -16,7 +17,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import random
 import subprocess
 import sys
 import urllib.error
@@ -43,10 +43,13 @@ from study_level import (  # noqa: E402
     load_presetup_sample,
     load_url_levels,
     parse_study_levels,
+    presetup_download_sample_stale,
+    presetup_download_sample_stale,
     presetup_sample_path,
     presetup_sample_urls,
+    read_presetup_urls_csv,
     save_presetup_sample,
-    sample_urls_stratified,
+    select_presetup_download_courses,
     unique_urls,
     urls_for_levels,
 )
@@ -148,29 +151,45 @@ class PipelineOrchestrator:
         output_dir = resolve_output_dir(code_dir)
         existing = load_presetup_sample(output_dir)
         existing_urls = presetup_sample_urls(existing)
+        stale = presetup_download_sample_stale(output_dir, existing_urls)
 
-        if existing_urls and not fresh:
+        if existing_urls and not fresh and not stale:
             courses = list(existing.get("courses") or [])
             used_seed = int(existing.get("seed") or 0)
             self._print(
                 f"Presetup: reusing {len(courses)} URLs from {presetup_sample_path(output_dir).name} "
-                f"(seed={used_seed}). Pass --fresh to resample."
+                f"(seed={used_seed}). Pass --fresh to rebuild."
             )
         else:
-            mapping = load_url_levels(output_dir)
-            if not mapping.urls():
+            if stale and existing_urls and not fresh:
+                scrape_count = len(read_presetup_urls_csv(output_dir))
+                self._print(
+                    f"Presetup: {presetup_sample_path(output_dir).name} has {len(existing_urls)} URL(s) "
+                    f"but presetup_urls.csv has {scrape_count}; rebuilding from scrape URLs."
+                )
+            courses, used_seed, source = select_presetup_download_courses(
+                output_dir,
+                sample_size=sample_size,
+                seed=seed,
+            )
+            if not courses:
                 print(
-                    f"Error: no study-level URLs in {output_dir}. Run scrape_course_urls.py first.",
+                    f"Error: no study-level URLs in {output_dir}. "
+                    "Run full scrape or presetup scrape first.",
                     file=sys.stderr,
                 )
                 return 1
-            used_seed = seed if seed is not None else random.randrange(1, 2**31)
-            courses = sample_urls_stratified(mapping, n=sample_size, seed=used_seed)
-            if not courses:
-                print("Error: stratified sample produced no URLs.", file=sys.stderr)
-                return 1
-            path = save_presetup_sample(output_dir, courses, seed=used_seed, n=sample_size)
-            self._print(f"Presetup: sampled {len(courses)} URLs (seed={used_seed}) -> {path}")
+            path = save_presetup_sample(output_dir, courses, seed=used_seed, n=len(courses))
+            if source == "full_catalogue":
+                self._print(
+                    f"Presetup: sampled {len(courses)} URLs from full catalogue "
+                    f"(seed={used_seed}) -> {path}"
+                )
+            else:
+                self._print(
+                    f"Presetup: using all {len(courses)} URLs from {source} "
+                    f"(seed={used_seed}) -> {path}"
+                )
             for row in courses:
                 self._print(f"  [{row.get('study_level')}] {row.get('course_url')}")
 
@@ -345,14 +364,14 @@ class CoursePipelineCLI:
     @staticmethod
     def build_arg_parser() -> argparse.ArgumentParser:
         parser = argparse.ArgumentParser(
-            description="Presetup sample (10 mixed levels) then per-course execute."
+            description="Presetup download/clean (presetup scrape URLs or 10 mixed) then per-course execute."
         )
         add_code_dir_argument(parser)
         mode = parser.add_mutually_exclusive_group(required=True)
         mode.add_argument(
             "--presetup",
             action="store_true",
-            help="Sample 10 mixed-level URLs, download HTML, and clean to markdown (no LLM)",
+            help="Download/clean presetup scrape URLs (or 10 mixed from full catalogue), no LLM",
         )
         mode.add_argument(
             "--presetup-llm",
@@ -367,7 +386,7 @@ class CoursePipelineCLI:
         parser.add_argument(
             "--fresh",
             action="store_true",
-            help="Presetup: draw a new random sample (ignore existing presetup_sample.json)",
+            help="Presetup: rebuild presetup_sample.json (ignore existing file)",
         )
         parser.add_argument("--resume", action="store_true", help="Skip courses already extracted")
         parser.add_argument(

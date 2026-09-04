@@ -58,6 +58,7 @@ ERROR_TEXT = QColor(90, 0, 0)
 NAME_BG = QColor(245, 245, 245)
 
 PHASES = {
+    "scrape_presetup": "shared/scrape_course_urls.py",
     "scrape_urls": "shared/scrape_course_urls.py",
     "uni_clean": "shared/download_and_clean_course_pages.py",
     "presetup": "shared/run_course_pipeline.py",
@@ -167,21 +168,23 @@ class MainWindow(QMainWindow):
         self.mode_box.setMinimumWidth(380)
         mode_row.addWidget(self.mode_box)
         self.mode_hint = QLabel(
-            "Resume continues. Fresh resamples Presetup or re-extracts Execute. Append is for scrape only."
+            "Resume continues. Fresh rebuilds Presetup from scrape URLs or re-extracts Execute. Append is for scrape only."
         )
         self.mode_hint.setWordWrap(True)
         mode_row.addWidget(self.mode_hint, 1)
         layout.addLayout(mode_row)
 
         buttons = QHBoxLayout()
-        self.btn_scrape = QPushButton("1 Scrape URLs")
+        self.btn_scrape_presetup = QPushButton("1 Presetup Scrape (5/lvl)")
+        self.btn_scrape = QPushButton("1 Scrape URLs (full)")
         self.btn_uni = QPushButton("2 Clean Uni Pages")
-        self.btn_presetup = QPushButton("3 Presetup (10 mixed)")
+        self.btn_presetup = QPushButton("3 Presetup (scrape URLs)")
         self.btn_presetup_llm = QPushButton("4 Presetup LLM")
         self.btn_execute = QPushButton("5 Execute")
         self.btn_remaining = QPushButton("Run remaining")
         self.btn_folder = QPushButton("Open folder")
         self.btn_cancel = QPushButton("Cancel")
+        self.btn_scrape_presetup.clicked.connect(lambda: self._run_phase("scrape_presetup"))
         self.btn_scrape.clicked.connect(lambda: self._run_phase("scrape_urls"))
         self.btn_uni.clicked.connect(lambda: self._run_phase("uni_clean"))
         self.btn_presetup.clicked.connect(lambda: self._run_phase("presetup"))
@@ -192,6 +195,7 @@ class MainWindow(QMainWindow):
         self.btn_cancel.clicked.connect(self._cancel)
         self.btn_cancel.setEnabled(False)
         for button in (
+            self.btn_scrape_presetup,
             self.btn_scrape,
             self.btn_uni,
             self.btn_presetup,
@@ -235,8 +239,9 @@ class MainWindow(QMainWindow):
         layout.addWidget(execute_box)
 
         self.note_label = QLabel(
-            "Tick study levels before Scrape URLs to scrape only those listings; leave them unticked to scrape all. "
-            "After Presetup, review HTML and markdown, then edit .env / cleanup code before Presetup LLM. "
+            "Presetup Scrape keeps 5 URLs per study level for a quick test run. "
+            "Tick study levels before full Scrape URLs to scrape only those listings. "
+            "After Presetup (clean), review HTML and markdown, then edit .env / cleanup code before Presetup LLM. "
             "Execute downloads, cleans, and sends each course to the LLM one at a time. "
             "Cloudflare unis (South Wales, UWTSD, West London) may need a headed scrape."
         )
@@ -253,6 +258,7 @@ class MainWindow(QMainWindow):
 
     def _action_buttons(self) -> tuple[QPushButton, ...]:
         return (
+            self.btn_scrape_presetup,
             self.btn_scrape,
             self.btn_uni,
             self.btn_presetup,
@@ -431,6 +437,7 @@ class MainWindow(QMainWindow):
         self.btn_folder.setEnabled(True)
         if running:
             return
+        self.btn_scrape_presetup.setEnabled(True)
         self.btn_scrape.setEnabled(True)
         self.btn_uni.setEnabled(row["can_uni_clean"])
         self.btn_presetup.setEnabled(row.get("can_presetup", False))
@@ -492,7 +499,13 @@ class MainWindow(QMainWindow):
 
     def _phase_args(self, phase_id: str) -> list[str] | None:
         mode = self._run_mode()
-        if mode == "fresh" and phase_id in {"scrape_urls", "presetup", "presetup_llm", "execute"}:
+        if mode == "fresh" and phase_id in {
+            "scrape_presetup",
+            "scrape_urls",
+            "presetup",
+            "presetup_llm",
+            "execute",
+        }:
             ok = QMessageBox.question(
                 self,
                 "Fresh run",
@@ -500,8 +513,15 @@ class MainWindow(QMainWindow):
             )
             if ok != QMessageBox.StandardButton.Yes:
                 return None
+        if phase_id == "scrape_presetup":
+            extra: list[str] = ["--presetup"]
+            if mode == "fresh":
+                extra.append("--fresh")
+            for level in self._selected_levels():
+                extra.extend(["--study-level", level])
+            return extra
         if phase_id == "scrape_urls":
-            extra: list[str] = []
+            extra = []
             if mode == "fresh":
                 extra.append("--fresh")
             elif mode == "append":
@@ -547,7 +567,7 @@ class MainWindow(QMainWindow):
         if not row:
             return
         if row["urls"] != "done":
-            self._run_phase("scrape_urls")
+            self._run_phase("scrape_presetup")
         elif row["uni_clean"] != "done":
             self._run_phase("uni_clean")
         elif row.get("presetup") != "done":

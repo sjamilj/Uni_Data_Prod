@@ -6,9 +6,11 @@ STRATEGY=DEGREE_SCOPED_PAGINATED
 UNDERGRADUATE_COURSE_LISTING_PAGE_1=https://www.cardiffmet.ac.uk/courses/?page=1
 UNDERGRADUATE_COURSE_LISTING_PAGE_2=https://www.cardiffmet.ac.uk/courses/?page=2
 
-# POSTGRADUATE_COURSE_LISTING_PAGE_1=https://www.canterbury.ac.uk/search/postgraduate-taught-courses?pageIndex=1
-# POSTGRADUATE_COURSE_LISTING_PAGE_2=https://www.canterbury.ac.uk/search/postgraduate-taught-courses?pageIndex=2
+POSTGRADUATE_COURSE_LISTING_PAGE_1=https://www.cardiffmet.ac.uk/courses/?courseType=postgraduate&page=2
+POSTGRADUATE_COURSE_LISTING_PAGE_2=https://www.cardiffmet.ac.uk/courses/?courseType=postgraduate&page=2
 
+POSTGRADUATE_RESEARCH_COURSE_LISTING_PAGE_1=https://www.cardiffmet.ac.uk/courses/?courseType=research&page=1
+POSTGRADUATE_RESEARCH_COURSE_LISTING_PAGE_2=https://www.cardiffmet.ac.uk/courses/?courseType=research&page=2
 # FOUNDATION_COURSE_LISTING_PAGE_1=https://www.canterbury.ac.uk/search/foundation-year?pageIndex=1
 # FOUNDATION_COURSE_LISTING_PAGE_2=https://www.canterbury.ac.uk/search/foundation-year?pageIndex=2
 

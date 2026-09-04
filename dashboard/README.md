@@ -13,14 +13,14 @@ Use the **Run mode** dropdown before clicking a phase button:
 | Mode | What it does |
 |------|----------------|
 | **Resume** | Keep progress. Skip URLs / HTML / LLM courses already done. Default. |
-| **Fresh** | Start that step over (asks for confirmation). Presetup draws a new random sample of 10. |
+| **Fresh** | Start that step over (asks for confirmation). Presetup rebuilds from presetup_urls.csv (or resamples 10 from full catalogue). |
 | **Append URLs** | Scrape only: merge new URLs into `course_urls.csv`. |
 
 | Button | Script |
 |--------|--------|
 | 1 Scrape URLs | `shared/scrape_course_urls.py` (`--fresh` / `--append-urls`) |
 | 2 Clean Uni Pages | `shared/download_and_clean_course_pages.py --clean-uni-only` |
-| 3 Presetup (10 mixed) | `shared/run_course_pipeline.py --presetup` |
+| 3 Presetup (scrape URLs) | `shared/run_course_pipeline.py --presetup` |
 | 4 Presetup LLM | `shared/run_course_pipeline.py --presetup-llm --resume` |
 | 5 Execute | `shared/run_course_pipeline.py --execute` plus study-level checkboxes and Full / Number |
 

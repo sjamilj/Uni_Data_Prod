@@ -992,7 +992,7 @@ class CoursePagesCleaner:
             # --------------------------------------------------------
 
             study_levels = levels_for_url(
-                source_url or course_url,
+                course_url or source_url,
                 url_levels=url_levels,
                 classifier=classifier,
             )

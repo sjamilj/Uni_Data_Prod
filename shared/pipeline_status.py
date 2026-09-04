@@ -127,6 +127,7 @@ class UniversityStatusDetector:
 
         from study_level import (
             PRESETUP_CLEAN_SUBDIR,
+            count_presetup_scrape_urls,
             iter_course_markdown,
             iter_extracted_json,
             level_url_counts,
@@ -194,12 +195,15 @@ class UniversityStatusDetector:
         dev_csv = list(output.glob("dev_courses_*.csv"))
         csv_status = "done" if dev_csv else "not_started"
 
+        presetup_scrape_count = count_presetup_scrape_urls(output)
+
         return {
             "name": name,
             "path": str(uni_dir),
             "setup": setup,
             "urls": urls,
             "url_count": url_count,
+            "presetup_scrape_count": presetup_scrape_count,
             "uni_clean": uni_clean,
             "presetup": presetup,
             "presetup_clean": sample_clean,
@@ -217,7 +221,7 @@ class UniversityStatusDetector:
             "level_counts": level_url_counts(output) if url_count else {},
             "can_uni_clean": setup != "missing",
             "can_download": urls_done or url_count > 0,
-            "can_presetup": url_count > 0,
+            "can_presetup": url_count > 0 or presetup_scrape_count > 0,
             "can_presetup_llm": bool(sample_urls) and sample_clean > 0,
             "can_execute": url_count > 0,
             "can_llm": course_md > 0,
