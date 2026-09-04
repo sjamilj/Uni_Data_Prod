@@ -61,39 +61,6 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(hints["courseDuration"], "4 years with foundation")
         self.assertEqual(hints["degreeName"], "BSc")
 
-    def test_aru_research_overview_start_label_parses_intake(self) -> None:
-        md_path = Path(
-            "Anglia Ruskin University - ARU/output/clean/courses/postgraduate_research/"
-            "study-postgraduate-animal-and-environmental-sciences.md"
-        )
-        if not md_path.exists():
-            self.skipTest("ARU research sample markdown not in workspace")
-        body = md_path.read_text(encoding="utf-8")
-        hints = extract_stage1_fields_from_md(body)
-        self.assertEqual(hints["intakeInfo"], "January 2027, April, September 2026")
-
-    def test_aru_research_completion_dates_parse_duration(self) -> None:
-        md_path = Path(
-            "Anglia Ruskin University - ARU/output/clean/courses/postgraduate_research/"
-            "study-postgraduate-animal-and-environmental-sciences.md"
-        )
-        if not md_path.exists():
-            self.skipTest("ARU research sample markdown not in workspace")
-        body = md_path.read_text(encoding="utf-8")
-        hints = extract_stage1_fields_from_md(body)
-        self.assertEqual(hints["courseDuration"], "2-4 years")
-
-    def test_aru_professional_doctorate_type_line_parses_duration(self) -> None:
-        md_path = Path(
-            "Anglia Ruskin University - ARU/output/clean/courses/postgraduate_research/"
-            "study-postgraduate-professional-doctorate-in-health-and-social-care.md"
-        )
-        if not md_path.exists():
-            self.skipTest("ARU professional doctorate sample markdown not in workspace")
-        body = md_path.read_text(encoding="utf-8")
-        hints = extract_stage1_fields_from_md(body)
-        self.assertEqual(hints["courseDuration"], "6 years part-time")
-
     def test_aru_infer_degree_name_from_course_overview_line(self) -> None:
         md_path = Path(
             "Anglia Ruskin University - ARU/output/clean/courses/foundation/"
@@ -170,16 +137,6 @@ class EntryRequirementsTests(unittest.TestCase):
         )
         hints = extract_stage1_fields_from_md(body)
         self.assertEqual(hints["tuitionFee"], "18400")
-        self.assertEqual(hints["currency"], "GBP")
-
-    def test_aston_partially_funded_phd_parses_duration_and_fee_difference(self) -> None:
-        body = (
-            "Programme length: 3 years\n"
-            "Currently, the difference between 'Home' and the 'Overseas' tuition fees is £17,712 for 2026/7.\n"
-        )
-        hints = extract_stage1_fields_from_md(body)
-        self.assertEqual(hints["courseDuration"], "3 years")
-        self.assertEqual(hints["tuitionFee"], "17712")
         self.assertEqual(hints["currency"], "GBP")
 
     def test_enrich_stage1_promotes_nested_international_fees_metadata(self) -> None:

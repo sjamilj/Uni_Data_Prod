@@ -860,51 +860,6 @@ class Stage1MarkdownParser:
         return normalize_short_month_date(text)
 
     @staticmethod
-    def extract_research_fee_difference(body: str) -> str:
-        """Partially-funded PhD: difference between Home and Overseas tuition fees is £17,712."""
-        match = re.search(
-            r'difference between.*?tuition fees is\s*£([\d,]+)',
-            body,
-            re.I | re.S,
-        )
-        if match:
-            return match.group(1).replace(',', '')
-        return ''
-
-    @staticmethod
-    def extract_research_course_duration(body: str) -> str:
-        """Parse ARU research / professional doctorate durations from clean markdown."""
-        for pattern in (
-            r'\*\*Duration:\*\*\s*([^\n]+)',
-            r'Programme length:\s*([^\n]+)',
-            r'-\s*\*\*Type:\*\*\s*Research\s*\(([^)]+)\)',
-        ):
-            match = re.search(pattern, body, re.I)
-            if match:
-                text = match.group(1).strip()
-                if re.search(r'\d+\s*(?:year|month)', text, re.I):
-                    return text
-
-        section = re.search(
-            r'Completion\s+(?:dates|times)\s*\n+(.*?)(?=\n##\s|\nFor further guidance|\Z)',
-            body,
-            re.I | re.S,
-        )
-        if not section:
-            return ''
-
-        block = section.group(1)
-        for line_pattern in (
-            r'PhD:\s*full-time\s+(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?\s*years?)',
-            r'PhD via progression[^:\n]*:\s*full-time\s+(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?\s*years?)',
-            r'MPhil:\s*full-time\s+(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?\s*years?)',
-        ):
-            match = re.search(line_pattern, block, re.I)
-            if match:
-                return match.group(1).strip()
-        return ''
-
-    @staticmethod
     def extract_aru_international_tuition_fee(body: str) -> str:
         """ARU course pages: **£17,500** International students starting 2026/27 …"""
         patterns = (
@@ -1006,13 +961,7 @@ class Stage1MarkdownParser:
     def extract_stage1_fields_from_md(body: str) -> dict[str, str]:
         """Parse intake, fees, duration, and IELTS scalars from clean course markdown."""
         fields: dict[str, str] = {}
-        for pattern in (
-            '-\\s*\\*\\*Start date:\\*\\*\\s*([^\\n]+)',
-            '-\\s*\\*\\*Start:\\*\\*\\s*([^\\n]+)',
-            '- Start date\\s+([^\\n]+)',
-            '\\*\\*Start date\\*\\*\\s*\\n+\\s*([^\\n#]+)',
-            'Starting:\\s*([^\\n]+)',
-        ):
+        for pattern in ('-\\s*\\*\\*Start date:\\*\\*\\s*([^\\n]+)', '- Start date\\s+([^\\n]+)', '\\*\\*Start date\\*\\*\\s*\\n+\\s*([^\\n#]+)', 'Starting:\\s*([^\\n]+)'):
             start_date_match = re.search(pattern, body, re.I)
             if start_date_match:
                 fields['intakeInfo'] = normalize_intake_text(start_date_match.group(1).strip())
@@ -1020,10 +969,6 @@ class Stage1MarkdownParser:
         duration_match = re.search('\\*\\*Duration:\\*\\*\\s*(.+)', body, re.I)
         if duration_match:
             fields['courseDuration'] = duration_match.group(1).strip()
-        if not fields.get('courseDuration'):
-            research_duration = Stage1MarkdownParser.extract_research_course_duration(body)
-            if research_duration:
-                fields['courseDuration'] = research_duration
         fee_match = re.search('(?:Annual tuition fees|First year tuition fee):\\s*\\|\\s*£([\\d,]+)', body, re.I)
         if fee_match:
             fields['tuitionFee'] = fee_match.group(1).replace(',', '')
@@ -1032,11 +977,6 @@ class Stage1MarkdownParser:
             aru_fee = extract_aru_international_tuition_fee(body)
             if aru_fee:
                 fields['tuitionFee'] = aru_fee
-                fields['currency'] = 'GBP'
-        if not fields.get('tuitionFee'):
-            research_fee = Stage1MarkdownParser.extract_research_fee_difference(body)
-            if research_fee:
-                fields['tuitionFee'] = research_fee
                 fields['currency'] = 'GBP'
         intl_section = extract_international_fees_section(body)
         if intl_section:
