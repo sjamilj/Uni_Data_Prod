@@ -85,6 +85,7 @@ from study_level import (
     SCRAPE_PRESETUP_PER_LEVEL,
     StudyLevelClassifier,
     UrlLevelMap,
+    dedupe_urls_by_latest_intake,
     load_url_levels,
     parse_study_levels,
     presetup_level_counts,
@@ -1987,6 +1988,18 @@ class CoursePageDownloader:
             urls = [url.strip() for url in urls if (url or "").strip()]
         else:
             urls = self.artifacts.read_course_urls()
+            url_levels = load_url_levels(self.output_dir)
+            classifier = StudyLevelClassifier.from_code_dir(self.code_dir)
+            urls, intake_skipped = dedupe_urls_by_latest_intake(
+                urls,
+                url_levels=url_levels,
+                classifier=classifier,
+            )
+            if intake_skipped:
+                print(
+                    f"Intake dedup: keeping latest year, "
+                    f"skipped {len(intake_skipped)} older URL(s)"
+                )
         if not urls:
             raise ValueError(f"No URLs in {COURSE_URLS_CSV}. Run scrape_course_urls.py first.")
         if limit is not None:

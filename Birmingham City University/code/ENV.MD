@@ -86,10 +86,8 @@ COURSE_CLEAN_ENGINE=generic
 
 # One CSS selector per line; optional heading with :: or |
 COURSE_CLEAN_BLOCKS="
-Overview :: #overview
 Entry requirements :: #entry_requirements
 Fees and how to apply :: #fees_how_to_apply
-Course in depth :: #course_in_depth
 "
 
 # Noise removed inside each matched block before markdown conversion
@@ -110,6 +108,14 @@ COURSE_MARKDOWN_REMOVE_SECTIONS="
 2 :: Be part of our community
 2 :: Alumni services
 2 :: *Read more news*
+3 :: Tailor your Business Degree
+3 :: What's covered in this course?
+3 :: Why Choose Us?
+3 :: Similar Courses
+3 :: Clearing Open Days
+3 :: Download course specification
+3 :: Accredited By
+4 :: Alternative options
 4 :: With placement
 4 :: With foundation year
 4 :: Important additional notes
@@ -117,6 +123,14 @@ COURSE_MARKDOWN_REMOVE_SECTIONS="
 3 :: UK students
 3 :: Contextual offers
 3 :: Living costs
+3 :: Guidance for UK*
+3 :: Personal statement
+3 :: Work Experience
+3 :: Financial Support
+3 :: Completing your application
+3 :: Postgraduate funding
+3 :: Thinking about a PhD?
+4 :: Meeting our entry requirements
 5 :: UK students*
 5 :: *part-time*
 "
@@ -126,14 +140,14 @@ COURSE_MARKDOWN_REMOVE_SECTIONS="
 # Levels: foundation, undergraduate, postgraduate, postgraduate_research, other
 EXTRA_CLEAN_REMOVE_SECTIONS="
 2 :: Clearing *
-2 :: Overview
-2 :: Course in depth
 3 :: Clearing
 3 :: Hotline now open
 3 :: Accredited By
+3 :: Tailor your Business Degree
 3 :: What's covered in this course?
 3 :: Similar Courses
 3 :: Download course specification
+4 :: Alternative options
 3 :: Go Abroad
 3 :: Guidance for UK*
 3 :: Personal statement

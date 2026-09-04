@@ -76,6 +76,7 @@ from uni_pages import UNI_MD_BY_ROLE, course_slug_from_url, uni_md_output_name
 from study_level import (
     CLEAN_COURSES_SUBDIR,
     StudyLevelClassifier,
+    dedupe_course_entries_by_latest_intake,
     folder_for_level,
     clean_course_md_relative_path,
     intake_year_folder_from_stem,
@@ -859,6 +860,24 @@ class CoursePagesCleaner:
             entries = filtered
 
         # ------------------------------------------------------------
+        # Intake-year deduplication (same course, multiple years)
+        # ------------------------------------------------------------
+        #
+        # When catalogue lists both 2026-27 and 2027-28 for one course,
+        # keep only the latest intake year. Foundation vs undergraduate
+        # URLs are not merged unless they share the same study-level tag.
+
+        intake_skipped: list[tuple[str, Path]] = []
+        if urls is None and len(entries) > 1:
+            entries, intake_skipped = (
+                dedupe_course_entries_by_latest_intake(
+                    entries,
+                    url_levels=url_levels,
+                    classifier=classifier,
+                )
+            )
+
+        # ------------------------------------------------------------
         # Limit
         # ------------------------------------------------------------
 
@@ -880,12 +899,11 @@ class CoursePagesCleaner:
         }
 
         # ------------------------------------------------------------
-        # IMPORTANT:
-        # This is output-level deduplication.
+        # Output-level deduplication
         #
-        # We DO NOT dedupe course URLs.
-        # Foundation and undergraduate may legitimately share
-        # the same URL.
+        # Intake-year duplicates are removed earlier (latest year wins).
+        # Here we only guard duplicate markdown paths when foundation and
+        # undergraduate legitimately share the same URL.
         # ------------------------------------------------------------
 
         used_keys: set[
@@ -909,12 +927,32 @@ class CoursePagesCleaner:
         # NEW:
         # Track collisions instead of silently skipping them.
         duplicate_count = 0
+        intake_dedup_count = len(intake_skipped)
 
         level_counts: dict[str, int] = {}
 
         warnings: list[
             CleanWarning
         ] = []
+
+        if intake_dedup_count:
+            print(
+                f"Intake dedup: skipped "
+                f"{intake_dedup_count} older year "
+                f"duplicate(s); keeping latest "
+                f"intake per course"
+            )
+            for course_url, html_path in intake_skipped:
+                html_rel = (
+                    html_path
+                    .relative_to(self.output_dir)
+                    .as_posix()
+                )
+                self._delete_markdown_for_source(
+                    courses_out,
+                    html_rel=html_rel,
+                    source_url=course_url,
+                )
 
         print(
             f"Cleaning {len(entries)} course pages..."
@@ -1178,6 +1216,13 @@ class CoursePagesCleaner:
             print(
                 f"Skipped {duplicate_count} "
                 f"duplicate output key(s)"
+            )
+
+        if intake_dedup_count:
+            print(
+                f"Intake dedup removed "
+                f"{intake_dedup_count} older "
+                f"year page(s)"
             )
 
         warnings_path = (

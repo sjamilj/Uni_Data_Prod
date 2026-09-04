@@ -471,6 +471,137 @@ def levels_for_url(
     return [classifier.classify(url, course_name=course_name)]
 
 
+def _intake_dedupe_key(
+    url: str,
+    *,
+    url_levels: UrlLevelMap | None = None,
+    classifier: StudyLevelClassifier | None = None,
+) -> tuple[tuple[str, ...], str]:
+    from uni_pages import course_slug_from_url
+
+    slug = course_slug_from_url(url)
+    identity = StudyLevelPathResolver.course_identity_slug(slug)
+    levels = tuple(
+        sorted(
+            levels_for_url(
+                url,
+                url_levels=url_levels,
+                classifier=classifier,
+            )
+        )
+    )
+    return levels, identity
+
+
+def _pick_latest_intake_url(
+    urls: list[str],
+    *,
+    url_levels: UrlLevelMap | None = None,
+    classifier: StudyLevelClassifier | None = None,
+) -> str:
+    from uni_pages import course_slug_from_url
+
+    return max(
+        urls,
+        key=lambda url: (
+            StudyLevelPathResolver.intake_start_year_from_slug(
+                course_slug_from_url(url)
+            ),
+            url.lower(),
+        ),
+    )
+
+
+def dedupe_urls_by_latest_intake(
+    urls: list[str],
+    *,
+    url_levels: UrlLevelMap | None = None,
+    classifier: StudyLevelClassifier | None = None,
+) -> tuple[list[str], list[str]]:
+    """When the same course exists for multiple intake years, keep only the latest.
+
+    Grouping is per (study_level set, course identity slug). Foundation and
+    undergraduate URLs are never merged unless they share the same levels.
+    """
+    if len(urls) <= 1:
+        return list(urls), []
+
+    classifier = classifier or StudyLevelClassifier()
+    groups: dict[tuple[tuple[str, ...], str], list[tuple[int, str]]] = {}
+    for index, url in enumerate(urls):
+        key = _intake_dedupe_key(
+            url,
+            url_levels=url_levels,
+            classifier=classifier,
+        )
+        groups.setdefault(key, []).append((index, url))
+
+    kept_indices: set[int] = set()
+    skipped: list[str] = []
+    for items in groups.values():
+        if len(items) == 1:
+            kept_indices.add(items[0][0])
+            continue
+        group_urls = [url for _index, url in items]
+        winner = _pick_latest_intake_url(
+            group_urls,
+            url_levels=url_levels,
+            classifier=classifier,
+        )
+        for index, url in items:
+            if url == winner and index not in kept_indices:
+                kept_indices.add(index)
+            elif url != winner:
+                skipped.append(url)
+
+    kept = [urls[index] for index in sorted(kept_indices)]
+    return kept, skipped
+
+
+def dedupe_course_entries_by_latest_intake(
+    entries: list[tuple[str, Path]],
+    *,
+    url_levels: UrlLevelMap | None = None,
+    classifier: StudyLevelClassifier | None = None,
+) -> tuple[list[tuple[str, Path]], list[tuple[str, Path]]]:
+    """Like dedupe_urls_by_latest_intake for (course_url, html_path) catalog rows."""
+    if len(entries) <= 1:
+        return list(entries), []
+
+    classifier = classifier or StudyLevelClassifier()
+    groups: dict[tuple[tuple[str, ...], str], list[tuple[int, tuple[str, Path]]]] = {}
+    for index, entry in enumerate(entries):
+        course_url, _html_path = entry
+        key = _intake_dedupe_key(
+            course_url,
+            url_levels=url_levels,
+            classifier=classifier,
+        )
+        groups.setdefault(key, []).append((index, entry))
+
+    kept_indices: set[int] = set()
+    skipped: list[tuple[str, Path]] = []
+    for items in groups.values():
+        if len(items) == 1:
+            kept_indices.add(items[0][0])
+            continue
+        group_urls = [course_url for _index, (course_url, _path) in items]
+        winner_url = _pick_latest_intake_url(
+            group_urls,
+            url_levels=url_levels,
+            classifier=classifier,
+        )
+        for index, entry in items:
+            course_url, _path = entry
+            if course_url == winner_url and index not in kept_indices:
+                kept_indices.add(index)
+            elif course_url != winner_url:
+                skipped.append(entry)
+
+    kept = [entries[index] for index in sorted(kept_indices)]
+    return kept, skipped
+
+
 def study_level_from_markdown(
     md_path: Path,
     meta: dict[str, str] | None = None,
@@ -545,6 +676,21 @@ class StudyLevelPathResolver:
         if end_year <= start_year:
             end_year += 100
         return f"{start_year} - {end_year}"
+
+    @staticmethod
+    def intake_start_year_from_slug(slug: str) -> int:
+        """Start year from slug suffix (-2027-28 → 2027), or 0 when absent."""
+        match = _INTAKE_YEAR_SUFFIX_RE.search((slug or "").strip())
+        if not match:
+            return 0
+        return int(match.group(1))
+
+    @staticmethod
+    def course_identity_slug(slug: str) -> str:
+        """Course slug without trailing intake year (sound-engineering-bsc-hons-2026-27 → …-hons)."""
+        text = (slug or "").strip()
+        stripped = _INTAKE_YEAR_SUFFIX_RE.sub("", text)
+        return stripped if stripped else text
 
     @staticmethod
     def is_intake_year_folder(name: str) -> bool:
@@ -936,7 +1082,9 @@ def presetup_should_stop_pagination(
 
 # Backward-compatible module-level aliases for path resolver / presetup sampler
 intake_start_year_from_md_path = StudyLevelPathResolver.intake_start_year_from_md_path
+intake_start_year_from_slug = StudyLevelPathResolver.intake_start_year_from_slug
 intake_year_folder_from_stem = StudyLevelPathResolver.intake_year_folder_from_stem
+course_identity_slug = StudyLevelPathResolver.course_identity_slug
 is_intake_year_folder = StudyLevelPathResolver.is_intake_year_folder
 study_level_folder_from_path = StudyLevelPathResolver.study_level_folder_from_path
 clean_course_md_relative_path = StudyLevelPathResolver.clean_course_md_relative_path
