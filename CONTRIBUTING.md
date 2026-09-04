@@ -178,6 +178,7 @@ After `output/dev_courses_{University}_reviewed.csv` exists (from `validate_dev_
 python shared\package_review_output.py "Anglia Ruskin University - ARU"
 # or:
 package_review.bat "Anglia Ruskin University - ARU"
+# PowerShell: .\package_review.bat "Anglia Ruskin University - ARU"
 ```
 
 Creates (gitignored):
@@ -187,6 +188,8 @@ REVIEW/
   {University Name}/
     {Variant}.csv                    # root variant CSV, e.g. DegreeScopedPaginated.csv
     dev_courses_{University}_reviewed.csv
+    missing_field_report.txt
+    clean/uni/*.md                   # cleaned requirement markdown
 ```
 
 Use `--force` to overwrite an existing handoff folder. `REVIEW/` is local output only — regenerate anytime; do not commit it.

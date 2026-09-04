@@ -5,7 +5,25 @@ PowerShell helpers for **git command lines**, **version tags**, and **checkout b
 Run from the repo root:
 
 ```powershell
-cd "E:\Project Next\UK UNIVERSITIES\UNI\Uni_Data_Prod"
+cd "D:\DATA SCOL\UK_Uni_Data"
+```
+
+**PowerShell execution policy:** If `.\scripts\commit-uni.ps1` fails with *running scripts is disabled*, use either:
+
+```powershell
+.\scripts\commit-uni.cmd -Pick infra -Type chore -Summary "add commit and tag helper scripts"
+```
+
+or:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\commit-uni.ps1 -Pick infra -Type chore -Summary "add commit and tag helper scripts"
+```
+
+To allow `.ps1` scripts for your user account (one-time):
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 ```
 
 University names and scopes come from [UNIVERSITIES_REGISTRY.md](../UNIVERSITIES_REGISTRY.md). Full workflow: [CONTRIBUTING.md](../CONTRIBUTING.md).
@@ -16,12 +34,14 @@ University names and scopes come from [UNIVERSITIES_REGISTRY.md](../UNIVERSITIES
 
 `-Pick` accepts any of these for the same uni:
 
-| Form | Example (ARU) |
-|------|----------------|
-| Unit | `unit-01` |
-| Slug | `aru` |
-| Scope | `unit-01/aru` |
+
+| Form        | Example (ARU)                    |
+| ----------- | -------------------------------- |
+| Unit        | `unit-01`                        |
+| Slug        | `aru`                            |
+| Scope       | `unit-01/aru`                    |
 | Folder name | `Anglia Ruskin University - ARU` |
+
 
 List all entries:
 
@@ -34,13 +54,15 @@ Get-UniRegistry | Format-Table Unit, Slug, Folder, Status
 
 ## Scripts
 
-| Script | Purpose |
-|--------|---------|
-| `Get-UniRegistry.ps1` | Load unit/slug/folder from the registry (dot-sourced by other scripts) |
-| `commit-uni.ps1` | **Print** `git add` + `git commit` commands (does not run git) |
-| `tag-uni.ps1` | Tag the current commit with a version (`v1.0.0`, `v1.0.1`, …) |
-| `checkout-uni.ps1` | Sparse-checkout one university at a tag |
-| `tag-unit-complete.ps1` | Legacy wrapper → `tag-uni.ps1` (full university only) |
+
+| Script                  | Purpose                                                                |
+| ----------------------- | ---------------------------------------------------------------------- |
+| `Get-UniRegistry.ps1`   | Load unit/slug/folder from the registry (dot-sourced by other scripts) |
+| `commit-uni.ps1`        | **Print** `git add` + `git commit` commands (does not run git)         |
+| `tag-uni.ps1`           | Tag the current commit with a version (`v1.0.0`, `v1.0.1`, …)          |
+| `checkout-uni.ps1`      | Sparse-checkout one university at a tag                                |
+| `tag-unit-complete.ps1` | Legacy wrapper → `tag-uni.ps1` (full university only)                  |
+
 
 ---
 
@@ -66,12 +88,15 @@ For university commits, the script reads **git tags + git log** for that scope a
 # Auto-detect repo infra (scripts/, CONTRIBUTING.md, UNIVERSITIES_REGISTRY.md, …)
 .\scripts\commit-uni.ps1 -Pick infra -Type chore -Summary "add commit and tag helper scripts"
 
+.\scripts\commit-uni.cmd -Pick infra -Type chore -Summary "add commit and tag helper scripts"
 # Manual paths (optional)
 .\scripts\commit-uni.ps1 -Pick aru -Type feat -StudyLevel foundation -Paths "code/.env,readme.md"
 
 # Fix with auto-detected files
 .\scripts\commit-uni.ps1 -Pick bcu -Type fix -Summary "correct foundation URL patterns"
 ```
+
+
 
 If you omit `-IncludeShared` but `shared/` has changes, the script prints a hint listing those files and the command to include them.
 
@@ -93,38 +118,46 @@ git commit -m "feat(unit-01/aru): complete foundation pipeline v1.0.0"
 
 ### Version rules (from git history)
 
-| Situation | Next version |
-|-----------|--------------|
-| First `feat` for this uni + study level | `v1.0.0` |
-| `fix` / `wip` after `v1.0.0` | `v1.0.1`, `v1.0.2`, … |
-| Sources checked | `uni/{slug}/.../v*` tags + `git log --grep=unit-NN/slug` |
+
+| Situation                               | Next version                                             |
+| --------------------------------------- | -------------------------------------------------------- |
+| First `feat` for this uni + study level | `v1.0.0`                                                 |
+| `fix` / `wip` after `v1.0.0`            | `v1.0.1`, `v1.0.2`, …                                    |
+| Sources checked                         | `uni/{slug}/.../v*` tags + `git log --grep=unit-NN/slug` |
+
 
 ### Pick values
 
-| `-Pick` | Files from `git status` |
-|---------|-------------------------|
-| `aru`, `unit-01`, folder name | Under that university folder only |
-| same + `-IncludeShared` / `-WithShared` | University folder **and** `shared/` |
-| `infra` / `repo` / `chore` / `docs` | Everything **except** university folders (scripts/, root `.md`, etc.) |
+
+| `-Pick`                                 | Files from `git status`                                               |
+| --------------------------------------- | --------------------------------------------------------------------- |
+| `aru`, `unit-01`, folder name           | Under that university folder only                                     |
+| same + `-IncludeShared` / `-WithShared` | University folder **and** `shared/`                                   |
+| `infra` / `repo` / `chore` / `docs`     | Everything **except** university folders (scripts/, root `.md`, etc.) |
+
 
 ### Generated messages
 
-| Command | Message |
-|---------|---------|
-| `-Type feat` (all levels) | `feat(unit-02/aston): complete pipeline and export dev_courses CSV` |
-| `-StudyLevel foundation` | `feat(unit-01/aru): complete foundation pipeline` |
+
+| Command                                | Message                                                             |
+| -------------------------------------- | ------------------------------------------------------------------- |
+| `-Type feat` (all levels)              | `feat(unit-02/aston): complete pipeline and export dev_courses CSV` |
+| `-StudyLevel foundation`               | `feat(unit-01/aru): complete foundation pipeline`                   |
 | `-StudyLevel foundation,undergraduate` | `feat(unit-01/aru): complete foundation and undergraduate pipeline` |
-| `-Type fix -Summary "..."` | `fix(unit-01/aru): ...` |
+| `-Type fix -Summary "..."`             | `fix(unit-01/aru): ...`                                             |
+
 
 Study level aliases: `ug` → undergraduate, `pg` → postgraduate, `pgr` → postgraduate_research.
 
 ### File paths
 
-| You pass | Resolved as |
-|----------|-------------|
-| `code/.env` | `{University}/code/.env` |
-| `Anglia Ruskin University - ARU/code/.env` | as-is from repo root |
-| `shared/foo.py` | `shared/foo.py` (needs `-IncludeShared`) |
+
+| You pass                                   | Resolved as                              |
+| ------------------------------------------ | ---------------------------------------- |
+| `code/.env`                                | `{University}/code/.env`                 |
+| `Anglia Ruskin University - ARU/code/.env` | as-is from repo root                     |
+| `shared/foo.py`                            | `shared/foo.py` (needs `-IncludeShared`) |
+
 
 `output/` is gitignored — do not pass output files.
 
@@ -143,11 +176,13 @@ Tag **after** you run the commit commands and verify the work.
 
 ### Tag naming
 
-| Scope | Tag |
-|-------|-----|
-| All levels | `uni/aston/v1.0.0` + `unit-02` |
-| Foundation only | `uni/aru/foundation/v1.0.0` |
+
+| Scope           | Tag                                       |
+| --------------- | ----------------------------------------- |
+| All levels      | `uni/aston/v1.0.0` + `unit-02`            |
+| Foundation only | `uni/aru/foundation/v1.0.0`               |
 | Foundation + UG | `uni/aru/foundation-undergraduate/v1.0.1` |
+
 
 ---
 
@@ -202,7 +237,10 @@ git show 8866faf:"Anglia Ruskin University - ARU/code/ENV.MD" > "$env:TEMP\aru-e
 python shared\build_env.py --code-dir "Anglia Ruskin University - ARU\code"
 ```
 
-| File | Safe to restore from old commit? |
-|------|----------------------------------|
-| `{University}/code/ENV.MD` | Yes (merge manually) |
-| `shared/*.py` | No — use current `HEAD`; old patches are already included |
+
+| File                       | Safe to restore from old commit?                          |
+| -------------------------- | --------------------------------------------------------- |
+| `{University}/code/ENV.MD` | Yes (merge manually)                                      |
+| `shared/*.py`              | No — use current `HEAD`; old patches are already included |
+
+

@@ -105,8 +105,8 @@ After `dev_courses_{University}_reviewed.csv` exists in `{University}/output/`, 
 
 ```powershell
 python shared/package_review_output.py "Anglia Ruskin University - ARU"
-# or from repo root:
-package_review.bat "Anglia Ruskin University - ARU"
+# or from repo root (PowerShell needs .\ prefix):
+.\package_review.bat "Anglia Ruskin University - ARU"
 ```
 
 Output layout:

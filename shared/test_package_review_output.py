@@ -28,6 +28,9 @@ class ReviewPackageTests(unittest.TestCase):
         output_dir.mkdir()
         reviewed = output_dir / f"dev_courses_{self.uni_name}_reviewed.csv"
         reviewed.write_text("courseName\n", encoding="utf-8")
+        uni_clean = output_dir / "clean" / "uni"
+        uni_clean.mkdir(parents=True)
+        (uni_clean / "english-requirements.md").write_text("# English\n", encoding="utf-8")
         self.builder = ReviewPackageBuilder(self.root)
 
     def tearDown(self) -> None:
@@ -49,6 +52,9 @@ class ReviewPackageTests(unittest.TestCase):
             f"dev_courses_{self.uni_name}_reviewed.csv",
         )
         self.assertEqual(result.missing_field_report_txt.name, REPORT_TXT_NAME)
+        self.assertEqual(len(result.uni_clean_files), 1)
+        self.assertTrue(result.uni_clean_files[0].is_file())
+        self.assertEqual(result.uni_clean_files[0].name, "english-requirements.md")
 
     def test_missing_reviewed_csv_raises(self) -> None:
         (self.uni_dir / "output" / f"dev_courses_{self.uni_name}_reviewed.csv").unlink()
@@ -75,6 +81,7 @@ class ReviewPackageTests(unittest.TestCase):
         self.assertTrue(result.variant_csv.is_file())
         self.assertTrue(result.reviewed_csv.is_file())
         self.assertTrue(result.missing_field_report_txt.is_file())
+        self.assertEqual(len(result.uni_clean_files), 1)
 
 
 if __name__ == "__main__":
