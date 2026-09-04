@@ -55,8 +55,13 @@ For university commits, the script reads **git tags + git log** for that scope a
 ### Examples
 
 ```powershell
-# Auto-detect unstaged files under the university folder
+# Auto-detect unstaged files under the university folder only
 .\scripts\commit-uni.ps1 -Pick aru -Type feat -StudyLevel foundation
+
+# University folder + shared/ together (ENV.MD + shared/*.py)
+.\scripts\commit-uni.ps1 -Pick aru -Type feat -StudyLevel postgraduate -IncludeShared
+# same flag, shorter alias:
+.\scripts\commit-uni.ps1 -Pick aru -Type feat -StudyLevel postgraduate -WithShared
 
 # Auto-detect repo infra (scripts/, CONTRIBUTING.md, UNIVERSITIES_REGISTRY.md, …)
 .\scripts\commit-uni.ps1 -Pick infra -Type chore -Summary "add commit and tag helper scripts"
@@ -66,10 +71,9 @@ For university commits, the script reads **git tags + git log** for that scope a
 
 # Fix with auto-detected files
 .\scripts\commit-uni.ps1 -Pick bcu -Type fix -Summary "correct foundation URL patterns"
-
-# Include shared/ in git status scan
-.\scripts\commit-uni.ps1 -Pick aston -Type fix -Summary "foundation URL patterns" -IncludeShared
 ```
+
+If you omit `-IncludeShared` but `shared/` has changes, the script prints a hint listing those files and the command to include them.
 
 ### Output (copy and run)
 
@@ -100,6 +104,7 @@ git commit -m "feat(unit-01/aru): complete foundation pipeline v1.0.0"
 | `-Pick` | Files from `git status` |
 |---------|-------------------------|
 | `aru`, `unit-01`, folder name | Under that university folder only |
+| same + `-IncludeShared` / `-WithShared` | University folder **and** `shared/` |
 | `infra` / `repo` / `chore` / `docs` | Everything **except** university folders (scripts/, root `.md`, etc.) |
 
 ### Generated messages
@@ -180,3 +185,24 @@ git status -- "Anglia Ruskin University - ARU"
 # 4. Tag
 .\scripts\tag-uni.ps1 -Pick aru -StudyLevel foundation
 ```
+
+## Restore foundation config from an old commit (safe)
+
+**Do not** `git checkout <old-commit> -- shared/*.py` — that replaces the whole file with an old version and breaks the dashboard.
+
+The foundation fixes from `8866faf` are already in current `shared/` on `HEAD`. Only restore **university config**:
+
+```powershell
+# ARU foundation URL patterns + markdown cleanup (ENV.MD only)
+git show 8866faf:"Anglia Ruskin University - ARU/code/ENV.MD" > "$env:TEMP\aru-env.md"
+# Manually merge FOUNDATION_URL_PATTERNS and COURSE_MARKDOWN_REMOVE_SECTIONS into code/ENV.MD
+# Keep newer lines from HEAD too (e.g. Full description :: #summary)
+
+# Regenerate .env after editing ENV.MD
+python shared\build_env.py --code-dir "Anglia Ruskin University - ARU\code"
+```
+
+| File | Safe to restore from old commit? |
+|------|----------------------------------|
+| `{University}/code/ENV.MD` | Yes (merge manually) |
+| `shared/*.py` | No — use current `HEAD`; old patches are already included |

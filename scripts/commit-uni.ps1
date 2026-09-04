@@ -4,6 +4,7 @@
 #
 # Examples:
 #   .\scripts\commit-uni.ps1 -Pick aru -Type feat -StudyLevel foundation
+#   .\scripts\commit-uni.ps1 -Pick aru -Type feat -StudyLevel postgraduate -IncludeShared
 #   .\scripts\commit-uni.ps1 -Pick aru -Type feat -StudyLevel foundation -Paths "code/.env,readme.md"
 #   .\scripts\commit-uni.ps1 -Pick infra -Type chore -Summary "add commit and tag helper scripts"
 #   .\scripts\commit-uni.ps1 -Pick infra -Type docs
@@ -21,6 +22,7 @@ param(
 
     [string]$Summary = "",
 
+    [Alias("WithShared")]
     [switch]$IncludeShared
 )
 
@@ -210,6 +212,19 @@ if ($isInfra) {
     if ($foreign) {
         throw "File(s) outside $($folder)$(if ($IncludeShared) { ' and shared/' } else { '' }):`n  $($foreign -join "`n  ")"
     }
+
+    if (-not $IncludeShared -and $Paths.Count -eq 0) {
+        $sharedPending = Get-GitStatusPaths -Root $repoRoot -PathSpecs @("shared") |
+            Where-Object { $_.StartsWith("shared/") }
+        if ($sharedPending) {
+            $script:sharedHint = @(
+                "# shared/ also has unstaged changes (not included):"
+            ) + ($sharedPending | ForEach-Object { "#   $_" }) + @(
+                "# add university + shared together:"
+                "#   .\scripts\commit-uni.ps1 -Pick $Pick -Type $Type -StudyLevel $(Get-StudyLevelLabel -StudyLevels $StudyLevel) -IncludeShared"
+            )
+        }
+    }
 }
 
 if (-not $resolved) {
@@ -227,6 +242,7 @@ if (-not $resolved) {
         "Check: git status -- `"$folder`""
         "output/ is gitignored - only tracked files appear here."
         "Or pass paths: -Paths code/.env,readme.md"
+        "Or include shared/: -IncludeShared  (alias: -WithShared)"
     ) -join "`n"
 }
 
@@ -253,6 +269,13 @@ Write-Host ""
 Write-Host $addCmd
 Write-Host $commitCmd
 Write-Host ""
+
+if ($script:sharedHint) {
+    foreach ($line in $script:sharedHint) {
+        Write-Host $line
+    }
+    Write-Host ""
+}
 
 if (-not $isInfra) {
     $levelHint = Get-StudyLevelLabel -StudyLevels $StudyLevel
