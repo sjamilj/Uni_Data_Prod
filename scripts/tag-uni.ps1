@@ -109,7 +109,7 @@ Write-Host "Registry row (update UNIVERSITIES_REGISTRY.md tag + commit columns):
 Write-Host "| $($entry.Unit) | $($entry.Slug) | $($entry.Folder) | complete | $tagName | $sha |"
 Write-Host ""
 Write-Host "Check out later:"
-Write-Host "  .\scripts\checkout-uni.ps1 -University `"$($entry.Folder)`" -Tag `"$tagName`""
+Write-Host "  .\scripts\checkout-uni.ps1 -Pick $Pick -StudyLevel $levelHint"
 Write-Host ""
 Write-Host "Push when ready:"
 if ($label -eq "all") {

@@ -13,6 +13,18 @@ function Get-UniRegistry {
 
     $rows = @()
     foreach ($line in Get-Content -LiteralPath $registryPath) {
+        if ($line -match '^\|\s*(unit-\d{2})\s*\|\s*([a-z0-9-]+)\s*\|\s*([^|]+?)\s*\|\s*(\w+)\s*\|\s*([^|]*?)\s*\|\s*([^|]*?)\s*\|') {
+            $rows += [pscustomobject]@{
+                Unit     = $Matches[1].Trim()
+                Slug     = $Matches[2].Trim()
+                Folder   = $Matches[3].Trim()
+                Status   = $Matches[4].Trim()
+                Tag      = $Matches[5].Trim()
+                Commit   = $Matches[6].Trim()
+                Scope    = "$($Matches[1].Trim())/$($Matches[2].Trim())"
+            }
+            continue
+        }
         if ($line -notmatch '^\|\s*(unit-\d{2})\s*\|\s*([a-z0-9-]+)\s*\|\s*([^|]+?)\s*\|\s*(\w+)\s*\|') {
             continue
         }
@@ -21,6 +33,8 @@ function Get-UniRegistry {
             Slug     = $Matches[2].Trim()
             Folder   = $Matches[3].Trim()
             Status   = $Matches[4].Trim()
+            Tag      = ""
+            Commit   = ""
             Scope    = "$($Matches[1].Trim())/$($Matches[2].Trim())"
         }
     }
@@ -307,4 +321,102 @@ function Get-LatestUniTagVersion {
 
     $latest = ($versions | Sort-Object -Descending | Select-Object -First 1)
     return "{0}.{1}.{2}" -f $latest.Major, $latest.Minor, ($latest.Build + 1)
+}
+
+function Get-UniTags {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Slug,
+
+        [string]$Unit = "",
+
+        [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
+    )
+
+    $tags = @(git -C $RepoRoot tag -l "uni/$Slug/*")
+    if ($Unit) {
+        $unitTag = git -C $RepoRoot tag -l $Unit
+        if ($unitTag) {
+            $tags += $unitTag
+        }
+    }
+
+    return $tags | Select-Object -Unique | Sort-Object
+}
+
+function Resolve-CheckoutTag {
+    param(
+        [Parameter(Mandatory = $true)]
+        $Entry,
+
+        [string[]]$StudyLevels = @("all"),
+
+        [string]$Version = "",
+
+        [string]$Tag = "",
+
+        [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
+    )
+
+    if ($Tag.Trim()) {
+        $exists = git -C $RepoRoot tag -l $Tag.Trim()
+        if (-not $exists) {
+            throw "Tag not found: $($Tag.Trim())"
+        }
+        return $Tag.Trim()
+    }
+
+    if ($Version.Trim()) {
+        $tagName = Get-UniTagName -Slug $Entry.Slug -Version $Version.Trim() -StudyLevels $StudyLevels
+        $exists = git -C $RepoRoot tag -l $tagName
+        if (-not $exists) {
+            throw "Tag not found: $tagName"
+        }
+        return $tagName
+    }
+
+    if ($Entry.Tag) {
+        $exists = git -C $RepoRoot tag -l $Entry.Tag
+        if ($exists) {
+            return $Entry.Tag
+        }
+    }
+
+    $label = Get-StudyLevelLabel -StudyLevels $StudyLevels
+    if ($label -eq "all") {
+        $patterns = @("uni/$($Entry.Slug)/v*", "uni/$($Entry.Slug)/*")
+    } else {
+        $patterns = @("uni/$($Entry.Slug)/$label/v*")
+    }
+
+    $candidates = @()
+    foreach ($pattern in $patterns) {
+        foreach ($name in @(git -C $RepoRoot tag -l $pattern)) {
+            if ($name -match '/v(\d+\.\d+\.\d+)$') {
+                $candidates += [pscustomobject]@{
+                    Name    = $name
+                    Version = [version]$Matches[1]
+                }
+            }
+        }
+        if ($candidates) { break }
+    }
+
+    if ($candidates) {
+        return ($candidates | Sort-Object Version -Descending | Select-Object -First 1).Name
+    }
+
+    $unitTag = git -C $RepoRoot tag -l $Entry.Unit
+    if ($unitTag) {
+        return $Entry.Unit
+    }
+
+    $available = Get-UniTags -Slug $Entry.Slug -Unit $Entry.Unit -RepoRoot $RepoRoot
+    $hint = if ($available) {
+        "Available tags:`n  $($available -join "`n  ")"
+    } else {
+        "No tags found. Create one with: .\scripts\tag-uni.ps1 -Pick $($Entry.Slug)"
+    }
+
+    throw "No checkout tag for $($Entry.Folder). $hint"
 }

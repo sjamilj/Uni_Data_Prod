@@ -107,8 +107,9 @@ Update the registry row (tag + commit SHA) in the same or a follow-up `docs` com
 ### 3. Go back to a tagged snapshot
 
 ```powershell
-.\scripts\checkout-uni.ps1 -University "Aston University" -Tag "uni/aston/v1.0.0"
-.\scripts\checkout-uni.ps1 -University "Anglia Ruskin University - ARU" -Tag "uni/aru/foundation/v1.0.0"
+.\scripts\checkout-uni.ps1 -Pick aston
+.\scripts\checkout-uni.ps1 -Pick aru -StudyLevel foundation
+.\scripts\checkout-uni.ps1 -Pick unit-02 -Version 1.0.0
 ```
 
 ### Typical flow (study-level retrofit)

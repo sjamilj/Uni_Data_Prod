@@ -149,7 +149,19 @@ Tag **after** you run the commit commands and verify the work.
 ## 3. Checkout (`checkout-uni.ps1`)
 
 ```powershell
-.\scripts\checkout-uni.ps1 -University "Aston University" -Tag "uni/aston/v1.0.0"
+# Latest tag for that university (registry tag, or newest uni/{slug}/...)
+.\scripts\checkout-uni.ps1 -Pick aru
+.\scripts\checkout-uni.ps1 -Pick unit-02
+
+# Study level or version (optional)
+.\scripts\checkout-uni.ps1 -Pick aru -StudyLevel foundation
+.\scripts\checkout-uni.ps1 -Pick aston -Version 1.0.0
+
+# List tags
+.\scripts\checkout-uni.ps1 -Pick aru -ListTags
+
+# Explicit tag override
+.\scripts\checkout-uni.ps1 -Pick aston -Tag "uni/aston/v1.0.0"
 ```
 
 ---
