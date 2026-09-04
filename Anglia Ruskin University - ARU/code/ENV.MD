@@ -66,7 +66,8 @@ courses-phd
 "
 
 FOUNDATION_URL_PATTERNS="
-foundation
+^/study/undergraduate(?:/|$)
+(?:^|[-_/])(?:bsc|ba|beng|llb|mbchb|moptom|mpharm)(?:[-_/]|$)
 "
 
  
