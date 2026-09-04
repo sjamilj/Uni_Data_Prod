@@ -12,6 +12,8 @@ Use Conventional Commits with a **unit scope** from [UNIVERSITIES_REGISTRY.md](U
 type(unit-NN/slug): short summary
 ```
 
+**Versions go in commit messages and tags.** `commit-uni.ps1` reads git tags + git log for that scope/study level and picks the next version (`v1.0.0` first feat, then `v1.0.1` for fixes). See [Study-level commits and tags](#study-level-commits-and-tags).
+
 Examples:
 
 ```
@@ -19,14 +21,18 @@ wip(unit-03/bcu): tweak COURSE_CLEAN_BLOCKS for foundation pages
 
 feat(unit-03/bcu): complete pipeline and export dev_courses CSV
 
+feat(unit-02/aston): complete foundation pipeline
+
+feat(unit-01/aru): complete foundation and undergraduate pipeline
+
 fix(unit-02/aston): clear unavailable international fees
 ```
 
 | Type | When |
 |------|------|
 | `wip` | In-progress work on a `dev_*` branch (cleanup rules, Presetup, partial Execute) |
-| `feat` | University newly completed (`output/dev_courses_*.csv` exists) |
-| `fix` | Correction after that university was already marked complete |
+| `feat` | University newly completed (`output/dev_courses_*.csv` exists) or a study-level slice is done |
+| `fix` | Correction after that university or study level was already tagged |
 | `docs` | Registry, RUN.md, PIPELINE.md, `docs/` learning guides |
 | `chore` | Shared infra that is not tied to one uni |
 
@@ -46,21 +52,85 @@ git log --oneline -- "Birmingham City University/code"
 
 Squash or reword `wip(...)` commits to `feat(unit-NN/slug): ...` before merging to `main`.
 
-## Tagging a completed university
+## Study-level commits and tags
 
-Only after `output/dev_courses_*.csv` exists:
+Universities can be completed **all at once** or **one study level at a time** (foundation, undergraduate, postgraduate, PGR). Use the helper scripts so the university name, scope, and message stay consistent.
+
+### 1. Commit commands (version from git history)
+
+Pass the university and optionally file paths. **Omit `-Paths`** to auto-read unstaged files from `git status`. The script prints `git add` + `git commit` lines — it does not run git.
 
 ```powershell
-.\scripts\tag-unit-complete.ps1 -University "Aston University" -Unit unit-02 -Slug aston
+# Auto-detect unstaged files under the university folder
+.\scripts\commit-uni.ps1 -Pick aru -Type feat -StudyLevel foundation
+
+# Repo infra (scripts/, CONTRIBUTING.md, …) — use for non-university commits
+.\scripts\commit-uni.ps1 -Pick infra -Type chore -Summary "add commit and tag helper scripts"
+
+# Manual paths (optional)
+.\scripts\commit-uni.ps1 -Pick bcu -Type fix -Summary "correct foundation study level split" -Paths code/.env
 ```
 
-Creates annotated tags `unit-02` and `uni/aston/v1.0.0`. Update the registry row (tag + commit SHA) in the same or a follow-up `docs` commit.
+Copy and run the printed commands. See [scripts/README.md](scripts/README.md).
 
-## Check out one university later
+### 2. Tag (same version as commit)
+
+Tag **after** you verify the export for that scope. First completion is `v1.0.0`; later fixes are `v1.0.1`, `v1.0.2`, …
+
+```powershell
+# Full university — creates uni/aston/v1.0.0 and unit-02
+.\scripts\tag-uni.ps1 -Pick aston
+
+# One study level
+.\scripts\tag-uni.ps1 -Pick unit-01 -StudyLevel foundation
+
+# Several levels, one tag
+.\scripts\tag-uni.ps1 -Pick aru -StudyLevel foundation,undergraduate,postgraduate
+
+# Next patch after a fix commit
+.\scripts\tag-uni.ps1 -Pick aston -StudyLevel foundation -BumpPatch
+
+# Explicit version
+.\scripts\tag-uni.ps1 -Pick bcu -Version 1.0.1
+```
+
+| Scope | Tag examples |
+|-------|----------------|
+| All levels | `uni/aston/v1.0.0`, `unit-02` |
+| Foundation only | `uni/aru/foundation/v1.0.0` |
+| Foundation + UG | `uni/aru/foundation-undergraduate/v1.0.1` |
+
+List tags: `.\scripts\tag-uni.ps1 -Pick aston -ListTags`
+
+Update the registry row (tag + commit SHA) in the same or a follow-up `docs` commit.
+
+### 3. Go back to a tagged snapshot
 
 ```powershell
 .\scripts\checkout-uni.ps1 -University "Aston University" -Tag "uni/aston/v1.0.0"
+.\scripts\checkout-uni.ps1 -University "Anglia Ruskin University - ARU" -Tag "uni/aru/foundation/v1.0.0"
 ```
+
+### Typical flow (study-level retrofit)
+
+For universities completed before study-level splits, re-run Execute per level, then commit + tag each slice (or combine levels in one commit when the uni allows):
+
+```powershell
+# 1. Pipeline work for foundation only …
+.\scripts\commit-uni.ps1 -Pick unit-01 -Type feat -StudyLevel foundation -Paths "code/.env,readme.md"
+# copy/paste the printed git add + git commit lines
+.\scripts\tag-uni.ps1 -Pick unit-01 -StudyLevel foundation
+
+# 2. Later fix
+.\scripts\commit-uni.ps1 -Pick unit-01 -Type fix -Summary "reclassify shared /study/ paths" -Paths code/.env
+.\scripts\tag-uni.ps1 -Pick unit-01 -StudyLevel foundation -BumpPatch   # → v1.0.1
+
+# 3. Next level
+.\scripts\commit-uni.ps1 -Pick unit-01 -Type feat -StudyLevel undergraduate -Paths readme.md
+.\scripts\tag-uni.ps1 -Pick unit-01 -StudyLevel undergraduate
+```
+
+Legacy wrapper (full uni only): `.\scripts\tag-unit-complete.ps1 -University "Aston University" -Unit unit-02 -Slug aston`
 
 ## Documentation (`docs/`)
 
