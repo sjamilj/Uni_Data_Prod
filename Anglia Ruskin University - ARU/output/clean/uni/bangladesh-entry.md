@@ -1,0 +1,92 @@
+---
+source_html: uni_req/bangladesh-entry.html
+source_url: https://www.aru.ac.uk/international/south-asia
+page_type: uni
+university: Anglia Ruskin University - ARU
+cleaned_at: 2026-08-30
+---
+# Bangladesh Entry Requirements
+```json
+{
+  "studyLevels": [
+    {
+      "studyLevel": "Foundation",
+      "programs": [
+        {
+          "program": "",
+          "requirements": [
+            {
+              "degree": "HSC",
+              "grade": "3.0 or 60%"
+            }
+          ],
+          "description": [
+            "Completion of HSC with grade average of 3.0 or 60%"
+          ]
+        }
+      ]
+    },
+    {
+      "studyLevel": "Undergraduate",
+      "programs": [
+        {
+          "program": "",
+          "requirements": [
+            {
+              "degree": "HSC",
+              "grade": "70 (CGPA 4.0) or above"
+            },
+            {
+              "degree": "Bachelor Degree",
+              "grade": "60% or above"
+            },
+            {
+              "degree": "Diploma",
+              "grade": "60% or above"
+            }
+          ],
+          "description": [
+            "For entry to a bachelor’s degree (year 1), we will consider the following qualifications:",
+            "A recognised foundation programme",
+            "International Baccalaureate Diploma",
+            "International Advanced Levels (A Levels)",
+            "Higher Secondary Certificate (HSC) with 70 (CGPA 4.0) or above, from a recognised state Board of Intermediate and Secondary Education",
+            "2-year Bachelor degree in a related subject from a recognised institution with 60% or above",
+            "Diploma (from the Bangladesh Technical Education Board or other recognised institution) in a related subject with 60% or above"
+          ]
+        }
+      ]
+    },
+    {
+      "studyLevel": "Postgraduate",
+      "programs": [
+        {
+          "program": "",
+          "requirements": [
+            {
+              "degree": "Bachelor Degree",
+              "grade": "60% (CGPA 3.0) or above"
+            },
+            {
+              "degree": "Master's Degree",
+              "grade": "60% (Grade B/CGPA 3.0) or above"
+            },
+            {
+              "degree": "Bachelor Degree",
+              "grade": "55% (CGPA 2.75) or above"
+            }
+          ],
+          "description": [
+            "For entry to a Master’s degree, we will consider the following qualifications:",
+            "A recognised pre-Masters course",
+            "4-year Bachelor degree from a recognised university with 60% (CGPA 3.0) or above",
+            "2 year Master's degree (when following a 2 year Bachelor degree) with 60% (Grade B/CGPA 3.0) or above",
+            "4 year Bachelor degree from the Bangladesh University of Engineering and Technology (BUET) with 55% (CGPA 2.75) or above",
+            "For entry to a research degree, we will consider overseas qualifications equivalent to a UK Master’s degree."
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
