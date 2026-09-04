@@ -3,25 +3,13 @@ UNIVERSITY_NAME=Anglia Ruskin University - ARU
 STRATEGY=DEGREE_SCOPED_PAGINATED
 
 # --- DEGREE_SCOPED_PAGINATED: all 4 programmes in one run ---
-UNDERGRADUATE_COURSE_LISTING_PAGE_1=https://www.aru.ac.uk/study/undergraduate/clearing/clearing-courses?levelofstudy=Undergraduate&modeofstudy=Full-time&page=1
-UNDERGRADUATE_COURSE_LISTING_PAGE_2=https://www.aru.ac.uk/study/undergraduate/clearing/clearing-courses?levelofstudy=Undergraduate&modeofstudy=Full-time&page=2
 
+POSTGRADUATE_COURSE_LISTING_PAGE_1=https://www.aru.ac.uk/study/course-search?levelofstudy=Postgraduate&modeofstudy=Full-time&page=1
+POSTGRADUATE_COURSE_LISTING_PAGE_2=https://www.aru.ac.uk/study/course-search?levelofstudy=Postgraduate&modeofstudy=Full-time&page=2
 
-# Legacy single-programme keys (optional fallback if degree-scoped keys are omitted):
-# LISTING_PROGRAMME=undergraduate
-# COURSE_LISTING_PAGE_1=https://www.canterbury.ac.uk/search/undergraduate-courses?pageIndex=1
-# COURSE_LISTING_PAGE_2=https://www.canterbury.ac.uk/search/undergraduate-courses?pageIndex=2
+POSTGRADUATE_RESEARCH_COURSE_LISTING_PAGE_1=https://www.aru.ac.uk/study/course-search?levelofstudy=Research&page=1
+POSTGRADUATE_RESEARCH_COURSE_LISTING_PAGE_2=https://www.aru.ac.uk/study/course-search?levelofstudy=Research&page=2
 
-# --- ALL_COURSE: degree-scoped saved catalogues (one run for all scopes) ---
-# STRATEGY=ALL_COURSE
-# UNDERGRADUATE_COURSE_CATALOGUE_HTML=../course_listing/undergraduate.html
-# POSTGRADUATE_COURSE_CATALOGUE_HTML=../course_listing/…
-# POSTGRADUATE_RESEARCH_COURSE_CATALOGUE_HTML=../course_listing/…
-# FOUNDATION_COURSE_CATALOGUE_HTML=../course_listing/…
-
-# Legacy single catalogue (ALL_COURSE):
-# COURSE_CATALOGUE_URL=
-# COURSE_CATALOGUE_HTML=
 
 
 UNIVERSITY_BASE_URL=https://www.aru.ac.uk
@@ -42,10 +30,6 @@ COURSE_PATH_PATTERNS="
 "
 
 # --- Study-level URL split (fallback when a catalogue is not degree-scoped) ---
-UNDERGRADUATE_URL_PATTERNS="
-^/study/undergraduate(?:/|$)
-(?:^|[-_/])(?:bsc|ba|beng|llb|mbchb|moptom|mpharm)(?:[-_/]|$)
-"
 
 POSTGRADUATE_URL_PATTERNS="
 ^/study/postgraduate(?:/|$)
@@ -55,10 +39,6 @@ POSTGRADUATE_URL_PATTERNS="
 POSTGRADUATE_RESEARCH_URL_PATTERNS="
 courses-phd
 (?:^|[-_/])(?:phd|mres|engd|psychd)(?:[-_/]|$)
-"
-
-FOUNDATION_URL_PATTERNS="
-foundation
 "
 
  
@@ -90,6 +70,7 @@ COURSE_CLEAN_ENGINE=utopian
 # One CSS selector per line; optional heading with :: or |
 COURSE_CLEAN_BLOCKS="
 Course overview :: #utopian-course-overview
+Full description :: #summary
 Entry requirements :: #entry_requirements
 Fees and funding :: #fees_and_funding
 "
@@ -107,7 +88,8 @@ COURSE_CLEAN_EXPAND_TABS=true
 # --- Course markdown cleanup (shared/course_markdown_cleanup.py) ---
 COURSE_MARKDOWN_REMOVE_SECTIONS="
 4 :: With placement
-4 :: With foundation year
+4 :: BSc (Hons)
+4 :: BA (Hons)
 4 :: Important additional notes
 4 :: *part-time*
 3 :: UK students
@@ -116,6 +98,7 @@ COURSE_MARKDOWN_REMOVE_SECTIONS="
 5 :: UK students*
 5 :: *part-time*
 "
+
 # --- uni_req source URLs (for JSON saves without browser URL metadata) ---
 UNI_REQ_SOURCE_URLS="
 bangladesh-entry :: https://www.aru.ac.uk/international/south-asia
