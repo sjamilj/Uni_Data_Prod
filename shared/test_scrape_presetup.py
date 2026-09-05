@@ -61,35 +61,6 @@ class ScrapePresetupSampleTests(unittest.TestCase):
             "undergraduate",
         )
 
-    def test_tag_urls_uses_scope_for_degree_scoped_all_course_catalogues(self) -> None:
-        classifier = StudyLevelClassifier.from_env_lists(
-            {
-                "undergraduate": [r"^/study/undergraduate/"],
-                "foundation": [r"foundation"],
-            }
-        )
-        mapping = UrlLevelMap()
-        urls = [
-            "https://www.keele.ac.uk/study/undergraduate/undergraduatecourses/accountingandfinance",
-            "https://www.keele.ac.uk/study/undergraduate/undergraduatecourses/nursingassociatefoundationdegree",
-        ]
-        mapping.tag_urls(
-            urls,
-            scope="FOUNDATION",
-            classifier=classifier,
-            source_scope="FOUNDATION",
-            scope_determines_level=True,
-        )
-        records = {record["course_url"]: record["study_level"] for record in mapping.records()}
-        self.assertEqual(
-            records["https://www.keele.ac.uk/study/undergraduate/undergraduatecourses/accountingandfinance"],
-            "foundation",
-        )
-        self.assertEqual(
-            records["https://www.keele.ac.uk/study/undergraduate/undergraduatecourses/nursingassociatefoundationdegree"],
-            "foundation",
-        )
-
     def test_presetup_scrape_does_not_replace_full_course_urls(self) -> None:
         import tempfile
         from scrape_course_urls import ArtifactStore, ProgressStore

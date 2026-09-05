@@ -1192,7 +1192,6 @@ class CatalogueUrlExtractor:
             scope=scope,
             classifier=self.config.level_classifier,
             source_scope=scope or "ALL_COURSE",
-            scope_determines_level=self.config.strategy == STRATEGY_ALL_COURSE,
         )
         print(
             f"{scope_prefix}  Extracted {len(page_urls)} course URLs from catalogue "
@@ -1254,7 +1253,6 @@ class CatalogueUrlExtractor:
                     scope=scope,
                     classifier=self.config.level_classifier,
                     source_scope=scope or "ALL_COURSE",
-                    scope_determines_level=self.config.strategy == STRATEGY_ALL_COURSE,
                 )
                 completed.add(UrlNormalizer.normalize(letter_url, keep_query=True))
                 print(f"    +{len(found)} URLs")
@@ -1580,14 +1578,6 @@ class CourseUrlScraper:
         completed.update(keep)
 
     def _reclassify_url_levels(self, url_levels: UrlLevelMap) -> UrlLevelMap:
-        if self.config.strategy == STRATEGY_ALL_COURSE:
-            rebuilt = UrlLevelMap()
-            for record in url_levels.records():
-                source = record.get("source_scope") or ""
-                scope_level = scope_to_level(source)
-                level = scope_level or record["study_level"]
-                rebuilt.add(record["course_url"], level, source)
-            return rebuilt
         classifier = self.config.level_classifier
         if not classifier.has_custom_patterns:
             return url_levels

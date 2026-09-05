@@ -39,11 +39,11 @@ from study_level import (  # noqa: E402
     CLEAN_COURSES_SUBDIR,
     PRESETUP_CLEAN_SUBDIR,
     PRESETUP_SAMPLE_SIZE,
-    dedupe_course_records_by_latest_intake,
     is_resume_completed,
     load_presetup_sample,
     load_url_levels,
     parse_study_levels,
+    presetup_download_sample_stale,
     presetup_download_sample_stale,
     presetup_sample_path,
     presetup_sample_urls,
@@ -244,16 +244,12 @@ class PipelineOrchestrator:
         *,
         all_urls: bool,
         limit: int | None,
-    ) -> tuple[list[dict[str, str]], list[str]]:
+    ) -> list[dict[str, str]]:
         mapping = load_url_levels(output_dir)
         records = urls_for_levels(mapping, study_levels)
-        records, skipped_urls = dedupe_course_records_by_latest_intake(
-            records,
-            url_levels=mapping,
-        )
         if not all_urls and limit is not None:
             records = records[:limit]
-        return records, skipped_urls
+        return records
 
     def _normalize_and_export(self, code_dir: Path) -> None:
         python = self.utc_python()
@@ -295,14 +291,9 @@ class PipelineOrchestrator:
             print(f"Ollama is not reachable at {ollama_host}. Start Ollama, then re-run.", file=sys.stderr)
             return 1
 
-        courses, intake_skipped = self._select_execute_courses(
+        courses = self._select_execute_courses(
             output_dir, study_levels, all_urls=all_urls, limit=limit
         )
-        if intake_skipped:
-            self._print(
-                f"Intake dedup: skipped {len(intake_skipped)} older year URL(s); "
-                "keeping latest intake only (before download/clean/LLM)"
-            )
         if not courses:
             print(
                 f"Error: no URLs for study level(s): {', '.join(study_levels)}. "

@@ -68,14 +68,11 @@ class GenericCourseHtmlEngine:
         primary_selector: str,
     ) -> tuple[Tag | None, str]:
         del heading
-        selectors = [part.strip() for part in primary_selector.split(",") if part.strip()]
-        if not selectors:
-            return None, primary_selector.strip()
-        for selector in selectors:
-            node = soup.select_one(selector)
-            if node and len(node.get_text(strip=True)) >= 20:
-                return node, selector
-        return None, primary_selector.strip()
+        selector = primary_selector.strip()
+        node = soup.select_one(selector)
+        if node and len(node.get_text(strip=True)) >= 20:
+            return node, selector
+        return None, selector
 
     @classmethod
     def entry_tabs_to_markdown(cls, entry_section: Tag) -> str:
