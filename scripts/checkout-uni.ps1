@@ -1,17 +1,13 @@
-# Sparse-checkout one university folder (+ shared) at a completion tag.
+# Restore one university folder from a tag or commit (default), or sparse-clone into a new folder.
 #
 # On portable / restricted PCs use checkout-uni.cmd (not .ps1).
 #
-# Examples:
-#   .\scripts\checkout-uni.cmd -Pick aru
-#   .\scripts\checkout-uni.ps1 -Pick unit-02
-#   .\scripts\checkout-uni.ps1 -Pick aru -StudyLevel foundation
-#   .\scripts\checkout-uni.cmd -Pick aston -Version 1.0.0
-#   .\scripts\checkout-uni.cmd -Pick bcu -Commit abc1234
-#   .\scripts\checkout-uni.cmd -Pick aru -ListTags
-#   .\scripts\checkout-uni.ps1 -Pick aston -Tag "uni/aston/v1.0.0"
+# Default (safe): stay on your current branch; only replace that university's folder.
+#   .\scripts\checkout-uni.cmd -Pick bcu -Commit af92caa
+#   .\scripts\checkout-uni.cmd -Pick bcu -Commit af92caa -DryRun
 #
-# Run from a clone of this repo (or pass -RepoUrl to clone fresh).
+# Sparse (destructive in an existing full clone): hides other universities - use only with -RepoUrl.
+#   .\scripts\checkout-uni.cmd -Pick bcu -Commit af92caa -Sparse -RepoUrl https://github.com/... -TargetDir D:\bcu-only
 
 param(
     [Parameter(Mandatory = $true)]
@@ -31,7 +27,11 @@ param(
 
     [switch]$ListTags,
 
-    [switch]$DryRun
+    [switch]$DryRun,
+
+    [switch]$Sparse,
+
+    [switch]$IncludeShared
 )
 
 $ErrorActionPreference = "Stop"
@@ -45,10 +45,53 @@ function Invoke-SparseCheckout {
     )
     Set-Location $Root
     git sparse-checkout init --cone
-    git sparse-checkout set "shared" $UniversityName "PIPELINE.md" "RUN.md" "UNIVERSITIES_REGISTRY.md" "CONTRIBUTING.md"
+    $sparsePaths = @("shared", $UniversityName, "RUN.md", "UNIVERSITIES_REGISTRY.md", "CONTRIBUTING.md")
+    if (Test-Path -LiteralPath (Join-Path $Root "PIPELINE.md")) {
+        $sparsePaths += "PIPELINE.md"
+    }
+    git sparse-checkout set @sparsePaths
     git switch --detach $Ref
     Write-Host "Detached at $Ref"
-    Write-Host "Sparse paths: shared, $UniversityName, pipeline docs"
+    Write-Host "Sparse paths: $($sparsePaths -join ', ')"
+}
+
+function Invoke-RestoreUniversity {
+    param(
+        [string]$Root,
+        [string]$UniversityName,
+        [string]$Ref,
+        [bool]$WithShared
+    )
+    Push-Location $Root
+    try {
+        $branch = git branch --show-current 2>$null
+        if (-not $branch) {
+            throw @"
+Detached HEAD detected. Switch back to main before restoring a university folder:
+  git sparse-checkout disable
+  git switch main
+Then re-run checkout-uni (without -Sparse).
+"@
+        }
+
+        $paths = @($UniversityName)
+        if ($WithShared) {
+            $paths += "shared"
+        }
+
+        git restore --source $Ref -- @paths
+        if ($LASTEXITCODE -ne 0) {
+            git checkout $Ref -- @paths
+        }
+
+        Write-Host "Restored from $Ref onto branch ${branch}:"
+        foreach ($path in $paths) {
+            Write-Host "  $path/"
+        }
+        Write-Host "Other university folders were not changed."
+    } finally {
+        Pop-Location
+    }
 }
 
 $repoRoot = Resolve-Path (Join-Path $PSScriptRoot "..")
@@ -83,31 +126,41 @@ if ($ListTags) {
 $resolvedRef = Resolve-CheckoutRef -Entry $entry -StudyLevels $StudyLevel -Version $Version -Tag $Tag -Commit $Commit -RepoRoot $repoRoot
 $refKind = if ($resolvedRef -match '^[0-9a-f]{7,40}$') { "commit" } else { "tag" }
 $university = $entry.Folder
+$useSparse = [bool]$Sparse -or [bool]$RepoUrl
 
-$uniDir = Join-Path $repoRoot $university
-if (-not (Test-Path -LiteralPath $uniDir)) {
-    throw "University folder not found: $uniDir"
+if ($Sparse -and -not $RepoUrl) {
+    Write-Warning "Sparse mode in an existing full clone hides other universities. Prefer default restore (omit -Sparse)."
 }
 
 Write-Host "University: $university"
 Write-Host "Pick:       $Pick ($($entry.Scope))"
 Write-Host "Ref:        $resolvedRef ($refKind)"
+Write-Host "Mode:       $(if ($useSparse) { 'sparse' } else { 'restore folder only' })"
 Write-Host ""
 
 if ($DryRun) {
     Write-Host "Dry run - would run:"
-    if ($RepoUrl) {
-        if (-not $TargetDir) {
-            $TargetDir = Join-Path (Get-Location) "UK_Uni_Data"
+    if ($useSparse) {
+        if ($RepoUrl) {
+            if (-not $TargetDir) {
+                $TargetDir = Join-Path (Get-Location) "UK_Uni_Data"
+            }
+            Write-Host "  git clone --filter=blob:none --sparse $RepoUrl $TargetDir"
+            Write-Host "  cd $TargetDir"
+        } else {
+            Write-Host "  cd $repoRoot"
         }
-        Write-Host "  git clone --filter=blob:none --sparse $RepoUrl $TargetDir"
-        Write-Host "  cd $TargetDir"
+        Write-Host "  git sparse-checkout init --cone"
+        Write-Host "  git sparse-checkout set shared $university RUN.md UNIVERSITIES_REGISTRY.md CONTRIBUTING.md"
+        Write-Host "  git switch --detach $resolvedRef"
     } else {
         Write-Host "  cd $repoRoot"
+        Write-Host "  git restore --source $resolvedRef -- $university"
+        if ($IncludeShared) {
+            Write-Host "  git restore --source $resolvedRef -- shared"
+        }
+        Write-Host "  (stay on current branch; other universities unchanged)"
     }
-    Write-Host "  git sparse-checkout init --cone"
-    Write-Host "  git sparse-checkout set shared $university PIPELINE.md RUN.md UNIVERSITIES_REGISTRY.md CONTRIBUTING.md"
-    Write-Host "  git switch --detach $resolvedRef"
     $subject = git -C $repoRoot show -s --format=%s $resolvedRef 2>$null
     if ($subject) {
         Write-Host ""
@@ -116,13 +169,17 @@ if ($DryRun) {
     return
 }
 
-if ($RepoUrl) {
-    if (-not $TargetDir) {
-        $TargetDir = Join-Path (Get-Location) "UK_Uni_Data"
+if ($useSparse) {
+    if ($RepoUrl) {
+        if (-not $TargetDir) {
+            $TargetDir = Join-Path (Get-Location) "UK_Uni_Data"
+        }
+        git clone --filter=blob:none --sparse $RepoUrl $TargetDir
+        Invoke-SparseCheckout -Root $TargetDir -UniversityName $university -Ref $resolvedRef
+        return
     }
-    git clone --filter=blob:none --sparse $RepoUrl $TargetDir
-    Invoke-SparseCheckout -Root $TargetDir -UniversityName $university -Ref $resolvedRef
+    Invoke-SparseCheckout -Root $repoRoot -UniversityName $university -Ref $resolvedRef
     return
 }
 
-Invoke-SparseCheckout -Root $repoRoot -UniversityName $university -Ref $resolvedRef
+Invoke-RestoreUniversity -Root $repoRoot -UniversityName $university -Ref $resolvedRef -WithShared:$IncludeShared
