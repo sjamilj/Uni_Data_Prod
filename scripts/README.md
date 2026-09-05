@@ -8,23 +8,26 @@ Run from the repo root:
 cd "D:\DATA SCOL\UK_Uni_Data"
 ```
 
-**PowerShell execution policy:** If `.\scripts\commit-uni.ps1` fails with *running scripts is disabled*, use either:
+## Portable PC / restricted PowerShell
+
+On laptops or work PCs where `running scripts is disabled`, **do not use `.ps1` directly**. Use the **`.cmd`** wrappers — no admin rights or `Set-ExecutionPolicy` needed:
 
 ```powershell
-.\scripts\commit-uni.cmd -Pick infra -Type chore -Summary "add commit and tag helper scripts"
+.\scripts\checkout-uni.cmd -Pick bcu
+.\scripts\commit-uni.cmd -Pick aru -Type feat -StudyLevel foundation
+.\scripts\tag-uni.cmd -Pick aru -StudyLevel foundation
 ```
 
-or:
+| Wrapper | Runs |
+|---------|------|
+| `checkout-uni.cmd` | sparse-checkout one university at a tag |
+| `commit-uni.cmd` | print `git add` + `git commit` lines |
+| `tag-uni.cmd` | create version tags |
+| `tag-unit-complete.cmd` | legacy full-uni tag helper |
 
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\commit-uni.ps1 -Pick infra -Type chore -Summary "add commit and tag helper scripts"
-```
+**Your machine:** `.\scripts\checkout-uni.ps1` will fail. Use `.\scripts\checkout-uni.cmd` instead.
 
-To allow `.ps1` scripts for your user account (one-time):
-
-```powershell
-Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
-```
+Optional (home PC only): `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` then `.ps1` works too.
 
 University names and scopes come from [UNIVERSITIES_REGISTRY.md](../UNIVERSITIES_REGISTRY.md). Full workflow: [CONTRIBUTING.md](../CONTRIBUTING.md).
 
@@ -58,10 +61,10 @@ Get-UniRegistry | Format-Table Unit, Slug, Folder, Status
 | Script                  | Purpose                                                                |
 | ----------------------- | ---------------------------------------------------------------------- |
 | `Get-UniRegistry.ps1`   | Load unit/slug/folder from the registry (dot-sourced by other scripts) |
-| `commit-uni.ps1`        | **Print** `git add` + `git commit` commands (does not run git)         |
-| `tag-uni.ps1`           | Tag the current commit with a version (`v1.0.0`, `v1.0.1`, …)          |
-| `checkout-uni.ps1`      | Sparse-checkout one university at a tag                                |
-| `tag-unit-complete.ps1` | Legacy wrapper → `tag-uni.ps1` (full university only)                  |
+| `commit-uni.ps1` / `.cmd` | **Print** `git add` + `git commit` commands (does not run git)     |
+| `tag-uni.ps1` / `.cmd`  | Tag the current commit with a version (`v1.0.0`, `v1.0.1`, …)          |
+| `checkout-uni.ps1` / `.cmd` | Sparse-checkout one university at a tag                            |
+| `tag-unit-complete.ps1` / `.cmd` | Legacy wrapper → `tag-uni.ps1` (full university only)           |
 
 
 ---
@@ -186,22 +189,28 @@ Tag **after** you run the commit commands and verify the work.
 
 ---
 
-## 3. Checkout (`checkout-uni.ps1`)
+## 3. Checkout (`checkout-uni.cmd`)
+
+Resolves a **tag** first, then falls back to the latest matching **commit** from git history (`feat(unit-NN/slug): ... v1.0.0`).
 
 ```powershell
-# Latest tag for that university (registry tag, or newest uni/{slug}/...)
-.\scripts\checkout-uni.ps1 -Pick aru
-.\scripts\checkout-uni.ps1 -Pick unit-02
+# Latest tag, or latest matching commit in git history
+.\scripts\checkout-uni.cmd -Pick bcu
+.\scripts\checkout-uni.cmd -Pick aston
 
-# Study level or version (optional)
-.\scripts\checkout-uni.ps1 -Pick aru -StudyLevel foundation
-.\scripts\checkout-uni.ps1 -Pick aston -Version 1.0.0
+# Study level or version (matches tag or commit message)
+.\scripts\checkout-uni.cmd -Pick aru -StudyLevel foundation
+.\scripts\checkout-uni.cmd -Pick bcu -Version 1.0.0
 
-# List tags
-.\scripts\checkout-uni.ps1 -Pick aru -ListTags
+# List tags + history commits
+.\scripts\checkout-uni.cmd -Pick bcu -ListTags
 
-# Explicit tag override
-.\scripts\checkout-uni.ps1 -Pick aston -Tag "uni/aston/v1.0.0"
+# Explicit override
+.\scripts\checkout-uni.cmd -Pick aston -Tag "uni/aston/v1.0.0"
+.\scripts\checkout-uni.cmd -Pick bcu -Commit abc1234
+
+# Preview only (no git changes)
+.\scripts\checkout-uni.cmd -Pick bcu -Commit af92caa -DryRun
 ```
 
 ---

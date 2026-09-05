@@ -344,7 +344,122 @@ function Get-UniTags {
     return $tags | Select-Object -Unique | Sort-Object
 }
 
-function Resolve-CheckoutTag {
+function Get-StudyLevelCommitPhrase {
+    param(
+        [string[]]$StudyLevels
+    )
+
+    $label = Get-StudyLevelLabel -StudyLevels $StudyLevels
+    if ($label -eq "all") {
+        return ""
+    }
+
+    $phrase = $label -replace "postgraduate_research", "postgraduate research"
+    return $phrase -replace "-", " and "
+}
+
+function Test-CommitMatchesStudyLevels {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Subject,
+
+        [string[]]$StudyLevels
+    )
+
+    $phrase = Get-StudyLevelCommitPhrase -StudyLevels $StudyLevels
+    if (-not $phrase) {
+        return $true
+    }
+
+    return $Subject -match [regex]::Escape($phrase)
+}
+
+function Get-UniCommitsFromHistory {
+    param(
+        [Parameter(Mandatory = $true)]
+        $Entry,
+
+        [string[]]$StudyLevels = @("all"),
+
+        [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
+    )
+
+    $scope = $Entry.Scope
+    $lines = @(git -C $RepoRoot log --format="%H%x09%s" --all --grep="$scope" 2>$null)
+    $commits = @()
+
+    foreach ($line in $lines) {
+        if (-not $line) { continue }
+        $parts = $line -split "`t", 2
+        $sha = $parts[0]
+        $subject = if ($parts.Count -gt 1) { $parts[1] } else { "" }
+        if ($subject -notmatch "\($([regex]::Escape($scope))\)") {
+            continue
+        }
+        if (-not (Test-CommitMatchesStudyLevels -Subject $subject -StudyLevels $StudyLevels)) {
+            continue
+        }
+
+        $version = ""
+        if ($subject -match '\bv(\d+\.\d+\.\d+)\b') {
+            $version = $Matches[1]
+        }
+
+        $priority = 0
+        if ($subject -match '^(feat|fix|wip)\(') { $priority += 10 }
+        if ($subject -match 'complete') { $priority += 5 }
+
+        $commits += [pscustomobject]@{
+            Sha      = $sha
+            Subject  = $subject
+            Version  = $version
+            Priority = $priority
+        }
+    }
+
+    return $commits |
+        Sort-Object Priority -Descending |
+        Sort-Object { if ($_.Version) { [version]$_.Version } else { [version]"0.0.0" } } -Descending
+}
+
+function Resolve-CheckoutCommitFromHistory {
+    param(
+        [Parameter(Mandatory = $true)]
+        $Entry,
+
+        [string[]]$StudyLevels = @("all"),
+
+        [string]$Version = "",
+
+        [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
+    )
+
+    $commits = Get-UniCommitsFromHistory -Entry $Entry -StudyLevels $StudyLevels -RepoRoot $RepoRoot
+    if (-not $commits) {
+        return $null
+    }
+
+    if ($Version.Trim()) {
+        $wanted = $Version.Trim().TrimStart("v")
+        $match = $commits | Where-Object { $_.Version -eq $wanted } | Select-Object -First 1
+        if ($match) {
+            return $match.Sha
+        }
+        return $null
+    }
+
+    if ($Entry.Commit) {
+        $registryCommit = $Entry.Commit.Trim()
+        $exists = git -C $RepoRoot cat-file -e "$registryCommit^{commit}" 2>$null
+        if ($LASTEXITCODE -eq 0) {
+            return $registryCommit
+        }
+    }
+
+    return ($commits | Select-Object -First 1).Sha
+}
+
+function Resolve-CheckoutRef {
     param(
         [Parameter(Mandatory = $true)]
         $Entry,
@@ -355,8 +470,19 @@ function Resolve-CheckoutTag {
 
         [string]$Tag = "",
 
+        [string]$Commit = "",
+
         [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
     )
+
+    if ($Commit.Trim()) {
+        $sha = $Commit.Trim()
+        git -C $RepoRoot cat-file -e "$sha^{commit}" 2>$null | Out-Null
+        if ($LASTEXITCODE -ne 0) {
+            throw "Commit not found: $sha"
+        }
+        return $sha
+    }
 
     if ($Tag.Trim()) {
         $exists = git -C $RepoRoot tag -l $Tag.Trim()
@@ -369,10 +495,14 @@ function Resolve-CheckoutTag {
     if ($Version.Trim()) {
         $tagName = Get-UniTagName -Slug $Entry.Slug -Version $Version.Trim() -StudyLevels $StudyLevels
         $exists = git -C $RepoRoot tag -l $tagName
-        if (-not $exists) {
-            throw "Tag not found: $tagName"
+        if ($exists) {
+            return $tagName
         }
-        return $tagName
+        $commit = Resolve-CheckoutCommitFromHistory -Entry $Entry -StudyLevels $StudyLevels -Version $Version -RepoRoot $RepoRoot
+        if ($commit) {
+            return $commit
+        }
+        throw "No tag or commit found for version $($Version.Trim()) on $($Entry.Folder)."
     }
 
     if ($Entry.Tag) {
@@ -411,12 +541,45 @@ function Resolve-CheckoutTag {
         return $Entry.Unit
     }
 
-    $available = Get-UniTags -Slug $Entry.Slug -Unit $Entry.Unit -RepoRoot $RepoRoot
-    $hint = if ($available) {
-        "Available tags:`n  $($available -join "`n  ")"
-    } else {
-        "No tags found. Create one with: .\scripts\tag-uni.ps1 -Pick $($Entry.Slug)"
+    $commit = Resolve-CheckoutCommitFromHistory -Entry $Entry -StudyLevels $StudyLevels -RepoRoot $RepoRoot
+    if ($commit) {
+        return $commit
     }
 
-    throw "No checkout tag for $($Entry.Folder). $hint"
+    $available = Get-UniTags -Slug $Entry.Slug -Unit $Entry.Unit -RepoRoot $RepoRoot
+    $history = Get-UniCommitsFromHistory -Entry $Entry -StudyLevels $StudyLevels -RepoRoot $RepoRoot
+    $hintParts = @()
+    if ($available) {
+        $hintParts += "Available tags:`n  $($available -join "`n  ")"
+    }
+    if ($history) {
+        $historyLines = ($history | Select-Object -First 5 | ForEach-Object { "$($_.Sha.Substring(0,7)) $($_.Subject)" }) -join "`n  "
+        $hintParts += "Commits from git log --grep=$($Entry.Scope):`n  $historyLines"
+    } else {
+        $hintParts += "No matching commits in git history. Look for feat($($Entry.Scope)): ... v1.0.0"
+    }
+    if (-not $available) {
+        $hintParts += "Or create a tag: .\scripts\tag-uni.cmd -Pick $($Entry.Slug)"
+    }
+
+    throw "No checkout ref for $($Entry.Folder). $($hintParts -join "`n")"
+}
+
+function Resolve-CheckoutTag {
+    param(
+        [Parameter(Mandatory = $true)]
+        $Entry,
+
+        [string[]]$StudyLevels = @("all"),
+
+        [string]$Version = "",
+
+        [string]$Tag = "",
+
+        [string]$Commit = "",
+
+        [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
+    )
+
+    return Resolve-CheckoutRef -Entry $Entry -StudyLevels $StudyLevels -Version $Version -Tag $Tag -Commit $Commit -RepoRoot $RepoRoot
 }

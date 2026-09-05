@@ -5,11 +5,11 @@ Fixed unit numbers (alphabetical by folder). Use these in git scopes: `feat(unit
 **Pick a university in scripts** by unit, slug, or folder name:
 
 ```powershell
-.\scripts\commit-uni.ps1 -Pick aston -Type feat -StudyLevel foundation
-.\scripts\tag-uni.ps1 -Pick unit-02 -StudyLevel foundation -BumpPatch
-.\scripts\tag-uni.ps1 -Pick aston -ListTags
-.\scripts\checkout-uni.ps1 -Pick aru
-.\scripts\checkout-uni.ps1 -Pick unit-02 -StudyLevel foundation
+.\scripts\commit-uni.cmd -Pick aston -Type feat -StudyLevel foundation
+.\scripts\tag-uni.cmd -Pick unit-02 -StudyLevel foundation -BumpPatch
+.\scripts\tag-uni.cmd -Pick aston -ListTags
+.\scripts\checkout-uni.cmd -Pick aru
+.\scripts\checkout-uni.cmd -Pick unit-02 -StudyLevel foundation
 ```
 
 Find later:
