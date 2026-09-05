@@ -10,7 +10,7 @@ cd "D:\DATA SCOL\UK_Uni_Data"
 
 ## Portable PC / restricted PowerShell
 
-On laptops or work PCs where `running scripts is disabled`, **do not use `.ps1` directly**. Use the `**.cmd`** wrappers — no admin rights or `Set-ExecutionPolicy` needed:
+On laptops or work PCs where `running scripts is disabled`, **do not use** `.ps1` **directly**. Use the `**.cmd`** wrappers — no admin rights or `Set-ExecutionPolicy` needed:
 
 ```powershell
 .\scripts\checkout-uni.cmd -Pick bcu
@@ -35,6 +35,8 @@ University names and scopes come from [UNIVERSITIES_REGISTRY.md](../UNIVERSITIES
 
 ---
 
+
+
 ## Pick a university
 
 `-Pick` accepts any of these for the same uni:
@@ -57,6 +59,8 @@ Get-UniRegistry | Format-Table Unit, Slug, Folder, Status
 
 ---
 
+
+
 ## Scripts
 
 
@@ -71,9 +75,11 @@ Get-UniRegistry | Format-Table Unit, Slug, Folder, Status
 
 ---
 
+
+
 ## 1. Commit commands (`commit-uni.ps1`)
 
-Pass the university (or `infra` for scripts/docs). **Omit `-Paths`** to auto-read unstaged files from `git status`.
+Pass the university (or `infra` for scripts/docs). **Omit** `-Paths` to auto-read unstaged files from `git status`.
 
 For university commits, the script reads **git tags + git log** for that scope and study level, picks the next version (`v1.0.0` first feat, then `v1.0.1` for fixes), and adds it to the commit message.
 
@@ -87,8 +93,10 @@ For university commits, the script reads **git tags + git log** for that scope a
 
 # University folder + shared/ together (ENV.MD + shared/*.py)
 .\scripts\commit-uni.ps1 -Pick aru -Type feat -StudyLevel postgraduate -IncludeShared
+
 # same flag, shorter alias:
-.\scripts\commit-uni.ps1 -Pick aru -Type feat -StudyLevel postgraduate -WithShared
+
+.\scripts\commit-uni.cmd -Pick bcu -Type feat -WithShared
 
 # Auto-detect repo infra (scripts/, CONTRIBUTING.md, UNIVERSITIES_REGISTRY.md, …)
 .\scripts\commit-uni.ps1 -Pick infra -Type chore -Summary "add commit and tag helper scripts"
@@ -119,6 +127,8 @@ git commit -m "feat(unit-01/aru): complete foundation pipeline v1.0.0"
 .\scripts\tag-uni.ps1 -Pick aru -StudyLevel foundation -Version 1.0.0
 ```
 
+
+
 ### Version rules (from git history)
 
 
@@ -129,6 +139,8 @@ git commit -m "feat(unit-01/aru): complete foundation pipeline v1.0.0"
 | Sources checked                         | `uni/{slug}/.../v*` tags + `git log --grep=unit-NN/slug` |
 
 
+
+
 ### Pick values
 
 
@@ -137,6 +149,8 @@ git commit -m "feat(unit-01/aru): complete foundation pipeline v1.0.0"
 | `aru`, `unit-01`, folder name           | Under that university folder only                                     |
 | same + `-IncludeShared` / `-WithShared` | University folder **and** `shared/`                                   |
 | `infra` / `repo` / `chore` / `docs`     | Everything **except** university folders (scripts/, root `.md`, etc.) |
+
+
 
 
 ### Generated messages
@@ -166,6 +180,8 @@ Study level aliases: `ug` → undergraduate, `pg` → postgraduate, `pgr` → po
 
 ---
 
+
+
 ## 2. Tag (`tag-uni.ps1`)
 
 Tag **after** you run the commit commands and verify the work.
@@ -176,6 +192,8 @@ Tag **after** you run the commit commands and verify the work.
 .\scripts\tag-uni.ps1 -Pick aru -StudyLevel foundation -BumpPatch
 .\scripts\tag-uni.ps1 -Pick aston -ListTags
 ```
+
+
 
 ### Tag naming
 
@@ -188,6 +206,8 @@ Tag **after** you run the commit commands and verify the work.
 
 
 ---
+
+
 
 ## 3. Checkout (`checkout-uni.cmd`)
 
@@ -223,6 +243,8 @@ git fetch origin
 .\scripts\checkout-uni.cmd -Pick aston -Tag "uni/aston/v1.0.0"
 ```
 
+
+
 ### Sparse clone (separate folder only)
 
 Use `-Sparse` with `-RepoUrl` and `-TargetDir` to clone **only** one university into a **new** folder. Do **not** use sparse mode in your main full repo.
@@ -232,6 +254,8 @@ Use `-Sparse` with `-RepoUrl` and `-TargetDir` to clone **only** one university 
   -RepoUrl https://github.com/sjamilj/Uni_Data_Prod `
   -TargetDir D:\bcu-only
 ```
+
+
 
 ### Recover from accidental sparse checkout
 
@@ -243,6 +267,8 @@ git switch main
 ```
 
 ---
+
+
 
 ## Typical flow
 
@@ -258,6 +284,8 @@ git status -- "Anglia Ruskin University - ARU"
 # 4. Tag
 .\scripts\tag-uni.ps1 -Pick aru -StudyLevel foundation
 ```
+
+
 
 ## Restore foundation config from an old commit (safe)
 
