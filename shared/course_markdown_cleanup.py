@@ -295,11 +295,16 @@ class CourseMarkdownCleaner:
         return module
 
     def cleanup_course_markdown(self, markdown: str, *, code_dir: Path | None = None) -> str:
-        """Apply .env section removal, then optional per-university cleanup_course_markdown_uni."""
+        """Apply optional uni preprocess, .env section removal, then cleanup_course_markdown_uni."""
         if code_dir is None:
             return markdown
-        cleaned = MarkdownSectionRemover.apply_env_remove_sections(markdown, code_dir)
         module = self.load_uni_course_cleanup_module(code_dir)
+        working = markdown
+        if module is not None:
+            preprocess = getattr(module, "preprocess_course_markdown_uni", None)
+            if callable(preprocess):
+                working = preprocess(working)
+        cleaned = MarkdownSectionRemover.apply_env_remove_sections(working, code_dir)
         if module is None:
             return cleaned
         extra = getattr(module, "cleanup_course_markdown_uni", None)

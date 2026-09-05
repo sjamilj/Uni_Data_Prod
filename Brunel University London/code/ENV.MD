@@ -92,8 +92,31 @@ noscript
 
 COURSE_CLEAN_EXPAND_TABS=true
 
+# --- Course page download (scrape_course_urls.py — before saving HTML) ---
+# Brunel: open Entry requirements tab, select Bangladesh, wait for country API.
+COURSE_DOWNLOAD_PREP=entry_tab_country
+COURSE_DOWNLOAD_HEADLESS=false
+COURSE_DOWNLOAD_ENTRY_TAB_SELECTORS="
+a:has-text('Entry requirements')
+a[href='#entryRequirements']
+"
+COURSE_DOWNLOAD_COUNTRY_SELECT=#country-requirement
+COURSE_DOWNLOAD_COUNTRY=Bangladesh
+COURSE_DOWNLOAD_COUNTRY_WAIT_URL=courseInternationalEntryEquivalent
+COURSE_DOWNLOAD_SCROLL_TO=#entryRequirements
+
 # --- Course markdown cleanup (shared/course_markdown_cleanup.py) ---
 COURSE_MARKDOWN_REMOVE_SECTIONS="
+2 :: Overview
+2 :: Course content
+2 :: Careers and your future
+2 :: UK entry requirements
+2 :: Teaching and learning
+2 :: Assessment and feedback
+2 :: Location of study
+2 :: Entry requirements
+3 :: Related courses
+4 :: UK
 2 :: Latest news
 2 :: Be part of our community
 2 :: Alumni services
@@ -110,7 +133,18 @@ COURSE_MARKDOWN_REMOVE_SECTIONS="
 "
 
 UNI_REQ_SOURCE_URLS="
-bangladesh-entry :: page_type:
-english-requirements :: https://www.brunel.ac.uk/international/english-language-requirements
 scholarships :: https://www.brunel.ac.uk/scholarships/home
+deposit :: page_type:
+"
+
+# --- LLM Stage 2 routing ---
+# Entry + English from course markdown; uni LLM only for scholarship + deposit.
+LLM_STAGE2_UNI_PARTS=scholarship,deposit
+LLM_STAGE2_ENTRY_SOURCE=course
+LLM_STAGE2_ENGLISH_SOURCE=course
+LLM_STAGE2_ENTRY_SECTIONS="
+International entry requirements
+"
+LLM_STAGE2_ENGLISH_SECTIONS="
+English language requirements
 "

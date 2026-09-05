@@ -7,6 +7,14 @@ cleaned_at: 2026-08-30
 ---
 # Tuition fee deposit
 
-# Tuition fee deposit
-
-Save the university international deposit or how-to-pay page from your browser as uni_req/deposit.html.
+{
+  "initialDeposit": "£5,000",
+  "feesMetaData": [
+    {
+      "subtitle": "CAS Deposit",
+      "description": [
+        "You will be required to pay a £5,000 deposit to secure your place on the course and in order to be issued with a CAS. You will also need to pay 50% of your tuition fees for the year before your CAS is issued."
+      ]
+    }
+  ]
+}

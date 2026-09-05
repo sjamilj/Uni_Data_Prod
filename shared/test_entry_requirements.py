@@ -172,6 +172,53 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(hints["tuitionFee"], "18400")
         self.assertEqual(hints["currency"], "GBP")
 
+    def test_brunel_parser_extracts_key_info_fee_intake_and_duration(self) -> None:
+        body = (
+            "Start date\n\nSeptember\n\n"
+            "Mode of study\n\n4 years full-time\n\n5 years full-time with placement\n\n"
+            "International £17,400\n"
+        )
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["tuitionFee"], "17400")
+        self.assertEqual(hints["currency"], "GBP")
+        self.assertEqual(hints["intakeInfo"], "September")
+        self.assertEqual(hints["courseDuration"], "4 years full-time")
+
+    def test_brunel_parser_extracts_fee_from_international_section(self) -> None:
+        body = (
+            "#### International\n\n"
+            "£17,400 full-time\n\n"
+            "£1,955 placement year\n"
+        )
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["tuitionFee"], "17400")
+        self.assertEqual(hints["currency"], "GBP")
+
+    def test_enrich_stage1_promotes_nested_fees_object(self) -> None:
+        body = (
+            "International £17,400\n"
+            "Start date\n\nSeptember\n"
+            "Mode of study\n\n4 years full-time\n"
+        )
+        stage1 = {
+            "fees": {
+                "2026/27": {
+                    "UK": {"fullTime": 9790, "placementYear": 1955},
+                    "International": {"fullTime": 17400, "placementYear": 1955},
+                }
+            }
+        }
+        enriched = enrich_stage1_from_markdown(
+            stage1,
+            course_body=body,
+            course_name="Economics and Mathematics with an Integrated Foundation Year",
+            course_url="https://www.brunel.ac.uk/study/courses/economics-and-mathematics-with-an-integrated-foundation-year",
+        )
+        self.assertEqual(enriched["tuitionFee"], "17400")
+        self.assertEqual(enriched["currency"], "GBP")
+        self.assertEqual(enriched["intakeInfo"], "September")
+        self.assertEqual(enriched["courseDuration"], "4 years full-time")
+
     def test_aston_partially_funded_phd_parses_duration_and_fee_difference(self) -> None:
         body = (
             "Programme length: 3 years\n"
