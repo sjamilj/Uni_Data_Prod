@@ -10,7 +10,7 @@ cd "D:\DATA SCOL\UK_Uni_Data"
 
 ## Portable PC / restricted PowerShell
 
-On laptops or work PCs where `running scripts is disabled`, **do not use `.ps1` directly**. Use the **`.cmd`** wrappers — no admin rights or `Set-ExecutionPolicy` needed:
+On laptops or work PCs where `running scripts is disabled`, **do not use `.ps1` directly**. Use the `**.cmd`** wrappers — no admin rights or `Set-ExecutionPolicy` needed:
 
 ```powershell
 .\scripts\checkout-uni.cmd -Pick bcu
@@ -18,12 +18,14 @@ On laptops or work PCs where `running scripts is disabled`, **do not use `.ps1` 
 .\scripts\tag-uni.cmd -Pick aru -StudyLevel foundation
 ```
 
-| Wrapper | Runs |
-|---------|------|
-| `checkout-uni.cmd` | restore one university folder from a tag/commit (safe default) |
-| `commit-uni.cmd` | print `git add` + `git commit` lines |
-| `tag-uni.cmd` | create version tags |
-| `tag-unit-complete.cmd` | legacy full-uni tag helper |
+
+| Wrapper                 | Runs                                                           |
+| ----------------------- | -------------------------------------------------------------- |
+| `checkout-uni.cmd`      | restore one university folder from a tag/commit (safe default) |
+| `commit-uni.cmd`        | print `git add` + `git commit` lines                           |
+| `tag-uni.cmd`           | create version tags                                            |
+| `tag-unit-complete.cmd` | legacy full-uni tag helper                                     |
+
 
 **Your machine:** `.\scripts\checkout-uni.ps1` will fail. Use `.\scripts\checkout-uni.cmd` instead.
 
@@ -58,13 +60,13 @@ Get-UniRegistry | Format-Table Unit, Slug, Folder, Status
 ## Scripts
 
 
-| Script                  | Purpose                                                                |
-| ----------------------- | ---------------------------------------------------------------------- |
-| `Get-UniRegistry.ps1`   | Load unit/slug/folder from the registry (dot-sourced by other scripts) |
-| `commit-uni.ps1` / `.cmd` | **Print** `git add` + `git commit` commands (does not run git)     |
-| `tag-uni.ps1` / `.cmd`  | Tag the current commit with a version (`v1.0.0`, `v1.0.1`, …)          |
-| `checkout-uni.ps1` / `.cmd` | Restore one university folder from a tag or commit (safe default) |
-| `tag-unit-complete.ps1` / `.cmd` | Legacy wrapper → `tag-uni.ps1` (full university only)           |
+| Script                           | Purpose                                                                |
+| -------------------------------- | ---------------------------------------------------------------------- |
+| `Get-UniRegistry.ps1`            | Load unit/slug/folder from the registry (dot-sourced by other scripts) |
+| `commit-uni.ps1` / `.cmd`        | **Print** `git add` + `git commit` commands (does not run git)         |
+| `tag-uni.ps1` / `.cmd`           | Tag the current commit with a version (`v1.0.0`, `v1.0.1`, …)          |
+| `checkout-uni.ps1` / `.cmd`      | Restore one university folder from a tag or commit (safe default)      |
+| `tag-unit-complete.ps1` / `.cmd` | Legacy wrapper → `tag-uni.ps1` (full university only)                  |
 
 
 ---
@@ -98,8 +100,6 @@ For university commits, the script reads **git tags + git log** for that scope a
 # Fix with auto-detected files
 .\scripts\commit-uni.ps1 -Pick bcu -Type fix -Summary "correct foundation URL patterns"
 ```
-
-
 
 If you omit `-IncludeShared` but `shared/` has changes, the script prints a hint listing those files and the command to include them.
 
@@ -204,7 +204,7 @@ git fetch origin
 
 # Restore BCU folder only (other unis unchanged)
 .\scripts\checkout-uni.cmd -Pick bcu -Commit af92caa
-
+.\scripts\checkout-uni.cmd -Pick bcu -Commit af92caa -IncludeShared
 # Latest tag, or latest matching commit in git history
 .\scripts\checkout-uni.cmd -Pick bcu
 .\scripts\checkout-uni.cmd -Pick aston
