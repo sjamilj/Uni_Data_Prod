@@ -237,10 +237,14 @@ class UrlLevelMap:
         scope: str = "",
         classifier: StudyLevelClassifier | None = None,
         source_scope: str = "",
+        scope_determines_level: bool = False,
     ) -> None:
         classifier = classifier or StudyLevelClassifier()
         level_from_scope = scope_to_level(scope)
         label = source_scope or scope or "ALL_COURSE"
+        if scope_determines_level and level_from_scope:
+            self.add_many(urls, level_from_scope, label)
+            return
         if classifier.has_custom_patterns:
             for url in urls:
                 classified = classifier.classify(url)
@@ -828,9 +832,9 @@ class StudyLevelPathResolver:
     def iter_extracted_json(extracted_dir: Path, filename: str) -> list[Path]:
         if not extracted_dir.is_dir():
             return []
-        paths = list(extracted_dir.glob(f"*/{filename}"))
-        paths.extend(extracted_dir.glob(f"*/*/{filename}"))
-        return sorted({path for path in paths if path.is_file()})
+        return sorted(
+            path for path in extracted_dir.rglob(filename) if path.is_file()
+        )
 
 
 class PresetupSampler:

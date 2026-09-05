@@ -374,7 +374,7 @@ def run_entry_rerun(
     if not skip_uni_validation:
         from validate_uni_clean import ensure_uni_clean_valid
 
-        ensure_uni_clean_valid(output_dir, university_name=code_dir.parent.name)
+        ensure_uni_clean_valid(output_dir, university_name=code_dir.parent.name, code_dir=code_dir)
 
     courses = [index_row_to_entry(row) for row in read_course_index_csv(output_dir)]
     if limit is not None:
