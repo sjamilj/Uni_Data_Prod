@@ -21,6 +21,7 @@ if str(_SHARED_DIR) not in sys.path:
     sys.path.insert(0, str(_SHARED_DIR))
 
 from uni_paths import resolve_code_dir, resolve_output_dir
+from post_llm_enrich import run_post_llm_enrich
 from study_level import PRESETUP_CLEAN_SUBDIR, clean_courses_root, iter_course_markdown
 
 
@@ -117,6 +118,7 @@ class LlmToDevCsvPipeline:
 
         limit_args = ["--limit", str(args.limit)] if args.limit > 0 else []
         if not args.skip_normalize:
+            run_post_llm_enrich(code_dir)
             self.run_step(
                 "Phase 4 - normalize",
                 [python, "-u", str(normalize_script), str(code_dir), *limit_args],
