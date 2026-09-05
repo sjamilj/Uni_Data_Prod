@@ -209,7 +209,24 @@ Tag **after** you run the commit commands and verify the work.
 
 
 
-## 3. Checkout (`checkout-uni.cmd`)
+## 3. Shared baseline (`shared/v1.0.0`)
+
+Before starting a **new** university, pin `shared/` to the general baseline so another uni's experiments do not leak in:
+
+```powershell
+git fetch origin
+git switch main
+git pull
+
+# reset shared/ only (keeps your branch and all university folders)
+git restore --source shared/v1.0.0 -- shared
+```
+
+Tag `shared/v1.0.0` points at commit `d5f7088` (`(chore) Shared infra in general`). List: `git tag -l "shared/*"`. See [CONTRIBUTING.md](../CONTRIBUTING.md#shared-infrastructure-baseline).
+
+---
+
+## 4. Checkout (`checkout-uni.cmd`)
 
 **Default (safe):** stays on your current branch and only replaces that university's folder. Other universities are **not** removed.
 
