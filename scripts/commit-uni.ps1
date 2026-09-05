@@ -86,7 +86,7 @@ function Resolve-CommitPath {
     } elseif ($path.StartsWith("shared\") -or $path -eq "shared") {
         $full = [System.IO.Path]::GetFullPath((Join-Path $Root $path))
     } else {
-        $full = [System.IO.Path]::GetFullPath((Join-Path $Root $UniFolder $path))
+        $full = [System.IO.Path]::GetFullPath((Join-Path (Join-Path $Root $UniFolder) $path))
     }
 
     $rootNorm = [System.IO.Path]::GetFullPath($Root)
