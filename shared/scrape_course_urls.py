@@ -1005,25 +1005,16 @@ class ArtifactStore:
 # ============================================================================
 
 class BrowserSession:
-    """Thin wrapper around a Chromium page, used as a context manager."""
+    """Thin wrapper around a headless Chromium page, used as a context manager."""
 
-    def __init__(
-        self,
-        *,
-        download_prep: Any | None = None,
-        headless: bool = True,
-        goto_timeout_ms: int = 60000,
-    ):
+    def __init__(self):
         self._playwright = None
         self._browser = None
         self.page = None
-        self.download_prep = download_prep
-        self.headless = headless
-        self.goto_timeout_ms = goto_timeout_ms
 
     def __enter__(self) -> "BrowserSession":
         self._playwright = sync_playwright().start()
-        self._browser = self._playwright.chromium.launch(headless=self.headless)
+        self._browser = self._playwright.chromium.launch(headless=True)
         context = self._browser.new_context(user_agent=DEFAULT_USER_AGENT)
         self.page = context.new_page()
         return self
@@ -1072,15 +1063,10 @@ class BrowserSession:
     def download_html(self, url: str, *, wait_for_results: bool = False) -> tuple[str, str]:
         """Navigate to url and return (page_title, html). Retries transient failures."""
         assert self.page is not None
-        use_prep = self.download_prep is not None
         last_error: Exception | None = None
         for attempt in range(1, LISTING_DOWNLOAD_RETRIES + 1):
             try:
-                self.page.goto(
-                    url,
-                    wait_until="domcontentloaded",
-                    timeout=self.goto_timeout_ms,
-                )
+                self.page.goto(url, wait_until="domcontentloaded", timeout=60000)
                 self.dismiss_cookies(self.page)
                 try:
                     self.page.wait_for_load_state("networkidle", timeout=15000)
@@ -1088,16 +1074,6 @@ class BrowserSession:
                     self.page.wait_for_load_state("load", timeout=15000)
                 if wait_for_results:
                     self.wait_for_listing(self.page)
-                elif use_prep:
-                    try:
-                        self.page.wait_for_selector(
-                            "#entryRequirements, #country-requirement",
-                            timeout=20000,
-                        )
-                    except PlaywrightTimeoutError:
-                        pass
-                    self.page.wait_for_timeout(1500)
-                    self.download_prep.prepare(self.page)
                 else:
                     self.page.wait_for_timeout(800)
                 html = self.page.content()
@@ -2044,21 +2020,8 @@ class CoursePageDownloader:
         map_rows: list[list[str]] = []
         stats = {"total": len(urls), "downloaded": 0, "failed": 0, "skipped": 0, "excluded": 0}
         course_filter = CourseTypeFilter.from_code_dir(self.code_dir)
-        from course_download_prep import (
-            load_course_browser_download_config,
-            load_course_download_prep,
-        )
 
-        download_prep = load_course_download_prep(self.code_dir)
-        browser_config = load_course_browser_download_config(self.code_dir)
-        if not browser_config.headless:
-            print("Course download: headed browser (COURSE_DOWNLOAD_HEADLESS=false)")
-
-        with BrowserSession(
-            download_prep=download_prep,
-            headless=browser_config.headless,
-            goto_timeout_ms=browser_config.goto_timeout_ms,
-        ) as browser:
+        with BrowserSession() as browser:
             for index, url in enumerate(urls, start=1):
                 if url in downloaded:
                     stats["skipped"] += 1

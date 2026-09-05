@@ -602,6 +602,62 @@ def dedupe_course_entries_by_latest_intake(
     return kept, skipped
 
 
+def dedupe_course_records_by_latest_intake(
+    records: list[dict[str, str]],
+    *,
+    url_levels: UrlLevelMap | None = None,
+    classifier: StudyLevelClassifier | None = None,
+) -> tuple[list[dict[str, str]], list[str]]:
+    """Keep one URL per (study_level, course identity); latest intake year wins."""
+    if len(records) <= 1:
+        return list(records), []
+
+    from uni_pages import course_slug_from_url
+
+    classifier = classifier or StudyLevelClassifier()
+    groups: dict[tuple[str, str], list[tuple[int, dict[str, str]]]] = {}
+    for index, row in enumerate(records):
+        course_url = str(row.get("course_url") or row.get("url") or "").strip()
+        if not course_url:
+            continue
+        study_level = str(row.get("study_level") or "").strip()
+        if not study_level:
+            study_level = levels_for_url(
+                course_url,
+                url_levels=url_levels,
+                classifier=classifier,
+            )[0]
+        identity = StudyLevelPathResolver.course_identity_slug(
+            course_slug_from_url(course_url)
+        )
+        groups.setdefault((study_level, identity), []).append((index, row))
+
+    kept_indices: set[int] = set()
+    skipped_urls: list[str] = []
+    for items in groups.values():
+        if len(items) == 1:
+            kept_indices.add(items[0][0])
+            continue
+        group_urls = [
+            str(row.get("course_url") or row.get("url") or "").strip()
+            for _index, row in items
+        ]
+        winner_url = _pick_latest_intake_url(
+            group_urls,
+            url_levels=url_levels,
+            classifier=classifier,
+        )
+        for index, row in items:
+            course_url = str(row.get("course_url") or row.get("url") or "").strip()
+            if course_url == winner_url and index not in kept_indices:
+                kept_indices.add(index)
+            elif course_url != winner_url:
+                skipped_urls.append(course_url)
+
+    kept = [records[index] for index in range(len(records)) if index in kept_indices]
+    return kept, skipped_urls
+
+
 def study_level_from_markdown(
     md_path: Path,
     meta: dict[str, str] | None = None,
@@ -1114,3 +1170,4 @@ count_presetup_scrape_urls = count_presetup_scrape_urls
 read_presetup_urls_csv = read_presetup_urls_csv
 select_presetup_download_courses = select_presetup_download_courses
 presetup_download_sample_stale = presetup_download_sample_stale
+dedupe_course_records_by_latest_intake = dedupe_course_records_by_latest_intake

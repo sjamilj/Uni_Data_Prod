@@ -10,7 +10,6 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from course_markdown_cleanup import parse_uni_json_payload
-from llm_stage2_config import LlmStage2Config
 from llm_extract import (
     BANGLADESH_JSON_LEVEL_ALIASES,
     ENGLISH_JSON_LEVEL_ALIASES,
@@ -291,13 +290,7 @@ class UniCleanValidator:
                 "deposit JSON should include initialDeposit and/or feesMetaData",
             )
 
-    def validate_uni_clean(
-        self,
-        output_dir: Path,
-        *,
-        university_name: str = "",
-        code_dir: Path | None = None,
-    ) -> ValidationReport:
+    def validate_uni_clean(self, output_dir: Path, *, university_name: str = "") -> ValidationReport:
         university = university_name or output_dir.parent.name
         report = ValidationReport(university=university)
         uni_dir = output_dir / "clean" / "uni"
@@ -309,13 +302,7 @@ class UniCleanValidator:
             "deposit": self.validate_deposit,
         }
 
-        active_roles = set(UNI_MD_BY_ROLE.keys())
-        if code_dir is not None:
-            active_roles = set(LlmStage2Config.load(code_dir).uni_parts)
-
         for role, filename in UNI_MD_BY_ROLE.items():
-            if role not in active_roles:
-                continue
             path = uni_dir / filename
             if not path.exists():
                 report.add("ERROR", "missing_file", filename, f"Required file not found: {path}")
@@ -329,18 +316,14 @@ class UniCleanValidator:
         return report
 
     @staticmethod
-    def format_report(report: ValidationReport, *, active_roles: set[str] | None = None) -> str:
-        roles = active_roles or set(UNI_MD_BY_ROLE.keys())
+    def format_report(report: ValidationReport) -> str:
         counts: dict[str, dict[str, int]] = {}
         for issue in report.issues:
             bucket = counts.setdefault(issue.file, {"ERROR": 0, "WARN": 0})
             bucket[issue.level] += 1
 
         lines = [f"=== Uni clean validation: {report.university} ==="]
-        for role, filename in UNI_MD_BY_ROLE.items():
-            if role not in roles:
-                lines.append(f"{filename:<24} skipped")
-                continue
+        for filename in UNI_MD_BY_ROLE.values():
             bucket = counts.get(filename, {"ERROR": 0, "WARN": 0})
             lines.append(
                 f"{filename:<24} {bucket['ERROR']} error(s), {bucket['WARN']} warning(s)"
@@ -361,23 +344,12 @@ class UniCleanValidator:
         output_dir: Path,
         *,
         university_name: str = "",
-        code_dir: Path | None = None,
         skip: bool = False,
     ) -> ValidationReport:
-        resolved_code_dir = resolve_code_dir(code_dir) if code_dir is not None else None
-        report = self.validate_uni_clean(
-            output_dir,
-            university_name=university_name,
-            code_dir=resolved_code_dir,
-        )
-        active_roles = (
-            set(LlmStage2Config.load(resolved_code_dir).uni_parts)
-            if resolved_code_dir is not None
-            else set(UNI_MD_BY_ROLE.keys())
-        )
+        report = self.validate_uni_clean(output_dir, university_name=university_name)
         if skip:
             return report
-        print(self.format_report(report, active_roles=active_roles), flush=True)
+        print(self.format_report(report), flush=True)
         if report.error_count:
             raise SystemExit(1)
         return report
@@ -400,8 +372,7 @@ class UniCleanValidateCLI:
 
         code_dir = resolve_code_dir(Path(args.university_dir))
         output_dir = resolve_output_dir(code_dir)
-        report = self.validator.validate_uni_clean(output_dir, code_dir=code_dir)
-        active_roles = set(LlmStage2Config.load(code_dir).uni_parts)
+        report = self.validator.validate_uni_clean(output_dir)
 
         if args.json:
             payload = {
@@ -420,7 +391,7 @@ class UniCleanValidateCLI:
             }
             print(json.dumps(payload, indent=2, ensure_ascii=False))
         else:
-            print(self.validator.format_report(report, active_roles=active_roles))
+            print(self.validator.format_report(report))
 
         return 1 if report.error_count else 0
 
