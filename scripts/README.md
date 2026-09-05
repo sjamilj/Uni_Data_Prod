@@ -20,7 +20,7 @@ On laptops or work PCs where `running scripts is disabled`, **do not use `.ps1` 
 
 | Wrapper | Runs |
 |---------|------|
-| `checkout-uni.cmd` | sparse-checkout one university at a tag |
+| `checkout-uni.cmd` | restore one university folder from a tag/commit (safe default) |
 | `commit-uni.cmd` | print `git add` + `git commit` lines |
 | `tag-uni.cmd` | create version tags |
 | `tag-unit-complete.cmd` | legacy full-uni tag helper |
@@ -63,7 +63,7 @@ Get-UniRegistry | Format-Table Unit, Slug, Folder, Status
 | `Get-UniRegistry.ps1`   | Load unit/slug/folder from the registry (dot-sourced by other scripts) |
 | `commit-uni.ps1` / `.cmd` | **Print** `git add` + `git commit` commands (does not run git)     |
 | `tag-uni.ps1` / `.cmd`  | Tag the current commit with a version (`v1.0.0`, `v1.0.1`, …)          |
-| `checkout-uni.ps1` / `.cmd` | Sparse-checkout one university at a tag                            |
+| `checkout-uni.ps1` / `.cmd` | Restore one university folder from a tag or commit (safe default) |
 | `tag-unit-complete.ps1` / `.cmd` | Legacy wrapper → `tag-uni.ps1` (full university only)           |
 
 
@@ -191,9 +191,20 @@ Tag **after** you run the commit commands and verify the work.
 
 ## 3. Checkout (`checkout-uni.cmd`)
 
+**Default (safe):** stays on your current branch and only replaces that university's folder. Other universities are **not** removed.
+
 Resolves a **tag** first, then falls back to the latest matching **commit** from git history (`feat(unit-NN/slug): ... v1.0.0`).
 
 ```powershell
+# Fetch commit from GitHub first if needed
+git fetch origin
+
+# Preview (no git changes)
+.\scripts\checkout-uni.cmd -Pick bcu -Commit af92caa -DryRun
+
+# Restore BCU folder only (other unis unchanged)
+.\scripts\checkout-uni.cmd -Pick bcu -Commit af92caa
+
 # Latest tag, or latest matching commit in git history
 .\scripts\checkout-uni.cmd -Pick bcu
 .\scripts\checkout-uni.cmd -Pick aston
@@ -202,15 +213,33 @@ Resolves a **tag** first, then falls back to the latest matching **commit** from
 .\scripts\checkout-uni.cmd -Pick aru -StudyLevel foundation
 .\scripts\checkout-uni.cmd -Pick bcu -Version 1.0.0
 
+# Also restore shared/ from that commit
+.\scripts\checkout-uni.cmd -Pick bcu -Commit af92caa -IncludeShared
+
 # List tags + history commits
 .\scripts\checkout-uni.cmd -Pick bcu -ListTags
 
 # Explicit override
 .\scripts\checkout-uni.cmd -Pick aston -Tag "uni/aston/v1.0.0"
-.\scripts\checkout-uni.cmd -Pick bcu -Commit abc1234
+```
 
-# Preview only (no git changes)
-.\scripts\checkout-uni.cmd -Pick bcu -Commit af92caa -DryRun
+### Sparse clone (separate folder only)
+
+Use `-Sparse` with `-RepoUrl` and `-TargetDir` to clone **only** one university into a **new** folder. Do **not** use sparse mode in your main full repo.
+
+```powershell
+.\scripts\checkout-uni.cmd -Pick bcu -Commit af92caa -Sparse `
+  -RepoUrl https://github.com/sjamilj/Uni_Data_Prod `
+  -TargetDir D:\bcu-only
+```
+
+### Recover from accidental sparse checkout
+
+If checkout hid other universities or left you on detached HEAD:
+
+```powershell
+git sparse-checkout disable
+git switch main
 ```
 
 ---
