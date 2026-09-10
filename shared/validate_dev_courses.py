@@ -494,9 +494,12 @@ class DevCoursesValidator:
         scholarship_name = cls.cell(row, "scholarshipName")
         scholarship_meta = parsed_meta.get("scholarshipMetaData") or []
         if scholarship_name and scholarship_meta is not None:
-            course_level = level_resolver.resolve(
-                cls.cell(row, "courseUrlExternal"),
-                cls.cell(row, "courseName"),
+            course_level = (
+                cls.cell(row, "studyLevel")
+                or level_resolver.resolve(
+                    cls.cell(row, "courseUrlExternal"),
+                    cls.cell(row, "courseName"),
+                )
             )
             mismatch = cls.scholarship_level_mismatch(
                 course_level=course_level,

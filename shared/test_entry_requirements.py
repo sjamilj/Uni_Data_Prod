@@ -17,12 +17,14 @@ from llm_extract import (  # noqa: E402
     canonicalize_requirement_degree,
     derive_uk_equivalent_requirements,
     enrich_stage1_from_markdown,
+    extract_bangladesh_section_text,
     extract_entry_lines_from_course_markdown,
     extract_stage1_fields_from_md,
     filter_bangladesh_descriptions_for_course,
     infer_degree_name_from_md,
     merge_requirement_lists,
     parse_bangladesh_json_requirements,
+    select_english_json_program,
 )
 from normalize_admission_data import (  # noqa: E402
     _extract_gbp_fee_from_metadata,
@@ -369,6 +371,60 @@ class EntryRequirementsTests(unittest.TestCase):
         output_dir = resolve_output_dir(repo_root / BCU_CODE)
         report = validate_uni_clean(output_dir, university_name="Birmingham City University")
         self.assertEqual(report.error_count, 0, format_report_issues(report))
+
+    def test_extract_bangladesh_country_block_from_course(self) -> None:
+        body = "## Entry requirements\n#### Bangladesh\n60% in a 4-year degree\n"
+        text = extract_bangladesh_section_text(body, "postgraduate")
+        self.assertIn("60% in a 4-year degree", text)
+
+    def test_select_english_json_program_by_group(self) -> None:
+        programs = [
+            {"ProgramName": "Group A", "TestRequirements": [{"TestName": "IELTS Academic", "ieltsMinOverall": "6.0", "ieltsMinSection": "5.5"}]},
+            {"ProgramName": "Group B", "TestRequirements": [{"TestName": "IELTS Academic", "ieltsMinOverall": "6.5", "ieltsMinSection": "5.5"}]},
+        ]
+        course_body = "This course requires a test from Group B."
+        program = select_english_json_program(
+            programs,
+            course_level="postgraduate",
+            course_name="Law and Society",
+            course_body=course_body,
+        )
+        self.assertEqual(program["ProgramName"], "Group B")
+        self.assertEqual(program["TestRequirements"][0]["ieltsMinOverall"], "6.5")
+
+    def test_keele_stage1_fields_from_key_information(self) -> None:
+        body = """## Key information
+### Year of entry
+
+- 2027 - for 2027 entry see here  - for 2026 entry see here
+
+### Duration of study
+
+- 3 years or 4 years with international, placement or entrepreneurship year
+
+## Fees and funding
+
+- International: Band 1, £18,200 for the 2026/27 academic year
+"""
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["intakeInfo"], "January 2027, September 2026")
+        self.assertEqual(hints["courseDuration"], "3 years")
+        self.assertEqual(hints["tuitionFee"], "18200")
+        self.assertEqual(hints["currency"], "GBP")
+
+    def test_keele_stage1_fields_pg_month_of_entry(self) -> None:
+        body = """## Key information
+### Month of entry
+
+- September
+
+### Fees for 2026/27 academic year
+
+- UK - Full time £10,400 per year.  International - £18,200 per year.
+"""
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["intakeInfo"], "September 2026")
+        self.assertEqual(hints["tuitionFee"], "18200")
 
 
 def format_report_issues(report) -> str:

@@ -52,6 +52,8 @@ foundation
 EXCLUDED_COURSE_PATHS="
 /study/courses
 /study/courses-atoz
+/study/courses/electronic-and-communications-engineering-beng-china
+/study/courses/electronic-engineering-beng-top-up
 "
 
 EXCLUDED_PATH_PREFIXES="
@@ -65,6 +67,14 @@ EXCLUDED_PATH_PREFIXES="
 /research/
 /news/
 /events/
+"
+
+# China partnership / top-up programmes (no Bangladesh entry; taught in China or UK top-up only)
+COURSE_EXCLUDE_URL_PATTERNS="
+*/electronic-and-communications-engineering-beng-china
+*/electronic-engineering-beng-top-up
+*-beng-china
+*-beng-top-up
 "
 
 # --- Course page cleaning (download_and_clean_course_pages.py — course_detail/) ---

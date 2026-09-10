@@ -22,6 +22,8 @@ from study_level import extraction_dir, intake_start_year_from_md_path, iter_ext
 from uni_pages import split_frontmatter
 from uni_paths import resolve_code_dir, resolve_output_dir
 
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+
 FOUNDATION_YEAR_MD_RE = re.compile(
     r"\bwith foundation year\b|\bfoundation year\b",
     re.I,
@@ -57,6 +59,7 @@ DEV_COURSE_CSV_COLUMNS = [
     "scholarshipMetaData",
     "degreeName",
     "courseUrlExternal",
+    "studyLevel",
 ]
 
 JSON_COLUMNS = frozenset(
@@ -243,8 +246,16 @@ class DevCoursesExporter:
         md_path = cls._resolve_index_md_path(output_dir, row)
         if not md_path:
             return False
-        _meta, body = split_frontmatter(md_path.read_text(encoding="utf-8"))
+        meta, body = split_frontmatter(md_path.read_text(encoding="utf-8"))
+        if str(meta.get("study_level") or "").strip().lower() == "foundation":
+            return True
         return bool(FOUNDATION_YEAR_MD_RE.search(body))
+
+    @classmethod
+    def index_row_is_foundation_pathway(cls, output_dir: Path, row: dict[str, str]) -> bool:
+        if (row.get("study_level") or "").strip().lower() == "foundation":
+            return True
+        return cls.markdown_indicates_foundation_year(output_dir, row)
 
     @classmethod
     def normalized_path_for_index_row(cls, output_dir: Path, row: dict[str, str]) -> Path:
@@ -263,7 +274,7 @@ class DevCoursesExporter:
         if len(rows) == 1:
             return rows[0]
 
-        want_foundation = any(cls.markdown_indicates_foundation_year(output_dir, row) for row in rows)
+        want_foundation = any(cls.index_row_is_foundation_pathway(output_dir, row) for row in rows)
         preferred_level = "foundation" if want_foundation else "undergraduate"
 
         def sort_key(row: dict[str, str]) -> tuple[int, int, str]:
@@ -280,23 +291,37 @@ class DevCoursesExporter:
         output_dir: Path,
         rows: list[dict[str, str]],
     ) -> list[dict[str, str]]:
-        """Collapse duplicate index rows that share the same course URL path."""
-        grouped: dict[str, list[dict[str, str]]] = {}
+        """Collapse duplicate index rows per (course URL path, study_level).
+
+        Foundation and undergraduate may share the same URL but are separate courses.
+        """
+        grouped: dict[tuple[str, str], list[dict[str, str]]] = {}
         for row in rows:
             path_key = PortalLookup.normalize_course_url_key(row.get("courseUrlExternal", ""))
+            level = (row.get("study_level") or "").strip().lower()
             if not path_key:
-                grouped.setdefault(row.get("md_file", ""), []).append(row)
+                grouped.setdefault((row.get("md_file", ""), level), []).append(row)
                 continue
-            grouped.setdefault(path_key, []).append(row)
+            grouped.setdefault((path_key, level), []).append(row)
 
         selected: list[dict[str, str]] = []
-        for _key in sorted(grouped):
-            selected.append(cls.pick_export_index_row(output_dir, grouped[_key]))
-        return selected
+        for key in sorted(grouped):
+            group = grouped[key]
+            if len(group) == 1:
+                selected.append(group[0])
+            else:
+                selected.append(cls.pick_export_index_row(output_dir, group))
+        return sorted(
+            selected,
+            key=lambda row: (
+                (row.get("study_level") or "").strip().lower(),
+                row.get("courseUrlExternal", "").lower(),
+            ),
+        )
 
-    def normalized_paths_from_course_index(self, output_dir: Path) -> list[Path]:
-        """Resolve normalized.json paths for each row in courses.csv (canonical index)."""
-        paths: list[Path] = []
+    def export_entries_from_course_index(self, output_dir: Path) -> list[tuple[str, Path]]:
+        """Resolve (study_level, normalized.json) for each row in courses.csv."""
+        entries: list[tuple[str, Path]] = []
         missing: list[str] = []
         index_rows = self.dedupe_index_rows_for_export(output_dir, read_course_index_csv(output_dir))
         for row in index_rows:
@@ -306,7 +331,7 @@ class DevCoursesExporter:
             study_level = entry.get("study_level", "").strip()
             norm_path = extraction_dir(output_dir, slug, study_level) / "normalized.json"
             if norm_path.is_file():
-                paths.append(norm_path)
+                entries.append((study_level, norm_path))
             else:
                 missing.append(entry.get("md_file") or course_url)
         if missing:
@@ -314,13 +339,32 @@ class DevCoursesExporter:
                 f"Warning: {len(missing)} index course(s) missing normalized.json — skipped",
                 flush=True,
             )
-        return paths
+        return entries
 
-    def select_normalized_paths(self, output_dir: Path) -> list[Path]:
+    @staticmethod
+    def _study_level_from_normalized_path(path: Path) -> str:
+        parts = path.as_posix().split("/")
+        if "extracted" in parts:
+            index = parts.index("extracted")
+            if index + 1 < len(parts):
+                return parts[index + 1]
+        return ""
+
+    def select_export_entries(self, output_dir: Path) -> list[tuple[str, Path]]:
         index_path = output_dir / "courses.csv"
         if index_path.is_file():
-            return self.normalized_paths_from_course_index(output_dir)
-        return self.dedupe_normalized_by_course_name(self.discover_normalized_files(output_dir))
+            return self.export_entries_from_course_index(output_dir)
+        paths = self.dedupe_normalized_by_course_name(self.discover_normalized_files(output_dir))
+        return [
+            (self._study_level_from_normalized_path(path), path)
+            for path in paths
+        ]
+
+    def normalized_paths_from_course_index(self, output_dir: Path) -> list[Path]:
+        return [path for _level, path in self.export_entries_from_course_index(output_dir)]
+
+    def select_normalized_paths(self, output_dir: Path) -> list[Path]:
+        return [path for _level, path in self.select_export_entries(output_dir)]
 
     @staticmethod
     def serialize_csv_value(value: object) -> str:
@@ -336,6 +380,8 @@ class DevCoursesExporter:
         university_name: str,
         university_base_url: str,
         portal_lookup: PortalLookup | None = None,
+        *,
+        study_level: str = "",
     ) -> dict[str, object]:
         course_name = str(data.get("courseName") or "")
         programme_name = str(data.get("programmeName") or "")
@@ -350,6 +396,7 @@ class DevCoursesExporter:
             raw_course_url,
             university_base_url,
         )
+        row["studyLevel"] = (study_level or str(data.get("studyLevel") or data.get("study_level") or "")).strip()
 
         for col in self.DEV_COURSE_CSV_COLUMNS:
             if col in {
@@ -358,6 +405,7 @@ class DevCoursesExporter:
                 "courseName",
                 "degreeName",
                 "courseUrlExternal",
+                "studyLevel",
                 "commission",
             }:
                 continue
@@ -401,23 +449,24 @@ class DevCoursesExporter:
                 "degreeName from normalized.json or inferred"
             )
 
-        normalized_paths = self.select_normalized_paths(output_dir)
+        export_entries = self.select_export_entries(output_dir)
         if limit is not None:
-            normalized_paths = normalized_paths[:limit]
-        if not normalized_paths:
+            export_entries = export_entries[:limit]
+        if not export_entries:
             raise FileNotFoundError(
                 f"No normalized.json files found under {output_dir / 'extracted'}"
             )
 
         rows: list[dict[str, object]] = []
-        for path in normalized_paths:
-            data = json.loads(path.read_text(encoding="utf-8"))
+        for study_level, norm_path in export_entries:
+            data = json.loads(norm_path.read_text(encoding="utf-8"))
             rows.append(
                 self.normalized_to_dev_row(
                     data,
                     university_name,
                     university_base_url,
                     portal_lookup,
+                    study_level=study_level,
                 )
             )
 
@@ -426,6 +475,13 @@ class DevCoursesExporter:
 
         report = validate_dev_courses_csv(output_path, code_dir)
         print_validation_report(report)
+
+        from missing_field_stats import MissingFieldStats
+
+        missing_stats = MissingFieldStats(_REPO_ROOT)
+        missing_report = missing_stats.generate(university_name, force=True)
+        print(f"Wrote missing-field report: {missing_report.report_txt}")
+
         return output_path
 
 
