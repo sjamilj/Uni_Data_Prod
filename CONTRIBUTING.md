@@ -133,6 +133,31 @@ For universities completed before study-level splits, re-run Execute per level, 
 
 Legacy wrapper (full uni only): `.\scripts\tag-unit-complete.ps1 -University "Aston University" -Unit unit-02 -Slug aston`
 
+### Shared version tags (`shared/v*`)
+
+University tags (`uni/…`) mark a **university export** snapshot. **Shared** changes get their own tag when `shared/` gains new behaviour (audit CSV, export rules, inference helpers, etc.) — usually after a `chore(shared): …` commit or a university commit that included `-IncludeShared`.
+
+| Tag | When |
+|-----|------|
+| `shared/v1.0.0` | Pipeline baseline |
+| `shared/v1.1.0` | Audit CSV export, degreeName LLM inference, `studyLevel` column, foundation/UG as separate export rows |
+
+```powershell
+# List shared tags
+git tag -l "shared/*"
+
+# Tag current HEAD after shared work is committed (bump minor for new tools, patch for fixes)
+git tag -a shared/v1.1.0 -m "shared: audit CSV, degreeName inference, studyLevel export"
+
+# Push when ready
+git push origin shared/v1.1.0
+
+# Check out shared code at a tag
+git checkout shared/v1.1.0 -- shared/
+```
+
+Bump **minor** (`v1.1.0` → `v1.2.0`) for new shared modules or export behaviour; bump **patch** (`v1.1.0` → `v1.1.1`) for fixes only. Tag **after** tests pass and at least one university has been re-exported with the new shared code.
+
 ## Documentation (`docs/`)
 
 Learning docs for `shared/` and `dashboard/` live under [docs/](docs/). Start at [docs/00-start-here.md](docs/00-start-here.md).
@@ -172,7 +197,40 @@ Pick the variant in `Template.csv` row 1 (`ALL_COURSE.csv`, `Paginated.csv`, `De
 
 ## Review handoff (`REVIEW/`)
 
-After `output/dev_courses_{University}_reviewed.csv` exists (from `validate_dev_courses.py` or manual review):
+After `output/dev_courses_{University}_reviewed.csv` exists (from export / `validate_dev_courses.py`):
+
+- **Automatic:** `export_dev_courses.py` (pipeline Phase 5) also writes `output/missing_field_report.txt`.
+- **Audit CSV:** flatten extracted audit JSON beside reviewed CSV rows to debug why a field is empty (`minGpa`, `degreeName`, `ieltsMinOverall`, etc.):
+
+```powershell
+python shared\export_extracted_audit_csv.py `
+  --university "Keele University" `
+  --missing-field minGpa `
+  --json entry_requirement_parsed.json `
+  --json stage1_parsed.json `
+  --json english_requirements_parsed.json `
+  --output "Keele University\output\extracted_audit_minGpa.csv" `
+  --force
+```
+
+Missing `degreeName` — infer from clean course markdown with LLM, then patch extracted JSON:
+
+```powershell
+python shared\export_extracted_audit_csv.py `
+  --university "Keele University" `
+  --missing-field degreeName `
+  --json stage1_parsed.json `
+  --include-markdown `
+  --infer-degree `
+  --apply-degree `
+  --output "Keele University\output\extracted_audit_degreeName.csv" `
+  --force
+
+python shared\export_dev_courses.py --code-dir "Keele University/code"
+python shared\missing_field_stats.py "Keele University" --force
+```
+
+- **Review handoff:** copy variant CSV + reviewed CSV + report into `REVIEW/`:
 
 ```powershell
 python shared\package_review_output.py "Anglia Ruskin University - ARU"
