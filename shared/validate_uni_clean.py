@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -216,6 +217,15 @@ class UniCleanValidator:
         data = parse_uni_json_payload(content, "english-requirements")
         if not isinstance(data, list) or not data:
             report.add("ERROR", "json_parse_failed", filename, "Could not parse english-requirements JSON array")
+            return
+
+        group_programs = [
+            row
+            for row in data
+            if isinstance(row, dict)
+            and re.match(r"^Group [A-G]$", str(row.get("ProgramName", "") or "").strip(), re.I)
+        ]
+        if group_programs and len(group_programs) == len(data):
             return
 
         rows_without_level = 0

@@ -34,26 +34,38 @@ def _parse_list(value: str | None, *, default: tuple[str, ...]) -> tuple[str, ..
     return tuple(items) if items else default
 
 
-def extract_markdown_sections(body: str, headings: tuple[str, ...]) -> str:
-    """Return concatenated markdown sections for the first matching h2 headings."""
+def extract_markdown_sections(
+    body: str,
+    headings: tuple[str, ...],
+    *,
+    heading_levels: tuple[int, ...] = (2, 3),
+) -> str:
+    """Return concatenated markdown sections for matching headings (h2 and/or h3)."""
     if not body.strip() or not headings:
         return ""
     sections: list[str] = []
     lines = body.splitlines()
-    heading_res = [
-        re.compile(rf"^##\s+{re.escape(heading)}\s*$", re.I)
-        for heading in headings
-    ]
+    heading_res: list[tuple[re.Pattern[str], int]] = []
+    for heading in headings:
+        for level in heading_levels:
+            hashes = "#" * level
+            heading_res.append(
+                (
+                    re.compile(rf"^{hashes}\s+{re.escape(heading)}\s*$", re.I),
+                    level,
+                )
+            )
     index = 0
     while index < len(lines):
         matched = False
-        for heading_re in heading_res:
+        for heading_re, level in heading_res:
             if heading_re.match(lines[index].strip()):
                 matched = True
                 block = [lines[index]]
                 index += 1
+                stop_re = re.compile(r"^#{1," + str(level) + r"}\s+")
                 while index < len(lines):
-                    if re.match(r"^##\s+", lines[index]):
+                    if stop_re.match(lines[index]):
                         break
                     block.append(lines[index])
                     index += 1

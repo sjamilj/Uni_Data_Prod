@@ -30,8 +30,9 @@ Use only the provided input. Never use outside knowledge, guess, infer, or estim
    - `Pearson: 59 (59 in all subscores)` → `pteMinOverall`=`59`, `pteMinSection`=`59`
    - `TOEFL: 90 (min 20 in all areas)` → `toeflMinOverall`=`90`, `toeflMinSection`=`20`
 3. Prefer Stage 1 IELTS overall/section when present and course-specific.
-4. All score fields are numeric strings only. Never convert between test types.
-5. Put verbatim English requirement sentence(s) in `AcademicRequirementsMetaData` under subtitle `"English Requirement"` — one sentence per array item.
+4. If the course only references an English test **Group** (e.g. `Group B`), leave score fields empty — Python maps the group to IELTS/PTE/TOEFL from the university table.
+5. All score fields are numeric strings only. Never convert between test types.
+6. Put verbatim English requirement sentence(s) in `AcademicRequirementsMetaData` under subtitle `"English Requirement"` — one sentence per array item.
 
 ## Output
 

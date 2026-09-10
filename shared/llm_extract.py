@@ -232,6 +232,11 @@ BANGLADESH_MARKDOWN_SECTION_PATTERNS = {
     "postgraduate": re.compile(r"##\s*Postgraduate\s*\n(.*?)(?=\n##\s|\Z)", re.I | re.S),
 }
 BANGLADESH_BULLET_RE = re.compile(r"^\s*-\s*\*\*([^:*]+):\*\*\s*(.+)$", re.M)
+BANGLADESH_COUNTRY_BLOCK_RE = re.compile(
+    r"####\s*Bangladesh\s*\n(.*?)(?=\n####\s|\n###\s|\n##\s|\Z)",
+    re.I | re.S,
+)
+ENGLISH_GROUP_RE = re.compile(r"\bGroup\s+([A-G])\b", re.I)
 DEGREE_LABEL_MAP = {
     "hsc": "HSC",
     "hsc (alim)": "HSC",
@@ -802,28 +807,11 @@ class Stage1MarkdownParser:
     @staticmethod
     def extract_international_fees_section(body: str) -> str:
         match = re.search('### International students\\s*(.*?)(?:--END--|\\Z)', body, re.S | re.I)
-        if match:
-            return match.group(1)
-        match = re.search(
-            '####\\s+International\\s*\\n+(.*?)(?=\\n####\\s|\\n###\\s|\\n##\\s|\\Z)',
-            body,
-            re.S | re.I,
-        )
-        return match.group(1).strip() if match else ''
+        return match.group(1) if match else ''
 
     @staticmethod
     def parse_international_fee_options(section: str) -> list[dict[str, str]]:
         options: list[dict[str, str]] = []
-        inline_fee = re.search('£([\\d,]+)\\s+full-time', section or '', re.I)
-        if inline_fee:
-            options.append(
-                {
-                    'studyMode': 'Full Time',
-                    'courseDuration': '',
-                    'tuitionFee': f"£{inline_fee.group(1)}",
-                }
-            )
-            return options
         lines = [line.strip() for line in section.splitlines()]
         index = 0
         while index < len(lines):
@@ -975,44 +963,6 @@ class Stage1MarkdownParser:
         return '', ''
 
     @staticmethod
-    def extract_international_fee_from_fees_dict(fees: object) -> tuple[str, str]:
-        """Read international tuitionFee/currency from nested Stage 1 fees objects."""
-        if not isinstance(fees, dict):
-            return '', ''
-
-        direct_fee = fees.get('tuitionFee')
-        if direct_fee not in (None, '', 0):
-            fee_str = normalize_fee_numeric(str(direct_fee))
-            currency = str(fees.get('currency') or '').strip()
-            if fee_str:
-                return fee_str, currency or 'GBP'
-
-        for value in fees.values():
-            if not isinstance(value, dict):
-                continue
-            for region_key, region_val in value.items():
-                if 'international' not in str(region_key).casefold():
-                    continue
-                if not isinstance(region_val, dict):
-                    if region_val not in (None, '', 0):
-                        fee_str = normalize_fee_numeric(str(region_val))
-                        if fee_str:
-                            return fee_str, 'GBP'
-                    continue
-                raw_fee = (
-                    region_val.get('fullTime')
-                    or region_val.get('tuitionFee')
-                    or region_val.get('fee')
-                )
-                if raw_fee in (None, '', 0):
-                    continue
-                fee_str = normalize_fee_numeric(str(raw_fee))
-                currency = str(region_val.get('currency') or 'GBP').strip() or 'GBP'
-                if fee_str:
-                    return fee_str, currency
-        return '', ''
-
-    @staticmethod
     def fees_metadata_object_to_array(
     fees_meta: dict,
     *,
@@ -1059,30 +1009,95 @@ class Stage1MarkdownParser:
         parsed['feesMetaData'] = fees_metadata_object_to_array(fees_meta, tuition_fee=str(parsed.get('tuitionFee', '') or ''))
 
     @staticmethod
+    def extract_keele_key_information_fields(body: str) -> dict[str, str]:
+        """Parse Keele Key information + Fees and funding blocks."""
+        fields: dict[str, str] = {}
+        key_match = re.search(r"## Key information\s*\n(.*?)(?=\n## |\Z)", body, re.S)
+        section = key_match.group(1) if key_match else ""
+
+        month_block = re.search(r"### Month of entry\s*\n+-\s*([^\n]+)", section, re.I)
+        if month_block:
+            month_text = month_block.group(1).strip()
+            acad = re.search(r"### Fees for (\d{4})/\d{2}", section, re.I)
+            if acad and not re.search(r"\b(19|20)\d{2}\b", month_text):
+                primary_month = month_text.split(",")[0].strip()
+                fields["intakeInfo"] = f"{primary_month} {acad.group(1)}"
+            else:
+                fields["intakeInfo"] = normalize_intake_text(month_text)
+
+        year_block = re.search(r"### Year of entry\s*\n+-\s*([^\n]+)", section, re.I)
+        if year_block:
+            years = sorted(
+                {int(year) for year in re.findall(r"\b(20\d{2})\b", year_block.group(1))},
+                reverse=True,
+            )
+            if years:
+                if len(years) == 1:
+                    fields["intakeInfo"] = f"September {years[0]}"
+                else:
+                    intake_months = ("January", "September")
+                    fields["intakeInfo"] = ", ".join(
+                        f"{intake_months[index]} {year}"
+                        for index, year in enumerate(years[: len(intake_months)])
+                    )
+
+        duration_block = re.search(r"### Duration of study\s*\n+-\s*([^\n]+)", section, re.I)
+        if duration_block:
+            duration_text = duration_block.group(1).strip()
+            year_values = [
+                int(match.group(1)) for match in re.finditer(r"(\d+)\s*years?", duration_text, re.I)
+            ]
+            if year_values:
+                fields["courseDuration"] = f"{min(year_values)} years"
+            else:
+                fields["courseDuration"] = duration_text
+
+        fees_block = re.search(r"### Fees for \d{4}/\d{2}[^\n]*\n+-\s*([^\n]+)", section, re.I)
+        if fees_block:
+            international_fee = re.search(r"International[^£]*£([\d,]+)", fees_block.group(1), re.I)
+            if international_fee:
+                fields["tuitionFee"] = international_fee.group(1).replace(",", "")
+                fields["currency"] = "GBP"
+
+        fees_section = re.search(r"## Fees and funding\s*\n(.*?)(?=\n## |\Z)", body, re.S)
+        if fees_section and not fields.get("tuitionFee"):
+            international_fee = re.search(
+                r"International[^£\n]*£([\d,]+)",
+                fees_section.group(1),
+                re.I,
+            )
+            if international_fee:
+                fields["tuitionFee"] = international_fee.group(1).replace(",", "")
+                fields["currency"] = "GBP"
+
+        return fields
+
+    @staticmethod
     def extract_stage1_fields_from_md(body: str) -> dict[str, str]:
         """Parse intake, fees, duration, and IELTS scalars from clean course markdown."""
         fields: dict[str, str] = {}
+        if "## Key information" in body:
+            fields.update(
+                {
+                    key: value
+                    for key, value in Stage1MarkdownParser.extract_keele_key_information_fields(body).items()
+                    if value
+                }
+            )
         for pattern in (
             '-\\s*\\*\\*Start date:\\*\\*\\s*([^\\n]+)',
             '-\\s*\\*\\*Start:\\*\\*\\s*([^\\n]+)',
             '- Start date\\s+([^\\n]+)',
             '\\*\\*Start date\\*\\*\\s*\\n+\\s*([^\\n#]+)',
-            '(?:^|\\n)Start date\\s*\\n+\\s*([^\\n#]+)',
             'Starting:\\s*([^\\n]+)',
         ):
             start_date_match = re.search(pattern, body, re.I)
-            if start_date_match:
+            if start_date_match and not fields.get("intakeInfo"):
                 fields['intakeInfo'] = normalize_intake_text(start_date_match.group(1).strip())
                 break
         duration_match = re.search('\\*\\*Duration:\\*\\*\\s*(.+)', body, re.I)
-        if duration_match:
+        if duration_match and not fields.get('courseDuration'):
             fields['courseDuration'] = duration_match.group(1).strip()
-        if not fields.get('courseDuration'):
-            mode_match = re.search('(?:^|\\n)Mode of study\\s*\\n+([^\\n]+)', body, re.I)
-            if mode_match:
-                duration = mode_match.group(1).strip()
-                if duration and 'placement' not in duration.casefold():
-                    fields['courseDuration'] = duration
         if not fields.get('courseDuration'):
             research_duration = Stage1MarkdownParser.extract_research_course_duration(body)
             if research_duration:
@@ -1091,11 +1106,6 @@ class Stage1MarkdownParser:
         if fee_match:
             fields['tuitionFee'] = fee_match.group(1).replace(',', '')
             fields['currency'] = 'GBP'
-        if not fields.get('tuitionFee'):
-            key_info_fee = re.search('International\\s*£([\\d,]+)', body, re.I)
-            if key_info_fee:
-                fields['tuitionFee'] = key_info_fee.group(1).replace(',', '')
-                fields['currency'] = 'GBP'
         if not fields.get('tuitionFee'):
             aru_fee = extract_aru_international_tuition_fee(body)
             if aru_fee:
@@ -1725,14 +1735,6 @@ class Stage1Enricher:
             parsed['feesMetaData'] = Stage1MarkdownParser.fees_metadata_object_to_array(fees_dict, tuition_fee=str(parsed.get('tuitionFee', '') or ''), include_tuition_line=not bool(str(parsed.get('tuitionFee', '') or '').strip()))
         elif not hints.get('tuitionFee'):
             Stage1MarkdownParser.coalesce_stage1_fields_from_fees_metadata(parsed, course_body)
-        if not str(parsed.get('tuitionFee', '') or '').strip():
-            fee, currency = Stage1MarkdownParser.extract_international_fee_from_fees_dict(
-                parsed.get('fees')
-            )
-            if fee and (not course_body or Stage1MarkdownParser.fee_amount_in_markdown(fee, course_body)):
-                parsed['tuitionFee'] = fee
-            if currency and not str(parsed.get('currency', '') or '').strip():
-                parsed['currency'] = currency
         tuition_fee = str(parsed.get('tuitionFee', '') or '').strip()
         if tuition_fee:
             parsed['feesMetaData'] = patch_fees_metadata_international_fee(parsed.get('feesMetaData'), tuition_fee)
@@ -1835,6 +1837,9 @@ class Stage2Enricher:
 
     @staticmethod
     def extract_bangladesh_section_text(uni_content: str, course_level: str) -> str:
+        country_match = BANGLADESH_COUNTRY_BLOCK_RE.search(uni_content)
+        if country_match:
+            return country_match.group(1).strip()
         markdown_pattern = BANGLADESH_MARKDOWN_SECTION_PATTERNS.get(course_level)
         if markdown_pattern:
             match = markdown_pattern.search(uni_content)
@@ -1949,6 +1954,16 @@ class Stage2Enricher:
         return score
 
     @staticmethod
+    def detect_english_group(*texts: str) -> str:
+        for text in texts:
+            if not text:
+                continue
+            match = ENGLISH_GROUP_RE.search(text)
+            if match:
+                return f"Group {match.group(1).upper()}"
+        return ""
+
+    @staticmethod
     def select_english_json_program(
     programs: list[dict],
     *,
@@ -1956,6 +1971,14 @@ class Stage2Enricher:
     course_name: str,
     course_body: str = "",
 ) -> dict | None:
+        group_name = Stage2Enricher.detect_english_group(course_body, course_name)
+        if group_name:
+            for item in programs:
+                if not isinstance(item, dict):
+                    continue
+                program_name = str(item.get("ProgramName", "") or "").strip()
+                if program_name.casefold() == group_name.casefold():
+                    return item
         aliases = ENGLISH_JSON_LEVEL_ALIASES.get(course_level, (course_level,))
         candidates = [item for item in programs if isinstance(item, dict) and str(item.get('TestStudyLevel', '') or '').strip().lower() in aliases]
         if not candidates:
@@ -2032,18 +2055,6 @@ class Stage2Enricher:
                 entry_descriptions.append(line)
                 seen.add(line)
         english_descriptions = extract_english_json_descriptions(english_content, course_level, course_name=course_name, course_body=course_body)
-        if not english_descriptions:
-            bullet_lines = []
-            for raw in english_content.splitlines():
-                match = re.match(
-                    r'-\s*(IELTS|Pearson|BrunELT|TOEFL)\s*:\s*(.+)',
-                    raw.strip(),
-                    re.I,
-                )
-                if match:
-                    bullet_lines.append(f'{match.group(1)}: {match.group(2).strip()}')
-            if bullet_lines:
-                english_descriptions = bullet_lines
         if not english_descriptions:
             for item in normalize_metadata_array(metadata):
                 if str(item.get('subtitle', '')).strip().lower() == 'english requirement':
@@ -2171,30 +2182,6 @@ class Stage2Enricher:
         scores = {key: '' for key in ENGLISH_TEST_KEYS}
         if not english_content.strip():
             return scores
-        ielts_bullet = re.search(
-            r'IELTS:\s*([\d.]+)\s*\(\s*min\s*([\d.]+)',
-            english_content,
-            re.I,
-        )
-        if ielts_bullet:
-            scores['ieltsMinOverall'] = ielts_bullet.group(1)
-            scores['ieltsMinSection'] = ielts_bullet.group(2)
-        pearson_bullet = re.search(
-            r'Pearson:\s*(\d+)\s*\(\s*(\d+)\s*in all subscores',
-            english_content,
-            re.I,
-        )
-        if pearson_bullet:
-            scores['pteMinOverall'] = pearson_bullet.group(1)
-            scores['pteMinSection'] = pearson_bullet.group(2)
-        toefl_bullet = re.search(
-            r'TOEFL:\s*([\d.]+)\s*\(\s*min\s*([\d.]+)',
-            english_content,
-            re.I,
-        )
-        if toefl_bullet:
-            scores['toeflMinOverall'] = toefl_bullet.group(1)
-            scores['toeflMinSection'] = toefl_bullet.group(2)
         row_label = select_english_row_label(course_name, course_level, english_content)
         label_re = re.escape(row_label)
         ielts = re.search(f'{label_re}\\s*\\|\\s*([\\d.]+)\\s+overall with no element below\\s+([\\d.]+)', english_content, re.I)
@@ -2235,11 +2222,18 @@ class Stage2Enricher:
     course_level: str,
     stage1_json: dict | None = None,
     course_body: str = "",
+    english_lookup_content: str = "",
 ) -> dict:
         """Ensure english_requirements_parsed.json has test scalars (+ metadata)."""
         parsed = dict(english_json) if isinstance(english_json, dict) else {}
-        fallback = parse_english_test_scores(english_content, course_name=course_name, course_level=course_level)
-        json_program = select_english_json_program(parse_uni_json_payload(english_content, 'english-requirements') or [], course_level=course_level, course_name=course_name, course_body=course_body)
+        lookup_content = english_lookup_content or english_content
+        fallback = parse_english_test_scores(lookup_content, course_name=course_name, course_level=course_level)
+        json_program = select_english_json_program(
+            parse_uni_json_payload(lookup_content, 'english-requirements') or [],
+            course_level=course_level,
+            course_name=course_name,
+            course_body=f'{course_body}\n{english_content}',
+        )
         if isinstance(json_program, dict):
             for test in json_program.get('TestRequirements', []):
                 if not isinstance(test, dict):
@@ -2267,19 +2261,12 @@ class Stage2Enricher:
                 parsed[key] = stage1_val
         meta = normalize_metadata_array(parsed.get('AcademicRequirementsMetaData'), default_subtitle='English Requirement')
         meta = filter_academic_metadata(meta)
-        json_descriptions = extract_english_json_descriptions(english_content, course_level, course_name=course_name, course_body=course_body)
-        if not json_descriptions:
-            bullet_lines = []
-            for raw in english_content.splitlines():
-                match = re.match(
-                    r'-\s*(IELTS|Pearson|BrunELT|TOEFL)\s*:\s*(.+)',
-                    raw.strip(),
-                    re.I,
-                )
-                if match:
-                    bullet_lines.append(f'{match.group(1)}: {match.group(2).strip()}')
-            if bullet_lines:
-                json_descriptions = bullet_lines
+        json_descriptions = extract_english_json_descriptions(
+            lookup_content,
+            course_level,
+            course_name=course_name,
+            course_body=f'{course_body}\n{english_content}',
+        )
         if json_descriptions:
             meta = [{'subtitle': 'English Requirement', 'description': json_descriptions}]
         elif not meta and parsed.get('ieltsMinOverall'):
@@ -2392,21 +2379,15 @@ class Stage2Enricher:
             if line not in seen:
                 descriptions.append(line)
                 seen.add(line)
-        if not descriptions and entry_content.strip():
-            if not isinstance(parse_uni_json_payload(entry_content, 'bangladesh-entry'), dict):
-                for raw in entry_content.splitlines():
-                    stripped = re.sub(r'^#+\s*', '', (raw or '').strip())
-                    if not stripped:
-                        continue
-                    lowered = stripped.lower()
-                    if lowered.startswith('select your country'):
-                        continue
-                    if 'tier 4 visa' in lowered or 'certificate of acceptance for study' in lowered:
-                        continue
-                    if filter_stage1_entry_description(stripped):
-                        if stripped not in seen:
-                            descriptions.append(stripped)
-                            seen.add(stripped)
+        country_text = extract_bangladesh_section_text(entry_content, course_level)
+        if not country_text:
+            country_text = extract_bangladesh_section_text(course_body, course_level)
+        if country_text:
+            for chunk in re.split(r"\n\s*or\s*\n", country_text):
+                sentence = " ".join(part.strip() for part in chunk.splitlines() if part.strip())
+                if sentence and sentence not in seen:
+                    descriptions.append(sentence)
+                    seen.add(sentence)
         if descriptions:
             parsed['AcademicRequirementsMetaData'] = [{'subtitle': 'Entry Requirements', 'description': descriptions}]
         else:
@@ -2805,6 +2786,7 @@ class CourseExtractor:
         uni_content = stage2_config.uni_content(uni_sections_all)
         entry_content = stage2_config.entry_content(course_body, uni_sections_all)
         english_content = stage2_config.english_content(course_body, uni_sections_all)
+        english_lookup_content = uni_sections_all.get('english', '')
         course_level = Stage2Enricher.infer_course_level(course_name, course_url, study_level)
         degree_name = (
             course_entry.get('degreeName')
@@ -2840,7 +2822,7 @@ class CourseExtractor:
         entry_json = Stage2Enricher.enrich_entry_parsed(entry_json, entry_content, course_level=course_level, stage1_json=stage1_json, course_name=course_name, course_body=course_body)
         ExtractionPathConfig.save_audit(audit_dir, 'entry_requirement_parsed.json', json.dumps(entry_json, indent=2, ensure_ascii=False))
         english_json = Stage2Enricher.run_stage2_llm_part(audit_dir=audit_dir, name='english_requirements', prompt=ExtractionPathConfig.fill_template(prompt_2_english, COURSE_NAME=course_name, COURSE_URL=course_url, COURSE_LEVEL=course_level, STAGE1_JSON=stage1_json_text, ENGLISH_CONTENT=english_content), model=model, host=host)
-        english_json = Stage2Enricher.enrich_english_parsed(english_json, english_content, course_name=course_name, course_level=course_level, stage1_json=stage1_json, course_body=course_body)
+        english_json = Stage2Enricher.enrich_english_parsed(english_json, english_content, course_name=course_name, course_level=course_level, stage1_json=stage1_json, course_body=course_body, english_lookup_content=english_lookup_content)
         ExtractionPathConfig.save_audit(audit_dir, 'english_requirements_parsed.json', json.dumps(english_json, indent=2, ensure_ascii=False))
         scholarship_json = Stage2Enricher.run_stage2_llm_part(audit_dir=audit_dir, name='scholarship', prompt=ExtractionPathConfig.fill_template(prompt_2_scholarship, COURSE_NAME=course_name, COURSE_URL=course_url, STAGE1_JSON=stage1_json_text, SCHOLARSHIP_CONTENT=uni_sections.get('scholarship', '')), model=model, host=host)
         scholarship_json = Stage2Enricher.enrich_scholarship_parsed(scholarship_json, uni_sections.get('scholarship', ''), course_name=course_name, course_level=course_level, course_body=course_body)
@@ -2854,7 +2836,7 @@ class CourseExtractor:
         stage2_content = json.dumps(llm_json, ensure_ascii=False)
         deterministic = Stage2Enricher.build_deterministic_row(stage1_json, university_name=university_name, course_url=course_url, course_name=course_name, degree_name=degree_name)
         stage2_json = Stage2Enricher.merge_stage2_row(deterministic, llm_json, uni_content=uni_content, entry_content=entry_content, course_level=course_level, course_body=course_body)
-        stage2_json['AcademicRequirementsMetaData'] = Stage2Enricher.finalize_academic_requirements_metadata(stage2_json.get('AcademicRequirementsMetaData'), stage1_json=stage1_json, uni_content=uni_content, english_content=english_content, course_level=course_level, english_scalars={key: llm_json.get(key, '') for key in ENGLISH_TEST_KEYS}, course_name=course_name, course_body=course_body, entry_content=entry_content)
+        stage2_json['AcademicRequirementsMetaData'] = Stage2Enricher.finalize_academic_requirements_metadata(stage2_json.get('AcademicRequirementsMetaData'), stage1_json=stage1_json, uni_content=uni_content, english_content=english_lookup_content or english_content, course_level=course_level, english_scalars={key: llm_json.get(key, '') for key in ENGLISH_TEST_KEYS}, course_name=course_name, course_body=f'{course_body}\n{english_content}', entry_content=entry_content)
         stage2_json['uniName'] = university_name
         stage2_json['courseUrlExternal'] = course_url
         stage2_json['courseScraped'] = course_url
@@ -2909,8 +2891,9 @@ class LlmExtractCLI:
             CourseIndexManager.ensure_course_index_synced(code_dir)
             index_rows = CourseIndexManager.read_course_index_csv(output_dir)
             courses = [CourseIndexManager.index_row_to_entry(row) for row in index_rows]
+        all_index_entries = list(courses)
         valid_keys: set[str] = set()
-        for entry in courses:
+        for entry in all_index_entries:
             slug = course_slug_from_url(entry['course_url'])
             valid_keys.add(slug)
             valid_keys.add(extraction_resume_key(entry.get('study_level'), slug))
@@ -2987,10 +2970,6 @@ class LlmExtractCLI:
                     failed.append(resume_key)
                 ExtractionProgressStore.save_progress(output_dir, progress, presetup=presetup)
                 raise
-        if urls is None and course_index is None and md_file is None and not presetup:
-            from post_llm_enrich import run_post_llm_enrich
-
-            run_post_llm_enrich(code_dir)
 
     @staticmethod
     def main(code_dir: Path | None = None) -> int:

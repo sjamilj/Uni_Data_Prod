@@ -66,6 +66,7 @@ from course_markdown_cleanup import (
     cleanup_course_markdown,
     cleanup_uni_markdown,
     uni_source_url,
+    _load_uni_course_cleanup_module,
 )
 from clean_config import CleanConfig, CleanConfigLoader
 from course_type_filter import CourseTypeFilter
@@ -318,6 +319,12 @@ class CourseMarkdownBuilder:
         source_url: str = "",
     ) -> str:
         soup = BeautifulSoup(html, "html.parser")
+
+        module = _load_uni_course_cleanup_module(code_dir)
+        if module is not None:
+            preprocess_html = getattr(module, "preprocess_course_html_uni", None)
+            if callable(preprocess_html):
+                preprocess_html(soup)
 
         engine = get_course_html_engine(
             clean_config.engine,

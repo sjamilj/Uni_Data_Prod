@@ -136,6 +136,10 @@ class MissingFieldStats:
         url_levels = load_url_levels(uni_dir / "output")
         by_level: dict[str, list[dict[str, str]]] = defaultdict(list)
         for row in rows:
+            declared = (row.get("studyLevel") or row.get("study_level") or "").strip()
+            if declared:
+                by_level[declared].append(row)
+                continue
             levels = levels_for_url(
                 row.get("courseUrlExternal", ""),
                 url_levels=url_levels,
