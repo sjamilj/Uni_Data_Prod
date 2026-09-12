@@ -1073,43 +1073,68 @@ class Stage1MarkdownParser:
         return fields
 
     @staticmethod
-    def extract_huddersfield_key_information_fields(body: str) -> dict[str, str]:
-        """Parse Huddersfield Key information block (plain Start Dates / Duration labels)."""
+    def extract_teesside_key_information_fields(body: str) -> dict[str, str]:
+        """Parse Teesside Key information + Fees and funding blocks."""
         fields: dict[str, str] = {}
         key_match = re.search(r"## Key information\s*\n(.*?)(?=\n## |\Z)", body, re.S)
         section = key_match.group(1) if key_match else ""
 
-        start_match = re.search(r"Start Dates?\s*\n+\s*([^\n]+)", section, re.I)
-        if start_match:
-            fields["intakeInfo"] = normalize_intake_text(start_match.group(1).strip())
+        entry_note = re.search(
+            r"(?:Note:\s*)?(?:This course is for\s+)?"
+            r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+"
+            r"((?:19|20)\d{2})\s+entry",
+            section,
+            re.I,
+        )
+        if entry_note:
+            fields["intakeInfo"] = f"{entry_note.group(1).title()} {entry_note.group(2)}"
 
-        duration_match = re.search(r"Duration\s*\n+\s*([^\n]+)", section, re.I)
-        if duration_match:
-            fields["courseDuration"] = duration_match.group(1).strip()
+        is_foundation = bool(
+            re.search(r"\(with Foundation Year\)|Plus foundation year:", body, re.I)
+        )
+        if is_foundation:
+            route_match = re.search(r"Plus foundation year:\s*([^\n]+)", section, re.I)
+        else:
+            route_match = re.search(r"Degree:\s*([^\n]+)", section, re.I)
+        if route_match:
+            fields["courseDuration"] = route_match.group(1).strip()
+
+        if not fields.get("courseDuration"):
+            length_match = re.search(r"- Length:\s*([^\n]+)", body, re.I)
+            if length_match:
+                fields["courseDuration"] = length_match.group(1).strip()
+
+        if not fields.get("intakeInfo"):
+            start_match = re.search(r"- Start date:\s*([^\n]+)", body, re.I)
+            entry_year = re.search(r"###\s*((?:19|20)\d{2})-\d{2}\s+entry", body, re.I)
+            if start_match and entry_year:
+                month = start_match.group(1).strip()
+                fields["intakeInfo"] = Stage1MarkdownParser.normalize_intake_text(
+                    f"{month} {entry_year.group(1)}"
+                )
+            elif start_match:
+                fields["intakeInfo"] = Stage1MarkdownParser.normalize_intake_text(
+                    start_match.group(1).strip()
+                )
+
+        fees_section = re.search(r"## Fees and funding\s*\n(.*?)(?=\n## |\Z)", body, re.S)
+        if fees_section:
+            international_fee = re.search(
+                r"Fee for international applicants\s*\n+\s*£([\d,]+)",
+                fees_section.group(1),
+                re.I,
+            )
+            if not international_fee:
+                international_fee = re.search(
+                    r"£([\d,]+)\s*a year",
+                    fees_section.group(1),
+                    re.I,
+                )
+            if international_fee:
+                fields["tuitionFee"] = international_fee.group(1).replace(",", "")
+                fields["currency"] = "GBP"
 
         return fields
-
-    @staticmethod
-    def extract_huddersfield_international_fee(body: str) -> tuple[str, str]:
-        """Parse international tuition from Huddersfield Fees and finance block."""
-        fees_match = re.search(r"## Fees and finance\s*\n(.*?)(?=\n## |\Z)", body, re.S)
-        if not fees_match:
-            return "", ""
-        section = fees_match.group(1)
-
-        for match in re.finditer(
-            r"\*\*£([\d,]+)\s*per year\*\*\s*\n+(.*?)(?=\n\*\*£|\n### |\Z)",
-            section,
-            re.S | re.I,
-        ):
-            context = match.group(2)
-            if re.search(r"international students", context, re.I):
-                return match.group(1).replace(",", ""), "GBP"
-
-        fees = re.findall(r"\*\*£([\d,]+)\s*per year\*\*", section, re.I)
-        if len(fees) >= 2:
-            return fees[1].replace(",", ""), "GBP"
-        return "", ""
 
     @staticmethod
     def extract_stage1_fields_from_md(body: str) -> dict[str, str]:
@@ -1123,10 +1148,14 @@ class Stage1MarkdownParser:
                     if value
                 }
             )
-            huddersfield_fields = Stage1MarkdownParser.extract_huddersfield_key_information_fields(body)
-            for key in ("intakeInfo", "courseDuration"):
-                if not fields.get(key) and huddersfield_fields.get(key):
-                    fields[key] = huddersfield_fields[key]
+        if "## Key information" in body or "## Fees and funding" in body:
+            fields.update(
+                {
+                    key: value
+                    for key, value in Stage1MarkdownParser.extract_teesside_key_information_fields(body).items()
+                    if value and not fields.get(key)
+                }
+            )
         for pattern in (
             '-\\s*\\*\\*Start date:\\*\\*\\s*([^\\n]+)',
             '-\\s*\\*\\*Start:\\*\\*\\s*([^\\n]+)',
@@ -1177,15 +1206,26 @@ class Stage1MarkdownParser:
                     fields['tuitionFee'] = fee_num.group(1).replace(',', '') if fee_num else fee_raw
             if not fields.get('currency') and (fields.get('tuitionFee') or '£' in intl_section):
                 fields['currency'] = 'GBP'
-        if not fields.get("tuitionFee"):
-            hud_fee, hud_currency = Stage1MarkdownParser.extract_huddersfield_international_fee(body)
-            if hud_fee:
-                fields["tuitionFee"] = hud_fee
-                fields["currency"] = hud_currency
         ielts_match = re.search('IELTS\\s+([\\d.]+)\\s+overall\\s+with\\s+no\\s+less\\s+than\\s+([\\d.]+)\\s+in\\s+each\\s+band', body, re.I)
         if ielts_match:
             fields['ieltsMinOverall'] = ielts_match.group(1)
             fields['ieltsMinSection'] = ielts_match.group(2)
+        if not fields.get('ieltsMinOverall'):
+            tees_overall = re.search(
+                r'minimum IELTS score of ([\d.]+)|overall IELTS ([\d.]+)',
+                body,
+                re.I,
+            )
+            if tees_overall:
+                fields['ieltsMinOverall'] = tees_overall.group(1) or tees_overall.group(2)
+        if not fields.get('ieltsMinSection'):
+            writing_match = re.search(
+                r'minimum of ([\d.]+) in writing|no less than ([\d.]+) in each',
+                body,
+                re.I,
+            )
+            if writing_match:
+                fields['ieltsMinSection'] = writing_match.group(1) or writing_match.group(2)
         degree = ExtractionPathConfig.infer_degree_name_from_md(body)
         if degree:
             fields['degreeName'] = degree
@@ -2012,6 +2052,157 @@ class Stage2Enricher:
         return ""
 
     @staticmethod
+    def parse_course_ielts_scores(
+        course_body: str,
+        stage1_json: dict | None = None,
+    ) -> tuple[str, str]:
+        """Read grounded IELTS overall/section from stage1 or course markdown."""
+        stage1_json = stage1_json or {}
+        overall = str(stage1_json.get("ieltsMinOverall", "") or "").strip()
+        section = str(stage1_json.get("ieltsMinSection", "") or "").strip()
+        if not overall:
+            overall_match = re.search(
+                r"minimum IELTS score of ([\d.]+)|overall IELTS ([\d.]+)|"
+                r"IELTS ([\d.]+) overall",
+                course_body,
+                re.I,
+            )
+            if overall_match:
+                overall = next(
+                    group for group in overall_match.groups() if group
+                ).strip()
+        if not section:
+            section_match = re.search(
+                r"minimum of ([\d.]+) in writing|"
+                r"no less than ([\d.]+) in each (?:band|skill)|"
+                r"minimum of ([\d.]+) in each",
+                course_body,
+                re.I,
+            )
+            if section_match:
+                section = next(
+                    group for group in section_match.groups() if group
+                ).strip()
+        return overall, section
+
+    @staticmethod
+    def english_tier_rows(programs: list[dict]) -> list[dict]:
+        """Flat IELTS tier rows (BCU/Teesside) with top-level ieltsMinOverall."""
+        rows: list[dict] = []
+        for item in programs:
+            if not isinstance(item, dict):
+                continue
+            if str(item.get("TestStudyLevel", "") or "").strip() and not str(
+                item.get("ieltsMinOverall", "") or ""
+            ).strip():
+                continue
+            if str(item.get("ieltsMinOverall", "") or "").strip():
+                rows.append(item)
+        return rows
+
+    @staticmethod
+    def select_english_tier_by_ielts(
+        programs: list[dict],
+        *,
+        ielts_overall: str,
+    ) -> dict | None:
+        """Match a flat uni tier row from the course IELTS overall score."""
+        try:
+            target = float(str(ielts_overall).strip())
+        except ValueError:
+            return None
+
+        tiers = Stage2Enricher.english_tier_rows(programs)
+        if not tiers:
+            return None
+
+        exact = [
+            tier
+            for tier in tiers
+            if float(str(tier.get("ieltsMinOverall", "") or "0")) == target
+        ]
+        if exact:
+            return exact[0]
+
+        above = sorted(
+            (
+                float(str(tier.get("ieltsMinOverall", "") or "0")),
+                tier,
+            )
+            for tier in tiers
+            if float(str(tier.get("ieltsMinOverall", "") or "0")) >= target
+        )
+        if above:
+            return above[0][1]
+
+        below = sorted(
+            (
+                float(str(tier.get("ieltsMinOverall", "") or "0")),
+                tier,
+            )
+            for tier in tiers
+        )
+        return below[-1][1] if below else None
+
+    @staticmethod
+    def select_default_english_tier(
+        programs: list[dict],
+        course_level: str,
+    ) -> dict | None:
+        """Lowest flat tier for standard UG/PG when the course page has no explicit IELTS."""
+        if course_level in {"foundation"}:
+            return None
+        tiers = Stage2Enricher.english_tier_rows(programs)
+        if not tiers:
+            return None
+        return min(
+            tiers,
+            key=lambda tier: float(str(tier.get("ieltsMinOverall", "") or "999")),
+        )
+
+    @staticmethod
+    def apply_english_tier_scores(
+        scores: dict[str, str],
+        tier: dict,
+        *,
+        ielts_overall: str = "",
+        ielts_section: str = "",
+    ) -> dict[str, str]:
+        """Fill PTE/TOEFL from a matched tier; keep course IELTS when provided."""
+        merged = dict(scores)
+        for key in ENGLISH_TEST_KEYS:
+            tier_value = str(tier.get(key, "") or "").strip()
+            if tier_value and key not in {"ieltsMinOverall", "ieltsMinSection"}:
+                merged[key] = tier_value
+        if ielts_overall:
+            merged["ieltsMinOverall"] = ielts_overall
+        if ielts_section:
+            merged["ieltsMinSection"] = ielts_section
+        return merged
+
+    @staticmethod
+    def apply_english_program_tests(
+        scores: dict[str, str],
+        program: dict,
+    ) -> dict[str, str]:
+        """Fill test scalars from a uni JSON program TestRequirements block."""
+        merged = dict(scores)
+        for test in program.get("TestRequirements", []):
+            if not isinstance(test, dict):
+                continue
+            name = str(test.get("TestName", "") or "").lower()
+            if "ielts" in name:
+                merged["ieltsMinOverall"] = str(test.get("ieltsMinOverall", "") or "").strip()
+                merged["ieltsMinSection"] = str(test.get("ieltsMinSection", "") or "").strip()
+            elif "toefl" in name:
+                merged["toeflMinOverall"] = str(test.get("toeflMinOverall", "") or "").strip()
+                merged["toeflMinSection"] = str(test.get("toeflMinSection", "") or "").strip()
+            elif "pearson" in name or "pte" in name:
+                merged["pteMinOverall"] = str(test.get("pteMinOverall", "") or "").strip()
+                merged["pteMinSection"] = str(test.get("pteMinSection", "") or "").strip()
+        return merged
+
+    @staticmethod
     def select_english_json_program(
     programs: list[dict],
     *,
@@ -2075,9 +2266,17 @@ class Stage2Enricher:
         if not isinstance(data, list):
             return []
         program = select_english_json_program(data, course_level=course_level, course_name=course_name, course_body=course_body)
-        if not program:
-            return []
-        return Stage1Enricher.normalize_description_list(program.get('description'))
+        if program:
+            return Stage1Enricher.normalize_description_list(program.get('description'))
+        course_overall, _ = parse_course_ielts_scores(course_body)
+        if course_overall:
+            tier = select_english_tier_by_ielts(data, ielts_overall=course_overall)
+            if tier:
+                return Stage1Enricher.normalize_description_list(tier.get('description'))
+        default_tier = select_default_english_tier(data, course_level)
+        if default_tier:
+            return Stage1Enricher.normalize_description_list(default_tier.get("description"))
+        return []
 
     @staticmethod
     def finalize_academic_requirements_metadata(
@@ -2275,45 +2474,61 @@ class Stage2Enricher:
         """Ensure english_requirements_parsed.json has test scalars (+ metadata)."""
         parsed = dict(english_json) if isinstance(english_json, dict) else {}
         lookup_content = english_lookup_content or english_content
-        fallback = parse_english_test_scores(lookup_content, course_name=course_name, course_level=course_level)
+        fallback = {key: '' for key in ENGLISH_TEST_KEYS}
+        english_data = parse_uni_json_payload(lookup_content, 'english-requirements') or []
+        if not isinstance(english_data, list):
+            english_data = []
+        stage1_json = stage1_json or {}
+        course_overall, course_section = parse_course_ielts_scores(
+            course_body,
+            stage1_json,
+        )
         json_program = select_english_json_program(
-            parse_uni_json_payload(lookup_content, 'english-requirements') or [],
+            english_data,
             course_level=course_level,
             course_name=course_name,
-            course_body=f'{course_body}\n{english_content}',
+            course_body=course_body,
         )
-        if isinstance(json_program, dict):
-            for test in json_program.get('TestRequirements', []):
-                if not isinstance(test, dict):
-                    continue
-                name = str(test.get('TestName', '') or '').lower()
-                if 'ielts' in name:
-                    fallback['ieltsMinOverall'] = str(test.get('ieltsMinOverall', '') or '').strip()
-                    fallback['ieltsMinSection'] = str(test.get('ieltsMinSection', '') or '').strip()
-                elif 'toefl' in name:
-                    fallback['toeflMinOverall'] = str(test.get('toeflMinOverall', '') or '').strip()
-                    fallback['toeflMinSection'] = str(test.get('toeflMinSection', '') or '').strip()
-                elif 'pearson' in name or 'pte' in name:
-                    fallback['pteMinOverall'] = str(test.get('pteMinOverall', '') or '').strip()
-                    fallback['pteMinSection'] = str(test.get('pteMinSection', '') or '').strip()
+        tier: dict | None = None
+        if course_overall:
+            tier = select_english_tier_by_ielts(english_data, ielts_overall=course_overall)
+        elif course_level == "foundation" and isinstance(json_program, dict):
+            fallback = apply_english_program_tests(fallback, json_program)
+        else:
+            tier = select_default_english_tier(english_data, course_level)
+        if tier:
+            fallback = apply_english_tier_scores(
+                fallback,
+                tier,
+                ielts_overall=course_overall or str(tier.get("ieltsMinOverall", "") or "").strip(),
+                ielts_section=course_section or str(tier.get("ieltsMinSection", "") or "").strip(),
+            )
+        if not any(str(fallback.get(key, "") or "").strip() for key in ENGLISH_TEST_KEYS):
+            table_scores = parse_english_test_scores(
+                lookup_content,
+                course_name=course_name,
+                course_level=course_level,
+            )
+            for key in ENGLISH_TEST_KEYS:
+                if str(table_scores.get(key, "") or "").strip():
+                    fallback[key] = table_scores[key]
         for key in ENGLISH_TEST_KEYS:
-            current = str(parsed.get(key, '') or '').strip()
-            if not current:
-                parsed[key] = fallback.get(key, '')
-            else:
-                parsed[key] = current
-        stage1_json = stage1_json or {}
-        for key in ('ieltsMinOverall', 'ieltsMinSection'):
-            stage1_val = str(stage1_json.get(key, '') or '').strip()
-            if stage1_val:
-                parsed[key] = stage1_val
+            uni_value = str(fallback.get(key, '') or '').strip()
+            if uni_value:
+                parsed[key] = uni_value
+            elif not str(parsed.get(key, '') or '').strip():
+                parsed[key] = ''
+        if course_overall:
+            parsed['ieltsMinOverall'] = course_overall
+            if course_section:
+                parsed['ieltsMinSection'] = course_section
         meta = normalize_metadata_array(parsed.get('AcademicRequirementsMetaData'), default_subtitle='English Requirement')
         meta = filter_academic_metadata(meta)
         json_descriptions = extract_english_json_descriptions(
             lookup_content,
             course_level,
             course_name=course_name,
-            course_body=f'{course_body}\n{english_content}',
+            course_body=course_body,
         )
         if json_descriptions:
             meta = [{'subtitle': 'English Requirement', 'description': json_descriptions}]
@@ -3132,6 +3347,11 @@ normalize_requirements_list = Stage2Enricher.normalize_requirements_list
 normalize_metadata_array = Stage2Enricher.normalize_metadata_array
 filter_academic_metadata = Stage2Enricher.filter_academic_metadata
 score_english_program = Stage2Enricher.score_english_program
+parse_course_ielts_scores = Stage2Enricher.parse_course_ielts_scores
+select_english_tier_by_ielts = Stage2Enricher.select_english_tier_by_ielts
+select_default_english_tier = Stage2Enricher.select_default_english_tier
+apply_english_tier_scores = Stage2Enricher.apply_english_tier_scores
+apply_english_program_tests = Stage2Enricher.apply_english_program_tests
 select_english_json_program = Stage2Enricher.select_english_json_program
 extract_bangladesh_json_descriptions = Stage2Enricher.extract_bangladesh_json_descriptions
 extract_english_json_descriptions = Stage2Enricher.extract_english_json_descriptions

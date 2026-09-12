@@ -64,7 +64,7 @@ import time
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import parse_qs, parse_qsl, unquote, urlencode, urljoin, urlparse, urlunparse
+from urllib.parse import parse_qs, unquote, urlencode, urljoin, urlparse, urlunparse
 
 from bs4 import BeautifulSoup
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
@@ -148,21 +148,7 @@ SEARCH_PATH_LABELS = {
     "/search/foundation-year": "foundation",
 }
 PAGINATION_EMPTY_LIMIT = 2
-LISTING_DOWNLOAD_RETRIES = 3
-SEARCHSTAX_CONSENT_INIT_SCRIPT = """
-(() => {
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = window.gtag || function () { dataLayer.push(arguments); };
-  gtag("consent", "default", {
-    analytics_storage: "granted",
-    functionality_storage: "granted",
-    ad_storage: "granted",
-    ad_user_data: "granted",
-    ad_personalization: "granted",
-    security_storage: "granted",
-  });
-})();
-"""
+LISTING_DOWNLOAD_RETRIES = 2
 DEFAULT_USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -224,12 +210,6 @@ class Utils:
     @staticmethod
     def is_empty(value: str | None) -> bool:
         return value is None or not str(value).strip()
-
-    @staticmethod
-    def env_bool(value: str | None, default: bool = True) -> bool:
-        if Utils.is_empty(value):
-            return default
-        return str(value).strip().lower() not in {"0", "false", "no", "off"}
 
     @staticmethod
     def sanitize_filename(name: str, max_len: int = 180) -> str:
@@ -392,10 +372,6 @@ class UrlNormalizer:
         for candidate in PAGINATION_PARAM_CANDIDATES:
             if candidate.lower() in lower_keys:
                 return lower_keys[candidate.lower()]
-        for key in params:
-            lowered = key.lower()
-            if lowered.endswith("[page]") or lowered.endswith("[pagenumber]"):
-                return key
         return "pageIndex"
 
     @staticmethod
@@ -415,51 +391,10 @@ class UrlNormalizer:
             return 1
 
     @staticmethod
-    def _uses_searchstax_query(params: dict[str, list[str]]) -> bool:
-        return any(key.lower().startswith("searchstax[") for key in params)
-
-    @staticmethod
-    def _build_searchstax_query(pairs: list[tuple[str, str]]) -> str:
-        parts: list[str] = []
-        for key, val in pairs:
-            if val == "*":
-                val_out = "*"
-            elif key.lower() == "searchstax[order]":
-                val_out = val.replace(" ", "%20")
-            else:
-                val_out = val
-            parts.append(f"{key}={val_out}")
-        return "&".join(parts)
-
-    @staticmethod
-    def canonical_searchstax_listing_url(url: str) -> str:
-        parsed = urlparse(url)
-        pairs = parse_qsl(parsed.query, keep_blank_values=True)
-        if not any(key.lower().startswith("searchstax[") for key, _value in pairs):
-            return url
-        query = UrlNormalizer._build_searchstax_query(pairs)
-        return urlunparse(parsed._replace(query=query))
-
-    @staticmethod
     def set_page_number(url: str, page_number: int, param: str | None = None) -> str:
         param = param or UrlNormalizer.detect_pagination_param(url)
         parsed = urlparse(url)
         params = UrlNormalizer._query_params(url)
-        if UrlNormalizer._uses_searchstax_query(params):
-            pairs = parse_qsl(parsed.query, keep_blank_values=True)
-            updated: list[tuple[str, str]] = []
-            found = False
-            for key, val in pairs:
-                if key.lower() == param.lower():
-                    updated.append((key, str(page_number)))
-                    found = True
-                else:
-                    updated.append((key, val))
-            if not found:
-                updated.append((param, str(page_number)))
-            query = UrlNormalizer._build_searchstax_query(updated)
-            return urlunparse(parsed._replace(query=query))
-
         actual_key = param
         for key in params:
             if key.lower() == param.lower():
@@ -618,9 +553,15 @@ class CourseUrlMatcher:
     """Given a domain + MatchingRules, decides which <a> links on a page are
     real course URLs, and extracts them from HTML."""
 
-    def __init__(self, domain: str, rules: MatchingRules):
+    def __init__(
+        self,
+        domain: str,
+        rules: MatchingRules,
+        course_filter: CourseTypeFilter | None = None,
+    ):
         self.domain = domain
         self.rules = rules
+        self.course_filter = course_filter
 
     def is_valid(self, url: str) -> bool:
         parsed = urlparse(url)
@@ -632,6 +573,8 @@ class CourseUrlMatcher:
         if any(path_lower.startswith(prefix) for prefix in self.rules.excluded_prefixes):
             return False
         if path_lower in self.rules.excluded_paths:
+            return False
+        if self.course_filter and self.course_filter.url_is_excluded(url):
             return False
         return any(pattern.search(parsed.path) for pattern in self.rules.path_patterns)
 
@@ -784,9 +727,7 @@ class ListingConfigLoader:
             value = env.get(key, "").strip()
             if Utils.is_empty(value):
                 break
-            url = UrlNormalizer.canonical_searchstax_listing_url(
-                UrlNormalizer.normalize(value, keep_query=True)
-            )
+            url = UrlNormalizer.normalize(value, keep_query=True)
             parsed = urlparse(url)
             if not parsed.scheme or not parsed.netloc:
                 raise ValueError(f"{key} must be a valid listing URL: {value}")
@@ -850,16 +791,6 @@ class ScraperConfig:
     degree_listings: list[ListingConfig] = field(default_factory=list)
     single_catalogue: CatalogueSource | None = None
     level_classifier: StudyLevelClassifier = field(default_factory=StudyLevelClassifier)
-    browser_headless: bool = True
-    browser_user_data_dir: Path | None = None
-    browser_channel: str = ""
-
-    def browser_session(self) -> "BrowserSession":
-        return BrowserSession(
-            headless=self.browser_headless,
-            user_data_dir=self.browser_user_data_dir,
-            channel=self.browser_channel,
-        )
 
     # Convenience passthroughs so extraction code can read config.path_patterns etc.
     @property
@@ -890,28 +821,9 @@ class ScraperConfig:
     def base_url(self, value: str) -> None:
         self.matching.base_url = value
 
-    @property
-    def course_href_wait_pattern(self) -> str:
-        for source in self.path_pattern_sources:
-            if r"\d{4}" in source and r"\d{2}" in source:
-                return r"/\d{4}-\d{2}/"
-            if "/undergraduate/" in source or "/postgraduate/" in source:
-                return r"/(?:undergraduate|postgraduate|distance-learning)/"
-        return r"/"
-
 
 class ConfigLoader:
     """Builds a ScraperConfig by reading and validating the .env file."""
-
-    @staticmethod
-    def _resolve_browser_user_data_dir(work_dir: Path, raw: str) -> Path | None:
-        if Utils.is_empty(raw):
-            return None
-        path = Path(raw.strip())
-        if not path.is_absolute():
-            path = (work_dir / path).resolve()
-        path.mkdir(parents=True, exist_ok=True)
-        return path
 
     @staticmethod
     def load(work_dir: Path) -> ScraperConfig:
@@ -931,12 +843,6 @@ class ConfigLoader:
             env_path=str(env_path),
             matching=matching,
             level_classifier=StudyLevelClassifier.from_env_file(env, env_path),
-            browser_headless=Utils.env_bool(env.get("COURSE_DOWNLOAD_HEADLESS"), default=True),
-            browser_user_data_dir=ConfigLoader._resolve_browser_user_data_dir(
-                work_dir,
-                env.get("COURSE_DOWNLOAD_USER_DATA_DIR", ""),
-            ),
-            browser_channel=env.get("COURSE_DOWNLOAD_BROWSER_CHANNEL", "").strip(),
         )
 
         if strategy == STRATEGY_ALL_COURSE:
@@ -1107,68 +1013,22 @@ class ArtifactStore:
 # ============================================================================
 
 class BrowserSession:
-    """Thin wrapper around a Chromium page, used as a context manager."""
+    """Thin wrapper around a headless Chromium page, used as a context manager."""
 
-    def __init__(
-        self,
-        *,
-        headless: bool = True,
-        user_data_dir: Path | None = None,
-        channel: str = "",
-    ):
-        self.headless = headless
-        self.user_data_dir = user_data_dir
-        self.channel = channel.strip()
+    def __init__(self):
         self._playwright = None
         self._browser = None
-        self._context = None
         self.page = None
-
-    def _launch_kwargs(self) -> dict[str, object]:
-        kwargs: dict[str, object] = {
-            "headless": self.headless,
-            "args": ["--disable-blink-features=AutomationControlled"],
-            "ignore_default_args": ["--enable-automation"],
-        }
-        if self.channel:
-            kwargs["channel"] = self.channel
-        return kwargs
-
-    def _attach_page(self) -> None:
-        assert self._context is not None
-        self._context.add_init_script(SEARCHSTAX_CONSENT_INIT_SCRIPT)
-        self.page = (
-            self._context.pages[0]
-            if self._context.pages
-            else self._context.new_page()
-        )
 
     def __enter__(self) -> "BrowserSession":
         self._playwright = sync_playwright().start()
-        launch_kwargs = self._launch_kwargs()
-        if self.user_data_dir:
-            try:
-                self._context = self._playwright.chromium.launch_persistent_context(
-                    str(self.user_data_dir),
-                    user_agent=DEFAULT_USER_AGENT,
-                    **launch_kwargs,
-                )
-                self._attach_page()
-                return self
-            except Exception as exc:
-                print(
-                    f"Warning: browser profile unavailable ({self.user_data_dir}): {exc}. "
-                    "Using ephemeral browser session."
-                )
-        self._browser = self._playwright.chromium.launch(**launch_kwargs)
-        self._context = self._browser.new_context(user_agent=DEFAULT_USER_AGENT)
-        self._attach_page()
+        self._browser = self._playwright.chromium.launch(headless=True)
+        context = self._browser.new_context(user_agent=DEFAULT_USER_AGENT)
+        self.page = context.new_page()
         return self
 
     def __exit__(self, exc_type, exc, tb) -> None:
-        if self._context is not None:
-            self._context.close()
-        elif self._browser:
+        if self._browser:
             self._browser.close()
         if self._playwright:
             self._playwright.stop()
@@ -1177,10 +1037,6 @@ class BrowserSession:
     def dismiss_cookies(page) -> None:
         selectors = [
             "#ccc-notify-accept",
-            "#ccc-notify button.ccc-button-solid",
-            "#ccc-notify .ccc-notify-button",
-            "button:has-text('Accept Recommended Settings')",
-            "button:has-text('I Accept')",
             "button.agree-button.eu-cookie-compliance-default-button",
             "button:has-text('Accept all categories')",
             "button:has-text('Accept all')",
@@ -1198,127 +1054,36 @@ class BrowserSession:
                 continue
 
     @staticmethod
-    def listing_wait_selectors(link_selector: str = "") -> list[str]:
-        selectors: list[str] = []
-        if link_selector:
-            for part in link_selector.split(","):
-                item = part.strip()
-                if item and item not in selectors:
-                    selectors.append(item)
-        for fallback in (
+    def wait_for_listing(page) -> None:
+        selectors = [
             'a[href*="/study-here/courses/"]',
-            "a.coursefinder-course-search__name",
-            'a[data-test-id="searchstax-result-item-link"]',
             ".course-card",
             "a.sc-eJZSpO",
-        ):
-            if fallback not in selectors:
-                selectors.append(fallback)
-        return selectors
-
-    @staticmethod
-    def _course_links_ready(page, *, selectors: list[str], href_pattern: str) -> bool:
-        script = """
-        ({ selectors, hrefPattern }) => {
-          const re = new RegExp(hrefPattern, "i");
-          for (const selector of selectors) {
-            for (const anchor of document.querySelectorAll(selector)) {
-              const href = anchor.getAttribute("href") || "";
-              if (re.test(href)) return true;
-            }
-          }
-          return false;
-        }
-        """
-        try:
-            return bool(page.evaluate(script, {"selectors": selectors, "hrefPattern": href_pattern}))
-        except Exception:
-            return False
-
-    @staticmethod
-    def wait_for_listing(
-        page,
-        *,
-        link_selector: str = "",
-        course_href_pattern: str = r"/\d{4}-\d{2}/",
-        timeout_ms: int = 60000,
-    ) -> None:
-        selectors = BrowserSession.listing_wait_selectors(link_selector)
-        deadline = time.time() + (timeout_ms / 1000)
-        while time.time() < deadline:
-            BrowserSession.dismiss_cookies(page)
-            if BrowserSession._course_links_ready(
-                page,
-                selectors=selectors,
-                href_pattern=course_href_pattern,
-            ):
+        ]
+        for selector in selectors:
+            try:
+                page.wait_for_selector(selector, timeout=20000)
                 page.wait_for_timeout(1000)
                 return
-            page.wait_for_timeout(500)
-        raise PlaywrightTimeoutError(
-            f"Timed out waiting for course listing links ({', '.join(selectors[:2])})"
-        )
+            except PlaywrightTimeoutError:
+                continue
 
-    def _ensure_page(self) -> None:
-        if self.page is not None and not self.page.is_closed():
-            return
-        assert self._context is not None
-        self.page = self._context.new_page()
-
-    def _warm_up_origin(self, url: str) -> None:
-        parsed = urlparse(url)
-        if not parsed.scheme or not parsed.netloc:
-            return
-        origin = f"{parsed.scheme}://{parsed.netloc}/"
-        try:
-            self._ensure_page()
-            self.page.goto(origin, wait_until="load", timeout=30000)
-            self.dismiss_cookies(self.page)
-            self.page.wait_for_timeout(1500)
-        except Exception:
-            pass
-
-    def download_html(
-        self,
-        url: str,
-        *,
-        wait_for_results: bool = False,
-        link_selector: str = "",
-        course_href_pattern: str = r"/\d{4}-\d{2}/",
-    ) -> tuple[str, str]:
+    def download_html(self, url: str, *, wait_for_results: bool = False) -> tuple[str, str]:
         """Navigate to url and return (page_title, html). Retries transient failures."""
         assert self.page is not None
         last_error: Exception | None = None
         for attempt in range(1, LISTING_DOWNLOAD_RETRIES + 1):
             try:
-                self._ensure_page()
-                if wait_for_results and attempt == 1:
-                    self._warm_up_origin(url)
-                self.page.goto(
-                    url,
-                    wait_until="load" if wait_for_results else "domcontentloaded",
-                    timeout=60000,
-                )
+                self.page.goto(url, wait_until="domcontentloaded", timeout=60000)
                 self.dismiss_cookies(self.page)
+                try:
+                    self.page.wait_for_load_state("networkidle", timeout=15000)
+                except PlaywrightTimeoutError:
+                    self.page.wait_for_load_state("load", timeout=15000)
                 if wait_for_results:
-                    selectors = self.listing_wait_selectors(link_selector)
-                    if not self._course_links_ready(
-                        self.page,
-                        selectors=selectors,
-                        href_pattern=course_href_pattern,
-                    ):
-                        self.wait_for_listing(
-                            self.page,
-                            link_selector=link_selector,
-                            course_href_pattern=course_href_pattern,
-                        )
-                    else:
-                        self.page.wait_for_timeout(1000)
+                    self.wait_for_listing(self.page)
                 else:
-                    try:
-                        self.page.wait_for_load_state("networkidle", timeout=15000)
-                    except PlaywrightTimeoutError:
-                        self.page.wait_for_timeout(800)
+                    self.page.wait_for_timeout(800)
                 html = self.page.content()
                 if not html or len(html) < 200:
                     raise RuntimeError("Empty or tiny HTML response")
@@ -1327,17 +1092,6 @@ class BrowserSession:
             except Exception as exc:
                 last_error = exc
                 print(f"    Retry {attempt}/{LISTING_DOWNLOAD_RETRIES}: {exc}")
-                if "has been closed" in str(exc).lower():
-                    try:
-                        self._ensure_page()
-                    except Exception:
-                        pass
-                elif wait_for_results and attempt < LISTING_DOWNLOAD_RETRIES:
-                    try:
-                        self._ensure_page()
-                        self.page.reload(wait_until="load", timeout=60000)
-                    except Exception:
-                        pass
                 time.sleep(min(2 * attempt, 8))
         raise RuntimeError(f"Failed to download {url}: {last_error}")
 
@@ -1424,7 +1178,8 @@ class CatalogueUrlExtractor:
         catalogue_url = source.catalogue_url
         scope = source.scope
         scope_prefix = f"[{scope}] " if scope else ""
-        matcher = CourseUrlMatcher(domain, self.config.matching)
+        course_filter = CourseTypeFilter.from_code_dir(self.work_dir)
+        matcher = CourseUrlMatcher(domain, self.config.matching, course_filter)
 
         # Step 1: get the catalogue page HTML, either from disk or by downloading it.
         if source.catalogue_html:
@@ -1495,7 +1250,7 @@ class CatalogueUrlExtractor:
         letter_browser = browser
         close_browser = False
         if letter_browser is None:
-            letter_browser = self.config.browser_session().__enter__()
+            letter_browser = BrowserSession().__enter__()
             close_browser = True
         try:
             for index, letter_url in enumerate(pending_letters, start=1):
@@ -1564,7 +1319,8 @@ class PaginatedListingExtractor:
         search_groups = SearchGroupBuilder.build(seed_urls)
         programme = listing_config.programme
         scope = listing_config.scope or programme
-        matcher = CourseUrlMatcher(self.config.domain, self.config.matching)
+        course_filter = CourseTypeFilter.from_code_dir(self.work_dir)
+        matcher = CourseUrlMatcher(self.config.domain, self.config.matching, course_filter)
         base_url = self.config.base_url
 
         for path_key in sorted(search_groups.keys()):
@@ -1639,12 +1395,7 @@ class PaginatedListingExtractor:
             page_counter += 1
             print(f"  [{scope}] Downloading listing page {page_counter}: {listing_url}")
             try:
-                _title, html = self.browser.download_html(
-                    listing_url,
-                    wait_for_results=True,
-                    link_selector=self.config.link_selector,
-                    course_href_pattern=self.config.course_href_wait_pattern,
-                )
+                _title, html = self.browser.download_html(listing_url, wait_for_results=True)
             except RuntimeError as exc:
                 empty_streak += 1
                 print(f"    [{scope}] No HTML ({empty_streak}/{PAGINATION_EMPTY_LIMIT}): {exc}")
@@ -2035,12 +1786,6 @@ class CourseUrlScraper:
         print(f"COURSE_PATH_PATTERNS={len(self.config.path_pattern_sources)} rule(s)")
         if self.config.link_selector:
             print(f"COURSE_LINK_SELECTOR={self.config.link_selector}")
-        if not self.config.browser_headless:
-            print("COURSE_DOWNLOAD_HEADLESS=false (headed browser)")
-        if self.config.browser_channel:
-            print(f"COURSE_DOWNLOAD_BROWSER_CHANNEL={self.config.browser_channel}")
-        if self.config.browser_user_data_dir:
-            print(f"COURSE_DOWNLOAD_USER_DATA_DIR={self.config.browser_user_data_dir}")
 
         if strategy == STRATEGY_ALL_COURSE:
             self._run_all_course(all_urls, completed, url_levels)
@@ -2098,7 +1843,7 @@ class CourseUrlScraper:
         needs_browser = any(not source.catalogue_html for source in sources)
         browser: BrowserSession | None = None
         if needs_browser:
-            browser = self.config.browser_session().__enter__()
+            browser = BrowserSession().__enter__()
         try:
             for source in sources:
                 if source.scope:
@@ -2197,7 +1942,7 @@ class CourseUrlScraper:
                 f"({listing_config.search_path})"
             )
 
-        with self.config.browser_session() as browser:
+        with BrowserSession() as browser:
             extractor = PaginatedListingExtractor(
                 self.code_dir,
                 self.config,
@@ -2235,31 +1980,13 @@ class CourseUrlScraper:
 class CoursePageDownloader:
     """Downloads individual course pages listed in course_urls.csv."""
 
-    def __init__(
-        self,
-        code_dir: Path,
-        *,
-        strategy: str,
-        browser_headless: bool = True,
-        browser_user_data_dir: Path | None = None,
-        browser_channel: str = "",
-    ):
+    def __init__(self, code_dir: Path, *, strategy: str):
         self.code_dir = code_dir.resolve()
         self.output_dir = resolve_output_dir(self.code_dir)
         self.strategy = strategy
-        self.browser_headless = browser_headless
-        self.browser_user_data_dir = browser_user_data_dir
-        self.browser_channel = browser_channel
         self.progress_store = ProgressStore(self.output_dir)
         self.artifacts = ArtifactStore(self.output_dir)
         self.logger = ScrapeLogger(self.output_dir)
-
-    def _browser_session(self) -> BrowserSession:
-        return BrowserSession(
-            headless=self.browser_headless,
-            user_data_dir=self.browser_user_data_dir,
-            channel=self.browser_channel,
-        )
 
     def run(
         self,
@@ -2314,7 +2041,7 @@ class CoursePageDownloader:
         stats = {"total": len(urls), "downloaded": 0, "failed": 0, "skipped": 0, "excluded": 0}
         course_filter = CourseTypeFilter.from_code_dir(self.code_dir)
 
-        with self._browser_session() as browser:
+        with BrowserSession() as browser:
             for index, url in enumerate(urls, start=1):
                 if url in downloaded:
                     stats["skipped"] += 1
@@ -2423,16 +2150,9 @@ def download_course_pages(
     limit: int | None = None,
     urls: list[str] | None = None,
 ) -> dict[str, int]:
-    env = EnvFile(work_dir / ENV_FILE)
     return CoursePageDownloader(
         work_dir,
         strategy=config.get("strategy", ""),
-        browser_headless=Utils.env_bool(env.get("COURSE_DOWNLOAD_HEADLESS"), default=True),
-        browser_user_data_dir=ConfigLoader._resolve_browser_user_data_dir(
-            work_dir,
-            env.get("COURSE_DOWNLOAD_USER_DATA_DIR", ""),
-        ),
-        browser_channel=env.get("COURSE_DOWNLOAD_BROWSER_CHANNEL", "").strip(),
     ).run(fresh=fresh, limit=limit, urls=urls)
 
 

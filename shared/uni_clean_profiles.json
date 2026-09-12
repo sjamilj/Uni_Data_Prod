@@ -115,9 +115,9 @@
     "title": "#coursepage h1",
     "expand_tabs": true,
     "blocks": [
-      "Course page :: #coursepage",
-      "Header summary :: .coursepageheadercontent",
-      "Main content :: #coursepage .coursecontent"
+      "Key information :: #tees-key-info",
+      "Entry requirements :: #tab3",
+      "Fees and funding :: #tees-fees"
     ],
     "strip": ["script", "noscript", "#sectionmenu", "#mainmenu"]
   },

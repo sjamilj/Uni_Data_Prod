@@ -45,26 +45,9 @@ EXCLUDED_PATH_PREFIXES="
 /sections/coursesearch/
 "
 
-
-
-Course overview ::
-Entry requirements ::
-Fees and funding ::
-"
-
-script
-noscript
-"
-
-
-4 :: With placement
-4 :: With foundation year
-3 :: UK students
-"
-
-bangladesh-entry :: https://www.tees.ac.uk/sections/international/country_details.cfm?country_id=21
-english-requirements :: https://connect.tees.ac.uk/docs/publicdocumentslibraries/default-document-library/legal-and-governance-services/english-language-approved-tests-accepted-qualifications-and-exemptions-criteria-2025-2026.pdf?sfvrsn=6faf5957_12
-scholarships :: https://www.tees.ac.uk/sections/international/scholarships.cfm
+# Drop online-only courses during URL scrape and download (path contains "(online)")
+COURSE_EXCLUDE_URL_PATTERNS="
+*(online)*
 "
 
 # --- Course page cleaning (download_and_clean_course_pages.py — course_detail/) ---
@@ -75,10 +58,11 @@ COURSE_PAGE_TITLE_SELECTOR=#coursepage h1
 COURSE_CLEAN_ENGINE=generic
 
 # One CSS selector per line; optional heading with :: or |
+# #tees-key-info is assembled in code/course_markdown_cleanup.py from #notifications + .row.courseinfo
 COURSE_CLEAN_BLOCKS="
-Course page :: #coursepage
-Header summary :: .coursepageheadercontent
-Main content :: #coursepage .coursecontent
+Key information :: #tees-key-info
+Entry requirements :: #tab3
+Fees and funding :: #tees-fees
 "
 
 # Noise removed inside each matched block before markdown conversion
@@ -93,6 +77,12 @@ COURSE_CLEAN_EXPAND_TABS=true
 
 # --- Course markdown cleanup (shared/course_markdown_cleanup.py) ---
 COURSE_MARKDOWN_REMOVE_SECTIONS="
+2 :: Course page
+2 :: Course overview
+2 :: Course details
+2 :: Employability
+2 :: Information for international applicants
+2 :: Header summary
 2 :: Latest news
 2 :: Be part of our community
 2 :: Alumni services
