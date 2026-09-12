@@ -15,7 +15,6 @@ from llm_extract import (
     course_slug_from_url,
     infer_degree_name,
     index_row_to_entry,
-    is_boilerplate_heading,
     read_course_index_csv,
 )
 from scrape_course_urls import ENV_FILE, load_env_file
@@ -320,9 +319,9 @@ class DevCoursesExporter:
             ),
         )
 
-    def export_entries_from_course_index(self, output_dir: Path) -> list[tuple[str, Path, dict[str, str]]]:
-        """Resolve (study_level, normalized.json, index row) for each row in courses.csv."""
-        entries: list[tuple[str, Path, dict[str, str]]] = []
+    def export_entries_from_course_index(self, output_dir: Path) -> list[tuple[str, Path]]:
+        """Resolve (study_level, normalized.json) for each row in courses.csv."""
+        entries: list[tuple[str, Path]] = []
         missing: list[str] = []
         index_rows = self.dedupe_index_rows_for_export(output_dir, read_course_index_csv(output_dir))
         for row in index_rows:
@@ -332,7 +331,7 @@ class DevCoursesExporter:
             study_level = entry.get("study_level", "").strip()
             norm_path = extraction_dir(output_dir, slug, study_level) / "normalized.json"
             if norm_path.is_file():
-                entries.append((study_level, norm_path, row))
+                entries.append((study_level, norm_path))
             else:
                 missing.append(entry.get("md_file") or course_url)
         if missing:
@@ -351,21 +350,21 @@ class DevCoursesExporter:
                 return parts[index + 1]
         return ""
 
-    def select_export_entries(self, output_dir: Path) -> list[tuple[str, Path, dict[str, str]]]:
+    def select_export_entries(self, output_dir: Path) -> list[tuple[str, Path]]:
         index_path = output_dir / "courses.csv"
         if index_path.is_file():
             return self.export_entries_from_course_index(output_dir)
         paths = self.dedupe_normalized_by_course_name(self.discover_normalized_files(output_dir))
         return [
-            (self._study_level_from_normalized_path(path), path, {})
+            (self._study_level_from_normalized_path(path), path)
             for path in paths
         ]
 
     def normalized_paths_from_course_index(self, output_dir: Path) -> list[Path]:
-        return [path for _level, path, _row in self.export_entries_from_course_index(output_dir)]
+        return [path for _level, path in self.export_entries_from_course_index(output_dir)]
 
     def select_normalized_paths(self, output_dir: Path) -> list[Path]:
-        return [path for _level, path, _row in self.select_export_entries(output_dir)]
+        return [path for _level, path in self.select_export_entries(output_dir)]
 
     @staticmethod
     def serialize_csv_value(value: object) -> str:
@@ -459,11 +458,8 @@ class DevCoursesExporter:
             )
 
         rows: list[dict[str, object]] = []
-        for study_level, norm_path, index_row in export_entries:
+        for study_level, norm_path in export_entries:
             data = json.loads(norm_path.read_text(encoding="utf-8"))
-            index_course_name = str(index_row.get("courseName") or "").strip()
-            if index_course_name and is_boilerplate_heading(str(data.get("courseName") or "")):
-                data = {**data, "courseName": index_course_name}
             rows.append(
                 self.normalized_to_dev_row(
                     data,

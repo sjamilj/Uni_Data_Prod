@@ -9,7 +9,6 @@ import sys
 from pathlib import Path
 
 from llm_extract import enrich_stage1_from_markdown
-from study_level import CLEAN_COURSES_SUBDIR, PRESETUP_CLEAN_SUBDIR, PRESETUP_EXTRACT_SUBDIR
 from uni_pages import split_frontmatter
 from uni_paths import resolve_code_dir, resolve_output_dir
 
@@ -31,32 +30,16 @@ def _load_stage1_llm_json(course_dir: Path) -> dict:
     return {}
 
 
-def _resolve_clean_md(output_dir: Path, extracted_parts: tuple[str, ...]) -> Path | None:
-    if len(extracted_parts) < 2:
-        return None
-    if extracted_parts[0] == PRESETUP_EXTRACT_SUBDIR:
-        if len(extracted_parts) < 3:
-            return None
-        clean_subdir = PRESETUP_CLEAN_SUBDIR
-        study_level = extracted_parts[1]
-        slug = extracted_parts[2]
-    else:
-        clean_subdir = CLEAN_COURSES_SUBDIR
-        study_level = extracted_parts[0]
-        slug = extracted_parts[1]
-
+def _resolve_clean_md(output_dir: Path, study_level: str, slug: str) -> Path | None:
     candidates = [study_level]
     if study_level == "postgraduate":
         candidates.append("postgraduate_research")
     elif study_level == "postgraduate_research":
         candidates.append("postgraduate")
     for level in candidates:
-        path = output_dir / "clean" / clean_subdir / level / f"{slug}.md"
+        path = output_dir / "clean" / "courses" / level / f"{slug}.md"
         if path.is_file():
             return path
-        presetup_path = output_dir / "clean" / PRESETUP_CLEAN_SUBDIR / level / f"{slug}.md"
-        if presetup_path.is_file():
-            return presetup_path
     return None
 
 
@@ -68,8 +51,9 @@ def backfill_course_dir(output_dir: Path, course_dir: Path) -> bool:
     parts = course_dir.relative_to(output_dir / "extracted").parts
     if len(parts) < 2:
         return False
+    study_level, slug = parts[0], parts[1]
 
-    md_path = _resolve_clean_md(output_dir, parts)
+    md_path = _resolve_clean_md(output_dir, study_level, slug)
     if not md_path:
         print(f"SKIP no markdown: {course_dir.relative_to(output_dir)}", file=sys.stderr)
         return False

@@ -29,11 +29,11 @@ UNDERGRADUATE_COURSE_LISTING_PAGE_2=https://www.kingston.ac.uk/study/course-sear
 
 UNIVERSITY_BASE_URL=https://www.kingston.ac.uk
 # Optional CSS selector — only scan these anchors (leave blank = all <a href>)
-#COURSE_LINK_SELECTOR=
+COURSE_LINK_SELECTOR=a.c-button[href*="/study/"]
 
-# CCCU course page paths under /study-here/courses/
+# Kingston course page paths under /study/{level}/{slug} or /study/{level}/{slug}/{variant}
 COURSE_PATH_PATTERNS="
-^/study/(?:undergraduate|postgraduate|foundation|degree-apprenticeships|short-courses|online-courses)/[a-z0-9][a-z0-9-]*$
+^/study/(?:undergraduate|postgraduate|foundation|degree-apprenticeships?|short-courses|online-courses)/[a-z0-9][a-z0-9-]+(?:/[a-z0-9][a-z0-9-]+)?$
 "
 
 # --- Study-level URL split (fallback when a catalogue is not degree-scoped) ---
