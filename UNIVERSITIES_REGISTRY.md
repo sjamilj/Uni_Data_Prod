@@ -31,6 +31,7 @@ git tag -l "uni/aru/foundation/*"
 
 | Tag pattern | Meaning |
 |-------------|---------|
+| `shared/v1.0.0` | **Shared pipeline baseline** (`d5f7088`) — reset `shared/` before a new uni |
 | `uni/{slug}/v1.0.0` | Full university complete (all study levels) |
 | `unit-NN` | Same snapshot as full `uni/{slug}/v1.0.0` |
 | `uni/{slug}/foundation/v1.0.0` | Foundation slice only |

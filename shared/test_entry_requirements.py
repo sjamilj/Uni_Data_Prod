@@ -19,12 +19,15 @@ from llm_extract import (  # noqa: E402
     enrich_stage1_from_markdown,
     extract_bangladesh_section_text,
     extract_entry_lines_from_course_markdown,
+    enrich_english_parsed,
     extract_stage1_fields_from_md,
     filter_bangladesh_descriptions_for_course,
     infer_degree_name_from_md,
     merge_requirement_lists,
     parse_bangladesh_json_requirements,
+    parse_course_ielts_scores,
     select_english_json_program,
+    select_english_tier_by_ielts,
 )
 from normalize_admission_data import (  # noqa: E402
     _extract_gbp_fee_from_metadata,
@@ -457,6 +460,100 @@ This information is for international students applying to study at the Universi
         hints = extract_stage1_fields_from_md(body)
         self.assertEqual(hints["intakeInfo"], "September 2026")
         self.assertEqual(hints["tuitionFee"], "18200")
+
+    def test_teesside_course_ielts_maps_to_uni_tier(self) -> None:
+        course_body = """**International applicants**
+- International applicants must have a minimum IELTS score of 7.0 or equivalent in line with the University English Language Policy that equates to overall IELTS 7 with a minimum of 6.5 in writing (or equivalent), before an unconditional offer is made.
+"""
+        english_content = Path(
+            _SHARED.parent / "Teesside University" / "output" / "clean" / "uni" / "english-requirements.md"
+        ).read_text(encoding="utf-8")
+
+        overall, section = parse_course_ielts_scores(course_body)
+        self.assertEqual(overall, "7.0")
+        self.assertEqual(section, "6.5")
+
+        hints = extract_stage1_fields_from_md(course_body)
+        self.assertEqual(hints["ieltsMinOverall"], "7.0")
+        self.assertEqual(hints["ieltsMinSection"], "6.5")
+
+        enriched = enrich_english_parsed(
+            {},
+            english_content,
+            course_name="Nursing Studies (Learning Disabilities) BSc (Hons)",
+            course_level="undergraduate",
+            stage1_json=hints,
+            course_body=course_body,
+        )
+        self.assertEqual(enriched["ieltsMinOverall"], "7.0")
+        self.assertEqual(enriched["ieltsMinSection"], "6.5")
+        self.assertEqual(enriched["pteMinOverall"], "66")
+        self.assertEqual(enriched["toeflMinOverall"], "100")
+        descriptions = enriched["AcademicRequirementsMetaData"][0]["description"]
+        self.assertTrue(any("IELTS 7.0 overall" in line for line in descriptions))
+
+    def test_teesside_stage1_fields_foundation_course(self) -> None:
+        body = """# Virtual Production (with Foundation Year) BSc (Hons)
+
+## Key information
+
+- Note: This course is for September 2027 entry onwards.
+
+#### Course routes:
+
+- Degree: 3 years (or 4 with a work placement)
+- Plus foundation year: 4 years (or 5 with a work placement)
+
+## Fees and funding
+
+### 2026-27 entry
+
+Fee for international applicants
+
+£17,000 a year
+
+- Length: 4 years (5 with work placement)
+- Start date: September
+"""
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["intakeInfo"], "September 2027")
+        self.assertEqual(hints["courseDuration"], "4 years (or 5 with a work placement)")
+        self.assertEqual(hints["tuitionFee"], "17000")
+        self.assertEqual(hints["currency"], "GBP")
+
+    def test_teesside_pg_default_english_tier_overrides_llm(self) -> None:
+        course_body = """# Finance and Investment (Applied) MSc
+
+## Entry requirements
+
+The normal entry requirement is one of the following:
+
+- a good honours degree (at least a 2:2) in a relevant discipline
+"""
+        english_content = Path(
+            _SHARED.parent / "Teesside University" / "output" / "clean" / "uni" / "english-requirements.md"
+        ).read_text(encoding="utf-8")
+        llm_json = {
+            "ieltsMinOverall": "4.5",
+            "ieltsMinSection": "4.5",
+            "toeflMinOverall": "72",
+            "toeflMinSection": "17",
+            "pteMinOverall": "59",
+            "pteMinSection": "59",
+        }
+        enriched = enrich_english_parsed(
+            llm_json,
+            english_content,
+            course_name="Finance and Investment (Applied) MSc",
+            course_level="postgraduate",
+            course_body=course_body,
+        )
+        self.assertEqual(enriched["ieltsMinOverall"], "5.5")
+        self.assertEqual(enriched["ieltsMinSection"], "5.5")
+        self.assertEqual(enriched["pteMinOverall"], "59")
+        self.assertEqual(enriched["toeflMinOverall"], "72")
+        descriptions = enriched["AcademicRequirementsMetaData"][0]["description"]
+        self.assertTrue(any("IELTS 5.5 overall" in line for line in descriptions))
 
 
 def format_report_issues(report) -> str:

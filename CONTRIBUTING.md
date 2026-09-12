@@ -52,6 +52,58 @@ git log --oneline -- "Birmingham City University/code"
 
 Squash or reword `wip(...)` commits to `feat(unit-NN/slug): ...` before merging to `main`.
 
+## Shared infrastructure baseline
+
+`shared/` is used by all ~34 universities. Treat it like a **library**: one stable baseline on `main`, then uni-specific work on a branch.
+
+| What | Value |
+|------|-------|
+| Tag | `shared/v1.0.0` |
+| Commit | `d5f7088` |
+| Message | `(chore) Shared infra in general` |
+
+### Start work on a new university
+
+```powershell
+git fetch origin
+git switch main
+git pull
+
+# optional: branch per uni
+git switch -c dev/kingston
+
+# only touch that university folder (+ shared/ when the pipeline needs it)
+# Presetup → review HTML/MD → tune code/.env and code/course_markdown_cleanup.py
+```
+
+### Reset `shared/` to the baseline
+
+Use this when finishing one uni and starting another, or when local `shared/` edits should not carry over:
+
+```powershell
+git restore --source shared/v1.0.0 -- shared
+# or detached pin:
+git checkout shared/v1.0.0 -- shared
+```
+
+Stay on your branch; only `shared/` is replaced. University folders are unchanged.
+
+### Commit rules for `shared/`
+
+| Situation | How |
+|-----------|-----|
+| Shared change needed **for one uni** (presetup, cleanup, extract) | `.\scripts\commit-uni.ps1 -Pick keele -Type wip -IncludeShared` |
+| Shared change is **general** (fixes all unis) | `.\scripts\commit-uni.ps1 -Pick infra -Type chore -Summary "..."` then tag `shared/v1.0.1` |
+| Never | Two university folders in one commit |
+
+After a general shared commit, bump the tag:
+
+```powershell
+git tag -a shared/v1.0.1 -m "shared: describe what changed"
+```
+
+List baselines: `git tag -l "shared/*"`
+
 ## Study-level commits and tags
 
 Universities can be completed **all at once** or **one study level at a time** (foundation, undergraduate, postgraduate, PGR). Use the helper scripts so the university name, scope, and message stay consistent.

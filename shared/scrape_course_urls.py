@@ -618,9 +618,15 @@ class CourseUrlMatcher:
     """Given a domain + MatchingRules, decides which <a> links on a page are
     real course URLs, and extracts them from HTML."""
 
-    def __init__(self, domain: str, rules: MatchingRules):
+    def __init__(
+        self,
+        domain: str,
+        rules: MatchingRules,
+        course_filter: CourseTypeFilter | None = None,
+    ):
         self.domain = domain
         self.rules = rules
+        self.course_filter = course_filter
 
     def is_valid(self, url: str) -> bool:
         parsed = urlparse(url)
@@ -632,6 +638,8 @@ class CourseUrlMatcher:
         if any(path_lower.startswith(prefix) for prefix in self.rules.excluded_prefixes):
             return False
         if path_lower in self.rules.excluded_paths:
+            return False
+        if self.course_filter and self.course_filter.url_is_excluded(url):
             return False
         return any(pattern.search(parsed.path) for pattern in self.rules.path_patterns)
 
@@ -1424,7 +1432,8 @@ class CatalogueUrlExtractor:
         catalogue_url = source.catalogue_url
         scope = source.scope
         scope_prefix = f"[{scope}] " if scope else ""
-        matcher = CourseUrlMatcher(domain, self.config.matching)
+        course_filter = CourseTypeFilter.from_code_dir(self.work_dir)
+        matcher = CourseUrlMatcher(domain, self.config.matching, course_filter)
 
         # Step 1: get the catalogue page HTML, either from disk or by downloading it.
         if source.catalogue_html:
@@ -1564,7 +1573,8 @@ class PaginatedListingExtractor:
         search_groups = SearchGroupBuilder.build(seed_urls)
         programme = listing_config.programme
         scope = listing_config.scope or programme
-        matcher = CourseUrlMatcher(self.config.domain, self.config.matching)
+        course_filter = CourseTypeFilter.from_code_dir(self.work_dir)
+        matcher = CourseUrlMatcher(self.config.domain, self.config.matching, course_filter)
         base_url = self.config.base_url
 
         for path_key in sorted(search_groups.keys()):
