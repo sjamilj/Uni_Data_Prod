@@ -412,6 +412,38 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(hints["tuitionFee"], "18200")
         self.assertEqual(hints["currency"], "GBP")
 
+    def test_huddersfield_stage1_fields_from_key_information(self) -> None:
+        body = """## Key information
+
+Start Dates
+
+20 September 2027
+
+Duration
+
+1 year full-time (Year 0 of a 4/5 years degree including placement year)
+
+## Fees and finance
+
+**£10,050 per year**
+
+This information is for Home students applying to study at the University of Huddersfield in the academic year 2027/28.
+
+**£17,600 per year**
+
+This is the tuition fee for 2026/27 entry. Tuition fees for 2027/28 will be published once the information becomes available.
+
+This information is for international students applying to study at the University of Huddersfield in the academic year 2026/27.
+"""
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["intakeInfo"], "September 2027")
+        self.assertEqual(
+            hints["courseDuration"],
+            "1 year full-time (Year 0 of a 4/5 years degree including placement year)",
+        )
+        self.assertEqual(hints["tuitionFee"], "17600")
+        self.assertEqual(hints["currency"], "GBP")
+
     def test_keele_stage1_fields_pg_month_of_entry(self) -> None:
         body = """## Key information
 ### Month of entry

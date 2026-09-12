@@ -625,11 +625,28 @@ class ExtractionPathConfig:
         return result
 
     @staticmethod
+    def is_boilerplate_heading(title: str) -> bool:
+        """True for cookie banners and other non-course H1 text left in cleaned markdown."""
+        normalized = ' '.join((title or '').split()).casefold()
+        if not normalized:
+            return True
+        if normalized in {'skip to content', 'skip to main content'}:
+            return True
+        if 'cookie' in normalized and any(
+            token in normalized
+            for token in ('choice', 'consent', 'preference', 'regarding', 'this site', 'we use')
+        ):
+            return True
+        return False
+
+    @staticmethod
     def infer_course_name(body: str, course_url: str) -> str:
         for line in body.splitlines():
             stripped = line.strip()
             if stripped.startswith('# '):
-                return stripped[2:].strip()
+                title = stripped[2:].strip()
+                if not ExtractionPathConfig.is_boilerplate_heading(title):
+                    return title
         slug = urlparse(course_url).path.rstrip('/').split('/')[-1]
         return slug.replace('-', ' ').title()
 
@@ -1073,6 +1090,45 @@ class Stage1MarkdownParser:
         return fields
 
     @staticmethod
+    def extract_huddersfield_key_information_fields(body: str) -> dict[str, str]:
+        """Parse Huddersfield Key information block (plain Start Dates / Duration labels)."""
+        fields: dict[str, str] = {}
+        key_match = re.search(r"## Key information\s*\n(.*?)(?=\n## |\Z)", body, re.S)
+        section = key_match.group(1) if key_match else ""
+
+        start_match = re.search(r"Start Dates?\s*\n+\s*([^\n]+)", section, re.I)
+        if start_match:
+            fields["intakeInfo"] = normalize_intake_text(start_match.group(1).strip())
+
+        duration_match = re.search(r"Duration\s*\n+\s*([^\n]+)", section, re.I)
+        if duration_match:
+            fields["courseDuration"] = duration_match.group(1).strip()
+
+        return fields
+
+    @staticmethod
+    def extract_huddersfield_international_fee(body: str) -> tuple[str, str]:
+        """Parse international tuition from Huddersfield Fees and finance block."""
+        fees_match = re.search(r"## Fees and finance\s*\n(.*?)(?=\n## |\Z)", body, re.S)
+        if not fees_match:
+            return "", ""
+        section = fees_match.group(1)
+
+        for match in re.finditer(
+            r"\*\*£([\d,]+)\s*per year\*\*\s*\n+(.*?)(?=\n\*\*£|\n### |\Z)",
+            section,
+            re.S | re.I,
+        ):
+            context = match.group(2)
+            if re.search(r"international students", context, re.I):
+                return match.group(1).replace(",", ""), "GBP"
+
+        fees = re.findall(r"\*\*£([\d,]+)\s*per year\*\*", section, re.I)
+        if len(fees) >= 2:
+            return fees[1].replace(",", ""), "GBP"
+        return "", ""
+
+    @staticmethod
     def extract_stage1_fields_from_md(body: str) -> dict[str, str]:
         """Parse intake, fees, duration, and IELTS scalars from clean course markdown."""
         fields: dict[str, str] = {}
@@ -1084,6 +1140,10 @@ class Stage1MarkdownParser:
                     if value
                 }
             )
+            huddersfield_fields = Stage1MarkdownParser.extract_huddersfield_key_information_fields(body)
+            for key in ("intakeInfo", "courseDuration"):
+                if not fields.get(key) and huddersfield_fields.get(key):
+                    fields[key] = huddersfield_fields[key]
         for pattern in (
             '-\\s*\\*\\*Start date:\\*\\*\\s*([^\\n]+)',
             '-\\s*\\*\\*Start:\\*\\*\\s*([^\\n]+)',
@@ -1134,6 +1194,11 @@ class Stage1MarkdownParser:
                     fields['tuitionFee'] = fee_num.group(1).replace(',', '') if fee_num else fee_raw
             if not fields.get('currency') and (fields.get('tuitionFee') or '£' in intl_section):
                 fields['currency'] = 'GBP'
+        if not fields.get("tuitionFee"):
+            hud_fee, hud_currency = Stage1MarkdownParser.extract_huddersfield_international_fee(body)
+            if hud_fee:
+                fields["tuitionFee"] = hud_fee
+                fields["currency"] = hud_currency
         ielts_match = re.search('IELTS\\s+([\\d.]+)\\s+overall\\s+with\\s+no\\s+less\\s+than\\s+([\\d.]+)\\s+in\\s+each\\s+band', body, re.I)
         if ielts_match:
             fields['ieltsMinOverall'] = ielts_match.group(1)
@@ -3010,6 +3075,7 @@ utc_now = ExtractionPathConfig.utc_now
 load_template = ExtractionPathConfig.load_template
 fill_template = ExtractionPathConfig.fill_template
 infer_course_name = ExtractionPathConfig.infer_course_name
+is_boilerplate_heading = ExtractionPathConfig.is_boilerplate_heading
 load_uni_section = ExtractionPathConfig.load_uni_section
 load_uni_content = ExtractionPathConfig.load_uni_content
 load_uni_sections = ExtractionPathConfig.load_uni_sections
