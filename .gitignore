@@ -51,6 +51,8 @@ desktop.ini
 
 # --- Browser-save junk folders ---
 **/*_files/
+**/.playwright-profile/
+**/.device-profile-*/
 
 # --- Experimental / scratch ---
 **/Claude_Output/

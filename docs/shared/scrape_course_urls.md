@@ -75,6 +75,8 @@ Loops `page_index` until:
 
 **Does not stop** when a page has URLs but zero *new* unique URLs (fixes ARU foundation/UG overlap).
 
+`LISTING_PAGINATION_MODE=click` stays on the first listing page and clicks **Next** instead of `goto(?page=N)`. Use this when the pager is a Vue/button control (Kingston).
+
 ### `CourseUrlMatcher.is_course_url(url)`
 
 Applies `COURSE_PATH_PATTERNS`, `EXCLUDED_*`, optional `COURSE_LINK_SELECTOR`.

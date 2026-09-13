@@ -27,6 +27,10 @@ class CourseHtmlEngineHelpers:
         return None
 
     @staticmethod
+    def block_has_c_accordion(node: Tag) -> bool:
+        return bool(node.select(".c-accordion .c-accordion-item"))
+
+    @staticmethod
     def block_has_tabs(node: Tag) -> bool:
         return bool(node.select(".tab-content, .r-tabs-panel, .utopian-tabs-container"))
 

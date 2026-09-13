@@ -7,7 +7,8 @@ Configure simple heading removal in code/.env:
   3 :: UK students
   "
 
-Add conditional rules here via cleanup_course_markdown_uni() when .env is not enough.
+# Kingston hub route variants (kingston_hub_foundation_clean.py) use HUB_ROUTE_CLEAN_BLOCKS
+# in .env — not cleanup_course_markdown_uni(). Fees are filtered to the selected route.
 """
 
 from __future__ import annotations

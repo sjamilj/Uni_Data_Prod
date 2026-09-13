@@ -6,6 +6,14 @@ STRATEGY=DEGREE_SCOPED_PAGINATED
 UNDERGRADUATE_COURSE_LISTING_PAGE_1=https://www.kingston.ac.uk/study/course-search?course_type=1&course_type=2&course_type=14&page=1
 UNDERGRADUATE_COURSE_LISTING_PAGE_2=https://www.kingston.ac.uk/study/course-search?course_type=1&course_type=2&course_type=14&page=2
 
+# Kingston listing is a Vue button pager. Visiting ?page=2 does not render courses.
+LISTING_PAGINATION_MODE=click
+
+# Kingston hub foundation route variants (Course Route Selector → one .md per route)
+#   python kingston_hub_foundation_clean.py
+# Output: output/clean/pre_setup_course/foundation/hub_routes/*.md
+# Blocks: HUB_ROUTE_CLEAN_BLOCKS (Key course info + Entry requirements + route-only Fees)
+
 # POSTGRADUATE_COURSE_LISTING_PAGE_1=https://www.canterbury.ac.uk/search/postgraduate-taught-courses?pageIndex=1
 # POSTGRADUATE_COURSE_LISTING_PAGE_2=https://www.canterbury.ac.uk/search/postgraduate-taught-courses?pageIndex=2
 
@@ -103,6 +111,13 @@ COURSE_CLEAN_ENGINE=generic
 COURSE_CLEAN_BLOCKS="
 Why choose this course :: #why-choose-this-course
 Course content :: #course-content
+Entry requirements :: #entry-requirements
+Fees and funding :: #fees-and-funding
+"
+
+# Hub route variants (kingston_hub_foundation_clean.py) — one .md per selected course.
+# Omits shared hub prose (Why choose / Course content); fees list is route-only.
+HUB_ROUTE_CLEAN_BLOCKS="
 Entry requirements :: #entry-requirements
 Fees and funding :: #fees-and-funding
 "
