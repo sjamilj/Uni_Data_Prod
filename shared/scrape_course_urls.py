@@ -75,6 +75,7 @@ _SHARED_DIR = Path(__file__).resolve().parent
 if str(_SHARED_DIR) not in sys.path:
     sys.path.insert(0, str(_SHARED_DIR))
 
+from browser_device_profile import launch_device_browser_context
 from uni_paths import resolve_code_dir, resolve_output_dir
 from course_type_filter import CourseTypeFilter
 from study_level import (
@@ -1019,22 +1020,66 @@ class ArtifactStore:
 # ============================================================================
 
 class BrowserSession:
-    """Thin wrapper around a headless Chromium page, used as a context manager."""
+    """Playwright page wrapper — optional device profile from .env (Cloudflare bypass)."""
 
-    def __init__(self):
+    def __init__(self, code_dir: Path | None = None):
+        self.code_dir = resolve_code_dir(code_dir) if code_dir else None
         self._playwright = None
         self._browser = None
+        self._context = None
         self.page = None
+        self._device_context = False
+
+    def _env_bool(self, key: str, *, default: bool = False) -> bool:
+        if not self.code_dir:
+            return default
+        raw = EnvFile(self.code_dir / ENV_FILE).get(key, "").strip().lower()
+        if not raw:
+            return default
+        return raw in {"1", "true", "yes", "on"}
+
+    def _env_str(self, key: str, default: str = "") -> str:
+        if not self.code_dir:
+            return default
+        return EnvFile(self.code_dir / ENV_FILE).get(key, default).strip() or default
 
     def __enter__(self) -> "BrowserSession":
         self._playwright = sync_playwright().start()
-        self._browser = self._playwright.chromium.launch(headless=True)
+        use_device = self._env_bool("COURSE_DOWNLOAD_USE_DEVICE_PROFILE")
+        if use_device and self.code_dir:
+            headed = self._env_bool("COURSE_DOWNLOAD_HEADED") or not self._env_bool(
+                "COURSE_DOWNLOAD_HEADLESS", default=True
+            )
+            refresh = self._env_bool("COURSE_DOWNLOAD_REFRESH_PROFILE")
+            browser_name = self._env_str("COURSE_DOWNLOAD_BROWSER", "auto")
+            profile_name = self._env_str("COURSE_DOWNLOAD_PROFILE_NAME", "Default")
+            self._context, self.page = launch_device_browser_context(
+                self._playwright,
+                code_dir=self.code_dir,
+                browser_name=browser_name,
+                profile_name=profile_name,
+                headed=headed,
+                refresh_profile=refresh,
+            )
+            self._device_context = True
+            return self
+
+        headless = not self._env_bool("COURSE_DOWNLOAD_HEADED") and self._env_bool(
+            "COURSE_DOWNLOAD_HEADLESS", default=True
+        )
+        channel = self._env_str("COURSE_DOWNLOAD_BROWSER_CHANNEL")
+        launch_kwargs: dict = {"headless": headless}
+        if channel:
+            launch_kwargs["channel"] = channel
+        self._browser = self._playwright.chromium.launch(**launch_kwargs)
         context = self._browser.new_context(user_agent=DEFAULT_USER_AGENT)
         self.page = context.new_page()
         return self
 
     def __exit__(self, exc_type, exc, tb) -> None:
-        if self._browser:
+        if self._device_context and self._context:
+            self._context.close()
+        elif self._browser:
             self._browser.close()
         if self._playwright:
             self._playwright.stop()
@@ -1157,6 +1202,31 @@ class BrowserSession:
             raise RuntimeError("Cloudflare challenge after Next click")
         return title, html
 
+    def _wait_for_course_page(self, page) -> None:
+        try:
+            page.wait_for_selector("#main-content h1", timeout=20000)
+        except PlaywrightTimeoutError:
+            pass
+        page.wait_for_timeout(800)
+
+    def _resolve_cloudflare(self, page, url: str) -> None:
+        title = (page.title() or "").lower()
+        html = page.content()
+        if not self.is_cloudflare_challenge(title, html):
+            return
+        page.wait_for_timeout(8000)
+        page.reload(wait_until="domcontentloaded", timeout=60000)
+        self.dismiss_cookies(page)
+        try:
+            page.wait_for_load_state("networkidle", timeout=20000)
+        except PlaywrightTimeoutError:
+            page.wait_for_load_state("load", timeout=15000)
+        page.wait_for_timeout(2000)
+        title = (page.title() or "").lower()
+        html = page.content()
+        if self.is_cloudflare_challenge(title, html):
+            raise RuntimeError(f"Cloudflare challenge at {url}")
+
     def download_html(self, url: str, *, wait_for_results: bool = False) -> tuple[str, str]:
         """Navigate to url and return (page_title, html). Retries transient failures."""
         assert self.page is not None
@@ -1172,11 +1242,15 @@ class BrowserSession:
                 if wait_for_results:
                     self.wait_for_listing(self.page)
                 else:
-                    self.page.wait_for_timeout(800)
+                    self.page.wait_for_timeout(1500)
+                    self._resolve_cloudflare(self.page, url)
+                    self._wait_for_course_page(self.page)
                 html = self.page.content()
                 if not html or len(html) < 200:
                     raise RuntimeError("Empty or tiny HTML response")
                 title = self.page.title() or "catalogue"
+                if self.is_cloudflare_challenge(title, html):
+                    raise RuntimeError(f"Cloudflare challenge at {url}")
                 return title, html
             except Exception as exc:
                 last_error = exc
@@ -2178,7 +2252,7 @@ class CoursePageDownloader:
         stats = {"total": len(urls), "downloaded": 0, "failed": 0, "skipped": 0, "excluded": 0}
         course_filter = CourseTypeFilter.from_code_dir(self.code_dir)
 
-        with BrowserSession() as browser:
+        with BrowserSession(self.code_dir) as browser:
             for index, url in enumerate(urls, start=1):
                 if url in downloaded:
                     stats["skipped"] += 1

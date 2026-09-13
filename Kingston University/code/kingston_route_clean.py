@@ -1,22 +1,20 @@
 #!/usr/bin/env python3
-"""Download and clean Kingston hub foundation pages — one .md per route variant.
+"""Kingston Course Route Selector — entry/fees markdown per route.
 
-Kingston integrated foundation hubs use a Vue Course Route Selector:
-  Select course → Start date → Mode
+Undergraduate pages: Select course → Start date → Mode
+  - 3 years full time        → clean/courses/undergraduate/{slug}.md
+  - 4 years + foundation year → clean/courses/foundation/{slug}.md (execute)
+                              or clean/pre_setup_course/foundation/{slug}.md (presetup)
+  (professional placement mode is skipped)
 
-This script opens each combination (default start year 2027), captures the
-rendered page, and writes markdown under:
+Integrated foundation hubs (--hub-routes): hub_routes/*.md under pre_setup_course/foundation/
 
-  output/clean/pre_setup_course/foundation/hub_routes/
+Pipeline (run_course_pipeline.py) calls this automatically for Kingston undergraduate:
+  download + clean → route clean (2 .md) → LLM (UG) → LLM (foundation route)
 
-Run from repo root or Kingston code/:
-
-  python "Kingston University/code/kingston_hub_foundation_clean.py"
-  python "Kingston University/code/kingston_hub_foundation_clean.py" --url \\
-    "https://www.kingston.ac.uk/study/foundation/foundation-year-in-engineering"
-  python "Kingston University/code/kingston_hub_foundation_clean.py" --start-year 2027 --limit-routes 2
-  python "Kingston University/code/kingston_hub_foundation_clean.py" --headed --browser-profile
-  python "Kingston University/code/kingston_hub_foundation_clean.py" --connect-cdp
+Standalone:
+  python "Kingston University/code/kingston_route_clean.py" --url "https://..."
+  python "Kingston University/code/kingston_route_clean.py" --hub-routes
 """
 from __future__ import annotations
 
@@ -51,9 +49,26 @@ from download_and_clean_course_pages import (
     UniversityNameResolver,
 )
 from scrape_course_urls import DEFAULT_USER_AGENT, BrowserSession, ENV_FILE, load_env_file
-from study_level import PRESETUP_CLEAN_SUBDIR
+from study_level import CLEAN_COURSES_SUBDIR, PRESETUP_CLEAN_SUBDIR
 from uni_paths import resolve_code_dir, resolve_output_dir
 from uni_pages import course_slug_from_url
+
+import importlib.util
+
+_KINGSTON_CLEANUP_MOD = None
+
+
+def _kingston_course_cleanup():
+    global _KINGSTON_CLEANUP_MOD
+    if _KINGSTON_CLEANUP_MOD is None:
+        path = _CODE_DIR / "course_markdown_cleanup.py"
+        spec = importlib.util.spec_from_file_location("kingston_course_markdown_cleanup", path)
+        if spec is None or spec.loader is None:
+            raise ImportError(f"Cannot load {path}")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        _KINGSTON_CLEANUP_MOD = module
+    return _KINGSTON_CLEANUP_MOD
 
 HUB_PATH_RES = (
     re.compile(r"^/study/foundation/foundation-year-in-", re.I),
@@ -75,7 +90,14 @@ DEVICE_PROFILE_SYNC_FILES = (
 )
 PLAYWRIGHT_IGNORED_ARGS = ("--enable-automation", "--no-sandbox")
 HUB_ROUTES_SUBDIR = "hub_routes"
+UG_ROUTES_SUBDIR = "routes"
+FOUNDATION_ROUTE_HTML_SUBDIR = "foundation_routes"
+UNDERGRADUATE_ROUTE_HTML_SUBDIR = "undergraduate_routes"
 HTML_SUBDIR = "hub_routes"
+
+MODE_FOUNDATION_RE = re.compile(r"foundation\s+year", re.I)
+MODE_PLACEMENT_RE = re.compile(r"professional\s+placement|with\s+placement|sandwich", re.I)
+MODE_THREE_YEAR_RE = re.compile(r"\b3\s*years?\b", re.I)
 
 
 @dataclass(frozen=True)
@@ -103,6 +125,92 @@ def is_hub_url(url: str) -> bool:
 def slugify(text: str, *, limit: int = 100) -> str:
     slug = re.sub(r"[^\w\-]+", "-", (text or "").strip()).strip("-").lower()
     return slug[:limit] or "route"
+
+
+def load_route_urls(
+    output_dir: Path,
+    study_level: str,
+    *,
+    explicit: list[str] | None = None,
+) -> list[str]:
+    if explicit:
+        urls = [u.strip() for u in explicit if u.strip()]
+        if study_level == "foundation":
+            return [u for u in urls if is_hub_url(u)]
+        return urls
+
+    if study_level == "foundation":
+        return load_hub_urls(output_dir, explicit=None)
+
+    csv_name = f"{study_level}_course_urls.csv"
+    path = output_dir / csv_name
+    if not path.is_file():
+        path = output_dir / "course_urls.csv"
+    urls: list[str] = []
+    with path.open(encoding="utf-8") as handle:
+        for row in csv.DictReader(handle):
+            url = (row.get("course_url") or "").strip()
+            if url:
+                urls.append(url)
+    return sorted(set(urls))
+
+
+def route_output_paths(
+    output_dir: Path,
+    study_level: str,
+    *,
+    simple: bool = False,
+    presetup: bool = False,
+) -> tuple[Path, Path, str, str]:
+    if study_level == "foundation":
+        html_subdir = FOUNDATION_ROUTE_HTML_SUBDIR if simple else HTML_SUBDIR
+        if presetup:
+            if simple:
+                md_dir = output_dir / "clean" / PRESETUP_CLEAN_SUBDIR / "foundation"
+                md_rel_prefix = f"clean/{PRESETUP_CLEAN_SUBDIR}/foundation"
+            else:
+                md_dir = output_dir / "clean" / PRESETUP_CLEAN_SUBDIR / "foundation" / HUB_ROUTES_SUBDIR
+                md_rel_prefix = f"clean/{PRESETUP_CLEAN_SUBDIR}/foundation/{HUB_ROUTES_SUBDIR}"
+        else:
+            if simple:
+                md_dir = output_dir / "clean" / CLEAN_COURSES_SUBDIR / "foundation"
+                md_rel_prefix = f"clean/{CLEAN_COURSES_SUBDIR}/foundation"
+            else:
+                md_dir = output_dir / "clean" / CLEAN_COURSES_SUBDIR / "foundation" / HUB_ROUTES_SUBDIR
+                md_rel_prefix = f"clean/{CLEAN_COURSES_SUBDIR}/foundation/{HUB_ROUTES_SUBDIR}"
+    elif simple and presetup and study_level != "foundation":
+        html_subdir = (
+            UNDERGRADUATE_ROUTE_HTML_SUBDIR
+            if study_level == "undergraduate"
+            else f"{study_level}_routes"
+        )
+        md_dir = output_dir / "clean" / PRESETUP_CLEAN_SUBDIR / study_level
+        md_rel_prefix = f"clean/{PRESETUP_CLEAN_SUBDIR}/{study_level}"
+    else:
+        html_subdir = f"{study_level}_routes" if simple else f"{study_level}_{UG_ROUTES_SUBDIR}"
+        md_dir = output_dir / "clean" / CLEAN_COURSES_SUBDIR / study_level
+        md_rel_prefix = f"clean/{CLEAN_COURSES_SUBDIR}/{study_level}"
+    html_dir = output_dir / "course_pages" / html_subdir
+    return html_dir, md_dir, html_subdir, md_rel_prefix
+
+
+def year_from_start_label(label: str, fallback: str) -> str:
+    match = re.search(r"(20\d{2})", label)
+    return match.group(1) if match else fallback
+
+
+def classify_mode_output(mode_label: str) -> str | None:
+    """Map a Mode dropdown label to undergraduate, foundation, or skip (UG split only)."""
+    text = re.sub(r"\s+", " ", (mode_label or "").strip())
+    if not text:
+        return None
+    if MODE_FOUNDATION_RE.search(text):
+        return "foundation"
+    if MODE_PLACEMENT_RE.search(text):
+        return None
+    if MODE_THREE_YEAR_RE.search(text):
+        return "undergraduate"
+    return None
 
 
 def load_hub_urls(output_dir: Path, *, explicit: list[str] | None = None) -> list[str]:
@@ -427,17 +535,42 @@ class KingstonRouteSelector:
         self._choose_option(label)
         self._wait_for_column_enabled("Start date")
 
-    def select_start_year(self, year: str) -> None:
+    def select_start_year(self, year: str) -> str:
         self._wait_for_column_enabled("Start date")
         self._open_listbox("Start date")
         options = self._list_visible_options()
         match = next((opt for opt in options if year in opt), None)
         if not match:
-            raise RuntimeError(f"Start date {year!r} not in options: {options!r}")
+            dated: list[tuple[int, str]] = []
+            for opt in options:
+                found = re.search(r"(20\d{2})", opt)
+                if found:
+                    dated.append((int(found.group(1)), opt))
+            if dated:
+                match = max(dated, key=lambda item: item[0])[1]
+                print(f"    Start year {year} unavailable; using {match!r}")
+            elif options:
+                match = options[-1]
+                print(f"    Start year {year} unavailable; using {match!r}")
+            else:
+                raise RuntimeError(f"Start date {year!r} not in options: {options!r}")
         self._choose_option(match)
         self._wait_for_column_enabled("Mode")
+        return match
 
-    def select_mode(self, *, prefer_foundation: bool = True) -> str:
+    def list_mode_options(self) -> list[str]:
+        self._wait_for_column_enabled("Mode")
+        self._open_listbox("Mode")
+        options = self._list_visible_options()
+        self._close_dropdowns()
+        return options
+
+    def select_mode(
+        self,
+        *,
+        prefer_foundation: bool = True,
+        prefer_full_time: bool = False,
+    ) -> str:
         self._wait_for_column_enabled("Mode")
         self._open_listbox("Mode")
         options = self._list_visible_options()
@@ -449,8 +582,20 @@ class KingstonRouteSelector:
                 if "foundation year" in opt.lower():
                     chosen = opt
                     break
+        elif prefer_full_time:
+            for opt in options:
+                low = opt.lower()
+                if "full time" in low and "part" not in low:
+                    chosen = opt
+                    break
         self._choose_option(chosen)
         return chosen
+
+    def select_mode_label(self, label: str) -> str:
+        self._wait_for_column_enabled("Mode")
+        self._open_listbox("Mode")
+        self._choose_option(label)
+        return label
 
     def read_ucas_code(self) -> str:
         try:
@@ -570,6 +715,16 @@ def preprocess_hub_html(html: str, start_year: str) -> str:
     return str(soup)
 
 
+def format_route_key_facts_markdown(variant: RouteVariant, facts: dict[str, str]) -> str:
+    lines = ["## Key course information", ""]
+    lines.append(f"- **Course:** {variant.course_label}")
+    lines.append(f"- **Start date:** {variant.start_year}")
+    lines.append(f"- **Mode:** {variant.mode_label}")
+    for label, value in facts.items():
+        lines.append(f"- **{label}:** {value}")
+    return "\n".join(lines)
+
+
 def format_key_facts_markdown(facts: dict[str, str]) -> str:
     if not facts:
         return ""
@@ -649,7 +804,9 @@ def filter_hub_fees_to_route(lines: list[str], variant: RouteVariant) -> list[st
 def load_hub_route_clean_config(code_dir: Path) -> CleanConfig:
     base = CleanConfigLoader.load(code_dir)
     env = load_env_file(resolve_code_dir(code_dir) / ENV_FILE)
-    blocks_raw = CleanConfigLoader.parse_selector_list(env.get("HUB_ROUTE_CLEAN_BLOCKS"))
+    blocks_raw = CleanConfigLoader.parse_selector_list(
+        env.get("ROUTE_CLEAN_BLOCKS") or env.get("HUB_ROUTE_CLEAN_BLOCKS")
+    )
     if not blocks_raw:
         blocks = [
             ("Entry requirements", "#entry-requirements"),
@@ -691,26 +848,32 @@ def build_markdown(
 def build_frontmatter(
     *,
     university: str,
-    hub_url: str,
+    page_url: str,
     variant: RouteVariant,
     source_html: str,
     md_rel: str,
+    study_level: str,
 ) -> str:
     lines = [
         "---",
         f"source_html: {source_html}",
-        f"source_url: {hub_url}",
+        f"source_url: {page_url}",
         "page_type: course",
         f"university: {university}",
         f"cleaned_at: {date.today().isoformat()}",
-        f"course_url: {hub_url}",
-        "study_level: foundation",
-        f"hub_url: {hub_url}",
-        f"route_course: {variant.course_label}",
-        f"start_year: {variant.start_year}",
-        f"route_mode: {variant.mode_label}",
-        f"output_md: {md_rel}",
+        f"course_url: {page_url}",
+        f"study_level: {study_level}",
     ]
+    if study_level in {"foundation", "undergraduate", "postgraduate", "postgraduate_research"}:
+        lines.insert(8, f"hub_url: {page_url}")
+    lines.extend(
+        [
+            f"route_course: {variant.course_label}",
+            f"start_year: {variant.start_year}",
+            f"route_mode: {variant.mode_label}",
+            f"output_md: {md_rel}",
+        ]
+    )
     if variant.ucas_code:
         lines.append(f"ucas_code: {variant.ucas_code}")
     lines.extend(["---", ""])
@@ -725,24 +888,8 @@ def variant_slug(hub_url: str, variant: RouteVariant) -> str:
     return f"{hub_slug}__{route_slug}__{year}__{mode_slug}"
 
 
-def process_hub(
-    page,
-    *,
-    code_dir: Path,
-    output_dir: Path,
-    hub_url: str,
-    start_year: str,
-    limit_routes: int | None,
-    dry_run: bool,
-) -> int:
-    university = UniversityNameResolver.resolve(code_dir)
-    html_dir = output_dir / "course_pages" / HTML_SUBDIR
-    md_dir = output_dir / "clean" / PRESETUP_CLEAN_SUBDIR / "foundation" / HUB_ROUTES_SUBDIR
-    html_dir.mkdir(parents=True, exist_ok=True)
-    md_dir.mkdir(parents=True, exist_ok=True)
-
-    print(f"\nHub: {hub_url}")
-    page.goto(hub_url, wait_until="domcontentloaded", timeout=60000)
+def _open_route_page(page, page_url: str) -> KingstonRouteSelector:
+    page.goto(page_url, wait_until="domcontentloaded", timeout=60000)
     BrowserSession.dismiss_cookies(page)
     try:
         page.wait_for_load_state("networkidle", timeout=20000)
@@ -763,6 +910,122 @@ def process_hub(
 
     selector = KingstonRouteSelector(page)
     selector.wait_ready()
+    return selector
+
+
+def _write_route_variant(
+    page,
+    *,
+    code_dir: Path,
+    page_url: str,
+    output_study_level: str,
+    start_year: str,
+    course_label: str,
+    mode_label: str,
+    university: str,
+    simple_filename: bool = False,
+    presetup_output: bool = False,
+) -> bool:
+    html_dir, md_dir, html_subdir, md_rel_prefix = route_output_paths(
+        resolve_output_dir(code_dir),
+        output_study_level,
+        simple=simple_filename,
+        presetup=presetup_output,
+    )
+    html_dir.mkdir(parents=True, exist_ok=True)
+    md_dir.mkdir(parents=True, exist_ok=True)
+
+    selector = _open_route_page(page, page_url)
+    selector.select_course(course_label)
+    start_label = selector.select_start_year(start_year)
+    effective_year = year_from_start_label(start_label, start_year)
+    selector.select_mode_label(mode_label)
+    selector.wait_for_route_settled()
+    selector.prepare_sections_for_capture(effective_year)
+    ucas = selector.read_ucas_code()
+
+    variant = RouteVariant(
+        hub_url=page_url,
+        course_label=course_label,
+        start_year=effective_year,
+        mode_label=mode_label,
+        ucas_code=ucas,
+    )
+    page_slug = course_slug_from_url(page_url)
+    if simple_filename:
+        md_name = f"{page_slug}.md"
+        html_name = f"{page_slug}__{slugify(mode_label)[:40]}.html"
+    else:
+        slug = variant_slug(page_url, variant)
+        html_name = f"{slug}.html"
+        md_name = f"{slug}.md"
+    html_path = html_dir / html_name
+    md_path = md_dir / md_name
+
+    html = preprocess_hub_html(page.content(), effective_year)
+    html_path.write_text(html, encoding="utf-8")
+
+    html_rel = f"course_pages/{html_subdir}/{html_name}"
+    md_rel = f"{md_rel_prefix}/{md_name}"
+    body = build_frontmatter(
+        university=university,
+        page_url=page_url,
+        variant=variant,
+        source_html=html_rel,
+        md_rel=md_rel,
+        study_level=output_study_level,
+    )
+    markdown = build_markdown(
+        code_dir,
+        html,
+        source_html=html_rel,
+        source_url=page_url,
+        clean_config=load_hub_route_clean_config(code_dir),
+    )
+    markdown = inject_key_facts(
+        markdown,
+        format_route_key_facts_markdown(variant, selector.read_key_facts()),
+    )
+    markdown = patch_hub_fees_markdown(markdown, html, variant)
+    markdown = _kingston_course_cleanup().filter_entry_requirements_for_route(
+        markdown,
+        output_study_level,
+    )
+    title = f"# {course_label} ({effective_year})"
+    if ucas:
+        title += f" — UCAS {ucas}"
+    md_lines = markdown.splitlines()
+    if md_lines and md_lines[0].startswith("# "):
+        md_lines[0] = title
+        markdown_body = "\n".join(md_lines)
+    else:
+        markdown_body = title + "\n\n" + markdown
+    md_path.write_text(body + markdown_body + "\n", encoding="utf-8")
+    print(
+        f"    -> {output_study_level}/{md_path.name}"
+        + (f" (UCAS {ucas})" if ucas else "")
+    )
+    return True
+
+
+def process_route_page(
+    page,
+    *,
+    code_dir: Path,
+    output_dir: Path,
+    page_url: str,
+    study_level: str,
+    start_year: str,
+    limit_routes: int | None,
+    dry_run: bool,
+    all_modes: bool,
+    split_by_mode: bool = False,
+    presetup_output: bool = False,
+) -> int:
+    university = UniversityNameResolver.resolve(code_dir)
+
+    print(f"\n{study_level}: {page_url}")
+    selector = _open_route_page(page, page_url)
 
     if not selector.section.locator("h3:text-matches('Select course', 'i')").count():
         print("  No route selector on page — skip")
@@ -776,83 +1039,81 @@ def process_hub(
     if limit_routes is not None:
         course_options = course_options[:limit_routes]
 
-    print(f"  Routes to process: {len(course_options)} (start year {start_year})")
+    prefer_foundation = study_level == "foundation"
+    prefer_full_time = study_level in {"postgraduate", "postgraduate_research"}
+    route_plan: list[tuple[str, str, str]] = []
+    for course_label in course_options:
+        selector = _open_route_page(page, page_url)
+        selector.select_course(course_label)
+        selector.select_start_year(start_year)
+        if split_by_mode:
+            mode_options = selector.list_mode_options()
+            for mode_label in mode_options:
+                output_level = classify_mode_output(mode_label)
+                if output_level is None:
+                    continue
+                route_plan.append((course_label, mode_label, output_level))
+        elif all_modes:
+            mode_options = selector.list_mode_options()
+            if not mode_options:
+                mode_options = [selector.select_mode(prefer_foundation=prefer_foundation)]
+            for mode_label in mode_options:
+                route_plan.append((course_label, mode_label, study_level))
+        else:
+            chosen = selector.select_mode(
+                prefer_foundation=prefer_foundation,
+                prefer_full_time=prefer_full_time,
+            )
+            route_plan.append((course_label, chosen, study_level))
+
+    print(f"  Routes to process: {len(route_plan)} (start year {start_year})")
     written = 0
 
-    for course_label in course_options:
-        print(f"  - {course_label}")
+    for course_label, mode_label, output_level in route_plan:
+        print(f"  - {course_label} | {mode_label} -> {output_level}")
         if dry_run:
             continue
 
-        page.goto(hub_url, wait_until="domcontentloaded", timeout=60000)
-        BrowserSession.dismiss_cookies(page)
-        try:
-            page.wait_for_load_state("networkidle", timeout=15000)
-        except PlaywrightTimeoutError:
-            page.wait_for_load_state("load", timeout=10000)
-        page.wait_for_timeout(1000)
-        selector = KingstonRouteSelector(page)
-        selector.wait_ready()
-
-        selector.select_course(course_label)
-        selector.select_start_year(start_year)
-        mode_label = selector.select_mode(prefer_foundation=True)
-        selector.wait_for_route_settled()
-        selector.prepare_sections_for_capture(start_year)
-        ucas = selector.read_ucas_code()
-
-        variant = RouteVariant(
-            hub_url=hub_url,
-            course_label=course_label,
+        if _write_route_variant(
+            page,
+            code_dir=code_dir,
+            page_url=page_url,
+            output_study_level=output_level,
             start_year=start_year,
+            course_label=course_label,
             mode_label=mode_label,
-            ucas_code=ucas,
-        )
-        slug = variant_slug(hub_url, variant)
-        html_name = f"{slug}.html"
-        md_name = f"{slug}.md"
-        html_path = html_dir / html_name
-        md_path = md_dir / md_name
-
-        html = preprocess_hub_html(page.content(), start_year)
-        html_path.write_text(html, encoding="utf-8")
-
-        html_rel = f"course_pages/{HTML_SUBDIR}/{html_name}"
-        md_rel = f"clean/{PRESETUP_CLEAN_SUBDIR}/foundation/{HUB_ROUTES_SUBDIR}/{md_name}"
-        body = build_frontmatter(
             university=university,
-            hub_url=hub_url,
-            variant=variant,
-            source_html=html_rel,
-            md_rel=md_rel,
-        )
-        markdown = build_markdown(
-            code_dir,
-            html,
-            source_html=html_rel,
-            source_url=hub_url,
-            clean_config=load_hub_route_clean_config(code_dir),
-        )
-        markdown = inject_key_facts(
-            markdown,
-            format_key_facts_markdown(selector.read_key_facts()),
-        )
-        markdown = patch_hub_fees_markdown(markdown, html, variant)
-        title = f"# {course_label} ({start_year})"
-        if ucas:
-            title += f" — UCAS {ucas}"
-        md_lines = markdown.splitlines()
-        if md_lines and md_lines[0].startswith("# "):
-            md_lines[0] = title
-            markdown_body = "\n".join(md_lines)
-        else:
-            markdown_body = title + "\n\n" + markdown
-        md_path.write_text(body + markdown_body + "\n", encoding="utf-8")
-        print(f"    -> {md_path.name}" + (f" (UCAS {ucas})" if ucas else ""))
-        written += 1
+            simple_filename=split_by_mode
+            or study_level in {"postgraduate", "postgraduate_research"},
+            presetup_output=presetup_output,
+        ):
+            written += 1
         time.sleep(0.5)
 
     return written
+
+
+def process_hub(
+    page,
+    *,
+    code_dir: Path,
+    output_dir: Path,
+    hub_url: str,
+    start_year: str,
+    limit_routes: int | None,
+    dry_run: bool,
+) -> int:
+    return process_route_page(
+        page,
+        code_dir=code_dir,
+        output_dir=output_dir,
+        page_url=hub_url,
+        study_level="foundation",
+        start_year=start_year,
+        limit_routes=limit_routes,
+        dry_run=dry_run,
+        all_modes=False,
+    )
 
 
 @dataclass
@@ -961,6 +1222,217 @@ def resolve_browser_launch_config(args, code_dir: Path) -> BrowserLaunchConfig:
     )
 
 
+ROUTE_START_YEAR_ENV = "ROUTE_START_YEAR"
+
+
+def route_start_year(code_dir: Path) -> str:
+    env = load_env_file(resolve_code_dir(code_dir) / ENV_FILE)
+    return env.get(ROUTE_START_YEAR_ENV, DEFAULT_START_YEAR).strip() or DEFAULT_START_YEAR
+
+
+class KingstonRouteSession:
+    """Reuse one browser session across many undergraduate URLs (pipeline batch)."""
+
+    def __init__(self, code_dir: Path, *, browser_name: str = "edge") -> None:
+        self.code_dir = resolve_code_dir(code_dir)
+        self.output_dir = resolve_output_dir(self.code_dir)
+        self.browser_config = BrowserLaunchConfig(
+            mode="device",
+            code_dir=self.code_dir,
+            headed=True,
+            browser_name=browser_name,
+            profile_name=DEFAULT_PROFILE_NAME,
+            refresh_profile=False,
+        )
+        self._playwright = None
+        self._handle = None
+        self.page = None
+        self._close_mode = "persistent"
+
+    def __enter__(self) -> "KingstonRouteSession":
+        self._playwright = sync_playwright().start()
+        self._handle, self.page, self._close_mode = launch_page(
+            self._playwright,
+            self.browser_config,
+        )
+        return self
+
+    def __exit__(self, exc_type, exc, tb) -> None:
+        if self._handle is not None:
+            close_page(self._handle, close_mode=self._close_mode)
+        if self._playwright is not None:
+            self._playwright.stop()
+
+    def process_url(
+        self,
+        page_url: str,
+        *,
+        study_level: str,
+        start_year: str | None = None,
+        presetup_output: bool = False,
+    ) -> int:
+        assert self.page is not None
+        return process_route_page(
+            self.page,
+            code_dir=self.code_dir,
+            output_dir=self.output_dir,
+            page_url=page_url,
+            study_level=study_level,
+            start_year=start_year or route_start_year(self.code_dir),
+            limit_routes=None,
+            dry_run=False,
+            all_modes=False,
+            split_by_mode=study_level == "undergraduate",
+            presetup_output=presetup_output,
+        )
+
+    def process_undergraduate_url(
+        self,
+        page_url: str,
+        *,
+        start_year: str | None = None,
+        presetup_output: bool = False,
+    ) -> int:
+        return self.process_url(
+            page_url,
+            study_level="undergraduate",
+            start_year=start_year,
+            presetup_output=presetup_output,
+        )
+
+
+def run_study_level_routes(
+    code_dir: Path,
+    urls: list[str],
+    study_level: str,
+    *,
+    start_year: str | None = None,
+    session: KingstonRouteSession | None = None,
+    presetup_output: bool = False,
+) -> int:
+    """Run route selector for one study level; return markdown files written."""
+    code_dir = resolve_code_dir(code_dir)
+    start = start_year or route_start_year(code_dir)
+    cleaned = [url.strip() for url in urls if (url or "").strip()]
+    if not cleaned:
+        return 0
+    total = 0
+    if session is not None:
+        for url in cleaned:
+            total += session.process_url(
+                url,
+                study_level=study_level,
+                start_year=start,
+                presetup_output=presetup_output,
+            )
+        return total
+    with KingstonRouteSession(code_dir) as active:
+        for url in cleaned:
+            total += active.process_url(
+                url,
+                study_level=study_level,
+                start_year=start,
+                presetup_output=presetup_output,
+            )
+    return total
+
+
+def run_undergraduate_routes(
+    code_dir: Path,
+    urls: list[str],
+    *,
+    start_year: str | None = None,
+    session: KingstonRouteSession | None = None,
+    presetup_output: bool = False,
+) -> int:
+    """Select 3-year + foundation-year routes; return markdown files written."""
+    return run_study_level_routes(
+        code_dir,
+        urls,
+        "undergraduate",
+        start_year=start_year,
+        session=session,
+        presetup_output=presetup_output,
+    )
+
+
+def run_postgraduate_routes(
+    code_dir: Path,
+    urls: list[str],
+    *,
+    start_year: str | None = None,
+    session: KingstonRouteSession | None = None,
+    presetup_output: bool = False,
+) -> int:
+    return run_study_level_routes(
+        code_dir,
+        urls,
+        "postgraduate",
+        start_year=start_year,
+        session=session,
+        presetup_output=presetup_output,
+    )
+
+
+def run_postgraduate_research_routes(
+    code_dir: Path,
+    urls: list[str],
+    *,
+    start_year: str | None = None,
+    session: KingstonRouteSession | None = None,
+    presetup_output: bool = False,
+) -> int:
+    return run_study_level_routes(
+        code_dir,
+        urls,
+        "postgraduate_research",
+        start_year=start_year,
+        session=session,
+        presetup_output=presetup_output,
+    )
+
+
+def execute_foundation_route_md_path(output_dir: Path, url: str) -> Path:
+    slug = course_slug_from_url(url)
+    return output_dir / "clean" / CLEAN_COURSES_SUBDIR / "foundation" / f"{slug}.md"
+
+
+def presetup_foundation_route_md_path(output_dir: Path, url: str) -> Path:
+    slug = course_slug_from_url(url)
+    return output_dir / "clean" / PRESETUP_CLEAN_SUBDIR / "foundation" / f"{slug}.md"
+
+
+def foundation_route_md_path(output_dir: Path, url: str) -> Path:
+    execute_path = execute_foundation_route_md_path(output_dir, url)
+    if execute_path.is_file():
+        return execute_path
+    presetup_path = presetup_foundation_route_md_path(output_dir, url)
+    if presetup_path.is_file():
+        return presetup_path
+    return execute_path
+
+
+def relocate_misfiled_foundation_route(output_dir: Path, url: str) -> Path | None:
+    """Copy a UG hub foundation route from pre_setup into clean/courses/foundation."""
+    execute_path = execute_foundation_route_md_path(output_dir, url)
+    if execute_path.is_file():
+        return execute_path
+    presetup_path = presetup_foundation_route_md_path(output_dir, url)
+    if not presetup_path.is_file():
+        return None
+    text = presetup_path.read_text(encoding="utf-8")
+    if "hub_url:" not in text:
+        return None
+    execute_path.parent.mkdir(parents=True, exist_ok=True)
+    slug = course_slug_from_url(url)
+    text = text.replace(
+        f"output_md: clean/{PRESETUP_CLEAN_SUBDIR}/foundation/{slug}.md",
+        f"output_md: clean/{CLEAN_COURSES_SUBDIR}/foundation/{slug}.md",
+    )
+    execute_path.write_text(text, encoding="utf-8")
+    return execute_path
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--code-dir", type=Path, default=_CODE_DIR)
@@ -970,12 +1442,34 @@ def main() -> int:
         default=[],
         help="Hub foundation URL (repeatable). Default: all hubs in foundation_course_urls.csv",
     )
+    parser.add_argument(
+        "--hub-routes",
+        action="store_true",
+        help="Process integrated foundation hub pages (hub_routes/*.md)",
+    )
+    parser.add_argument(
+        "--study-level",
+        choices=["undergraduate"],
+        default="undergraduate",
+        help=argparse.SUPPRESS,
+    )
+    parser.add_argument(
+        "--limit-pages",
+        type=int,
+        default=None,
+        help="Process only first N course page URLs (for testing)",
+    )
     parser.add_argument("--start-year", default=DEFAULT_START_YEAR)
+    parser.add_argument(
+        "--all-routes",
+        action="store_true",
+        help="Write every mode to undergraduate/routes/ (legacy). Default UG: 3-year -> undergraduate/, foundation-year -> foundation/.",
+    )
     parser.add_argument(
         "--limit-routes",
         type=int,
         default=None,
-        help="Process only first N course options per hub (for testing)",
+        help="Process only first N course options per page (for testing)",
     )
     parser.add_argument("--dry-run", action="store_true", help="List routes only, no download/clean")
     parser.add_argument(
@@ -1033,28 +1527,44 @@ def main() -> int:
     code_dir = resolve_code_dir(args.code_dir)
     output_dir = resolve_output_dir(code_dir)
     browser_config = resolve_browser_launch_config(args, code_dir)
-    hub_urls = load_hub_urls(output_dir, explicit=args.url or None)
-    if not hub_urls:
-        print("No hub foundation URLs found.", file=sys.stderr)
+    study_level = "foundation" if args.hub_routes else "undergraduate"
+    if args.hub_routes:
+        page_urls = load_hub_urls(output_dir, explicit=args.url or None)
+    else:
+        page_urls = load_route_urls(output_dir, study_level, explicit=args.url or None)
+    if args.limit_pages is not None:
+        page_urls = page_urls[: args.limit_pages]
+    if not page_urls:
+        print(f"No {study_level} route URLs found.", file=sys.stderr)
         return 1
 
-    print(f"Hub foundation pages: {len(hub_urls)}")
+    split_by_mode = study_level == "undergraduate" and not args.all_routes
+    if study_level in {"postgraduate", "postgraduate_research"} and args.all_routes:
+        print("Warning: --all-routes applies to undergraduate only; ignored for this study level.")
+    all_modes = False
+    print(
+        f"{study_level} pages: {len(page_urls)} "
+        f"(split_by_mode={split_by_mode}, all_routes={all_modes})"
+    )
     total = 0
     failed = 0
 
     with sync_playwright() as playwright:
         handle, page, close_mode = launch_page(playwright, browser_config)
         try:
-            for hub_url in hub_urls:
+            for page_url in page_urls:
                 try:
-                    total += process_hub(
+                    total += process_route_page(
                         page,
                         code_dir=code_dir,
                         output_dir=output_dir,
-                        hub_url=hub_url,
+                        page_url=page_url,
+                        study_level=study_level,
                         start_year=str(args.start_year),
                         limit_routes=args.limit_routes,
                         dry_run=args.dry_run,
+                        all_modes=all_modes,
+                        split_by_mode=split_by_mode,
                     )
                 except Exception as exc:
                     failed += 1
@@ -1062,7 +1572,7 @@ def main() -> int:
         finally:
             close_page(handle, close_mode=close_mode)
 
-    print(f"\nDone: {total} markdown file(s) written, {failed} hub(s) failed")
+    print(f"\nDone: {total} markdown file(s) written, {failed} page(s) failed")
     return 0 if failed == 0 else 1
 
 

@@ -9,10 +9,11 @@ UNDERGRADUATE_COURSE_LISTING_PAGE_2=https://www.kingston.ac.uk/study/course-sear
 # Kingston listing is a Vue button pager. Visiting ?page=2 does not render courses.
 LISTING_PAGINATION_MODE=click
 
-# Kingston hub foundation route variants (Course Route Selector → one .md per route)
-#   python kingston_hub_foundation_clean.py
-# Output: output/clean/pre_setup_course/foundation/hub_routes/*.md
-# Blocks: HUB_ROUTE_CLEAN_BLOCKS (Key course info + Entry requirements + route-only Fees)
+# Kingston route selector — see kingston_route_clean.py (wired in run_course_pipeline.py for UG)
+# UG Mode split: 3 years -> pre_setup_course/undergraduate/{slug}.md
+#                 foundation year -> pre_setup_course/foundation/{slug}.md
+# Standalone foundation catalogue URLs: download + clean only (no route selector)
+ROUTE_START_YEAR=2027
 
 # POSTGRADUATE_COURSE_LISTING_PAGE_1=https://www.canterbury.ac.uk/search/postgraduate-taught-courses?pageIndex=1
 # POSTGRADUATE_COURSE_LISTING_PAGE_2=https://www.canterbury.ac.uk/search/postgraduate-taught-courses?pageIndex=2
@@ -100,6 +101,12 @@ EXCLUDED_PATH_PREFIXES="
 /events/
 "
 
+# --- Course page download (download_and_clean_course_pages.py) ---
+# Kingston course pages use Cloudflare — sync your Edge cookies for reliable HTML.
+COURSE_DOWNLOAD_USE_DEVICE_PROFILE=true
+COURSE_DOWNLOAD_BROWSER=edge
+COURSE_DOWNLOAD_HEADLESS=false
+
 # --- Course page cleaning (download_and_clean_course_pages.py — course_detail/) ---
 
 COURSE_PAGE_TITLE_SELECTOR=#main-content h1
@@ -109,15 +116,13 @@ COURSE_CLEAN_ENGINE=generic
 
 # One CSS selector per line; optional heading with :: or |
 COURSE_CLEAN_BLOCKS="
-Why choose this course :: #why-choose-this-course
-Course content :: #course-content
 Entry requirements :: #entry-requirements
 Fees and funding :: #fees-and-funding
 "
 
-# Hub route variants (kingston_hub_foundation_clean.py) — one .md per selected course.
-# Omits shared hub prose (Why choose / Course content); fees list is route-only.
-HUB_ROUTE_CLEAN_BLOCKS="
+# Route selector entry/fees blocks (kingston_route_clean.py)
+# Omits shared course-page prose (Why choose / Course content); fees list is route-only.
+ROUTE_CLEAN_BLOCKS="
 Entry requirements :: #entry-requirements
 Fees and funding :: #fees-and-funding
 "

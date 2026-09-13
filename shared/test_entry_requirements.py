@@ -392,6 +392,57 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(program["ProgramName"], "Group B")
         self.assertEqual(program["TestRequirements"][0]["ieltsMinOverall"], "6.5")
 
+    def test_extract_course_ielts_kingston_phd(self) -> None:
+        body = (
+            "English language requirement for this course: All non-UK applicants must meet our English "
+            "language requirements. For this course it is Academic IELTS of 7.0 overall with special "
+            "conditions in all elements."
+        )
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["ieltsMinOverall"], "7.0")
+        self.assertEqual(hints.get("ieltsMinSection", ""), "")
+
+    def test_select_english_json_program_by_course_ielts(self) -> None:
+        programs = [
+            {
+                "TestStudyLevel": "Postgraduate",
+                "ProgramName": "Pre-Masters Programme",
+                "TestRequirements": [
+                    {"TestName": "IELTS Academic", "ieltsMinOverall": "6.0", "ieltsMinSection": "5.5"},
+                    {"TestName": "Pearson PTE Academic", "pteMinOverall": "59", "pteMinSection": "59"},
+                ],
+            },
+            {
+                "TestStudyLevel": "Postgraduate",
+                "ProgramName": "Journalism MA",
+                "TestRequirements": [
+                    {"TestName": "IELTS Academic", "ieltsMinOverall": "7.0", "ieltsMinSection": "5.5"},
+                    {"TestName": "Pearson PTE Academic", "pteMinOverall": "66", "pteMinSection": "59"},
+                ],
+            },
+        ]
+        program = select_english_json_program(
+            programs,
+            course_level="postgraduate",
+            course_name="Business PhD (Doctor of Philosophy)",
+            course_body="Academic IELTS of 7.0 overall with special conditions in all elements.",
+            course_ielts_overall="7.0",
+        )
+        self.assertEqual(program["ProgramName"], "Journalism MA")
+        self.assertEqual(program["TestRequirements"][1]["pteMinOverall"], "66")
+
+    def test_key_course_information_stage1_fields(self) -> None:
+        body = """## Key course information
+
+- **Course:** Aerospace Engineering (Space Technology) BEng (Hons)
+- **Start date:** 2027
+- **Mode:** 3 years full time
+- **UCAS Code:** H400
+"""
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["intakeInfo"], "2027")
+        self.assertEqual(hints["courseDuration"], "3 years full time")
+
     def test_keele_stage1_fields_from_key_information(self) -> None:
         body = """## Key information
 ### Year of entry
