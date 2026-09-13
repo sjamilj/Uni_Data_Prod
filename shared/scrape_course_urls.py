@@ -41,7 +41,6 @@ URL matching (required):
   EXCLUDED_COURSE_PATHS=  optional exact paths to skip
   EXCLUDED_PATH_PREFIXES= optional path prefixes to skip
   COURSE_LINK_SELECTOR=   optional CSS selector limiting which <a> tags are scanned
-  LISTING_PAGINATION_MODE=url (default) | click  — click = Vue/button Next pager
 
 Run from a university code/ folder (uses .env in cwd, or pass --code-dir):
 
@@ -75,7 +74,6 @@ _SHARED_DIR = Path(__file__).resolve().parent
 if str(_SHARED_DIR) not in sys.path:
     sys.path.insert(0, str(_SHARED_DIR))
 
-from browser_device_profile import launch_device_browser_context
 from uni_paths import resolve_code_dir, resolve_output_dir
 from course_type_filter import CourseTypeFilter
 from study_level import (
@@ -151,9 +149,6 @@ SEARCH_PATH_LABELS = {
 }
 PAGINATION_EMPTY_LIMIT = 2
 LISTING_DOWNLOAD_RETRIES = 2
-LISTING_PAGINATION_URL = "url"
-LISTING_PAGINATION_CLICK = "click"
-VALID_LISTING_PAGINATION_MODES = {LISTING_PAGINATION_URL, LISTING_PAGINATION_CLICK}
 DEFAULT_USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -788,7 +783,6 @@ class ScraperConfig:
     degree_listings: list[ListingConfig] = field(default_factory=list)
     single_catalogue: CatalogueSource | None = None
     level_classifier: StudyLevelClassifier = field(default_factory=StudyLevelClassifier)
-    pagination_mode: str = LISTING_PAGINATION_URL
 
     # Convenience passthroughs so extraction code can read config.path_patterns etc.
     @property
@@ -899,15 +893,6 @@ class ConfigLoader:
             config.base_url = f"{parsed.scheme}://{parsed.netloc}"
         config.degree_listings = degree_listings
         config.domain = urlparse(config.base_url).netloc.lower()
-        raw_mode = env.get("LISTING_PAGINATION_MODE", LISTING_PAGINATION_URL).strip().lower()
-        if raw_mode in {"click_next", "button", "vue"}:
-            raw_mode = LISTING_PAGINATION_CLICK
-        if raw_mode not in VALID_LISTING_PAGINATION_MODES:
-            raise ValueError(
-                f"{env_path}: LISTING_PAGINATION_MODE must be "
-                f"{sorted(VALID_LISTING_PAGINATION_MODES)!r} (got {raw_mode!r})."
-            )
-        config.pagination_mode = raw_mode
         return config
 
 
@@ -1019,67 +1004,41 @@ class ArtifactStore:
 # Browser control (Playwright)
 # ============================================================================
 
-class BrowserSession:
-    """Playwright page wrapper — optional device profile from .env (Cloudflare bypass)."""
+def load_uni_download_hooks_module(code_dir: Path):
+    """Load {University}/code/course_download_hooks.py when present."""
+    import importlib.util
 
-    def __init__(self, code_dir: Path | None = None):
-        self.code_dir = resolve_code_dir(code_dir) if code_dir else None
+    path = code_dir / "course_download_hooks.py"
+    if not path.is_file():
+        return None
+    spec = importlib.util.spec_from_file_location("course_download_hooks", path)
+    if spec is None or spec.loader is None:
+        return None
+    module = importlib.util.module_from_spec(spec)
+    uni_code = str(path.parent)
+    if uni_code not in sys.path:
+        sys.path.insert(0, uni_code)
+    spec.loader.exec_module(module)
+    return module
+
+
+class BrowserSession:
+    """Thin wrapper around a headless Chromium page, used as a context manager."""
+
+    def __init__(self):
         self._playwright = None
         self._browser = None
-        self._context = None
         self.page = None
-        self._device_context = False
-
-    def _env_bool(self, key: str, *, default: bool = False) -> bool:
-        if not self.code_dir:
-            return default
-        raw = EnvFile(self.code_dir / ENV_FILE).get(key, "").strip().lower()
-        if not raw:
-            return default
-        return raw in {"1", "true", "yes", "on"}
-
-    def _env_str(self, key: str, default: str = "") -> str:
-        if not self.code_dir:
-            return default
-        return EnvFile(self.code_dir / ENV_FILE).get(key, default).strip() or default
 
     def __enter__(self) -> "BrowserSession":
         self._playwright = sync_playwright().start()
-        use_device = self._env_bool("COURSE_DOWNLOAD_USE_DEVICE_PROFILE")
-        if use_device and self.code_dir:
-            headed = self._env_bool("COURSE_DOWNLOAD_HEADED") or not self._env_bool(
-                "COURSE_DOWNLOAD_HEADLESS", default=True
-            )
-            refresh = self._env_bool("COURSE_DOWNLOAD_REFRESH_PROFILE")
-            browser_name = self._env_str("COURSE_DOWNLOAD_BROWSER", "auto")
-            profile_name = self._env_str("COURSE_DOWNLOAD_PROFILE_NAME", "Default")
-            self._context, self.page = launch_device_browser_context(
-                self._playwright,
-                code_dir=self.code_dir,
-                browser_name=browser_name,
-                profile_name=profile_name,
-                headed=headed,
-                refresh_profile=refresh,
-            )
-            self._device_context = True
-            return self
-
-        headless = not self._env_bool("COURSE_DOWNLOAD_HEADED") and self._env_bool(
-            "COURSE_DOWNLOAD_HEADLESS", default=True
-        )
-        channel = self._env_str("COURSE_DOWNLOAD_BROWSER_CHANNEL")
-        launch_kwargs: dict = {"headless": headless}
-        if channel:
-            launch_kwargs["channel"] = channel
-        self._browser = self._playwright.chromium.launch(**launch_kwargs)
+        self._browser = self._playwright.chromium.launch(headless=True)
         context = self._browser.new_context(user_agent=DEFAULT_USER_AGENT)
         self.page = context.new_page()
         return self
 
     def __exit__(self, exc_type, exc, tb) -> None:
-        if self._device_context and self._context:
-            self._context.close()
-        elif self._browser:
+        if self._browser:
             self._browser.close()
         if self._playwright:
             self._playwright.stop()
@@ -1110,10 +1069,6 @@ class BrowserSession:
             'a[href*="/study-here/courses/"]',
             ".course-card",
             "a.sc-eJZSpO",
-            'a.c-button[href*="/study/undergraduate/"]',
-            'a.c-button[href*="/study/postgraduate/"]',
-            'a.c-button[href*="/study/foundation/"]',
-            'a.c-button[href*="/study/degree-apprenticeship"]',
         ]
         for selector in selectors:
             try:
@@ -1122,135 +1077,45 @@ class BrowserSession:
                 return
             except PlaywrightTimeoutError:
                 continue
-        try:
-            page.wait_for_function(
-                "() => /Showing\\s+\\d+\\s+to\\s+\\d+\\s+of\\s+\\d+\\s+Results/i.test(document.body.innerText)",
-                timeout=20000,
-            )
-            page.wait_for_timeout(1000)
-        except PlaywrightTimeoutError:
-            pass
 
-    @staticmethod
-    def is_cloudflare_challenge(title: str, html: str) -> bool:
-        title_lower = (title or "").lower()
-        html_lower = (html or "")[:4000].lower()
-        return "just a moment" in title_lower or "cf-challenge" in html_lower or "challenge-platform" in html_lower
-
-    def _next_listing_button(self):
-        assert self.page is not None
-        candidates = [
-            self.page.get_by_role("button", name=re.compile(r"^Next\b", re.I)),
-            self.page.locator("button.c-button:has-text('Next')"),
-            self.page.locator("button:has-text('Next')"),
-        ]
-        for locator in candidates:
-            button = locator.last
-            try:
-                if button.count() == 0:
-                    continue
-                if not button.is_visible(timeout=2000):
-                    continue
-                return button
-            except Exception:
-                continue
-        return None
-
-    def click_next_listing_page(
+    def download_html(
         self,
+        url: str,
         *,
-        expected_start: int | None = None,
-        previous_first_href: str | None = None,
+        wait_for_results: bool = False,
+        code_dir: Path | None = None,
     ) -> tuple[str, str]:
-        """Advance a Vue/button pager without navigating to ?page=N."""
-        assert self.page is not None
-        button = self._next_listing_button()
-        if button is None:
-            raise RuntimeError("Next listing button not found")
-        aria_disabled = (button.get_attribute("aria-disabled") or "").lower()
-        if button.is_disabled() or aria_disabled in {"true", "1"}:
-            raise RuntimeError("Next listing button is disabled")
-
-        button.click(timeout=5000)
-        try:
-            if expected_start is not None:
-                self.page.wait_for_function(
-                    """({start, prev}) => {
-                        const text = document.body.innerText || '';
-                        const match = text.match(/Showing\\s+(\\d+)\\s+to\\s+(\\d+)\\s+of\\s+(\\d+)\\s+Results/i);
-                        if (!(match && Number(match[1]) === start)) {
-                            return false;
-                        }
-                        if (!prev) {
-                            return true;
-                        }
-                        const link = document.querySelector('a.c-button[href*="/study/"]');
-                        return !!(link && link.href && link.href !== prev);
-                    }""",
-                    arg={"start": expected_start, "prev": previous_first_href or ""},
-                    timeout=30000,
-                )
-            else:
-                self.wait_for_listing(self.page)
-            self.page.wait_for_timeout(1000)
-        except PlaywrightTimeoutError as exc:
-            raise RuntimeError(f"Listing did not advance after Next click: {exc}") from exc
-
-        html = self.page.content()
-        title = self.page.title() or "catalogue"
-        if self.is_cloudflare_challenge(title, html):
-            raise RuntimeError("Cloudflare challenge after Next click")
-        return title, html
-
-    def _wait_for_course_page(self, page) -> None:
-        try:
-            page.wait_for_selector("#main-content h1", timeout=20000)
-        except PlaywrightTimeoutError:
-            pass
-        page.wait_for_timeout(800)
-
-    def _resolve_cloudflare(self, page, url: str) -> None:
-        title = (page.title() or "").lower()
-        html = page.content()
-        if not self.is_cloudflare_challenge(title, html):
-            return
-        page.wait_for_timeout(8000)
-        page.reload(wait_until="domcontentloaded", timeout=60000)
-        self.dismiss_cookies(page)
-        try:
-            page.wait_for_load_state("networkidle", timeout=20000)
-        except PlaywrightTimeoutError:
-            page.wait_for_load_state("load", timeout=15000)
-        page.wait_for_timeout(2000)
-        title = (page.title() or "").lower()
-        html = page.content()
-        if self.is_cloudflare_challenge(title, html):
-            raise RuntimeError(f"Cloudflare challenge at {url}")
-
-    def download_html(self, url: str, *, wait_for_results: bool = False) -> tuple[str, str]:
         """Navigate to url and return (page_title, html). Retries transient failures."""
         assert self.page is not None
+        prepare = None
+        if code_dir is not None:
+            module = load_uni_download_hooks_module(code_dir)
+            if module is not None:
+                prepare = getattr(module, "prepare_course_page_download", None)
+        use_prepare = callable(prepare)
+        wait_until = "load" if use_prepare else "domcontentloaded"
         last_error: Exception | None = None
         for attempt in range(1, LISTING_DOWNLOAD_RETRIES + 1):
             try:
-                self.page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                self.page.goto(url, wait_until=wait_until, timeout=60000)
                 self.dismiss_cookies(self.page)
-                try:
-                    self.page.wait_for_load_state("networkidle", timeout=15000)
-                except PlaywrightTimeoutError:
-                    self.page.wait_for_load_state("load", timeout=15000)
+                if use_prepare:
+                    self.page.wait_for_timeout(3000)
+                else:
+                    try:
+                        self.page.wait_for_load_state("networkidle", timeout=15000)
+                    except PlaywrightTimeoutError:
+                        self.page.wait_for_load_state("load", timeout=15000)
                 if wait_for_results:
                     self.wait_for_listing(self.page)
-                else:
-                    self.page.wait_for_timeout(1500)
-                    self._resolve_cloudflare(self.page, url)
-                    self._wait_for_course_page(self.page)
+                elif not use_prepare:
+                    self.page.wait_for_timeout(800)
+                if use_prepare:
+                    prepare(self.page, url)
                 html = self.page.content()
                 if not html or len(html) < 200:
                     raise RuntimeError("Empty or tiny HTML response")
                 title = self.page.title() or "catalogue"
-                if self.is_cloudflare_challenge(title, html):
-                    raise RuntimeError(f"Cloudflare challenge at {url}")
                 return title, html
             except Exception as exc:
                 last_error = exc
@@ -1264,24 +1129,18 @@ class BrowserSession:
 # ============================================================================
 
 class ListingResultParser:
-    """Reads listing result counts used to estimate page count."""
+    """Reads the 'Displaying X-Y of Z results' text used to estimate page count."""
 
-    _RESULT_INFO_RES = (
-        re.compile(
-            r"Displaying\s+(\d+)\s*-\s*(\d+)\s+of\s+(\d+)\s+results", re.I
-        ),
-        re.compile(
-            r"Showing\s+(\d+)\s+to\s+(\d+)\s+of\s+(\d+)\s+Results", re.I
-        ),
+    _RESULT_INFO_RE = re.compile(
+        r"Displaying\s+(\d+)\s*-\s*(\d+)\s+of\s+(\d+)\s+results", re.I
     )
 
     @staticmethod
     def get_result_info(html: str) -> tuple[int | None, int | None, int | None]:
-        for pattern in ListingResultParser._RESULT_INFO_RES:
-            match = pattern.search(html)
-            if match:
-                return int(match.group(1)), int(match.group(2)), int(match.group(3))
-        return None, None, None
+        match = ListingResultParser._RESULT_INFO_RE.search(html)
+        if not match:
+            return None, None, None
+        return int(match.group(1)), int(match.group(2)), int(match.group(3))
 
     @staticmethod
     def estimated_total_pages(total_results: int, page_size: int) -> int:
@@ -1542,21 +1401,8 @@ class PaginatedListingExtractor:
         previous_page_urls = set(state.get("previous_page_urls") or [])
         pagination_param = state.get("pagination_param") or pagination_param
         page_step = int(state.get("page_step") or page_step)
-        previous_end = state.get("previous_end")
-        previous_first_href = state.get("previous_first_href") or ""
-        click_mode = self.config.pagination_mode == LISTING_PAGINATION_CLICK
-        start_page = UrlNormalizer.get_page_number(base_listing_url, pagination_param)
-        if click_mode:
-            # Each run uses a fresh browser, so always start on page 1 and click forward.
-            page_index = start_page
-            empty_streak = 0
-            same_page_streak = 0
-            previous_end = None
-            previous_first_href = ""
 
         print(f"  [{scope}] Search listing: {label} ({base_listing_url.split('?')[0]})")
-        if click_mode:
-            print(f"  [{scope}] LISTING_PAGINATION_MODE=click (Next button, not ?page=N)")
 
         while (
             empty_streak < PAGINATION_EMPTY_LIMIT
@@ -1567,54 +1413,29 @@ class PaginatedListingExtractor:
                 break
 
             listing_url = UrlNormalizer.set_page_number(base_listing_url, page_index, pagination_param)
-            completed_key = (
-                f"click:{scope}:{path_key}:{page_index}"
-                if click_mode
-                else UrlNormalizer.normalize(listing_url, keep_query=True)
-            )
-            if (not click_mode) and completed_key in completed:
+            normalized = UrlNormalizer.normalize(listing_url, keep_query=True)
+            if normalized in completed:
                 page_index += page_step
                 continue
 
             page_counter += 1
-            if click_mode and page_index > start_page:
-                print(f"  [{scope}] Clicking Next for listing page {page_counter}")
-                try:
-                    expected_start = int(previous_end) + 1 if previous_end else None
-                    _title, html = self.browser.click_next_listing_page(
-                        expected_start=expected_start,
-                        previous_first_href=previous_first_href or None,
-                    )
-                except RuntimeError as exc:
-                    message = str(exc).lower()
-                    if "disabled" in message or "not found" in message:
-                        print(f"    [{scope}] No further listing pages ({exc})")
-                        break
-                    empty_streak += 1
-                    print(f"    [{scope}] Next click failed ({empty_streak}/{PAGINATION_EMPTY_LIMIT}): {exc}")
-                    self.logger.error(f"[{scope}] Next click failed: {exc}")
-                    page_index += page_step
-                    continue
-            else:
-                print(f"  [{scope}] Downloading listing page {page_counter}: {listing_url}")
-                try:
-                    _title, html = self.browser.download_html(listing_url, wait_for_results=True)
-                except RuntimeError as exc:
-                    empty_streak += 1
-                    print(f"    [{scope}] No HTML ({empty_streak}/{PAGINATION_EMPTY_LIMIT}): {exc}")
-                    self.logger.error(f"[{scope}] Listing page failed: {listing_url} — {exc}")
-                    page_index += page_step
-                    continue
+            print(f"  [{scope}] Downloading listing page {page_counter}: {listing_url}")
+            try:
+                _title, html = self.browser.download_html(listing_url, wait_for_results=True)
+            except RuntimeError as exc:
+                empty_streak += 1
+                print(f"    [{scope}] No HTML ({empty_streak}/{PAGINATION_EMPTY_LIMIT}): {exc}")
+                self.logger.error(f"[{scope}] Listing page failed: {listing_url} — {exc}")
+                page_index += page_step
+                continue
 
-            completed.add(completed_key)
+            completed.add(normalized)
 
             start, end, total = ListingResultParser.get_result_info(html)
             if total is not None and max_pages is None:
                 page_size = (end - start + 1) if start and end else 12
                 max_pages = ListingResultParser.estimated_total_pages(total, page_size)
                 print(f"    [{scope}] {label}: {total} results, ~{max_pages} pages ({page_size} per page)")
-            if end:
-                previous_end = end
 
             page_urls = matcher.extract_from_html(html, base_url)
             page_url_set = set(page_urls)
@@ -1673,8 +1494,6 @@ class PaginatedListingExtractor:
                             f"from {listing_url}"
                         )
                 previous_page_urls = page_url_set
-                if page_urls:
-                    previous_first_href = sorted(page_urls)[0]
 
             if self.presetup and presetup_should_stop_pagination(
                 url_levels,
@@ -1702,8 +1521,6 @@ class PaginatedListingExtractor:
                 previous_page_urls=sorted(previous_page_urls),
                 pagination_param=pagination_param,
                 page_step=page_step,
-                previous_end=previous_end,
-                previous_first_href=previous_first_href,
             )
             group_state[state_key] = state
 
@@ -1995,8 +1812,6 @@ class CourseUrlScraper:
         print(f"COURSE_PATH_PATTERNS={len(self.config.path_pattern_sources)} rule(s)")
         if self.config.link_selector:
             print(f"COURSE_LINK_SELECTOR={self.config.link_selector}")
-        if strategy == STRATEGY_DEGREE_SCOPED_PAGINATED:
-            print(f"LISTING_PAGINATION_MODE={self.config.pagination_mode}")
 
         if strategy == STRATEGY_ALL_COURSE:
             self._run_all_course(all_urls, completed, url_levels)
@@ -2252,14 +2067,14 @@ class CoursePageDownloader:
         stats = {"total": len(urls), "downloaded": 0, "failed": 0, "skipped": 0, "excluded": 0}
         course_filter = CourseTypeFilter.from_code_dir(self.code_dir)
 
-        with BrowserSession(self.code_dir) as browser:
+        with BrowserSession() as browser:
             for index, url in enumerate(urls, start=1):
                 if url in downloaded:
                     stats["skipped"] += 1
                     continue
                 print(f"  [{index}/{len(urls)}] {url}")
                 try:
-                    title, html = browser.download_html(url)
+                    title, html = browser.download_html(url, code_dir=self.code_dir)
                     if course_filter.should_exclude_html(html, url=url):
                         stats["excluded"] += 1
                         downloaded.add(url)

@@ -102,33 +102,6 @@ class GenericCourseHtmlEngine:
         return "\n".join(lines).strip()
 
     @classmethod
-    def c_accordion_to_markdown(
-        cls,
-        block_root: Tag,
-        env_heading: str | None = None,
-    ) -> str:
-        clone = BeautifulSoup(str(block_root), "html.parser")
-        root = clone.find(True) or clone
-        heading = env_heading or derive_heading_from_block(root)
-        if heading:
-            for h2 in root.find_all("h2", limit=3):
-                if h2.get_text(" ", strip=True).lower() == heading.lower():
-                    h2.decompose()
-                    break
-        for item in root.select(".c-accordion-item"):
-            button = item.select_one(".c-accordion-item__button-text")
-            title = button.get_text(" ", strip=True) if button else ""
-            heading_el = item.select_one(".c-accordion-item__heading")
-            content = item.select_one(".c-accordion-item__content")
-            if title and content:
-                h3 = clone.new_tag("h3")
-                h3.string = title
-                content.insert(0, h3)
-            if heading_el:
-                heading_el.decompose()
-        return MarkdownConverter.tag_to_markdown(root)
-
-    @classmethod
     def block_body(
         cls,
         soup: BeautifulSoup,
@@ -138,8 +111,6 @@ class GenericCourseHtmlEngine:
         clean_config: CleanConfig,
     ) -> str:
         del soup, resolved_selector
-        if block_root.select(".c-accordion .c-accordion-item"):
-            return cls.c_accordion_to_markdown(block_root, env_heading)
         if clean_config.expand_tabs and block_has_tabs(block_root):
             return cls.entry_tabs_to_markdown(block_root)
         heading = env_heading or derive_heading_from_block(block_root)

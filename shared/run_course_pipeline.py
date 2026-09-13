@@ -33,21 +33,13 @@ from download_and_clean_course_pages import (  # noqa: E402
     download_and_clean_course_pages,
     load_strategy_config,
 )
-from llm_extract import (  # noqa: E402
-    CourseExtractor,
-    CourseIndexManager,
-    ExtractionProgressStore,
-    configure_code_dir,
-    load_progress,
-    run_extraction,
-)
+from llm_extract import configure_code_dir, load_progress, run_extraction  # noqa: E402
 from scrape_course_urls import add_code_dir_argument, resolve_work_dir  # noqa: E402
 from study_level import (  # noqa: E402
     CLEAN_COURSES_SUBDIR,
     PRESETUP_CLEAN_SUBDIR,
     PRESETUP_SAMPLE_SIZE,
     dedupe_course_records_by_latest_intake,
-    extraction_resume_key,
     is_resume_completed,
     load_presetup_sample,
     load_url_levels,
@@ -65,8 +57,6 @@ from uni_pages import course_slug_from_url  # noqa: E402
 from uni_paths import resolve_code_dir, resolve_output_dir  # noqa: E402
 
 EXECUTE_SELECTION_JSON = "execute_selection.json"
-KINGSTON_ROUTE_SCRIPT = "kingston_route_clean.py"
-KINGSTON_ROUTE_LEVELS = ("undergraduate", "postgraduate", "postgraduate_research")
 
 
 class PipelineOrchestrator:
@@ -131,127 +121,6 @@ class PipelineOrchestrator:
         slug = self._slug(url)
         completed = self._completed_keys(output_dir)
         return is_resume_completed(completed, study_level=study_level, slug=slug)
-
-    def _load_kingston_routes(self, code_dir: Path):
-        path = resolve_code_dir(code_dir) / KINGSTON_ROUTE_SCRIPT
-        if not path.is_file():
-            return None
-        import importlib.util
-        import sys
-
-        spec = importlib.util.spec_from_file_location("kingston_route_clean", path)
-        if spec is None or spec.loader is None:
-            return None
-        module = importlib.util.module_from_spec(spec)
-        sys.modules[spec.name] = module
-        spec.loader.exec_module(module)
-        return module
-
-    def _close_kingston_route_session(self, route_session) -> None:
-        if route_session is not None:
-            route_session.__exit__(None, None, None)
-
-    def _ensure_kingston_route_session(
-        self,
-        code_dir: Path,
-        kingston,
-        route_session,
-        *,
-        start_year: str | None = None,
-    ):
-        if route_session is not None:
-            return route_session
-        year = start_year or kingston.route_start_year(code_dir)
-        self._print(f"  route browser: opening Edge session (start year {year})")
-        return kingston.KingstonRouteSession(code_dir).__enter__()
-
-    def _run_kingston_route_clean(
-        self,
-        code_dir: Path,
-        url: str,
-        study_level: str,
-        *,
-        route_session,
-        start_year: str | None = None,
-        presetup_output: bool = False,
-    ) -> None:
-        kingston = self._load_kingston_routes(code_dir)
-        if kingston is None or route_session is None:
-            return
-        year = start_year or kingston.route_start_year(code_dir)
-        written = route_session.process_url(
-            url,
-            study_level=study_level,
-            start_year=year,
-            presetup_output=presetup_output,
-        )
-        if written:
-            label = {
-                "undergraduate": "3yr + foundation",
-                "postgraduate": "default PG mode",
-                "postgraduate_research": "default PGR mode",
-            }.get(study_level, study_level)
-            self._print(f"  route clean ({study_level}): {written} markdown file(s) ({label})")
-
-    def _run_kingston_undergraduate_routes(
-        self,
-        code_dir: Path,
-        url: str,
-        *,
-        route_session,
-        start_year: str | None = None,
-    ) -> None:
-        self._run_kingston_route_clean(
-            code_dir,
-            url,
-            "undergraduate",
-            route_session=route_session,
-            start_year=start_year,
-        )
-
-    def _extract_foundation_route(
-        self,
-        code_dir: Path,
-        url: str,
-        *,
-        resume: bool,
-        model: str,
-        host: str,
-        skip_stage1: bool,
-    ) -> None:
-        kingston = self._load_kingston_routes(code_dir)
-        if kingston is None:
-            return
-        output_dir = resolve_output_dir(code_dir)
-        slug = self._slug(url)
-        if self._already_extracted(output_dir, url, "foundation", resume):
-            self._print("  skip foundation route LLM (already extracted)")
-            return
-        md_path = kingston.foundation_route_md_path(output_dir, url)
-        if not md_path.is_file():
-            return
-        self._print(f"  foundation route LLM: {md_path.name}")
-        entry = {
-            "course_url": url,
-            "courseUrlExternal": url,
-            "clean_md": md_path.relative_to(output_dir).as_posix(),
-            "study_level": "foundation",
-        }
-        row, stage1_output, stage2_output, output_json = CourseExtractor.extract_course(
-            code_dir,
-            entry,
-            model=model or None,
-            host=host or None,
-            skip_stage1=skip_stage1,
-        )
-        output_csv = CourseIndexManager.extracted_csv_path(output_dir)
-        CourseIndexManager.append_csv_row(output_csv, row)
-        progress = load_progress(output_dir)
-        completed = set(progress.get("completed") or [])
-        completed.add(extraction_resume_key("foundation", slug))
-        progress["completed"] = sorted(completed)
-        ExtractionProgressStore.save_progress(output_dir, progress)
-        self._print(f"  -> foundation route appended to {output_csv.name}")
 
     def _download_and_clean_urls(
         self,
@@ -329,31 +198,6 @@ class PipelineOrchestrator:
         self._print("After this finishes, review output/course_pages/ and output/clean/pre_setup_course/,")
         self._print("edit code/.env and code/course_markdown_cleanup.py if needed, then run --presetup-llm.")
         self._download_and_clean_urls(code_dir, urls, fresh=False, presetup_clean=True)
-        kingston = self._load_kingston_routes(code_dir)
-        if kingston is not None:
-            for level in KINGSTON_ROUTE_LEVELS:
-                level_urls = unique_urls(
-                    [
-                        str(row.get("course_url") or "").strip()
-                        for row in courses
-                        if str(row.get("study_level") or "").strip() == level
-                    ]
-                )
-                if not level_urls:
-                    continue
-                if level == "undergraduate":
-                    detail = "3-year + foundation-year entry/fees"
-                else:
-                    detail = "default full-time route + key course information"
-                self._print(
-                    f"Kingston route clean: {len(level_urls)} {level} URL(s) ({detail})."
-                )
-                kingston.run_study_level_routes(
-                    code_dir,
-                    level_urls,
-                    level,
-                    presetup_output=True,
-                )
         self._print("Presetup download/clean done. Human review next, then --presetup-llm.")
         return 0
 
@@ -479,87 +323,37 @@ class PipelineOrchestrator:
         self._print(
             f"Execute: {len(courses)} course(s) "
             f"[{', '.join(study_levels)}] mode={mode} "
-            f"(download -> clean -> route [Kingston UG] -> LLM per course)"
+            f"(download -> clean -> LLM per course)"
         )
-
-        kingston = self._load_kingston_routes(code_dir)
-        route_session = None
-        route_start_year = None
-        route_levels = set(KINGSTON_ROUTE_LEVELS)
-        use_route_clean = kingston is not None and any(
-            level in route_levels for level in study_levels
-        )
-        if use_route_clean:
-            route_start_year = kingston.route_start_year(code_dir)
 
         failed = 0
         skipped = 0
         done = 0
-        try:
-            for index, row in enumerate(courses, start=1):
-                url = str(row.get("course_url") or "").strip()
-                level = str(row.get("study_level") or "").strip()
-                if not url:
-                    continue
-                self._print(f"[{index}/{len(courses)}] {level}  {url}")
-                if self._already_extracted(output_dir, url, level, resume):
-                    skipped += 1
-                    self._print("  skip (already extracted)")
-                    continue
-                try:
-                    # Download uses its own Playwright session; close route browser first
-                    # so sync Playwright is not nested in the same process/thread.
-                    if route_session is not None:
-                        self._close_kingston_route_session(route_session)
-                        route_session = None
-                    self._download_and_clean_urls(code_dir, [url], fresh=False)
-                    if use_route_clean and level in route_levels:
-                        route_session = self._ensure_kingston_route_session(
-                            code_dir,
-                            kingston,
-                            route_session,
-                            start_year=route_start_year,
-                        )
-                        self._run_kingston_route_clean(
-                            code_dir,
-                            url,
-                            level,
-                            route_session=route_session,
-                            start_year=route_start_year,
-                        )
-                        if level == "undergraduate" and kingston is not None:
-                            relocated = kingston.relocate_misfiled_foundation_route(
-                                output_dir,
-                                url,
-                            )
-                            if relocated is not None:
-                                self._print(
-                                    f"  foundation route md: {relocated.relative_to(output_dir)}"
-                                )
-                    run_extraction(
-                        code_dir,
-                        resume=resume,
-                        model=model or None,
-                        host=host or None,
-                        skip_stage1=skip_stage1,
-                        urls=[url],
-                    )
-                    if kingston is not None and level == "undergraduate":
-                        self._extract_foundation_route(
-                            code_dir,
-                            url,
-                            resume=resume,
-                            model=model,
-                            host=host,
-                            skip_stage1=skip_stage1,
-                        )
-                    done += 1
-                except Exception as exc:
-                    failed += 1
-                    print(f"  ERROR: {exc}", file=sys.stderr, flush=True)
-                    continue
-        finally:
-            self._close_kingston_route_session(route_session)
+        for index, row in enumerate(courses, start=1):
+            url = str(row.get("course_url") or "").strip()
+            level = str(row.get("study_level") or "").strip()
+            if not url:
+                continue
+            self._print(f"[{index}/{len(courses)}] {level}  {url}")
+            if self._already_extracted(output_dir, url, level, resume):
+                skipped += 1
+                self._print("  skip (already extracted)")
+                continue
+            try:
+                self._download_and_clean_urls(code_dir, [url], fresh=False)
+                run_extraction(
+                    code_dir,
+                    resume=resume,
+                    model=model or None,
+                    host=host or None,
+                    skip_stage1=skip_stage1,
+                    urls=[url],
+                )
+                done += 1
+            except Exception as exc:
+                failed += 1
+                print(f"  ERROR: {exc}", file=sys.stderr, flush=True)
+                continue
 
         self._print(f"Execute loop done: extracted={done} skipped={skipped} failed={failed}")
         if skip_export:

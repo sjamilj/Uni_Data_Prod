@@ -74,6 +74,9 @@ EXCLUDED_PATH_PREFIXES="
 /events/
 "
 
+# --- Course page download (shared/scrape_course_urls.py) ---
+# course_download_hooks.py clicks the International tab before HTML save.
+
 # --- Course page cleaning (download_and_clean_course_pages.py — course_detail/) ---
 
 COURSE_PAGE_TITLE_SELECTOR=main h1
@@ -82,11 +85,11 @@ COURSE_PAGE_TITLE_SELECTOR=main h1
 COURSE_CLEAN_ENGINE=generic
 
 # One CSS selector per line; optional heading with :: or |
+# Omits course-page marketing prose (Course overview); keep entry, fees only.
+# Key course information is injected from `.course-details-banner` in course_markdown_cleanup.py.
 COURSE_CLEAN_BLOCKS="
-Course overview :: .course-intro-composer
 Entry requirements :: #courseEntryRequirements
 Fees :: #courseFees
-Modules :: #courseModules
 "
 
 # Noise removed inside each matched block before markdown conversion
@@ -100,8 +103,19 @@ noscript
 
 COURSE_CLEAN_EXPAND_TABS=true
 
+# Skip part-time courses at download/clean and LLM (--presetup-llm / --execute).
+# Matches Course type fields and Key course information **Mode:** (e.g. Part-time).
+COURSE_EXCLUDE_COURSE_TYPES="
+*part-time*
+"
+
 # --- Course markdown cleanup (shared/course_markdown_cleanup.py) ---
 COURSE_MARKDOWN_REMOVE_SECTIONS="
+2 :: Course overview
+2 :: Choose your country
+2 :: *meet these entry requirements*
+2 :: Modules
+2 :: Module information
 2 :: Latest news
 2 :: Be part of our community
 2 :: Alumni services
