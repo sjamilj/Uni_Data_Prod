@@ -1,0 +1,9 @@
+Course Type,Paginated.csv,,,,,,,,
+Uni Name,,,,,,,,,
+Uni Link,,,,,,,,,
+Programme,ALL Course Listing URL,Paginated Course Listing URL - Page 1,Paginated Course Listing URL - Page 2,Course Detail Page URL,Bangladesh Entry Requirements URL,English Language Requirements URL,Scholarship Information URL,Deposit Information URL,Comments
+All,,"https://www.mmu.ac.uk/study/course-search/search/?page=1&sta=course&stl=Undergraduate,Postgraduate&study_mode=full_time","https://www.mmu.ac.uk/study/course-search/search/?page=2&sta=course&stl=Undergraduate,Postgraduate&study_mode=full_time",,,,,,
+Foundation,,,,,,,,,
+Undergraduate,,,,,,,,,
+Postgraduate,,,,,,,,,
+Postgraduate Research,,,,,,,,,

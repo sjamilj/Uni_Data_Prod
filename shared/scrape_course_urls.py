@@ -42,6 +42,21 @@ URL matching (required):
   EXCLUDED_PATH_PREFIXES= optional path prefixes to skip
   COURSE_LINK_SELECTOR=   optional CSS selector limiting which <a> tags are scanned
 
+Browser (Playwright listing / course page download):
+  COURSE_DOWNLOAD_HEADLESS=false   show browser window (default true)
+  COURSE_DOWNLOAD_USER_DATA_DIR=   optional persistent profile dir (relative to code/)
+  COURSE_DOWNLOAD_BROWSER_CHANNEL= optional chrome or msedge
+  COURSE_DOWNLOAD_USE_DEVICE_PROFILE=true   sync cookies from installed Chrome/Edge
+  COURSE_DOWNLOAD_BROWSER=edge|chrome|brave|auto
+  COURSE_DOWNLOAD_PROFILE_NAME=Default
+  COURSE_DOWNLOAD_CDP_URL=           attach to your open Brave/Chrome (see ENV.MD); bypasses Playwright CF loop
+
+  COURSE_LISTING_FETCH=swiftype   bypass Cloudflare — HTTP Swiftype API (MMU course search)
+  SWIFTYPE_ENGINE_KEY=            from listing page __NUXT__.config.public.engineKey
+  SWIFTYPE_SEARCH_URL=            optional (default public search.json endpoint)
+  SWIFTYPE_SEARCH_QUERIES=        one query per line (award tokens); merged and deduped
+  SWIFTYPE_PER_PAGE=100
+
 Run from a university code/ folder (uses .env in cwd, or pass --code-dir):
 
   cd "{University}/code"
@@ -61,6 +76,9 @@ import random
 import re
 import sys
 import time
+import urllib.error
+import urllib.request
+from contextlib import nullcontext
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -75,6 +93,7 @@ if str(_SHARED_DIR) not in sys.path:
     sys.path.insert(0, str(_SHARED_DIR))
 
 from uni_paths import resolve_code_dir, resolve_output_dir
+from browser_device_profile import DEFAULT_PROFILE_NAME, launch_device_browser_context
 from course_type_filter import CourseTypeFilter
 from study_level import (
     EXECUTE_LEVEL_ORDER,
@@ -148,7 +167,44 @@ SEARCH_PATH_LABELS = {
     "/search/foundation-year": "foundation",
 }
 PAGINATION_EMPTY_LIMIT = 2
+LISTING_FETCH_BROWSER = "browser"
+LISTING_FETCH_SWIFTYPE = "swiftype"
+VALID_LISTING_FETCH = {LISTING_FETCH_BROWSER, LISTING_FETCH_SWIFTYPE}
+DEFAULT_SWIFTYPE_SEARCH_URL = (
+    "https://search-api.swiftype.com/api/v1/public/engines/search.json"
+)
+DEFAULT_SWIFTYPE_SEARCH_QUERIES = (
+    "bsc",
+    "ba",
+    "beng",
+    "llb",
+    "mbchb",
+    "moptom",
+    "mpharm",
+    "msc",
+    "ma",
+    "mba",
+    "llm",
+    "march",
+    "mres",
+    "pgdip",
+    "pgcert",
+    "phd",
+    "engd",
+    "psychd",
+    "foundation",
+    "fdsc",
+    "hnd",
+    "pgce",
+    "gdl",
+    "cert",
+    "certificate",
+    "msci",
+    "mlaw",
+    "apprentice",
+)
 LISTING_DOWNLOAD_RETRIES = 2
+COURSE_DOWNLOAD_RETRIES = 3
 DEFAULT_USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -210,6 +266,12 @@ class Utils:
     @staticmethod
     def is_empty(value: str | None) -> bool:
         return value is None or not str(value).strip()
+
+    @staticmethod
+    def env_bool(value: str | None, default: bool = True) -> bool:
+        if Utils.is_empty(value):
+            return default
+        return str(value).strip().lower() not in {"0", "false", "no", "off"}
 
     @staticmethod
     def sanitize_filename(name: str, max_len: int = 180) -> str:
@@ -783,6 +845,44 @@ class ScraperConfig:
     degree_listings: list[ListingConfig] = field(default_factory=list)
     single_catalogue: CatalogueSource | None = None
     level_classifier: StudyLevelClassifier = field(default_factory=StudyLevelClassifier)
+    browser_headless: bool = True
+    browser_user_data_dir: Path | None = None
+    browser_channel: str = ""
+    use_device_profile: bool = False
+    device_browser: str = "auto"
+    device_profile_name: str = DEFAULT_PROFILE_NAME
+    refresh_device_profile: bool = False
+    cloudflare_wait_seconds: int = 120
+    cloudflare_auto_click: bool = False
+    cloudflare_warmup: bool = False
+    cdp_url: str = ""
+    stealth_automation: bool = False
+    listing_fetch: str = LISTING_FETCH_BROWSER
+    swiftype_engine_key: str = ""
+    swiftype_search_url: str = DEFAULT_SWIFTYPE_SEARCH_URL
+    swiftype_search_queries: list[str] = field(default_factory=list)
+    swiftype_per_page: int = 100
+
+    def browser_session(self, code_dir: Path | None = None) -> "BrowserSession":
+        work_dir = code_dir
+        if work_dir is None:
+            work_dir = Path(self.env_path).parent
+        return BrowserSession(
+            headless=self.browser_headless,
+            user_data_dir=self.browser_user_data_dir,
+            channel=self.browser_channel,
+            code_dir=resolve_code_dir(work_dir),
+            use_device_profile=self.use_device_profile,
+            device_browser=self.device_browser,
+            device_profile_name=self.device_profile_name,
+            refresh_device_profile=self.refresh_device_profile,
+            cloudflare_wait_seconds=self.cloudflare_wait_seconds,
+            cloudflare_auto_click=self.cloudflare_auto_click,
+            cloudflare_warmup=self.cloudflare_warmup,
+            session_warmup_url=self.base_url,
+            cdp_url=self.cdp_url,
+            stealth_automation=self.stealth_automation,
+        )
 
     # Convenience passthroughs so extraction code can read config.path_patterns etc.
     @property
@@ -836,10 +936,86 @@ class ConfigLoader:
             matching=matching,
             level_classifier=StudyLevelClassifier.from_env_file(env, env_path),
         )
+        ConfigLoader._apply_browser_env(work_dir, env, config)
+        ConfigLoader._apply_listing_fetch_env(env, env_path, config)
 
         if strategy == STRATEGY_ALL_COURSE:
             return ConfigLoader._load_all_course(work_dir, env, env_path, config)
         return ConfigLoader._load_paginated(env, env_path, config)
+
+    @staticmethod
+    def _apply_browser_env(work_dir: Path, env: EnvFile, config: ScraperConfig) -> None:
+        config.browser_headless = Utils.env_bool(env.get("COURSE_DOWNLOAD_HEADLESS"), default=True)
+        config.browser_channel = env.get("COURSE_DOWNLOAD_BROWSER_CHANNEL", "").strip()
+        config.stealth_automation = Utils.env_bool(env.get("COURSE_DOWNLOAD_STEALTH_AUTOMATION"), default=False)
+        if Utils.env_bool(env.get("COURSE_DOWNLOAD_REFRESH_DEVICE_PROFILE"), default=False):
+            config.refresh_device_profile = True
+        wait_raw = env.get("COURSE_DOWNLOAD_CLOUDFLARE_WAIT_SECONDS", "120").strip()
+        try:
+            config.cloudflare_wait_seconds = max(0, int(wait_raw))
+        except ValueError as exc:
+            raise ValueError(
+                f"{env_path}: COURSE_DOWNLOAD_CLOUDFLARE_WAIT_SECONDS must be an integer (got {wait_raw!r})."
+            ) from exc
+        config.use_device_profile = Utils.env_bool(
+            env.get("COURSE_DOWNLOAD_USE_DEVICE_PROFILE"),
+            default=False,
+        )
+        config.cloudflare_auto_click = Utils.env_bool(
+            env.get("COURSE_DOWNLOAD_CLOUDFLARE_AUTO_CLICK"),
+            default=False,
+        )
+        warmup_raw = env.get("COURSE_DOWNLOAD_CLOUDFLARE_WARMUP", "").strip()
+        if warmup_raw:
+            config.cloudflare_warmup = Utils.env_bool(warmup_raw, default=False)
+        else:
+            config.cloudflare_warmup = config.use_device_profile
+        config.cdp_url = env.get("COURSE_DOWNLOAD_CDP_URL", "").strip()
+        config.device_browser = env.get("COURSE_DOWNLOAD_BROWSER", "auto").strip() or "auto"
+        profile_name = env.get("COURSE_DOWNLOAD_PROFILE_NAME", "").strip()
+        config.device_profile_name = profile_name or DEFAULT_PROFILE_NAME
+
+        if config.use_device_profile:
+            config.browser_headless = False
+            config.browser_user_data_dir = None
+            config.browser_channel = ""
+            return
+
+        profile = env.get("COURSE_DOWNLOAD_USER_DATA_DIR", "").strip()
+        if not profile:
+            return
+        profile_path = Path(profile)
+        if not profile_path.is_absolute():
+            profile_path = (work_dir / profile_path).resolve()
+        profile_path.mkdir(parents=True, exist_ok=True)
+        config.browser_user_data_dir = profile_path
+
+    @staticmethod
+    def _apply_listing_fetch_env(env: EnvFile, env_path: Path, config: ScraperConfig) -> None:
+        mode = env.get("COURSE_LISTING_FETCH", LISTING_FETCH_BROWSER).strip().lower()
+        if Utils.is_empty(mode):
+            mode = LISTING_FETCH_BROWSER
+        if mode not in VALID_LISTING_FETCH:
+            raise ValueError(
+                f"{env_path}: COURSE_LISTING_FETCH must be one of {sorted(VALID_LISTING_FETCH)!r} "
+                f"(got {mode!r})."
+            )
+        config.listing_fetch = mode
+        config.swiftype_engine_key = env.get("SWIFTYPE_ENGINE_KEY", "").strip()
+        search_url = env.get("SWIFTYPE_SEARCH_URL", "").strip()
+        config.swiftype_search_url = search_url or DEFAULT_SWIFTYPE_SEARCH_URL
+        if "SWIFTYPE_SEARCH_QUERIES" in env:
+            queries = [item.strip() for item in env.get_list("SWIFTYPE_SEARCH_QUERIES") if item.strip()]
+        else:
+            queries = list(DEFAULT_SWIFTYPE_SEARCH_QUERIES)
+        config.swiftype_search_queries = queries
+        per_page_raw = env.get("SWIFTYPE_PER_PAGE", "100").strip()
+        try:
+            config.swiftype_per_page = max(1, min(100, int(per_page_raw)))
+        except ValueError as exc:
+            raise ValueError(f"{env_path}: SWIFTYPE_PER_PAGE must be an integer (got {per_page_raw!r}).") from exc
+        if config.listing_fetch == LISTING_FETCH_SWIFTYPE and not config.swiftype_engine_key:
+            raise ValueError(f"{env_path}: SWIFTYPE_ENGINE_KEY is required when COURSE_LISTING_FETCH=swiftype.")
 
     @staticmethod
     def _load_all_course(work_dir: Path, env: EnvFile, env_path: Path, config: ScraperConfig) -> ScraperConfig:
@@ -1005,21 +1181,243 @@ class ArtifactStore:
 # ============================================================================
 
 class BrowserSession:
-    """Thin wrapper around a headless Chromium page, used as a context manager."""
+    """Playwright Chromium session (headless or headed), optional persistent profile."""
 
-    def __init__(self):
+    def __init__(
+        self,
+        *,
+        headless: bool = True,
+        user_data_dir: Path | None = None,
+        channel: str = "",
+        code_dir: Path | None = None,
+        use_device_profile: bool = False,
+        device_browser: str = "auto",
+        device_profile_name: str = DEFAULT_PROFILE_NAME,
+        refresh_device_profile: bool = False,
+        cloudflare_wait_seconds: int = 120,
+        cloudflare_auto_click: bool = False,
+        cloudflare_warmup: bool = False,
+        session_warmup_url: str = "",
+        cdp_url: str = "",
+        stealth_automation: bool = False,
+    ):
+        self.headless = headless
+        self.user_data_dir = user_data_dir
+        self.channel = channel
+        self.code_dir = code_dir
+        self.use_device_profile = use_device_profile
+        self.device_browser = device_browser
+        self.device_profile_name = device_profile_name
+        self.refresh_device_profile = refresh_device_profile
+        self.cloudflare_wait_seconds = cloudflare_wait_seconds
+        self.cloudflare_auto_click = cloudflare_auto_click
+        self.cloudflare_warmup = cloudflare_warmup
+        self.session_warmup_url = (session_warmup_url or "").strip()
+        self.cdp_url = (cdp_url or "").strip()
+        self.stealth_automation = stealth_automation
         self._playwright = None
         self._browser = None
+        self._context = None
         self.page = None
+        self._device_context = False
+        self._cdp_connected = False
+        self._captured_popups: list = []
+
+    def _attach_popup_handler(self) -> None:
+        if not self._context:
+            return
+
+        def on_page(page) -> None:
+            self._captured_popups.append(page)
+            print(
+                "    Captured browser popup — complete Cloudflare verification in the front window if shown",
+                flush=True,
+            )
+            try:
+                page.bring_to_front()
+            except Exception:
+                pass
+
+        self._context.on("page", on_page)
+
+    def _living_pages(self) -> list:
+        pages: list = []
+        seen: set[int] = set()
+        for candidate in [self.page, *getattr(self, "_captured_popups", []), *(self._context.pages if self._context else [])]:
+            if candidate is None:
+                continue
+            try:
+                if candidate.is_closed():
+                    continue
+            except Exception:
+                continue
+            key = id(candidate)
+            if key in seen:
+                continue
+            seen.add(key)
+            pages.append(candidate)
+        return pages
+
+    def _ensure_live_page(self) -> None:
+        pages = self._living_pages()
+        if pages:
+            self.page = pages[0]
+            try:
+                self.page.bring_to_front()
+            except Exception:
+                pass
+            return
+        if self._context:
+            self.page = self._context.new_page()
+            return
+        raise RuntimeError(
+            "Browser window was closed. Keep the Playwright Edge window open during download "
+            "(close normal Edge before starting, do not close the automated window)."
+        )
+
+    @staticmethod
+    def _try_cloudflare_widgets(page) -> None:
+        """Click Turnstile / challenge widgets in main page, iframes, or popups when possible."""
+        try:
+            page.get_by_text(re.compile(r"verify you are human", re.I)).first.click(timeout=1500)
+            return
+        except Exception:
+            pass
+        for frame in page.frames:
+            frame_url = (frame.url or "").lower()
+            if "challenges.cloudflare.com" not in frame_url and "turnstile" not in frame_url:
+                continue
+            for selector in (
+                "input[type=checkbox]",
+                ".ctp-checkbox-label",
+                "label.ctp-checkbox-label",
+                "#challenge-stage",
+                "button",
+            ):
+                try:
+                    target = frame.locator(selector).first
+                    if target.is_visible(timeout=400):
+                        target.click(timeout=3000)
+                        return
+                except Exception:
+                    continue
+        for selector in (
+            'iframe[src*="challenges.cloudflare.com"]',
+            'iframe[title*="Cloudflare"]',
+            'iframe[src*="turnstile"]',
+        ):
+            try:
+                frame = page.frame_locator(selector).first
+                frame.locator("input[type=checkbox], label, button").first.click(timeout=2000)
+                return
+            except Exception:
+                continue
+
+    def _connect_over_cdp(self) -> None:
+        self._cdp_connected = True
+        print(
+            f"    Connecting to your browser at {self.cdp_url} (not Playwright-launched — use this when CF loops)...",
+            flush=True,
+        )
+        self._browser = self._playwright.chromium.connect_over_cdp(self.cdp_url)
+        contexts = self._browser.contexts
+        if not contexts:
+            raise RuntimeError(
+                f"No browser tab at {self.cdp_url}. Start Brave with --remote-debugging-port=9222 and open a tab."
+            )
+        self._context = contexts[0]
+        self.page = self._context.pages[0] if self._context.pages else self._context.new_page()
+        self._attach_popup_handler()
+        print(
+            "    In THAT Brave window: open an MMU course page OR course-search listing URL; "
+            "wait until results load (not 'Verifying you are human'). Leave the window open.",
+            flush=True,
+        )
+        warned = False
+        deadline = time.time() + self.cloudflare_wait_seconds
+        while time.time() < deadline:
+            snapshot = self._read_page_snapshot(self.page)
+            if snapshot is None:
+                time.sleep(1)
+                continue
+            title, html = snapshot
+            current = ""
+            try:
+                current = self.page.url or ""
+            except Exception:
+                pass
+            if "mmu.ac.uk" in current and not self.is_cloudflare_challenge(title, html):
+                print("    MMU session ready — continuing in this browser.", flush=True)
+                return
+            if self.is_cloudflare_challenge(title, html):
+                if not warned:
+                    print(
+                        "    Complete Cloudflare in your Brave window (script will not reload)...",
+                        flush=True,
+                    )
+                    warned = True
+            time.sleep(2)
+        raise RuntimeError(
+            "Timed out waiting for a cleared MMU page in your connected Brave. "
+            "Open course-search or a course URL and pass Cloudflare, then re-run."
+        )
 
     def __enter__(self) -> "BrowserSession":
         self._playwright = sync_playwright().start()
-        self._browser = self._playwright.chromium.launch(headless=True)
-        context = self._browser.new_context(user_agent=DEFAULT_USER_AGENT)
-        self.page = context.new_page()
+        if self.cdp_url:
+            self._connect_over_cdp()
+            return self
+        if self.use_device_profile:
+            if not self.code_dir:
+                raise RuntimeError("Device profile requires code_dir for profile cache")
+            self._context, self.page = launch_device_browser_context(
+                self._playwright,
+                code_dir=self.code_dir,
+                browser_name=self.device_browser,
+                profile_name=self.device_profile_name,
+                headed=True,
+                refresh_profile=self.refresh_device_profile,
+                stealth_automation=self.stealth_automation,
+            )
+            self._device_context = True
+            self._attach_popup_handler()
+            if self.cloudflare_warmup and self.session_warmup_url:
+                self._warmup_cloudflare_session()
+            return self
+        if self.user_data_dir:
+            launch_kwargs: dict = {
+                "user_data_dir": str(self.user_data_dir),
+                "headless": self.headless,
+                "user_agent": DEFAULT_USER_AGENT,
+            }
+            if self.channel:
+                launch_kwargs["channel"] = self.channel
+            self._context = self._playwright.chromium.launch_persistent_context(**launch_kwargs)
+            self.page = self._context.pages[0] if self._context.pages else self._context.new_page()
+        else:
+            launch_kwargs = {"headless": self.headless}
+            if self.channel:
+                launch_kwargs["channel"] = self.channel
+            self._browser = self._playwright.chromium.launch(**launch_kwargs)
+            self._context = self._browser.new_context(user_agent=DEFAULT_USER_AGENT)
+            self.page = self._context.new_page()
+        self._attach_popup_handler()
         return self
 
     def __exit__(self, exc_type, exc, tb) -> None:
+        if self._cdp_connected:
+            try:
+                if self._browser:
+                    self._browser.close()
+            except Exception:
+                pass
+            self._browser = None
+            self._context = None
+            if self._playwright:
+                self._playwright.stop()
+            return
+        if self._context:
+            self._context.close()
         if self._browser:
             self._browser.close()
         if self._playwright:
@@ -1046,44 +1444,279 @@ class BrowserSession:
                 continue
 
     @staticmethod
-    def wait_for_listing(page) -> None:
-        selectors = [
-            'a[href*="/study-here/courses/"]',
-            ".course-card",
-            "a.sc-eJZSpO",
-        ]
+    def _path_key(url: str) -> tuple[str, str]:
+        parsed = urlparse(url)
+        path = (parsed.path or "").split("?", 1)[0].rstrip("/") or "/"
+        return parsed.netloc.lower(), path
+
+    @staticmethod
+    def urls_same_path(page_url: str, target_url: str) -> bool:
+        return BrowserSession._path_key(page_url) == BrowserSession._path_key(target_url)
+
+    def _navigation_settled_on(self, target_url: str) -> bool:
+        """True when a live tab is on the target URL or a CF interstitial on that site."""
+        target_host = urlparse(target_url).netloc.lower()
+        for pg in self._living_pages():
+            try:
+                current = pg.url or ""
+            except Exception:
+                continue
+            cur = urlparse(current)
+            if cur.netloc.lower() != target_host:
+                continue
+            if self.urls_same_path(current, target_url):
+                self.page = pg
+                try:
+                    pg.bring_to_front()
+                except Exception:
+                    pass
+                return True
+            try:
+                snapshot = self._read_page_snapshot(pg)
+                if snapshot and self.is_cloudflare_challenge(snapshot[0], snapshot[1][:25000]):
+                    self.page = pg
+                    try:
+                        pg.bring_to_front()
+                    except Exception:
+                        pass
+                    return True
+            except Exception:
+                continue
+        return False
+
+    def _warmup_cloudflare_session(self) -> None:
+        base = self.session_warmup_url
+        print(
+            f"    Cloudflare warmup: {base} — pass verification once for this run (no auto-reload)...",
+            flush=True,
+        )
+        try:
+            self.page.goto(base, wait_until="commit", timeout=120_000)
+        except PlaywrightTimeoutError:
+            print(
+                "    Warmup slow — complete Verify in the open window; script will not reload yet...",
+                flush=True,
+            )
+        try:
+            self.page.wait_for_load_state("domcontentloaded", timeout=120_000)
+        except PlaywrightTimeoutError:
+            pass
+        self._wait_out_cloudflare()
+
+    @staticmethod
+    def is_cloudflare_challenge(title: str, html: str) -> bool:
+        title_lower = (title or "").strip().lower()
+        if title_lower.startswith("just a moment") or title_lower.startswith("attention required"):
+            return True
+        sample = (html or "")[:20000].lower()
+        markers = (
+            "cf-challenge",
+            "challenge-platform",
+            "performing security verification",
+            "verify you are human",
+            "verifying you are human",
+            "cdn-cgi/challenge",
+            "turnstile",
+            "security service to protect against malicious bots",
+        )
+        return any(marker in sample for marker in markers)
+
+    @staticmethod
+    def _transient_page_read_error(exc: BaseException) -> bool:
+        msg = str(exc).lower()
+        return any(
+            phrase in msg
+            for phrase in (
+                "execution context was destroyed",
+                "navigation",
+                "navigating",
+                "frame was detached",
+                "target closed",
+                "cannot find context",
+            )
+        )
+
+    def _read_page_snapshot(self, page) -> tuple[str, str] | None:
+        """Return (title, html) or None if the page is mid-navigation / temporarily unreadable."""
+        try:
+            return (page.title() or "", page.content())
+        except Exception as exc:
+            if self._transient_page_read_error(exc) or "closed" in str(exc).lower():
+                return None
+            raise
+
+    def _wait_out_cloudflare(self) -> None:
+        if self.cloudflare_wait_seconds <= 0:
+            return
+        deadline = time.time() + self.cloudflare_wait_seconds
+        warned = False
+        while time.time() < deadline:
+            try:
+                self._ensure_live_page()
+            except Exception as exc:
+                if "closed" in str(exc).lower():
+                    time.sleep(2)
+                    continue
+                raise
+            snapshot = self._read_page_snapshot(self.page)
+            if snapshot is None:
+                time.sleep(1)
+                continue
+            title, html = snapshot
+            if not self.is_cloudflare_challenge(title, html):
+                return
+            if not warned and not self.headless:
+                print(
+                    "    Cloudflare challenge — tick Verify in the browser or popup "
+                    f"(up to {self.cloudflare_wait_seconds}s; do not close the window)...",
+                    flush=True,
+                )
+                warned = True
+            if self.cloudflare_auto_click:
+                for pg in self._living_pages():
+                    self._try_cloudflare_widgets(pg)
+            time.sleep(2)
+        for _ in range(30):
+            try:
+                self._ensure_live_page()
+            except Exception as exc:
+                raise RuntimeError(
+                    "Browser closed during Cloudflare wait — close normal Edge, refresh device profile, retry."
+                ) from exc
+            snapshot = self._read_page_snapshot(self.page)
+            if snapshot is None:
+                time.sleep(1)
+                continue
+            title, html = snapshot
+            break
+        else:
+            raise RuntimeError(
+                "Cloudflare wait ended but page is still navigating — keep the browser open and retry."
+            )
+        if self.is_cloudflare_challenge(title, html):
+            raise RuntimeError(
+                "Cloudflare challenge still active — pass verification in the Playwright Edge window, "
+                "then retry (optional: COURSE_DOWNLOAD_REFRESH_DEVICE_PROFILE=true once)."
+            )
+
+    @staticmethod
+    def wait_for_listing(page, extra_selectors: list[str] | None = None) -> None:
+        selectors: list[str] = []
+        if extra_selectors:
+            for raw in extra_selectors:
+                for part in raw.split(","):
+                    part = part.strip()
+                    if part:
+                        selectors.append(part)
+        selectors.extend(
+            [
+                'a[href*="/study/undergraduate/course/"]',
+                'a[href*="/study/postgraduate/course/"]',
+                'a[href*="/study/postgraduate-research/course/"]',
+                ".results-container a[href*='/study/']",
+                'a[href*="/study-here/courses/"]',
+                ".course-card",
+                "a.sc-eJZSpO",
+            ]
+        )
         for selector in selectors:
             try:
-                page.wait_for_selector(selector, timeout=20000)
-                page.wait_for_timeout(1000)
+                page.wait_for_selector(selector, timeout=25000)
+                page.wait_for_timeout(1500)
                 return
             except PlaywrightTimeoutError:
                 continue
+        try:
+            page.get_by_text(re.compile(r"Displaying\s+\d+\s*-\s*\d+\s+of\s+\d+\s+results", re.I)).first.wait_for(
+                timeout=25000
+            )
+            page.wait_for_timeout(1500)
+        except PlaywrightTimeoutError:
+            page.wait_for_timeout(3000)
 
-    def download_html(self, url: str, *, wait_for_results: bool = False) -> tuple[str, str]:
+    def _finalize_page_download(
+        self,
+        url: str,
+        *,
+        wait_for_results: bool,
+        wait_selectors: list[str] | None,
+    ) -> tuple[str, str]:
+        self.dismiss_cookies(self.page)
+        try:
+            self.page.wait_for_load_state("networkidle", timeout=15000)
+        except PlaywrightTimeoutError:
+            self.page.wait_for_load_state("load", timeout=15000)
+        if wait_for_results:
+            self.wait_for_listing(self.page, extra_selectors=wait_selectors)
+        else:
+            self.page.wait_for_timeout(800)
+            try:
+                self.page.wait_for_selector("#main-content", timeout=20000)
+            except PlaywrightTimeoutError:
+                pass
+        self._wait_out_cloudflare()
+        html = self.page.content()
+        if not html or len(html) < 200:
+            raise RuntimeError("Empty or tiny HTML response")
+        title = self.page.title() or "catalogue"
+        if self.is_cloudflare_challenge(title, html):
+            raise RuntimeError("Cloudflare challenge page (not course HTML)")
+        return title, html
+
+    def download_html(
+        self,
+        url: str,
+        *,
+        wait_for_results: bool = False,
+        wait_selectors: list[str] | None = None,
+    ) -> tuple[str, str]:
         """Navigate to url and return (page_title, html). Retries transient failures."""
         assert self.page is not None
         last_error: Exception | None = None
-        for attempt in range(1, LISTING_DOWNLOAD_RETRIES + 1):
+        max_attempts = COURSE_DOWNLOAD_RETRIES if not wait_for_results else LISTING_DOWNLOAD_RETRIES
+        for attempt in range(1, max_attempts + 1):
             try:
-                self.page.goto(url, wait_until="domcontentloaded", timeout=60000)
-                self.dismiss_cookies(self.page)
-                try:
-                    self.page.wait_for_load_state("networkidle", timeout=15000)
-                except PlaywrightTimeoutError:
-                    self.page.wait_for_load_state("load", timeout=15000)
-                if wait_for_results:
-                    self.wait_for_listing(self.page)
-                else:
-                    self.page.wait_for_timeout(800)
-                html = self.page.content()
-                if not html or len(html) < 200:
-                    raise RuntimeError("Empty or tiny HTML response")
-                title = self.page.title() or "catalogue"
-                return title, html
+                self._ensure_live_page()
+                if attempt == 1 or not self._navigation_settled_on(url):
+                    try:
+                        self.page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                    except PlaywrightTimeoutError as nav_exc:
+                        if self._navigation_settled_on(url):
+                            print(
+                                "    Navigation timed out on Cloudflare — waiting for you to verify "
+                                "(not reloading)...",
+                                flush=True,
+                            )
+                        else:
+                            raise nav_exc
+                return self._finalize_page_download(
+                    url,
+                    wait_for_results=wait_for_results,
+                    wait_selectors=wait_selectors,
+                )
             except Exception as exc:
                 last_error = exc
-                print(f"    Retry {attempt}/{LISTING_DOWNLOAD_RETRIES}: {exc}")
+                if self._navigation_settled_on(url) and attempt < max_attempts:
+                    print(
+                        f"    Retry {attempt}/{max_attempts}: still on page — waiting for Cloudflare, "
+                        "not reloading...",
+                        flush=True,
+                    )
+                    try:
+                        self._wait_out_cloudflare()
+                        return self._finalize_page_download(
+                            url,
+                            wait_for_results=wait_for_results,
+                            wait_selectors=wait_selectors,
+                        )
+                    except Exception as retry_exc:
+                        last_error = retry_exc
+                else:
+                    print(f"    Retry {attempt}/{max_attempts}: {exc}")
+                try:
+                    self._ensure_live_page()
+                except Exception:
+                    pass
                 time.sleep(min(2 * attempt, 8))
         raise RuntimeError(f"Failed to download {url}: {last_error}")
 
@@ -1241,7 +1874,7 @@ class CatalogueUrlExtractor:
         letter_browser = browser
         close_browser = False
         if letter_browser is None:
-            letter_browser = BrowserSession().__enter__()
+            letter_browser = self.config.browser_session(self.code_dir).__enter__()
             close_browser = True
         try:
             for index, letter_url in enumerate(pending_letters, start=1):
@@ -1261,6 +1894,140 @@ class CatalogueUrlExtractor:
         finally:
             if close_browser:
                 letter_browser.__exit__(None, None, None)
+
+
+# ============================================================================
+# Swiftype HTTP listing (MMU course search — no Cloudflare)
+# ============================================================================
+
+@dataclass(frozen=True)
+class ListingUrlFilters:
+    """Query params from a course-search listing URL (sta / stl / study_mode)."""
+
+    document_type: str = ""
+    levels: frozenset[str] = frozenset()
+    study_modes: frozenset[str] = frozenset()
+
+    @staticmethod
+    def from_listing_url(url: str) -> "ListingUrlFilters":
+        params = parse_qs(urlparse(url).query, keep_blank_values=True)
+        sta = (params.get("sta") or params.get("stt") or [""])[0].strip().lower()
+        stl_raw = (params.get("stl") or [""])[0]
+        levels = frozenset(part.strip() for part in stl_raw.split(",") if part.strip())
+        mode_raw = (params.get("study_mode") or [""])[0]
+        study_modes = frozenset(part.strip() for part in mode_raw.split(",") if part.strip())
+        return ListingUrlFilters(document_type=sta, levels=levels, study_modes=study_modes)
+
+    @staticmethod
+    def _normalize_study_mode(value: str) -> str:
+        return value.strip().lower().replace("-", "_")
+
+    @staticmethod
+    def _record_study_modes(record: dict) -> set[str]:
+        raw_mode = record.get("study_mode")
+        if isinstance(raw_mode, list):
+            return {ListingUrlFilters._normalize_study_mode(str(item)) for item in raw_mode if str(item).strip()}
+        if raw_mode is None or raw_mode == "":
+            return set()
+        return {ListingUrlFilters._normalize_study_mode(str(raw_mode))}
+
+    @staticmethod
+    def _mode_matches_filter(requested: str, mode: str) -> bool:
+        req = ListingUrlFilters._normalize_study_mode(requested)
+        if req == mode:
+            return True
+        if req == "full_time":
+            return mode == "full_time" or mode.startswith("full_time")
+        if req == "part_time":
+            return mode == "part_time" or mode.startswith("part_time")
+        return False
+
+    def matches_record(self, record: dict) -> bool:
+        if self.document_type and str(record.get("type") or "").lower() != self.document_type:
+            return False
+        if self.levels:
+            level = str(record.get("level") or "").strip()
+            if level not in self.levels:
+                return False
+        if self.study_modes:
+            modes = self._record_study_modes(record)
+            if not modes:
+                return False
+            if not any(
+                self._mode_matches_filter(requested, mode)
+                for requested in self.study_modes
+                for mode in modes
+            ):
+                return False
+        return True
+
+
+class SwiftypeListingClient:
+    """Paginates the public Swiftype search API and collects course document URLs."""
+
+    def __init__(
+        self,
+        *,
+        engine_key: str,
+        search_url: str,
+        queries: list[str],
+        per_page: int,
+    ):
+        self.engine_key = engine_key
+        self.search_url = search_url
+        self.queries = queries
+        self.per_page = per_page
+
+    def _fetch_page(self, query: str, page: int) -> dict:
+        params = {
+            "engine_key": self.engine_key,
+            "q": query,
+            "page": page,
+            "per_page": self.per_page,
+        }
+        url = f"{self.search_url}?{urlencode(params)}"
+        request = urllib.request.Request(url, headers={"User-Agent": DEFAULT_USER_AGENT})
+        try:
+            with urllib.request.urlopen(request, timeout=60) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            raise RuntimeError(f"Swiftype HTTP {exc.code} for query {query!r} page {page}") from exc
+        except urllib.error.URLError as exc:
+            raise RuntimeError(f"Swiftype request failed for query {query!r} page {page}: {exc}") from exc
+
+    def collect_urls(
+        self,
+        *,
+        listing_url: str,
+        matcher: CourseUrlMatcher,
+        listing_filters: ListingUrlFilters | None = None,
+    ) -> set[str]:
+        filters = listing_filters or ListingUrlFilters.from_listing_url(listing_url)
+        urls: set[str] = set()
+        for query in self.queries:
+            page = 1
+            query_urls: set[str] = set()
+            while True:
+                payload = self._fetch_page(query, page)
+                info = payload.get("info", {}).get("page", {})
+                records = payload.get("records", {}).get("page") or []
+                for record in records:
+                    if not filters.matches_record(record):
+                        continue
+                    raw = (record.get("canonical") or record.get("url") or "").strip()
+                    if not raw:
+                        continue
+                    normalized = UrlNormalizer.normalize(raw, matcher.rules.base_url)
+                    if matcher.is_valid(normalized):
+                        urls.add(normalized)
+                        query_urls.add(normalized)
+                num_pages = int(info.get("num_pages") or 0)
+                if not records or page >= num_pages:
+                    break
+                page += 1
+                time.sleep(0.05)
+            print(f"    Swiftype q={query!r}: +{len(query_urls)} (total {len(urls)})", flush=True)
+        return urls
 
 
 # ============================================================================
@@ -1368,6 +2135,39 @@ class PaginatedListingExtractor:
 
         print(f"  [{scope}] Search listing: {label} ({base_listing_url.split('?')[0]})")
 
+        if self.config.listing_fetch == LISTING_FETCH_SWIFTYPE:
+            client = SwiftypeListingClient(
+                engine_key=self.config.swiftype_engine_key,
+                search_url=self.config.swiftype_search_url,
+                queries=self.config.swiftype_search_queries,
+                per_page=self.config.swiftype_per_page,
+            )
+            print(
+                f"  [{scope}] Swiftype API ({len(self.config.swiftype_search_queries)} queries, "
+                f"filters from listing URL)"
+            )
+            try:
+                page_urls = client.collect_urls(listing_url=base_listing_url, matcher=matcher)
+            except RuntimeError as exc:
+                print(f"    [{scope}] Swiftype failed: {exc}")
+                self.logger.error(f"[{scope}] Swiftype listing failed: {exc}")
+                return page_counter
+            if page_urls:
+                all_urls.update(page_urls)
+                url_levels.tag_urls(
+                    page_urls,
+                    scope=scope,
+                    classifier=self.config.level_classifier,
+                    source_scope=scope,
+                )
+            print(f"    [{scope}] Swiftype: {len(page_urls)} course URLs")
+            self.logger.ok(f"[{scope}] Swiftype urls={len(page_urls)}")
+            normalized_seed = UrlNormalizer.normalize(base_listing_url, keep_query=True)
+            completed.add(normalized_seed)
+            state["empty_streak"] = 0
+            self.progress_store.save(self.progress)
+            return page_counter
+
         while (
             empty_streak < PAGINATION_EMPTY_LIMIT
             and same_page_streak < PAGINATION_EMPTY_LIMIT
@@ -1385,7 +2185,14 @@ class PaginatedListingExtractor:
             page_counter += 1
             print(f"  [{scope}] Downloading listing page {page_counter}: {listing_url}")
             try:
-                _title, html = self.browser.download_html(listing_url, wait_for_results=True)
+                wait_selectors = (
+                    [self.config.link_selector] if self.config.link_selector else None
+                )
+                _title, html = self.browser.download_html(
+                    listing_url,
+                    wait_for_results=True,
+                    wait_selectors=wait_selectors,
+                )
             except RuntimeError as exc:
                 empty_streak += 1
                 print(f"    [{scope}] No HTML ({empty_streak}/{PAGINATION_EMPTY_LIMIT}): {exc}")
@@ -1776,6 +2583,23 @@ class CourseUrlScraper:
         print(f"COURSE_PATH_PATTERNS={len(self.config.path_pattern_sources)} rule(s)")
         if self.config.link_selector:
             print(f"COURSE_LINK_SELECTOR={self.config.link_selector}")
+        if not self.config.browser_headless:
+            print("COURSE_DOWNLOAD_HEADLESS=false (headed browser)")
+        if self.config.use_device_profile:
+            print(
+                f"COURSE_DOWNLOAD_USE_DEVICE_PROFILE=true "
+                f"(browser={self.config.device_browser}, profile={self.config.device_profile_name})"
+            )
+        if self.config.browser_channel:
+            print(f"COURSE_DOWNLOAD_BROWSER_CHANNEL={self.config.browser_channel}")
+        if self.config.browser_user_data_dir:
+            print(f"COURSE_DOWNLOAD_USER_DATA_DIR={self.config.browser_user_data_dir}")
+        if self.config.listing_fetch == LISTING_FETCH_SWIFTYPE:
+            print(
+                f"COURSE_LISTING_FETCH=swiftype "
+                f"(engine_key={self.config.swiftype_engine_key[:8]}…, "
+                f"{len(self.config.swiftype_search_queries)} queries)"
+            )
 
         if strategy == STRATEGY_ALL_COURSE:
             self._run_all_course(all_urls, completed, url_levels)
@@ -1833,7 +2657,7 @@ class CourseUrlScraper:
         needs_browser = any(not source.catalogue_html for source in sources)
         browser: BrowserSession | None = None
         if needs_browser:
-            browser = BrowserSession().__enter__()
+            browser = self.config.browser_session(self.code_dir).__enter__()
         try:
             for source in sources:
                 if source.scope:
@@ -1932,7 +2756,12 @@ class CourseUrlScraper:
                 f"({listing_config.search_path})"
             )
 
-        with BrowserSession() as browser:
+        browser_cm = (
+            nullcontext(None)
+            if self.config.listing_fetch == LISTING_FETCH_SWIFTYPE
+            else self.config.browser_session(self.code_dir)
+        )
+        with browser_cm as browser:
             extractor = PaginatedListingExtractor(
                 self.code_dir,
                 self.config,
@@ -1970,10 +2799,11 @@ class CourseUrlScraper:
 class CoursePageDownloader:
     """Downloads individual course pages listed in course_urls.csv."""
 
-    def __init__(self, code_dir: Path, *, strategy: str):
+    def __init__(self, code_dir: Path, *, strategy: str, scraper_config: ScraperConfig | None = None):
         self.code_dir = code_dir.resolve()
         self.output_dir = resolve_output_dir(self.code_dir)
         self.strategy = strategy
+        self.config = scraper_config or ConfigLoader.load(self.code_dir)
         self.progress_store = ProgressStore(self.output_dir)
         self.artifacts = ArtifactStore(self.output_dir)
         self.logger = ScrapeLogger(self.output_dir)
@@ -2031,7 +2861,7 @@ class CoursePageDownloader:
         stats = {"total": len(urls), "downloaded": 0, "failed": 0, "skipped": 0, "excluded": 0}
         course_filter = CourseTypeFilter.from_code_dir(self.code_dir)
 
-        with BrowserSession() as browser:
+        with self.config.browser_session(self.code_dir) as browser:
             for index, url in enumerate(urls, start=1):
                 if url in downloaded:
                     stats["skipped"] += 1
@@ -2039,6 +2869,8 @@ class CoursePageDownloader:
                 print(f"  [{index}/{len(urls)}] {url}")
                 try:
                     title, html = browser.download_html(url)
+                    if BrowserSession.is_cloudflare_challenge(title, html):
+                        raise RuntimeError("Cloudflare challenge page saved as course HTML")
                     if course_filter.should_exclude_html(html, url=url):
                         stats["excluded"] += 1
                         downloaded.add(url)
@@ -2140,9 +2972,11 @@ def download_course_pages(
     limit: int | None = None,
     urls: list[str] | None = None,
 ) -> dict[str, int]:
+    scraper_config = ConfigLoader.load(work_dir)
     return CoursePageDownloader(
         work_dir,
-        strategy=config.get("strategy", ""),
+        strategy=scraper_config.strategy,
+        scraper_config=scraper_config,
     ).run(fresh=fresh, limit=limit, urls=urls)
 
 
@@ -2159,6 +2993,16 @@ class ScraperCLI:
             description="Extract course URLs — config from .env (STRATEGY / COURSE_CATALOGUE_*)."
         )
         parser.add_argument("--fresh", action="store_true", help="Ignore saved progress and start clean")
+        parser.add_argument(
+            "--headed",
+            action="store_true",
+            help="Show browser window (overrides COURSE_DOWNLOAD_HEADLESS for this run)",
+        )
+        parser.add_argument(
+            "--refresh-device-profile",
+            action="store_true",
+            help="Re-copy cookies from Chrome/Edge when COURSE_DOWNLOAD_USE_DEVICE_PROFILE=true",
+        )
         parser.add_argument(
             "--append-urls",
             action="store_true",
@@ -2245,6 +3089,10 @@ class ScraperCLI:
         code_dir = resolve_work_dir(work_dir if work_dir is not None else args.code_dir)
         try:
             config = ConfigLoader.load(code_dir)
+            if args.headed:
+                config.browser_headless = False
+            if args.refresh_device_profile:
+                config.refresh_device_profile = True
             study_levels = parse_study_levels(args.study_level) if args.study_level else []
             if args.pick_levels:
                 study_levels = ScraperCLI.prompt_study_levels(ScraperCLI.available_scopes(config))

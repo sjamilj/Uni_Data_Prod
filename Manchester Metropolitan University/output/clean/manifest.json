@@ -1,0 +1,2489 @@
+{
+  "university": "Manchester Metropolitan University",
+  "cleaned_at": "2026-09-14",
+  "courses": [
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/bar-training-course",
+      "source_html": "course_pages/Bar Training Course \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-bar-training-course.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/bar-training-course",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/bsc-psychology",
+      "source_html": "course_pages/BSc (Hons) Psychology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-bsc-psychology.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/bsc-psychology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/global-public-health",
+      "source_html": "course_pages/MPH Global Public Health \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-global-public-health.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/global-public-health",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/graduate-diploma-in-law-common-professional-examination",
+      "source_html": "course_pages/Graduate Diploma in Law (Common Professional Examination) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-graduate-diploma-in-law-common-professional-examination.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/graduate-diploma-in-law-common-professional-examination",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/llm-in-legal-practice-at-the-bar",
+      "source_html": "course_pages/LLM in Legal Practice at the Bar \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-llm-in-legal-practice-at-the-bar.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/llm-in-legal-practice-at-the-bar",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/llm-international-corporate-law",
+      "source_html": "course_pages/LLM International Corporate Law \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-llm-international-corporate-law.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/llm-international-corporate-law",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/llm-international-human-rights-and-inequalities",
+      "source_html": "course_pages/LLM International Human Rights and Inequalities \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-llm-international-human-rights-and-inequalities.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/llm-international-human-rights-and-inequalities",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/llm-legal-practice",
+      "source_html": "course_pages/LLM Legal Practice \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-llm-legal-practice.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/llm-legal-practice",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/llm-llm-international-sports-law-and-governance",
+      "source_html": "course_pages/LLM International Sports Law and Governance \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-llm-llm-international-sports-law-and-governance.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/llm-llm-international-sports-law-and-governance",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/llm-master-of-laws",
+      "source_html": "course_pages/LLM (Master of Laws) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-llm-master-of-laws.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/llm-master-of-laws",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-animation",
+      "source_html": "course_pages/MA Animation \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-animation.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-animation",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-applied-criminology",
+      "source_html": "course_pages/MA Applied Criminology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-applied-criminology.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-applied-criminology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-applied-linguistics",
+      "source_html": "course_pages/MA Applied Linguistics \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-applied-linguistics.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-applied-linguistics",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-architecture-and-adaptive-reuse",
+      "source_html": "course_pages/MA Architecture and Adaptive Reuse \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-architecture-and-adaptive-reuse.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-architecture-and-adaptive-reuse",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-architecture-and-urbanism",
+      "source_html": "course_pages/MA Architecture and Urbanism \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-architecture-and-urbanism.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-architecture-and-urbanism",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-contemporary-curating",
+      "source_html": "course_pages/MA Contemporary Curating \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-contemporary-curating.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-contemporary-curating",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-craft",
+      "source_html": "course_pages/MA Craft \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-craft.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-craft",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-creative-writing",
+      "source_html": "course_pages/MA Creative Writing \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-creative-writing.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-creative-writing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-education",
+      "source_html": "course_pages/MA Education \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-education.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-educational-leadership",
+      "source_html": "course_pages/MA Educational Leadership \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-educational-leadership.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-educational-leadership",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-english-studies",
+      "source_html": "course_pages/MA English Studies \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-english-studies.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-english-studies",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-fashion-design-technology",
+      "source_html": "course_pages/MA Fashion Design Technology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-fashion-design-technology.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-fashion-design-technology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-filmmaking",
+      "source_html": "course_pages/MA Filmmaking \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-filmmaking.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-filmmaking",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-fine-art",
+      "source_html": "course_pages/MA Fine Art \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-fine-art.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-fine-art",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-games-art",
+      "source_html": "course_pages/MA Games Art \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-games-art.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-games-art",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-graphic-design",
+      "source_html": "course_pages/MA Graphic Design \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-graphic-design.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-graphic-design",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-history",
+      "source_html": "course_pages/MA History \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-history.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-history",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-illustration",
+      "source_html": "course_pages/MA Illustration \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-illustration.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-illustration",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-inclusive-education",
+      "source_html": "course_pages/MA Inclusive Education \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-inclusive-education.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-inclusive-education",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-interiors",
+      "source_html": "course_pages/MA Interiors \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-interiors.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-interiors",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-international-relations-and-global-communications",
+      "source_html": "course_pages/MA International Relations and Global Communications \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-international-relations-and-global-communications.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-international-relations-and-global-communications",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-mfa-performance",
+      "source_html": "course_pages/MA_MFA Performance \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-mfa-performance.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-mfa-performance",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-multimedia-journalism",
+      "source_html": "course_pages/MA Multimedia Journalism \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-multimedia-journalism.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-multimedia-journalism",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-photography",
+      "source_html": "course_pages/MA Photography \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-photography.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-photography",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-public-history-and-heritage",
+      "source_html": "course_pages/MA Public History and Heritage \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-public-history-and-heritage.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-public-history-and-heritage",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-publishing",
+      "source_html": "course_pages/MA Publishing \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-publishing.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-publishing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-social-research",
+      "source_html": "course_pages/MA Social Research \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-social-research.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-social-research",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-social-work",
+      "source_html": "course_pages/MA Social Work \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-social-work.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-social-work",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-sound-design",
+      "source_html": "course_pages/MA Sound Design \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-sound-design.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-sound-design",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-teaching-english-to-speakers-of-other-languages-tesol-2",
+      "source_html": "course_pages/MA Teaching English to Speakers of Other Languages (TESOL) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-teaching-english-to-speakers-of-other-languages-tesol-2.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-teaching-english-to-speakers-of-other-languages-tesol-2",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-textiles",
+      "source_html": "course_pages/MA Textiles \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-textiles.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-textiles",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-user-experience-design",
+      "source_html": "course_pages/MA User Experience Design \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-ma-user-experience-design.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/ma-user-experience-design",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/march-master-of-architecture",
+      "source_html": "course_pages/MArch Master of Architecture \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-march-master-of-architecture.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/march-master-of-architecture",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/master-of-public-administration",
+      "source_html": "course_pages/Master of Public Administration \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-master-of-public-administration.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/master-of-public-administration",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/mba-master-of-business-administration",
+      "source_html": "course_pages/MBA Master of Business Administration \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-mba-master-of-business-administration.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/mba-master-of-business-administration",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/mfa-creative-writing",
+      "source_html": "course_pages/MFA Creative Writing \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-mfa-creative-writing.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/mfa-creative-writing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/mla-master-of-landscape-architecture",
+      "source_html": "course_pages/MLA Master of Landscape Architecture \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-mla-master-of-landscape-architecture.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/mla-master-of-landscape-architecture",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-accounting-and-finance",
+      "source_html": "course_pages/MSc Accounting and Finance \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-accounting-and-finance.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-accounting-and-finance",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-adult-nursing-pre-registration",
+      "source_html": "course_pages/MSc Adult Nursing (Pre-registration) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-adult-nursing-pre-registration.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-adult-nursing-pre-registration",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-advanced-materials",
+      "source_html": "course_pages/MSc Advanced Materials \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-advanced-materials.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-advanced-materials",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-advanced-physiotherapy",
+      "source_html": "course_pages/MSc Advanced Physiotherapy \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-advanced-physiotherapy.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-advanced-physiotherapy",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-ai-for-digital-business",
+      "source_html": "course_pages/MSc AI for Digital Business \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-ai-for-digital-business.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-ai-for-digital-business",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-animal-behaviour-and-evolution",
+      "source_html": "course_pages/MSc Animal Behaviour and Evolution \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-animal-behaviour-and-evolution.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-animal-behaviour-and-evolution",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-artificial-intelligence",
+      "source_html": "course_pages/MSc Artificial Intelligence \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-artificial-intelligence.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-artificial-intelligence",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-biomedical-science",
+      "source_html": "course_pages/MSc Biomedical Science \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-biomedical-science.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-biomedical-science",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-biotechnology",
+      "source_html": "course_pages/MSc Biotechnology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-biotechnology.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-biotechnology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-business-analytics",
+      "source_html": "course_pages/MSc Business Analytics \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-business-analytics.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-business-analytics",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-cellular-pathology-1",
+      "source_html": "course_pages/MSc Cellular Pathology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-cellular-pathology-1.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-cellular-pathology-1",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-child-and-adolescent-mental-health",
+      "source_html": "course_pages/MSc Child and Adolescent Mental Health \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-child-and-adolescent-mental-health.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-child-and-adolescent-mental-health",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-clinical-exercise-physiology",
+      "source_html": "course_pages/MSc Clinical Exercise Physiology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-clinical-exercise-physiology.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-clinical-exercise-physiology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-computer-games-development",
+      "source_html": "course_pages/MSc Computer Games Development \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-computer-games-development.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-computer-games-development",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-computer-science",
+      "source_html": "course_pages/MSc Computer Science \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-computer-science.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-computer-science",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-construction-project-management",
+      "source_html": "course_pages/MSc Construction Project Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-construction-project-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-construction-project-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-cyber-security",
+      "source_html": "course_pages/MSc Cyber Security \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-cyber-security.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-cyber-security",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-data-science",
+      "source_html": "course_pages/MSc Data Science \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-data-science.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-data-science",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-digital-design-and-manufacturing",
+      "source_html": "course_pages/MSc Digital Design and Manufacturing \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-digital-design-and-manufacturing.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-digital-design-and-manufacturing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-digital-marketing-communications",
+      "source_html": "course_pages/MSc Digital Marketing Communications \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-digital-marketing-communications.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-digital-marketing-communications",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-engineering-business-management",
+      "source_html": "course_pages/MSc Engineering Business Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-engineering-business-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-engineering-business-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-engineering-project-management",
+      "source_html": "course_pages/MSc Engineering Project Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-engineering-project-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-engineering-project-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-environmental-management",
+      "source_html": "course_pages/MSc Environmental Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-environmental-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-environmental-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-environmental-sustainability",
+      "source_html": "course_pages/MSc Environmental Sustainability \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-environmental-sustainability.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-environmental-sustainability",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-evaluation-and-policy-analysis",
+      "source_html": "course_pages/MSc_PgDip_PgCert Evaluation and Policy Analysis \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-evaluation-and-policy-analysis.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-evaluation-and-policy-analysis",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-fashion-buying-and-merchandising-management",
+      "source_html": "course_pages/MSc Fashion Buying and Merchandising Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-fashion-buying-and-merchandising-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-fashion-buying-and-merchandising-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-finance",
+      "source_html": "course_pages/MSc Finance \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-finance.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-finance",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-financial-technology-fintech",
+      "source_html": "course_pages/MSc Financial Technology (FinTech) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-financial-technology-fintech.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-financial-technology-fintech",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-food-science-and-innovation",
+      "source_html": "course_pages/MSc Food Science and Innovation \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-food-science-and-innovation.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-food-science-and-innovation",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-forensic-psychology-bps-accredited",
+      "source_html": "course_pages/MSc Forensic Psychology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-forensic-psychology-bps-accredited.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-forensic-psychology-bps-accredited",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-global-conservation-biology",
+      "source_html": "course_pages/MSc Global Conservation Biology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-global-conservation-biology.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-global-conservation-biology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-haematology-and-transfusion-science-1",
+      "source_html": "course_pages/MSc Haematology and Transfusion Science \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-haematology-and-transfusion-science-1.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-haematology-and-transfusion-science-1",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-health-psychology",
+      "source_html": "course_pages/MSc Health Psychology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-health-psychology.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-health-psychology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-human-nutrition",
+      "source_html": "course_pages/MSc Human Nutrition \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-human-nutrition.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-human-nutrition",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-human-physiology",
+      "source_html": "course_pages/MSc Human Physiology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-human-physiology.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-human-physiology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-human-resource-management",
+      "source_html": "course_pages/MSc Human Resource Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-human-resource-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-human-resource-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-international-business-management",
+      "source_html": "course_pages/MSc International Business Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-international-business-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-international-business-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-international-events-management",
+      "source_html": "course_pages/MSc International Events Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-international-events-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-international-events-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-international-fashion-business-management",
+      "source_html": "course_pages/MSc International Fashion Business Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-international-fashion-business-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-international-fashion-business-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-international-fashion-marketing",
+      "source_html": "course_pages/MSc International Fashion Marketing \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-international-fashion-marketing.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-international-fashion-marketing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-international-marketing-management",
+      "source_html": "course_pages/MSc International Marketing Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-international-marketing-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-international-marketing-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-international-tourism-and-hospitality-management",
+      "source_html": "course_pages/MSc International Tourism and Hospitality Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-international-tourism-and-hospitality-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-international-tourism-and-hospitality-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-luxury-fashion-management",
+      "source_html": "course_pages/MSc Luxury Fashion Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-luxury-fashion-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-luxury-fashion-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-management",
+      "source_html": "course_pages/MSc Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-management-and-sustainability",
+      "source_html": "course_pages/MSc Management and Sustainability \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-management-and-sustainability.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-management-and-sustainability",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-manchester-city-sport-coaching-and-performance",
+      "source_html": "course_pages/MSc Manchester City Sport Coaching and Performance \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-manchester-city-sport-coaching-and-performance.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-manchester-city-sport-coaching-and-performance",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-marketing",
+      "source_html": "course_pages/MSc Marketing \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-marketing.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-marketing",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-medical-microbiology-1",
+      "source_html": "course_pages/MSc Medical Microbiology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-medical-microbiology-1.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-medical-microbiology-1",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-mental-health-and-wellbeing-in-practice",
+      "source_html": "course_pages/MSc Mental Health and Wellbeing in Practice \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-mental-health-and-wellbeing-in-practice.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-mental-health-and-wellbeing-in-practice",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-mental-health-nursing-pre-registration",
+      "source_html": "course_pages/MSc Mental Health Nursing (Pre-registration) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-mental-health-nursing-pre-registration.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-mental-health-nursing-pre-registration",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-neuroscience",
+      "source_html": "course_pages/MSc Neuroscience \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-neuroscience.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-neuroscience",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-occupational-safety-health-and-environment",
+      "source_html": "course_pages/MSc Occupational Safety, Health and Environment \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-occupational-safety-health-and-environment.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-occupational-safety-health-and-environment",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-operations-and-supply-chain-management",
+      "source_html": "course_pages/MSc Operations and Supply Chain Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-operations-and-supply-chain-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-operations-and-supply-chain-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-physiotherapy-pre-registration",
+      "source_html": "course_pages/MSc Physiotherapy (Pre-registration) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-physiotherapy-pre-registration.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-physiotherapy-pre-registration",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-pre-registration-dietetics",
+      "source_html": "course_pages/MSc Dietetics (Pre-registration) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-pre-registration-dietetics.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-pre-registration-dietetics",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-pre-registration-occupational-therapy",
+      "source_html": "course_pages/MSc Occupational Therapy (Pre-registration) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-pre-registration-occupational-therapy.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-pre-registration-occupational-therapy",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-project-management",
+      "source_html": "course_pages/MSc Project Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-project-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-project-management",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-psychology-conversion",
+      "source_html": "course_pages/MSc Psychology (Conversion) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-psychology-conversion.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-psychology-conversion",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-psychology-of-human-performance",
+      "source_html": "course_pages/MSc Psychology of Human Performance \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-psychology-of-human-performance.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-psychology-of-human-performance",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-robotics-and-automation",
+      "source_html": "course_pages/MSc Robotics and Automation \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-robotics-and-automation.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-robotics-and-automation",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-speech-and-language-therapy-pre-registration",
+      "source_html": "course_pages/MSc Speech and Language Therapy (Pre-registration) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-speech-and-language-therapy-pre-registration.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-speech-and-language-therapy-pre-registration",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-sport-and-exercise-medicine",
+      "source_html": "course_pages/MSc Sport and Exercise Medicine \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-sport-and-exercise-medicine.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-sport-and-exercise-medicine",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-sport-and-exercise-psychology",
+      "source_html": "course_pages/MSc Sport and Exercise Psychology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-sport-and-exercise-psychology.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-sport-and-exercise-psychology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-sport-and-exercise-science",
+      "source_html": "course_pages/MSc Sport and Exercise Science \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-sport-and-exercise-science.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-sport-and-exercise-science",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-sport-and-performance-nutrition",
+      "source_html": "course_pages/MSc Sport and Performance Nutrition \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-sport-and-performance-nutrition.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-sport-and-performance-nutrition",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-sport-business-management-and-policy",
+      "source_html": "course_pages/MSc Sport Business, Management and Policy \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-sport-business-management-and-policy.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-sport-business-management-and-policy",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-strength-and-conditioning",
+      "source_html": "course_pages/MSc Strength and Conditioning \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-strength-and-conditioning.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-strength-and-conditioning",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-zoo-conservation-biology",
+      "source_html": "course_pages/MSc Zoo Conservation Biology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-msc-zoo-conservation-biology.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/msc-zoo-conservation-biology",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-primary-education-with-qts",
+      "source_html": "course_pages/PGCE Primary with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-primary-education-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-primary-education-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-art-and-design-with-qts",
+      "source_html": "course_pages/PGCE Secondary Art and Design with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-art-and-design-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-art-and-design-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-biology-with-qts",
+      "source_html": "course_pages/PGCE Secondary Biology with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-biology-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-biology-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-chemistry-with-qts",
+      "source_html": "course_pages/PGCE Secondary Chemistry with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-chemistry-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-chemistry-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-computing-with-qts",
+      "source_html": "course_pages/PGCE Secondary Computing with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-computing-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-computing-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-design-and-technology-with-qts",
+      "source_html": "course_pages/PGCE Secondary Design and Technology with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-design-and-technology-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-design-and-technology-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-drama-with-qts",
+      "source_html": "course_pages/PGCE Secondary Drama with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-drama-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-drama-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-english-with-qts",
+      "source_html": "course_pages/PGCE Secondary English with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-english-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-english-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-geography-with-qts",
+      "source_html": "course_pages/PGCE Secondary Geography with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-geography-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-geography-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-history-with-qts",
+      "source_html": "course_pages/PGCE Secondary History with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-history-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-history-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-mathematics-with-qts",
+      "source_html": "course_pages/PGCE Secondary Mathematics with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-mathematics-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-mathematics-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-music-with-qts",
+      "source_html": "course_pages/PGCE Secondary Music with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-music-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-music-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-music-with-specialist-instrument-teaching-with-qts",
+      "source_html": "course_pages/PGCE Secondary Music with Specialist Instrumental Teaching with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-music-with-specialist-instrument-teaching-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-music-with-specialist-instrument-teaching-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-physical-education-with-qts",
+      "source_html": "course_pages/PGCE Secondary Physical Education with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-physical-education-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-physical-education-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-physics-with-qts",
+      "source_html": "course_pages/PGCE Secondary Physics with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-physics-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-physics-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-psychology-with-qts",
+      "source_html": "course_pages/PGCE Secondary Psychology with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-psychology-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-psychology-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-religious-education-with-qts",
+      "source_html": "course_pages/PGCE Secondary Religious Education with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-religious-education-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-religious-education-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-social-science-with-qts",
+      "source_html": "course_pages/PGCE Secondary Social Science with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-social-science-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-social-science-with-qts",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-spanish",
+      "source_html": "course_pages/PGCE Secondary Spanish with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/postgraduate/study-postgraduate-course-pgce-secondary-spanish.md",
+      "source_url": "https://www.mmu.ac.uk/study/postgraduate/course/pgce-secondary-spanish",
+      "study_level": "postgraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-acting",
+      "source_html": "course_pages/BA (Hons) Acting \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-acting.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-acting",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-advertising-and-brand-communications",
+      "source_html": "course_pages/BA (Hons) Advertising and Brand Communications \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-advertising-and-brand-communications.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-advertising-and-brand-communications",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-animation",
+      "source_html": "course_pages/BA (Hons) Animation \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-animation.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-animation",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-architecture",
+      "source_html": "course_pages/BA (Hons) Architecture \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-architecture.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-architecture",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-architecture-foundation",
+      "source_html": "course_pages/BA (Hons) Architecture with Foundation Year \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-architecture-foundation.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-architecture-foundation",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-art-history-and-curating",
+      "source_html": "course_pages/BA (Hons) Art History and Curating \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-art-history-and-curating.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-art-history-and-curating",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-bsc-psychology-with-neuroscience",
+      "source_html": "course_pages/BSc (Hons) Psychology with Neuroscience \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-bsc-psychology-with-neuroscience.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-bsc-psychology-with-neuroscience",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-administration-and-management",
+      "source_html": "course_pages/BA (Hons) Business Administration and Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-business-administration-and-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-administration-and-management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-administration-and-management-top-up",
+      "source_html": "course_pages/BA (Hons) Business Administration and Management Top-Up \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-business-administration-and-management-top-up.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-administration-and-management-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-administration-and-management-with-foundation-year",
+      "source_html": "course_pages/BA (Hons) Business Administration and Management with Foundation Year \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-business-administration-and-management-with-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-administration-and-management-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-and-management-for-sustainability",
+      "source_html": "course_pages/BA (Hons) Business and Management for Sustainability \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-business-and-management-for-sustainability.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-and-management-for-sustainability",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-and-marketing",
+      "source_html": "course_pages/BA (Hons) Business and Marketing \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-business-and-marketing.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-and-marketing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-entrepreneurship",
+      "source_html": "course_pages/BA (Hons) Business Entrepreneurship \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-business-entrepreneurship.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-entrepreneurship",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-management",
+      "source_html": "course_pages/BA (Hons) Business Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-business-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-management-and-french",
+      "source_html": "course_pages/BA (Hons) Business Management and French \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-business-management-and-french.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-management-and-french",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-management-and-spanish",
+      "source_html": "course_pages/BA (Hons) Business Management and Spanish \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-business-management-and-spanish.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-management-and-spanish",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-management-foundation-year",
+      "source_html": "course_pages/BA (Hons) Business Management (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-business-management-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-management-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-management-with-a-modern-language",
+      "source_html": "course_pages/BA (Hons) Business Management (with a modern language) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-business-management-with-a-modern-language.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-management-with-a-modern-language",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-management-with-law",
+      "source_html": "course_pages/BA (Hons) Business Management with Law \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-business-management-with-law.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-business-management-with-law",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-craft",
+      "source_html": "course_pages/BA (Hons) Craft \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-craft.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-craft",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-creative-writing",
+      "source_html": "course_pages/BA (Hons) Creative Writing \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-creative-writing.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-creative-writing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-creative-writing-foundation-year",
+      "source_html": "course_pages/BA (Hons) Creative Writing (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-creative-writing-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-creative-writing-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-drama-and-contemporary-performance",
+      "source_html": "course_pages/BA (Hons) Drama and Contemporary Performance \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-drama-and-contemporary-performance.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-drama-and-contemporary-performance",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-early-years-and-childhood-studies",
+      "source_html": "course_pages/BA (Hons) Early Years and Childhood Studies \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-early-years-and-childhood-studies.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-early-years-and-childhood-studies",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-early-years-and-childhood-studies-foundation-year",
+      "source_html": "course_pages/BA (Hons) Early Years and Childhood Studies (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-early-years-and-childhood-studies-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-early-years-and-childhood-studies-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-economics",
+      "source_html": "course_pages/BA (Hons) Economics \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-economics.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-economics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-education",
+      "source_html": "course_pages/BA (Hons) Education \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-education.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-education",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-education-foundation-year",
+      "source_html": "course_pages/BA (Hons) Education Foundation Year \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-education-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-education-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english",
+      "source_html": "course_pages/BA (Hons) English \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-english.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-creative-writing",
+      "source_html": "course_pages/BA (Hons) English and Creative Writing \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-english-and-creative-writing.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-creative-writing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-creative-writing-foundation-year",
+      "source_html": "course_pages/BA (Hons) English and Creative Writing (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-english-and-creative-writing-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-creative-writing-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-film",
+      "source_html": "course_pages/BA (Hons) English and Film \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-english-and-film.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-film",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-film-foundation-year",
+      "source_html": "course_pages/BA (Hons) English and Film (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-english-and-film-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-film-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-multimedia-journalism",
+      "source_html": "course_pages/BA (Hons) English and Multimedia Journalism \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-english-and-multimedia-journalism.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-multimedia-journalism",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-multimedia-journalism-with-a-foundation-year",
+      "source_html": "course_pages/BA (Hons) English and Multimedia Journalism with a Foundation Year \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-english-and-multimedia-journalism-with-a-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-multimedia-journalism-with-a-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-teaching-english-to-speakers-of-other-languages",
+      "source_html": "course_pages/BA (Hons) English and Teaching English to Speakers of Other Languages \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-english-and-teaching-english-to-speakers-of-other-languages.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-teaching-english-to-speakers-of-other-languages",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-teaching-english-to-speakers-of-other-languages-foundation-year",
+      "source_html": "course_pages/BA (Hons) English And Teaching English To Speakers Of Other Languages (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-english-and-teaching-english-to-speakers-of-other-languages-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-and-teaching-english-to-speakers-of-other-languages-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-foundation-year",
+      "source_html": "course_pages/BA (Hons) English (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-english-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-language-and-linguistics",
+      "source_html": "course_pages/BA (Hons) English Language and Linguistics \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-english-language-and-linguistics.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-language-and-linguistics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-language-and-linguistics-foundation-year",
+      "source_html": "course_pages/BA (Hons) English Language and Linguistics (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-english-language-and-linguistics-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-language-and-linguistics-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-language-and-linguistics-with-a-modern-language",
+      "source_html": "course_pages/BA (Hons) English Language and Linguistics (with a modern language) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-english-language-and-linguistics-with-a-modern-language.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-language-and-linguistics-with-a-modern-language",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-with-a-modern-language",
+      "source_html": "course_pages/BA (Hons) English (with a modern language) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-english-with-a-modern-language.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-english-with-a-modern-language",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-ethics-religion-and-philosophy",
+      "source_html": "course_pages/BA (Hons) Ethics, Religion and Philosophy \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-ethics-religion-and-philosophy.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-ethics-religion-and-philosophy",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-ethics-religion-and-philosophy-foundation-year",
+      "source_html": "course_pages/BA (Hons) Ethics, Religion and Philosophy (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-ethics-religion-and-philosophy-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-ethics-religion-and-philosophy-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-events-management",
+      "source_html": "course_pages/BA (Hons) Events Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-events-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-events-management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-events-management-foundation-year",
+      "source_html": "course_pages/BA (Hons) Events Management (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-events-management-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-events-management-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-fashion",
+      "source_html": "course_pages/BA (Hons) Fashion \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-fashion.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-fashion",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-fashion-art-direction",
+      "source_html": "course_pages/BA (Hons) Fashion Art Direction \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-fashion-art-direction.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-fashion-art-direction",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-fashion-communication",
+      "source_html": "course_pages/BA (Hons) Fashion Communication \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-fashion-communication.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-fashion-communication",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-fashion-design-and-technology",
+      "source_html": "course_pages/BA (Hons) Fashion Design and Technology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-fashion-design-and-technology.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-fashion-design-and-technology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-film-and-media-studies",
+      "source_html": "course_pages/BA (Hons) Film and Media Studies \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-film-and-media-studies.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-film-and-media-studies",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-film-and-media-studies-foundation-year",
+      "source_html": "course_pages/BA (Hons) Film and Media Studies (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-film-and-media-studies-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-film-and-media-studies-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-filmmaking",
+      "source_html": "course_pages/BA (Hons) Filmmaking \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-filmmaking.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-filmmaking",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-fine-art",
+      "source_html": "course_pages/BA (Hons) Fine Art \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-fine-art.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-fine-art",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-fine-art-and-art-history",
+      "source_html": "course_pages/BA (Hons) Fine Art and Art History \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-fine-art-and-art-history.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-fine-art-and-art-history",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-french-and-linguistics",
+      "source_html": "course_pages/BA (Hons) French and Linguistics \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-french-and-linguistics.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-french-and-linguistics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-french-and-spanish",
+      "source_html": "course_pages/BA (Hons) French and Spanish \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-french-and-spanish.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-french-and-spanish",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-french-with-a-modern-language",
+      "source_html": "course_pages/BA (Hons) French (with a modern language) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-french-with-a-modern-language.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-french-with-a-modern-language",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-future-media-production",
+      "source_html": "course_pages/BA (Hons) Future Media Production \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-future-media-production.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-future-media-production",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-games-art",
+      "source_html": "course_pages/BA (Hons) Games Art \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-games-art.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-games-art",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-graphic-design",
+      "source_html": "course_pages/BA (Hons) Graphic Design \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-graphic-design.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-graphic-design",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-health-and-social-care",
+      "source_html": "course_pages/BA (Hons) Health and Social Care \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-health-and-social-care.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-health-and-social-care",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-history",
+      "source_html": "course_pages/BA (Hons) History \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-history.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-history",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-history-and-international-relations",
+      "source_html": "course_pages/BA (Hons) Joint Honours History and International Relations \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-history-and-international-relations.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-history-and-international-relations",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-history-and-international-relations-foundation-year",
+      "source_html": "course_pages/BA (Hons) History and International Relations (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-history-and-international-relations-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-history-and-international-relations-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-history-and-politics",
+      "source_html": "course_pages/BA (Hons) Joint Honours History and Politics \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-history-and-politics.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-history-and-politics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-history-foundation-year",
+      "source_html": "course_pages/BA (Hons) History (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-history-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-history-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-human-resource-management-and-business",
+      "source_html": "course_pages/BA (Hons) Human Resource Management and Business \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-human-resource-management-and-business.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-human-resource-management-and-business",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-human-resource-management-and-business-foundation-year",
+      "source_html": "course_pages/BA (Hons) Human Resource Management and Business (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-human-resource-management-and-business-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-human-resource-management-and-business-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-illustration-with-animation",
+      "source_html": "course_pages/BA (Hons) Illustration with Animation \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-illustration-with-animation.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-illustration-with-animation",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-interior-design",
+      "source_html": "course_pages/BA (Hons) Interior Design \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-interior-design.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-interior-design",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-business-management",
+      "source_html": "course_pages/BA (Hons) International Business Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-international-business-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-business-management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-business-management-foundation-year",
+      "source_html": "course_pages/BA (Hons) International Business Management (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-international-business-management-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-business-management-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-craft-top-up",
+      "source_html": "course_pages/BA (Hons) International Craft (Top Up) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-international-craft-top-up.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-craft-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-fashion-business-top-up",
+      "source_html": "course_pages/BA (Hons) International Fashion Business (Top-Up) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-international-fashion-business-top-up.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-fashion-business-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-fashion-design-top-up",
+      "source_html": "course_pages/BA (Hons) International Fashion Design (Top-Up) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-international-fashion-design-top-up.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-fashion-design-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-graphic-design-top-up",
+      "source_html": "course_pages/BA (Hons) International Graphic Design (Top Up) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-international-graphic-design-top-up.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-graphic-design-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-illustration-top-up",
+      "source_html": "course_pages/BA (Hons) International Illustration (Top Up) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-international-illustration-top-up.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-illustration-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-interior-design-top-up",
+      "source_html": "course_pages/BA (Hons) International Interior Design (Top Up) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-international-interior-design-top-up.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-interior-design-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-product-design-top-up",
+      "source_html": "course_pages/BA (Hons) International Product Design (Top Up) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-international-product-design-top-up.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-product-design-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-relations",
+      "source_html": "course_pages/BA (Hons) International Relations \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-international-relations.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-relations",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-relations-and-french",
+      "source_html": "course_pages/BA (Hons) International Relations and French \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-international-relations-and-french.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-relations-and-french",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-relations-and-spanish",
+      "source_html": "course_pages/BA (Hons) International Relations and Spanish \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-international-relations-and-spanish.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-relations-and-spanish",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-relations-foundation-year",
+      "source_html": "course_pages/BA (Hons) International Relations (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-international-relations-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-relations-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-relations-with-a-modern-language",
+      "source_html": "course_pages/BA (Hons) International Relations (with a modern language) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-international-relations-with-a-modern-language.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-relations-with-a-modern-language",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-textiles-top-up",
+      "source_html": "course_pages/BA (Hons) International Textiles (Top Up) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-international-textiles-top-up.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-international-textiles-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-liberal-arts",
+      "source_html": "course_pages/BA (Hons) Liberal Arts \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-liberal-arts.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-liberal-arts",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-linguistics-and-english",
+      "source_html": "course_pages/BA (Hons) Linguistics and English \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-linguistics-and-english.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-linguistics-and-english",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-linguistics-and-english-foundation-year",
+      "source_html": "course_pages/BA (Hons) Linguistics And English (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-linguistics-and-english-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-linguistics-and-english-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-marketing",
+      "source_html": "course_pages/BA (Hons) Marketing \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-marketing.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-marketing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-multimedia-journalism",
+      "source_html": "course_pages/BA (Hons) Multimedia Journalism \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-multimedia-journalism.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-multimedia-journalism",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-multimedia-journalism-foundation-year",
+      "source_html": "course_pages/BA (Hons) Multimedia Journalism (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-multimedia-journalism-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-multimedia-journalism-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-music-and-sound-design",
+      "source_html": "course_pages/BA (Hons) Music and Sound Design \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-music-and-sound-design.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-music-and-sound-design",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-philosophy",
+      "source_html": "course_pages/BA (Hons) Philosophy \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-philosophy.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-philosophy",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-philosophy-foundation-year",
+      "source_html": "course_pages/BA (Hons) Philosophy (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-philosophy-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-philosophy-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-philosophy-politics-and-economics",
+      "source_html": "course_pages/BA (Hons) Philosophy, Politics and Economics \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-philosophy-politics-and-economics.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-philosophy-politics-and-economics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-philosophy-politics-and-economics-foundation-year",
+      "source_html": "course_pages/BA (Hons) Philosophy, Politics and Economics (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-philosophy-politics-and-economics-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-philosophy-politics-and-economics-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-photography",
+      "source_html": "course_pages/BA (Hons) Photography \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-photography.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-photography",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-politics",
+      "source_html": "course_pages/BA (Hons) Politics \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-politics.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-politics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-politics-and-philosophy",
+      "source_html": "course_pages/BA (Hons) Joint Honours Politics and Philosophy \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-politics-and-philosophy.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-politics-and-philosophy",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-politics-and-philosophy-foundation-year",
+      "source_html": "course_pages/BA (Hons) Politics and Philosophy (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-politics-and-philosophy-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-politics-and-philosophy-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-politics-foundation-year",
+      "source_html": "course_pages/BA (Hons) Politics (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-politics-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-politics-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-primary-education-with-qts",
+      "source_html": "course_pages/BA (Hons) Primary Education with QTS_ \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-primary-education-with-qts.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-primary-education-with-qts",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-product-design",
+      "source_html": "course_pages/BA (Hons) Product Design \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-product-design.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-product-design",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-social-work",
+      "source_html": "course_pages/BA (Hons) Social Work \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-social-work.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-social-work",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-spanish-and-linguistics",
+      "source_html": "course_pages/BA (Hons) Spanish and Linguistics \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-spanish-and-linguistics.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-spanish-and-linguistics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-spanish-with-a-modern-language",
+      "source_html": "course_pages/BA (Hons) Spanish (with a modern language) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-spanish-with-a-modern-language.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-spanish-with-a-modern-language",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-special-and-inclusive-education",
+      "source_html": "course_pages/BA (Hons) Special and Inclusive Education \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-special-and-inclusive-education.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-special-and-inclusive-education",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-special-and-inclusive-education-with-foundation-year",
+      "source_html": "course_pages/BA (Hons) Special and Inclusive Education with foundation year \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-special-and-inclusive-education-with-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-special-and-inclusive-education-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-teaching-english-to-speakers-of-other-languages-and-french",
+      "source_html": "course_pages/BA (Hons) Teaching English to Speakers of Other Languages and French \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-teaching-english-to-speakers-of-other-languages-and-french.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-teaching-english-to-speakers-of-other-languages-and-french",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-teaching-english-to-speakers-of-other-languages-and-linguistics",
+      "source_html": "course_pages/BA (Hons) Teaching English to Speakers of Other Languages and Linguistics \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-teaching-english-to-speakers-of-other-languages-and-linguistics.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-teaching-english-to-speakers-of-other-languages-and-linguistics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-teaching-english-to-speakers-of-other-languages-and-linguistics-foundation-year",
+      "source_html": "course_pages/BA (Hons) Teaching English to Speakers of Other Languages and Linguistics (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ba-teaching-english-to-speakers-of-other-languages-and-linguistics-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-teaching-english-to-speakers-of-other-languages-and-linguistics-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-teaching-english-to-speakers-of-other-languages-and-spanish",
+      "source_html": "course_pages/BA (Hons) Teaching English to Speakers of Other Languages and Spanish \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-teaching-english-to-speakers-of-other-languages-and-spanish.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-teaching-english-to-speakers-of-other-languages-and-spanish",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-teaching-english-to-speakers-of-other-languages-with-a-modern-language",
+      "source_html": "course_pages/BA (Hons) Teaching English to Speakers of Other Languages (with a modern language) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-teaching-english-to-speakers-of-other-languages-with-a-modern-language.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-teaching-english-to-speakers-of-other-languages-with-a-modern-language",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-textiles",
+      "source_html": "course_pages/BA (Hons) Textiles \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-ba-textiles.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-textiles",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/beng-aerospace-engineering",
+      "source_html": "course_pages/BEng (Hons) Aerospace Engineering \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-beng-aerospace-engineering.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/beng-aerospace-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/beng-biomedical-engineering",
+      "source_html": "course_pages/BEng (Hons) Biomedical Engineering \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-beng-biomedical-engineering.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/beng-biomedical-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/beng-electrical-and-electronic-engineering",
+      "source_html": "course_pages/BEng (Hons) Electrical and Electronic Engineering \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-beng-electrical-and-electronic-engineering.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/beng-electrical-and-electronic-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/beng-electronic-engineering-and-ai",
+      "source_html": "course_pages/BEng (Hons) Electronic Engineering and AI \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-beng-electronic-engineering-and-ai.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/beng-electronic-engineering-and-ai",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/beng-mechanical-engineering",
+      "source_html": "course_pages/BEng (Hons) Mechanical Engineering \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-beng-mechanical-engineering.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/beng-mechanical-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-accounting-and-finance",
+      "source_html": "course_pages/BSc (Hons) Accounting and Finance \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-accounting-and-finance.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-accounting-and-finance",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-accounting-and-finance-foundation-year",
+      "source_html": "course_pages/BSc (Hons) Accounting and Finance (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-bsc-accounting-and-finance-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-accounting-and-finance-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-accounting-for-business-top-up",
+      "source_html": "course_pages/BSc (Hons) Accounting for Business (Top-up) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-accounting-for-business-top-up.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-accounting-for-business-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-adult-nursing",
+      "source_html": "course_pages/BSc (Hons) Adult Nursing \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-adult-nursing.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-adult-nursing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-ai-and-data-science",
+      "source_html": "course_pages/BSc (Hons) AI and Data Science \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-ai-and-data-science.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-ai-and-data-science",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-animal-behaviour-and-conservation",
+      "source_html": "course_pages/BSc (Hons) Animal Behaviour and Conservation \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-animal-behaviour-and-conservation.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-animal-behaviour-and-conservation",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-banking-and-finance",
+      "source_html": "course_pages/BSc (Hons) Banking and Finance \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-banking-and-finance.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-banking-and-finance",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-banking-and-finance-foundation-year",
+      "source_html": "course_pages/BSc (Hons) Banking and Finance (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-bsc-banking-and-finance-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-banking-and-finance-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-biochemistry",
+      "source_html": "course_pages/BSc (Hons) Biochemistry \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-biochemistry.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-biochemistry",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-biology-with-ai",
+      "source_html": "course_pages/BSc (Hons) Biology with AI \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-biology-with-ai.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-biology-with-ai",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-biology-with-option-to-study-overseas",
+      "source_html": "course_pages/BSc (Hons) Biology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-biology-with-option-to-study-overseas.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-biology-with-option-to-study-overseas",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-biomedical-science",
+      "source_html": "course_pages/BSc (Hons) Biomedical Science \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-biomedical-science.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-biomedical-science",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-biomedicine",
+      "source_html": "course_pages/BSc (Hons) Biomedicine \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-biomedicine.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-biomedicine",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-biomedicine-with-ai",
+      "source_html": "course_pages/BSc (Hons) Biomedicine with AI \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-biomedicine-with-ai.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-biomedicine-with-ai",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-business-psychology",
+      "source_html": "course_pages/BSc (Hons) Business Psychology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-business-psychology.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-business-psychology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-business-psychology-foundation-year",
+      "source_html": "course_pages/BSc (Hons) Business Psychology (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-bsc-business-psychology-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-business-psychology-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-chemistry-with-option-to-study-overseas",
+      "source_html": "course_pages/BSc (Hons) Chemistry \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-chemistry-with-option-to-study-overseas.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-chemistry-with-option-to-study-overseas",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-computer-animation-and-visual-effects",
+      "source_html": "course_pages/BSc (Hons) Computer Animation and Visual Effects \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-computer-animation-and-visual-effects.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-computer-animation-and-visual-effects",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-computer-games-development",
+      "source_html": "course_pages/BSc (Hons) Computer Games Development \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-computer-games-development.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-computer-games-development",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-computer-science",
+      "source_html": "course_pages/BSc (Hons) Computer Science \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-computer-science.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-computer-science",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-criminology",
+      "source_html": "course_pages/BSc (Hons) Criminology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-criminology.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-criminology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-criminology-and-sociology",
+      "source_html": "course_pages/BSc (Hons) Criminology and Sociology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-criminology-and-sociology.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-criminology-and-sociology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-cyber-security",
+      "source_html": "course_pages/BSc (Hons) Cyber Security \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-cyber-security.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-cyber-security",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-digital-business-analytics",
+      "source_html": "course_pages/BSc (Hons) Digital Business Analytics \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-digital-business-analytics.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-digital-business-analytics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-digital-business-and-technology-innovation",
+      "source_html": "course_pages/BSc (Hons) Digital Business and Technology Innovation \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-digital-business-and-technology-innovation.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-digital-business-and-technology-innovation",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-digital-marketing",
+      "source_html": "course_pages/BSc (Hons) Digital Marketing \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-digital-marketing.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-digital-marketing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-digital-media-and-communications",
+      "source_html": "course_pages/BSc (Hons) Digital Media and Communications \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-digital-media-and-communications.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-digital-media-and-communications",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-digital-media-and-communications-foundation-year",
+      "source_html": "course_pages/BSc (Hons) Digital Media and Communications (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-bsc-digital-media-and-communications-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-digital-media-and-communications-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-economics",
+      "source_html": "course_pages/BSc (Hons) Economics \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-economics.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-economics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-economics-foundation-year",
+      "source_html": "course_pages/BSc (Hons) Economics (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-bsc-economics-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-economics-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-engineering-science-top-up",
+      "source_html": "course_pages/BSc (Hons) Engineering Science (Top-up) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-engineering-science-top-up.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-engineering-science-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-environmental-science-with-option-to-study-overseas",
+      "source_html": "course_pages/BSc (Hons) Environmental Science \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-environmental-science-with-option-to-study-overseas.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-environmental-science-with-option-to-study-overseas",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-fashion-business-and-management",
+      "source_html": "course_pages/BSc (Hons) Fashion Business and Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-fashion-business-and-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-fashion-business-and-management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-fashion-business-and-management-with-ai",
+      "source_html": "course_pages/BSc (Hons) Fashion Business and Management with AI \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-fashion-business-and-management-with-ai.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-fashion-business-and-management-with-ai",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-fashion-buying-and-merchandising",
+      "source_html": "course_pages/BSc (Hons) Fashion Buying and Merchandising \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-fashion-buying-and-merchandising.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-fashion-buying-and-merchandising",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-fashion-marketing",
+      "source_html": "course_pages/BSc (Hons) Fashion Marketing \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-fashion-marketing.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-fashion-marketing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-forensic-psychology",
+      "source_html": "course_pages/BSc (Hons) Psychology with Forensic Perspectives \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-psychology-forensic-perspectives.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-psychology-forensic-perspectives",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-games-design",
+      "source_html": "course_pages/BSc (Hons) Games Design \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-games-design.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-games-design",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-geography",
+      "source_html": "course_pages/BSc (Hons) Geography \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-geography.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-geography",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-geography-with-ai",
+      "source_html": "course_pages/BSc (Hons) Geography with AI \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-geography-with-ai.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-geography-with-ai",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-health-and-exercise-science",
+      "source_html": "course_pages/BSc (Hons) Health and Exercise Science \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-health-and-exercise-science.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-health-and-exercise-science",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-hons-adult-nursing-top-up",
+      "source_html": "course_pages/BSc (Hons) Adult Nursing (Top Up) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-hons-adult-nursing-top-up.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-hons-adult-nursing-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-human-geography-with-option-to-study-overseas",
+      "source_html": "course_pages/BSc (Hons) Human Geography \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-human-geography-with-option-to-study-overseas.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-human-geography-with-option-to-study-overseas",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-human-physiology",
+      "source_html": "course_pages/BSc (Hons) Human Physiology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-human-physiology.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-human-physiology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-international-hospitality-and-tourism-business-management",
+      "source_html": "course_pages/BSc (Hons) International Hospitality and Tourism Business Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-international-hospitality-and-tourism-business-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-international-hospitality-and-tourism-business-management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-international-hospitality-and-tourism-business-management-foundation-year",
+      "source_html": "course_pages/BSc (Hons) International Hospitality and Tourism Business Management (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-bsc-international-hospitality-and-tourism-business-management-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-international-hospitality-and-tourism-business-management-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-international-hospitality-and-tourism-management-top-up",
+      "source_html": "course_pages/BSc (Hons) International Hospitality and Tourism Management (Top-Up) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-international-hospitality-and-tourism-management-top-up.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-international-hospitality-and-tourism-management-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-international-hospitality-business-management-top-up",
+      "source_html": "course_pages/BSc (Hons) International Hospitality Business Management Top-up \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-international-hospitality-business-management-top-up.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-international-hospitality-business-management-top-up",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-law-and-criminology",
+      "source_html": "course_pages/BSc (Hons) Law and Criminology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-law-and-criminology.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-law-and-criminology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-linguistics-with-ai",
+      "source_html": "course_pages/BSc (Hons) Linguistics with AI \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-linguistics-with-ai.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-linguistics-with-ai",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-manchester-city-community-football-coaching",
+      "source_html": "course_pages/BSc (Hons) Manchester City Community Football Coaching \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-manchester-city-community-football-coaching.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-manchester-city-community-football-coaching",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-mathematics",
+      "source_html": "course_pages/BSc (Hons) Mathematics \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-mathematics.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-mathematics",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-medicinal-and-pharmaceutical-chemistry",
+      "source_html": "course_pages/BSc (Hons) Medicinal and Pharmaceutical Chemistry \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-medicinal-and-pharmaceutical-chemistry.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-medicinal-and-pharmaceutical-chemistry",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-medicinal-and-pharmaceutical-chemistry-with-ai",
+      "source_html": "course_pages/BSc (Hons) Medicinal and Pharmaceutical Chemistry with AI \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-medicinal-and-pharmaceutical-chemistry-with-ai.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-medicinal-and-pharmaceutical-chemistry-with-ai",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-mental-health-nursing",
+      "source_html": "course_pages/BSc (Hons) Mental Health Nursing \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-mental-health-nursing.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-mental-health-nursing",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-microbiology-and-molecular-biology-with-option-to-study-overseas",
+      "source_html": "course_pages/BSc (Hons) Microbiology and Molecular Biology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-microbiology-and-molecular-biology-with-option-to-study-overseas.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-microbiology-and-molecular-biology-with-option-to-study-overseas",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-physiotherapy",
+      "source_html": "course_pages/BSc (Hons) Physiotherapy \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-physiotherapy.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-physiotherapy",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-product-design-engineering",
+      "source_html": "course_pages/BSc (Hons) Product Design Engineering \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-product-design-engineering.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-product-design-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-psychology",
+      "source_html": "course_pages/BSc (Hons) Psychology \u00b7 Manchester Metropolitan University_study_undergraduate_course_bsc-psychology.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-psychology.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-psychology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-psychology-education",
+      "source_html": "course_pages/BSc (Hons) Psychology with Education \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-psychology-education.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-psychology-education",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-psychology-with-counselling-and-psychotherapy",
+      "source_html": "course_pages/BSc (Hons) Psychology with Counselling and Psychotherapy \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-psychology-with-counselling-and-psychotherapy.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-psychology-with-counselling-and-psychotherapy",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-psychology-with-foundation-year",
+      "source_html": "course_pages/BSc (Hons) Psychology with Foundation Year \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-bsc-psychology-with-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-psychology-with-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-quantity-surveying",
+      "source_html": "course_pages/BSc (Hons) Quantity Surveying \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-quantity-surveying.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-quantity-surveying",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sociology",
+      "source_html": "course_pages/BSc (Hons) Sociology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-sociology.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sociology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sociology-and-criminology-degrees-with-a-foundation-year",
+      "source_html": "course_pages/BSc (Hons) Sociology and Criminology degrees with a Foundation Year \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-bsc-sociology-and-criminology-degrees-with-a-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sociology-and-criminology-degrees-with-a-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-software-engineering",
+      "source_html": "course_pages/BSc (Hons) Software Engineering \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-software-engineering.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-software-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-speech-and-language-therapy",
+      "source_html": "course_pages/BSc (Hons) Speech and Language Therapy \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-speech-and-language-therapy.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-speech-and-language-therapy",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sport-and-exercise-nutrition",
+      "source_html": "course_pages/BSc (Hons) Sport and Exercise Nutrition \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-sport-and-exercise-nutrition.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sport-and-exercise-nutrition",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sport-and-exercise-science",
+      "source_html": "course_pages/BSc (Hons) Sport and Exercise Science \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-sport-and-exercise-science.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sport-and-exercise-science",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sport-coaching-and-development",
+      "source_html": "course_pages/BSc (Hons) Sport Coaching and Development \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-sport-coaching-and-development.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sport-coaching-and-development",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sports-business-management",
+      "source_html": "course_pages/BSc (Hons) Sports Business Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-sports-business-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sports-business-management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sports-business-management-foundation-year",
+      "source_html": "course_pages/BSc (Hons) Sports Business Management (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-bsc-sports-business-management-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sports-business-management-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sports-marketing-management",
+      "source_html": "course_pages/BSc (Hons) Sports Marketing Management \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-sports-marketing-management.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sports-marketing-management",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sports-marketing-management-foundation-year",
+      "source_html": "course_pages/BSc (Hons) Sports Marketing Management (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-bsc-sports-marketing-management-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-sports-marketing-management-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-user-experience-design",
+      "source_html": "course_pages/BSc (Hons) User Experience Design \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-user-experience-design.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-user-experience-design",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-zoology",
+      "source_html": "course_pages/BSc (Hons) Zoology \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-bsc-zoology.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/bsc-zoology",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/economics-foundation-year",
+      "source_html": "course_pages/BA (Hons) Economics (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-economics-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/economics-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/fdsc-health-and-care-practice-nursing-associate",
+      "source_html": "course_pages/FdSc Health and Care Practice (Nursing Associate) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-fdsc-health-and-care-practice-nursing-associate.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/fdsc-health-and-care-practice-nursing-associate",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/fdsc-manchester-city-community-football-coaching",
+      "source_html": "course_pages/FdSc Manchester City Community Football Coaching \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-fdsc-manchester-city-community-football-coaching.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/fdsc-manchester-city-community-football-coaching",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-acting",
+      "source_html": "course_pages/CertHE Foundation Acting \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-foundation-acting.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-acting",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-foundation-year-science-and-engineering-degrees-with-a-foundation-year-healthcare-science-route",
+      "source_html": "course_pages/Foundation Year Science and Engineering degrees with a foundation year (Life Sciences route) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-foundation-year-foundation-year-science-and-engineering-degrees-with-a-foundation-year-healthcare-science-route.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-foundation-year-science-and-engineering-degrees-with-a-foundation-year-healthcare-science-route",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-history-and-politics-foundation-year",
+      "source_html": "course_pages/BA (Hons) History and Politics (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-foundation-year-history-and-politics-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-history-and-politics-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-marketing-foundation-year",
+      "source_html": "course_pages/BA (Hons) Marketing (Foundation Year) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-foundation-year-marketing-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-marketing-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-school-of-digital-arts-soda",
+      "source_html": "course_pages/Foundation Year School of Digital Arts (SODA) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-foundation-year-school-of-digital-arts-soda.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-school-of-digital-arts-soda",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-science-and-engineering-degrees-with-a-foundation-year-biology-route",
+      "source_html": "course_pages/Foundation Year Science and Engineering degrees with a foundation year (Biology and Chemistry route) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-foundation-year-science-and-engineering-degrees-with-a-foundation-year-biology-route.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-science-and-engineering-degrees-with-a-foundation-year-biology-route",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-science-and-engineering-degrees-with-a-foundation-year-engineering-route",
+      "source_html": "course_pages/Foundation Year Science and Engineering degrees with a foundation year (Engineering route) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-foundation-year-science-and-engineering-degrees-with-a-foundation-year-engineering-route.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-science-and-engineering-degrees-with-a-foundation-year-engineering-route",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-science-and-engineering-degrees-with-a-foundation-year-environmental-science-route",
+      "source_html": "course_pages/Foundation Year Science and Engineering degrees with a foundation year (Environmental Science route) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-foundation-year-science-and-engineering-degrees-with-a-foundation-year-environmental-science-route.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-science-and-engineering-degrees-with-a-foundation-year-environmental-science-route",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-science-and-engineering-degrees-with-a-foundation-year-sport-and-exercise-sciences-route",
+      "source_html": "course_pages/Foundation Year Science and Engineering degrees with a foundation year (Sport and Exercise Sciences route) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-foundation-year-science-and-engineering-degrees-with-a-foundation-year-sport-and-exercise-sciences-route.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-science-and-engineering-degrees-with-a-foundation-year-sport-and-exercise-sciences-route",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-science-and-engineering-with-a-foundation-year-computing-mathematics-route",
+      "source_html": "course_pages/Foundation Year Science and Engineering with a foundation year (Computing and Mathematics route) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-foundation-year-science-and-engineering-with-a-foundation-year-computing-mathematics-route.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/foundation-year-science-and-engineering-with-a-foundation-year-computing-mathematics-route",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/llb-hons",
+      "source_html": "course_pages/LLB (Hons) \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-llb-hons.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/llb-hons",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/llb-law-with-a-foundation-year",
+      "source_html": "course_pages/LLB (Hons) Foundation Year Law \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-llb-law-with-a-foundation-year.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/llb-law-with-a-foundation-year",
+      "study_level": "foundation"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/m-biomed-sci-biomedical-science",
+      "source_html": "course_pages/MBiomedSci (Hons) Biomedical Science \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-m-biomed-sci-biomedical-science.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/m-biomed-sci-biomedical-science",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/mchem-chemistry",
+      "source_html": "course_pages/MChem (Hons) Chemistry \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-mchem-chemistry.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/mchem-chemistry",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/mchem-medicinal-and-pharmaceutical-chemistry",
+      "source_html": "course_pages/MChem (Hons) Medicinal and Pharmaceutical Chemistry \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-mchem-medicinal-and-pharmaceutical-chemistry.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/mchem-medicinal-and-pharmaceutical-chemistry",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/meng-electrical-and-electronic-engineering",
+      "source_html": "course_pages/MEng (Hons) Electrical and Electronic Engineering \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-meng-electrical-and-electronic-engineering.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/meng-electrical-and-electronic-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/meng-mechanical-engineering",
+      "source_html": "course_pages/MEng (Hons) Mechanical Engineering \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/undergraduate/study-undergraduate-course-meng-mechanical-engineering.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/meng-mechanical-engineering",
+      "study_level": "undergraduate"
+    },
+    {
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ual-foundation-diploma-in-art-and-design",
+      "source_html": "course_pages/UAL Foundation Diploma in Art and Design \u00b7 Manchester Metropolitan University.html",
+      "clean_md": "clean/courses/foundation/study-undergraduate-course-ual-foundation-diploma-in-art-and-design.md",
+      "source_url": "https://www.mmu.ac.uk/study/undergraduate/course/ual-foundation-diploma-in-art-and-design",
+      "study_level": "foundation"
+    }
+  ],
+  "uni_pages": [
+    {
+      "source_html": "uni_req/bangladesh-entry.html",
+      "source_url": "https://www.mmu.ac.uk/study/international/international-students/bangladesh#t-9133-4",
+      "clean_md": "clean/uni/bangladesh-entry.md",
+      "page_type": "entry"
+    },
+    {
+      "source_html": "uni_req/deposit.html",
+      "source_url": "https://www.mmu.ac.uk/study/international/when-you-have-an-offer/apply-for-cas",
+      "clean_md": "clean/uni/deposit.md",
+      "page_type": "deposit"
+    },
+    {
+      "source_html": "uni_req/english-requirements.html",
+      "source_url": "https://www.mmu.ac.uk/study/international/before-you-apply/english-language-requirements#ai-7140-0",
+      "clean_md": "clean/uni/english-requirements.md",
+      "page_type": "english"
+    },
+    {
+      "source_html": "uni_req/scholarships.html",
+      "source_url": "https://www.mmu.ac.uk/study/international/before-you-apply/fees-and-funding/scholarships-and-funding#ai-125869-2",
+      "clean_md": "clean/uni/scholarships.md",
+      "page_type": "scholarship"
+    }
+  ]
+}
