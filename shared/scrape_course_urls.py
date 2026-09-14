@@ -1004,24 +1004,6 @@ class ArtifactStore:
 # Browser control (Playwright)
 # ============================================================================
 
-def load_uni_download_hooks_module(code_dir: Path):
-    """Load {University}/code/course_download_hooks.py when present."""
-    import importlib.util
-
-    path = code_dir / "course_download_hooks.py"
-    if not path.is_file():
-        return None
-    spec = importlib.util.spec_from_file_location("course_download_hooks", path)
-    if spec is None or spec.loader is None:
-        return None
-    module = importlib.util.module_from_spec(spec)
-    uni_code = str(path.parent)
-    if uni_code not in sys.path:
-        sys.path.insert(0, uni_code)
-    spec.loader.exec_module(module)
-    return module
-
-
 class BrowserSession:
     """Thin wrapper around a headless Chromium page, used as a context manager."""
 
@@ -1078,40 +1060,22 @@ class BrowserSession:
             except PlaywrightTimeoutError:
                 continue
 
-    def download_html(
-        self,
-        url: str,
-        *,
-        wait_for_results: bool = False,
-        code_dir: Path | None = None,
-    ) -> tuple[str, str]:
+    def download_html(self, url: str, *, wait_for_results: bool = False) -> tuple[str, str]:
         """Navigate to url and return (page_title, html). Retries transient failures."""
         assert self.page is not None
-        prepare = None
-        if code_dir is not None:
-            module = load_uni_download_hooks_module(code_dir)
-            if module is not None:
-                prepare = getattr(module, "prepare_course_page_download", None)
-        use_prepare = callable(prepare)
-        wait_until = "load" if use_prepare else "domcontentloaded"
         last_error: Exception | None = None
         for attempt in range(1, LISTING_DOWNLOAD_RETRIES + 1):
             try:
-                self.page.goto(url, wait_until=wait_until, timeout=60000)
+                self.page.goto(url, wait_until="domcontentloaded", timeout=60000)
                 self.dismiss_cookies(self.page)
-                if use_prepare:
-                    self.page.wait_for_timeout(3000)
-                else:
-                    try:
-                        self.page.wait_for_load_state("networkidle", timeout=15000)
-                    except PlaywrightTimeoutError:
-                        self.page.wait_for_load_state("load", timeout=15000)
+                try:
+                    self.page.wait_for_load_state("networkidle", timeout=15000)
+                except PlaywrightTimeoutError:
+                    self.page.wait_for_load_state("load", timeout=15000)
                 if wait_for_results:
                     self.wait_for_listing(self.page)
-                elif not use_prepare:
+                else:
                     self.page.wait_for_timeout(800)
-                if use_prepare:
-                    prepare(self.page, url)
                 html = self.page.content()
                 if not html or len(html) < 200:
                     raise RuntimeError("Empty or tiny HTML response")
@@ -2074,7 +2038,7 @@ class CoursePageDownloader:
                     continue
                 print(f"  [{index}/{len(urls)}] {url}")
                 try:
-                    title, html = browser.download_html(url, code_dir=self.code_dir)
+                    title, html = browser.download_html(url)
                     if course_filter.should_exclude_html(html, url=url):
                         stats["excluded"] += 1
                         downloaded.add(url)

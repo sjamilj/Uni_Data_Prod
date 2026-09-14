@@ -426,36 +426,6 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(hints["intakeInfo"], "September 2026")
         self.assertEqual(hints["tuitionFee"], "18200")
 
-    def test_cccu_overseas_fee_table_parses_tuition(self) -> None:
-        body = """## Key course information
-
-- **Start date:** September 2026
-- **Duration:** 4 years
-
-## Fees
-
-The 2026/27 annual tuition fees for this course are:
-
-|  | Overseas |
-| --- | --- |
-| Full-time - Foundation Year 0 | £17,000 |
-| Full-time - years 1-3 | £17,000 |
-"""
-        hints = extract_stage1_fields_from_md(body)
-        self.assertEqual(hints["tuitionFee"], "17000")
-        self.assertEqual(hints["currency"], "GBP")
-
-    def test_cccu_overseas_fee_table_single_row(self) -> None:
-        body = """## Fees
-
-|  | Overseas |
-| --- | --- |
-| Full-time | £17,000 |
-"""
-        hints = extract_stage1_fields_from_md(body)
-        self.assertEqual(hints["tuitionFee"], "17000")
-        self.assertEqual(hints["currency"], "GBP")
-
 
 def format_report_issues(report) -> str:
     return "\n".join(issue.format_line() for issue in report.issues)

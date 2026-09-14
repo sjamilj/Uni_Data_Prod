@@ -14,7 +14,6 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from course_markdown_cleanup import parse_uni_json_payload
-from course_type_filter import CourseTypeFilter
 from normalize_admission_data import derive_hsc_gpa_from_uk_entry_text
 from uni_pages import (
     UNI_MD_BY_ROLE,
@@ -811,89 +810,6 @@ class Stage1MarkdownParser:
         return match.group(1) if match else ''
 
     @staticmethod
-    def extract_fees_section(body: str) -> str:
-        match = re.search('## Fees\\s*\\n(.*?)(?=\\n## |\\Z)', body, re.S | re.I)
-        return match.group(1) if match else ''
-
-    @staticmethod
-    def _markdown_table_cells(line: str) -> list[str] | None:
-        stripped = line.strip()
-        if not stripped.startswith('|'):
-            return None
-        return [cell.strip() for cell in stripped.strip('|').split('|')]
-
-    @staticmethod
-    def parse_overseas_markdown_fee_table(section: str) -> list[dict[str, str]]:
-        """Parse | label | Overseas | markdown tables (CCCU-style)."""
-        options: list[dict[str, str]] = []
-        lines = [line for line in section.splitlines() if line.strip().startswith('|')]
-        if len(lines) < 2:
-            return options
-
-        overseas_col: int | None = None
-        data_start = 0
-        for index, line in enumerate(lines):
-            cells = Stage1MarkdownParser._markdown_table_cells(line)
-            if not cells:
-                continue
-            for col_index, cell in enumerate(cells):
-                if re.search(r'\boverseas\b', cell, re.I):
-                    overseas_col = col_index
-                    data_start = index + 1
-                    break
-            if overseas_col is not None:
-                break
-
-        if overseas_col is None:
-            return options
-
-        for line in lines[data_start:]:
-            cells = Stage1MarkdownParser._markdown_table_cells(line)
-            if not cells or overseas_col >= len(cells):
-                continue
-            if all(re.fullmatch(r'-+', cell.replace(' ', '')) for cell in cells):
-                continue
-            label = cells[0]
-            fee_match = re.search(r'£([\d,]+)', cells[overseas_col])
-            if not fee_match:
-                continue
-            duration = ''
-            duration_match = re.search(r'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*years?', label, re.I)
-            if duration_match:
-                duration = f"{duration_match.group(1)} years"
-            options.append(
-                {
-                    'studyMode': 'Full Time' if 'full-time' in label.casefold() else label,
-                    'courseDuration': duration,
-                    'tuitionFee': fee_match.group(1).replace(',', ''),
-                    'label': label,
-                }
-            )
-        return options
-
-    @staticmethod
-    def pick_primary_overseas_table_fee(options: list[dict[str, str]]) -> dict[str, str] | None:
-        if not options:
-            return None
-        for option in options:
-            label = option.get('label', '').casefold()
-            if 'foundation year' not in label and 'placement' not in label:
-                return option
-        return options[0]
-
-    @staticmethod
-    def extract_overseas_table_tuition_fee(body: str) -> tuple[str, str]:
-        section = Stage1MarkdownParser.extract_fees_section(body)
-        if not section:
-            return '', ''
-        primary = Stage1MarkdownParser.pick_primary_overseas_table_fee(
-            Stage1MarkdownParser.parse_overseas_markdown_fee_table(section)
-        )
-        if not primary:
-            return '', ''
-        return str(primary.get('tuitionFee', '') or '').strip(), 'GBP'
-
-    @staticmethod
     def parse_international_fee_options(section: str) -> list[dict[str, str]]:
         options: list[dict[str, str]] = []
         lines = [line.strip() for line in section.splitlines()]
@@ -1200,11 +1116,6 @@ class Stage1MarkdownParser:
             if research_fee:
                 fields['tuitionFee'] = research_fee
                 fields['currency'] = 'GBP'
-        if not fields.get('tuitionFee'):
-            table_fee, table_currency = Stage1MarkdownParser.extract_overseas_table_tuition_fee(body)
-            if table_fee:
-                fields['tuitionFee'] = table_fee
-                fields['currency'] = table_currency
         intl_section = extract_international_fees_section(body)
         if intl_section:
             if not fields.get('tuitionFee'):
@@ -3030,7 +2941,6 @@ class LlmExtractCLI:
         print(f'Input: {input_label}', flush=True)
         print(f'Courses to process: {len(courses)}', flush=True)
         print(f'Output: {output_label}', flush=True)
-        course_filter = CourseTypeFilter.from_code_dir(code_dir)
         skip_batch = 0
         for index, entry in enumerate(courses, start=1):
             slug = course_slug_from_url(entry['course_url'])
@@ -3041,16 +2951,6 @@ class LlmExtractCLI:
             if skip_batch:
                 print(f'Resume: skipped {skip_batch} already-completed course(s)', flush=True)
                 skip_batch = 0
-            md_path = output_dir / entry['clean_md']
-            if course_filter.enabled and md_path.is_file():
-                md_text = md_path.read_text(encoding='utf-8')
-                if course_filter.should_exclude_markdown(md_text, url=entry.get('course_url')):
-                    print(
-                        f"[{index}/{len(courses)}] {entry['md_file']} — skipped "
-                        f"(excluded course type/mode; COURSE_EXCLUDE_COURSE_TYPES)",
-                        flush=True,
-                    )
-                    continue
             print(f"[{index}/{len(courses)}] {entry['md_file']} — {entry['course_url']}", flush=True)
             try:
                 row, stage1_output, stage2_output, output_json = CourseExtractor.extract_course(code_dir, entry, model=model, host=host, skip_stage1=skip_stage1)
