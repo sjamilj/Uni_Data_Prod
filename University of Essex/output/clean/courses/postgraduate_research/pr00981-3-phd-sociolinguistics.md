@@ -1,0 +1,71 @@
+---
+source_html: course_pages/PhD Sociolinguistics Degree _ University of Essex__courses_PR00981_3_PhD-Sociolinguistics.html
+source_url: https://www.essex.ac.uk/courses/PR00981/3/PhD-Sociolinguistics
+page_type: course
+university: University of Essex
+cleaned_at: 2026-09-14
+course_url: https://www.essex.ac.uk/courses/PR00981/3/PhD-Sociolinguistics
+study_level: postgraduate_research
+---
+
+Postgraduate Research Course
+
+# PhD Sociolinguistics
+
+## Key course information
+
+- **Course:** Sociolinguistics
+- **Start date:** October 2026
+- **Study mode:** Full-time
+- **Duration:** 4 - 5 years
+- **Location:** Colchester Campus
+- **Based in:** Language, Literature, and Media (School of)
+
+### UK entry requirements
+
+You will need a 2.2 Honours Degree, or equivalent, in a related subject.
+
+Our four year integrated PhD, allows you to spend your first year studying at Masters level in order to develop the necessary knowledge and skills and to start your independent research in year two.
+
+### English language requirements
+
+If English is not your first language, then we will require you to have IELTS 7.0 or equivalent
+
+<!-- english-tests-mapped -->
+```json
+{
+  "AcademicRequirementsMetaData": [
+    {
+      "subtitle": "English Requirement",
+      "description": [
+        "Group 8: IELTS 7.0 overall",
+        "Pearson PTE Academic: 76 overall with Listening 59, Reading 59, Writing 60 and Speaking 59",
+        "TOEFL iBT (legacy scale): minimum 95 overall with Reading 18, Listening 17, Speaking 20 and Writing 20"
+      ]
+    }
+  ],
+  "ieltsMinOverall": "7.0",
+  "ieltsMinSection": "5.5",
+  "toeflMinOverall": "95",
+  "toeflMinSection": "17",
+  "pteMinOverall": "76",
+  "pteMinSection": "59"
+}
+```
+
+
+### International fee
+
+£20,625 per year
+
+Fees will increase for each academic year of study.
+
+### Scholarships and financial support
+
+There may be [scholarships, bursaries or discounts](https://www.essex.ac.uk/scholarships) available to help with the cost of this course.
+
+### Fees and funding guide
+
+[Masters fees and funding information](https://www.essex.ac.uk/postgraduate/masters/fees-and-funding)
+
+[Research (e.g. PhD) fees and funding information](https://www.essex.ac.uk/postgraduate/research/fees-and-funding)

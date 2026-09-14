@@ -1,0 +1,500 @@
+[
+  {
+    "file": "clean/courses/postgraduate/pg00435-1-msc-advanced-computer-science.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG00435/1/MSc-Advanced-Computer-Science",
+    "course_name": "MSc Advanced Computer Science",
+    "status": "parsed",
+    "english_text": "IELTS 6.0 overall with a minimum component score of 5.5\n\nIf you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional/) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "6.0",
+      "min_section": "5.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00448-1-ma-applied-linguistics.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG00448/1/MA-Applied-Linguistics",
+    "course_name": "MA Applied Linguistics",
+    "status": "parsed",
+    "english_text": "If English is not your first language, we require IELTS 6.5 overall with a minimum component score of 6.0 in writing and 5.5 in all other components.\n\nIf you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional/) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "6.5",
+      "writing_min": "6.0",
+      "min_section": "5.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00457-1-msc-artificial-intelligence.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG00457/1/MSc-Artificial-Intelligence",
+    "course_name": "MSc Artificial Intelligence",
+    "status": "parsed",
+    "english_text": "IELTS 6.0 overall with a minimum component score of 5.5\n\nIf you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional/) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "6.0",
+      "min_section": "5.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00555-1-ma-english-language-and-linguistics.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG00555/1/MA-English-Language-and-Linguistics",
+    "course_name": "MA English Language and Linguistics",
+    "status": "parsed",
+    "english_text": "If English is not your first language, we require IELTS 6.5 overall with a minimum component score of 6.0 in writing and 5.5 in all other components.\n\nIf you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional/) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "6.5",
+      "writing_min": "6.0",
+      "min_section": "5.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00609-1-ma-history.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG00609/1/MA-History",
+    "course_name": "MA History",
+    "status": "parsed",
+    "english_text": "If English is not your first language, we require IELTS 7.0 overall with a minimum score of 5.5 in all components.\n\nIf you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional/) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "7.0",
+      "all_components_min": "5.5",
+      "min_section": "5.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00662-1-ma-linguistics.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG00662/1/MA-Linguistics",
+    "course_name": "MA Linguistics",
+    "status": "parsed",
+    "english_text": "If English is not your first language, we require IELTS 6.5 overall with a minimum component score of 6.0 in writing and 5.5 in all other components.\n\nIf you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional/) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "6.5",
+      "writing_min": "6.0",
+      "min_section": "5.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00706-1-ma-philosophy.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG00706/1/MA-Philosophy",
+    "course_name": "MA Philosophy",
+    "status": "parsed",
+    "english_text": "If English is not your first language, we require IELTS 7.0 overall with a minimum score of 5.5 in all components.\n\nIf you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional/) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "7.0",
+      "all_components_min": "5.5",
+      "min_section": "5.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00727-3-graduate-diploma-politics.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG00727/3/Graduate-Diploma-Politics",
+    "course_name": "Graduate Diploma Politics",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01084-1-postgraduate-certificate-musculoskeletal-ultrasound-imaging.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG01084/1/Postgraduate-Certificate-Musculoskeletal-Ultrasound-Imaging",
+    "course_name": "Postgraduate Certificate Musculoskeletal Ultrasound Imaging",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01084-2-postgraduate-diploma-musculoskeletal-ultrasound-imaging.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG01084/2/Postgraduate-Diploma-Musculoskeletal-Ultrasound-Imaging",
+    "course_name": "Postgraduate Diploma Musculoskeletal Ultrasound Imaging",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01084-3-msc-musculoskeletal-ultrasound-imaging.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG01084/3/MSc-Musculoskeletal-Ultrasound-Imaging",
+    "course_name": "MSc Musculoskeletal Ultrasound Imaging",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01140-2-msc-migration-studies.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG01140/2/MSc-Migration-Studies",
+    "course_name": "MSc Migration Studies",
+    "status": "parsed",
+    "english_text": "If English is not your first language, we require IELTS 6.5 overall with a minimum score of 6.0 in all components.\n\nIf you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional/) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "6.5",
+      "all_components_min": "6.0",
+      "min_section": "6.0"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01339-1-ma-war-culture-and-society.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG01339/1/MA-War-Culture-and-Society",
+    "course_name": "MA War, Culture and Society",
+    "status": "parsed",
+    "english_text": "If English is not your first language, we require IELTS 7.0 overall with a minimum score of 5.5 in all components.\n\nIf you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional/) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "7.0",
+      "all_components_min": "5.5",
+      "min_section": "5.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01443-1-ma-history-power-and-identity.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG01443/1/MA-History-Power-and-Identity",
+    "course_name": "MA History, Power, and Identity",
+    "status": "parsed",
+    "english_text": "If English is not your first language, we require IELTS 7.0 overall with a minimum score of 5.5 in all components.\n\nIf you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional/) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "7.0",
+      "all_components_min": "5.5",
+      "min_section": "5.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01524-2-postgraduate-diploma-musculoskeletal-practice-hand-therapy.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG01524/2/Postgraduate-Diploma-Musculoskeletal-Practice-Hand-Therapy",
+    "course_name": "Postgraduate Diploma Musculoskeletal Practice",
+    "status": "parsed",
+    "english_text": "If English is not your first language we require an IELTS score of 6.5 or a TOEFL score of 450/200.\n\nIf you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional/) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "6.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01524-3-postgraduate-certificate-musculoskeletal-practice-hand-therapy.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG01524/3/Postgraduate-Certificate-Musculoskeletal-Practice-Hand-Therapy",
+    "course_name": "Postgraduate Certificate Musculoskeletal Practice",
+    "status": "parsed",
+    "english_text": "If English is not your first language we require an IELTS score of 6.5 or a TOEFL score of 450/200.\n\nIf you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional/) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "6.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01524-4-msc-musculoskeletal-practice-hand-therapy.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG01524/4/MSc-Musculoskeletal-Practice-Hand-Therapy",
+    "course_name": "MSc Musculoskeletal Practice",
+    "status": "parsed",
+    "english_text": "If English is not your first language we require an IELTS score of 6.5 or a TOEFL score of 450/200.\n\nIf you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional/) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "6.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01604-1-postgraduate-certificate-international-musculoskeletal-ultrasound-imaging.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG01604/1/Postgraduate-Certificate-International-Musculoskeletal-Ultrasound-Imaging",
+    "course_name": "Postgraduate Certificate International Musculoskeletal Ultrasound Imaging",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01604-2-postgraduate-diploma-international-musculoskeletal-ultrasound-imaging.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG01604/2/Postgraduate-Diploma-International-Musculoskeletal-Ultrasound-Imaging",
+    "course_name": "Postgraduate Diploma International Musculoskeletal Ultrasound Imaging",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01604-3-msc-international-musculoskeletal-ultrasound-imaging.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG01604/3/MSc-International-Musculoskeletal-Ultrasound-Imaging",
+    "course_name": "MSc International Musculoskeletal Ultrasound Imaging",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01630-1-msc-cyber-security.md",
+    "course_url": "https://www.essex.ac.uk/courses/PG01630/1/MSc-Cyber-Security",
+    "course_name": "MSc Cyber Security",
+    "status": "parsed",
+    "english_text": "IELTS 6.0 overall with a minimum component score of 5.5\n\nIf you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional/) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "6.0",
+      "min_section": "5.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00917-1-professional-doctorate-health-care-education.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR00917/1/Professional-Doctorate-Health-Care-Education",
+    "course_name": "Professional Doctorate Health Care Education",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00919-1-professional-doctorate-health-service-management.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR00919/1/Professional-Doctorate-Health-Service-Management",
+    "course_name": "Professional Doctorate Health Service Management",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00952-1-professional-doctorate-nursing.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR00952/1/Professional-Doctorate-Nursing",
+    "course_name": "Professional Doctorate Nursing",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00953-5-nursing-studies.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR00953/5/Nursing-Studies",
+    "course_name": "Something has gone wrong",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00954-4-professional-doctorate-occupational-therapy.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR00954/4/Professional-Doctorate-Occupational-Therapy",
+    "course_name": "Professional Doctorate Occupational Therapy",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00968-1-professional-doctorate-psychoanalytic-psychotherapy.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR00968/1/Professional-Doctorate-Psychoanalytic-Psychotherapy",
+    "course_name": "Professional Doctorate Psychoanalytic Psychotherapy",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00970-1-professional-doctorate-psychodynamic-psychotherapy.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR00970/1/Professional-Doctorate-Psychodynamic-Psychotherapy",
+    "course_name": "Professional Doctorate Psychodynamic Psychotherapy",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00974-1-professional-doctorate-public-health-health-visiting.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR00974/1/Professional-Doctorate-Public-Health-Health-Visiting",
+    "course_name": "Professional Doctorate Public Health",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00977-1-professional-doctorate-social-care-education.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR00977/1/Professional-Doctorate-Social-Care-Education",
+    "course_name": "Professional Doctorate Social Care Education",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00980-1-professional-doctorate-social-services-management.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR00980/1/Professional-Doctorate-Social-Services-Management",
+    "course_name": "Professional Doctorate Social Services Management",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00984-3-phd-sociology.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR00984/3/PhD-Sociology",
+    "course_name": "PhD Sociology",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00987-3-professional-doctorate-speech-and-language-therapy.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR00987/3/Professional-Doctorate-Speech-and-Language-Therapy",
+    "course_name": "Professional Doctorate Speech and Language Therapy",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01405-4-engineering.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR01405/4/Engineering",
+    "course_name": "Something has gone wrong",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01457-1-professional-doctorate-analytical-psychology.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR01457/1/Professional-Doctorate-Analytical-Psychology",
+    "course_name": "Professional Doctorate Analytical Psychology",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01458-1-professional-doctorate-psychodynamic-counselling.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR01458/1/Professional-Doctorate-Psychodynamic-Counselling",
+    "course_name": "Professional Doctorate Psychodynamic Counselling",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01577-3-language-and-communication-science.md",
+    "course_url": "https://www.essex.ac.uk/courses/PR01577/3/Language-and-Communication-Science",
+    "course_name": "Something has gone wrong",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00008-1-ba-acting.md",
+    "course_url": "https://www.essex.ac.uk/courses/UG00008/1/BA-Acting",
+    "course_name": "BA (Hons)  Acting",
+    "status": "parsed",
+    "english_text": "If you do not require a student visa to study in the UK then we will assess your English language proficiency/ability at your interview or audition.\n\nEnglish language requirements for applicants whose first language is not English IELTS 6.0 overall with a minimum of 5.5 in each component, or specified score in another equivalent test that we accept. Details of English language requirements, including component scores, and the tests we accept for applicants who require a Student visa (excluding Nationals of Majority English Speaking Countries) can be found [here](https://www1.essex.ac.uk/documents/admissions/englishInternational.pdf) If we accept the English component of an international qualification it will be included in the academic levels listed above for the relevant countries. Pre-sessional English courses If you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "6.0",
+      "all_components_min": "5.5",
+      "min_section": "5.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00008-2-ba-acting.md",
+    "course_url": "https://www.essex.ac.uk/courses/UG00008/2/BA-Acting",
+    "course_name": "BA (Hons)  Acting",
+    "status": "parsed",
+    "english_text": "If you do not require a student visa to study in the UK then we will assess your English language proficiency/ability at your interview or audition.\n\nEnglish language requirements for applicants whose first language is not English IELTS 6.0 overall with a minimum of 5.5 in each component, or specified score in another equivalent test that we accept. Details of English language requirements, including component scores, and the tests we accept for applicants who require a Student visa (excluding Nationals of Majority English Speaking Countries) can be found [here](https://www1.essex.ac.uk/documents/admissions/englishInternational.pdf) If we accept the English component of an international qualification it will be included in the academic levels listed above for the relevant countries. Pre-sessional English courses If you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "6.0",
+      "all_components_min": "5.5",
+      "min_section": "5.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00010-1-ba-acting-and-contemporary-theatre.md",
+    "course_url": "https://www.essex.ac.uk/courses/UG00010/1/BA-Acting-and-Contemporary-Theatre",
+    "course_name": "BA (Hons)  Acting and Contemporary Theatre",
+    "status": "parsed",
+    "english_text": "If you do not require a student visa to study in the UK then we will assess your English language proficiency/ability at your interview or audition.\n\nEnglish language requirements for applicants whose first language is not English IELTS 6.0 overall with a minimum of 5.5 in each component, or specified score in another equivalent test that we accept. Details of English language requirements, including component scores, and the tests we accept for applicants who require a Student visa (excluding Nationals of Majority English Speaking Countries) can be found [here](https://www1.essex.ac.uk/documents/admissions/englishInternational.pdf) If we accept the English component of an international qualification it will be included in the academic levels listed above for the relevant countries. Pre-sessional English courses If you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "6.0",
+      "all_components_min": "5.5",
+      "min_section": "5.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00011-1-ba-acting-and-fight-performance.md",
+    "course_url": "https://www.essex.ac.uk/courses/UG00011/1/BA-Acting-and-Fight-Performance",
+    "course_name": "BA (Hons)  Acting and Fight Performance",
+    "status": "parsed",
+    "english_text": "If you do not require a student visa to study in the UK then we will assess your English language proficiency/ability at your interview or audition.\n\nEnglish language requirements for applicants whose first language is not English IELTS 6.0 overall with a minimum of 5.5 in each component, or specified score in another equivalent test that we accept. Details of English language requirements, including component scores, and the tests we accept for applicants who require a Student visa (excluding Nationals of Majority English Speaking Countries) can be found [here](https://www1.essex.ac.uk/documents/admissions/englishInternational.pdf) If we accept the English component of an international qualification it will be included in the academic levels listed above for the relevant countries. Pre-sessional English courses If you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "6.0",
+      "all_components_min": "5.5",
+      "min_section": "5.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00337-1-ba-acting-and-physical-theatre.md",
+    "course_url": "https://www.essex.ac.uk/courses/UG00337/1/BA-Acting-and-Physical-Theatre",
+    "course_name": "BA (Hons)  Acting and Physical Theatre",
+    "status": "parsed",
+    "english_text": "If you do not require a student visa to study in the UK then we will assess your English language proficiency/ability at your interview or audition.\n\nEnglish language requirements for applicants whose first language is not English IELTS 6.0 overall with a minimum of 5.5 in each component, or specified score in another equivalent test that we accept. Details of English language requirements, including component scores, and the tests we accept for applicants who require a Student visa (excluding Nationals of Majority English Speaking Countries) can be found [here](https://www1.essex.ac.uk/documents/admissions/englishInternational.pdf) If we accept the English component of an international qualification it will be included in the academic levels listed above for the relevant countries. Pre-sessional English courses If you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "6.0",
+      "all_components_min": "5.5",
+      "min_section": "5.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00339-2-bsc-physiotherapy.md",
+    "course_url": "https://www.essex.ac.uk/courses/UG00339/2/BSc-Physiotherapy",
+    "course_name": "BSc (Hons)  Physiotherapy",
+    "status": "parsed",
+    "english_text": "English language requirements for applicants whose first language is not English\n\nIELTS 7.0 overall with a minimum of 6.5 in each component, or specified score in an equivalent test that we accept.\n\nDetails of English language requirements and the tests we accept for applicants who require a Student visa (excluding Nationals of Majority English Speaking Countries) can be found [here](https://www1.essex.ac.uk/documents/admissions/englishInternational.pdf) If we accept the English component of an international qualification it will be included in the academic levels listed above for the relevant countries. Pre-sessional English courses If you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional) that enables you to start your course without retaking IELTS.",
+    "profile": {
+      "overall": "7.0",
+      "all_components_min": "6.5",
+      "min_section": "6.5"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00411-2-certificate-of-he-acting-for-stage-and-screen.md",
+    "course_url": "https://www.essex.ac.uk/courses/UG00411/2/Certificate-of-HE-Acting-for-Stage-and-Screen",
+    "course_name": "Certificate of HE Acting for Stage and Screen",
+    "status": "parsed",
+    "english_text": "If you do not require a student visa to study in the UK then we will assess your English language proficiency/ability at your interview or audition.\n\nIf your first language is not English and you are an international student that requires a student visa to study in the UK then you will need IELTS 5.0 overall, with a minimum of 4.0 in each component. IELTS tests must be a UKVI IELTS taken at an approved IELTS test centre on the UKVI’s list, available [here](https://www.gov.uk/guidance/prove-your-english-language-abilities-with-a-secure-english-language-test-selt) , in order to be accepted for entry to below degree-level courses. Tests must be taken within two years of the start of your course.\n\nPlease see our [immigration webpages](https://www1.essex.ac.uk/immigration/studies/english.aspx) for the latest Home Office guidance on English language qualifications.",
+    "profile": {
+      "overall": "5.0",
+      "all_components_min": "4.0",
+      "min_section": "4.0"
+    },
+    "error": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01559-1-certificate-of-he-health-and-social-care.md",
+    "course_url": "https://www.essex.ac.uk/courses/UG01559/1/Certificate-of-HE-Health-and-Social-Care",
+    "course_name": "Certificate of HE Health and Social Care",
+    "status": "english_found_unparsed",
+    "english_text": "Do I need to have achieved an acceptable English language qualification before I apply?\n\nYou don’t need to achieve the required level before making your application, but it will be one of the conditions of your offer.",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01664-1-fdsc-dental-hygiene.md",
+    "course_url": "https://www.essex.ac.uk/courses/UG01664/1/FdSc-Dental-Hygiene",
+    "course_name": "FdSc Dental Hygiene",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01664-2-bsc-dental-hygiene-and-therapy.md",
+    "course_url": "https://www.essex.ac.uk/courses/UG01664/2/BSc-Dental-Hygiene-and-Therapy",
+    "course_name": "BSc (Hons)  Dental Hygiene and Therapy",
+    "status": "no_english_on_page",
+    "english_text": "",
+    "profile": {},
+    "error": ""
+  }
+]

@@ -79,8 +79,8 @@ COURSE_PAGE_TITLE_SELECTOR=#main-content h1
 COURSE_CLEAN_ENGINE=generic
 
 # One CSS selector per line; optional heading with :: or |
+# Omit course-page marketing prose; keep entry requirements and fees only.
 COURSE_CLEAN_BLOCKS="
-Course overview :: #main-content
 Entry requirements :: section[id*="entry"]
 Fees and funding :: section[id*="fee"]
 "
@@ -95,7 +95,35 @@ nav
 COURSE_CLEAN_EXPAND_TABS=true
 
 # --- Course markdown cleanup (shared/course_markdown_cleanup.py) ---
+# Essex presetup/execute: drop overview, modules, teaching, and apply noise.
 COURSE_MARKDOWN_REMOVE_SECTIONS="
+2 :: Related courses
+3 :: Applying
+3 :: Auditioning
+3 :: Visit Loughton Campus
+3 :: Our expert staff
+3 :: Specialist facilities
+3 :: Your future
+3 :: Course structure
+3 :: Teaching
+3 :: Assessment
+3 :: Dissertation
+3 :: What is the *
+3 :: Why this course
+3 :: Who should apply
+3 :: What you'll learn
+3 :: Your learning experience
+3 :: Placements and internships
+3 :: Study abroad opportunities
+3 :: Careers
+3 :: *Open Days*
+3 :: Visit Colchester Campus
+3 :: Virtual tours
+3 :: International & EU entry requirements
+3 :: Placement year
+3 :: Study abroad
+4 :: Components
+4 :: Modules
 2 :: Latest news
 2 :: Be part of our community
 2 :: Alumni services
@@ -112,7 +140,30 @@ COURSE_MARKDOWN_REMOVE_SECTIONS="
 "
 
 UNI_REQ_SOURCE_URLS="
-bangladesh-entry :: page_type:
-english-requirements :: page_type:
-scholarships :: page_type:
+bangladesh-entry :: https://www.essex.ac.uk/international/country-specific-information/south-asia#bangladesh
+english-requirements :: https://www1.essex.ac.uk/documents/admissions/englishInternational.pdf
+english-course-groups :: https://www.essex.ac.uk/-/media/documents/study/english_language_requirements.pdf
+scholarships :: https://www.essex.ac.uk/undergraduate/fees-and-funding/scholarships-and-funding
+deposit :: https://www.essex.ac.uk/-/media/documents/about/governance/contractual-documents/2026-27/tuition-fee-deposit-policy-oct-2026-jan-and-april-2027.pdf
 "
+
+# Stage 2 LLM: read English from course markdown (injected IELTS + TOEFL/PTE bullets)
+LLM_STAGE2_ENGLISH_SOURCE=course
+LLM_STAGE2_UNI_PARTS=entry,scholarship,deposit
+
+# LLM extract uses output/clean/courses directly — no download/clean in --llm-only mode:
+#   python shared/run_course_pipeline.py --code-dir "University of Essex/code" --llm-only --all --resume
+# Or: python shared/run_llm_to_dev_csv.py --code-dir "University of Essex/code" --resume
+
+# --- Essex-only helpers (run from repo root; scripts live in this code/ folder) ---
+# python "University of Essex/code/build_essex_english_course_groups.py"
+# python "University of Essex/code/dry_run_essex_english_groups.py"
+# python "University of Essex/code/dry_run_essex_course_ielts.py" --json-out "University of Essex/output/english_ielts_variations.json"
+# python "University of Essex/code/fetch_essex_missing_ielts_from_urls.py" --apply
+# python "University of Essex/code/backfill_essex_course_ielts.py" --apply
+# python "University of Essex/code/compare_essex_ielts_match.py"
+# python "University of Essex/code/dry_run_essex_foundation_pathway_map.py"
+# python "University of Essex/code/inject_essex_foundation_kaplan_ielts.py" --apply
+# python "University of Essex/code/inject_essex_foundation_pte_toefl.py" --apply
+# python "University of Essex/code/migrate_essex_courses_to_clean.py"
+# python "University of Essex/code/build_course_urls_from_markdown.py"

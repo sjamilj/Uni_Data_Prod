@@ -21,6 +21,7 @@
 # IGNORE (large, resume state, or rebuilt every run):
 #   output/                         — all pipeline output (re-run scripts)
 #   Exception: output/clean/uni/    — committed requirement markdown (all unis)
+#   Exception: University of Essex/output/ — full Essex pipeline output committed
 #
 # =============================================================================
 
@@ -64,6 +65,10 @@ REVIEW/
 **/output/**
 !_university_template/output/
 !_university_template/output/.gitkeep
+
+# Committed pipeline output (University of Essex only)
+!University of Essex/output/
+!University of Essex/output/**
 
 # Committed uni requirement markdown (all universities)
 !**/output/clean/

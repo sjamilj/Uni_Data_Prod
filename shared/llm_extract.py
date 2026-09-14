@@ -236,7 +236,10 @@ BANGLADESH_COUNTRY_BLOCK_RE = re.compile(
     r"####\s*Bangladesh\s*\n(.*?)(?=\n####\s|\n###\s|\n##\s|\Z)",
     re.I | re.S,
 )
-ENGLISH_GROUP_RE = re.compile(r"\bGroup\s+([A-G])\b", re.I)
+ENGLISH_GROUP_RE = re.compile(r"\bGroup\s+(\d{1,2}|[A-G])\b", re.I)
+ENGLISH_COURSE_GROUPS_MD = "english-course-groups.md"
+ENGLISH_TESTS_MAPPED_MARKER = "<!-- english-tests-mapped -->"
+POSTGRADUATE_ENGLISH_LEVELS = frozenset({"postgraduate", "postgraduate_research"})
 DEGREE_LABEL_MAP = {
     "hsc": "HSC",
     "hsc (alim)": "HSC",
@@ -659,6 +662,14 @@ class ExtractionPathConfig:
     def load_uni_sections(output_dir: Path) -> dict[str, str]:
         """Load entry / english / scholarship uni markdown by role."""
         return {role: load_uni_section(output_dir, filename) for role, filename in UNI_MD_BY_ROLE.items()}
+
+    @staticmethod
+    def load_english_course_groups(output_dir: Path) -> list[dict]:
+        content = load_uni_section(output_dir, ENGLISH_COURSE_GROUPS_MD)
+        data = parse_uni_json_payload(content, "english-course-groups")
+        if isinstance(data, list):
+            return [item for item in data if isinstance(item, dict)]
+        return []
 
     @staticmethod
     def normalize_award_label(text: str) -> str:
@@ -1424,7 +1435,7 @@ class CourseIndexManager:
         output_dir = resolve_output_dir(code_dir)
         courses_dir = output_dir / 'clean' / 'courses'
         if not courses_dir.exists():
-            raise FileNotFoundError(f'{courses_dir} not found — run download_and_clean_course_pages.py --clean-only first')
+            raise FileNotFoundError(f'{courses_dir} not found — add clean/courses markdown or run download_and_clean_course_pages.py --clean-only')
         university_name = code_dir.parent.name
         rows: list[dict[str, str]] = []
         canonical_paths = select_canonical_course_md_paths(courses_dir)
@@ -1960,8 +1971,703 @@ class Stage2Enricher:
                 continue
             match = ENGLISH_GROUP_RE.search(text)
             if match:
-                return f"Group {match.group(1).upper()}"
+                token = match.group(1)
+                if token.isalpha():
+                    token = token.upper()
+                return f"Group {token}"
         return ""
+
+    @staticmethod
+    def normalize_english_lookup_name(text: str) -> str:
+        cleaned = re.sub(r"[^\w\s]", " ", (text or "").casefold())
+        return re.sub(r"\s+", " ", cleaned).strip()
+
+    @staticmethod
+    def english_course_labels(course_name: str, course_body: str) -> list[str]:
+        labels: list[str] = []
+        for pattern in (
+            r"\*\*Course:\*\*\s*(.+)",
+            r"^#\s+(.+)$",
+        ):
+            match = re.search(pattern, course_body, re.I | re.M)
+            if match:
+                label = match.group(1).strip()
+                if label and label not in labels:
+                    labels.append(label)
+        if course_name and course_name not in labels:
+            labels.append(course_name.strip())
+        return labels
+
+    @staticmethod
+    def english_course_department(course_body: str) -> str:
+        match = re.search(r"\*\*Based in:\*\*\s*(.+)", course_body, re.I)
+        return match.group(1).strip() if match else ""
+
+    @staticmethod
+    def extract_english_language_section(course_body: str) -> str:
+        match = re.search(
+            r"###\s*(?:International and )?English language requirements[^\n]*\n(.*?)(?=\n###\s|\n##\s|\Z)",
+            course_body,
+            re.I | re.S,
+        )
+        return match.group(1).strip() if match else ""
+
+    @staticmethod
+    def course_has_mapped_english_tests(course_body: str) -> bool:
+        return ENGLISH_TESTS_MAPPED_MARKER in Stage2Enricher.extract_english_language_section(course_body)
+
+    @staticmethod
+    def parse_course_english_mapped_json(course_body: str) -> dict[str, object] | None:
+        section = Stage2Enricher.extract_english_language_section(course_body)
+        if not section or ENGLISH_TESTS_MAPPED_MARKER not in section:
+            return None
+        _, _, mapped = section.partition(ENGLISH_TESTS_MAPPED_MARKER)
+        from inject_english_requirements_md import parse_english_json_from_mapped_block
+
+        return parse_english_json_from_mapped_block(mapped)
+
+    @staticmethod
+    def parse_course_english_mapped_descriptions(course_body: str) -> list[str]:
+        mapped_json = Stage2Enricher.parse_course_english_mapped_json(course_body)
+        if mapped_json:
+            from inject_english_requirements_md import english_requirement_descriptions
+
+            return english_requirement_descriptions(mapped_json)
+        section = Stage2Enricher.extract_english_language_section(course_body)
+        if not section or ENGLISH_TESTS_MAPPED_MARKER not in section:
+            return []
+        _, _, mapped = section.partition(ENGLISH_TESTS_MAPPED_MARKER)
+        descriptions: list[str] = []
+        for line in mapped.splitlines():
+            text = line.strip()
+            if text.startswith("- "):
+                text = text[2:].strip()
+            if text and not text.startswith("http") and not text.startswith("<!--"):
+                descriptions.append(text)
+        return descriptions
+
+    @staticmethod
+    def parse_english_scores_from_descriptions(descriptions: list[str]) -> dict[str, str]:
+        scores = {key: "" for key in ENGLISH_TEST_KEYS}
+        for line in descriptions:
+            lower = line.casefold()
+            if "ielts" in lower:
+                profile = Stage2Enricher.extract_course_ielts_profile(line)
+                if profile.get("overall"):
+                    scores["ieltsMinOverall"] = profile["overall"]
+                section = profile.get("min_section") or profile.get("all_components_min") or ""
+                if section:
+                    scores["ieltsMinSection"] = section
+                continue
+            if "pearson" in lower or "pte" in lower:
+                match = re.search(
+                    r"(\d+)\s+overall(?:\s+with\s+no\s+element\s+below\s+(\d+))?",
+                    line,
+                    re.I,
+                )
+                if match:
+                    scores["pteMinOverall"] = match.group(1)
+                    if match.group(2):
+                        scores["pteMinSection"] = match.group(2)
+                continue
+            if "toefl" in lower:
+                overall = re.search(r"(?:minimum\s+)?(\d+(?:\.\d+)?)\s+overall", line, re.I)
+                sections = [
+                    float(value)
+                    for value in re.findall(
+                        r"(?:Reading|Listening|Speaking|Writing)\s+(\d+(?:\.\d+)?)",
+                        line,
+                        re.I,
+                    )
+                ]
+                if not overall:
+                    continue
+                overall_val = overall.group(1)
+                if sections:
+                    min_section = min(sections)
+                    scores["toeflMinOverall"] = overall_val
+                    scores["toeflMinSection"] = (
+                        str(int(min_section))
+                        if min_section.is_integer()
+                        else str(min_section)
+                    )
+                elif not scores["toeflMinOverall"] or float(overall_val) > float(
+                    scores["toeflMinOverall"] or 0
+                ):
+                    scores["toeflMinOverall"] = overall_val
+                    section_match = re.search(
+                        r"no element below\s+(\d+(?:\.\d+)?)", line, re.I
+                    )
+                    if section_match:
+                        scores["toeflMinSection"] = section_match.group(1)
+        return scores
+
+    @staticmethod
+    def parse_english_from_course_markdown(course_body: str) -> dict[str, object]:
+        """Build english_requirements_parsed shape from course markdown English section."""
+        mapped_json = Stage2Enricher.parse_course_english_mapped_json(course_body)
+        if mapped_json:
+            return mapped_json
+
+        section = Stage2Enricher.extract_english_language_section(course_body)
+        if not section:
+            return {"AcademicRequirementsMetaData": [], **{key: "" for key in ENGLISH_TEST_KEYS}}
+
+        source = section.split(ENGLISH_TESTS_MAPPED_MARKER)[0].strip()
+        descriptions = Stage2Enricher.parse_course_english_mapped_descriptions(course_body)
+        profile = Stage2Enricher.extract_course_ielts_profile(source or course_body)
+        scores = Stage2Enricher.parse_english_scores_from_descriptions(descriptions)
+
+        if profile.get("overall"):
+            scores["ieltsMinOverall"] = profile["overall"]
+        section_min = profile.get("min_section") or profile.get("all_components_min") or ""
+        if section_min:
+            scores["ieltsMinSection"] = section_min
+
+        if not descriptions and section.strip():
+            prose_lines = [
+                line.strip()
+                for line in source.splitlines()
+                if line.strip() and not line.strip().startswith("#")
+            ]
+            descriptions = [line for line in prose_lines if re.search(r"\bIELTS\b", line, re.I)]
+            if not descriptions and scores.get("ieltsMinOverall"):
+                overall = scores["ieltsMinOverall"]
+                min_section = scores.get("ieltsMinSection", "")
+                descriptions = [
+                    f"IELTS {overall} overall with no element below {min_section}"
+                    if min_section
+                    else f"IELTS {overall} overall"
+                ]
+
+        metadata: list[dict[str, object]] = []
+        if descriptions:
+            metadata = [{"subtitle": "English Requirement", "description": descriptions}]
+        return {
+            "AcademicRequirementsMetaData": metadata,
+            **{key: str(scores.get(key, "") or "").strip() for key in ENGLISH_TEST_KEYS},
+        }
+
+    @staticmethod
+    def _normalize_ielts_score(value: str) -> str:
+        return str(value or "").strip().rstrip(".")
+
+    @staticmethod
+    def _normalize_ielts_text(text: str) -> str:
+        text = re.sub(r"\s+", " ", str(text or ""))
+        return re.sub(r"\bIELST\b", "IELTS", text, flags=re.I)
+
+    @staticmethod
+    def extract_course_ielts_profile(course_body: str) -> dict[str, str]:
+        """Parse IELTS overall/section/writing scores from a course markdown body."""
+        text = Stage2Enricher.extract_english_language_section(course_body)
+        if not text:
+            text = course_body
+        text = Stage2Enricher._normalize_ielts_text(text)
+        profile: dict[str, str] = {}
+        score = Stage2Enricher._normalize_ielts_score
+        patterns = [
+            (
+                r"(?:at least )?level\s+([\d.]+)\s*\(with no component below\s+([\d.]+)\)\s*on the IELTS",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "all_components_min": score(m.group(2)),
+                    "min_section": score(m.group(2)),
+                },
+            ),
+            (
+                r"IELTS with an overall score of\s+([\d.]+),?\s*and minimum component scores? of\s+([\d.]+)",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "all_components_min": score(m.group(2)),
+                    "min_section": score(m.group(2)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+with a minimum of\s+([\d.]+)\s+in writing,?\s*with (?:a )?(?:(?:minimum )?score of|minimum of)\s+([\d.]+)\s+in all other components",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "writing_min": score(m.group(2)),
+                    "min_section": score(m.group(3)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+overall,?\s*and\s+([\d.]+)\s+in writing,?\s*with a minimum of\s+([\d.]+)\s+remaining components",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "writing_min": score(m.group(2)),
+                    "min_section": score(m.group(3)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+overall,?\s*with a minimum of\s+([\d.]+)\s+in Writing,?\s*and\s+([\d.]+)\s+in all other components",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "writing_min": score(m.group(2)),
+                    "min_section": score(m.group(3)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+overall.*?([\d.]+)\s+in writing and\s+([\d.]+)\s+in all other",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "writing_min": score(m.group(2)),
+                    "min_section": score(m.group(3)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+overall.*?minimum of\s+([\d.]+)\s+in each component",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "all_components_min": score(m.group(2)),
+                    "min_section": score(m.group(2)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+with a minimum of\s+([\d.]+)\s+in each component",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "all_components_min": score(m.group(2)),
+                    "min_section": score(m.group(2)),
+                },
+            ),
+            (
+                r"IELTS\s+score\s+of\s+([\d.]+)\s*,?\s*with\s+([\d.]+)\s+in all components",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "all_components_min": score(m.group(2)),
+                    "min_section": score(m.group(2)),
+                },
+            ),
+            (
+                r"IELTS\s+score\s+of\s+([\d.]+)",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)(?:\s+overall)?,?\s*or equivalent,?\s*with (?:a )?(?:(?:minimum )?score of|minimum of)\s+([\d.]+)\s+in all other components",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "all_components_min": score(m.group(2)),
+                    "min_section": score(m.group(2)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+overall\s+and\s+([\d.]+)\s+in all other components",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "all_components_min": score(m.group(2)),
+                    "min_section": score(m.group(2)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+overall,?\s*with no component score below\s+([\d.]+),?\s*or equivalent",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "all_components_min": score(m.group(2)),
+                    "min_section": score(m.group(2)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+with a minimum of\s+([\d.]+)\s+in writing,?\s*or equivalent",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "writing_min": score(m.group(2)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s*\(\s*([\d.]+)\s+in writing,?\s*with a minimum of\s+([\d.]+)\s+remaining components\s*\)",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "writing_min": score(m.group(2)),
+                    "min_section": score(m.group(3)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s*\(\s*([\d.]+)\s+minimum component score\s*\)",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "all_components_min": score(m.group(2)),
+                    "min_section": score(m.group(2)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+overall,?\s*or\s+equivalent(?!\s*,?\s*with)",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+or\s+equivalent(?!\s*,?\s*with)",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+overall.*?minimum\s+score of\s+([\d.]+)\s+in all components",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "all_components_min": score(m.group(2)),
+                    "min_section": score(m.group(2)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+overall[^.\n]*minimum[^.\n]*?([\d.]+)[^.\n]*?all components",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "all_components_min": score(m.group(2)),
+                    "min_section": score(m.group(2)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+overall[^.\n]*minimum component score of\s+([\d.]+)",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "min_section": score(m.group(2)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+overall[^.\n]*no less than\s+([\d.]+)",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "min_section": score(m.group(2)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)[^.\n]*minimum of\s+([\d.]+)\s+in all",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "all_components_min": score(m.group(2)),
+                    "min_section": score(m.group(2)),
+                },
+            ),
+            (
+                r"IELTS\s+([\d.]+)\s+overall[^.\n]*minimum component scores? of\s+([\d.]+)",
+                lambda m: {
+                    "overall": score(m.group(1)),
+                    "min_section": score(m.group(2)),
+                },
+            ),
+        ]
+        for pattern, builder in patterns:
+            match = re.search(pattern, text, re.I | re.S)
+            if match:
+                profile.update(builder(match))
+                break
+        return profile
+
+    @staticmethod
+    def parse_group_ielts_profile(program: dict) -> dict[str, str]:
+        profile: dict[str, str] = {}
+        if not isinstance(program, dict):
+            return profile
+        for test in program.get("TestRequirements", []):
+            if not isinstance(test, dict):
+                continue
+            if "ielts" not in str(test.get("TestName", "") or "").casefold():
+                continue
+            profile["overall"] = str(test.get("ieltsMinOverall", "") or "").strip()
+            profile["min_section"] = str(test.get("ieltsMinSection", "") or "").strip()
+            break
+        descriptions = program.get("description")
+        if isinstance(descriptions, list):
+            text = " ".join(str(item) for item in descriptions)
+        else:
+            text = str(descriptions or "")
+        ielts_text = re.split(r"\b(?:Pearson|TOEFL|Cambridge|Kaplan|Trinity|Michigan|Oxford|Skills for English|LanguageCert)\b", text, maxsplit=1, flags=re.I)[0]
+        if "no element below" in ielts_text.casefold() and profile.get("min_section"):
+            profile["all_components_min"] = profile["min_section"]
+        writing_match = re.search(r"Writing:\s*([\d.]+)|Writing\s+([\d.]+)", ielts_text, re.I)
+        if writing_match:
+            profile["writing_min"] = (writing_match.group(1) or writing_match.group(2) or "").strip()
+        component_scores = [
+            float(value)
+            for value in re.findall(
+                r"(?:Listening|Reading|Speaking|Writing):\s*([\d.]+)",
+                ielts_text,
+                re.I,
+            )
+        ]
+        if len(component_scores) >= 4 and len(set(component_scores)) == 1:
+            profile["all_components_min"] = str(component_scores[0])
+            profile["min_section"] = profile["all_components_min"]
+        return profile
+
+    @staticmethod
+    def build_group_ielts_profiles(english_programs: list[dict]) -> dict[str, dict[str, str]]:
+        profiles: dict[str, dict[str, str]] = {}
+        for program in english_programs:
+            if not isinstance(program, dict):
+                continue
+            group_name = str(program.get("ProgramName", "") or "").strip()
+            if not re.fullmatch(r"Group\s+\d{1,2}", group_name, re.I):
+                continue
+            profiles[group_name] = Stage2Enricher.parse_group_ielts_profile(program)
+        return profiles
+
+    @staticmethod
+    def score_ielts_profile_match(course_profile: dict[str, str], group_profile: dict[str, str]) -> int:
+        course_overall = str(course_profile.get("overall", "") or "").strip()
+        group_overall = str(group_profile.get("overall", "") or "").strip()
+        if not course_overall or not group_overall:
+            return 0
+        try:
+            if float(course_overall) != float(group_overall):
+                return 0
+        except ValueError:
+            return 0
+
+        score = 100
+
+        def as_float(value: str) -> float | None:
+            value = str(value or "").strip()
+            if not value:
+                return None
+            try:
+                return float(value)
+            except ValueError:
+                return None
+
+        course_all = as_float(course_profile.get("all_components_min", ""))
+        group_all = as_float(group_profile.get("all_components_min", ""))
+        course_section = as_float(course_profile.get("min_section", ""))
+        group_section = as_float(group_profile.get("min_section", ""))
+        course_writing = as_float(course_profile.get("writing_min", ""))
+        group_writing = as_float(group_profile.get("writing_min", ""))
+
+        if course_all is not None:
+            if group_all is not None and course_all == group_all:
+                score += 80
+            elif group_section is not None and course_all == group_section:
+                score += 80
+            elif group_writing is not None and course_all != group_writing:
+                score -= 40
+            return score
+
+        if course_writing is not None:
+            if group_writing is not None and course_writing == group_writing:
+                score += 50
+            elif group_section is not None and course_writing == group_section and group_writing is None:
+                score += 20
+            elif group_writing is not None and course_writing != group_writing:
+                score -= 40
+            if course_section is not None and group_section is not None and course_section == group_section:
+                score += 30
+            return score
+
+        if course_section is not None and group_section is not None:
+            if course_section == group_section:
+                score += 80
+            else:
+                score -= 40
+            if group_writing is not None and course_section != group_writing:
+                score -= 20
+        return score
+
+    @staticmethod
+    def english_group_sort_key(group_name: str) -> tuple[int, str]:
+        match = re.search(r"(\d+)", group_name or "")
+        number = int(match.group(1)) if match else 999
+        return number, str(group_name or "").casefold()
+
+    @staticmethod
+    def pick_preferred_english_group(group_names: set[str] | list[str]) -> str:
+        names = [str(name).strip() for name in group_names if str(name).strip()]
+        if not names:
+            return ""
+        return sorted(names, key=Stage2Enricher.english_group_sort_key)[0]
+
+    @staticmethod
+    def disambiguate_groups_by_ielts(
+        group_names: set[str],
+        course_body: str,
+        english_programs: list[dict],
+    ) -> str:
+        if len(group_names) < 2 or not english_programs:
+            return ""
+        course_profile = Stage2Enricher.extract_course_ielts_profile(course_body)
+        group_profiles = Stage2Enricher.build_group_ielts_profiles(english_programs)
+        if course_profile.get("overall"):
+            scored: list[tuple[int, str]] = []
+            for group_name in group_names:
+                profile = group_profiles.get(group_name, {})
+                match_score = Stage2Enricher.score_ielts_profile_match(course_profile, profile)
+                if match_score > 0:
+                    scored.append((match_score, group_name))
+            if scored:
+                scored.sort(key=lambda pair: (-pair[0], Stage2Enricher.english_group_sort_key(pair[1])))
+                best_score = scored[0][0]
+                top_groups = [name for score, name in scored if score == best_score]
+                return Stage2Enricher.pick_preferred_english_group(top_groups)
+        return Stage2Enricher.pick_preferred_english_group(group_names)
+
+    @staticmethod
+    def resolve_english_course_group(
+        groups: list[dict],
+        *,
+        course_name: str,
+        course_body: str,
+        course_level: str,
+        english_programs: list[dict] | None = None,
+    ) -> str:
+        if course_level not in POSTGRADUATE_ENGLISH_LEVELS or not groups:
+            return ""
+        labels = Stage2Enricher.english_course_labels(course_name, course_body)
+        if not labels:
+            return ""
+        normalized_labels = [Stage2Enricher.normalize_english_lookup_name(label) for label in labels]
+        normalized_labels = [label for label in normalized_labels if label]
+        if not normalized_labels:
+            return ""
+        normalized_department = Stage2Enricher.normalize_english_lookup_name(
+            Stage2Enricher.english_course_department(course_body)
+        )
+        candidates: list[tuple[int, dict]] = []
+        for row in groups:
+            if not isinstance(row, dict):
+                continue
+            row_level = str(row.get("studyLevel", "") or "").strip()
+            if row_level and row_level not in POSTGRADUATE_ENGLISH_LEVELS:
+                continue
+            row_name = Stage2Enricher.normalize_english_lookup_name(str(row.get("courseName", "") or ""))
+            if not row_name:
+                continue
+            for label in normalized_labels:
+                if label == row_name or row_name in label or label in row_name:
+                    score = 100 if label == row_name else 80
+                    if row_level == course_level:
+                        score += 5
+                    row_department = Stage2Enricher.normalize_english_lookup_name(str(row.get("department", "") or ""))
+                    if row_department and normalized_department:
+                        if row_department in normalized_department or normalized_department in row_department:
+                            score += 20
+                    candidates.append((score, row))
+                    break
+        if not candidates:
+            if english_programs:
+                flat_row = Stage2Enricher.select_english_flat_row_by_ielts(english_programs, course_body)
+                group_from_flat = Stage2Enricher.infer_english_group_from_flat_row(flat_row) if flat_row else ""
+                if group_from_flat:
+                    return group_from_flat
+            return ""
+        candidates.sort(key=lambda pair: pair[0], reverse=True)
+        best_score = candidates[0][0]
+        top_rows = [row for score, row in candidates if score == best_score]
+        groups_found = {str(row.get("englishGroup", "") or "").strip() for row in top_rows}
+        groups_found.discard("")
+        if len(groups_found) == 1:
+            return next(iter(groups_found))
+        if len(groups_found) > 1:
+            if english_programs:
+                resolved = Stage2Enricher.disambiguate_groups_by_ielts(
+                    groups_found,
+                    course_body,
+                    english_programs,
+                )
+                if resolved:
+                    return resolved
+            if normalized_department:
+                dept_groups = {
+                    str(row.get("englishGroup", "") or "").strip()
+                    for row in top_rows
+                    if Stage2Enricher.normalize_english_lookup_name(str(row.get("department", "") or ""))
+                    and (
+                        Stage2Enricher.normalize_english_lookup_name(str(row.get("department", "") or ""))
+                        in normalized_department
+                        or normalized_department
+                        in Stage2Enricher.normalize_english_lookup_name(str(row.get("department", "") or ""))
+                    )
+                }
+                dept_groups.discard("")
+                if len(dept_groups) == 1:
+                    return next(iter(dept_groups))
+            return Stage2Enricher.pick_preferred_english_group(groups_found)
+        return ""
+
+    @staticmethod
+    def english_group_context(*, group_name: str) -> str:
+        group_name = str(group_name or "").strip()
+        if not group_name:
+            return ""
+        return f"\n\nEnglish language test group: {group_name}\n"
+
+    @staticmethod
+    def english_flat_rows(programs: list[dict]) -> list[dict]:
+        rows: list[dict] = []
+        for program in programs:
+            if not isinstance(program, dict):
+                continue
+            if str(program.get("TestStudyLevel", "") or "").strip():
+                continue
+            if str(program.get("ieltsMinOverall", "") or "").strip():
+                rows.append(program)
+        return rows
+
+    @staticmethod
+    def select_english_flat_row_by_ielts(programs: list[dict], course_body: str) -> dict | None:
+        course_profile = Stage2Enricher.extract_course_ielts_profile(course_body)
+        if not course_profile.get("overall"):
+            return None
+        scored: list[tuple[int, dict]] = []
+        for row in Stage2Enricher.english_flat_rows(programs):
+            row_profile = {
+                "overall": str(row.get("ieltsMinOverall", "") or "").strip(),
+                "min_section": str(row.get("ieltsMinSection", "") or "").strip(),
+            }
+            if row_profile["min_section"]:
+                row_profile["all_components_min"] = row_profile["min_section"]
+            match_score = Stage2Enricher.score_ielts_profile_match(course_profile, row_profile)
+            if match_score > 0:
+                scored.append((match_score, row))
+        if not scored:
+            return None
+        scored.sort(key=lambda pair: pair[0], reverse=True)
+        return scored[0][1]
+
+    @staticmethod
+    def infer_english_group_from_flat_row(flat_row: dict) -> str:
+        descriptions = flat_row.get("description")
+        if isinstance(descriptions, list):
+            text = " ".join(str(item) for item in descriptions)
+        else:
+            text = str(descriptions or "")
+        match = ENGLISH_GROUP_RE.search(text)
+        if match:
+            token = match.group(1)
+            if token.isalpha():
+                token = token.upper()
+            return f"Group {token}"
+        return ""
+
+    @staticmethod
+    def get_ielts_from_english_program(program: dict) -> tuple[str, str]:
+        if not isinstance(program, dict):
+            return "", ""
+        for test in program.get("TestRequirements", []):
+            if not isinstance(test, dict):
+                continue
+            if "ielts" not in str(test.get("TestName", "") or "").casefold():
+                continue
+            overall = str(test.get("ieltsMinOverall", "") or "").strip()
+            section = str(test.get("ieltsMinSection", "") or "").strip()
+            return overall, section
+        overall = str(program.get("ieltsMinOverall", "") or "").strip()
+        section = str(program.get("ieltsMinSection", "") or "").strip()
+        return overall, section
+
+    @staticmethod
+    def build_course_ielts_requirement_text(overall: str, section: str = "") -> str:
+        overall = str(overall or "").strip()
+        section = str(section or "").strip()
+        if not overall:
+            return ""
+        if section:
+            return (
+                f"If English is not your first language, we require IELTS {overall} overall "
+                f"with a minimum score of {section} in all components."
+            )
+        return f"If English is not your first language, we require IELTS {overall} overall or equivalent."
 
     @staticmethod
     def select_english_json_program(
@@ -1970,8 +2676,21 @@ class Stage2Enricher:
     course_level: str,
     course_name: str,
     course_body: str = "",
+    english_course_groups: list[dict] | None = None,
 ) -> dict | None:
         group_name = Stage2Enricher.detect_english_group(course_body, course_name)
+        if (
+            not group_name
+            and english_course_groups
+            and course_level in POSTGRADUATE_ENGLISH_LEVELS
+        ):
+            group_name = Stage2Enricher.resolve_english_course_group(
+                english_course_groups,
+                course_name=course_name,
+                course_body=course_body,
+                course_level=course_level,
+                english_programs=programs if isinstance(programs, list) else None,
+            )
         if group_name:
             for item in programs:
                 if not isinstance(item, dict):
@@ -1979,6 +2698,9 @@ class Stage2Enricher:
                 program_name = str(item.get("ProgramName", "") or "").strip()
                 if program_name.casefold() == group_name.casefold():
                     return item
+        flat_row = Stage2Enricher.select_english_flat_row_by_ielts(programs, course_body)
+        if flat_row:
+            return flat_row
         aliases = ENGLISH_JSON_LEVEL_ALIASES.get(course_level, (course_level,))
         candidates = [item for item in programs if isinstance(item, dict) and str(item.get('TestStudyLevel', '') or '').strip().lower() in aliases]
         if not candidates:
@@ -2054,7 +2776,17 @@ class Stage2Enricher:
             if line not in seen:
                 entry_descriptions.append(line)
                 seen.add(line)
-        english_descriptions = extract_english_json_descriptions(english_content, course_level, course_name=course_name, course_body=course_body)
+        course_english = parse_english_from_course_markdown(course_body)
+        english_descriptions: list[str] = []
+        for block in course_english.get("AcademicRequirementsMetaData") or []:
+            if not isinstance(block, dict):
+                continue
+            if str(block.get("subtitle", "") or "").strip().casefold() != "english requirement":
+                continue
+            english_descriptions = Stage1Enricher.normalize_description_list(block.get("description"))
+            break
+        if not english_descriptions:
+            english_descriptions = extract_english_json_descriptions(english_content, course_level, course_name=course_name, course_body=course_body)
         if not english_descriptions:
             for item in normalize_metadata_array(metadata):
                 if str(item.get('subtitle', '')).strip().lower() == 'english requirement':
@@ -2226,28 +2958,49 @@ class Stage2Enricher:
 ) -> dict:
         """Ensure english_requirements_parsed.json has test scalars (+ metadata)."""
         parsed = dict(english_json) if isinstance(english_json, dict) else {}
-        lookup_content = english_lookup_content or english_content
-        fallback = parse_english_test_scores(lookup_content, course_name=course_name, course_level=course_level)
-        json_program = select_english_json_program(
-            parse_uni_json_payload(lookup_content, 'english-requirements') or [],
-            course_level=course_level,
-            course_name=course_name,
-            course_body=f'{course_body}\n{english_content}',
-        )
-        if isinstance(json_program, dict):
-            for test in json_program.get('TestRequirements', []):
-                if not isinstance(test, dict):
-                    continue
-                name = str(test.get('TestName', '') or '').lower()
-                if 'ielts' in name:
-                    fallback['ieltsMinOverall'] = str(test.get('ieltsMinOverall', '') or '').strip()
-                    fallback['ieltsMinSection'] = str(test.get('ieltsMinSection', '') or '').strip()
-                elif 'toefl' in name:
-                    fallback['toeflMinOverall'] = str(test.get('toeflMinOverall', '') or '').strip()
-                    fallback['toeflMinSection'] = str(test.get('toeflMinSection', '') or '').strip()
-                elif 'pearson' in name or 'pte' in name:
-                    fallback['pteMinOverall'] = str(test.get('pteMinOverall', '') or '').strip()
-                    fallback['pteMinSection'] = str(test.get('pteMinSection', '') or '').strip()
+        course_markdown = f'{course_body}\n{english_content}'.strip()
+        course_english = parse_english_from_course_markdown(course_markdown)
+        course_descriptions: list[str] = []
+        for block in course_english.get("AcademicRequirementsMetaData") or []:
+            if not isinstance(block, dict):
+                continue
+            if str(block.get("subtitle", "") or "").strip().casefold() != "english requirement":
+                continue
+            course_descriptions = Stage1Enricher.normalize_description_list(block.get("description"))
+            break
+        course_scores = {key: str(course_english.get(key, "") or "").strip() for key in ENGLISH_TEST_KEYS}
+        has_course_english = bool(course_descriptions) or any(course_scores.values())
+
+        if has_course_english:
+            fallback = course_scores
+        else:
+            lookup_content = english_lookup_content or english_content
+            fallback = parse_english_test_scores(lookup_content, course_name=course_name, course_level=course_level)
+            json_program = select_english_json_program(
+                parse_uni_json_payload(lookup_content, 'english-requirements') or [],
+                course_level=course_level,
+                course_name=course_name,
+                course_body=f'{course_body}\n{english_content}',
+            )
+            if isinstance(json_program, dict):
+                for test in json_program.get('TestRequirements', []):
+                    if not isinstance(test, dict):
+                        continue
+                    name = str(test.get('TestName', '') or '').lower()
+                    if 'ielts' in name:
+                        fallback['ieltsMinOverall'] = str(test.get('ieltsMinOverall', '') or '').strip()
+                        fallback['ieltsMinSection'] = str(test.get('ieltsMinSection', '') or '').strip()
+                    elif 'toefl' in name:
+                        fallback['toeflMinOverall'] = str(test.get('toeflMinOverall', '') or '').strip()
+                        fallback['toeflMinSection'] = str(test.get('toeflMinSection', '') or '').strip()
+                    elif 'pearson' in name or 'pte' in name:
+                        fallback['pteMinOverall'] = str(test.get('pteMinOverall', '') or '').strip()
+                        fallback['pteMinSection'] = str(test.get('pteMinSection', '') or '').strip()
+                for key in ENGLISH_TEST_KEYS:
+                    if not str(fallback.get(key, '') or '').strip():
+                        value = str(json_program.get(key, '') or '').strip()
+                        if value:
+                            fallback[key] = value
         for key in ENGLISH_TEST_KEYS:
             current = str(parsed.get(key, '') or '').strip()
             if not current:
@@ -2261,15 +3014,19 @@ class Stage2Enricher:
                 parsed[key] = stage1_val
         meta = normalize_metadata_array(parsed.get('AcademicRequirementsMetaData'), default_subtitle='English Requirement')
         meta = filter_academic_metadata(meta)
-        json_descriptions = extract_english_json_descriptions(
-            lookup_content,
-            course_level,
-            course_name=course_name,
-            course_body=f'{course_body}\n{english_content}',
-        )
-        if json_descriptions:
-            meta = [{'subtitle': 'English Requirement', 'description': json_descriptions}]
-        elif not meta and parsed.get('ieltsMinOverall'):
+        if has_course_english and course_descriptions:
+            meta = [{'subtitle': 'English Requirement', 'description': course_descriptions}]
+        elif not has_course_english:
+            lookup_content = english_lookup_content or english_content
+            json_descriptions = extract_english_json_descriptions(
+                lookup_content,
+                course_level,
+                course_name=course_name,
+                course_body=f'{course_body}\n{english_content}',
+            )
+            if json_descriptions:
+                meta = [{'subtitle': 'English Requirement', 'description': json_descriptions}]
+        if not meta and parsed.get('ieltsMinOverall'):
             overall = parsed['ieltsMinOverall']
             section = parsed.get('ieltsMinSection', '')
             sentence = f'IELTS {overall} overall with no element below {section}' if section else f'IELTS {overall} overall'
@@ -2786,8 +3543,37 @@ class CourseExtractor:
         uni_content = stage2_config.uni_content(uni_sections_all)
         entry_content = stage2_config.entry_content(course_body, uni_sections_all)
         english_content = stage2_config.english_content(course_body, uni_sections_all)
-        english_lookup_content = uni_sections_all.get('english', '')
+        english_lookup_content = (
+            ""
+            if stage2_config.english_source == "course"
+            or course_has_mapped_english_tests(course_body)
+            else uni_sections_all.get("english", "")
+        )
+        english_course_groups = (
+            []
+            if stage2_config.english_source == "course"
+            or course_has_mapped_english_tests(course_body)
+            else ExtractionPathConfig.load_english_course_groups(output_dir)
+        )
+        english_programs = (
+            parse_uni_json_payload(english_lookup_content, "english-requirements") or []
+            if english_lookup_content
+            else []
+        )
         course_level = Stage2Enricher.infer_course_level(course_name, course_url, study_level)
+        english_group_name = (
+            ""
+            if stage2_config.english_source == "course" or course_has_mapped_english_tests(course_body)
+            else Stage2Enricher.resolve_english_course_group(
+                english_course_groups,
+                course_name=course_name,
+                course_body=course_body,
+                course_level=course_level,
+                english_programs=english_programs if isinstance(english_programs, list) else None,
+            )
+        )
+        english_group_hint = Stage2Enricher.english_group_context(group_name=english_group_name)
+        english_course_context = f"{course_body}{english_group_hint}"
         degree_name = (
             course_entry.get('degreeName')
             or ExtractionPathConfig.infer_degree_name_from_md(course_body)
@@ -2822,7 +3608,7 @@ class CourseExtractor:
         entry_json = Stage2Enricher.enrich_entry_parsed(entry_json, entry_content, course_level=course_level, stage1_json=stage1_json, course_name=course_name, course_body=course_body)
         ExtractionPathConfig.save_audit(audit_dir, 'entry_requirement_parsed.json', json.dumps(entry_json, indent=2, ensure_ascii=False))
         english_json = Stage2Enricher.run_stage2_llm_part(audit_dir=audit_dir, name='english_requirements', prompt=ExtractionPathConfig.fill_template(prompt_2_english, COURSE_NAME=course_name, COURSE_URL=course_url, COURSE_LEVEL=course_level, STAGE1_JSON=stage1_json_text, ENGLISH_CONTENT=english_content), model=model, host=host)
-        english_json = Stage2Enricher.enrich_english_parsed(english_json, english_content, course_name=course_name, course_level=course_level, stage1_json=stage1_json, course_body=course_body, english_lookup_content=english_lookup_content)
+        english_json = Stage2Enricher.enrich_english_parsed(english_json, english_content, course_name=course_name, course_level=course_level, stage1_json=stage1_json, course_body=english_course_context, english_lookup_content=english_lookup_content)
         ExtractionPathConfig.save_audit(audit_dir, 'english_requirements_parsed.json', json.dumps(english_json, indent=2, ensure_ascii=False))
         scholarship_json = Stage2Enricher.run_stage2_llm_part(audit_dir=audit_dir, name='scholarship', prompt=ExtractionPathConfig.fill_template(prompt_2_scholarship, COURSE_NAME=course_name, COURSE_URL=course_url, STAGE1_JSON=stage1_json_text, SCHOLARSHIP_CONTENT=uni_sections.get('scholarship', '')), model=model, host=host)
         scholarship_json = Stage2Enricher.enrich_scholarship_parsed(scholarship_json, uni_sections.get('scholarship', ''), course_name=course_name, course_level=course_level, course_body=course_body)
@@ -2836,7 +3622,7 @@ class CourseExtractor:
         stage2_content = json.dumps(llm_json, ensure_ascii=False)
         deterministic = Stage2Enricher.build_deterministic_row(stage1_json, university_name=university_name, course_url=course_url, course_name=course_name, degree_name=degree_name)
         stage2_json = Stage2Enricher.merge_stage2_row(deterministic, llm_json, uni_content=uni_content, entry_content=entry_content, course_level=course_level, course_body=course_body)
-        stage2_json['AcademicRequirementsMetaData'] = Stage2Enricher.finalize_academic_requirements_metadata(stage2_json.get('AcademicRequirementsMetaData'), stage1_json=stage1_json, uni_content=uni_content, english_content=english_lookup_content or english_content, course_level=course_level, english_scalars={key: llm_json.get(key, '') for key in ENGLISH_TEST_KEYS}, course_name=course_name, course_body=f'{course_body}\n{english_content}', entry_content=entry_content)
+        stage2_json['AcademicRequirementsMetaData'] = Stage2Enricher.finalize_academic_requirements_metadata(stage2_json.get('AcademicRequirementsMetaData'), stage1_json=stage1_json, uni_content=uni_content, english_content=english_content, course_level=course_level, english_scalars={key: llm_json.get(key, '') for key in ENGLISH_TEST_KEYS}, course_name=course_name, course_body=course_body, entry_content=entry_content)
         stage2_json['uniName'] = university_name
         stage2_json['courseUrlExternal'] = course_url
         stage2_json['courseScraped'] = course_url
@@ -3084,6 +3870,7 @@ normalize_requirements_list = Stage2Enricher.normalize_requirements_list
 normalize_metadata_array = Stage2Enricher.normalize_metadata_array
 filter_academic_metadata = Stage2Enricher.filter_academic_metadata
 score_english_program = Stage2Enricher.score_english_program
+resolve_english_course_group = Stage2Enricher.resolve_english_course_group
 select_english_json_program = Stage2Enricher.select_english_json_program
 extract_bangladesh_json_descriptions = Stage2Enricher.extract_bangladesh_json_descriptions
 extract_english_json_descriptions = Stage2Enricher.extract_english_json_descriptions
@@ -3092,6 +3879,8 @@ parse_bangladesh_json_requirements = Stage2Enricher.parse_bangladesh_json_requir
 parse_bangladesh_requirements = Stage2Enricher.parse_bangladesh_requirements
 select_english_row_label = Stage2Enricher.select_english_row_label
 parse_english_test_scores = Stage2Enricher.parse_english_test_scores
+parse_english_from_course_markdown = Stage2Enricher.parse_english_from_course_markdown
+course_has_mapped_english_tests = Stage2Enricher.course_has_mapped_english_tests
 enrich_english_parsed = Stage2Enricher.enrich_english_parsed
 scholarship_study_level_matches = Stage2Enricher.scholarship_study_level_matches
 parse_scholarship_numeric_amount = Stage2Enricher.parse_scholarship_numeric_amount

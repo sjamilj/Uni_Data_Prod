@@ -1,0 +1,88 @@
+---
+source_html: course_pages/BA (Hons) Creative Producing (Theatre and Short Film) Degree _ University of Essex__courses_UG01119_1_BA-Creative-Producing-Theatre-and-Short-Film.html
+source_url: https://www.essex.ac.uk/courses/UG01119/1/BA-Creative-Producing-Theatre-and-Short-Film
+page_type: course
+university: University of Essex
+cleaned_at: 2026-09-14
+course_url: https://www.essex.ac.uk/courses/UG01119/1/BA-Creative-Producing-Theatre-and-Short-Film
+study_level: undergraduate
+---
+
+Undergraduate Course
+
+# BA (Hons)  Creative Producing
+
+## Key course information
+
+- **Course:** Creative Producing (Theatre and Short Film)
+- **UCAS code:** W900
+- **Start date:** October 2026
+- **Study mode:** Full-time
+- **Duration:** 3 years
+- **Location:** Colchester Campus
+- **Based in:** East 15 Acting School
+
+### Clearing entry requirements
+
+We currently have places available in Clearing across a range of our courses with most offers expected to be made at CCD - CDD (88 - 80 UCAS tariff points) or equivalent.  A complete breakdown of expected Clearing entry requirements, by course, is available on our [Clearing entry requirements page](/clearing/entry-requirements).
+
+We consider each application individually and requirements may be lower for some of our courses, so please still get in touch if your grades are below those outlined.
+
+### English language requirements
+
+If you do not require a student visa to study in the UK then we will assess your English language proficiency/ability at your interview or audition.
+
+English language requirements for applicants whose first language is not English
+
+IELTS 6.0 overall with a minimum of 5.5 in each component, or specified score in another equivalent test that we accept.
+
+Details of English language requirements, including component scores, and the tests we accept for applicants who require a Student visa (excluding Nationals of Majority English Speaking Countries) can be found [here](https://www1.essex.ac.uk/documents/admissions/englishInternational.pdf)
+
+If we accept the English component of an international qualification it will be included in the academic levels listed above for the relevant countries.
+
+Pre-sessional English courses
+
+If you do not meet our IELTS requirements then you may be able to complete a [pre-sessional English pathway](https://www.essex.ac.uk/international/pre-sessional) that enables you to start your course without retaking IELTS.
+
+<!-- english-tests-mapped -->
+```json
+{
+  "AcademicRequirementsMetaData": [
+    {
+      "subtitle": "English Requirement",
+      "description": [
+        "Group 1: IELTS 6.0 overall with no element below 5.5",
+        "Pearson PTE Academic: 60 overall with no element below 59",
+        "TOEFL iBT (legacy scale, before 21 January 2026): minimum 82 overall with Reading 18, Listening 17, Speaking 20 and Writing 17",
+        "TOEFL iBT from 21 January 2026: minimum 4 overall with no element below 4",
+        "Postgraduate group requirements: https://www.essex.ac.uk/-/media/documents/study/english_language_requirements.pdf"
+      ]
+    }
+  ],
+  "ieltsMinOverall": "6.0",
+  "ieltsMinSection": "5.5",
+  "toeflMinOverall": "82",
+  "toeflMinSection": "17",
+  "pteMinOverall": "60",
+  "pteMinSection": "59"
+}
+```
+
+
+### International fee
+
+£22,600 per year
+
+Additional costs for materials and field trips of up to approximately £650 per academic year. Equipment lists are reviewed annually.
+
+Fees will increase for each academic year of study.
+
+### Scholarships and financial support
+
+There may be [scholarships, bursaries or discounts](https://www.essex.ac.uk/scholarships) available to help with the cost of this course.
+
+### Fees and funding guide
+
+[Home/UK fees and funding information](https://www.essex.ac.uk/undergraduate/fees-and-funding/home-uk-fees)
+
+[International fees and funding information](https://www.essex.ac.uk/undergraduate/fees-and-funding/eu-and-international-fees)

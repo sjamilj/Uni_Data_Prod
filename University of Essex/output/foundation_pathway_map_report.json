@@ -1,0 +1,470 @@
+{
+  "pdf": "E:\\Project Next\\UK UNIVERSITIES\\University-of-Essex-International-College-Summary-Sheet-Spring-2027.pdf",
+  "pdfExists": true,
+  "total": 30,
+  "mapped": 30,
+  "unmapped": 0,
+  "officialKaplan": 15,
+  "inferredOnly": 15,
+  "courses": [
+    {
+      "file": "ug00002-2-bsc-accounting-and-finance.md",
+      "title": "Accounting and Finance",
+      "pathways": [
+        "Foundation Certificate for Social Sciences",
+        "International Year One in Business",
+        "International Year One in Economics"
+      ],
+      "officialPathways": [
+        "Foundation Certificate for Social Sciences",
+        "International Year One in Business"
+      ],
+      "inferredPathways": [
+        "International Year One in Economics"
+      ],
+      "primaryPathway": "International Year One in Business",
+      "mapped": true,
+      "officialOnly": true
+    },
+    {
+      "file": "ug00021-2-ba-art-history.md",
+      "title": "Art History",
+      "pathways": [
+        "Foundation Certificate for Humanities"
+      ],
+      "officialPathways": [],
+      "inferredPathways": [
+        "Foundation Certificate for Humanities"
+      ],
+      "primaryPathway": "Foundation Certificate for Humanities",
+      "mapped": true,
+      "officialOnly": false
+    },
+    {
+      "file": "ug00038-2-bsc-biological-sciences.md",
+      "title": "Biological Sciences",
+      "pathways": [
+        "Foundation Certificate for Science and Health",
+        "International Year One in Life Sciences"
+      ],
+      "officialPathways": [
+        "Foundation Certificate for Science and Health"
+      ],
+      "inferredPathways": [
+        "International Year One in Life Sciences"
+      ],
+      "primaryPathway": "International Year One in Life Sciences",
+      "mapped": true,
+      "officialOnly": true
+    },
+    {
+      "file": "ug00039-2-bsc-biomedical-science.md",
+      "title": "Biomedical Science",
+      "pathways": [
+        "International Year One in Life Sciences",
+        "Foundation Certificate for Science and Health"
+      ],
+      "officialPathways": [
+        "International Year One in Life Sciences"
+      ],
+      "inferredPathways": [
+        "Foundation Certificate for Science and Health"
+      ],
+      "primaryPathway": "International Year One in Life Sciences",
+      "mapped": true,
+      "officialOnly": true
+    },
+    {
+      "file": "ug00045-2-bsc-business-management.md",
+      "title": "Business Management",
+      "pathways": [
+        "Foundation Certificate for Social Sciences",
+        "International Year One in Business"
+      ],
+      "officialPathways": [
+        "Foundation Certificate for Social Sciences",
+        "International Year One in Business"
+      ],
+      "inferredPathways": [],
+      "primaryPathway": "International Year One in Business",
+      "mapped": true,
+      "officialOnly": true
+    },
+    {
+      "file": "ug00066-2-bsc-computer-games.md",
+      "title": "Computer Games",
+      "pathways": [
+        "Foundation Certificate for Science and Health",
+        "International Year One in Computer Science"
+      ],
+      "officialPathways": [
+        "Foundation Certificate for Science and Health",
+        "International Year One in Computer Science"
+      ],
+      "inferredPathways": [],
+      "primaryPathway": "International Year One in Computer Science",
+      "mapped": true,
+      "officialOnly": true
+    },
+    {
+      "file": "ug00069-2-bsc-computer-science.md",
+      "title": "Computer Science",
+      "pathways": [
+        "International Year One in Computer Science"
+      ],
+      "officialPathways": [
+        "International Year One in Computer Science"
+      ],
+      "inferredPathways": [],
+      "primaryPathway": "International Year One in Computer Science",
+      "mapped": true,
+      "officialOnly": true
+    },
+    {
+      "file": "ug00089-2-ba-criminology.md",
+      "title": "Criminology",
+      "pathways": [
+        "Foundation Certificate for Social Sciences",
+        "International Year One in Politics and International Relations"
+      ],
+      "officialPathways": [
+        "Foundation Certificate for Social Sciences"
+      ],
+      "inferredPathways": [
+        "International Year One in Politics and International Relations"
+      ],
+      "primaryPathway": "International Year One in Politics and International Relations",
+      "mapped": true,
+      "officialOnly": true
+    },
+    {
+      "file": "ug00103-4-bsc-economics.md",
+      "title": "Economics",
+      "pathways": [
+        "International Year One in Economics",
+        "Foundation Certificate for Social Sciences"
+      ],
+      "officialPathways": [
+        "International Year One in Economics"
+      ],
+      "inferredPathways": [
+        "Foundation Certificate for Social Sciences"
+      ],
+      "primaryPathway": "International Year One in Economics",
+      "mapped": true,
+      "officialOnly": true
+    },
+    {
+      "file": "ug00117-3-beng-electronic-engineering.md",
+      "title": "Electronic Engineering",
+      "pathways": [
+        "Foundation Certificate for Science and Health"
+      ],
+      "officialPathways": [
+        "Foundation Certificate for Science and Health"
+      ],
+      "inferredPathways": [],
+      "primaryPathway": "Foundation Certificate for Science and Health",
+      "mapped": true,
+      "officialOnly": true
+    },
+    {
+      "file": "ug00131-2-ba-english-language-and-linguistics.md",
+      "title": "English Language and Linguistics",
+      "pathways": [
+        "Foundation Certificate for Humanities"
+      ],
+      "officialPathways": [],
+      "inferredPathways": [
+        "Foundation Certificate for Humanities"
+      ],
+      "primaryPathway": "Foundation Certificate for Humanities",
+      "mapped": true,
+      "officialOnly": false
+    },
+    {
+      "file": "ug00139-2-ba-english-literature.md",
+      "title": "English Literature",
+      "pathways": [
+        "Foundation Certificate for Humanities"
+      ],
+      "officialPathways": [],
+      "inferredPathways": [
+        "Foundation Certificate for Humanities"
+      ],
+      "primaryPathway": "Foundation Certificate for Humanities",
+      "mapped": true,
+      "officialOnly": false
+    },
+    {
+      "file": "ug00164-2-ba-film-studies.md",
+      "title": "Film Studies",
+      "pathways": [
+        "Foundation Certificate for Humanities"
+      ],
+      "officialPathways": [
+        "Foundation Certificate for Humanities"
+      ],
+      "inferredPathways": [],
+      "primaryPathway": "Foundation Certificate for Humanities",
+      "mapped": true,
+      "officialOnly": true
+    },
+    {
+      "file": "ug00189-2-ba-history.md",
+      "title": "History",
+      "pathways": [
+        "Foundation Certificate for Humanities"
+      ],
+      "officialPathways": [],
+      "inferredPathways": [
+        "Foundation Certificate for Humanities"
+      ],
+      "primaryPathway": "Foundation Certificate for Humanities",
+      "mapped": true,
+      "officialOnly": false
+    },
+    {
+      "file": "ug00235-2-llb-law.md",
+      "title": "Law",
+      "pathways": [
+        "Foundation Certificate for Humanities",
+        "International Year One in Law"
+      ],
+      "officialPathways": [
+        "Foundation Certificate for Humanities",
+        "International Year One in Law"
+      ],
+      "inferredPathways": [],
+      "primaryPathway": "International Year One in Law",
+      "mapped": true,
+      "officialOnly": true
+    },
+    {
+      "file": "ug00239-2-ba-liberal-arts.md",
+      "title": "Liberal Arts",
+      "pathways": [
+        "Foundation Certificate for Humanities",
+        "International Year One in Politics and International Relations"
+      ],
+      "officialPathways": [],
+      "inferredPathways": [
+        "Foundation Certificate for Humanities",
+        "International Year One in Politics and International Relations"
+      ],
+      "primaryPathway": "International Year One in Politics and International Relations",
+      "mapped": true,
+      "officialOnly": false
+    },
+    {
+      "file": "ug00241-2-ba-linguistics.md",
+      "title": "Linguistics",
+      "pathways": [
+        "Foundation Certificate for Humanities"
+      ],
+      "officialPathways": [],
+      "inferredPathways": [
+        "Foundation Certificate for Humanities"
+      ],
+      "primaryPathway": "Foundation Certificate for Humanities",
+      "mapped": true,
+      "officialOnly": false
+    },
+    {
+      "file": "ug00256-2-bsc-marketing-management.md",
+      "title": "Marketing Management",
+      "pathways": [
+        "Foundation Certificate for Social Sciences",
+        "International Year One in Business"
+      ],
+      "officialPathways": [
+        "Foundation Certificate for Social Sciences",
+        "International Year One in Business"
+      ],
+      "inferredPathways": [],
+      "primaryPathway": "International Year One in Business",
+      "mapped": true,
+      "officialOnly": true
+    },
+    {
+      "file": "ug00263-2-bsc-marine-biology.md",
+      "title": "Marine Biology",
+      "pathways": [
+        "Foundation Certificate for Science and Health",
+        "International Year One in Life Sciences"
+      ],
+      "officialPathways": [],
+      "inferredPathways": [
+        "Foundation Certificate for Science and Health",
+        "International Year One in Life Sciences"
+      ],
+      "primaryPathway": "International Year One in Life Sciences",
+      "mapped": true,
+      "officialOnly": false
+    },
+    {
+      "file": "ug00269-2-bsc-mathematics.md",
+      "title": "Mathematics",
+      "pathways": [
+        "Foundation Certificate for Science and Health"
+      ],
+      "officialPathways": [],
+      "inferredPathways": [
+        "Foundation Certificate for Science and Health"
+      ],
+      "primaryPathway": "Foundation Certificate for Science and Health",
+      "mapped": true,
+      "officialOnly": false
+    },
+    {
+      "file": "ug00321-2-ba-philosophy.md",
+      "title": "Philosophy",
+      "pathways": [
+        "Foundation Certificate for Humanities"
+      ],
+      "officialPathways": [],
+      "inferredPathways": [
+        "Foundation Certificate for Humanities"
+      ],
+      "primaryPathway": "Foundation Certificate for Humanities",
+      "mapped": true,
+      "officialOnly": false
+    },
+    {
+      "file": "ug00343-2-ba-politics.md",
+      "title": "Politics",
+      "pathways": [
+        "Foundation Certificate for Social Sciences",
+        "International Year One in Politics and International Relations"
+      ],
+      "officialPathways": [
+        "Foundation Certificate for Social Sciences",
+        "International Year One in Politics and International Relations"
+      ],
+      "inferredPathways": [],
+      "primaryPathway": "International Year One in Politics and International Relations",
+      "mapped": true,
+      "officialOnly": true
+    },
+    {
+      "file": "ug00361-4-bsc-psychology.md",
+      "title": "Psychology",
+      "pathways": [
+        "Foundation Certificate for Science and Health",
+        "International Year One in Psychology"
+      ],
+      "officialPathways": [
+        "Foundation Certificate for Science and Health",
+        "International Year One in Psychology"
+      ],
+      "inferredPathways": [],
+      "primaryPathway": "International Year One in Psychology",
+      "mapped": true,
+      "officialOnly": true
+    },
+    {
+      "file": "ug00378-2-ba-sociology.md",
+      "title": "Sociology",
+      "pathways": [
+        "Foundation Certificate for Social Sciences"
+      ],
+      "officialPathways": [
+        "Foundation Certificate for Social Sciences"
+      ],
+      "inferredPathways": [],
+      "primaryPathway": "Foundation Certificate for Social Sciences",
+      "mapped": true,
+      "officialOnly": true
+    },
+    {
+      "file": "ug00399-2-bsc-sports-and-exercise-science.md",
+      "title": "Sports and Exercise Science",
+      "pathways": [
+        "Foundation Certificate for Science and Health"
+      ],
+      "officialPathways": [],
+      "inferredPathways": [
+        "Foundation Certificate for Science and Health"
+      ],
+      "primaryPathway": "Foundation Certificate for Science and Health",
+      "mapped": true,
+      "officialOnly": false
+    },
+    {
+      "file": "ug01035-2-ba-psychosocial-and-psychoanalytic-studies.md",
+      "title": "Psychosocial and Psychoanalytic Studies",
+      "pathways": [
+        "Foundation Certificate for Social Sciences",
+        "International Year One in Psychology"
+      ],
+      "officialPathways": [],
+      "inferredPathways": [
+        "Foundation Certificate for Social Sciences",
+        "International Year One in Psychology"
+      ],
+      "primaryPathway": "International Year One in Psychology",
+      "mapped": true,
+      "officialOnly": false
+    },
+    {
+      "file": "ug01121-2-ba-childhood-studies.md",
+      "title": "Childhood Studies",
+      "pathways": [
+        "Foundation Certificate for Social Sciences"
+      ],
+      "officialPathways": [],
+      "inferredPathways": [
+        "Foundation Certificate for Social Sciences"
+      ],
+      "primaryPathway": "Foundation Certificate for Social Sciences",
+      "mapped": true,
+      "officialOnly": false
+    },
+    {
+      "file": "ug01420-2-ba-social-sciences.md",
+      "title": "Social Sciences",
+      "pathways": [
+        "Foundation Certificate for Social Sciences",
+        "International Year One in Politics and International Relations"
+      ],
+      "officialPathways": [],
+      "inferredPathways": [
+        "Foundation Certificate for Social Sciences",
+        "International Year One in Politics and International Relations"
+      ],
+      "primaryPathway": "International Year One in Politics and International Relations",
+      "mapped": true,
+      "officialOnly": false
+    },
+    {
+      "file": "ug01663-2-bsc-sport-coaching.md",
+      "title": "Sport Coaching",
+      "pathways": [
+        "Foundation Certificate for Science and Health"
+      ],
+      "officialPathways": [],
+      "inferredPathways": [
+        "Foundation Certificate for Science and Health"
+      ],
+      "primaryPathway": "Foundation Certificate for Science and Health",
+      "mapped": true,
+      "officialOnly": false
+    },
+    {
+      "file": "ug01677-2-bsc-cyber-security.md",
+      "title": "Cyber Security",
+      "pathways": [
+        "Foundation Certificate for Science and Health",
+        "International Year One in Computer Science"
+      ],
+      "officialPathways": [],
+      "inferredPathways": [
+        "Foundation Certificate for Science and Health",
+        "International Year One in Computer Science"
+      ],
+      "primaryPathway": "International Year One in Computer Science",
+      "mapped": true,
+      "officialOnly": false
+    }
+  ]
+}

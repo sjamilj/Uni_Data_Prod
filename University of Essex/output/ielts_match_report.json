@@ -1,0 +1,5881 @@
+[
+  {
+    "file": "clean/courses/foundation/ug00002-2-bsc-accounting-and-finance.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00021-2-ba-art-history.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00038-2-bsc-biological-sciences.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00039-2-bsc-biomedical-science.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00045-2-bsc-business-management.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00066-2-bsc-computer-games.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00069-2-bsc-computer-science.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00089-2-ba-criminology.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00103-4-bsc-economics.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00117-3-beng-electronic-engineering.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00131-2-ba-english-language-and-linguistics.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00139-2-ba-english-literature.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00164-2-ba-film-studies.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00189-2-ba-history.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00235-2-llb-law.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00239-2-ba-liberal-arts.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00241-2-ba-linguistics.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00256-2-bsc-marketing-management.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00263-2-bsc-marine-biology.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00269-2-bsc-mathematics.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00321-2-ba-philosophy.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00343-2-ba-politics.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00361-4-bsc-psychology.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00378-2-ba-sociology.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug00399-2-bsc-sports-and-exercise-science.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug01035-2-ba-psychosocial-and-psychoanalytic-studies.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug01121-2-ba-childhood-studies.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug01420-2-ba-social-sciences.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug01663-2-bsc-sport-coaching.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/foundation/ug01677-2-bsc-cyber-security.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00147-1-ma-acting-international.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00147-2-mfa-acting-international.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00366-2-mres-health-and-care-research.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00368-2-msc-mathematics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00425-1-msc-accounting.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00425-4-mres-accounting.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00426-1-msc-accounting-and-finance.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00427-1-msc-financial-economics-and-accounting.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00428-1-msc-accounting-and-financial-management.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00430-1-mres-management-research.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00431-1-ma-acting.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00435-1-msc-advanced-computer-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00438-1-msc-advanced-musculoskeletal-assessment-and-practice.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00441-1-ma-advertising-marketing-and-the-media.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00448-1-ma-applied-linguistics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00456-1-ma-art-history-and-theory.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00456-2-graduate-diploma-art-history-and-theory.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00457-1-msc-artificial-intelligence.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00461-1-msc-corporate-and-investment-banking.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00462-1-msc-behavioural-and-experimental-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00469-1-msc-biotechnology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00472-1-master-of-business-administration-the-essex-mba.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00472-2-master-of-business-administration-the-essex-mba.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00472-4-master-of-business-administration-the-essex-mba.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00472-5-master-of-business-administration-the-essex-mba.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00500-1-msc-computer-engineering.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00502-1-msc-computer-networks-and-security.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00508-1-ma-conflict-resolution.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00508-2-msc-conflict-resolution.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00519-1-ma-creative-writing.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00521-1-ma-criminology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 5"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00542-1-msc-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00542-2-mres-economics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00542-7-ma-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00546-1-msc-electronic-engineering.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00555-1-ma-english-language-and-linguistics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00558-1-msc-entrepreneurship-and-innovation.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00576-1-ma-film-and-literature.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00577-1-ma-film-studies.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00579-1-msc-finance.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00579-2-mres-finance.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00580-1-msc-investment-and-wealth-management.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00581-1-msc-finance-and-management.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00586-1-msc-financial-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00586-2-ma-financial-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00588-1-msc-financial-engineering-and-risk-management.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00591-1-ma-curating.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00591-3-ma-curating.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00595-1-msc-global-project-management.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00602-1-msc-advanced-clinical-practice.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00609-1-ma-history.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00609-3-postgraduate-certificate-history.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00610-1-msc-mathematics-and-finance.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00610-2-postgraduate-diploma-mathematics-and-finance.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00621-1-ma-ideology-and-discourse-analysis.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00627-1-msc-intelligent-systems-and-robotics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00631-1-msc-international-business-and-entrepreneurship.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00633-1-llm-international-commercial-and-business-law.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00633-3-llm-international-commercial-and-business-law.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00637-1-llm-international-human-rights-law.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00639-1-msc-international-marketing-and-business-intelligence.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00641-1-ma-international-relations.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00641-2-msc-international-relations.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00641-3-mres-international-relations.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00647-1-ma-jungian-and-post-jungian-studies.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00647-3-ma-jungian-and-post-jungian-studies.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00662-1-ma-linguistics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00662-2-mres-linguistics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6",
+    "mapped_overall": "6.5",
+    "mapped_section": "6",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00665-1-ma-literature.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00670-1-msc-management.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00670-2-msc-management.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00670-3-msc-management.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00671-1-ma-management-and-organisational-dynamics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00671-2-postgraduate-diploma-management-and-organisational-dynamics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00673-1-msc-management-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00673-2-ma-management-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00679-1-msc-marketing.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00686-1-msc-molecular-medicine.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00697-1-msc-occupational-therapy-pre-registration.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "6.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "6.5",
+    "mappedProgram": "Group 10"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00702-1-msc-organised-crime-terrorism-and-security.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 5"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00702-2-ma-organised-crime-terrorism-and-security.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 5"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00706-1-ma-philosophy.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00706-3-graduate-diploma-philosophy.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00720-1-msc-physiotherapy-pre-registration.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "6.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "6.5",
+    "mappedProgram": "Group 10"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00722-1-ma-scriptwriting-theatre-and-digital-media.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00724-1-ma-political-economy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00724-2-msc-political-economy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00724-3-mres-political-economy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00725-1-ma-political-science.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00725-2-msc-political-science.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00727-1-ma-politics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00727-3-graduate-diploma-politics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00742-1-msc-data-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00742-2-msc-data-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00747-1-ma-psychoanalytic-studies.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00749-1-graduate-diploma-psychodynamic-approaches.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00750-2-ma-psychodynamic-counselling-and-psychotherapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00750-3-ma-psychodynamic-counselling-and-psychotherapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00754-1-postgraduate-certificate-psychological-wellbeing-practice.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "6.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "6.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00754-2-graduate-certificate-psychological-wellbeing-practice.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "6.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "6.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00755-1-msc-psychology.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00763-3-ma-refugee-care.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00764-1-msc-research-methods-in-psychology.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00782-1-ma-sociological-research-methods.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 5"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00783-1-ma-sociology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 5"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00803-1-msc-speech-and-language-therapy-pre-registration.md",
+    "status": "match",
+    "course_overall": "8.0",
+    "course_section": "7.5",
+    "mapped_overall": "8.0",
+    "mapped_section": "7.5",
+    "mappedProgram": "Group 12"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00813-1-msc-survey-methods-for-social-research.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 5"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00815-1-ma-teaching-english-to-speakers-of-other-languages-tesol.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00819-1-msc-ai-based-communication-networks.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00830-1-ma-theatre-directing.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00830-2-mfa-theatre-directing.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00833-1-ma-theory-and-practice-of-human-rights.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00835-1-ma-audiovisual-and-literary-translation.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00837-1-msc-tropical-marine-biology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg00845-1-ma-wild-writing-literature-landscape-and-the-environment.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01008-1-msc-medical-and-clinical-education.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01008-2-postgraduate-diploma-medical-and-clinical-education.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01008-3-postgraduate-certificate-medical-and-clinical-education.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01014-1-msc-financial-data-analytics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01023-1-msc-business-analytics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01030-2-msc-periodontology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01031-2-msc-advanced-periodontal-practice.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01036-1-msc-human-resource-management.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01046-1-msc-cancer-biology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01053-1-mres-political-science-mres.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01081-1-msc-actuarial-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01081-2-postgraduate-diploma-actuarial-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01084-1-postgraduate-certificate-musculoskeletal-ultrasound-imaging.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01084-2-postgraduate-diploma-musculoskeletal-ultrasound-imaging.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01084-3-msc-musculoskeletal-ultrasound-imaging.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01101-2-master-of-business-management-mbm.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01102-1-msc-international-logistics-and-supply-chain-management.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01115-1-msc-international-hospitality-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01127-1-msc-sport-and-exercise-science.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01140-1-ma-migration-studies.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 5"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01140-2-msc-migration-studies.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 5"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01145-1-msc-cognitive-neuroscience-and-neuropsychology.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01146-1-msc-sport-and-exercise-psychology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01301-1-ma-theatre-practice.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01302-1-ma-international-development.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01303-1-msc-quantitative-international-development.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01314-1-msc-social-data-science.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01325-1-ma-social-work.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "6.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "6.5",
+    "mappedProgram": "Group 10"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01339-1-ma-war-culture-and-society.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01347-1-msc-economics-with-data-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01365-1-msc-health-genomics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01373-1-ma-literature-and-creative-writing.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01378-1-ma-sociology-and-criminology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 5"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01379-1-master-of-public-policy-the-essex-mpp.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01380-1-msc-financial-technology-finance.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01381-1-msc-financial-technology-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01382-1-msc-financial-technology-computer-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01386-1-llm-international-law.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01389-1-msc-applied-data-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01399-1-msc-applications-of-artificial-intelligence.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01404-1-msc-data-science-and-its-applications.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01406-1-ma-environmental-futures-with-climate-change.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01406-2-msc-environmental-futures-with-climate-change.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01407-1-ma-childhood-studies.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01431-1-ma-heritage-and-museum-studies.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01431-2-ma-heritage-and-museum-studies.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01443-1-ma-history-power-and-identity.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01447-1-msc-global-public-health.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01447-2-msc-global-public-health.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01450-1-postgraduate-certificate-first-contact-musculoskeletal-practice.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01466-1-ma-economics-with-public-policy.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01481-1-msc-politics-communications-and-data-analytics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01497-1-ma-acting-for-digital-media.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01497-2-mfa-acting-for-digital-media.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01500-1-msc-musculoskeletal-practice.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01500-2-postgraduate-diploma-musculoskeletal-practice.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01500-3-postgraduate-certificate-musculoskeletal-practice.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01511-1-msc-marine-science-and-sustainable-development.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01515-1-msc-strength-and-conditioning.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01524-2-postgraduate-diploma-musculoskeletal-practice-hand-therapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01524-3-postgraduate-certificate-musculoskeletal-practice-hand-therapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01524-4-msc-musculoskeletal-practice-hand-therapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01542-1-llm-law-environment-and-sustainability.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01543-1-ma-social-and-political-thought.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01546-1-ma-international-journalism.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01547-1-msc-digital-marketing-and-analytics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01565-1-graduate-certificate-specialist-adult-mental-health-mental-health-and-wellbeing-practitioner.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "6.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "6.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01565-2-postgraduate-certificate-specialist-adult-mental-health-mental-health-and-wellbeing-practitioner.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "6.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "6.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01569-1-msc-economics-of-business-and-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01590-1-llm-law-and-technology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 6"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01604-1-postgraduate-certificate-international-musculoskeletal-ultrasound-imaging.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01604-2-postgraduate-diploma-international-musculoskeletal-ultrasound-imaging.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01604-3-msc-international-musculoskeletal-ultrasound-imaging.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01609-1-ma-western-marxism.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01630-1-msc-cyber-security.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01644-1-mfa-acting-with-digital-media.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01645-1-msc-international-events-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01647-1-msc-international-tourism-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01661-1-msc-corporate-sustainability.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01669-1-msc-advanced-musculoskeletal-assessment-and-practice-hand-therapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01676-1-ma-teaching-english-and-additional-languages.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01678-1-ma-intercultural-communication-and-translation.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate/pg01679-1-llm-law.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 6"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00854-1-phd-accounting.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00854-2-phd-accounting.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00855-1-phd-accounting-and-finance.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00861-1-phd-applied-linguistics.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 8"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00861-3-phd-applied-linguistics.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 8"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00862-1-phd-applied-mathematics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00862-2-mphil-applied-mathematics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00862-3-msc-by-dissertation-applied-mathematics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00864-1-phd-applied-psychology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00864-2-mphil-applied-psychology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00865-1-phd-applied-social-and-economic-research.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00865-2-mphil-applied-social-and-economic-research.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00866-1-phd-art-history-and-theory.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00866-2-mphil-art-history-and-theory.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00866-4-ma-by-dissertation-art-history-and-theory.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00867-1-phd-biochemistry.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00867-3-msc-by-dissertation-biochemistry.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00868-1-phd-bioinformatics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00870-1-phd-biological-sciences.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00870-3-msc-by-dissertation-biological-sciences.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00873-1-phd-bio-statistics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00873-2-mphil-bio-statistics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00873-3-msc-by-dissertation-bio-statistics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00875-1-phd-business-administration.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00875-2-phd-business-administration.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00876-1-phd-cell-and-molecular-biology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00876-3-msc-by-dissertation-cell-and-molecular-biology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00880-1-professional-doctorate-clinical-psychology-d-clin-psych.md",
+    "status": "match",
+    "course_overall": "7",
+    "course_section": "7",
+    "mapped_overall": "7",
+    "mapped_section": "7",
+    "mappedProgram": "Group 11"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00884-1-phd-computational-finance.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00884-2-mphil-computational-finance.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00884-3-msc-by-dissertation-computational-finance.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00887-1-phd-computer-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00887-2-mphil-computer-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00887-3-msc-by-dissertation-computer-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00887-4-phd-computer-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00888-1-phd-computing-and-electronic-systems.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00888-2-mphil-computing-and-electronic-systems.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00888-3-msc-by-dissertation-computing-and-electronic-systems.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00891-1-phd-creative-writing.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00891-2-mphil-creative-writing.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00891-4-ma-by-dissertation-creative-writing.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00892-1-phd-criminology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 5"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00892-2-mphil-criminology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 5"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00892-3-phd-criminology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 5"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00897-1-phd-economics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00897-5-phd-economics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00898-1-phd-economics-iser.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00898-2-mphil-economics-iser.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00900-1-phd-electronic-systems-engineering.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00900-2-mphil-electronic-systems-engineering.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00900-3-msc-by-dissertation-electronic-systems-engineering.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00902-1-phd-english-language-teaching.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 8"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00902-3-phd-english-language-teaching.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 8"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00903-1-phd-entrepreneurship.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00903-2-phd-entrepreneurship.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00904-1-phd-environmental-biology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00904-3-msc-by-dissertation-environmental-biology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00911-1-phd-film-studies.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00911-2-mphil-film-studies.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00911-4-ma-by-dissertation-film-studies.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00912-1-phd-film-studies-creative-practice.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00912-2-mphil-film-studies-creative-practice.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00913-1-phd-finance.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00913-2-phd-finance.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00914-1-phd-government.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00914-2-mphil-government.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00914-3-phd-government.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00915-1-phd-health-and-organisational-research.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00915-2-mphil-health-and-organisational-research.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00917-1-professional-doctorate-health-care-education.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00919-1-professional-doctorate-health-service-management.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00920-1-phd-health-studies.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00922-1-phd-history.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00922-2-mphil-history.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00922-4-ma-by-dissertation-history.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00923-1-phd-human-rights.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00924-1-phd-human-rights-and-research-methods.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 6"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00931-1-phd-law.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 6"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00931-2-mphil-law.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 6"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00934-1-phd-linguistics.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 8"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00934-3-phd-linguistics.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 8"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00935-1-phd-literature.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00935-2-mphil-literature.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00935-4-ma-by-dissertation-literature.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00939-1-phd-management.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00939-2-phd-management.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00940-2-phd-management-studies.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00940-6-phd-management-studies.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00941-1-phd-marine-biology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00941-3-msc-by-dissertation-marine-biology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00942-1-phd-mathematical-biology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00942-2-mphil-mathematical-biology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00942-3-msc-by-dissertation-mathematical-biology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00943-1-phd-mathematics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00943-2-mphil-mathematics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00943-3-msc-by-dissertation-mathematics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00943-4-phd-mathematics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00946-1-phd-microbiology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00946-3-msc-by-dissertation-microbiology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00950-1-phd-molecular-medicine.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00950-3-msc-by-dissertation-molecular-medicine.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00952-1-professional-doctorate-nursing.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00953-1-phd-nursing-studies.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00953-2-mphil-nursing-studies.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00953-3-msc-by-dissertation-nursing-studies.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00953-5-nursing-studies.md",
+    "status": "no_mapped_block"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00954-1-phd-occupational-therapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00954-2-mphil-occupational-therapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00954-3-msc-by-dissertation-occupational-therapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00954-4-professional-doctorate-occupational-therapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00955-1-phd-operational-research.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00955-2-mphil-operational-research.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00955-3-msc-by-dissertation-operational-research.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00957-1-phd-philosophy.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00957-2-mphil-philosophy.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00957-4-ma-by-dissertation-philosophy.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00957-5-phd-philosophy.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00961-1-phd-physiotherapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00961-2-mphil-physiotherapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00961-6-d-physiotherapy-physiotherapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00968-1-professional-doctorate-psychoanalytic-psychotherapy.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00969-1-phd-psychoanalytic-studies.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00969-5-phd-psychoanalytic-studies.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00970-1-professional-doctorate-psychodynamic-psychotherapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00972-1-phd-psychology.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00972-3-msc-by-dissertation-psychology.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00972-4-phd-psychology.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00973-1-phd-public-health.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00973-2-mphil-public-health.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00973-3-msc-by-dissertation-public-health.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00974-1-professional-doctorate-public-health-health-visiting.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00975-1-phd-pure-mathematics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00975-2-mphil-pure-mathematics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00975-3-msc-by-dissertation-pure-mathematics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00976-1-phd-refugee-care.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00976-2-ma-by-dissertation-refugee-care.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00977-1-professional-doctorate-social-care-education.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00979-1-phd-social-policy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00979-2-mphil-social-policy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00979-3-msc-by-dissertation-social-policy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00980-1-professional-doctorate-social-services-management.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00981-1-phd-sociolinguistics.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 8"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00981-3-phd-sociolinguistics.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 8"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00984-1-phd-sociology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "6.0",
+    "mapped_overall": "6.5",
+    "mapped_section": "6.0",
+    "mappedProgram": "Group 5"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00984-3-phd-sociology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00987-1-phd-speech-and-language-therapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00987-2-mphil-speech-and-language-therapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00987-3-professional-doctorate-speech-and-language-therapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00989-1-phd-sport-and-exercise-psychology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00989-2-mphil-sport-and-exercise-psychology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00989-3-msc-by-dissertation-sport-and-exercise-psychology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00990-1-phd-sport-and-exercise-science.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00990-2-mphil-sport-and-exercise-science.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00990-3-msc-by-dissertation-sport-and-exercise-science.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00990-6-dses-sport-and-exercise-science.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00992-1-phd-statistics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00992-2-mphil-statistics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00992-3-msc-by-dissertation-statistics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00996-1-phd-survey-methodology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00996-2-mphil-survey-methodology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00999-1-phd-theatre-studies.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00999-2-mphil-theatre-studies.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr00999-4-ma-by-dissertation-theatre-studies.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01000-1-phd-theatre-studies-playwriting.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01000-2-mphil-theatre-studies-playwriting.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01041-1-phd-actuarial-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01041-4-phd-actuarial-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01043-1-phd-business-analytics.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01065-1-phd-curating.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01068-1-phd-plant-biology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01068-3-msc-by-dissertation-plant-biology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01129-1-phd-journalism.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01129-2-mphil-journalism.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01129-3-msc-by-dissertation-journalism.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01130-1-phd-social-work.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01130-2-mphil-social-work.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "",
+    "mapped_overall": "6.5",
+    "mapped_section": "",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01130-3-msc-by-dissertation-social-work.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01310-1-phd-health-and-exercise-sciences.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01310-2-mphil-health-and-exercise-sciences.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01310-3-msc-by-dissertation-health-and-exercise-sciences.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01311-1-phd-sports-therapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01311-2-mphil-sports-therapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01311-3-msc-by-dissertation-sports-therapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01311-6-dst-sports-therapy.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01312-1-phd-health-and-physical-activity.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01312-2-mphil-health-and-physical-activity.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01312-3-msc-by-dissertation-health-and-physical-activity.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01323-1-dspc-sport-performance-and-coaching.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01342-1-phd-drama-and-performance.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01343-1-phd-data-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01343-2-mphil-data-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01343-4-phd-data-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01344-1-phd-musculoskeletal-practice.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01344-2-mphil-musculoskeletal-practice.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01346-1-phd-drama-and-performance-practice-as-research.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 9"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01356-1-phd-translation-studies-translation-interpreting-and-subtitling.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "6.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "6.5",
+    "mappedProgram": "Group 8"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01372-1-phd-human-resource-management-and-organisation-studies.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01387-1-phd-psychosocial-studies.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01388-1-phd-childhood-studies.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01394-4-phd-psychology-with-cognitive-neuroscience-and-neuropsychology.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01395-4-phd-tropical-marine-biology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01405-4-engineering.md",
+    "status": "no_mapped_block"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01457-1-professional-doctorate-analytical-psychology.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01458-1-professional-doctorate-psychodynamic-counselling.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01562-1-phd-languages-and-cultures.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": "Group 8"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01577-3-language-and-communication-science.md",
+    "status": "no_mapped_block"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01618-1-phd-mathematics-education.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01624-1-phd-cancer-biology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01624-3-msc-by-dissertation-cancer-biology.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01628-1-phd-global-public-health.md",
+    "status": "match",
+    "course_overall": "5.5",
+    "course_section": "5.5",
+    "mapped_overall": "5.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01632-1-phd-artificial-intelligence.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01632-2-msc-by-dissertation-artificial-intelligence.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 1"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01648-1-phd-tourism-hospitality-and-events.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 3"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01649-1-phd-heritage-and-museum-studies.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01650-1-phd-heritage-and-museum-studies-practice-as-research.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 4"
+  },
+  {
+    "file": "clean/courses/postgraduate_research/pr01680-1-phd-analytical-psychology.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "5.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "5.5",
+    "mappedProgram": "Group 7"
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00001-1-bsc-accounting.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00002-1-bsc-accounting-and-finance.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00002-3-integrated-master-in-accounting-accounting-and-finance.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00008-1-ba-acting.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00008-2-ba-acting.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00009-2-ba-acting-and-community-engagement.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00010-1-ba-acting-and-contemporary-theatre.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00011-1-ba-acting-and-fight-performance.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00012-1-bsc-actuarial-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00021-1-ba-art-history.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00021-3-integrated-master-in-art-history-art-history.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00022-1-ba-art-history-and-history.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00023-1-ba-art-history-and-modern-languages.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00025-1-ba-art-history-with-modern-languages.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00030-1-bsc-banking-and-finance.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00033-1-bsc-biochemistry.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00038-1-bsc-biological-sciences.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00039-1-bsc-biomedical-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00039-3-bsc-biomedical-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00039-4-integrated-master-in-science-biomedical-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00039-5-integrated-master-in-science-biomedical-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00043-1-bba-business-administration.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00045-1-bsc-business-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00046-1-ba-business-management-and-modern-languages.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00047-1-ba-business-management-with-a-modern-language.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00066-1-bsc-computer-games.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00069-1-bsc-computer-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00076-1-beng-computer-systems-engineering.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00087-1-ba-continental-philosophy.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00088-1-ba-creative-writing.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00089-1-ba-criminology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00092-1-ba-criminology-with-social-psychology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00097-1-ba-drama.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00098-1-ba-drama-and-literature.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00102-1-bsc-ecology-and-environmental-biology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00103-1-ba-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00103-3-bsc-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00103-8-integrated-master-in-economics-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00106-1-bsc-economics-and-politics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00117-1-beng-electronic-engineering.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00129-1-ba-teaching-english-as-a-foreign-language-tefl.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00131-1-ba-english-language-and-linguistics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00132-1-ba-english-language-and-literature.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00139-1-ba-english-literature.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00151-1-ba-european-studies.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00154-1-ba-european-studies-with-french.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00155-1-ba-european-studies-with-german.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00157-1-ba-european-studies-with-italian.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00160-1-ba-european-studies-with-spanish.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00162-1-ba-film-and-creative-writing.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00164-1-ba-film-studies.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00166-1-ba-film-studies-and-literature.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00167-1-bsc-finance.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00172-1-ba-financial-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00172-3-bsc-financial-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00178-1-bsc-genetics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00189-1-ba-history.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00189-4-integrated-master-in-history-history.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00190-1-ba-history-and-criminology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00194-1-ba-history-and-literature.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00197-1-ba-history-and-sociology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00203-1-ba-history-with-film-studies.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00204-1-ba-history-with-human-rights.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00216-1-bsc-international-business-and-entrepreneurship.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00221-1-ba-international-relations.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00221-4-integrated-master-in-politics-international-relations.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00222-1-ba-international-relations-and-modern-languages.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00230-1-ba-language-studies.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00232-1-ba-latin-american-studies-with-business-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00234-1-ba-latin-american-studies-with-human-rights.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00235-1-llb-law.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00239-1-ba-liberal-arts.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00241-1-ba-linguistics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00247-1-integrated-master-in-literature-literature.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00256-1-bsc-marketing-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00258-1-ba-management-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00258-3-bsc-management-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00263-1-bsc-marine-biology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00264-1-bsc-marketing.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00269-1-bsc-mathematics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00289-1-ba-media-and-digital-culture.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00291-1-ba-modern-history.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00292-1-ba-modern-history-and-international-relations.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00293-1-ba-modern-history-and-politics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00294-1-ba-modern-languages.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00296-1-ba-modern-languages-and-linguistics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00297-1-ba-modern-languages-and-teaching-english-as-a-foreign-language.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00315-1-bsc-nursing-adult.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "7.0",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00315-2-bsc-nursing-adult.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "7.0",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00316-1-bsc-nursing-mental-health.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "7.0",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00316-2-bsc-nursing-mental-health.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "7.0",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00318-2-bsc-occupational-therapy.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "6.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "6.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00321-1-ba-philosophy.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00321-3-integrated-master-in-philosophy-philosophy.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00322-1-ba-philosophy-and-art-history.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00325-1-ba-philosophy-and-history.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00326-1-ba-philosophy-and-law.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00327-1-ba-philosophy-and-literature.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00330-1-ba-philosophy-and-politics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00331-1-ba-philosophy-and-sociology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00332-1-ba-philosophy-with-human-rights.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00334-1-ba-philosophy-politics-and-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00335-1-ba-philosophy-religion-and-ethics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00337-1-ba-acting-and-physical-theatre.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00339-2-bsc-physiotherapy.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "6.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "6.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00343-1-ba-politics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00361-1-ba-psychology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00361-2-bsc-psychology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00362-1-bsc-psychology-with-cognitive-neuroscience.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00372-1-ba-sociology-with-social-psychology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00375-1-ba-social-work.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "6.5",
+    "mapped_overall": "7.0",
+    "mapped_section": "6.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00378-1-ba-sociology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00379-1-ba-sociology-and-criminology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00399-1-bsc-sports-and-exercise-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00399-3-integrated-master-in-science-sports-and-exercise-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00403-1-bsc-sports-therapy.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00409-1-beng-communications-engineering.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00411-1-certificate-of-he-acting-for-stage-and-screen.md",
+    "status": "match",
+    "course_overall": "5.0",
+    "course_section": "4.0",
+    "mapped_overall": "5.0",
+    "mapped_section": "4.0",
+    "mappedProgram": "Certificate of Higher Education (below degree-level: Acting for Stage and Screen W410, Technical Theatre and Production Arts W413)"
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00411-2-certificate-of-he-acting-for-stage-and-screen.md",
+    "status": "match",
+    "course_overall": "5.0",
+    "course_section": "4.0",
+    "mapped_overall": "5.0",
+    "mapped_section": "4.0",
+    "mappedProgram": "Certificate of Higher Education (below degree-level: Acting for Stage and Screen W410, Technical Theatre and Production Arts W413)"
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00413-1-fda-therapeutic-communication-and-therapeutic-organisations.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00413-2-ba-therapeutic-communication-and-therapeutic-organisations.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00413-3-fda-therapeutic-communication-and-therapeutic-organisations.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug00418-1-ba-world-performance.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01018-1-ba-financial-economics-and-accounting.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01020-1-ba-journalism.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01021-1-llb-law-senior-status.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01028-1-ba-psychodynamic-practice.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01034-1-bsc-data-science-and-analytics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01035-1-ba-psychosocial-and-psychoanalytic-studies.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01045-1-ba-curating.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01049-1-llb-law-with-human-rights.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01050-1-llb-law-with-philosophy.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01054-1-ba-global-studies.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01055-1-ba-literature-and-creative-writing.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01061-1-beng-robotic-engineering.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01063-1-llb-law-with-business.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01086-1-ba-english-and-comparative-literature.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01089-1-ba-journalism-and-criminology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01099-1-ba-journalism-with-human-rights.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01100-1-ba-journalism-and-politics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01110-1-bsc-speech-and-language-therapy.md",
+    "status": "match",
+    "course_overall": "8.0",
+    "course_section": "7.5",
+    "mapped_overall": "8.0",
+    "mapped_section": "7.5",
+    "mappedProgram": "Health and Social Care courses (Dental Hygiene, Nursing, Social Work, Physiotherapy, Occupational Therapy, Speech and Language Therapy)"
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01119-1-ba-creative-producing-theatre-and-short-film.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01121-1-ba-childhood-studies.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01124-1-ba-politics-and-international-relations.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01124-2-bsc-politics-and-international-relations.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01124-3-integrated-master-in-politics-politics-and-international-relations.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01128-1-bsc-biotechnology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01144-1-ba-global-studies-and-modern-languages.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01265-1-bsc-economics-with-data-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01275-1-bsc-finance-and-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01289-1-ba-english-language-with-media-communication.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01290-1-ba-criminology-with-counselling-skills.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01291-1-ba-criminology-with-criminal-law.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01297-1-ba-business-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01299-1-llb-law-with-criminology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01326-1-beng-mechatronic-systems.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01327-1-fda-hospitality-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01327-2-ba-hospitality-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01328-1-fda-events-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01328-2-ba-events-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01336-1-bsc-sociology-with-data-science.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01340-1-bsc-human-biology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01341-1-ba-global-studies-with-politics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01349-1-ba-global-studies-with-human-rights.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01361-1-beng-neural-engineering-with-psychology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01362-1-llb-licence-english-and-french-law-double-degree.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01368-1-ba-art-history-visual-culture-and-media-studies.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01371-1-ba-film-and-drama.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01376-1-ba-philosophy-with-business-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01377-1-ba-global-studies-with-business-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01385-3-bsc-computational-linguistics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01392-1-integrated-master-in-management-marketing-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01393-1-bsc-international-business-and-finance.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01408-1-ba-art-history-and-language-studies.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01409-1-ba-art-history-with-language-studies.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01410-1-ba-global-studies-and-language-studies.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01414-1-ba-language-studies-and-linguistics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01417-1-integrated-master-in-science-biochemistry-and-biotechnology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01419-1-integrated-master-in-science-tropical-marine-biology.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01420-1-ba-social-sciences.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01432-1-ba-global-studies-and-latin-american-studies.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01433-1-ba-curating-with-politics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01434-1-ba-curating-with-history.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01435-1-ba-art-history-heritage-and-museum-studies.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01439-1-ba-curating-heritage-and-human-rights.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01442-1-ba-history-and-heritage.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01444-1-ba-history-and-law.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01498-1-bsc-global-sustainability.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01499-1-bsc-artificial-intelligence.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01501-1-ba-drama-and-creative-writing.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01502-1-ba-film-and-journalism.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01504-1-bsc-business-administration-and-supply-chain-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01510-1-ba-global-studies-with-sustainability.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01514-1-ba-journalism-and-language-studies.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01522-1-ba-sociology-and-health.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01533-1-bsc-psychology-with-sport-and-exercise.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01535-1-integrated-master-in-science-nursing-dual-award-in-adult-and-mental-health.md",
+    "status": "match",
+    "course_overall": "7.0",
+    "course_section": "7.0",
+    "mapped_overall": "7.0",
+    "mapped_section": "",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01545-1-bsc-business-and-human-resource-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01559-1-certificate-of-he-health-and-social-care.md",
+    "status": "missing_course_ielts",
+    "course_overall": "",
+    "course_section": "",
+    "mapped_overall": "7.0",
+    "mapped_section": "6.5",
+    "mappedProgram": "Health and Social Care courses (Dental Hygiene, Nursing, Social Work, Physiotherapy, Occupational Therapy, Speech and Language Therapy)"
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01567-1-ba-philosophy-ethics-and-sustainability.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01585-1-fda-international-tourism-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01585-2-ba-international-tourism-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01601-1-bsc-business-and-analytics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01619-1-ba-stage-management.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01651-1-ba-urban-sustainability-studies.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01657-1-ba-international-affairs.md",
+    "status": "match",
+    "course_overall": "6.5",
+    "course_section": "5.5",
+    "mapped_overall": "6.5",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01658-1-ba-international-affairs-and-economics.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01663-1-bsc-sport-coaching.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01664-1-fdsc-dental-hygiene.md",
+    "status": "no_mapped_block"
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01664-2-bsc-dental-hygiene-and-therapy.md",
+    "status": "no_mapped_block"
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01674-1-certificate-of-he-technical-theatre-and-production-arts.md",
+    "status": "match",
+    "course_overall": "5.0",
+    "course_section": "4.0",
+    "mapped_overall": "5.0",
+    "mapped_section": "4.0",
+    "mappedProgram": "Certificate of Higher Education (below degree-level: Acting for Stage and Screen W410, Technical Theatre and Production Arts W413)"
+  },
+  {
+    "file": "clean/courses/undergraduate/ug01677-1-bsc-cyber-security.md",
+    "status": "match",
+    "course_overall": "6.0",
+    "course_section": "5.5",
+    "mapped_overall": "6.0",
+    "mapped_section": "5.5",
+    "mappedProgram": ""
+  }
+]

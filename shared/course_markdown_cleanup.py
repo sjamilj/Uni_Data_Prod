@@ -42,6 +42,7 @@ _SCHOLARSHIP_FIELD_LABELS = (
 _UNI_JSON_TITLES = {
     "bangladesh-entry": "Bangladesh Entry Requirements",
     "english-requirements": "English Language Requirements",
+    "english-course-groups": "English Course Groups",
     "scholarships": "Scholarships",
     "deposit": "Tuition Fee Deposit",
 }
@@ -243,6 +244,7 @@ class CourseMarkdownCleaner:
         self.JSON_UNI_PARSERS = {
             "bangladesh-entry": self.try_parse_bangladesh_entry_json,
             "english-requirements": self.try_parse_english_requirements_json,
+            "english-course-groups": self.try_parse_scholarships_json,
             "scholarships": self.try_parse_scholarships_json,
             "deposit": self.try_parse_deposit_json,
         }

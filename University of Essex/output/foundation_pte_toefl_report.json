@@ -1,0 +1,307 @@
+{
+  "dryRun": false,
+  "updated": 30,
+  "skipped": 0,
+  "courses": [
+    {
+      "file": "ug00002-2-bsc-accounting-and-finance.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00021-2-ba-art-history.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00038-2-bsc-biological-sciences.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00039-2-bsc-biomedical-science.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00045-2-bsc-business-management.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00066-2-bsc-computer-games.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00069-2-bsc-computer-science.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "5.0",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00089-2-ba-criminology.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00103-4-bsc-economics.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00117-3-beng-electronic-engineering.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00131-2-ba-english-language-and-linguistics.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00139-2-ba-english-literature.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00164-2-ba-film-studies.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00189-2-ba-history.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00235-2-llb-law.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00239-2-ba-liberal-arts.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00241-2-ba-linguistics.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00256-2-bsc-marketing-management.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00263-2-bsc-marine-biology.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00269-2-bsc-mathematics.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00321-2-ba-philosophy.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00343-2-ba-politics.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00361-4-bsc-psychology.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00378-2-ba-sociology.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug00399-2-bsc-sports-and-exercise-science.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug01035-2-ba-psychosocial-and-psychoanalytic-studies.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug01121-2-ba-childhood-studies.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug01420-2-ba-social-sciences.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug01663-2-bsc-sport-coaching.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    },
+    {
+      "file": "ug01677-2-bsc-cyber-security.md",
+      "status": "updated",
+      "ieltsMinOverall": "5.5",
+      "ieltsMinSection": "4.5",
+      "pteMinOverall": "59",
+      "pteMinSection": "59",
+      "toeflMinOverall": "72",
+      "toeflMinSection": "17"
+    }
+  ]
+}
