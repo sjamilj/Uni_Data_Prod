@@ -20,6 +20,7 @@ Level 3 deep dives for `shared/` modules. Start with [00-start-here.md](../00-st
 |-----|--------|------|
 | [scrape_course_urls.md](scrape_course_urls.md) | `scrape_course_urls.py` | URL discovery |
 | [download_and_clean_course_pages.md](download_and_clean_course_pages.md) | `download_and_clean_course_pages.py` | HTML → markdown |
+| [cloudflare-course-download.md](cloudflare-course-download.md) | `scrape_course_urls.py` / browser | **CF loops — use CDP attach** |
 | [llm_extract.md](llm_extract.md) | `llm_extract.py` | Ollama extraction |
 | [normalize_admission_data.md](normalize_admission_data.md) | `normalize_admission_data.py` | Schema normalization |
 | [export_dev_courses.md](export_dev_courses.md) | `export_dev_courses.py` | CSV export |

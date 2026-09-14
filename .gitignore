@@ -21,6 +21,7 @@
 # IGNORE (large, resume state, or rebuilt every run):
 #   output/                         — all pipeline output (re-run scripts)
 #   Exception: output/clean/uni/    — committed requirement markdown (all unis)
+#   Exception: Manchester Metropolitan University/output/clean/ + per-level URL CSVs
 #   Exception: University of Essex/output/ — full Essex pipeline output committed
 #
 # =============================================================================
@@ -74,6 +75,16 @@ REVIEW/
 !**/output/clean/
 !**/output/clean/uni/
 !**/output/clean/uni/**
+
+# Manchester Metropolitan University — clean/courses + listing URL CSVs
+!Manchester Metropolitan University/output/
+!Manchester Metropolitan University/output/clean/
+!Manchester Metropolitan University/output/clean/**
+!Manchester Metropolitan University/output/undergraduate_course_urls.csv
+!Manchester Metropolitan University/output/postgraduate_course_urls.csv
+!Manchester Metropolitan University/output/postgraduate_research_course_urls.csv
+!Manchester Metropolitan University/output/foundation_course_urls.csv
+!Manchester Metropolitan University/output/failed_urls.csv
 
 # --- OUTPUT: cross-uni resume state ---
 all_download_clean_progress.json

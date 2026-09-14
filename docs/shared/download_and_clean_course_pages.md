@@ -110,11 +110,13 @@ Entry requirements :: #entry_requirements
 - CSS selectors
 - [engines.md](engines.md)
 - [course_markdown_cleanup.md](course_markdown_cleanup.md)
+- **Cloudflare on course pages:** [cloudflare-course-download.md](cloudflare-course-download.md)
 
 ---
 
 ## 10. Read this next
 
-1. [features/download-clean-flow.md](../features/download-clean-flow.md)
-2. [engines.md](engines.md)
-3. [run_course_pipeline.md](run_course_pipeline.md)
+1. [cloudflare-course-download.md](cloudflare-course-download.md) — if download loops on “Verifying you are human”
+2. [features/download-clean-flow.md](../features/download-clean-flow.md)
+3. [engines.md](engines.md)
+4. [run_course_pipeline.md](run_course_pipeline.md)

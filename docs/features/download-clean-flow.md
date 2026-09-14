@@ -80,8 +80,17 @@ Then edit `COURSE_CLEAN_BLOCKS` and `course_markdown_cleanup.py` before Presetup
 
 ---
 
+## Cloudflare (course download loops)
+
+If Playwright shows endless **“Verifying you are human”**, use **CDP attach** to your real browser — full steps:
+
+**[shared/cloudflare-course-download.md](../shared/cloudflare-course-download.md)**
+
+---
+
 ## Read this next
 
-1. [shared/download_and_clean_course_pages.md](../shared/download_and_clean_course_pages.md)
-2. [shared/engines.md](../shared/engines.md)
-3. [shared/course_markdown_cleanup.md](../shared/course_markdown_cleanup.md)
+1. [shared/cloudflare-course-download.md](../shared/cloudflare-course-download.md) — CF / CDP troubleshooting
+2. [shared/download_and_clean_course_pages.md](../shared/download_and_clean_course_pages.md)
+3. [shared/engines.md](../shared/engines.md)
+4. [shared/course_markdown_cleanup.md](../shared/course_markdown_cleanup.md)

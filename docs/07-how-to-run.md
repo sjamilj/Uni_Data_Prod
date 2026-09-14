@@ -156,6 +156,7 @@ Fails if the university folder, root variant CSV, or reviewed CSV is missing.
 
 ## See also
 
+- [shared/cloudflare-course-download.md](shared/cloudflare-course-download.md) — **Cloudflare loops on course download (CDP method)**
 - [00-start-here.md](00-start-here.md) — learning path
 - [PIPELINE.md](../PIPELINE.md) — detailed workflow
 - [dashboard.md](../dashboard.md) — UI reference
