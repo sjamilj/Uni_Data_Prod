@@ -42,7 +42,6 @@ _SCHOLARSHIP_FIELD_LABELS = (
 _UNI_JSON_TITLES = {
     "bangladesh-entry": "Bangladesh Entry Requirements",
     "english-requirements": "English Language Requirements",
-    "english-course-groups": "English Course Groups",
     "scholarships": "Scholarships",
     "deposit": "Tuition Fee Deposit",
 }
@@ -244,7 +243,6 @@ class CourseMarkdownCleaner:
         self.JSON_UNI_PARSERS = {
             "bangladesh-entry": self.try_parse_bangladesh_entry_json,
             "english-requirements": self.try_parse_english_requirements_json,
-            "english-course-groups": self.try_parse_scholarships_json,
             "scholarships": self.try_parse_scholarships_json,
             "deposit": self.try_parse_deposit_json,
         }
@@ -301,18 +299,24 @@ class CourseMarkdownCleaner:
         if code_dir is None:
             return markdown
         module = self.load_uni_course_cleanup_module(code_dir)
-        working = markdown
+        meta, body = self.parse_frontmatter(markdown)
+
         if module is not None:
             preprocess = getattr(module, "preprocess_course_markdown_uni", None)
             if callable(preprocess):
-                working = preprocess(working)
-        cleaned = MarkdownSectionRemover.apply_env_remove_sections(working, code_dir)
+                if meta:
+                    processed = preprocess(self.format_frontmatter(meta) + body)
+                    meta, body = self.parse_frontmatter(processed)
+                else:
+                    body = preprocess(body)
+
+        cleaned = MarkdownSectionRemover.apply_env_remove_sections(body, code_dir)
         if module is None:
-            return cleaned
+            return self.format_frontmatter(meta) + cleaned if meta else cleaned
         extra = getattr(module, "cleanup_course_markdown_uni", None)
         if callable(extra):
-            return extra(cleaned)
-        return cleaned
+            cleaned = extra(cleaned)
+        return self.format_frontmatter(meta) + cleaned if meta else cleaned
 
     @staticmethod
     def strip_source_markdown(text: str) -> str:
@@ -579,9 +583,9 @@ class CourseMarkdownCleaner:
         for path in iter_course_markdown(courses_dir):
             total += 1
             raw = path.read_text(encoding="utf-8")
-            meta, body = self.parse_frontmatter(raw)
-            cleaned_body = self.cleanup_course_markdown(body.rstrip("\n"), code_dir=code_dir)
-            output = self.format_frontmatter(meta) + cleaned_body + "\n"
+            output = self.cleanup_course_markdown(raw.rstrip("\n"), code_dir=code_dir)
+            if not output.endswith("\n"):
+                output += "\n"
             if output != raw:
                 path.write_text(output, encoding="utf-8")
                 updated += 1
@@ -608,10 +612,18 @@ def main(argv: list[str] | None = None) -> int:
         default=Path.cwd(),
         help="University code/ directory (default: current working directory)",
     )
+    parser.add_argument(
+        "--presetup",
+        action="store_true",
+        help="Use output/clean/pre_setup_course/ instead of output/clean/courses/",
+    )
     args = parser.parse_args(argv)
 
     code_dir = resolve_code_dir(args.code_dir)
-    courses_dir = resolve_output_dir(code_dir) / "clean" / "courses"
+    from study_level import CLEAN_COURSES_SUBDIR, PRESETUP_CLEAN_SUBDIR
+
+    subdir = PRESETUP_CLEAN_SUBDIR if args.presetup else CLEAN_COURSES_SUBDIR
+    courses_dir = resolve_output_dir(code_dir) / "clean" / subdir
     print(f"Cleaning course markdown in {courses_dir}...")
     updated, total = _default_cleaner.apply_to_dir(courses_dir, code_dir)
     print(f"Done: {updated}/{total} file(s) updated")

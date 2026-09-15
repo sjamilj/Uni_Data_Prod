@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import os
 import shutil
-import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -27,10 +26,6 @@ class DeviceBrowser:
     channel: str
     executable: Path
     user_data_dir: Path
-
-    @property
-    def uses_channel(self) -> bool:
-        return bool(self.channel)
 
 
 def _first_existing_path(candidates: list[Path]) -> Path | None:
@@ -80,24 +75,6 @@ def detect_device_browsers() -> list[DeviceBrowser]:
                 user_data_dir=chrome_data,
             )
         )
-
-    brave_exe = _first_existing_path(
-        [
-            program_files / "BraveSoftware/Brave-Browser/Application/brave.exe",
-            program_files_x86 / "BraveSoftware/Brave-Browser/Application/brave.exe",
-            local_app / "BraveSoftware/Brave-Browser/Application/brave.exe",
-        ]
-    )
-    brave_data = local_app / "BraveSoftware/Brave-Browser/User Data"
-    if brave_exe and brave_data.is_dir():
-        browsers.append(
-            DeviceBrowser(
-                name="brave",
-                channel="",
-                executable=brave_exe,
-                user_data_dir=brave_data,
-            )
-        )
     return browsers
 
 
@@ -105,7 +82,7 @@ def resolve_device_browser(preference: str = "auto") -> DeviceBrowser:
     browsers = detect_device_browsers()
     if not browsers:
         raise RuntimeError(
-            "No installed Brave, Chrome, or Edge profile found. "
+            "No installed Chrome or Edge profile found. "
             "Install a browser or set COURSE_DOWNLOAD_USE_DEVICE_PROFILE=false."
         )
     if preference != "auto":
@@ -131,29 +108,6 @@ def _copy_profile_item(src: Path, dest: Path) -> None:
         shutil.copy2(src, dest)
 
 
-def _browser_process_running(browser: DeviceBrowser) -> bool:
-    exe_names = {
-        "brave": "brave.exe",
-        "edge": "msedge.exe",
-        "chrome": "chrome.exe",
-    }
-    image = exe_names.get(browser.name)
-    if not image:
-        return False
-    try:
-        result = subprocess.run(
-            ["tasklist", "/FI", f"IMAGENAME eq {image}", "/NH"],
-            capture_output=True,
-            text=True,
-            timeout=15,
-            check=False,
-        )
-        text = (result.stdout or "").lower()
-        return image in text and "no tasks" not in text
-    except (OSError, subprocess.SubprocessError):
-        return False
-
-
 def sync_device_profile(
     browser: DeviceBrowser,
     profile_name: str,
@@ -162,12 +116,6 @@ def sync_device_profile(
     force: bool = False,
 ) -> Path:
     """Copy cookies/session files from the real browser into a Playwright-safe dir."""
-    if _browser_process_running(browser):
-        print(
-            f"  Warning: {browser.name} is still running — quit ALL {browser.name} windows "
-            "(check Task Manager), then set COURSE_DOWNLOAD_REFRESH_DEVICE_PROFILE=true and retry. "
-            "Otherwise Cloudflare cookies (Network/Cookies) may not copy."
-        )
     dest_root.mkdir(parents=True, exist_ok=True)
     src_root = browser.user_data_dir
     src_profile = src_root / profile_name
@@ -206,7 +154,7 @@ def sync_device_profile(
         except OSError as exc:
             print(
                 f"  Warning: could not copy {name}: {exc}. "
-                f"Close all {browser.name} windows and set COURSE_DOWNLOAD_REFRESH_DEVICE_PROFILE=true."
+                f"Close all {browser.name} windows and set COURSE_DOWNLOAD_REFRESH_PROFILE=true."
             )
 
     if copied or force:
@@ -216,13 +164,6 @@ def sync_device_profile(
         )
     else:
         print(f"Using cached {browser.name} profile at {dest_root}")
-    network_cookies = dest_profile / "Network" / "Cookies"
-    legacy_cookies = dest_profile / "Cookies"
-    if not network_cookies.is_file() and not legacy_cookies.is_file():
-        print(
-            "  Warning: no cookie database in cached profile — downloads may hit Cloudflare. "
-            "Close the browser completely, enable COURSE_DOWNLOAD_REFRESH_DEVICE_PROFILE=true, re-run."
-        )
     return dest_root
 
 
@@ -234,7 +175,6 @@ def launch_device_browser_context(
     profile_name: str,
     headed: bool,
     refresh_profile: bool,
-    stealth_automation: bool = False,
 ):
     browser_spec = resolve_device_browser(browser_name)
     cache_dir = sync_device_profile(
@@ -248,26 +188,17 @@ def launch_device_browser_context(
         f"Opening {browser_spec.name} with your {profile_name!r} cookies "
         f"(cached at {cache_dir})"
     )
-    launch_args = [
-        f"--profile-directory={profile_name}",
-        "--disable-popup-blocking",
-        "--no-first-run",
-        "--no-default-browser-check",
-    ]
-    if stealth_automation:
-        launch_args.append("--disable-blink-features=AutomationControlled")
-    launch_kwargs: dict = {
-        "user_data_dir": str(cache_dir),
-        "headless": not headed,
-        "args": launch_args,
-        "ignore_default_args": list(PLAYWRIGHT_IGNORED_ARGS),
-        "viewport": {"width": 1400, "height": 900},
-        "locale": "en-GB",
-    }
-    if browser_spec.uses_channel:
-        launch_kwargs["channel"] = browser_spec.channel
-    else:
-        launch_kwargs["executable_path"] = str(browser_spec.executable)
-    context = playwright.chromium.launch_persistent_context(**launch_kwargs)
+    context = playwright.chromium.launch_persistent_context(
+        user_data_dir=str(cache_dir),
+        channel=browser_spec.channel,
+        headless=not headed,
+        args=[
+            f"--profile-directory={profile_name}",
+            "--disable-blink-features=AutomationControlled",
+        ],
+        ignore_default_args=list(PLAYWRIGHT_IGNORED_ARGS),
+        viewport={"width": 1400, "height": 900},
+        locale="en-GB",
+    )
     page = context.pages[0] if context.pages else context.new_page()
     return context, page

@@ -18,11 +18,8 @@ DEFAULT_COURSE_TYPE_SELECTORS = (
 )
 
 _COURSE_TYPE_MARKDOWN_RE = re.compile(r"^\*\*Course type:\*\*\s*(.+)\s*$", re.M | re.I)
-_STUDY_MODE_MARKDOWN_RE = re.compile(
-    r"(?:^|\n)-\s*\*\*Study mode:\*\*\s*([^\n]+)",
-    re.I,
-)
-_MODE_MARKDOWN_RE = re.compile(r"^\*\*Mode:\*\*\s*(.+)\s*$", re.M | re.I)
+_MODE_MARKDOWN_RE = re.compile(r"^\-\s+\*\*Mode:\*\*\s*(.+)\s*$", re.M | re.I)
+_STUDY_MODE_HEADINGS = frozenset({"study mode", "mode"})
 
 
 class CourseTypePatternMatcher:
@@ -82,14 +79,48 @@ class CourseTypeExtractor:
         return text or None
 
     @staticmethod
-    def study_mode_from_markdown(markdown: str) -> str | None:
-        """Essex/CCCU Key course information bullets (Study mode / Mode)."""
-        for pattern in (_STUDY_MODE_MARKDOWN_RE, _MODE_MARKDOWN_RE):
-            match = pattern.search(markdown)
-            if match:
-                text = match.group(1).strip()
-                if text:
-                    return text
+    def from_markdown_mode(markdown: str) -> str | None:
+        match = _MODE_MARKDOWN_RE.search(markdown)
+        if not match:
+            return None
+        text = match.group(1).strip()
+        return text or None
+
+    @staticmethod
+    def _banner_detail_value(detail) -> str:
+        button = detail.select_one(".dropdown-button")
+        if button:
+            return button.get_text(" ", strip=True)
+        option = detail.select_one(".optionText")
+        if option:
+            return option.get_text(" ", strip=True)
+        value = detail.select_one("span.value")
+        if value:
+            return value.get_text(" ", strip=True)
+        heading = detail.select_one(".heading")
+        text = detail.get_text(" ", strip=True)
+        if heading:
+            label = heading.get_text(" ", strip=True)
+            if text.startswith(label):
+                text = text[len(label) :].strip()
+        return text
+
+    @staticmethod
+    def from_html_study_mode(html: str) -> str | None:
+        soup = BeautifulSoup(html, "html.parser")
+        banner = soup.select_one(".course-details-banner")
+        if not banner:
+            return None
+        for detail in banner.select(".detail"):
+            heading = detail.select_one(".heading")
+            if not heading:
+                continue
+            label = heading.get_text(" ", strip=True).casefold()
+            if label not in _STUDY_MODE_HEADINGS:
+                continue
+            text = CourseTypeExtractor._banner_detail_value(detail).strip()
+            if text:
+                return text
         return None
 
 
@@ -145,7 +176,10 @@ class CourseTypeFilter:
             html,
             selectors=self.course_type_selectors,
         )
-        return self.course_type_is_excluded(course_type)
+        if self.course_type_is_excluded(course_type):
+            return True
+        study_mode = CourseTypeExtractor.from_html_study_mode(html)
+        return self.course_type_is_excluded(study_mode)
 
     def should_exclude_markdown(self, markdown: str, *, url: str | None = None) -> bool:
         if not self.enabled:
@@ -155,10 +189,8 @@ class CourseTypeFilter:
         course_type = CourseTypeExtractor.from_markdown(markdown)
         if course_type and self.course_type_is_excluded(course_type):
             return True
-        study_mode = CourseTypeExtractor.study_mode_from_markdown(markdown)
-        if study_mode and self.course_type_is_excluded(study_mode):
-            return True
-        return False
+        mode = CourseTypeExtractor.from_markdown_mode(markdown)
+        return self.course_type_is_excluded(mode)
 
 
 # Backward-compatible aliases
@@ -166,3 +198,5 @@ _parse_env_list = CourseTypePatternMatcher.parse_env_list
 _pattern_matches = CourseTypePatternMatcher.pattern_matches
 extract_course_type_from_html = CourseTypeExtractor.from_html
 extract_course_type_from_markdown = CourseTypeExtractor.from_markdown
+extract_study_mode_from_html = CourseTypeExtractor.from_html_study_mode
+extract_mode_from_markdown = CourseTypeExtractor.from_markdown_mode

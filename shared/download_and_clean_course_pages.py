@@ -1064,12 +1064,6 @@ class CoursePagesCleaner:
                     )
                 )
 
-            markdown = (
-                self.markdown_cleanup.cleanup_course(
-                    markdown
-                )
-            )
-
             # --------------------------------------------------------
             # Write one markdown per study level
             # --------------------------------------------------------
@@ -1162,7 +1156,7 @@ class CoursePagesCleaner:
                 # Write markdown
                 # ----------------------------------------------------
 
-                output_path.write_text(
+                full_markdown = (
                     ManifestWriter.build_frontmatter(
                         source_html=html_rel,
                         source_url=source_url,
@@ -1172,9 +1166,12 @@ class CoursePagesCleaner:
                         course_url=course_url,
                     )
                     + markdown
-                    + "\n",
-                    encoding="utf-8",
+                    + "\n"
                 )
+                full_markdown = self.markdown_cleanup.cleanup_course(
+                    full_markdown
+                )
+                output_path.write_text(full_markdown, encoding="utf-8")
 
                 # ----------------------------------------------------
                 # Manifest path
@@ -1479,9 +1476,18 @@ class CleaningOrchestrator:
             replace_courses=not subset,
         )
 
-        if not course_manifest.get(
-            "courses"
-        ):
+        if not course_manifest.get("courses"):
+            if urls is not None:
+                print(
+                    "No course markdown produced for URL subset "
+                    "(page may be excluded by COURSE_EXCLUDE_COURSE_TYPES "
+                    "or download did not save HTML)."
+                )
+                return {
+                    "courses": [],
+                    "uni_pages": [],
+                    "skipped_clean": True,
+                }
             raise ValueError(
                 f"Nothing to clean: "
                 f"no HTML in "

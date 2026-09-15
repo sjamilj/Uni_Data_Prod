@@ -34,13 +34,11 @@ from download_and_clean_course_pages import (  # noqa: E402
     load_strategy_config,
 )
 from llm_extract import configure_code_dir, load_progress, run_extraction  # noqa: E402
-from llm_extract import CourseIndexManager  # noqa: E402
 from scrape_course_urls import add_code_dir_argument, resolve_work_dir  # noqa: E402
 from study_level import (  # noqa: E402
     CLEAN_COURSES_SUBDIR,
     PRESETUP_CLEAN_SUBDIR,
     PRESETUP_SAMPLE_SIZE,
-    clean_courses_root,
     dedupe_course_records_by_latest_intake,
     is_resume_completed,
     load_presetup_sample,
@@ -342,7 +340,14 @@ class PipelineOrchestrator:
                 self._print("  skip (already extracted)")
                 continue
             try:
-                self._download_and_clean_urls(code_dir, [url], fresh=False)
+                clean_result = self._download_and_clean_urls(code_dir, [url], fresh=False)
+                if not (clean_result or {}).get("courses"):
+                    skipped += 1
+                    self._print(
+                        "  skip (no clean output — excluded course type/mode "
+                        "or part-time per COURSE_EXCLUDE_COURSE_TYPES)"
+                    )
+                    continue
                 run_extraction(
                     code_dir,
                     resume=resume,
@@ -367,68 +372,6 @@ class PipelineOrchestrator:
         self._normalize_and_export(code_dir)
         self._print("Execute complete.")
         return 0 if failed == 0 else 1
-
-    def run_llm_only(
-        self,
-        code_dir: Path,
-        *,
-        study_levels: list[str],
-        all_urls: bool,
-        limit: int | None,
-        resume: bool = True,
-        model: str = "",
-        host: str = "",
-        skip_stage1: bool = False,
-        skip_export: bool = False,
-    ) -> int:
-        """LLM extract from existing output/clean/courses — no download/clean."""
-        code_dir = resolve_code_dir(code_dir)
-        output_dir = resolve_output_dir(code_dir)
-        courses_dir = clean_courses_root(output_dir)
-        md_count = len(list(courses_dir.rglob("*.md"))) if courses_dir.is_dir() else 0
-        if md_count == 0:
-            print(
-                f"Error: no markdown in {courses_dir}. "
-                "Run download/clean first or point at a university with clean/courses.",
-                file=sys.stderr,
-            )
-            return 1
-
-        ollama_host = (host or "http://localhost:11434").rstrip("/")
-        if not self.ollama_ok(ollama_host):
-            print(f"Ollama is not reachable at {ollama_host}. Start Ollama, then re-run.", file=sys.stderr)
-            return 1
-
-        configure_code_dir(code_dir)
-        index_path = CourseIndexManager.ensure_course_index_synced(code_dir)
-        index_rows = CourseIndexManager.read_course_index_csv(output_dir)
-        self._print(
-            f"LLM-only: {len(index_rows)} indexed course(s) from clean/courses "
-            f"({md_count} markdown files, index={index_path.name})"
-        )
-
-        levels = parse_study_levels(study_levels) if study_levels else None
-        extract_limit = None
-        if not all_urls and limit is not None:
-            extract_limit = limit
-
-        run_extraction(
-            code_dir,
-            resume=resume,
-            model=model or None,
-            host=host or None,
-            skip_stage1=skip_stage1,
-            study_levels=levels,
-            limit=extract_limit,
-        )
-
-        if skip_export:
-            self._print("Skipping normalize/export (--skip-export).")
-            return 0
-
-        self._normalize_and_export(code_dir)
-        self._print("LLM-only complete.")
-        return 0
 
 
 class CoursePipelineCLI:
@@ -456,11 +399,6 @@ class CoursePipelineCLI:
             action="store_true",
             help="Per-course download, clean, then LLM for selected study levels",
         )
-        mode.add_argument(
-            "--llm-only",
-            action="store_true",
-            help="LLM extract from existing output/clean/courses (no download/clean)",
-        )
         parser.add_argument(
             "--fresh",
             action="store_true",
@@ -479,19 +417,19 @@ class CoursePipelineCLI:
             action="append",
             default=[],
             metavar="LEVEL",
-            help="Execute / LLM-only: study level to include (repeatable; omit for all levels)",
+            help="Execute: study level to include (repeatable)",
         )
         parser.add_argument(
             "--all",
             action="store_true",
             dest="all_urls",
-            help="Execute / LLM-only: all indexed courses (ignore --limit)",
+            help="Execute: all URLs in the selected study level(s)",
         )
         parser.add_argument(
             "--limit",
             type=int,
             default=None,
-            help="Execute / LLM-only: process N courses",
+            help="Execute: process N URLs from the selected study level(s)",
         )
         parser.add_argument("--model", default="", help="Ollama model")
         parser.add_argument("--host", default="", help="Ollama host")
@@ -524,18 +462,6 @@ class CoursePipelineCLI:
                     host=args.host,
                     skip_stage1=args.skip_stage1,
                 )
-            if args.llm_only:
-                return orchestrator.run_llm_only(
-                    code_dir,
-                    study_levels=args.study_level,
-                    all_urls=args.all_urls,
-                    limit=args.limit,
-                    resume=args.resume or not args.fresh,
-                    model=args.model,
-                    host=args.host,
-                    skip_stage1=args.skip_stage1,
-                    skip_export=args.skip_export,
-                )
             levels = parse_study_levels(args.study_level)
             return orchestrator.run_execute(
                 code_dir,
@@ -559,7 +485,6 @@ ollama_ok = PipelineOrchestrator.ollama_ok
 run_presetup = PipelineOrchestrator().run_presetup
 run_presetup_llm = PipelineOrchestrator().run_presetup_llm
 run_execute = PipelineOrchestrator().run_execute
-run_llm_only = PipelineOrchestrator().run_llm_only
 build_arg_parser = CoursePipelineCLI.build_arg_parser
 main = CoursePipelineCLI.main
 
