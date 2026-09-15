@@ -29,6 +29,7 @@ from urllib.parse import urlparse
 
 
 from course_markdown_cleanup import parse_uni_json_payload
+from course_type_filter import CourseTypeFilter
 
 from normalize_admission_data import derive_hsc_gpa_from_uk_entry_text
 
@@ -2166,7 +2167,31 @@ class Stage1MarkdownParser:
 
         return fields
 
-
+    @staticmethod
+    def extract_essex_international_fee(body: str) -> tuple[str, str]:
+        """Essex course pages: ### International fee with £NN,NNN (optional 'per year')."""
+        section_match = re.search(
+            r"###\s*International fee\s*\n+(.*?)(?=\n### |\n## |\Z)",
+            body,
+            re.S | re.I,
+        )
+        text = section_match.group(1) if section_match else ""
+        if not text.strip():
+            return "", ""
+        fee_match = re.search(r"£([\d,]+)\s*per year", text, re.I)
+        if fee_match:
+            return fee_match.group(1).replace(",", ""), "GBP"
+        for line in text.splitlines():
+            stripped = line.strip()
+            if not stripped or stripped.startswith("["):
+                continue
+            lone = re.match(r"^£([\d,]+)\s*$", stripped)
+            if lone:
+                return lone.group(1).replace(",", ""), "GBP"
+        fee_match = re.search(r"£([\d,]+)", text)
+        if fee_match:
+            return fee_match.group(1).replace(",", ""), "GBP"
+        return "", ""
 
     @staticmethod
 
@@ -2269,6 +2294,12 @@ class Stage1MarkdownParser:
                 fields['tuitionFee'] = typical_fees_match.group(1).replace(',', '')
 
                 fields['currency'] = 'GBP'
+
+        if not fields.get('tuitionFee'):
+            essex_fee, essex_currency = Stage1MarkdownParser.extract_essex_international_fee(body)
+            if essex_fee:
+                fields['tuitionFee'] = essex_fee
+                fields['currency'] = essex_currency
 
         if not fields.get('tuitionFee'):
 
@@ -2740,11 +2771,35 @@ class CourseIndexManager:
 
     @staticmethod
 
-    def group_course_md_paths(courses_dir: Path) -> dict[tuple[str, str], list[Path]]:
+    def markdown_paths_after_course_type_filter(
+        code_dir: Path,
+        courses_dir: Path,
+    ) -> tuple[list[Path], int]:
+        course_filter = CourseTypeFilter.from_code_dir(resolve_code_dir(code_dir))
+        kept: list[Path] = []
+        skipped = 0
+        for md_path in iter_course_markdown(courses_dir):
+            text = md_path.read_text(encoding="utf-8")
+            meta, _body = split_frontmatter(text)
+            course_url = meta.get("course_url", "").strip() or meta.get("source_url", "").strip()
+            if course_filter.enabled and course_filter.should_exclude_markdown(
+                text, url=course_url or None
+            ):
+                skipped += 1
+                continue
+            kept.append(md_path)
+        return kept, skipped
+
+    @staticmethod
+    def group_course_md_paths(
+        courses_dir: Path,
+        md_paths: list[Path] | None = None,
+    ) -> dict[tuple[str, str], list[Path]]:
 
         groups: dict[tuple[str, str], list[Path]] = {}
 
-        for md_path in iter_course_markdown(courses_dir):
+        source = md_paths if md_paths is not None else iter_course_markdown(courses_dir)
+        for md_path in source:
 
             meta, body = split_frontmatter(md_path.read_text(encoding='utf-8'))
 
@@ -2774,7 +2829,10 @@ class CourseIndexManager:
 
     @staticmethod
 
-    def select_canonical_course_md_paths(courses_dir: Path) -> list[Path]:
+    def select_canonical_course_md_paths(
+        courses_dir: Path,
+        md_paths: list[Path] | None = None,
+    ) -> list[Path]:
 
           """One markdown per course for the LLM index.
 
@@ -2790,7 +2848,7 @@ class CourseIndexManager:
 
           url_picks: list[Path] = []
 
-          for (_level, course_url), paths in sorted(group_course_md_paths(courses_dir).items()):
+          for (_level, course_url), paths in sorted(group_course_md_paths(courses_dir, md_paths).items()):
 
               url_picks.append(pick_canonical_md_path(paths, course_url))
 
@@ -2924,9 +2982,12 @@ class CourseIndexManager:
 
         rows: list[dict[str, str]] = []
 
-        canonical_paths = select_canonical_course_md_paths(courses_dir)
+        eligible_md, type_skipped = CourseIndexManager.markdown_paths_after_course_type_filter(
+            code_dir, courses_dir
+        )
+        canonical_paths = select_canonical_course_md_paths(courses_dir, eligible_md)
 
-        total_md_files = len(iter_course_markdown(courses_dir))
+        total_md_files = len(eligible_md)
 
         for md_path in canonical_paths:
 
@@ -2962,8 +3023,12 @@ class CourseIndexManager:
 
         skipped = total_md_files - len(rows)
 
+        if type_skipped:
+            print(
+                f"Skipped {type_skipped} course markdown file(s) by COURSE_EXCLUDE_* filter",
+                flush=True,
+            )
         if skipped:
-
             print(f'Skipped {skipped} duplicate intake/URL variant(s) ({total_md_files} markdown files -> {len(rows)} courses)', flush=True)
 
         print(f'Wrote {output_path} ({len(rows)} courses)')

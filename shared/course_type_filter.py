@@ -18,6 +18,11 @@ DEFAULT_COURSE_TYPE_SELECTORS = (
 )
 
 _COURSE_TYPE_MARKDOWN_RE = re.compile(r"^\*\*Course type:\*\*\s*(.+)\s*$", re.M | re.I)
+_STUDY_MODE_MARKDOWN_RE = re.compile(
+    r"(?:^|\n)-\s*\*\*Study mode:\*\*\s*([^\n]+)",
+    re.I,
+)
+_MODE_MARKDOWN_RE = re.compile(r"^\*\*Mode:\*\*\s*(.+)\s*$", re.M | re.I)
 
 
 class CourseTypePatternMatcher:
@@ -75,6 +80,17 @@ class CourseTypeExtractor:
             return None
         text = match.group(1).strip()
         return text or None
+
+    @staticmethod
+    def study_mode_from_markdown(markdown: str) -> str | None:
+        """Essex/CCCU Key course information bullets (Study mode / Mode)."""
+        for pattern in (_STUDY_MODE_MARKDOWN_RE, _MODE_MARKDOWN_RE):
+            match = pattern.search(markdown)
+            if match:
+                text = match.group(1).strip()
+                if text:
+                    return text
+        return None
 
 
 @dataclass
@@ -137,8 +153,11 @@ class CourseTypeFilter:
         if self.url_is_excluded(url):
             return True
         course_type = CourseTypeExtractor.from_markdown(markdown)
-        if course_type:
-            return self.course_type_is_excluded(course_type)
+        if course_type and self.course_type_is_excluded(course_type):
+            return True
+        study_mode = CourseTypeExtractor.study_mode_from_markdown(markdown)
+        if study_mode and self.course_type_is_excluded(study_mode):
+            return True
         return False
 
 

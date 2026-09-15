@@ -22,7 +22,6 @@
 #   output/                         — all pipeline output (re-run scripts)
 #   Exception: output/clean/uni/    — committed requirement markdown (all unis)
 #   Exception: Manchester Metropolitan University/output/clean/ + per-level URL CSVs
-#   Exception: University of Essex/output/ — full Essex pipeline output committed
 #
 # =============================================================================
 
@@ -62,14 +61,15 @@ desktop.ini
 # --- Review handoff bundles (package_review_output.py) ---
 REVIEW/
 
+# --- Local backup copies (package_uni_backup.py) ---
+BACKUP/
+shared/package_uni_backup.py
+shared/test_course_type_filter.py
+
 # --- OUTPUT: all pipeline artifacts (re-run from {University}/code/) ---
 **/output/**
 !_university_template/output/
 !_university_template/output/.gitkeep
-
-# Committed pipeline output (University of Essex only)
-!University of Essex/output/
-!University of Essex/output/**
 
 # Committed uni requirement markdown (all universities)
 !**/output/clean/

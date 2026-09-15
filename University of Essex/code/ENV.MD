@@ -58,6 +58,11 @@ EXCLUDED_COURSE_PATHS="
 /search
 /courses
 "
+# Skip part-time courses at download/clean and LLM index (Study mode / Course type).
+COURSE_EXCLUDE_COURSE_TYPES="
+*part-time*
+"
+
 EXCLUDED_PATH_PREFIXES="
 /bookmarked-courses
 /clearing/

@@ -447,6 +447,33 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertNotIn("5.5", aligned[0])
         self.assertIn("Pearson PTE Academic", aligned[1])
 
+    def test_essex_stage1_international_fee_from_markdown(self) -> None:
+        md_path = (
+            _SHARED.parent
+            / "University of Essex/output/clean/courses/foundation/ug00002-2-bsc-accounting-and-finance.md"
+        )
+        if not md_path.is_file():
+            self.skipTest("Essex foundation sample markdown not present")
+        _, course_body = split_frontmatter(md_path.read_text(encoding="utf-8"))
+        fields = extract_stage1_fields_from_md(course_body)
+        self.assertEqual(fields.get("tuitionFee"), "21500")
+        self.assertEqual(fields.get("currency"), "GBP")
+
+    def test_essex_stage1_international_fee_lone_gbp_line(self) -> None:
+        rel_paths = (
+            "University of Essex/output/clean/courses/postgraduate/pg00425-4-mres-accounting.md",
+            "University of Essex/output/clean/courses/postgraduate/pg00426-1-msc-accounting-and-finance.md",
+        )
+        for rel in rel_paths:
+            md_path = _SHARED.parent / rel
+            with self.subTest(rel=rel):
+                if not md_path.is_file():
+                    self.skipTest("Essex PG fee sample markdown not present")
+                _, course_body = split_frontmatter(md_path.read_text(encoding="utf-8"))
+                fields = extract_stage1_fields_from_md(course_body)
+                self.assertEqual(fields.get("tuitionFee"), "24675")
+                self.assertEqual(fields.get("currency"), "GBP")
+
     def test_parse_english_from_course_markdown_essex(self) -> None:
         body = Path(_SHARED.parent / "University of Essex/output/clean/courses/undergraduate/ug00001-1-bsc-accounting.md").read_text(encoding="utf-8")
         _, course_body = split_frontmatter(body)
