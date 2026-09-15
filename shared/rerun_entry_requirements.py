@@ -262,7 +262,7 @@ def rerun_entry_requirements_course(
     uni_sections = load_uni_sections(output_dir)
     uni_content = load_uni_content(output_dir)
     grounding_warnings: list[str] = []
-    parser_hints = extract_stage1_fields_from_md(course_body)
+    parser_hints = extract_stage1_fields_from_md(course_body, study_level=study_level)
     save_audit(
         audit_dir,
         "parser_hints.json",
@@ -273,6 +273,7 @@ def rerun_entry_requirements_course(
         course_body=course_body,
         course_name=course_name,
         course_url=course_url,
+        study_level=study_level,
         warnings=grounding_warnings,
     )
     save_audit(

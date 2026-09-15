@@ -66,11 +66,13 @@ def backfill_course_dir(output_dir: Path, course_dir: Path) -> bool:
         course_url = str(meta.get("course_url", "") or meta.get("source_url", "")).strip()
 
     stage1_llm = _load_stage1_llm_json(course_dir)
+    level = str(meta.get("study_level") or study_level or "").strip()
     enriched = enrich_stage1_from_markdown(
         stage1_llm,
         course_body=course_body,
         course_name=course_name,
         course_url=course_url,
+        study_level=level or None,
     )
 
     new_fee = str(enriched.get("tuitionFee") or "").strip()

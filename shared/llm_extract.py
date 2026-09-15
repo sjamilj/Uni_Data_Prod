@@ -2194,8 +2194,40 @@ class Stage1MarkdownParser:
         return "", ""
 
     @staticmethod
+    def extract_mmu_international_tuition_fee(
+        body: str,
+        *,
+        study_level: str | None = None,
+    ) -> tuple[str, str]:
+        """MMU fees block: foundation vs full-time line depends on study_level."""
+        fees_match = re.search(
+            r"## Fees and funding\s*\n(.*?)(?=\n## |\Z)",
+            body,
+            re.S | re.I,
+        )
+        section = fees_match.group(1) if fees_match else body
+        level = (study_level or "").strip().lower()
+        foundation_pat = r"International foundation fee\s*£([\d,]+)\s*(?:per year)?"
+        fulltime_pat = r"International full-time fee\s*£([\d,]+)\s*(?:per year)?"
+        if level == "foundation":
+            patterns = (foundation_pat,)
+        elif level in {"undergraduate", "postgraduate", "postgraduate_research", "other"}:
+            patterns = (fulltime_pat,)
+        else:
+            patterns = (fulltime_pat, foundation_pat)
+        for pattern in patterns:
+            match = re.search(pattern, section, re.I)
+            if match:
+                return match.group(1).replace(",", ""), "GBP"
+        return "", ""
 
-    def extract_stage1_fields_from_md(body: str) -> dict[str, str]:
+    @staticmethod
+
+    def extract_stage1_fields_from_md(
+        body: str,
+        *,
+        study_level: str | None = None,
+    ) -> dict[str, str]:
 
         """Parse intake, fees, duration, and IELTS scalars from clean course markdown."""
 
@@ -2300,6 +2332,15 @@ class Stage1MarkdownParser:
             if essex_fee:
                 fields['tuitionFee'] = essex_fee
                 fields['currency'] = essex_currency
+
+        if not fields.get('tuitionFee'):
+            mmu_fee, mmu_currency = Stage1MarkdownParser.extract_mmu_international_tuition_fee(
+                body,
+                study_level=study_level,
+            )
+            if mmu_fee:
+                fields['tuitionFee'] = mmu_fee
+                fields['currency'] = mmu_currency
 
         if not fields.get('tuitionFee'):
 
@@ -3627,6 +3668,8 @@ class Stage1Enricher:
 
     course_url: str,
 
+    study_level: str | None = None,
+
     warnings: list[str] | None = None,
 
 ) -> dict:
@@ -3643,7 +3686,10 @@ class Stage1Enricher:
 
             parsed['courseUrl'] = course_url
 
-        hints = Stage1MarkdownParser.extract_stage1_fields_from_md(course_body)
+        hints = Stage1MarkdownParser.extract_stage1_fields_from_md(
+            course_body,
+            study_level=study_level,
+        )
 
         apply_parser_owned_stage1_fields(parsed, hints, course_body=course_body)
 
@@ -7289,7 +7335,10 @@ class CourseExtractor:
 
         stage1_json_text = ''
 
-        parser_hints = Stage1MarkdownParser.extract_stage1_fields_from_md(course_body)
+        parser_hints = Stage1MarkdownParser.extract_stage1_fields_from_md(
+            course_body,
+            study_level=study_level,
+        )
 
         ExtractionPathConfig.save_audit(audit_dir, 'parser_hints.json', json.dumps(Stage1Enricher.parser_hints_payload(parser_hints, course_body), indent=2, ensure_ascii=False))
 
@@ -7325,7 +7374,14 @@ class CourseExtractor:
 
         grounding_warnings: list[str] = []
 
-        stage1_json = Stage1Enricher.enrich_stage1_from_markdown(stage1_json, course_body=course_body, course_name=course_name, course_url=course_url, warnings=grounding_warnings)
+        stage1_json = Stage1Enricher.enrich_stage1_from_markdown(
+            stage1_json,
+            course_body=course_body,
+            course_name=course_name,
+            course_url=course_url,
+            study_level=study_level,
+            warnings=grounding_warnings,
+        )
 
         if not degree_name and str(stage1_json.get('degreeName', '') or '').strip():
 

@@ -459,6 +459,37 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(fields.get("tuitionFee"), "21500")
         self.assertEqual(fields.get("currency"), "GBP")
 
+    def test_mmu_stage1_international_foundation_fee(self) -> None:
+        samples = (
+            ("32000", "International foundation fee £32,000 per year"),
+            ("20000", "International foundation fee £20,000 per year"),
+        )
+        for expected_fee, fee_line in samples:
+            with self.subTest(fee=expected_fee):
+                body = (
+                    "## Fees and funding\n\n"
+                    "### EU and non-EU international students\n\n"
+                    f"{fee_line}\n"
+                )
+                fields = extract_stage1_fields_from_md(body, study_level="foundation")
+                self.assertEqual(fields.get("tuitionFee"), expected_fee)
+                self.assertEqual(fields.get("currency"), "GBP")
+
+    def test_mmu_stage1_foundation_vs_fulltime_by_study_level(self) -> None:
+        body = (
+            "## Fees and funding\n\n"
+            "### EU and non-EU international students\n\n"
+            "International foundation fee £20,000 per year\n"
+            "International full-time fee £21,500 per year\n"
+        )
+        foundation = extract_stage1_fields_from_md(body, study_level="foundation")
+        self.assertEqual(foundation.get("tuitionFee"), "20000")
+        for level in ("undergraduate", "postgraduate"):
+            with self.subTest(level=level):
+                fields = extract_stage1_fields_from_md(body, study_level=level)
+                self.assertEqual(fields.get("tuitionFee"), "21500")
+                self.assertEqual(fields.get("currency"), "GBP")
+
     def test_essex_stage1_international_fee_lone_gbp_line(self) -> None:
         rel_paths = (
             "University of Essex/output/clean/courses/postgraduate/pg00425-4-mres-accounting.md",
