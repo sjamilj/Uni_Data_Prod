@@ -1158,9 +1158,116 @@ class Stage1MarkdownParser:
         return fields
 
     @staticmethod
+    def extract_napier_enuic_foundation_fields(body: str) -> dict[str, str]:
+        """ENUIC IS1 foundation clean markdown (Course: … + Key information dash lines)."""
+        fields: dict[str, str] = {}
+        if not re.search(r"^Course:\s*", body, re.M):
+            return fields
+
+        duration = re.search(r"^Duration\s*-\s*(.+)$", body, re.M | re.I)
+        if duration:
+            fields["courseDuration"] = duration.group(1).strip()
+
+        start = re.search(r"^Start Dates?\s*-\s*(.+)$", body, re.M | re.I)
+        if start:
+            fields["intakeInfo"] = start.group(1).strip()
+
+        fee = re.search(r"^Pathway Tuition Fee\s*-\s*£([\d,]+)", body, re.M | re.I)
+        if fee:
+            fields["tuitionFee"] = fee.group(1).replace(",", "")
+            fields["currency"] = "GBP"
+
+        ielts = re.search(
+            r"^English Language Requirement\s*-\s*IELTS\s+([\d.]+)",
+            body,
+            re.M | re.I,
+        )
+        if ielts:
+            fields["ieltsMinOverall"] = ielts.group(1)
+        section = re.search(
+            r"no less than\s+([\d.]+)\s+in each",
+            body,
+            re.I,
+        )
+        if section:
+            fields["ieltsMinSection"] = section.group(1)
+        return fields
+
+    @staticmethod
+    def extract_napier_course_overview_fields(body: str) -> dict[str, str]:
+        """Edinburgh Napier: ### Duration / Start date under ## Course overview; **Overseas fee:**."""
+        fields: dict[str, str] = {}
+        overview = re.search(r"## Course overview\s*\n(.*?)(?=\n## |\Z)", body, re.S | re.I)
+        if not overview:
+            return fields
+        section = overview.group(1)
+
+        duration_match = re.search(r"### Duration:\s*\n+\s*([^\n(]+)", section, re.I)
+        if duration_match:
+            fields["courseDuration"] = duration_match.group(1).strip()
+
+        apply_match = re.search(
+            r"Apply for\s+"
+            r"((?:January|February|March|April|May|June|July|August|September|October|November|December)"
+            r"|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\w*"
+            r"\s+((?:19|20)\d{2})",
+            section,
+            re.I,
+        )
+        if not apply_match:
+            apply_match = re.search(
+                r"Apply for\s+"
+                r"((?:January|February|March|April|May|June|July|August|September|October|November|December)"
+                r"|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\w*"
+                r"\s+((?:19|20)\d{2})",
+                body,
+                re.I,
+            )
+        if apply_match:
+            fields["intakeInfo"] = Stage1MarkdownParser.normalize_intake_text(
+                f"{apply_match.group(1)} {apply_match.group(2)}"
+            )
+        else:
+            start_match = re.search(r"### Start date:\s*\n+\s*([^\n#]+)", section, re.I)
+            if start_match:
+                fields["intakeInfo"] = Stage1MarkdownParser.normalize_intake_text(
+                    start_match.group(1).strip()
+                )
+
+        overseas = re.search(r"\*\*Overseas fee:\*\*\s*£([\d,]+)", body, re.I)
+        if overseas:
+            fields["tuitionFee"] = overseas.group(1).replace(",", "")
+            fields["currency"] = "GBP"
+        else:
+            table_fee = re.search(r"Overseas and EU\s*\|\s*£([\d,]+)", body, re.I)
+            if table_fee:
+                fields["tuitionFee"] = table_fee.group(1).replace(",", "")
+                fields["currency"] = "GBP"
+        return fields
+
+    @staticmethod
     def extract_stage1_fields_from_md(body: str) -> dict[str, str]:
         """Parse intake, fees, duration, and IELTS scalars from clean course markdown."""
         fields: dict[str, str] = {}
+        fields.update(
+            {
+                key: value
+                for key, value in Stage1MarkdownParser.extract_napier_enuic_foundation_fields(
+                    body
+                ).items()
+                if value
+            }
+        )
+        if "## Course overview" in body and "### Duration:" in body:
+            fields.update(
+                {
+                    key: value
+                    for key, value in Stage1MarkdownParser.extract_napier_course_overview_fields(
+                        body
+                    ).items()
+                    if value
+                }
+            )
         if "## Key information" in body:
             fields.update(
                 {
@@ -1425,6 +1532,15 @@ class CourseIndexManager:
         return (2, 0, md_name.lower())
 
     @staticmethod
+    def presetup_sample_match(meta: dict[str, str], wanted: set[str]) -> str:
+        """Match presetup_sample.json URL to course_url or source_url (ENUIC foundation)."""
+        for key in ("course_url", "source_url"):
+            url = normalize_url(str(meta.get(key) or ""))
+            if url and url in wanted:
+                return url
+        return ""
+
+    @staticmethod
     def group_course_md_paths(courses_dir: Path) -> dict[tuple[str, str], list[Path]]:
         groups: dict[tuple[str, str], list[Path]] = {}
         for md_path in iter_course_markdown(courses_dir):
@@ -1487,7 +1603,10 @@ class CourseIndexManager:
 
     @staticmethod
     def expected_canonical_md_names(courses_dir: Path) -> set[str]:
-        return {relative_course_md(md_path, courses_dir) for md_path in select_canonical_course_md_paths(courses_dir)}
+        return {
+            relative_course_md(md_path, courses_dir)
+            for md_path in select_canonical_course_md_paths(courses_dir)
+        }
 
     @staticmethod
     def dedupe_course_index_rows(rows: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -1517,8 +1636,8 @@ class CourseIndexManager:
             raise FileNotFoundError(f'{courses_dir} not found — run download_and_clean_course_pages.py --clean-only first')
         university_name = code_dir.parent.name
         rows: list[dict[str, str]] = []
-        canonical_paths = select_canonical_course_md_paths(courses_dir)
         total_md_files = len(iter_course_markdown(courses_dir))
+        canonical_paths = select_canonical_course_md_paths(courses_dir)
         for md_path in canonical_paths:
             meta, body = split_frontmatter(md_path.read_text(encoding='utf-8'))
             course_url = meta.get('course_url', '').strip() or meta.get('source_url', '').strip()
@@ -1570,7 +1689,7 @@ class CourseIndexManager:
         return json.loads(path.read_text(encoding='utf-8'))
 
     @staticmethod
-    def entries_from_presetup_clean(output_dir: Path) -> list[dict[str, str]]:
+    def entries_from_presetup_clean(output_dir: Path, *, code_dir: Path | None = None) -> list[dict[str, str]]:
         sample = load_presetup_sample(output_dir)
         sample_urls = presetup_sample_urls(sample)
         wanted = {normalize_url(url) for url in sample_urls}
@@ -1585,13 +1704,30 @@ class CourseIndexManager:
         entries: list[dict[str, str]] = []
         for md_path in iter_course_markdown(courses_dir):
             meta, body = split_frontmatter(md_path.read_text(encoding='utf-8'))
-            source_url = (meta.get('source_url') or '').strip()
-            key = normalize_url(source_url)
-            if wanted and key not in wanted:
+            matched = CourseIndexManager.presetup_sample_match(meta, wanted)
+            if wanted and not matched:
                 continue
+            course_url = (meta.get('course_url') or meta.get('source_url') or '').strip()
             rel = relative_course_md(md_path, courses_dir)
-            study_level = url_level.get(key) or study_level_from_markdown(md_path, meta, courses_dir=courses_dir, course_url=source_url)
-            entries.append({'uniName': '', 'courseName': ExtractionPathConfig.infer_course_name(body, source_url), 'degreeName': '', 'course_url': source_url, 'courseUrlExternal': source_url, 'md_file': rel, 'clean_md': f'clean/{PRESETUP_CLEAN_SUBDIR}/{rel}'.replace('\\', '/'), 'study_level': study_level, 'extract_root': PRESETUP_EXTRACT_SUBDIR})
+            study_level = url_level.get(matched) or study_level_from_markdown(
+                md_path,
+                meta,
+                courses_dir=courses_dir,
+                course_url=course_url,
+            )
+            entries.append(
+                {
+                    'uniName': '',
+                    'courseName': ExtractionPathConfig.infer_course_name(body, course_url),
+                    'degreeName': '',
+                    'course_url': course_url,
+                    'courseUrlExternal': course_url,
+                    'md_file': rel,
+                    'clean_md': f'clean/{PRESETUP_CLEAN_SUBDIR}/{rel}'.replace('\\', '/'),
+                    'study_level': study_level,
+                    'extract_root': PRESETUP_EXTRACT_SUBDIR,
+                }
+            )
         return entries
 
     @staticmethod
@@ -2992,7 +3128,7 @@ class LlmExtractCLI:
             sample_urls = presetup_sample_urls(load_presetup_sample(output_dir))
             if not sample_urls:
                 raise ValueError(f"No {output_dir / 'presetup_sample.json'}. Run --presetup first.")
-            courses = CourseIndexManager.entries_from_presetup_clean(output_dir)
+            courses = CourseIndexManager.entries_from_presetup_clean(output_dir, code_dir=code_dir)
             if not courses:
                 raise ValueError('No markdown in output/clean/pre_setup_course matches presetup_sample.json. Run --presetup first.')
         else:

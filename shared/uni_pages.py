@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import re
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import parse_qs, urlparse
 
 
 class UniPageNaming:
@@ -63,7 +63,14 @@ class UniPageNaming:
 
     @staticmethod
     def course_slug_from_url(url: str) -> str:
-        parts = [part for part in urlparse(url).path.strip("/").split("/") if part]
+        parsed = urlparse(url)
+        query = parse_qs(parsed.query)
+        enuic = (query.get("enuic_degree") or [""])[0].strip()
+        if enuic:
+            slug = re.sub(r"[^\w\-]+", "-", enuic).strip("-").lower()
+            if slug:
+                return slug[:160]
+        parts = [part for part in parsed.path.strip("/").split("/") if part]
         if "courses" in parts:
             idx = parts.index("courses")
             tail = parts[idx + 1 :]

@@ -289,8 +289,9 @@ class CourseMarkdownCleaner:
             return None
         module = importlib.util.module_from_spec(spec)
         uni_code = str(path.parent)
+        # Append so code/course_markdown_cleanup.py does not shadow shared/course_markdown_cleanup.py
         if uni_code not in sys.path:
-            sys.path.insert(0, uni_code)
+            sys.path.append(uni_code)
         spec.loader.exec_module(module)
         return module
 
@@ -602,6 +603,8 @@ _default_cleaner = CourseMarkdownCleaner()
 def main(argv: list[str] | None = None) -> int:
     import argparse
 
+    from study_level import PRESETUP_CLEAN_SUBDIR, clean_courses_root
+
     parser = argparse.ArgumentParser(
         description="Re-apply shared course_markdown_cleanup to output/clean/courses/*.md"
     )
@@ -615,18 +618,49 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--presetup",
         action="store_true",
-        help="Use output/clean/pre_setup_course/ instead of output/clean/courses/",
+        help=f"Clean output/clean/{PRESETUP_CLEAN_SUBDIR}/ instead of clean/courses/",
+    )
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        help=f"Clean both clean/courses/ and clean/{PRESETUP_CLEAN_SUBDIR}/ when present",
     )
     args = parser.parse_args(argv)
 
     code_dir = resolve_code_dir(args.code_dir)
-    from study_level import CLEAN_COURSES_SUBDIR, PRESETUP_CLEAN_SUBDIR
+    output_dir = resolve_output_dir(code_dir)
 
-    subdir = PRESETUP_CLEAN_SUBDIR if args.presetup else CLEAN_COURSES_SUBDIR
-    courses_dir = resolve_output_dir(code_dir) / "clean" / subdir
-    print(f"Cleaning course markdown in {courses_dir}...")
-    updated, total = _default_cleaner.apply_to_dir(courses_dir, code_dir)
-    print(f"Done: {updated}/{total} file(s) updated")
+    if args.all:
+        roots = [
+            clean_courses_root(output_dir, presetup=False),
+            clean_courses_root(output_dir, presetup=True),
+        ]
+    elif args.presetup:
+        roots = [clean_courses_root(output_dir, presetup=True)]
+    else:
+        roots = [clean_courses_root(output_dir, presetup=False)]
+
+    updated_total = 0
+    files_total = 0
+    for courses_dir in roots:
+        if not courses_dir.is_dir():
+            if args.all:
+                print(f"Skipping (not found): {courses_dir}")
+                continue
+            presetup_dir = clean_courses_root(output_dir, presetup=True)
+            hint = ""
+            if presetup_dir.is_dir() and not args.presetup:
+                hint = (
+                    f"\nFound {presetup_dir} — use --presetup or --all to clean presetup markdown."
+                )
+            raise FileNotFoundError(f"Course markdown directory not found: {courses_dir}{hint}")
+
+        print(f"Cleaning course markdown in {courses_dir}...")
+        updated, total = _default_cleaner.apply_to_dir(courses_dir, code_dir)
+        updated_total += updated
+        files_total += total
+
+    print(f"Done: {updated_total}/{files_total} file(s) updated")
     return 0
 
 

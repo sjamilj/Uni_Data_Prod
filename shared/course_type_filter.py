@@ -1,4 +1,8 @@
-"""Exclude short-course, CPD, and part-time courses from download/clean pipeline."""
+"""Exclude courses by URL path, catalogue link text, or course-type label.
+
+Used at scrape (COURSE_EXCLUDE_LINK_TEXT_PATTERNS + URL patterns), download/clean,
+and LLM index build.
+"""
 
 from __future__ import annotations
 
@@ -128,6 +132,7 @@ class CourseTypeExtractor:
 class CourseTypeFilter:
     exclude_course_types: list[str]
     exclude_url_patterns: list[str]
+    exclude_link_text_patterns: list[str]
     course_type_selectors: list[str]
 
     @classmethod
@@ -143,12 +148,42 @@ class CourseTypeFilter:
             exclude_url_patterns=CourseTypePatternMatcher.parse_env_list(
                 env.get("COURSE_EXCLUDE_URL_PATTERNS")
             ),
+            exclude_link_text_patterns=CourseTypePatternMatcher.parse_env_list(
+                env.get("COURSE_EXCLUDE_LINK_TEXT_PATTERNS")
+            ),
             course_type_selectors=selectors or list(DEFAULT_COURSE_TYPE_SELECTORS),
         )
 
     @property
     def enabled(self) -> bool:
-        return bool(self.exclude_course_types or self.exclude_url_patterns)
+        return bool(
+            self.exclude_course_types
+            or self.exclude_url_patterns
+            or self.exclude_link_text_patterns
+        )
+
+    def link_text_is_excluded(self, text: str | None) -> bool:
+        if not text or not self.exclude_link_text_patterns:
+            return False
+        for pattern in self.exclude_link_text_patterns:
+            if CourseTypePatternMatcher.pattern_matches(text, pattern):
+                return True
+        return False
+
+    def prune_url_catalogue(self, all_urls: set[str], url_levels) -> int:
+        """Remove excluded URLs from scrape sets and UrlLevelMap (mutates in place)."""
+        from study_level import normalize_url
+
+        removed = 0
+        for url in list(all_urls):
+            if not self.url_is_excluded(url):
+                continue
+            all_urls.discard(url)
+            removed += 1
+            for key in (url, normalize_url(url)):
+                url_levels.levels.pop(key, None)
+                url_levels.course_names.pop(key, None)
+        return removed
 
     def url_is_excluded(self, url: str | None) -> bool:
         if not url or not self.exclude_url_patterns:

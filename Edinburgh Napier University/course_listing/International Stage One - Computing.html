@@ -1,0 +1,2687 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://www.napier.ac.uk/global/enuic/is1/is1-computing -->
+<html class=" gb js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en" style="--truste-box-overlay-height: auto; --truste-box-overlay-margin-left: auto; --truste-box-overlay-inner-height: auto; --truste-popframe-height: auto;" data-qb-installed="true"><!--<![endif]--><head id="pageHeader"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.truste_visibility_visible {visibility: visible;}.truste_visibility_hidden {visibility: hidden;}</style><style type="text/css">.truste_overlay {background-color: #000;opacity: 0.4;position: fixed;z-index: 1000200;width: 100%;height: 100%;top: 0px;left: 0px;overflow: hidden;filter: Alpha(Opacity: 80);}.truste_box_overlay {position: absolute;z-index:2000200;top: 0px;left: 0px;bottom: 0px;right: 0px;border-radius: 5px;padding: 10px;width: 80%;max-width: 1400px; height: var(--truste-box-overlay-height);min-width: 220px;margin: 20px auto 20px var(--truste-box-overlay-margin-left);box-sizing: content-box;padding: 0px;}.truste_box_overlay_inner {position: relative;width: 100%;height: var(--truste-box-overlay-inner-height);outline: none; }.truste_box_overlay_border {display: block;background: #000;opacity: 0.3;width: calc(100% + 20px);height: calc(100% + 20px);position: absolute;top: -10px;left: -10px;display: none;}.truste_cm_outerdiv {width: 100%;height: 100%;overflow: scroll;position: absolute;top: 0;left: 0;z-index: 2000200;-webkit-overflow-scrolling: touch;position: fixed;}.truste_popframe {border: 0px;border-radius: 2px;overflow: hidden;background: #fff;display: block;position: absolute;top: 0px;left: 0px;width: 100%;height: var(--truste-popframe-height); border-radius: 0px;border: 2px solid #dcdcdc;}</style><style type="text/css">.truste_caIcon_display {display: block !important;}</style><style type="text/css">.truste_cursor_pointer {cursor: pointer;}.truste_border_none {border: none;}</style><style type="text/css">.ta-display-none { display: none; }</style><meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Social sharing meta details-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:site_name" content="Napier"><meta name="facebook-domain-verification" content="tkd3166urn6c9hs2x9ni6sa0sdbwtb">
+    <!--[if IE]><link rel="shortcut icon" href="/theme/assets/img/design/favicon.ico" /><![endif]-->
+    
+    <script type="text/javascript" id="www-widgetapi-script" src="./International Stage One - Computing_files/www-widgetapi.js.download" async=""></script><script src="./International Stage One - Computing_files/player_api"></script><script async="" src="./International Stage One - Computing_files/gtm.js.download"></script><script>
+        var __dispatched__ = {};
+
+        var __i__ = self.postMessage && setInterval(function () {
+            if (self.PrivacyManagerAPI && __i__) {
+                var apiObject = {
+                    PrivacyManagerAPI:
+                        { action: "getConsentDecision", timestamp: new Date().getTime(), self: self.location.host }
+                }; self.top.postMessage(JSON.stringify(apiObject), "*"); __i__ = clearInterval(__i__);
+            }
+        }, 50);
+
+        self.addEventListener("message", function (e, d) {
+            try {
+                if (e.data && (d = JSON.parse(e.data)) &&
+                    (d = d.PrivacyManagerAPI) && d.capabilities &&
+                    d.action == "getConsentDecision") {
+                    var newDecision =
+                        self.PrivacyManagerAPI.callApi("getGDPRConsentDecision",
+                            self.location.host).consentDecision;
+                    newDecision && newDecision.forEach(function (label) {
+                        if (!__dispatched__[label]) {
+                            self.dataLayer && self.dataLayer.push({ "event": "GDPRPref Allows " + label });
+                            __dispatched__[label] = 1;
+                        }
+                    });
+                }
+            } catch (xx) { }
+        });
+    </script>
+
+
+
+    <link rel="icon" type="image/png" href="https://www.napier.ac.uk/theme/assets/img/design/favicon.png"><link rel="apple-touch-icon-precomposed" href="https://www.napier.ac.uk/theme/assets/img/design/favicon.png">
+
+    <!--[if !IE 8]><!-->
+    <link rel="stylesheet" type="text/css" href="./International Stage One - Computing_files/style.css" media="all"><link rel="stylesheet" type="text/css" href="./International Stage One - Computing_files/style-replaceH1.css" media="all"><link rel="stylesheet" type="text/css" href="./International Stage One - Computing_files/style-courseheaders.css" media="all">
+    <!--<![endif]-->
+    <!--[if gte IE 9]>
+            <link rel="stylesheet" type="text/css" href="/theme/assets/css/style.css" media="all" />
+        <![endif]-->
+    <!--[if lt IE 9]>
+            <link rel="stylesheet" type="text/css" href="/theme/assets/css/style-legacy.css" media="all" />
+        <![endif]-->
+
+    <link href="./International Stage One - Computing_files/css" rel="stylesheet" type="text/css">
+    
+
+    <script src="./International Stage One - Computing_files/modernizr-2.6.2.min.js.download"></script>
+
+    <script type="text/javascript" src="./International Stage One - Computing_files/handlebars-v4.7.8.js.download"></script>
+    
+    <script>window.jQuery || document.write('<script src="/theme/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script><script src="./International Stage One - Computing_files/jquery-1.10.2.min.js.download"></script>
+    
+    <!--TrustArc Consent Manager codebase-->
+     
+      <script async="async" src="./International Stage One - Computing_files/notice" crossorigin="" id="truste_0.7098171706129502"></script>
+      <!--<script async="async" src="//consent.trustarc.com/notice?domain=dev-napier.ac.uk&c=teconsent&js=nj&noticeType=bb&gtm=1&text=true" crossorigin></script>-->
+    
+    <script>
+
+</script>
+    <link href="./International Stage One - Computing_files/webedit.css" rel="stylesheet">
+
+    <!-- Clearing Scripts -->
+    <link href="./International Stage One - Computing_files/form-messages.napier.min.css" rel="stylesheet"><link href="./International Stage One - Computing_files/opaqueoverlaystyles.css" rel="stylesheet"><link href="./International Stage One - Computing_files/style-august22.css" rel="stylesheet">
+    <script src="./International Stage One - Computing_files/accessability Tab issues and Mega Navigation.js.download"></script>
+    <script src="./International Stage One - Computing_files/accessability H tag issues.js.download"></script>
+
+    <script src="./International Stage One - Computing_files/jquery-1.10.2.min.js.download"></script>
+    <script type="text/javascript">
+            (function ($) {
+                $(document).ready(function () {
+                    $('.enu-checkparentlink').each(function () {
+                        var parentLink = $(this).parent().attr("href");
+
+                        if (!parentLink) {
+                            $(this).unwrap();
+                            $(this).wrap("<span></span>");
+                        }
+                    })
+                });
+            })(jQuery);
+    </script>
+
+    <!-- Google Tag Manager  live environmentt -->
+    <script>
+        $(function () {
+            var gtmCode = document.getElementById('gtmcode').value;
+            console.log(gtmCode);
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', gtmCode);
+        });
+    </script>
+    <!-- End Google Tag Manager -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="keywords" content="pathway, international, undergraduate, foundation, ENUIC, edinburgh napier university international college, computing"><meta name="description" content="The IS1 Computing pathway is the equivalent to the first year of a four year Scottish undergraduate degree. "><link rel="canonical" href="https://www.napier.ac.uk/global/enuic/is1/is1-computing"><meta name="language" content="English"><meta property="og:title" content="International Stage One - Computing"><meta name="twitter:title" content="International Stage One - Computing"><meta property="og:url" content="https://www.napier.ac.uk/global/enuic/is1/is1-computing/"><meta name="twitter:url" content="https://www.napier.ac.uk/global/enuic/is1/is1-computing/"><meta property="og:description" content="At Edinburgh Napier University, we nurture talent and create knowledge that shapes communities all around the world."><meta name="twitter:description" content="At Edinburgh Napier University, we nurture talent and create knowledge that shapes communities all around the world."><title>
+	International Stage One - Computing
+</title><style id="hb-stylesheet"></style><script src="./International Stage One - Computing_files/adv-bundle.js.download" type="module"></script><style data-shadow-fonts="true">
+@font-face {font-family:titillium web;font-weight:400;src:url(https://consent.trustarc.com/get?name=TitilliumWeb-Regular.ttf)format("truetype"),url(https://consent.trustarc.com/get?name=TitilliumWeb-Regular.eot)format("embedded-opentype"),url(https://consent.trustarc.com/get?name=TitilliumWeb-Regular.woff)format("woff"),url(https://consent.trustarc.com/get?name=TitilliumWeb-Regular.otf)format("opentype"),url(https://consent.trustarc.com/get?name=TitilliumWeb-Regular.woff2)format("woff2"),url(https://consent.trustarc.com/get?name=TitilliumWeb-Regular.svg)format("svg")}
+
+@font-face {font-family:titillium web;font-weight:700;src:url(https://consent.trustarc.com/get?name=TitilliumWeb-Bold.ttf)format("truetype"),url(https://consent.trustarc.com/get?name=TitilliumWeb-Bold.eot)format("embedded-opentype"),url(https://consent.trustarc.com/get?name=TitilliumWeb-Bold.woff)format("woff"),url(https://consent.trustarc.com/get?name=TitilliumWeb-Bold.otf)format("opentype"),url(https://consent.trustarc.com/get?name=TitilliumWeb-Bold.woff2)format("woff2"),url(https://consent.trustarc.com/get?name=TitilliumWeb-Bold.svg)format("svg")}
+
+@font-face {font-family:titillium web semibold;src:url(https://consent.trustarc.com/get?name=TitilliumWeb-SemiBold.ttf)format("truetype")}</style></head>
+
+<body class="no-sidebars red is1-computing standard-content-page ENU" style="" cz-shortcut-listen="true">
+    <form method="post" action="https://www.napier.ac.uk/global/enuic/is1/is1-computing" id="mainLayout">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['mainLayout'];
+if (!theForm) {
+    theForm = document.mainLayout;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A09A2030">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="kxVw272byML8VwtPNQeP1UnOlRvac3C2zO+MCiUyzzmzg1x7Xxfw8XucEsQpCs4CIue3U7khgwb7y8UHz9YmHtOHnX12/e9R/JmGXlfw5hV3XfriiH2gkV67SrZyF50hPN2l/aliL1QkGQMQn59hDqYXM7OO7OQRpSxnxc5l4xyfLyGvEnLKUseuTXRMwo/g7C7TH9MijNzQ886lkB49srJLV00VS7lw5VIhms4+D6VLFy4wzdM25OA0x01SeEY+swwkSjSZoiJ9GgIWeDR8WQYQATTYMjJIZdecXpgq0zFsxIeeDwB1OTslrgOXnKjhiOaF/6u6ckf7fkKgrCe95A==">
+</div>
+        
+
+<script>
+    // after page load not images etc
+    window.addEventListener("DOMContentLoaded", function () {
+        document.getElementsByClassName("large-logo")[0].removeAttribute("height");
+        document.getElementsByClassName("large-logo")[0].removeAttribute("width");
+    });
+</script>
+<img src="./International Stage One - Computing_files/HarrietENU_Logo_866x245.png" class="PrintLogo" alt="Edinburg Napier University logo" width="866" height="245" responsive="1">
+
+
+<div class="mastheadLinks" role="navigation" aria-label="Masthead Navigation Links">
+    <div class="mastheadLinkHolder" style="display: none;">
+        <a tab-index="0" href="https://www.napier.ac.uk/global/enuic/is1/is1-computing#mainContentArea" class="screenreader tabindex">Skip to main content</a>
+        <div class="set-backGround-for-accesability">
+            <ul class="u-StructureWrapper u-resetUL create-angle ">
+                <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://my.napier.ac.uk/">
+                        My Napier
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" rel="noopener noreferrer" href="https://intranet.napier.ac.uk/">
+                        Intranet
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.napier.ac.uk/about-us/work-with-us">
+                        Jobs
+                    </a>
+                </li>
+                <li>
+                    <a title="People " href="https://www.napier.ac.uk/about-us/our-location/our-campuses/libraries-and-heritage-collections">
+                        Libraries
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="headerWrapper greyBG hideBar" style="display: block;">
+    <header class="headerArea u-StructureWrapper">
+        <div class="headerNav" style="margin-right: -20px;">
+            <div class="innerHeaderNav" style="display: none;">
+                <a class="MainLogo" href="https://www.napier.ac.uk/" aria-label="Edinburgh Napier University Home Page">
+                    <img src="./International Stage One - Computing_files/HarrietENU_Logo_866x245.png" class="large-logo" alt="Edinburg Napier University logo" responsive="1">
+                    <img src="./International Stage One - Computing_files/small-Logo.jpg" class="small-logo" alt="Edinburgh Napier University Logo">
+                </a>
+                
+
+                <div id="ctl18_pnlRegularLogo">
+	
+                    
+                    <span class="logoHeader screenreader">Edinburgh Napier University
+                    </span>
+                    
+</div>
+
+                
+
+<nav class="primaryNavigation" aria-label="Primary Navigation">
+
+    
+            <ul class="u-resetUL">
+        
+            <li id="liPrimary_5cf8f308-da79-43f5-b085-ae92b279c965" class="primaryMain coursesmenu">
+                <div class="primary">
+                    <a id="primaryNavHyperLink_5e2150e3-6bab-4e16-8f3c-70e6feadb9bd" class="nav-item" aria-label="open menu" onclick="location.href=this.href;" href="https://www.napier.ac.uk/courses" tabindex="0">Courses</a>
+                    <span class="toggle icon-triangle-down initial-state"></span>
+                </div>
+                
+                        <div class="secondary">
+                            <ul>
+                    
+                        <li>
+                            <a id="secNavHyperLink_b1a55631-f969-4fd8-ad58-32e0b60aa38d" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas">Study areas</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_af877225-983f-477f-a317-06051f7e2dc7" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/accounting-and-finance">Accounting and Finance</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_d69eafe4-1f69-41a6-a665-97f724bf5f8e" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/acting">Acting</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_280330d9-58e7-4df5-81ef-7d03b8d94e3a" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/biological-sciences">Biological Sciences</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_f569b1dc-c9e1-4044-a427-e77cb6c8c80a" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/building-and-surveying">Building and Surveying</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_ee08f406-2c9b-4465-be4e-2f8d032ab7f5" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/business-and-management">Business and Management</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_a3af83dd-2d6a-4ab3-9013-bc79d59fcc2e" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/computing">Computing</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_11a20a18-6dfb-42af-b2c9-f5de4da2505f" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/criminology-psychology-and-sociology">Criminology Psychology and Sociology</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_1d094b29-93c1-481c-af82-865dcc793587" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/design-photography-and-advertising">Design, Photography &amp; Advertising</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_977e14a5-b895-4177-aef1-910f5d019342" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/engineering">Engineering</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_6cc8c9a8-3a4e-4ae0-a201-75c99b49e725" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/english-creative-writing-and-publishing">English, Creative Writing and Publishing</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_391fc1a5-dbb2-4d9d-a4e1-68f5aeaf38c0" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/film-journalism-and-media">Film, Journalism and Media</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_3c50eace-12bc-4c2c-afc0-d2ab795a1e05" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/health-and-social-care">Health and Social Care</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_d9a2d89a-c634-4a6a-ad14-fb3ca4169607" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/law">Law</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_948c39bf-8d5e-4135-9f34-69d2badd2640" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/marketing">Marketing</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_8c38ff75-08ce-4499-b309-18cddb4afd83" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/music">Music</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_d51943e7-a2a0-4a74-b77d-046d8ed41541" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/nursing-and-midwifery">Nursing and Midwifery</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_730e6118-87be-4d48-b8e6-aefdb0e772ad" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/sport-and-exercise-sciences">Sport and Exercise Sciences</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_3279bcbc-2a6c-4664-b612-5979cd9d837c" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/teaching">Teaching</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_c23c9255-b9e4-43cd-a64c-bfd1b6436e48" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/courses/study-areas/tourism-hospitality-festival-and-events-management">Tourism Hospitality Festival and Events Management</a>
+                        </li>
+                    
+                        </ul>
+                        </div>
+                    
+            </li>
+        
+            <li id="liPrimary_5860ac9a-f73e-42f6-85e1-19dd0c4c0d8e" class="primaryMain">
+                <div class="primary">
+                    <a id="primaryNavHyperLink_492e87a5-d617-4139-bd5b-e3450d2496ea" class="nav-item" aria-label="open menu" onclick="location.href=this.href;" href="https://www.napier.ac.uk/study-with-us" tabindex="0">Study with us</a>
+                    <span class="toggle icon-triangle-down initial-state"></span>
+                </div>
+                
+                        <div class="secondary">
+                            <ul>
+                    
+                        <li>
+                            <a id="secNavHyperLink_bf8c6745-1fc8-4515-852e-65d00691fd8b" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/study-with-us/undergraduate">Undergraduate</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_d35987de-ca9f-4e33-994a-bebd6ab591ac" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/study-with-us/postgraduate">Postgraduate</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_2feebc05-3bd8-49a8-a25f-67a8a7346060" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/study-with-us/international-students">International students</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_2a0cbccb-9cdf-4521-a81c-7b9b26dc22a4" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/study-with-us/apprenticeships">Graduate apprenticeships</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_ca1a6d6c-6885-46d8-a98a-c4c702128c41" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/study-with-us/online">Online study</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_9016a4c3-d81c-4228-ad95-100b76e06ede" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/study-with-us/short-courses">Short courses</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_eebf3668-dbb0-4350-9753-49bbef6b7fb4" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/study-with-us/why-choose-edinburgh-napier">Why choose Edinburgh Napier</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_f5f5275f-ffd8-4a4d-9575-cd58e484106f" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/study-with-us/bursaries">Funding your studies</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_96c728e8-5792-4286-b844-b7d7473b62cd" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/study-with-us/student-life">Student life</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_a31047ec-ca01-4491-a24e-c8699c860355" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/study-with-us/accommodation">Accommodation</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_899468f2-989d-4d11-b180-1913c694e9cd" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/study-with-us/graduation">Celebrating success</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_e16db46a-17b1-4ee7-9430-78021af381c1" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/study-with-us/widening-participation">Widening Participation</a>
+                        </li>
+                    
+                        </ul>
+                        </div>
+                    
+            </li>
+        
+            <li id="liPrimary_0f843345-3d39-4a77-99a7-20f17448fda5" class="primaryMain">
+                <div class="primary">
+                    <a id="primaryNavHyperLink_ffc917ff-ca8f-4fb4-90e4-d90710624ab4" class="nav-item" aria-label="open menu" onclick="location.href=this.href;" href="https://www.napier.ac.uk/research-and-innovation" tabindex="0">Research and innovation</a>
+                    <span class="toggle icon-triangle-down initial-state"></span>
+                </div>
+                
+                        <div class="secondary">
+                            <ul>
+                    
+                        <li>
+                            <a id="secNavHyperLink_1f9fae5a-d8c8-4c21-b21a-3c08d526daf6" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/research-and-innovation/business-and-innovation-hub">Business &amp; Innovation Hub</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_c48c1757-88e3-4b0f-95fe-2e4eb0e02da9" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/research-and-innovation/doctoral-college">Doctoral College</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_eaa7cbca-16b4-4672-9f55-29157cd53753" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/research-and-innovation/explore-our-research">Explore our research</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_4b5a1fe0-dcc5-4c26-9cf1-1eee08fc2a24" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/research-and-innovation/our-research-centres">Our research centres</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_4397dad3-1f5c-40ce-8be3-75dacd7927f6" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/research-and-innovation/meet-our-researchers">Meet our researchers</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_5d734c74-a022-44d6-9c78-f1f2b6f818b1" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/research-and-innovation/research-environment">Our research environment</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_aed06709-fe70-4c43-ae0c-8ae7db9557a0" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/research-and-innovation/public-engagement">Public engagement</a>
+                        </li>
+                    
+                        </ul>
+                        </div>
+                    
+            </li>
+        
+            <li id="liPrimary_82828ef3-c3ad-41f2-9f7c-febbb0d4843c" class="primaryMain">
+                <div class="primary">
+                    <a id="primaryNavHyperLink_971b7f43-0d91-4dcb-9c2a-e12e1f107ab3" class="nav-item" aria-label="open menu" onclick="location.href=this.href;" href="https://www.napier.ac.uk/global" tabindex="0">Global</a>
+                    <span class="toggle icon-triangle-down initial-state"></span>
+                </div>
+                
+                        <div class="secondary">
+                            <ul>
+                    
+                        <li>
+                            <a id="secNavHyperLink_d62a3d30-7613-4854-8cbb-0f9a4760067e" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/global/enuic">International College</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_773d76bc-6a12-4901-a729-44857fe96938" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/global/international-partners">International partners</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_05afd585-1be9-41e4-8e69-176bbb033ca9" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/global/exchange-programmes">Exchange programmes</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_09fe8005-1702-45a1-b3a4-e69939145546" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/global/joint-college">Joint College</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_544f1822-6e89-4bad-aa2b-7f3d12f18097" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/global/transnational-education">Transnational education</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_91bae9a3-a18e-4b21-9469-0c7e58462ab3" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/global/global-research">Global research</a>
+                        </li>
+                    
+                        </ul>
+                        </div>
+                    
+            </li>
+        
+            <li id="liPrimary_7ad71b1d-ff98-4c7b-9bcb-0210a817e201" class="primaryMain">
+                <div class="primary">
+                    <a id="primaryNavHyperLink_710a54a5-3a49-442e-9479-735824d9166f" class="nav-item" aria-label="open menu" onclick="location.href=this.href;" href="https://www.napier.ac.uk/alumni" tabindex="0">Alumni</a>
+                    <span class="toggle icon-triangle-down initial-state"></span>
+                </div>
+                
+                        <div class="secondary">
+                            <ul>
+                    
+                        <li>
+                            <a id="secNavHyperLink_2cc57d7e-8a67-4a38-b723-28013283fcaf" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/alumni/alumni-news">Alumni news</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_cf90359a-a3dd-4380-872f-8fc7545886b3" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/alumni/big-alumni-weekend">Big alumni weekend</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_5d0ebfd0-e5be-4e8b-9a5a-0da3d0aef1a1" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/alumni/benefits-and-services">Benefits and Services</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_6431a84a-090d-4ad7-a599-90c1ea464420" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/alumni/get-involved">Get involved</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_fd7f10fa-26b6-41f4-a6ee-2458e48fc4b0" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/about-us/support-the-university">Support the University</a>
+                        </li>
+                    
+                        </ul>
+                        </div>
+                    
+            </li>
+        
+            <li id="liPrimary_67b4c916-b667-4350-98e3-7e45ab54ab50" class="primaryMain">
+                <div class="primary">
+                    <a id="primaryNavHyperLink_c0fa8349-55e8-440d-91ae-bb403cc020fc" class="nav-item" aria-label="open menu" onclick="location.href=this.href;" href="https://www.napier.ac.uk/about-us" tabindex="0">About us</a>
+                    <span class="toggle icon-triangle-down initial-state"></span>
+                </div>
+                
+                        <div class="secondary">
+                            <ul>
+                    
+                        <li>
+                            <a id="secNavHyperLink_64cfbc81-33ab-4a2b-b5b0-d9981e20e674" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/about-us/work-with-us">Working at Edinburgh Napier</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_48b98050-4c2a-4e36-b67a-297a29f3497f" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/about-us/term-dates">Term dates</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_f00dfcdf-44be-44ea-956e-b45cdaaf171e" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/about-us/events">Events</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_055975a5-dfd7-44d5-bdcc-df72abee6566" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/about-us/our-location">Our location</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_df7c0969-05fb-4496-bb87-5f4facfcd052" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/about-us/official-merchandise">Official merchandise</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_38759fd3-7e63-4663-aa26-92177737b302" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/about-us/our-schools">Our schools</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_b3ebb1cc-5204-4a9c-96b4-b7e40c93cc40" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/about-us/news">News</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_9d76cfad-0632-4863-ae31-452d533201ee" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/about-us/university-leadership">University leadership</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_6a3acf39-0ae1-4b21-9689-ad3f1acfd513" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/about-us/support-the-university">Support the University</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_8a328289-5c28-4a9b-896a-130eb8a61e0a" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/about-us/contact-us">Contact us</a>
+                        </li>
+                    
+                        <li>
+                            <a id="secNavHyperLink_8e02304a-e3bd-4c6a-a385-3c89e622c550" tabindex="-1" class="secondary-open" href="https://www.napier.ac.uk/about-us/conferences-and-hospitality">Conferences and hospitality</a>
+                        </li>
+                    
+                        </ul>
+                        </div>
+                    
+            </li>
+        
+</ul></nav>
+<style>
+
+    .coursesmenu .secondary {
+        background: #fff;
+    }
+
+        .coursesmenu .secondary ul {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+            -webkit-column-gap: 20px;
+            column-gap: 20px;
+            -moz-column-gap: 20px;
+            -webkit-column-rule: 1px solid #cbd3d5; /* Chrome, Safari, Opera */
+            -moz-column-rule: 1px solid #cbd3d5; /* Firefox */
+            column-rule: 1px solid #cbd3d5;
+            margin-top: 20px
+        }
+
+            .coursesmenu .secondary ul li {
+                display: inline-block !important;
+                width: 100%;
+            }
+
+                .coursesmenu .secondary ul li a {
+                    padding: 0.50em 0 !important;
+                }
+
+    .coursesmenu .secondary {
+        width: 900px;
+        left: 0px;
+    }
+
+    .mainNavSearch {
+        right: 0em;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .coursesmenu .secondary ul {
+            -webkit-column-count: 1;
+            -moz-column-count: 1;
+            column-count: 1;
+            -webkit-column-gap: 0px;
+            column-gap: 0px;
+            -moz-column-gap: 0px;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .coursesmenu .secondary ul {
+            -webkit-column-count: 1;
+            -moz-column-count: 1;
+            column-count: 1;
+        }
+    }
+
+    @media only screen and (max-width: 1215px) {
+        h3.menu-page-summary {
+            display: none;
+        }
+    }
+</style>
+
+                <a id="ctl18_ctl02_searchLink" class="icon-search mainNavSearch" role="button" aria-label="Toggle Search Visibility" href="https://www.napier.ac.uk/search"><span class="toggle icon-triangle-down initial-state searchdown" style="visibility: hidden;"></span></a>
+<div id="ctl18_ctl02_search" class="headerSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl18_ctl02_searchButtonHeader')">
+	
+    <div>
+        <input name="ctl18$ctl02$searchTextbox" type="text" id="ctl18_ctl02_searchTextbox" tabindex="-1" class="searchHeaderTextBox" title="Search Term" placeholder="Enter a search term e.g. Latest news" aria-label="Search Term">
+        <select name="ctl18$ctl02$searchDropdown" id="ctl18_ctl02_searchDropdown" tabindex="-1" class="searchHeaderTextBox2" title="Search Area" aria-label="Search Area">
+		<option value=" ">All</option>
+		<option value="{EC5F263E-5378-49D3-9D7B-565B708C82C1}@@{C96574E3-8520-4AC3-A223-95C0595425A3}">Courses</option>
+		<option value="{CCD24A73-7667-4798-81CD-675B7564DBE0}">Staff</option>
+		<option value="{00446B21-85AD-461B-880E-683248CA1508}">News</option>
+		<option value="{FC804D55-3660-4C82-9186-37EBE5197FA3}">Events</option>
+		<option value="url:/research-and-innovation/research-search">Research</option>
+		<option value="{4E5C7D79-799F-4864-8679-3543F50094F1}">Bursaries</option>
+
+	</select>
+        <input type="submit" name="ctl18$ctl02$searchButtonHeader" value="Search" id="ctl18_ctl02_searchButtonHeader" disabled="" class="aspNetDisabled searchHeaderButton" aria-label="Search Submit">
+    </div>
+
+</div>
+
+            </div>
+        </div>
+        <div class="header-wbg"></div>
+        <a class="openMenu icon-menu" aria-label="open menu" href="https://www.napier.ac.uk/global/enuic/is1/is1-computing#"></a>
+    </header>
+</div>
+
+        
+            <section role="main">
+        
+        <div id="ctl21_pageTitleDiv" class="pageTitle backgroundImage backgroundImage-mobile" data-bg="" data-bgsmall="">
+    <div id="ctl21_bgImage" class="innerContainer">
+        <div id="ctl21_leftbg" class="left-bg"></div>
+        <div class="u-StructureWrapper red innerWrapper">
+            <div id="ctl21_centerdiv" class="center">
+                <div class="titleWrapper">
+
+                    <div class="h1Tag largeTitle">
+
+
+                        
+
+                        <div id="ctl21_pnlPageTitle">
+	
+                            <h1 class="course-title">
+                                International Stage One - Computing
+                            </h1>
+                        
+</div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        
+            <div class=" u-StructureWrapper u-overflow">
+        
+
+        
+
+<script>
+    $(document).ready(function () {
+        if ($('.breadcrumbs ul li').length > 2) {
+            var totalElements = $('.breadcrumbs ul li').length;
+            var totalToHide = totalElements - 2;
+
+            $('.breadcrumbs ul li').slice(0, totalToHide).addClass("breadcrumbtoplevels");
+        }
+    });
+</script>
+
+<style>
+    @media all and (max-width: 35.49em) {
+        .breadcrumbtoplevels {
+            display: none !important;
+        }
+
+        /*        .breadcrumbs {
+            margin-bottom: 1em;
+        }*/
+
+        .breadcrumbs a {
+            /* increase clickable area for mobile */
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+    }
+</style>
+
+
+
+
+
+
+        <nav class="breadcrumbs">
+            <ul class="u-resetUL">
+    
+        <li class="breadcrumbtoplevels">
+            <a id="ctl22_breadcrumbRepeater_breadcrumbLink_2c7db5ff-8035-45c0-bf1f-5f8da2922422_0" href="https://www.napier.ac.uk/">Home
+                <span class="icon-triangle-right"></span>
+            </a>
+        </li>
+    
+        <li class="breadcrumbtoplevels">
+            <a id="ctl22_breadcrumbRepeater_breadcrumbLink_5552d120-5232-412d-89c9-df10fc1d2d8b_1" href="https://www.napier.ac.uk/global">Global
+                <span class="icon-triangle-right"></span>
+            </a>
+        </li>
+    
+        <li class="breadcrumbtoplevels">
+            <a id="ctl22_breadcrumbRepeater_breadcrumbLink_0ea75711-30f2-4f05-8019-7accdbe297f7_2" href="https://www.napier.ac.uk/global/enuic">International College
+                <span class="icon-triangle-right"></span>
+            </a>
+        </li>
+    
+        <li>
+            <a id="ctl22_breadcrumbRepeater_breadcrumbLink_93e8098f-7d63-4168-b7d4-0d9c3cda3992_3" href="https://www.napier.ac.uk/global/enuic/is1">International Stage One
+                <span class="icon-triangle-right"></span>
+            </a>
+        </li>
+    
+        <li>
+            International Stage One - Computing</li>
+        </ul>
+        </nav>
+    
+
+        
+
+<ul class="SocialLinks u-resetUL u-StructureWrapper">
+     <li class="facebook socialLink">
+     	<a href="https://www.facebook.com/sharer/sharer.php?u=https://www.napier.ac.uk/global/enuic/is1/is1-computing" id="ctl23_fbLink" target="_blank" class="icon-facebook ">	
+     		<span>Facebook</span>
+     	</a>
+     </li>
+     <li class="twitter socialLink">
+          <a href="https://twitter.com/intent/tweet?url=https://www.napier.ac.uk/global/enuic/is1/is1-computing" id="ctl23_twitterLink" class="icon-twitter-with-circle" target="_blank">
+               <span>Twitter</span>
+          </a>
+     </li>
+     <li class="linkedin socialLink">
+     	<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.napier.ac.uk/global/enuic/is1/is1-computing" id="ctl23_linkedinLink" class="icon-linkedin-with-circle" target="_blank">
+     		<span>LinkedIn</span>
+     	</a>
+     </li>
+     <li class="email">
+     	<a href="mailto:?subject=Check%20this%20out%20from%20Edinburgh%20Napier&amp;body=I%20thought%20you%20might%20like%20to%20see%20this%20at%20Edinburgh%20Napier%20University:%20%20https://www.napier.ac.uk/global/enuic/is1/is1-computing" id="ctl23_emailToLink" class="icon-email">
+     		<span>Email</span>
+     	</a>
+     </li>
+</ul>
+
+        </div>
+        
+
+        
+        
+        
+
+        <div class="contentWrapper">
+                    
+
+<div class="introText u-StructureWrapper paddingRight">
+	<span style="background-color: #ffffff; color: #212529;">International Stage One – Computing provides students with the understanding of and introduction to programming, systems, software engineering and networks.</span>
+    
+</div>
+                    <div id="mainContentArea"></div> 
+                    <section id="standardcontent_0_featuredTextSection" class="featured-text contentModule ">
+	<div id="standardcontent_0_divText" class="innerWrapper u-StructureWrapper">
+	    <span id="standardcontent_0_sectionTitle" class="h1Tag">
+            Key Information 2026/27
+	    </span>
+	    <p>
+	        Duration - 4 years: 1 year pathway + 3 years degree<br>Start Dates - September, January and November<br>Pathway Tuition Fee - £16,475<br><br>English Language Requirement :<br>IS1 (Integrated) in Computing<br>English language requirement: IELTS 5.5, with no component below 5.5.<br><br>IS1 (Standalone) in Computing<br>English language requirement: IELTS 4.5, with no component below 4.5.<br>
+	    </p>	    
+	</div>
+</section>
+
+<style>
+    .tabHeader {
+        padding: 0.2%;
+    }
+
+    .tabHeaderP {
+        padding-left: 3%;
+        margin: 0px;
+    }
+
+    .tabHeaderTitle {
+        float: left;
+        width: 33%;
+        background-color: #f7f7f7;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .tabHeaderContent {
+        float: left;
+        width: 66%;
+        background-color: lightgrey;
+        padding-left: 10px;
+    }
+
+    .tabHeaderClear {
+        clear: both;
+    }
+
+    .wtImage {
+        float: left;
+    }
+
+        .wtImage img {
+            margin: 20px 0px 20px 0px;
+        }
+
+    .wtRelatedWrapper {
+        margin: 20px 0px 0px 0px;
+    }
+
+   
+</style>
+
+<section class="mainBodyText u-StructureWrapper sidePadding50 paddingRight">
+    <p style="color: #212529; background-color: #ffffff; margin-bottom: 1rem;">The IS1 is the equivalent to the first year of a four year Scottish undergraduate degree. This programme is designed to help you develop your academic knowledge and skills within your subject area.</p>
+<p style="color: #212529; background-color: #ffffff; margin-top: 0px; margin-bottom: 1rem;">You will also focus on improving your English academic literacy in preparation for continuing onto your chosen Edinburgh Napier undergraduate degree. Studied across three terms, you will continue straight onto year two of your degree course at Edinburgh Napier University once you have successfully completed the pathway.</p>
+<h3><strong>Pathway Options<br>
+</strong></h3>
+<p style="font-size: 16px;">There are two entry routes for the IS1 Computing programme, depend on your English language level.</p>
+<p><span style="font-size: 16px;"><strong>IS1 Integrated</strong> combines academic study in computing with English language support. This route is suitable for students with an IELTS score of 5.5 or above, with no component below 5.5, allowing you to begin computing-related coursework immediately while continuing to develop your English skills.</span></p>
+<p><span style="font-size: 16px;"><strong>IS1 Standalone</strong> is a more intensive English-focused programme for students who need additional language preparation before starting academic study. This route requires an IELTS score of 4.5 or above, with no component below 4.5. You will receive enhanced English language instruction before progressing to computing modules.</span></p>
+<p>&nbsp;</p>
+<p style="font-size: 16px;">&nbsp;</p>
+<ul style="font-size: 16px;"></ul>
+    <h3><strong>Available Progression Degrees&nbsp;</strong></h3>
+    <p>Both&nbsp;<strong>IS1 Integrated and IS1 Standalone </strong>students can progress onto a range of degrees following successful completion of the pathway programme:</p>
+    <ul>
+        <li><a rel="noopener noreferrer" href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwjirciDu4uSAxVrhP0HHaEEJlYQFnoECAQQAQ&amp;url=https%3A%2F%2Fwww.napier.ac.uk%2Fcourses%2Fbeng-hons-network-engineering-and-cyber-security-undergraduate-fulltime&amp;usg=AOvVaw1xj3gz37O2_-pjIy-ojKKP&amp;opi=89978449" target="_blank">BEng (Hons) Network Engineering and Cyber Security</a></li>
+        <li><a href="https://www.napier.ac.uk/courses/bengbeng-hons-computing-undergraduate-fulltime">BEng (Hons) Computing</a></li>
+        <li><a href="https://www.napier.ac.uk/courses/beng-hons-cybersecurity-and-forensics-undergraduate-fulltime">BEng (Hons) Cybersecurity and Forensics</a></li>
+        <li><a href="https://www.napier.ac.uk/courses/bscbsc-(hons)-computer-science-undergraduate-fulltime">BSc (Hons) Computer Science</a></li>
+        <li><a href="https://www.napier.ac.uk/courses/bsc-hons-computer-science-artificial-intelligence---undergraduate-fulltime">BSc (Hons) Computer Science (AI)</a></li>
+        <li><a href="https://www.napier.ac.uk/courses/bengbeng-hons-software-engineering-undergraduate-fulltime">BEng (Hons) Software Engineering</a></li>
+        <li><a href="https://www.napier.ac.uk/courses/bsc-hons-games-development-undergraduate-fulltime">BSc (Hons) Games Development</a></li>
+    </ul>
+
+    
+
+    <div>
+        
+    </div>
+
+    
+
+</section>
+<section id="standardcontent_2_featuredTextSection" class="featured-text contentModule ">
+	<div id="standardcontent_2_divText" class="innerWrapper u-StructureWrapper">
+	    <span id="standardcontent_2_sectionTitle" class="h1Tag">
+            What you will study
+	    </span>
+	    <p>
+	        Alongside core modules, you will study subject-specific modules that will equip you with a foundation of knowledge for your chosen field of study.
+	    </p>	    
+	</div>
+</section>
+
+<style>
+    .tabHeader {
+        padding: 0.2%;
+    }
+
+    .tabHeaderP {
+        padding-left: 3%;
+        margin: 0px;
+    }
+
+    .tabHeaderTitle {
+        float: left;
+        width: 33%;
+        background-color: #f7f7f7;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .tabHeaderContent {
+        float: left;
+        width: 66%;
+        background-color: lightgrey;
+        padding-left: 10px;
+    }
+
+    .tabHeaderClear {
+        clear: both;
+    }
+
+    .wtImage {
+        float: left;
+    }
+
+        .wtImage img {
+            margin: 20px 0px 20px 0px;
+        }
+
+    .wtRelatedWrapper {
+        margin: 20px 0px 0px 0px;
+    }
+
+   
+</style>
+
+<section class="mainBodyText u-StructureWrapper sidePadding50 paddingRight">
+    <h3 class="d-block"><strong>Common module across all IS1 pathway routes</strong></h3>
+<h4 class="d-block"><strong>English and Skills for University Study (ESUS)</strong></h4>
+<p style="margin-bottom: 1rem;">The ESUS module raises your awareness of the critical importance of English language competence in all four language skills areas within an academic context and provides English language preparation for continuing study onto the later stages of an undergraduate degree programme. Emphasis is also placed on developing the study skills you require for success, for example, research, critical assessment of sources, academic writing, team working, and your understanding of the conventions of higher education and of the need for good academic practice.</p>
+<p style="margin-top: 0px; margin-bottom: 1rem;"><strong>30 Credits<br></strong></p><p style="margin-top: 0px; margin-bottom: 1rem;"><br></p>
+<p style="margin-top: 0px; margin-bottom: 1rem;">&nbsp;<strong style="font-size: 1.5em; color: rgb(34, 34, 34);">Course specific modules</strong></p>
+<h4 class="d-block"><strong>Programming In Java and C/C++</strong></h4>
+<p class="d-block"><strong></strong><span style="background-color: #ffffff; color: #212529;">This module assumes no prior experience on your part and provides an introduction to software development. You learn to develop, run and debug programs. The first half of the module focuses on the foundational algorithmic constructs of sequence, selection, and iteration, through the use of flowcharts/pseudocode and their implementation in the Java language. Fundamental data structures such as arrays are introduced and you learn how to choose a data structure that is fit for purpose. The second half of the module introduces you to areas of software development that are related to low level systems and machine programming and introduces programming in the C/C++ language.</span></p>
+<div class="d-block"><span style="background-color: #ffffff; color: #212529;"><strong></strong></span><span style="background-color: #ffffff; color: #212529;"><strong>30 credits</strong></span></div>
+<div class="d-block"><span style="background-color: #ffffff; color: #212529;"></span>
+<div class="d-block">&nbsp;</div>
+<h4 class="d-block"><strong>Computer Systems</strong></h4>
+<div class="d-block"><span style="color: #212529;">The primary aim of the module is to familiarise you with the basic operating principles of modern computer systems. This includes understanding the basic components of a computer, how data is represented and operated on, and how programs are executed at a low level. You learn how computers communicate with each other and how this may be achieved with regard to security.</span></div>
+<div class="d-block"><span style="color: #212529;">&nbsp;</span></div>
+<div class="d-block"><span style="color: #212529;"><strong></strong></span><span style="color: #212529;"><strong>20 credits</strong></span></div>
+</div>
+<div class="d-block">&nbsp;</div>
+<h4 class="d-block"><strong>Mathematics For Software Engineering</strong></h4>
+<p style="margin-bottom: 1rem;">The module covers basic mathematical concepts, such as basic discrete mathematics, Boolean and other logics, set theory, and number theory. The aim is to improve your computational competence &nbsp;(i.e. the ability to implement and evaluate functions for basic visualisation, modelling and processing tasks) as well as introducing you to “basic mathematical thinking” (i.e. the ability to model problems and their solutions). The emphasis is on a practical, programming-oriented introduction to the materials you will study and use.</p>
+<p style="margin-top: 0px; margin-bottom: 1rem;"><span><strong>20 credits</strong></span></p>
+<div class="d-block">&nbsp;</div>
+<h4 class="d-block"><strong>Practical Networks 1</strong></h4>
+<p style="margin-bottom: 1rem;">The aim of this module is to introduce you to the architecture, structure, functions, components, and models of the Internet and other computer networks. They then progress through the fundamental concepts of Ethernet, network media and the protocol layer model before the structure of IP addressing is introduced. By the end of the module, students will be able to build simple LANs, perform basic configurations for routers and switches, and implement IP addressing schemes.</p>
+<p style="margin-top: 0px; margin-bottom: 1rem;"><span><strong>20 credits</strong></span></p>
+
+    
+
+    <div>
+        
+    </div>
+
+    
+
+</section>
+
+
+<section class="imageSpotlights contentModule u-StructureWrapper">
+    <span class="h1Tag">
+        Get ready to apply
+    </span>
+    <div class="spotlights">
+        <article id="standardcontent_4_spotlightImg1" data-bg="/-/media/oxford-international/500x500/2213024.jpg" class="spotlight red third image backgroundImage backgroundImage-mobile" aria-label="two students talking together">
+            <a target="|Custom" href="https://www.napier.ac.uk/global/enuic/fees-and-scholarships">
+                <div id="standardcontent_4_spotlightImg1Inner" class="innerContainer" style="background-image: url(&quot;/theme/assets/img/content/-/media/oxford-international/500x500/2213024.jpg&quot;);">
+                    <h2>
+                        Fees and scholarships
+                        
+                    </h2>
+                </div>
+            </a>
+        </article>
+        <article id="standardcontent_4_spotlightImg2" data-bg="/-/media/oxford-international/500x500/15151004.jpg" class="spotlight red third image backgroundImage backgroundImage-mobile" aria-label="community area with flags">
+            <a target="|Custom" href="https://www.napier.ac.uk/study-with-us/international-students/your-country">
+                <div id="standardcontent_4_spotlightImg2Inner" class="innerContainer" style="background-image: url(&quot;/theme/assets/img/content/-/media/oxford-international/500x500/15151004.jpg&quot;);">
+                    <h2>
+                        Country entry requirements
+                        
+                    </h2>
+                </div>
+            </a>
+        </article>
+        <article id="standardcontent_4_spotlightImg3" data-bg="/-/media/oxford-international/500x500/2305601.jpg" class="spotlight red third image backgroundImage backgroundImage-mobile" aria-label="merchiston campus from above">
+            <a target="|Custom" href="https://www.napier.ac.uk/global/enuic/how-to-apply">
+                <div id="standardcontent_4_spotlightImg3Inner" class="innerContainer ThreeBlockFix" style="background-image: url(&quot;/theme/assets/img/content/-/media/oxford-international/500x500/2305601.jpg&quot;);">
+                    <h2>
+                        How to apply
+                        
+                    </h2>
+                </div>
+            </a>
+        </article>
+    </div>
+</section>
+
+
+<style>
+    @media all and (min-width: 48em) {
+        .mobileImageDiv {
+            display: none;
+        }
+    }
+
+    .mobileImage {
+        height: auto;
+        max-width: 100%;
+    }
+</style>
+
+<section id="standardcontent_5_featuredSpotlightSection" class="featuredSpotlight bgGrey contentModule red">
+    
+    <div id="standardcontent_5_imageDiv" class="u-StructureWrapper backgroundImage" data-bg="/-/media/oxford-international/500x500/2307557.jpg">
+        <div id="standardcontent_5_divInnerContainer" class="innerContainer" style="background-image: url(&quot;/theme/assets/img/content/-/media/oxford-international/500x500/2307557.jpg&quot;);" aria-label="smiling graduate group" role="img"></div>
+        <div class="overlay ">
+            <span class="h1Tag">
+                Start your application to ENUIC today
+            </span>
+            <p>
+                At OIEG we aim to get back to all applications and enquiries within two working days. If you require any assistance or have any questions please get in touch with us at pathways@oxfordinternational.com
+            </p>
+            
+
+        </div>
+        <a class="banner CTABanner" aria-label="Start your application to ENUIC today" href="https://www.oxfordinternational.com/apply/study-a-pathway-course-in-the-uk/">
+            Apply now
+        </a>
+    </div>
+</section>
+
+                </div>
+            
+
+        </section>
+        
+
+        <footer id="ctl19_footerSection" role="contentinfo" aria-label="edinburgh skyline during the day." data-bg="/-/media/2403002-1200x311.jpg" class="mainFooter backgroundImage u-StructureWrapper">
+    <div id="ctl19_footerSectionInnerDiv" class="innerContainer" style="background-image: url(&quot;/theme/assets/img/content/-/media/2403002-1200x311.jpg&quot;);"></div>
+
+    <div class="footer-left">
+        
+                <ul class="links u-resetUL u-overflow">
+            
+                <li>
+                    <a id="ctl19_bottomLeftTopRowRepeater_topRowHyperLink_75ec164c-a821-4653-90e8-987038ce3942_0" href="https://www.napier.ac.uk/about-us/contact-us">Contact us</a>
+                </li>
+            
+                <li>
+                    <a id="ctl19_bottomLeftTopRowRepeater_topRowHyperLink_7ca776d8-8d19-42ef-9ea1-f2dbe5958f78_1" href="https://www.napier.ac.uk/accessibility-statement">Accessibility statement</a>
+                </li>
+            
+                <li>
+                    <a id="ctl19_bottomLeftTopRowRepeater_topRowHyperLink_6220fe5e-5654-4dfd-9a72-98268c6f43e2_2" href="https://www.napier.ac.uk/privacy-policy">Privacy policy</a>
+                </li>
+            
+                <li>
+                    <a id="ctl19_bottomLeftTopRowRepeater_topRowHyperLink_b164e9ec-3d11-46b4-a5a5-5caa9c232581_3" href="https://www.napier.ac.uk/cookie-policy">Cookie policy</a>
+                </li>
+            
+                <li>
+                    <a id="ctl19_bottomLeftTopRowRepeater_topRowHyperLink_d6acf8ad-a00c-40df-9922-d600f13417ab_4" href="https://www.napier.ac.uk/document-centre">Document Centre</a>
+                </li>
+            
+                </ul>
+            
+        
+                <ul class="links u-resetUL u-overflow">
+            
+                <li>
+                    <a id="ctl19_bottomLeftBottomRowRepeater_bottomTRowHyperlink_ed585d03-4ce7-42e0-858f-a1c496880d54_0" href="https://www.napier.ac.uk/about-us/university-governance/freedom-of-information">Freedom of information</a>
+                </li>
+            
+                <li>
+                    <a id="ctl19_bottomLeftBottomRowRepeater_bottomTRowHyperlink_a8ced44a-8d25-4dd8-bef1-cecc957c3830_1" href="https://www.napier.ac.uk/about-us/university-governance/modern-slavery-statement">Modern Slavery statement</a>
+                </li>
+            
+                <li>
+                    <a id="ctl19_bottomLeftBottomRowRepeater_bottomTRowHyperlink_4a2a3f0e-7173-4014-9960-caf60f40879b_2" href="https://www.napier.ac.uk/about-us/university-governance/making-a-complaint">Making a complaint</a>
+                </li>
+            
+                <li>
+                    <a id="ctl19_bottomLeftBottomRowRepeater_bottomTRowHyperlink_f75754b3-8af8-4905-849b-bd04bd9302fd_3" href="https://www.napier.ac.uk/service-status">Service status</a>
+                </li>
+            
+                </ul>
+            
+        <p>
+            Edinburgh Napier University is a registered Scottish charity. Registration SC018373
+        </p>
+        
+    </div>
+    <div class="footer-right">
+        <a href="https://www.napier.ac.uk/">
+            <img src="./International Stage One - Computing_files/ENU_Logo_white_240_60_nico.png" alt="Edinburgh Napier University logo in white" width="240" height="60" responsive="1">
+        </a>
+        <p>
+            © 2026 Edinburgh Napier University
+        </p>
+    </div>
+</footer>
+
+        <div id="ctl20_cookieDiv" class="cookieMessage">
+            <div>
+                <a id="ctl20_closeCookieMessage" class="icon-cross-small u-floatRight close_button closeBanner" aria-label="Close cookie banner" href="javascript:__doPostBack('ctl20$closeCookieMessage','')"></a>
+                <p>
+                    
+                    
+                </p>
+                <a id="ctl20_acceptCookiesButton" class="cta lexiaRegular cookie_agree" href="javascript:__doPostBack('ctl20$acceptCookiesButton','')">Accept Cookies</a>
+            </div>
+</div>
+        <script src="./International Stage One - Computing_files/plugins.js.download"></script>
+        <script src="./International Stage One - Computing_files/main.js.download"></script>
+
+
+        <div id="teconsent" consent="undefined" aria-label="Open Cookie Preferences Modal" class="truste_caIcon_display" role="complementary"><script async="async" type="text/javascript" crossorigin="" importance="high" src="./International Stage One - Computing_files/b8401cc"></script><a role="link" id="icon-id029627210332888787" tabindex="0" lang="en" aria-haspopup="dialog" aria-label="Cookie Preferences, opens a dedicated popup modal window" class="truste_cursor_pointer" style="cursor: pointer;">Cookie Preferences</a></div>
+        <div id="consent_blackbar"></div>
+    
+<script src="./International Stage One - Computing_files/WebResource.axd" type="text/javascript"></script>
+</form>
+
+    <input id="gtmcode" name="gtmcode" type="hidden" value="GTM-PL6QT8">
+
+  <footer>
+   <script defer="" src="./International Stage One - Computing_files/inlinks.js.download"></script>
+  </footer>
+
+
+<div class="videoOverlay"><div class="videoContainer"><a href="https://www.napier.ac.uk/global/enuic/is1/is1-computing#" class="icon-cross"></a><div id="videoPlayer"></div></div></div><div id="pop-div06215209017951773" class="truste_overlay"></div><div id="pop-outerdiv019799461992860368" class="truste_cm_outerdiv"><div id="pop-div207970210312154217" class="truste_box_overlay"><div id="pop-div304040026772388037" class="truste_box_overlay_inner" tabindex="-1" role="dialog" aria-modal="true" aria-label="Your choices regarding the use of cookies on this site"><style>
+              .truste_box_overlay_border {
+                  display: block;
+                  background: #000;
+                  opacity: 0.3;
+                  width: calc(100% + 20px);
+                  height: calc(100% + 20px);
+                  position: absolute;
+                  top: -10px;
+                  left: -10px;
+                  border-radius: 2px; /* Added radius for consistency */
+              display: none;} 
+                .trustarc_newcm_container {
+                  position: inherit;
+                } .truste_box_overlay_inner {height: inherit;} .truste_popframe {height: inherit;} #loading2 {height:342px !important} .truste_cm_outerdiv {overflow: auto;} .truste_box_overlay {min-height: 96%;display: flex;align-items: center;} @media screen and (max-width: 520px) {.truste_box_overlay {top: 0; left: 0; transform: none;}}</style><div class="truste_box_overlay_border"></div><div id="pop-frame0605565090409951" tabindex="1" name="trustarc_cm" class="trustarc_newcm_container truste_popframe" data-no-consent="true"><template shadowrootmode="open"><style data-app-styles="true">:host { all: initial; display: block !important; direction: ltr; } .wrapper { all: initial; display: block; direction: ltr; }
+:host { transform: translate(0); display: block !important; } @supports (contain: paint) { :host { contain: paint; transform: none; } }
+:host { color: #000000; } .wrapper { color: #000000; }
+:host { font-size: 12px; }
+:host { -webkit-font-smoothing: auto; }
+html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, button {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+body {}
+.wrapper {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}body {}
+.wrapper {
+  font-size: 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 20px;
+}.wrapper.main {
+  background: url("https://consent.trustarc.com/asset/bg.png") no-repeat center 0;
+  line-height: 20px;
+}.wrapper.pbg {
+  background: #fff url("https://consent.trustarc.com/asset/pbg.jpg") repeat-y 1px 0;
+}input,
+textarea,
+select {
+  font-size: 12px;
+  font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
+}.mainheader {
+  container-type: inline-size; 
+}.mainHeader h1 {
+  color: #2c2d31;
+  font-size: 18px;
+  display: inline-block;
+}.accept-decline-buttons {
+  float: right;
+}#accept_all_button {
+  background: no-repeat scroll 0 0 #5fc323;
+  padding: 7px 10px 7px 14px;
+  border: 1px solid #5fc323;
+  text-shadow: none;
+  color: #ffffff;
+  border-radius: 4px;
+  font-family: Arial, Tahoma;
+  display: none;
+  font-size: 14px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+}#decline_all_button {
+  background: no-repeat scroll 0 0 #5fc323;
+  padding: 7px 10px 7px 14px;
+  border: 1px solid #5fc323;
+  text-shadow: none;
+  color: #ffffff;
+  border-radius: 4px;
+  font-family: Arial, Tahoma;
+  display: none;
+  font-size: 14px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+}.prefHeader {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}.prefHeader img {
+  float: right;
+  vertical-align: middle;
+}.mainContent {
+  container-type: inline-size; 
+  padding: 20px 20px 0px 20px;
+  position: relative;
+}.mainContent,
+.consentToAll {
+  line-height: 18px;
+  color: #666;
+  background: #fff;
+  border-top: 1px solid #fff;
+}.mainContent p,
+.consentToAll p {
+  margin: 10px 0;
+}.mainContent a,
+.consentToAll a {
+  color: #069;
+  text-decoration: none;
+}.mainContent button,
+.consentToAll a {
+  color: #069;
+  text-decoration: none;
+}.mainContent a:hover,
+.consentToAll a:hover {
+  text-decoration: none;
+  color: #fa7f06;
+}.mainTitle2 {
+  margin: 0 0 20px 0;
+  color: #669b00;
+  font-size: 14px;
+  font-family: "Abel";
+  font-weight: normal;
+  text-transform: uppercase;
+}.mainContent .buttons,
+.consentToAll .buttons {
+  margin-bottom: 0;
+  margin-top: 13px;
+}.mainContent .buttons a,
+.consentToAll .buttons a {
+  display: inline-block;
+  opacity: 0.8;
+}.mainInner {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fcfcfc;
+  overflow: hidden;
+}.mainInner {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: inset 0 0 3px #e7e7e7;
+}#notice p {
+  font-size: 11px;
+  line-height: 15px;
+}#consent {
+  padding: 10px 0;
+  font-size: 12px;
+}#consent p:first-child {
+  margin-top: 0;
+}.consent {
+  padding: 20px 0;
+}.contentfield {
+  padding: 15px 0;
+}.categoryRadioButton {
+  font-size: 18px;
+}.warning {
+  color: red !important;
+}.warningMessage {
+  padding: 7px 10px;
+  background: #f9edbe;
+  border: 1px solid #f0c36d;
+  margin: 11px 20px 13px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #af7501;
+}.warningMessageHttps {
+  margin: 11px 0px !important;
+}.contentWarningMessage {
+  padding: 7px 10px;
+  background: #f9edbe;
+  border: 1px solid #f0c36d;
+  margin: 20px 0px 0px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #af7501;
+}.repopMessage {
+  padding: 7px 10px;
+  background: #f9edbe;
+  border: 1px solid #f0c36d;
+  margin: 11px 0px 13px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #af7501;
+}.TRUSTe_Overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  background: #000;
+  opacity: 0.5;
+  display: none;
+}.TRUSTe_PopParent {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  display: none;
+}.TRUSTe_PopContainer {
+  position: absolute;
+  left: -325px;
+  top: -116px;
+  width: 650px;
+  background: url("https://consent.trustarc.com/asset/trans.png");
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px;
+}.TRUSTe_PopInnerContainer {
+  
+  background: #fff;
+  overflow: hidden;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}.TRUSTe_PopIFrame {
+  border: 0;
+  width: 100%;
+  height: 410px;
+}.leftPanel {
+  float: left;
+  width: 280px;
+  border-right: 1px solid #ddd;
+}.rightPanel {
+  margin-left: 281px;
+}.dtabmenu {
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  margin-bottom: 20px;
+}.dtabmenu li {
+  display: inline-block;
+  width: 50%;
+  float: left;
+}.dtabmenu li a {
+  display: block;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+  color: #ccc;
+}.dtabmenu li a:hover {
+  background: #f7f7f7;
+  color: #666;
+  cursor: pointer;
+}.dtabmenu li a.current {
+  background: #ddd;
+  color: #333;
+}.prefPanel {
+  margin: 20px 0 0 0;
+}.prefPanel .left {
+  float: left;
+  width: 45%;
+  margin-right: 5%;
+  position: relative;
+}.prefPanel .right {
+  float: left;
+  width: 44%;
+  padding-left: 30px;
+  border-left: 1px solid #eee;
+}.prefPanel .cookiecat a.viewcookie {
+  cursor: pointer;
+}.prefPanel .cookiecat button.viewcookie {
+  cursor: pointer;
+}.prefPanel .cookiecat {
+  padding: 10px;
+  background: #fcfcfc;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}.prefPanel .cookiecat {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: inset 0 0 3px #e7e7e7;
+}.prefPanel .cookiecat h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: #069;
+  text-transform: uppercase;
+  font-family: "Abel", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}.prefPanel .cookiecat span {
+  font-size: 11px;
+  font-weight: normal;
+  text-transform: none;
+  display: block;
+  color: #666;
+}.prefPanel .cookiecat a {
+  font-size: 10px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 15px;
+  background: url("https://consent.trustarc.com/asset/arrow.png") no-repeat right 2px;
+  padding-right: 10px;
+  color: #666;
+}.prefPanel .cookiecat a.expandcookie {
+  background: url("https://consent.trustarc.com/asset/arrow-off.jpg") no-repeat right 2px;
+  background-size: 10px;
+}.prefPanel .cookiecat a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}.prefPanel .cookiecat span.greenbold {
+  color: #1c9122;
+  font-weight: bold;
+  margin-top: 10px;
+}.prefPanel .cookiecat .loading {
+  display: inline-block;
+  margin-top: 15px;
+  padding-right: 10px;
+}.prefPanel .cookiecatdeactivated h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: #a9a9a9;
+  text-transform: uppercase;
+  font-family: "Abel", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}.prefTable {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}.prefTable thead tr:first-child th {
+  font-weight: bold;
+  background-color: #eee;
+}.prefTable thead tr:last-child th {
+  border-color: #ddd;
+}.prefTable thead tr th:first-child {
+  border-left: 1px solid #ddd;
+}.prefTable thead tr th:last-child {
+  border-right: 1px solid #ddd;
+}.prefTable thead tr th {
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+  padding: 5px;
+  text-align: left;
+}.prefTable thead tr td {
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+  padding: 5px;
+  text-align: left;
+  background-color: #eee;
+}.prefTable.withoptout thead th:last-child {
+  text-align: right;
+}.prefTable tr td {
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+  padding: 5px;
+}.prefTable tr td a {
+  margin: 0 !important;
+  background: none !important;
+  text-transform: none !important;
+  font-size: 11px !important;
+  color: #069 !important;
+}.prefTable tr td .switch {
+  margin: 0;
+}.prefTable tr td .linkoff {
+  margin: 0;
+  width: 16px;
+  float: right;
+}.prefTable tr td:nth-child(3) {
+  word-wrap: break-word;
+  word-break: break-all;
+}.prefTable tr td:first-child {
+  border-left: 1px solid #ddd;
+}.prefTable tr td:last-child {
+  border-right: 1px solid #ddd;
+}.prefTable tr:last-child td {
+  border-color: #ddd;
+}.prefTable .whyCantIOptOut a {
+  font-size: 12px !important;
+  padding-right: 0px !important;
+}.prefTable .hiddenSeeMore {
+  display: none !important;
+}.collapse {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  cursor: pointer;
+}.colplus {
+  background: url("https://consent.trustarc.com/asset/plus.png") no-repeat 0 -11px;
+}.colplus:hover {
+  background-position: 0 0;
+}.colminus {
+  background: url("https://consent.trustarc.com/asset/minus.png") no-repeat 0 -11px;
+}.colminus:hover {
+  background-position: 0 0;
+}.prefTable .whyCantIOptOut a {
+  font-size: 12px !important;
+  padding-right: 0px !important;
+}.hideText {
+  width: 400px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}.truncatedCat {
+  
+  overflow: hidden;
+  
+  position: relative;
+  
+  line-height: 1em !important;
+  
+  max-height: 7em;
+  
+  text-align: left;
+  
+  margin-right: -1em;
+  padding-right: 1em;
+}.truncatedCat:before {
+  
+  content: "...";
+  
+  position: absolute;
+  
+  right: 0;
+  bottom: 0;
+}.truncatedCat:after {
+  
+  content: "";
+  
+  position: absolute;
+  
+  right: 0;
+  
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  
+  background: white;
+}:where([data-breakpoint-max-width-767="true"]) .sliderWrapper {
+    left: 7px !important;
+  }:where([data-breakpoint-max-width-630="true"]) .hideText {
+    display: none;
+  }:where([data-breakpoint-max-width-630="true"]) .prefTable .hiddenSeeMore {
+    display: block !important;
+  }:where([data-breakpoint-max-width-400="true"]) .prefTable td:nth-child(3) {
+    display: none;
+  }:where([data-breakpoint-max-width-400="true"]) .optoutless td {
+    border-right: 1px solid #ddd;
+  }:where([data-breakpoint-max-width-400="true"]) .prefTable td:last-child {
+    display: table-cell;
+  }.optoutColumn {
+  float: right;
+}.switch {
+  float: right;
+  margin: 10px 5px 0 0;
+  -moz-box-shadow: 1px 1px 0 #fff;
+  -webkit-box-shadow: 1px 1px 0 #fff;
+  box-shadow: 1px 1px 0 #fff;
+}.switch span {
+  float: left;
+  display: inline-block;
+  border: 1px solid #bbb;
+  padding: 3px 5px;
+  background: url("https://consent.trustarc.com/asset/switchbg.png") repeat-x 0 -20px;
+  cursor: pointer;
+}.switch span.on {
+  border-right: 0;
+  -moz-border-radius: 2px 0 0 2px;
+  -webkit-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+}.switch span.off {
+  -moz-border-radius: 0 2px 2px 0;
+  -webkit-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}.switch span.active {
+  color: #088adc;
+  text-shadow: 0 0 3px #96c9fd;
+  background: url("https://consent.trustarc.com/asset/switchbg.png") repeat-x 0 0;
+}.switch span.disable {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  cursor: default;
+}.switchtable {
+  position: relative;
+  float: right;
+  top: 0;
+  right: 0;
+}.switch {
+  position: inherit;
+  top: -3px;
+  right: 2px;
+  margin: 10px 5px 0 0;
+  -moz-box-shadow: 1px 1px 0 #fff;
+  -webkit-box-shadow: 1px 1px 0 #fff;
+  box-shadow: 1px 1px 0 #fff;
+}.options {
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+  width: 260px;
+}.options > div {
+  background: url("https://consent.trustarc.com/asset/line2.png") no-repeat 0 9px;
+  padding-left: 70px;
+  padding-top: 3px;
+  min-height: 20px;
+  min-width: 20px;
+}.options div h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #bbb;
+  font-weight: normal;
+  font-family: "Abel";
+}.options div p {
+  font-size: 11px;
+  color: #ccc;
+  margin-top: 5px !important;
+  line-height: 14px;
+}.options div.noAdvertising {
+  background: white;
+  padding-left: 70px;
+  padding-top: 3px;
+  min-height: 20px;
+  min-width: 20px;
+}.options div.active h2 {
+  color: #339403;
+}.options div.active p {
+  color: #666;
+}.required,
+.functional {
+  display: none;
+}.required h3,
+.functional h3,
+.advertising h3 {
+  font-size: 16px;
+  font-family: "Abel";
+  font-weight: normal;
+  color: #007ac7;
+}.required h3.not,
+.functional h3.not,
+.advertising h3.not {
+  color: #fa3c09;
+}.right ul {
+  list-style: none;
+  margin: 10px 0 0 0;
+}.right ul li {
+  background: url("https://consent.trustarc.com/asset/list.png") no-repeat 0 10px;
+  display: block;
+  padding-left: 15px;
+}.right h3 {
+  font-size: 16px;
+  font-family: "Abel";
+  font-weight: normal;
+  color: #007ac7;
+}.right h3.not {
+  color: #fa3c09;
+}.loading {
+}.loading img {
+  vertical-align: middle;
+}.loading span {
+  margin-left: 10px;
+}#loading2 {
+  position: absolute;
+  top: 40%;
+  width: 95%;
+  text-align: center;
+  z-index: 99999;
+}.mainPanel {
+  line-height: 18px;
+  color: #666;
+  overflow: hidden;
+}.mainInner,
+.submission,
+.shortNoticePanel {
+  padding: 20px;
+}.mainTitle {
+  font-size: 18px;
+  color: #fa7f06;
+  font-weight: normal;
+  margin: 15px 0 20px 0;
+}.mainPanel p,
+.submission p {
+  margin: 10px 0;
+}.mainPanel .small,
+.submission .small {
+  font-size: 11px;
+  line-height: 16px;
+}.mainPanel a,
+.submission a {
+  color: #069;
+  text-decoration: none;
+}.mainPanel a:hover,
+.submission a:hover {
+  color: #fa7f06;
+  text-decoration: none;
+}.mainTitle3 {
+  font-size: 16px;
+}.footer {
+  background: none repeat scroll 0 0 #f7f7f7;
+  border-top: 1px solid #eeeeee;
+  font-size: 11px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #999;
+  font-size: 11px;
+  overflow: hidden;
+}.footerlinetop {
+  border-top: 1px solid #ddd;
+  padding-top: 2px;
+}.footer p.notice {
+  margin: 5px 0;
+  color: #666;
+  font-weight: bold;
+}.footer .right {
+  float: right;
+}.footer .left {
+  float: left;
+}.footer .center {
+  float: left;
+  display: inline-block;
+  line-height: inherit;
+}.footer a {
+  text-decoration: none;
+}.footer a img {
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+}.language-selector {
+}.sliderImage {
+  background: url("https://consent.trustarc.com/asset/handle.jpg") no-repeat;
+  height: 19px;
+  width: 19px;
+}.sliderWrapper {
+  padding: 0px 20px;
+  display: inline-block;
+  position: absolute;
+  left: 16px;
+}.ui-slider-vertical {
+  width: 3px;
+  background: #ddd;
+  -moz-box-shadow: inset 1px 1px 1px #bbb;
+  -webkit-box-shadow: inset 1px 1px 1px #bbb;
+  box-shadow: inset 1px 1px 1px #bbb;
+  position: relative;
+}.ui-slider-vertical {
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}.ui-slider-vertical a {
+  width: 19px;
+  height: 19px;
+  background: url("https://consent.trustarc.com/asset/handle.png") no-repeat 0 0;
+  position: absolute;
+  left: -8px;
+}.ui-slider-vertical a.ui-slider-handle {
+  margin-bottom: -8px;
+  outline: none;
+}.ui-slider-vertical a.ui-state-active {
+}.ui-slider-vertical .ui-slider-range {
+  background: #78da48;
+  width: 3px;
+  position: absolute;
+  left: 0;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}.ui-slider-vertical .ui-slider-range {
+  -moz-box-shadow: inset 1px 1px 2px #60ae3a;
+  -webkit-box-shadow: inset 1px 1px 2px #60ae3a;
+  box-shadow: inset 1px 1px 2px #60ae3a;
+}.ui-slider-vertical .ui-slider-range-min {
+  bottom: 0;
+}.ui-slider-vertical .ui-slider-range-max {
+  right: 0;
+}.draggable {
+  cursor: move;
+  cursor: grab;
+}.dragging {
+  cursor: move;
+  cursor: grabbing;
+}.checkOptions {
+  margin-left: 0;
+  width: auto;
+}.checkOptions > div {
+  padding-left: 55px;
+  padding-top: 0;
+  border: 1px solid #ccc;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}.checkOptions div h2 {
+  padding: 10px;
+  border-left: 1px solid #ddd;
+  margin: 0;
+}.checkOptions div p {
+  padding: 0 10px 10px 10px;
+  border-left: 1px solid #ddd;
+  margin: 0 !important;
+}.checkOptions div.active {
+  background: #fff url("https://consent.trustarc.com/asset/radio_off.png") no-repeat 10px center;
+}.checkOptions div.active h2 {
+  color: #339403;
+}.checkOptions div.active p {
+  color: #666;
+}.checkOptions div.selected {
+  background: #f6feeb url("https://consent.trustarc.com/asset/radio_on.png") no-repeat 10px center;
+  border-color: #6bb800;
+}.checkOptions div.selected h2 {
+  color: #339403;
+  border-color: #6bb800;
+}.checkOptions div.selected p {
+  color: #666;
+  border-color: #6bb800;
+}.checkOptions div.disabled {
+  background: #fcfcfc url("https://consent.trustarc.com/asset/radio_disabled.png") no-repeat 10px center;
+  border-color: #ccc;
+}.checkOptions div.disabled h2 {
+  color: #aaa;
+  border-color: #ccc;
+}.checkOptions div.disabled p {
+  color: #ccc;
+  border-color: #ccc;
+}.checkOptions div.noAdvertisingMobile {
+  background: white !important;
+}.checkOptions .highlight {
+  border-left: 1px solid #ccc;
+  padding-left: 10px;
+  display: block;
+}.pdynamicbutton {
+  margin: 20px;
+}.pdynamicbutton a {
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 8px 15px 8px 35px;
+  line-height: 15px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}.pdynamicbutton button {
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 8px 15px 8px 35px;
+  line-height: 15px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}.pdynamicbutton a {
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+  color: #fff;
+  opacity: 0.8;
+}.pdynamicbutton button {
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+  color: #fff;
+  opacity: 0.8;
+}.pdynamicbutton a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  opacity: 1;
+}.pdynamicbutton button:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  opacity: 1;
+}.pdynamicbutton .submit {
+  background: url("https://consent.trustarc.com/asset/gbutton.png") no-repeat 0 0;
+  border: 1px solid #9ba74f;
+  text-shadow: 1px 1px #98ab1b;
+}.pdynamicbutton .submit.disable {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  cursor: default;
+}.pdynamicbutton .acceptAllButtonLower {
+  background: no-repeat scroll 0 0 #5fc323;
+  border: 1px solid #5fc323;
+  text-shadow: none;
+}.pdynamicbutton .declineAllButtonLower {
+  background: no-repeat scroll 0 0 #5fc323;
+  border: 1px solid #5fc323;
+  text-shadow: none;
+}.pdynamicbutton .call {
+  background: url("https://consent.trustarc.com/asset/gbutton.png") no-repeat 0 0;
+  border: 1px solid #9ba74f;
+  text-shadow: 1px 1px #98ab1b;
+  float: left;
+}.pdynamicbutton .required {
+  background: url("https://consent.trustarc.com/asset/gbutton_trustarc.png") no-repeat 0 0;
+  border: 1px solid #9ba74f;
+  text-shadow: 1px 1px #98ab1b;
+  float: left;
+}.pdynamicbutton .askmelater {
+  background: url("https://consent.trustarc.com/asset/obutton.png") no-repeat 0 0;
+  border: 1px solid #d07d24;
+  text-shadow: 1px 1px #c77d26;
+  display: none;
+}.pdynamicbutton .shp {
+  background: url("https://consent.trustarc.com/asset/obutton.png") no-repeat 0 0;
+  border: 1px solid #d07d24;
+  text-shadow: 1px 1px #c77d26;
+}.pdynamicbutton .shp2 {
+  font-size: 8px !important;
+  top: 20px !important;
+}.pdynamicbutton .advance {
+  background: url("https://consent.trustarc.com/asset/obutton.png") no-repeat 0 0;
+  border: 1px solid #d07d24;
+  text-shadow: 1px 1px #c77d26;
+}.pdynamicbutton .cancel {
+  background: url("https://consent.trustarc.com/asset/backbutton.png") no-repeat 0 0;
+  border: 1px solid #a3a3a3;
+  text-shadow: 1px 1px #adadad;
+}.pdynamicbutton .close {
+  background: url("https://consent.trustarc.com/asset/graybutton.png") no-repeat 0 0;
+  border: 1px solid #a3a3a3;
+  text-shadow: 1px 1px #adadad;
+}.saveAndExit.disable {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  cursor: default;
+}.acceptallbutton {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-image: linear-gradient(to left, #5fc323, #43b400);
+  color: #ffffff !important;
+  font-family: Arial, Tahoma;
+  cursor: pointer;
+  font-size: 14px;
+  font-stretch: normal;
+  font-style: normal;
+  float: right;
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: normal;
+  padding: 15px;
+  text-align: center;
+  text-shadow: none !important;
+  text-transform: uppercase;
+  float: right;
+  margin-inline-end: 50px;
+  align-self: center;
+  margin-top: 10px;
+}.acceptallbuttondisabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}.acceptallbutton:hover:enabled {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}.slimScrollDiv {
+  padding-bottom: 2px;
+}.breadcrumbs {
+  font-size: 10px;
+  display: block;
+  margin-bottom: 8px;
+  color: #999;
+  border-bottom: 1px dotted #eee;
+}.breadcrumbs a {
+  color: #666;
+}.backprefmenu {
+  cursor: pointer;
+}.notiSuccess {
+  background: #f0fbdb;
+  padding: 5px 10px;
+  border: 1px solid #8ecd15;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}.show {
+  display: block;
+}.floatRight {
+  float: right;
+}.noMarginRight {
+  margin-right: 0;
+}.highlight {
+  color: #eb831d;
+  font-weight: bold;
+}#debuggerContainer {
+  height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}.accesibilityList {
+  list-style-position: inside;
+}.accessibility {
+  width: 100% !important;
+}.accessibility h2 {
+  border-left: 0px !important;
+}.accessibility p {
+  border-left: 0px !important;
+}.accessibility ul {
+  padding-left: 30px;
+}.accessibility h3 {
+  padding-left: 10px;
+}.accessibility .disabled h2 {
+  text-decoration: line-through;
+}.hidden {
+  display: none;
+}.disableSubmitMessage {
+}.domainTable td:nth-child(3) {
+  display: block !important;
+}.gsHeader {
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  line-height: 65px;
+  padding-bottom: 0px !important;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  z-index: 88;
+}.gsHeader > h1 {
+  margin-left: 14px;
+}.gsWarningMsg {
+  position: relative;
+  top: 65px !important;
+  display: block;
+  background-color: #e77d15;
+  padding: 10px 47px 10px 15px;
+  z-index: 88;
+  width: 100%;
+}.gsWarningMsg div {
+  color: white !important;
+  margin-right: 85px;
+}.gsWarningDivider {
+  width: auto;
+  display: block;
+  height: 1px;
+  margin: 10px 40px 10px 10px !important;
+  opacity: 0.25;
+  border: solid 0.5px #ffffff;
+}.gsWarningMsgClose {
+  color: white !important;
+  cursor: pointer;
+  background: url("https://consent.trustarc.com/asset/ic-close-white.svg");
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  top: 10px;
+  right: 80px;
+}.gsWarningBtn {
+  background: url("https://consent.trustarc.com/asset/ic-warning.svg");
+  display: inline-block;
+  position: relative;
+  margin-left: 6px;
+  width: 18px;
+  height: 16px;
+  cursor: pointer;
+}.gsPrefPanel {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0 !important;
+  padding: 10px 15px 0px 15px !important;
+}.gsContent {
+  padding: 0px !important;
+}.gsSubmitContainer {
+  width: 100% !important;
+  position: relative !important;
+  padding-top: 11px;
+  box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.1);
+}.gsSubmit {
+  margin: 0px 15px 0px 15px !important;
+  padding: 11px 15px 11px 15px !important;
+  line-height: 18px !important;
+  text-align: center !important;
+  display: block !important;
+}.gsOptedOutMsg {
+  float: left;
+  margin-left: 15px;
+}div.gsOptedOutMsg .highlight {
+  font-size: 17px;
+  color: #004676;
+}.gsSubmitOptedOut {
+  float: right;
+}.gsFooter {
+  position: relative !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 34px !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}.gsFooter > .right,
+.gsFooter > .left {
+  margin-top: 6px;
+}.gsFooter > .right {
+  margin-right: 15px;
+}.gsFooter > .left {
+  margin-left: 15px;
+}.gsLogo {
+  display: flex !important;
+  float: right !important;
+  height: 55px !important;
+  margin-top: 5px !important;
+  margin-right: 15px !important;
+  position: static !important;
+}.gsLogo img {
+  max-width: 160px !important;
+  object-fit: contain !important;
+}.warningTooltip {
+  visibility: hidden;
+  left: -210%;
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  width: 120px;
+  line-height: 11px;
+  font-size: 8px;
+  z-index: 90;
+  border: solid 1px #ececec;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
+  background-color: #fcfcfc;
+  color: #ababab;
+}.gsWarningBtn:hover .warningTooltip {
+  visibility: visible !important;
+}:where([data-breakpoint-max-width-780="true"]) .gsHeader {
+    line-height: 0px;
+    height: 90px;
+    text-align: center;
+    z-index: 888;
+  }:where([data-breakpoint-max-width-780="true"]) .gsHeader .gsLogo {
+    float: none !important;
+    margin-top: 10px;
+    height: 35px !important;
+    margin-right: 0px !important;
+    justify-content: center !important;
+    width: auto !important;
+  }:where([data-breakpoint-max-width-780="true"]) .gsHeader h1 {
+    margin-left: 0px;
+    font-size: 3cqw !important;
+    margin-top: 24px !important;
+    display: inline-block !important;
+  }:where([data-breakpoint-max-width-780="true"]) .gsPrefPanel {
+    margin-top: 0px !important;
+  }:where([data-breakpoint-max-width-780="true"]) .gsPrefPanelSubmitted {
+    margin-bottom: 130px !important;
+  }:where([data-breakpoint-max-width-780="true"]) .gsWarningMsg {
+    top: 90px !important;
+  }:where([data-breakpoint-max-width-780="true"]) .gsOptedOutMsg {
+    float: none;
+  }:where([data-breakpoint-max-width-780="true"]) .gsSubmitOptedOut {
+    float: none;
+  }:where([data-breakpoint-max-width-780="true"]) .warningTooltip {
+    left: -300%;
+  }:where([data-breakpoint-max-width-780="true"]) .accept-decline-buttons {
+    float: none;
+    display: block;
+    margin-top: -30px;
+  }:where([data-breakpoint-max-width-780="true"]) #accept_all_button {
+    display: none;
+    width: 49%;
+  }:where([data-breakpoint-max-width-780="true"]) #decline_all_button {
+    display: none;
+    width: 49%;
+  }:where([data-breakpoint-max-width-406="true"]) .gsPrefPanelSubmitted {
+    margin-bottom: 147px !important;
+  }:where([data-breakpoint-max-width-406="true"]) .gsHeader h1 {
+    font-size: 5cqw !important;
+  }:where([data-breakpoint-max-width-406="true"]) .gsOptedOutMsg {
+    font-size: 3cqw;
+  }:where([data-breakpoint-max-width-406="true"]) div.gsOptedOutMsg .highlight {
+    font-size: 4cqw;
+  }:where([data-breakpoint-max-width-406="true"]) .warningTooltip {
+    left: -320%;
+  }.gsHeaderNoLogo {
+  height: 65px;
+  line-height: 65px !important;
+}.gsHeaderNoLogo h1 {
+  margin-top: 0px !important;
+}.gsPrefPanelNoLogo {
+}.gsWarningMsgNoLogo {
+  top: 65px !important;
+}.hiddenElement {
+  visibility: hidden;
+}.gsaHeader {
+  padding: 0px !important;
+}.gsaSubmitContainer {
+  margin-left: 15px;
+  margin-right: 15px;
+}.gsaCancel {
+  margin-left: 10px;
+}.gsaPrefPanel + .optedOutMessage {
+  visibility: hidden;
+}:where([data-breakpoint-max-width-780="true"]) .gsaLogo {
+    top: 10px !important;
+  }:where([data-breakpoint-max-width-780="true"]) .gsaPrefPanel {
+    margin-bottom: 194px !important;
+  }.advanceSettingAnchor {
+  cursor: pointer;
+}.twoStep {
+  margin: -20px -20px 0 -20px;
+}.twoStep .twoStepBottom .twoStepBack {
+  height: 32px;
+
+  background: #ffffff;
+  border: 1px solid #555555;
+  box-sizing: border-box;
+  border-radius: 2px;
+
+  color: #000000;
+  cursor: pointer;
+}.twoStep .twoStepBottom .twoStepNo,
+.twoStep .twoStepBottom .twoStepYes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+
+  background: #1e5883;
+  border-radius: 2px;
+
+  color: #ffffff;
+  cursor: pointer;
+}.twoStep .twoStepBottom .twoStepBack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+}.twoStepBottom {
+  display: grid;
+  column-gap: 2.5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 12px;
+  grid-auto-flow: column;
+  height: 44px;
+
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 30px;
+  
+  text-align: center;
+
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+}.twoStepHeader {
+  height: 84px;
+  display: flex;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.07);
+  justify-content: center;
+  align-items: center;
+}.twoStep .twoStepBody {
+  height: 175px;
+  display: block;
+  text-align: center;
+
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 94px;
+}.twoStepBodyMessage {
+  width: 100%;
+  text-align: left;
+  margin-top: 21px;
+}.twoStepBodyMessage p {
+  margin: unset;
+}.switch .gwt-RadioButton {
+  border: none;
+  color: black;
+  background-color: transparent;
+  background-image: none;
+}.switch span.gwt-RadioButton.active {
+  color: black;
+  background-image: none;
+}.prefPanel .cookiecat button.viewcookie {
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2074e5;
+  margin: 10px 0;
+  padding-right: 10px;
+  background-image: none;
+  display: inline-block;
+  text-transform: none;
+}.loyaltyMessage {
+  display: flex;
+  flex-direction: column;
+}.loyaltyMessage .loyaltyMessageBottom .loyaltyMessageNo {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background: #1e5883;
+  border-radius: 4px;
+
+  color: #ffffff;
+  cursor: pointer;
+}.loyaltyMessage .loyaltyMessageBottom .loyaltyMessageYes {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background: #1e5883;
+  border-radius: 4px;
+
+  color: #ffffff;
+  cursor: pointer;
+}.loyaltyMessageBottom {
+  display: grid;
+  column-gap: 2.5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 12px;
+  grid-auto-flow: column;
+  height: 44px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13.328px;
+  line-height: 30px;
+  
+  text-align: center;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+}.loyaltyMessageHeader {
+  height: 98px;
+  display: flex;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+  justify-content: center;
+  align-items: center;
+}.loyaltyMessage .loyaltyMessageBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 10px;
+
+  height: 100%;
+
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #000000;
+  margin: auto;
+}.br-clear {
+  clear: both;
+}.gppViewSwitchPanel {
+  display: flex;
+  align-items: center;
+}.gpp_on_switch {
+  cursor: pointer;
+}.gpp_off_switch {
+  cursor: pointer;
+}.bottom .submit {
+  cursor: pointer;
+}.bottom .acceptAll {
+  cursor: pointer;
+}.bottom .declineAll {
+  cursor: pointer;
+}.viewcookie.active {
+  background-color: transparent;
+}gpp_category {
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #1e293b;
+  display: block;
+  font-size: 16px;
+}.gpp_category > div:first-child {
+  min-height: 42px;
+  margin-bottom: 15px;
+}.gpp_category .category_active {
+  width: 113px;
+  height: 44px;
+  border-radius: 40px;
+  gap: 8px;
+  background-color: #e4f8f0;
+  color: #136c34;
+  text-transform: uppercase;
+  display: flex;
+  float: right;
+  justify-content: center;
+  align-items: center;
+}.gpp_category h3 {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  margin-top: 0;
+  font-size: 24px;
+}.gpp_category > div {
+  display: flex;
+  justify-content: space-between;
+}.gpp_category p {
+  font-weight: 500;
+  line-height: 24px;
+}.gpp_category .gpp_switch {
+  border-radius: 40px;
+  height: 40px;
+  min-width: 122px;
+  align-items: center;
+  flex-direction: row;
+  margin-top: unset !important;
+}.gpp_category .gpp_switch span {
+  margin-bottom: unset !important;
+}.gpp_category .gpp_switch .gpp_off_switch,
+.gpp_category .gpp_switch .gpp_on_switch {
+  align-content: center;
+  height: 100%;
+  line-height: 1.5;
+}.gpp_category .gpp_switch .active {
+  background-color: #000579;
+  color: #fff;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}.gpp_category .loading {
+  animation: rotate 2s linear infinite;
+  display: inline-block;
+  font-size: 24px;
+  margin-right: 10px;
+}.gpp_category .loading.switch {
+  display: flex !important;
+  float: right;
+  margin-right: unset !important;
+}.trustarc-gpc-notice, .trustarc-gpc-notice-gs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}.wrapper {
+  background: transparent;
+  position: relative;
+}.reset-html * {
+  margin: 0 !important;
+}.reset-html p {
+  margin-bottom: 1em !important;
+}.gpp_loading_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  min-width: 122px;
+  border-radius: 40px;
+  background-color: #f8f9fa;
+}.loadingSpinner {
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}.vendorDisclosuresHeader,
+.vendorDomainsHeader,
+.vendorSdksHeader {
+  font-weight: bold;
+  margin-top: 8px;
+}.vendorDisclosurePurposesRow {
+  display: flex;
+  gap: 8px;
+}.vendorDisclosurePurposesRow .vendorDisclosureDetailLabel {
+  flex-shrink: 0;
+  min-width: 120px;
+}.vendorDisclosurePurposes,
+.vendorDisclosureSpecialPurposes {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}.vendorDomains,
+.vendorSdks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}button.taLinkButton {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
+  color: #1d4ed8;
+  text-decoration: underline;
+  cursor: pointer;
+}.prefTable .whyCantIOptOut button.taLinkButton {
+  font-size: 12px !important;
+  padding-right: 0px !important;
+}body {}
+.wrapper {font-family:titillium web,sans-serif;font-size:12px;line-height:20px;font-weight:300}.wrapper.main {background:url("https://consent.trustarc.com/images/bg.gif")no-repeat 50% 0;line-height:20px}.wrapper.pbg {background:url("https://consent.trustarc.com/images/pbg.jpg")repeat-y 1px 0 #fff}input,textarea,select {font-family:lucida grande,Arial,Helvetica,sans-serif;font-size:12px}.mainHeader {border-bottom:1px solid #ddd;padding-bottom:35px;padding-top:25px}.mainHeader h1 {color:#000;font-size:18px;display:inline-block;font-family:titillium web,sans-serif;font-weight:600}.mainHeader .logo {float:right}.mainHeader p {font-size:14px;margin-bottom:0;color:#000}.mainContent .logo {position:absolute;right:49px;top:32px}.prefHeader {border-bottom:1px solid #ddd;padding-bottom:10px}.pdynamicbutton button {opacity:1;text-shadow:none!important;box-sizing:content-box}.prefHeader .logo {float:right}.sliderImage>img {display:none}.mainContent,.consentToAll,.submitted {background:repeat #fff;border-top:1px solid #fff;color:#666;line-height:18px;padding:32px 32px 0}.mainContent a,.consentToAll a,.submitted a {color:#069;text-decoration:none}.mainContent a:hover,.consentToAll a:hover,.submitted a:hover {color:#fa7f06;text-decoration:none}.mainTitle2 {color:#669b00;font-family:Arial,Tahoma;font-size:14px;font-weight:400;margin:0 0 20px;text-transform:uppercase}.mainContent .pdynamicbutton a,.consentToAll .pdynamicbutton a,.submitted .pdynamicbutton a {opacity:1}.sliderImage {height:22px;width:22px;background:#282828;border-radius:50%;left:-4px!important;border:2px solid #dcdcdc}.pdynamicbutton {margin:0;position:relative}.pdynamicbutton a {font-size:14px;font-weight:400;color:#fff;text-shadow:none!important}.pdynamicbutton a {border-radius:3px 3px 3px 3px;color:#fff}.pdynamicbutton a:hover {color:#fff}.pdynamicbutton a span {font-size:16px}.mainContent .pdynamicbutton .askmelater {display:none;opacity:1}.pdynamicbutton .shp {text-align:right;font-family:Arial,Tahoma;color:#2074e5!important;float:right;text-transform:none;background:0 0;border:none;text-shadow:none;display:block!important}.pdynamicbutton a.shp:hover {color:#069;text-decoration:underline}.bottom {background:repeat #f7f7f7;border-top:1px solid #eee;font-size:11px;margin-top:20px;padding:10px 20px;text-align:right}.bottom a:hover {color:#333}.bottom a:first-child {border-right:1px solid #ddd;display:inline-block;margin-right:10px;padding:0 10px 0 0}#mainInner {background:repeat #fcfcfc;border:1px solid #ddd;overflow:hidden;padding:10px;display:none!important}#mainInner {border-radius:2px 2px 2px 2px;box-shadow:0 0 3px #E7E7E7 inset}#notice p {font-size:11px;line-height:15px}.consent {font-size:16px;color:#000;font-family:titillium web,sans-serif;font-weight:400;padding:0 0 32px}.consent p:first-child {margin-top:0}.TRUSTe_Overlay {background:repeat #000;display:none;left:0;min-height:100%;opacity:.5;position:fixed;top:0;width:100%;z-index:99}.TRUSTe_PopParent {display:none;left:50%;position:fixed;top:30%;z-index:100}.TRUSTe_PopContainer {background:url("https://consent.trustarc.com/images/trans.png")repeat;border-radius:5px 5px 5px 5px;left:-325px;padding:10px;position:absolute;top:-116px;width:650px}.TRUSTe_PopInnerContainer {background:repeat #fff;border-radius:2px 2px 2px 2px;overflow:hidden}.TRUSTe_PopIFrame {border:0;height:440px;width:100%}.leftPanel {border-right:1px solid #ddd;float:left;width:280px}.rightPanel {margin-left:281px}.required h3,.functional h3,.advertising h3 {font-size:16px;font-family:Arial,Tahoma;font-weight:400;color:#007ac7}.right h3 {color:#000!important;font-family:titillium web,sans-serif;font-weight:700;line-height:22px;font-size:14px!important}.dtabmenu {border-bottom:1px solid #ddd;list-style:none outside none;margin-bottom:20px;overflow:hidden}.dtabmenu li {display:inline-block;float:left;width:50%}.dtabmenu li a {color:#ccc;display:block;font-size:11px;font-weight:700;padding:5px;text-align:center;text-transform:uppercase}.dtabmenu li a:hover {background:repeat #f7f7f7;color:#666;cursor:pointer}.dtabmenu li a.current {background:repeat #ddd;color:#333}.prefPanel {}.prefPanel .cookiecat h3 {margin:0;font-size:21px;font-family:titillium web,sans-serif;font-weight:700;text-transform:none;color:#000}.prefPanel .cookiecat span {font-size:14px;color:#000;line-height:22px}.prefPanel .cookiecat a.viewcookie {color:#2074e5}.prefPanel .cookiecatdeactivated h3 {margin:0;font-size:14px;font-weight:400;color:#a9a9a9;text-transform:uppercase;font-family:Arial,Tahoma}.prefPanel .left {float:left;margin-right:2%;width:50%}.prefPanel .right {border-left:1px solid #eee;float:left;padding-left:50px;width:40%}.truncatedCat::before {content:''}.truncatedCat:after {background:0 0}.highlight {color:#e9242c!important}.switch {box-shadow:1px 1px #FFFFFF;right:10px;top:7px}.switch span {background:url("https://consent.trustarc.com/images/switchbg.png")repeat-x 0 -20px;border:1px solid #bbb;cursor:pointer;display:inline-block;float:left;padding:3px 5px}.switch span.on {border-radius:2px 0 0 2px;border-right:0}.switch span.off {border-radius:0 2px 2px 0}.switch span.active {background:#e5233f;color:#fff;text-shadow:none}.switchtable {float:right;position:relative;right:0;top:0}.options {display:inline-block;float:left;margin-left:10px;width:350px}.options div {}.options div h2 {font-size:21px;text-transform:none;color:#9d9d9c;font-family:titillium web,sans-serif;font-weight:600}.options div p {color:#a9a9a9;font-size:14px;line-height:17px!important;margin-top:13px!important;font-family:titillium web,sans-serif!important;font-weight:300;padding-bottom:15px}.options div.active h2 {color:#000}.options div.active p {color:#555;font-family:Arial,Tahoma}.required,.functional {display:none}.prefPanel .right h3 {color:#a9a9a9;font-size:11px;line-height:14px;margin-top:5px!important}.right ul {list-style:none outside none;margin:10px 0 0}.allowedTitle {color:#000;font-family:titillium web,sans-serif;font-weight:700;line-height:22px;font-size:14px}.right ul li {color:#000;font-family:titillium web,sans-serif;font-weight:300;line-height:22px;font-size:14px}.mainPanel {color:#666;line-height:18px;overflow:hidden}.mainInner,.submission,.shortNoticePanel {padding:20px}.mainTitle {color:#fa7f06;font-size:18px;font-weight:400;margin:15px 0 20px}.mainPanel p,.submission p {margin:10px 0}.mainPanel .small,.submission .small {font-size:11px;line-height:16px}.mainPanel a,.submission a {color:#069;text-decoration:none}.mainPanel a:hover,.submission a:hover {color:#fa7f06;text-decoration:none}.mainTitle3 {font-size:16px}.footer {font-size:14px;margin-top:0;padding:35px 50px;background:#fff;border:none}.footer a {text-decoration:none;color:#000;font-size:14px;font-family:titillium web,sans-serif;font-weight:700;padding-bottom:3px;border-bottom:1px solid #e5233f}.footer .right {font-size:12px;padding-top:1px;display:none}.footerlinetop {border-top:1px solid #ddd;padding-top:2px}.footer p.notice {color:#666;font-weight:700;margin:5px 0}.slimScrollDiv {padding-bottom:2px}.loading {}.breadcrumbs {border-bottom:1px dotted #eee;color:#999;display:block;font-size:10px;margin-bottom:8px}.breadcrumbs a {color:#666}.backprefmenu {cursor:pointer}.notiSuccess {background:repeat #f0fbdb;border:1px solid #8ecd15;border-radius:2px 2px 2px 2px;padding:5px 10px}.show {display:block}.floatRight {float:right}.ui-slider-vertical {background:repeat #dcdcdc;box-shadow:1px 1px 1px #dcdcdc inset;position:relative;width:2px}.ui-slider-vertical {border-radius:50px 50px 50px 50px}.ui-slider-vertical a {background:url("https://consent.trustarc.com/images/handle.png")no-repeat;height:19px;left:-8px;position:absolute;width:19px}.ui-slider-vertical a.ui-slider-handle {border-radius:50px 50px 50px 50px;margin-bottom:-8px;outline:none}.ui-slider-vertical a.ui-state-active {box-shadow:0 0 5px #888888}.ui-slider-vertical .ui-slider-range {background:repeat #000;border-radius:50px 50px 50px 50px;left:0;position:absolute;width:3px}.ui-slider-vertical .ui-slider-range {box-shadow:1px 1px 2px #000000 inset}.ui-slider-vertical .ui-slider-range-min {bottom:0}.ui-slider-vertical .ui-slider-range-max {right:0}.options>div {background:0 0}.pdynamicbutton .submit {border-radius:0;background-image:linear-gradient(to bottom,#E5233F,#E5233F);border:solid 1px #e5233f;font-family:titillium web,sans-serif;font-size:18px;font-weight:700;width:180px;padding:10px 25px;text-transform:capitalize;text-align:center;margin:0;margin-left:30px}.pdynamicbutton .cancel {border-radius:0;background:#fff;border:1.5px solid #e5233f!important;text-align:center;color:#e5233f;font-family:titillium web,sans-serif;font-size:18px;font-weight:700;width:140px;padding:10px 25px;text-transform:capitalize;text-align:center;margin:0}.pdynamicbutton .call,.pdynamicbutton .required,.pdynamicbutton .shp {background:#e5233f;border:1px solid #e5233f;text-shadow:none;float:right;padding:10px 16px;text-transform:capitalize;border-radius:0;margin:0;width:180px;text-align:center;font-size:16px;font-family:titillium web,sans-serif;font-weight:400;max-width:fit-content;margin-bottom:35px;margin-left:16px;line-height:24.34px}.pdynamicbutton .shp {background:#fff;color:#2c4045!important;border:1.5px solid #47666e}.pdynamicbutton .close {background:#e5233f;border:1px solid #e5233f;text-shadow:none;padding:10px 25px;font-size:18px;font-family:titillium web,sans-serif;font-weight:700;text-align:center}.pdynamicbutton .advance {border-radius:0;background:#fff;color:#2c4045;border:1.5px solid #47666e!important;padding-left:20px;padding-right:20px;font-family:titillium web,sans-serif;font-size:16px;font-weight:400;width:180px;padding:10px 25px;text-transform:capitalize;text-align:center}.pdynamicbutton .advance:hover {color:#2c4045}.pdynamicbutton+.warningMessage.warningMessageHttps {display:none!important}.warningMessageOptoutFailed {display:none}.logo img {width:200px}.pdynamicbutton .call:hover,.pdynamicbutton .submit:hover,.pdynamicbutton .required:hover,.pdynamicbutton .close:hover {opacity:.8!important}.pdynamicbutton .call,.pdynamicbutton .submit,.pdynamicbutton .cancel,.pdynamicbutton .advance,.pdynamicbutton .required,.pdynamicbutton .close,.pdynamicbutton .cancel {line-height:24.34px;font-family:titillium web,sans-serif!important;font-weight:400;font-size:16px;padding:10px 16px!important;text-transform:lowercase;width:auto!important}.pdynamicbutton .call:first-letter,.pdynamicbutton .submit:first-letter,.pdynamicbutton .cancel:first-letter,.pdynamicbutton .advance:first-letter,.pdynamicbutton .required:first-letter,.pdynamicbutton .close:first-letter,.pdynamicbutton .shp:first-letter {text-transform:uppercase}.prefTable tr td .switch {margin:0;display:none}.optoutColumn {display:none}.prefPanel .left .gwt-InlineLabel {display:none}#cookieSettingsLink,#cookiePolicyAnchor {cursor:pointer;font-size:16px;font-family:titillium web semibold;text-decoration:underline;color:#000}#cookieSettingsLink:hover,#cookiePolicyAnchor:hover {color:#000}.contentfield {font-size:14px!important;color:#000;font-family:titillium web,sans-serif;font-weight:400}.mainContent p {line-height:24.34px}:where([data-breakpoint-min-width-769="true"]):where([data-breakpoint-max-width-956="true"]) .pdynamicbutton {padding-right:0!important}:where([data-breakpoint-min-width-769="true"]):where([data-breakpoint-max-width-956="true"]) .footer .left {position:inherit!important;right:0!important}:where([data-breakpoint-min-width-769="true"]):where([data-breakpoint-max-width-956="true"]) .footer {}:where([data-breakpoint-min-width-769="true"]):where([data-breakpoint-max-width-956="true"]) .pdynamicbutton .submit {margin-left:6px!important}:where([data-breakpoint-max-width-767="true"]) .logo img {width:200px}:where([data-breakpoint-max-width-767="true"]) .mainContent p, :where([data-breakpoint-max-width-767="true"]) .consentToAll p {margin:10px 0;text-align:justify}:where([data-breakpoint-max-width-767="true"]) .mainContent .logo {float:none;text-align:center;display:block;top:15px;right:0;left:0}:where([data-breakpoint-max-width-767="true"]) .mainHeader h1 {text-align:center;font-size:16px;display:block;margin-top:55px}:where([data-breakpoint-max-width-767="true"]) .mainHeader {padding-bottom:10px;padding-top:10px}:where([data-breakpoint-max-width-767="true"]) .mainHeader .logo {float:none;text-align:center;display:block}:where([data-breakpoint-max-width-767="true"]) .mainContent .mainHeader p {font-size:11px;text-align:center}:where([data-breakpoint-max-width-767="true"]) .mainContent .mainHeader span img {position:relative;top:-11px}:where([data-breakpoint-max-width-767="true"]) .mainContent .pdynamicbutton a, :where([data-breakpoint-max-width-767="true"]) .consentToAll .pdynamicbutton a, :where([data-breakpoint-max-width-767="true"]) .submitted .pdynamicbutton a, :where([data-breakpoint-max-width-767="true"]) .mainContent .pdynamicbutton button, :where([data-breakpoint-max-width-767="true"]) .consentToAll .pdynamicbutton button, :where([data-breakpoint-max-width-767="true"]) .submitted .pdynamicbutton button {display:block;float:none;text-align:center;position:relative!important;padding:10px 0;width:100%!important;margin:0!important;margin-bottom:12px!important}:where([data-breakpoint-max-width-767="true"]) .footer {padding:0;text-align:center;width:100%;padding-bottom:35px}:where([data-breakpoint-max-width-767="true"]) .footer .left {position:inherit!important;right:auto!important;top:0!important;float:none;width:100%;text-align:center;left:0!important}:where([data-breakpoint-max-width-767="true"]) .pdynamicbutton a, :where([data-breakpoint-max-width-767="true"]) .pdynamicbutton button {font-size:14px}:where([data-breakpoint-max-width-767="true"]) .pdynamicbutton {padding-right:0!important;display:flex;flex-direction:column;padding-top:15px}:where([data-breakpoint-max-width-767="true"]) .pdynamicbutton a {margin-top:10px}:where([data-breakpoint-max-width-767="true"]) .pdynamicbutton a:first-child {margin-top:0}:where([data-breakpoint-max-width-767="true"]) .pdynamicbutton a:hover {text-decoration:none!important}:where([data-breakpoint-max-width-767="true"]) .pdynamicbutton a.call:active, :where([data-breakpoint-max-width-767="true"]) .pdynamicbutton .submit:active {-moz-box-shadow:inset 0 1px 2px rgba(0,0,0,.2);-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,.2);box-shadow:inset 0 1px 2px rgba(0,0,0,.2)}:where([data-breakpoint-max-width-767="true"]) .pdynamicbutton a.askmelater, :where([data-breakpoint-max-width-767="true"]) .pdynamicbutton .shp, :where([data-breakpoint-max-width-767="true"]) .pdynamicbutton .cancel {padding:10px 0;border:1px solid #ccc}:where([data-breakpoint-max-width-767="true"]) .pdynamicbutton .shp {padding:10px 0;border:1px solid #ccc;text-transform:uppercase;font-weight:700;background:0 0}:where([data-breakpoint-max-width-767="true"]) .pdynamicbutton a.askmelater:active, :where([data-breakpoint-max-width-767="true"]) .pdynamicbutton .shp:active, :where([data-breakpoint-max-width-767="true"]) .pdynamicbutton .cancel:active {-moz-box-shadow:inset 0 1px 2px rgba(0,0,0,.2);-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,.2);box-shadow:inset 0 1px 2px rgba(0,0,0,.2)}:where([data-breakpoint-max-width-767="true"]) .pdynamicbutton .advance:active {-moz-box-shadow:inset 0 1px 2px rgba(0,0,0,.2);-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,.2);box-shadow:inset 0 1px 2px rgba(0,0,0,.2)}:where([data-breakpoint-max-width-767="true"]) .pdynamicbutton .cancel, :where([data-breakpoint-max-width-767="true"]) .pdynamicbutton .cancel:hover {color:#fff!important;text-shadow:none}:where([data-breakpoint-max-width-767="true"]) .prefPanel .left {float:none;width:auto!important;margin-right:0;margin-bottom:20px}:where([data-breakpoint-max-width-767="true"]) .prefPanel .right {border-left:0;padding-left:0;width:auto;float:none}:where([data-breakpoint-max-width-767="true"]) .prefPanel .right h3 {font-size:14px;text-align:center}:where([data-breakpoint-max-width-767="true"]) .options {margin:0 0 10px;width:auto;float:none}:where([data-breakpoint-max-width-767="true"]) .checkOptions div {margin-bottom:10px}:where([data-breakpoint-max-width-767="true"]) .options div p {margin-top:0!important}:where([data-breakpoint-max-width-767="true"]) .consent p {text-align:left}:where([data-breakpoint-max-width-767="true"]) br.spacing {display:none}:where([data-breakpoint-max-width-480="true"]) .mainContent, :where([data-breakpoint-max-width-480="true"]) .consentToAll, :where([data-breakpoint-max-width-480="true"]) .submitted {padding:20px 20px 0}table.prefTable.withoptout tr>td:nth-child(4),.prefTable.withoptout thead th:last-child {display:none}table.prefTable.withoptout colgroup col:last-child {width:0}.prefTable tr td:nth-child(3) {word-break:break-word;border-right:1px solid #eee}.prefTable thead tr:last-child th {border:1px solid #ddd}:where([data-breakpoint-max-width-400="true"]) .optoutless td {border-right:1px solid #ddd}:where([data-breakpoint-max-width-400="true"]) .prefTable td:nth-child(3) {display:table-cell}:where([data-breakpoint-max-width-400="true"]) .optoutless td {border-right:1px solid #ddd}:where([data-breakpoint-max-width-400="true"]) .prefTable td:last-child {display:table-cell}:where([data-breakpoint-max-width-300="true"]) .prefPanel .cookiecat {display:flex;flex-direction:column;align-items:flex-start}</style><div class="wrapper" data-lenis-prevent="" tabindex="-1" data-breakpoint-max-width-300="true" data-breakpoint-max-width-400="true" data-breakpoint-max-width-406="true" data-breakpoint-max-width-480="true" data-breakpoint-max-width-630="true" data-breakpoint-max-width-767="true" data-breakpoint-max-width-780="true" data-breakpoint-max-width-956="true"><div lang="en"><div aria-labelledby="cookieMainHeader" class="mainContent"><div><div id="cookieMainHeader" class="mainHeader consentHeader" translate="no"><h1><span>About cookies on this site</span></h1><div class="logo pn_1 inline-stoshr"><img src="https://consent.truste.com/get?name=ENU_Logo_trustarc.png" alt="Edinburgh Napier University"></div><style>.second-p {display: none;}
+#cookieConsentDescription {
+position: relative;
+}
+
+.trustarc-disclosure-footer {
+position: relative;
+bottom: -65px;
+left: 0px;
+}
+.trustarc-disclosure-footer a, trustarc-disclosure-footer #cookiePolicyAnchor{
+font-family: "Titillium Web", sans-serif !important;
+ font-weight: 400 ;
+color: #000;
+text-decoration: underline !important;
+}
+
+.mainHeader {
+ border-bottom: none;
+ padding-bottom: 24px;
+ padding-top: 0px;
+}
+.consent p { margin-bottom: 24px !important; }
+.second-p { margin-top: 24px !important; }
+.footer {display: none !important; }
+.mainContent + .warningMessage {
+    position: relative;
+    top: -24px;
+}
+@media screen and (max-width: 767px) {
+.mainContent { padding: 24px 24px 0 24px;}
+.consent { padding: 0 0 24px 0; }
+.mainHeader { padding-bottom: 16px !important; }
+.mainHeader h1 { 
+ text-align: inherit;
+ margin-top: 0px;
+font-size: 18px; 
+}
+.pdynamicbutton { 
+display: flex;
+padding-top: 0 !important;
+align-items: center;
+justify-content: flex-end;
+flex-direction: row;
+}
+.mainContent .pdynamicbutton .call { 
+ float: right !important;
+ /*padding: 15.5px 16px !important;*/
+/* margin-bottom: 24px !important;*/
+}
+.mainContent .pdynamicbutton .call {
+order: 3;
+margin-bottom: 30px !important;
+}
+.mainContent .pdynamicbutton .required {
+order: 2;
+margin: 0px 16px !important;
+margin-bottom: 30px !important;
+}
+.mainContent .pdynamicbutton .shp {
+order: 1;
+font-weight: 400;
+text-transform: lowercase;
+padding: 10px 16px !important;
+margin-bottom: 0px !important;
+border: 1.5px solid #47666e !important;
+margin-bottom: 30px !important;
+}
+}
+
+@media screen and (max-width: 630px) {
+.trustarc-disclosure-footer {
+bottom: -100px;
+}
+}
+
+@media screen and (max-width: 480px) {
+.mainHeader {padding-bottom: 14px !important;}
+.mainHeader h1 { font-size: 16px; }
+.consent, #cookieSettingsLink, #cookiePolicyAnchor { font-size: 14px; }
+.pdynamicbutton {
+flex-direction: column;
+justify-content: center;
+}
+.trustarc-disclosure-footer {
+bottom: -170px;
+font-size: 14px;
+line-height: normal;
+}
+
+.mainContent .pdynamicbutton .required {
+margin: 10px 0px !important;
+font-size: 14px;
+line-height: normal;
+max-width: unset;
+box-sizing: border-box;
+}
+
+.mainContent .pdynamicbutton .shp {
+margin-bottom: 0px !important;
+font-size: 14px;
+line-height: normal;
+max-width: unset;
+box-sizing: border-box;
+}
+.mainContent .pdynamicbutton .call {
+margin-bottom: 35px !important;
+font-size: 14px;
+line-height: normal;
+max-width: unset;
+box-sizing: border-box;
+}
+.second-p {margin-top: 12px !important;}
+.consent {padding-bottom: 0px !important;}
+.consent p {line-height: normal;
+margin-bottom: 0px !important;
+}
+.mainContent {
+padding: 18px 18px 0px 18px !important;
+}
+}
+.inline-stoshr { display:none !important; }
+
+
+      #accept_all_button {
+        display: none !important;
+      }
+      #decline_all_button {
+        display: none !important;
+      }
+    </style></div><div aria-hidden="true" style="display: none;"></div><div key="eu-disclosure-panel" id="cookieConsentDescription" class="consent editable" translate="no"><p>Cookies are important to the proper functioning of this site. To improve your experience, we use cookies to remember log-in details and provide secure log-in, collect statistics,&nbsp;and optimise site functionality, and deliver content and ads tailored to your interests when you are browsing online.</p>
+<p>Select ‘Accept&nbsp;All’&nbsp;to accept cookies and go directly to the site.</p>
+<p>Select ‘Reject&nbsp;All’&nbsp;to accept required cookies only and go directly to the site.</p>
+<p>Select ‘Manage&nbsp;Settings’&nbsp;to see detailed descriptions of the types of cookies and choose what types of cookies you accept while on site.</p>
+<!--<p class="second-p">Click ‘Accept All’ to accept cookies and go directly to the site</p>
+Click ‘Reject All’ to accept required cookies only and go directly to the site. </p>
+<p>Click on ‘Manage Settings’ to see detailed descriptions of the types of cookies and choose what types of cookies you accept while on site.
+</p>-->
+<div class="trustarc-disclosure-footer">
+ <a id="privacyPolicyAnchor" href="https://www.napier.ac.uk/privacy-policy" target="_blank">Privacy Policy</a> /  <a id="cookiePolicyAnchor" href="https://www.napier.ac.uk/privacy-policy" target="_blank">Cookie Policy</a>
+</div></div><div class="pdynamicbutton" style="visibility: visible;"><div></div><a href="https://www.napier.ac.uk/global/enuic/is1/is1-computing#" tabindex="0" role="button" class="call" translate="no">Accept all</a><a href="https://www.napier.ac.uk/global/enuic/is1/is1-computing#" tabindex="0" role="button" class="required" translate="no" style="">Reject all</a><button class="shp" translate="no">Manage Settings</button></div><br class="spacing"><br class="spacing br-clear"></div></div><div class="footer" style=""><div class="left" translate="no"><a id="privacyPolicyAnchor" href="https://www.napier.ac.uk/privacy-policy" target="_blank">Privacy Policy</a></div><div class="right" translate="no"><label tabindex="0">Powered by</label>: <a href="http://trustarc.com/" target="_blank"><img class="inline-10lr3p" alt="Company logo for TrustArc" src="https://consent.trustarc.com/get?name=Powered-By-TrustArc.png" target="_blank"></a><style>.inline-10lr3p { padding-left:0px !important; height:17px !important; vertical-align:middle !important; }</style></div><br class="spacing"><div aria-hidden="true" style="display: none;"></div></div></div></div></template></div></div></div></div></body></html>
