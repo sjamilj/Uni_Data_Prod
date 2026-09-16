@@ -1064,6 +1064,17 @@ class CoursePagesCleaner:
                     )
                 )
 
+            pipeline_bits: list[str] = []
+            if source_url:
+                pipeline_bits.append(f"course_url={source_url.strip()}")
+            if study_levels:
+                pipeline_bits.append(f"study_level={study_levels[0]}")
+            if pipeline_bits:
+                markdown = (
+                    f"<!-- pipeline: {' '.join(pipeline_bits)} -->\n"
+                    + markdown
+                )
+
             markdown = (
                 self.markdown_cleanup.cleanup_course(
                     markdown
