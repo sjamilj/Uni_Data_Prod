@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 ## Git
 
-Follow [git-for-operator.md](../git-for-operator.md): never run git or chain commit/tag commands; give separate copy-paste blocks with **recommended** `-m` strings (user may edit before running).
+Follow [git-for-operator.md](../git-for-operator.md): never run git or chain commit/tag commands; give separate copy-paste blocks with **recommended** `-m` strings (user may edit before running). Scopes and tags: [CONTRIBUTING.md](../../CONTRIBUTING.md), [UNIVERSITIES_REGISTRY.md](../../UNIVERSITIES_REGISTRY.md); scripted add/commit lines: [scripts/README.md](../../scripts/README.md).
 
 Run phases in order. Each phase has its own skill; do not duplicate their full instructions here — open the skill when you reach that step.
 

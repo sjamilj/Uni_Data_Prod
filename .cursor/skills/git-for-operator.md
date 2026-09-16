@@ -18,12 +18,30 @@ You run all git commands. The agent **never** runs git in the terminal.
 
 Pipeline Python commands (`python shared/...`) are fine for the agent to run when you want automation; **git is never automated**.
 
+## Canonical repo docs
+
+| Doc | Use when |
+|-----|----------|
+| [CONTRIBUTING.md](../../CONTRIBUTING.md) | Commit scopes (`feat(unit-NN/slug): …`), `shared/v1.1.0` baseline, `chore(shared):`, **infra tags** (`infra/onboarding-skills/v*`) |
+| [UNIVERSITIES_REGISTRY.md](../../UNIVERSITIES_REGISTRY.md) | Unit numbers, slugs, tag naming table, `git log --grep=unit-NN` |
+| [scripts/README.md](../../scripts/README.md) | `commit-uni.cmd`, `tag-uni.cmd`, `checkout-uni.cmd`; `-Pick infra` for skills/registry/scripts-only commits |
+| [README.md](../../README.md) | Operator phrases (“Working with the agent”) — not git mechanics |
+
+**Infra commit (skills + registry + contributing + scripts docs, no university folder):**
+
+```powershell
+.\scripts\commit-uni.cmd -Pick infra -Type chore -Summary "add Cursor uni onboarding skills and operator git rules"
+```
+
+Copy the printed `git add` / `git commit` lines (paths should include `.cursor/skills/`, root `README.md`, `CONTRIBUTING.md`, `UNIVERSITIES_REGISTRY.md`, `scripts/README.md`, and `.gitignore` skills exception if changed).
+
 ## Suggested message patterns
 
 | Change | Example commit `-m` | Example tag `-m` (if tagging) |
 |--------|---------------------|-------------------------------|
-| Cursor onboarding skills + README + `.gitignore` skills exception | `chore(infra): add Cursor uni onboarding skills and operator git rules` | `infra: Cursor uni onboarding skills and README operator guide` |
-| Docs/registry tag table only | `docs: update shared v1.1.0 baseline and infra tag rules in registry` | (usually no tag) |
+| Cursor onboarding skills + README + `.gitignore` skills exception | `chore(infra): add Cursor uni onboarding skills and operator git rules` | `infra: Cursor uni onboarding skills and README operator guide` → `infra/onboarding-skills/v1.0.0` |
+| Skills cross-links + registry/contributing/scripts doc tweaks (no behaviour change) | `docs(infra): link onboarding skills to CONTRIBUTING, registry, and scripts README` | `infra: onboarding skills doc cross-links` → `infra/onboarding-skills/v1.0.1` |
+| Registry / CONTRIBUTING tag table only (no skills) | `docs: update shared v1.1.0 baseline and infra tag rules in registry` | (usually no tag) |
 | General `shared/` behaviour (all unis) | `chore(shared): describe the behaviour change in one line` | `shared: same one-line summary as commit` → tag name `shared/v1.2.0` or patch bump per CONTRIBUTING |
 | One university folder (+ optional `-IncludeShared`) | `feat(unit-NN/slug): complete foundation pipeline` | `uni/{slug}/foundation/v1.0.0` with message `uni: {slug} foundation export v1.0.0` |
 | Pin `shared/` to baseline only | `chore(shared): restore shared to shared/v1.1.0 baseline` | (no new shared tag — matches existing `shared/v1.1.0`) |

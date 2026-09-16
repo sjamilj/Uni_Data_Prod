@@ -10,6 +10,10 @@ disable-model-invocation: true
 
 Follow [git-for-operator.md](../git-for-operator.md). Do not run git in the terminal. Give separate command blocks with recommended commit/tag `-m` text for each git step.
 
+- Shared reset baseline: [CONTRIBUTING.md](../../CONTRIBUTING.md#shared-infrastructure-baseline) (`shared/v1.1.0`).
+- University scope for later commits: look up `unit-NN` / slug in [UNIVERSITIES_REGISTRY.md](../../UNIVERSITIES_REGISTRY.md).
+- Optional helpers: [scripts/README.md](../../scripts/README.md) (`checkout-uni.cmd`, `commit-uni.cmd` with `-Pick infra` only for repo-wide docs/skills).
+
 ## Before anything destructive
 
 Ask the user to run `git status` (or they paste output). List every modified path under `shared/` that would be lost on reset. Do not tell them to run `git checkout shared/v1.1.0 -- shared/` until they confirm.

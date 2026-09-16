@@ -33,6 +33,18 @@ Optional (home PC only): `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` t
 
 University names and scopes come from [UNIVERSITIES_REGISTRY.md](../UNIVERSITIES_REGISTRY.md). Full workflow: [CONTRIBUTING.md](../CONTRIBUTING.md).
 
+### Cursor onboarding skills (`.cursor/skills/`)
+
+Agent skills for new-university setup live under `.cursor/skills/` (committed; rest of `.cursor/` is gitignored). Operator chat phrases are in [README.md](../README.md) § Working with the agent. Git rules for the agent are in [.cursor/skills/git-for-operator.md](../.cursor/skills/git-for-operator.md).
+
+**Infra-only commit** (skills + `CONTRIBUTING.md` / `UNIVERSITIES_REGISTRY.md` / this file — no university folder):
+
+```powershell
+.\scripts\commit-uni.cmd -Pick infra -Type chore -Summary "add Cursor uni onboarding skills and operator git rules"
+```
+
+Tag after commit per [CONTRIBUTING.md § Infra tags](../CONTRIBUTING.md#infra-tags-not-shared): e.g. `infra/onboarding-skills/v1.0.0` (bump patch when skills or operator docs change).
+
 ---
 
 
