@@ -18,6 +18,18 @@ DEFAULT_COURSE_TYPE_SELECTORS = (
 )
 
 _COURSE_TYPE_MARKDOWN_RE = re.compile(r"^\*\*Course type:\*\*\s*(.+)\s*$", re.M | re.I)
+_DURATION_MARKDOWN_RE = re.compile(r"^\*\*Duration:\*\*\s*(.+)\s*$", re.M | re.I)
+_FULL_TIME_MODE_RE = re.compile(r"\bfull[-\s]?time\b", re.I)
+_PART_TIME_MODE_RE = re.compile(r"\bpart[-\s]?time\b", re.I)
+
+
+def study_mode_is_part_time_only(text: str) -> bool:
+    """True when text describes part-time study but not full-time (dual-mode courses are kept)."""
+    if not text or not text.strip():
+        return False
+    if not _PART_TIME_MODE_RE.search(text):
+        return False
+    return not _FULL_TIME_MODE_RE.search(text)
 
 
 class CourseTypePatternMatcher:
@@ -76,6 +88,43 @@ class CourseTypeExtractor:
         text = match.group(1).strip()
         return text or None
 
+    @staticmethod
+    def study_options_from_plaintext(text: str) -> str | None:
+        lines = [ln.strip() for ln in text.splitlines()]
+        for index, line in enumerate(lines):
+            if line.casefold() != "study options":
+                continue
+            value_index = index + 1
+            while value_index < len(lines) and not lines[value_index]:
+                value_index += 1
+            if value_index < len(lines):
+                return lines[value_index]
+        return None
+
+    @staticmethod
+    def study_options_from_markdown(markdown: str) -> str | None:
+        for heading in ("## Key course details", "## Key course information"):
+            marker = heading
+            if marker not in markdown:
+                continue
+            _, tail = markdown.split(marker, 1)
+            next_section = re.search(r"\n## ", tail)
+            body = tail[: next_section.start()] if next_section else tail
+            value = CourseTypeExtractor.study_options_from_plaintext(body)
+            if value:
+                return value
+        return CourseTypeExtractor.study_options_from_plaintext(markdown)
+
+    @staticmethod
+    def study_options_from_html(html: str) -> str | None:
+        soup = BeautifulSoup(html, "html.parser")
+        root = soup.select_one("#key-course-details") or soup.body or soup
+        if not root:
+            return None
+        return CourseTypeExtractor.study_options_from_plaintext(
+            root.get_text("\n", strip=True),
+        )
+
 
 @dataclass
 class CourseTypeFilter:
@@ -120,6 +169,14 @@ class CourseTypeFilter:
                 return True
         return False
 
+    def excludes_part_time_study_modes(self) -> bool:
+        return self.course_type_is_excluded("part-time")
+
+    def _exclude_part_time_only_study_mode(self, study_text: str | None) -> bool:
+        if not self.excludes_part_time_study_modes() or not study_text:
+            return False
+        return study_mode_is_part_time_only(study_text)
+
     def should_exclude_html(self, html: str, *, url: str | None = None) -> bool:
         if not self.enabled:
             return False
@@ -129,7 +186,10 @@ class CourseTypeFilter:
             html,
             selectors=self.course_type_selectors,
         )
-        return self.course_type_is_excluded(course_type)
+        if self.course_type_is_excluded(course_type):
+            return True
+        study = CourseTypeExtractor.study_options_from_html(html)
+        return self._exclude_part_time_only_study_mode(study)
 
     def should_exclude_markdown(self, markdown: str, *, url: str | None = None) -> bool:
         if not self.enabled:
@@ -137,9 +197,13 @@ class CourseTypeFilter:
         if self.url_is_excluded(url):
             return True
         course_type = CourseTypeExtractor.from_markdown(markdown)
-        if course_type:
-            return self.course_type_is_excluded(course_type)
-        return False
+        if course_type and self.course_type_is_excluded(course_type):
+            return True
+        duration_match = _DURATION_MARKDOWN_RE.search(markdown)
+        if duration_match and self._exclude_part_time_only_study_mode(duration_match.group(1)):
+            return True
+        study = CourseTypeExtractor.study_options_from_markdown(markdown)
+        return self._exclude_part_time_only_study_mode(study)
 
 
 # Backward-compatible aliases

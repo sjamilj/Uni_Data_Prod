@@ -24,6 +24,7 @@ from uni_pages import (
 from ollama_client import chat
 from llm_stage2_config import LlmStage2Config
 from uni_paths import resolve_code_dir, resolve_output_dir
+from course_type_filter import CourseTypeFilter
 from study_level import (
     PRESETUP_CLEAN_SUBDIR,
     PRESETUP_EXTRACT_SUBDIR,
@@ -2937,6 +2938,7 @@ class LlmExtractCLI:
             index_csv = CourseIndexManager.course_index_path(output_dir)
             input_label = str(index_csv.relative_to(output_dir))
             output_label = str(output_csv.relative_to(output_dir))
+        course_filter = CourseTypeFilter.from_code_dir(code_dir)
         print(f'University: {code_dir.parent.name}', flush=True)
         print(f'Input: {input_label}', flush=True)
         print(f'Courses to process: {len(courses)}', flush=True)
@@ -2952,6 +2954,17 @@ class LlmExtractCLI:
                 print(f'Resume: skipped {skip_batch} already-completed course(s)', flush=True)
                 skip_batch = 0
             print(f"[{index}/{len(courses)}] {entry['md_file']} — {entry['course_url']}", flush=True)
+            clean_md_rel = (entry.get('clean_md') or '').strip()
+            clean_md_path = output_dir / clean_md_rel if clean_md_rel else None
+            if clean_md_path and clean_md_path.is_file() and course_filter.should_exclude_markdown(
+                clean_md_path.read_text(encoding='utf-8'),
+                url=entry.get('course_url'),
+            ):
+                print('  -> skipped (course type / study mode filter)', flush=True)
+                completed.add(resume_key)
+                progress['completed'] = sorted(completed)
+                ExtractionProgressStore.save_progress(output_dir, progress, presetup=presetup)
+                continue
             try:
                 row, stage1_output, stage2_output, output_json = CourseExtractor.extract_course(code_dir, entry, model=model, host=host, skip_stage1=skip_stage1)
                 CourseIndexManager.append_csv_row(output_csv, row)

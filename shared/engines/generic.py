@@ -72,9 +72,9 @@ class GenericCourseHtmlEngine:
         if not selectors:
             return None, primary_selector.strip()
         for selector in selectors:
-            node = soup.select_one(selector)
-            if node and len(node.get_text(strip=True)) >= 20:
-                return node, selector
+            for node in soup.select(selector):
+                if len(node.get_text(strip=True)) >= 20:
+                    return node, selector
         return None, primary_selector.strip()
 
     @classmethod
