@@ -58,9 +58,9 @@ Squash or reword `wip(...)` commits to `feat(unit-NN/slug): ...` before merging 
 
 | What | Value |
 |------|-------|
-| Tag | `shared/v1.0.0` |
-| Commit | `d5f7088` |
-| Message | `(chore) Shared infra in general` |
+| Tag | `shared/v1.1.0` (current reset baseline; `shared/v1.0.0` is older) |
+| Commit | `14cc330` (tag `shared/v1.1.0`) |
+| Message | Keele-era shared: audit CSV, degreeName inference, studyLevel export |
 
 ### Start work on a new university
 
@@ -81,9 +81,9 @@ git switch -c dev/kingston
 Use this when finishing one uni and starting another, or when local `shared/` edits should not carry over:
 
 ```powershell
-git restore --source shared/v1.0.0 -- shared
+git restore --source shared/v1.1.0 -- shared
 # or detached pin:
-git checkout shared/v1.0.0 -- shared
+git checkout shared/v1.1.0 -- shared
 ```
 
 Stay on your branch; only `shared/` is replaced. University folders are unchanged.
@@ -199,16 +199,31 @@ University tags (`uni/…`) mark a **university export** snapshot. **Shared** ch
 git tag -l "shared/*"
 
 # Tag current HEAD after shared work is committed (bump minor for new tools, patch for fixes)
-git tag -a shared/v1.1.0 -m "shared: audit CSV, degreeName inference, studyLevel export"
+git tag -a shared/v1.2.0 -m "shared: describe what changed"
 
 # Push when ready
-git push origin shared/v1.1.0
+git push origin shared/v1.2.0
 
-# Check out shared code at a tag
+# Check out shared code at the current baseline
 git checkout shared/v1.1.0 -- shared/
 ```
 
 Bump **minor** (`v1.1.0` → `v1.2.0`) for new shared modules or export behaviour; bump **patch** (`v1.1.0` → `v1.1.1`) for fixes only. Tag **after** tests pass and at least one university has been re-exported with the new shared code.
+
+### Infra tags (not `shared/`)
+
+Repo-wide tooling that is not under `shared/` gets its own tag prefix after commit:
+
+| Tag | When |
+|-----|------|
+| `infra/onboarding-skills/v1.0.0` | `.cursor/skills/` onboarding skills + README “Working with the agent” |
+
+```powershell
+git tag -a infra/onboarding-skills/v1.0.0 -m "infra: Cursor uni onboarding skills"
+git push origin infra/onboarding-skills/v1.0.0
+```
+
+Bump patch (`v1.0.0` → `v1.0.1`) when skills or operator docs change without a shared bump.
 
 ## Documentation (`docs/`)
 

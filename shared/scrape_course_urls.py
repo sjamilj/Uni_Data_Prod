@@ -64,7 +64,7 @@ import time
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import parse_qs, parse_qsl, unquote, urlencode, urljoin, urlparse, urlunparse
+from urllib.parse import parse_qs, unquote, urlencode, urljoin, urlparse, urlunparse
 
 from bs4 import BeautifulSoup
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
@@ -75,8 +75,7 @@ if str(_SHARED_DIR) not in sys.path:
     sys.path.insert(0, str(_SHARED_DIR))
 
 from uni_paths import resolve_code_dir, resolve_output_dir
-from uni_pages import UniPageNaming
-from course_type_filter import CourseTypeExtractor, CourseTypeFilter
+from course_type_filter import CourseTypeFilter
 from study_level import (
     EXECUTE_LEVEL_ORDER,
     LEVEL_CSV_NAMES,
@@ -95,7 +94,6 @@ from study_level import (
     save_presetup_scrape_sample,
     sample_urls_per_level,
     scope_to_level,
-    normalize_url,
     unique_urls,
     write_level_csvs,
     write_presetup_urls_csv,
@@ -137,39 +135,6 @@ DEGREE_SCOPES = (
     "POSTGRADUATE_RESEARCH",
     "FOUNDATION",
 )
-FOUNDATION_COURSE_FETCH_URLS_KEY = "FOUNDATION_COURSE_FETCH_URLS"
-ENUIC_DEGREE_QUERY = "enuic_degree"
-
-
-def foundation_catalogue_url(fetch_url: str, course_name: str) -> str:
-    """Unique catalogue URL per IS1 progression degree; download uses the bare pathway URL."""
-    parsed = urlparse(fetch_url.strip().rstrip("/"))
-    slug = UniPageNaming.slug_from_stem(course_name)
-    query = urlencode({ENUIC_DEGREE_QUERY: slug})
-    return urlunparse(parsed._replace(query=query))
-
-
-def fetch_url_for_download(catalogue_url: str) -> str:
-    """Strip ENUIC disambiguation query before HTTP fetch."""
-    parsed = urlparse((catalogue_url or "").strip())
-    if ENUIC_DEGREE_QUERY not in parse_qs(parsed.query):
-        return catalogue_url.strip()
-    kept = [(k, v) for k, v in parse_qsl(parsed.query, keep_blank_values=True) if k != ENUIC_DEGREE_QUERY]
-    query = urlencode(kept)
-    return urlunparse(parsed._replace(query=query)).rstrip("?")
-
-
-def load_foundation_course_fetch_urls(env: EnvFile) -> list[tuple[str, str]]:
-    """Parse FOUNDATION_COURSE_FETCH_URLS lines: ``course name :: https://…``."""
-    pairs: list[tuple[str, str]] = []
-    for line in env.get_list(FOUNDATION_COURSE_FETCH_URLS_KEY):
-        if "::" not in line:
-            continue
-        name, url = line.split("::", 1)
-        name, url = name.strip(), url.strip()
-        if name and url:
-            pairs.append((name, url))
-    return pairs
 PAGINATION_PARAM_CANDIDATES = (
     "pageIndex",
     "page",
@@ -605,13 +570,7 @@ class CourseUrlMatcher:
             return False
         return any(pattern.search(parsed.path) for pattern in self.rules.path_patterns)
 
-    def extract_from_html(
-        self,
-        html: str,
-        base_url: str,
-        *,
-        course_filter: CourseTypeFilter | None = None,
-    ) -> set[str]:
+    def extract_from_html(self, html: str, base_url: str) -> set[str]:
         soup = BeautifulSoup(html, "html.parser")
         urls: set[str] = set()
         anchors = (
@@ -623,14 +582,8 @@ class CourseUrlMatcher:
             href = anchor.get("href") if hasattr(anchor, "get") else None
             if not href:
                 continue
-            if course_filter is not None and course_filter.exclude_link_text_patterns:
-                label = anchor.get_text(" ", strip=True)
-                if course_filter.link_text_is_excluded(label):
-                    continue
             resolved = UrlNormalizer.resolve_redirect_target(href, base_url)
             normalized = UrlNormalizer.normalize(resolved, base_url)
-            if course_filter is not None and course_filter.url_is_excluded(normalized):
-                continue
             if self.is_valid(normalized):
                 urls.add(normalized)
         return urls
@@ -1051,24 +1004,6 @@ class ArtifactStore:
 # Browser control (Playwright)
 # ============================================================================
 
-def load_uni_download_hooks_module(code_dir: Path):
-    """Load {University}/code/course_download_hooks.py when present."""
-    import importlib.util
-
-    path = code_dir / "course_download_hooks.py"
-    if not path.is_file():
-        return None
-    spec = importlib.util.spec_from_file_location("course_download_hooks", path)
-    if spec is None or spec.loader is None:
-        return None
-    module = importlib.util.module_from_spec(spec)
-    uni_code = str(path.parent)
-    if uni_code not in sys.path:
-        sys.path.insert(0, uni_code)
-    spec.loader.exec_module(module)
-    return module
-
-
 class BrowserSession:
     """Thin wrapper around a headless Chromium page, used as a context manager."""
 
@@ -1125,40 +1060,22 @@ class BrowserSession:
             except PlaywrightTimeoutError:
                 continue
 
-    def download_html(
-        self,
-        url: str,
-        *,
-        wait_for_results: bool = False,
-        code_dir: Path | None = None,
-    ) -> tuple[str, str]:
+    def download_html(self, url: str, *, wait_for_results: bool = False) -> tuple[str, str]:
         """Navigate to url and return (page_title, html). Retries transient failures."""
         assert self.page is not None
-        prepare = None
-        if code_dir is not None:
-            module = load_uni_download_hooks_module(code_dir)
-            if module is not None:
-                prepare = getattr(module, "prepare_course_page_download", None)
-        use_prepare = callable(prepare)
-        wait_until = "load" if use_prepare else "domcontentloaded"
         last_error: Exception | None = None
         for attempt in range(1, LISTING_DOWNLOAD_RETRIES + 1):
             try:
-                self.page.goto(url, wait_until=wait_until, timeout=60000)
+                self.page.goto(url, wait_until="domcontentloaded", timeout=60000)
                 self.dismiss_cookies(self.page)
-                if use_prepare:
-                    self.page.wait_for_timeout(3000)
-                else:
-                    try:
-                        self.page.wait_for_load_state("networkidle", timeout=15000)
-                    except PlaywrightTimeoutError:
-                        self.page.wait_for_load_state("load", timeout=15000)
+                try:
+                    self.page.wait_for_load_state("networkidle", timeout=15000)
+                except PlaywrightTimeoutError:
+                    self.page.wait_for_load_state("load", timeout=15000)
                 if wait_for_results:
                     self.wait_for_listing(self.page)
-                elif not use_prepare:
+                else:
                     self.page.wait_for_timeout(800)
-                if use_prepare:
-                    prepare(self.page, url)
                 html = self.page.content()
                 if not html or len(html) < 200:
                     raise RuntimeError("Empty or tiny HTML response")
@@ -1254,7 +1171,6 @@ class CatalogueUrlExtractor:
         scope = source.scope
         scope_prefix = f"[{scope}] " if scope else ""
         matcher = CourseUrlMatcher(domain, self.config.matching)
-        course_filter = CourseTypeFilter.from_code_dir(self.work_dir)
 
         # Step 1: get the catalogue page HTML, either from disk or by downloading it.
         if source.catalogue_html:
@@ -1268,7 +1184,7 @@ class CatalogueUrlExtractor:
             _title, html = browser.download_html(catalogue_url)
 
         # Step 2: pull every course link off the catalogue page.
-        page_urls = matcher.extract_from_html(html, base_url, course_filter=course_filter)
+        page_urls = matcher.extract_from_html(html, base_url)
         before = len(all_urls)
         all_urls.update(page_urls)
         url_levels.tag_urls(
@@ -1296,7 +1212,6 @@ class CatalogueUrlExtractor:
             completed,
             browser,
             url_levels,
-            course_filter=course_filter,
         )
 
     def _extract_letter_pages(
@@ -1311,8 +1226,6 @@ class CatalogueUrlExtractor:
         completed: set[str],
         browser: BrowserSession | None,
         url_levels: UrlLevelMap,
-        *,
-        course_filter: CourseTypeFilter | None = None,
     ) -> None:
         letter_urls = matcher.discover_letter_urls(html, base_url, catalogue_url)
         pending_letters = [
@@ -1334,11 +1247,7 @@ class CatalogueUrlExtractor:
             for index, letter_url in enumerate(pending_letters, start=1):
                 print(f"{scope_prefix}  Letter page {index}/{len(pending_letters)}: {letter_url}")
                 _title, letter_html = letter_browser.download_html(letter_url)
-                found = matcher.extract_from_html(
-                    letter_html,
-                    base_url,
-                    course_filter=course_filter,
-                )
+                found = matcher.extract_from_html(letter_html, base_url)
                 all_urls.update(found)
                 url_levels.tag_urls(
                     found,
@@ -1886,9 +1795,6 @@ class CourseUrlScraper:
         else:
             raise ValueError(f"Unsupported STRATEGY: {strategy}")
 
-        self._merge_foundation_fetch_urls(all_urls, url_levels, study_levels)
-        self._prune_excluded_course_urls(all_urls, url_levels)
-
         if presetup:
             return self._complete_presetup_scrape(
                 url_levels,
@@ -1912,53 +1818,6 @@ class CourseUrlScraper:
         self.logger.ok(f"Extract complete urls={len(urls)}")
         self.logger.end("ok", urls=len(urls))
         return urls
-
-    def _prune_excluded_course_urls(self, all_urls: set[str], url_levels: UrlLevelMap) -> None:
-        course_filter = CourseTypeFilter.from_code_dir(self.code_dir)
-        removed = course_filter.prune_url_catalogue(all_urls, url_levels)
-        if removed:
-            print(
-                f"Excluded {removed} course URL(s) at catalogue level "
-                f"(COURSE_EXCLUDE_URL_PATTERNS)"
-            )
-
-    def _merge_foundation_fetch_urls(
-        self,
-        all_urls: set[str],
-        url_levels: UrlLevelMap,
-        study_levels: list[str] | None,
-    ) -> None:
-        env = EnvFile(Path(self.config.env_path))
-        pairs = load_foundation_course_fetch_urls(env)
-        if not pairs:
-            return
-        if study_levels and "foundation" not in study_levels:
-            return
-        for url in list(all_urls):
-            parsed = urlparse(url)
-            if "/global/enuic/is1/" not in parsed.path.lower():
-                continue
-            if ENUIC_DEGREE_QUERY in parse_qs(parsed.query):
-                continue
-            all_urls.discard(url)
-            url_levels.levels.pop(url, None)
-            url_levels.course_names.pop(url, None)
-        before = len(all_urls)
-        for name, raw_url in pairs:
-            url = foundation_catalogue_url(raw_url, name)
-            all_urls.add(url)
-            url_levels.add(
-                url,
-                "foundation",
-                "FOUNDATION_FETCH",
-                course_name=name,
-            )
-        added = len(all_urls) - before
-        if pairs:
-            print(
-                f"FOUNDATION_COURSE_FETCH_URLS: {len(pairs)} foundation course(s) "
-                f"(+{added} new URL(s) in catalogue)"
-            )
 
     def _run_all_course(
         self,
@@ -2119,21 +1978,6 @@ class CoursePageDownloader:
         self.artifacts = ArtifactStore(self.output_dir)
         self.logger = ScrapeLogger(self.output_dir)
 
-    def _url_has_saved_html(self, url: str) -> bool:
-        map_path = self.output_dir / COURSE_PAGE_MAP_CSV
-        if not map_path.is_file():
-            return False
-        target = normalize_url(url)
-        with map_path.open(newline="", encoding="utf-8") as handle:
-            for row in csv.DictReader(handle):
-                row_url = normalize_url((row.get("course_url") or "").strip())
-                if row_url != target:
-                    continue
-                rel = (row.get("html_path") or "").strip()
-                if rel and (self.output_dir / rel).is_file():
-                    return True
-        return False
-
     def run(
         self,
         fresh: bool = False,
@@ -2178,12 +2022,10 @@ class CoursePageDownloader:
         if fresh:
             progress["downloaded_urls"] = []
             progress["failed_urls"] = []
-            progress["excluded_urls"] = []
         progress["phase"] = "downloading"
         self.progress_store.save(progress)
 
         downloaded = set(progress.get("downloaded_urls", []))
-        excluded_urls = set(progress.get("excluded_urls", []))
         failed = set(progress.get("failed_urls", []))
         map_rows: list[list[str]] = []
         stats = {"total": len(urls), "downloaded": 0, "failed": 0, "skipped": 0, "excluded": 0}
@@ -2191,38 +2033,20 @@ class CoursePageDownloader:
 
         with BrowserSession() as browser:
             for index, url in enumerate(urls, start=1):
-                if url in excluded_urls:
+                if url in downloaded:
                     stats["skipped"] += 1
                     continue
-                if url in downloaded:
-                    if self._url_has_saved_html(url):
-                        stats["skipped"] += 1
-                        continue
-                    downloaded.discard(url)
-                    progress["downloaded_urls"] = sorted(downloaded)
-                    self.progress_store.save(progress)
-                fetch_url = fetch_url_for_download(url)
-                print(f"  [{index}/{len(urls)}] {fetch_url}")
+                print(f"  [{index}/{len(urls)}] {url}")
                 try:
-                    title, html = browser.download_html(fetch_url, code_dir=self.code_dir)
-                    if course_filter.should_exclude_html(html, url=fetch_url):
+                    title, html = browser.download_html(url)
+                    if course_filter.should_exclude_html(html, url=url):
                         stats["excluded"] += 1
-                        label = (
-                            CourseTypeExtractor.from_html_study_mode(html)
-                            or CourseTypeExtractor.from_html(
-                                html,
-                                selectors=course_filter.course_type_selectors,
-                            )
-                            or "course type filter"
-                        )
-                        excluded_urls.add(url)
-                        downloaded.discard(url)
+                        downloaded.add(url)
                         failed.discard(url)
-                        progress["excluded_urls"] = sorted(excluded_urls)
                         progress["downloaded_urls"] = sorted(downloaded)
                         progress["failed_urls"] = sorted(failed)
                         self.progress_store.save(progress)
-                        self.logger.ok(f"Excluded ({label}): {url}")
+                        self.logger.ok(f"Excluded (course type): {url}")
                         continue
                     filename = f"{Utils.sanitize_filename(title)}.html"
                     target = pages_dir / filename

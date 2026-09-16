@@ -14,7 +14,6 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from course_markdown_cleanup import parse_uni_json_payload
-from course_type_filter import CourseTypeFilter
 from normalize_admission_data import derive_hsc_gpa_from_uk_entry_text
 from uni_pages import (
     UNI_MD_BY_ROLE,
@@ -416,8 +415,7 @@ BANGLADESH_JSON_LEVEL_ALIASES = {
 ENGLISH_JSON_LEVEL_ALIASES = {
     "foundation": ("foundation year", "foundation"),
     "undergraduate": ("undergraduate",),
-    "postgraduate": ("postgraduate",),
-    "postgraduate_research": ("postgraduate research",),
+    "postgraduate": ("postgraduate", "postgraduate research"),
 }
 SCHOLARSHIP_JSON_LEVEL_ALIASES = {
     "foundation": ("foundation", "foundation year"),
@@ -812,89 +810,6 @@ class Stage1MarkdownParser:
         return match.group(1) if match else ''
 
     @staticmethod
-    def extract_fees_section(body: str) -> str:
-        match = re.search('## Fees\\s*\\n(.*?)(?=\\n## |\\Z)', body, re.S | re.I)
-        return match.group(1) if match else ''
-
-    @staticmethod
-    def _markdown_table_cells(line: str) -> list[str] | None:
-        stripped = line.strip()
-        if not stripped.startswith('|'):
-            return None
-        return [cell.strip() for cell in stripped.strip('|').split('|')]
-
-    @staticmethod
-    def parse_overseas_markdown_fee_table(section: str) -> list[dict[str, str]]:
-        """Parse | label | Overseas | markdown tables (CCCU-style)."""
-        options: list[dict[str, str]] = []
-        lines = [line for line in section.splitlines() if line.strip().startswith('|')]
-        if len(lines) < 2:
-            return options
-
-        overseas_col: int | None = None
-        data_start = 0
-        for index, line in enumerate(lines):
-            cells = Stage1MarkdownParser._markdown_table_cells(line)
-            if not cells:
-                continue
-            for col_index, cell in enumerate(cells):
-                if re.search(r'\boverseas\b', cell, re.I):
-                    overseas_col = col_index
-                    data_start = index + 1
-                    break
-            if overseas_col is not None:
-                break
-
-        if overseas_col is None:
-            return options
-
-        for line in lines[data_start:]:
-            cells = Stage1MarkdownParser._markdown_table_cells(line)
-            if not cells or overseas_col >= len(cells):
-                continue
-            if all(re.fullmatch(r'-+', cell.replace(' ', '')) for cell in cells):
-                continue
-            label = cells[0]
-            fee_match = re.search(r'£([\d,]+)', cells[overseas_col])
-            if not fee_match:
-                continue
-            duration = ''
-            duration_match = re.search(r'(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)\s*years?', label, re.I)
-            if duration_match:
-                duration = f"{duration_match.group(1)} years"
-            options.append(
-                {
-                    'studyMode': 'Full Time' if 'full-time' in label.casefold() else label,
-                    'courseDuration': duration,
-                    'tuitionFee': fee_match.group(1).replace(',', ''),
-                    'label': label,
-                }
-            )
-        return options
-
-    @staticmethod
-    def pick_primary_overseas_table_fee(options: list[dict[str, str]]) -> dict[str, str] | None:
-        if not options:
-            return None
-        for option in options:
-            label = option.get('label', '').casefold()
-            if 'foundation year' not in label and 'placement' not in label:
-                return option
-        return options[0]
-
-    @staticmethod
-    def extract_overseas_table_tuition_fee(body: str) -> tuple[str, str]:
-        section = Stage1MarkdownParser.extract_fees_section(body)
-        if not section:
-            return '', ''
-        primary = Stage1MarkdownParser.pick_primary_overseas_table_fee(
-            Stage1MarkdownParser.parse_overseas_markdown_fee_table(section)
-        )
-        if not primary:
-            return '', ''
-        return str(primary.get('tuitionFee', '') or '').strip(), 'GBP'
-
-    @staticmethod
     def parse_international_fee_options(section: str) -> list[dict[str, str]]:
         options: list[dict[str, str]] = []
         lines = [line.strip() for line in section.splitlines()]
@@ -1158,116 +1073,9 @@ class Stage1MarkdownParser:
         return fields
 
     @staticmethod
-    def extract_napier_enuic_foundation_fields(body: str) -> dict[str, str]:
-        """ENUIC IS1 foundation clean markdown (Course: … + Key information dash lines)."""
-        fields: dict[str, str] = {}
-        if not re.search(r"^Course:\s*", body, re.M):
-            return fields
-
-        duration = re.search(r"^Duration\s*-\s*(.+)$", body, re.M | re.I)
-        if duration:
-            fields["courseDuration"] = duration.group(1).strip()
-
-        start = re.search(r"^Start Dates?\s*-\s*(.+)$", body, re.M | re.I)
-        if start:
-            fields["intakeInfo"] = start.group(1).strip()
-
-        fee = re.search(r"^Pathway Tuition Fee\s*-\s*£([\d,]+)", body, re.M | re.I)
-        if fee:
-            fields["tuitionFee"] = fee.group(1).replace(",", "")
-            fields["currency"] = "GBP"
-
-        ielts = re.search(
-            r"^English Language Requirement\s*-\s*IELTS\s+([\d.]+)",
-            body,
-            re.M | re.I,
-        )
-        if ielts:
-            fields["ieltsMinOverall"] = ielts.group(1)
-        section = re.search(
-            r"no less than\s+([\d.]+)\s+in each",
-            body,
-            re.I,
-        )
-        if section:
-            fields["ieltsMinSection"] = section.group(1)
-        return fields
-
-    @staticmethod
-    def extract_napier_course_overview_fields(body: str) -> dict[str, str]:
-        """Edinburgh Napier: ### Duration / Start date under ## Course overview; **Overseas fee:**."""
-        fields: dict[str, str] = {}
-        overview = re.search(r"## Course overview\s*\n(.*?)(?=\n## |\Z)", body, re.S | re.I)
-        if not overview:
-            return fields
-        section = overview.group(1)
-
-        duration_match = re.search(r"### Duration:\s*\n+\s*([^\n(]+)", section, re.I)
-        if duration_match:
-            fields["courseDuration"] = duration_match.group(1).strip()
-
-        apply_match = re.search(
-            r"Apply for\s+"
-            r"((?:January|February|March|April|May|June|July|August|September|October|November|December)"
-            r"|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\w*"
-            r"\s+((?:19|20)\d{2})",
-            section,
-            re.I,
-        )
-        if not apply_match:
-            apply_match = re.search(
-                r"Apply for\s+"
-                r"((?:January|February|March|April|May|June|July|August|September|October|November|December)"
-                r"|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\w*"
-                r"\s+((?:19|20)\d{2})",
-                body,
-                re.I,
-            )
-        if apply_match:
-            fields["intakeInfo"] = Stage1MarkdownParser.normalize_intake_text(
-                f"{apply_match.group(1)} {apply_match.group(2)}"
-            )
-        else:
-            start_match = re.search(r"### Start date:\s*\n+\s*([^\n#]+)", section, re.I)
-            if start_match:
-                fields["intakeInfo"] = Stage1MarkdownParser.normalize_intake_text(
-                    start_match.group(1).strip()
-                )
-
-        overseas = re.search(r"\*\*Overseas fee:\*\*\s*£([\d,]+)", body, re.I)
-        if overseas:
-            fields["tuitionFee"] = overseas.group(1).replace(",", "")
-            fields["currency"] = "GBP"
-        else:
-            table_fee = re.search(r"Overseas and EU\s*\|\s*£([\d,]+)", body, re.I)
-            if table_fee:
-                fields["tuitionFee"] = table_fee.group(1).replace(",", "")
-                fields["currency"] = "GBP"
-        return fields
-
-    @staticmethod
     def extract_stage1_fields_from_md(body: str) -> dict[str, str]:
         """Parse intake, fees, duration, and IELTS scalars from clean course markdown."""
         fields: dict[str, str] = {}
-        fields.update(
-            {
-                key: value
-                for key, value in Stage1MarkdownParser.extract_napier_enuic_foundation_fields(
-                    body
-                ).items()
-                if value
-            }
-        )
-        if "## Course overview" in body and "### Duration:" in body:
-            fields.update(
-                {
-                    key: value
-                    for key, value in Stage1MarkdownParser.extract_napier_course_overview_fields(
-                        body
-                    ).items()
-                    if value
-                }
-            )
         if "## Key information" in body:
             fields.update(
                 {
@@ -1308,11 +1116,6 @@ class Stage1MarkdownParser:
             if research_fee:
                 fields['tuitionFee'] = research_fee
                 fields['currency'] = 'GBP'
-        if not fields.get('tuitionFee'):
-            table_fee, table_currency = Stage1MarkdownParser.extract_overseas_table_tuition_fee(body)
-            if table_fee:
-                fields['tuitionFee'] = table_fee
-                fields['currency'] = table_currency
         intl_section = extract_international_fees_section(body)
         if intl_section:
             if not fields.get('tuitionFee'):
@@ -1532,15 +1335,6 @@ class CourseIndexManager:
         return (2, 0, md_name.lower())
 
     @staticmethod
-    def presetup_sample_match(meta: dict[str, str], wanted: set[str]) -> str:
-        """Match presetup_sample.json URL to course_url or source_url (ENUIC foundation)."""
-        for key in ("course_url", "source_url"):
-            url = normalize_url(str(meta.get(key) or ""))
-            if url and url in wanted:
-                return url
-        return ""
-
-    @staticmethod
     def group_course_md_paths(courses_dir: Path) -> dict[tuple[str, str], list[Path]]:
         groups: dict[tuple[str, str], list[Path]] = {}
         for md_path in iter_course_markdown(courses_dir):
@@ -1603,10 +1397,7 @@ class CourseIndexManager:
 
     @staticmethod
     def expected_canonical_md_names(courses_dir: Path) -> set[str]:
-        return {
-            relative_course_md(md_path, courses_dir)
-            for md_path in select_canonical_course_md_paths(courses_dir)
-        }
+        return {relative_course_md(md_path, courses_dir) for md_path in select_canonical_course_md_paths(courses_dir)}
 
     @staticmethod
     def dedupe_course_index_rows(rows: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -1636,8 +1427,8 @@ class CourseIndexManager:
             raise FileNotFoundError(f'{courses_dir} not found — run download_and_clean_course_pages.py --clean-only first')
         university_name = code_dir.parent.name
         rows: list[dict[str, str]] = []
-        total_md_files = len(iter_course_markdown(courses_dir))
         canonical_paths = select_canonical_course_md_paths(courses_dir)
+        total_md_files = len(iter_course_markdown(courses_dir))
         for md_path in canonical_paths:
             meta, body = split_frontmatter(md_path.read_text(encoding='utf-8'))
             course_url = meta.get('course_url', '').strip() or meta.get('source_url', '').strip()
@@ -1689,7 +1480,7 @@ class CourseIndexManager:
         return json.loads(path.read_text(encoding='utf-8'))
 
     @staticmethod
-    def entries_from_presetup_clean(output_dir: Path, *, code_dir: Path | None = None) -> list[dict[str, str]]:
+    def entries_from_presetup_clean(output_dir: Path) -> list[dict[str, str]]:
         sample = load_presetup_sample(output_dir)
         sample_urls = presetup_sample_urls(sample)
         wanted = {normalize_url(url) for url in sample_urls}
@@ -1704,30 +1495,13 @@ class CourseIndexManager:
         entries: list[dict[str, str]] = []
         for md_path in iter_course_markdown(courses_dir):
             meta, body = split_frontmatter(md_path.read_text(encoding='utf-8'))
-            matched = CourseIndexManager.presetup_sample_match(meta, wanted)
-            if wanted and not matched:
+            source_url = (meta.get('source_url') or '').strip()
+            key = normalize_url(source_url)
+            if wanted and key not in wanted:
                 continue
-            course_url = (meta.get('course_url') or meta.get('source_url') or '').strip()
             rel = relative_course_md(md_path, courses_dir)
-            study_level = url_level.get(matched) or study_level_from_markdown(
-                md_path,
-                meta,
-                courses_dir=courses_dir,
-                course_url=course_url,
-            )
-            entries.append(
-                {
-                    'uniName': '',
-                    'courseName': ExtractionPathConfig.infer_course_name(body, course_url),
-                    'degreeName': '',
-                    'course_url': course_url,
-                    'courseUrlExternal': course_url,
-                    'md_file': rel,
-                    'clean_md': f'clean/{PRESETUP_CLEAN_SUBDIR}/{rel}'.replace('\\', '/'),
-                    'study_level': study_level,
-                    'extract_root': PRESETUP_EXTRACT_SUBDIR,
-                }
-            )
+            study_level = url_level.get(key) or study_level_from_markdown(md_path, meta, courses_dir=courses_dir, course_url=source_url)
+            entries.append({'uniName': '', 'courseName': ExtractionPathConfig.infer_course_name(body, source_url), 'degreeName': '', 'course_url': source_url, 'courseUrlExternal': source_url, 'md_file': rel, 'clean_md': f'clean/{PRESETUP_CLEAN_SUBDIR}/{rel}'.replace('\\', '/'), 'study_level': study_level, 'extract_root': PRESETUP_EXTRACT_SUBDIR})
         return entries
 
     @staticmethod
@@ -2460,46 +2234,28 @@ class Stage2Enricher:
             course_name=course_name,
             course_body=f'{course_body}\n{english_content}',
         )
-        json_scalar_keys: set[str] = set()
         if isinstance(json_program, dict):
             for test in json_program.get('TestRequirements', []):
                 if not isinstance(test, dict):
                     continue
                 name = str(test.get('TestName', '') or '').lower()
                 if 'ielts' in name:
-                    if str(test.get('ieltsMinOverall', '') or '').strip():
-                        fallback['ieltsMinOverall'] = str(test.get('ieltsMinOverall', '') or '').strip()
-                        json_scalar_keys.add('ieltsMinOverall')
-                    if str(test.get('ieltsMinSection', '') or '').strip():
-                        fallback['ieltsMinSection'] = str(test.get('ieltsMinSection', '') or '').strip()
-                        json_scalar_keys.add('ieltsMinSection')
+                    fallback['ieltsMinOverall'] = str(test.get('ieltsMinOverall', '') or '').strip()
+                    fallback['ieltsMinSection'] = str(test.get('ieltsMinSection', '') or '').strip()
                 elif 'toefl' in name:
-                    if str(test.get('toeflMinOverall', '') or '').strip():
-                        fallback['toeflMinOverall'] = str(test.get('toeflMinOverall', '') or '').strip()
-                        json_scalar_keys.add('toeflMinOverall')
-                    if str(test.get('toeflMinSection', '') or '').strip():
-                        fallback['toeflMinSection'] = str(test.get('toeflMinSection', '') or '').strip()
-                        json_scalar_keys.add('toeflMinSection')
+                    fallback['toeflMinOverall'] = str(test.get('toeflMinOverall', '') or '').strip()
+                    fallback['toeflMinSection'] = str(test.get('toeflMinSection', '') or '').strip()
                 elif 'pearson' in name or 'pte' in name:
-                    if str(test.get('pteMinOverall', '') or '').strip():
-                        fallback['pteMinOverall'] = str(test.get('pteMinOverall', '') or '').strip()
-                        json_scalar_keys.add('pteMinOverall')
-                    if str(test.get('pteMinSection', '') or '').strip():
-                        fallback['pteMinSection'] = str(test.get('pteMinSection', '') or '').strip()
-                        json_scalar_keys.add('pteMinSection')
+                    fallback['pteMinOverall'] = str(test.get('pteMinOverall', '') or '').strip()
+                    fallback['pteMinSection'] = str(test.get('pteMinSection', '') or '').strip()
         for key in ENGLISH_TEST_KEYS:
-            if key in json_scalar_keys:
-                parsed[key] = str(fallback.get(key, '') or '').strip()
-                continue
             current = str(parsed.get(key, '') or '').strip()
             if not current:
                 parsed[key] = fallback.get(key, '')
             else:
                 parsed[key] = current
         stage1_json = stage1_json or {}
-        for key in ENGLISH_TEST_KEYS:
-            if key in json_scalar_keys:
-                continue
+        for key in ('ieltsMinOverall', 'ieltsMinSection'):
             stage1_val = str(stage1_json.get(key, '') or '').strip()
             if stage1_val:
                 parsed[key] = stage1_val
@@ -3128,7 +2884,7 @@ class LlmExtractCLI:
             sample_urls = presetup_sample_urls(load_presetup_sample(output_dir))
             if not sample_urls:
                 raise ValueError(f"No {output_dir / 'presetup_sample.json'}. Run --presetup first.")
-            courses = CourseIndexManager.entries_from_presetup_clean(output_dir, code_dir=code_dir)
+            courses = CourseIndexManager.entries_from_presetup_clean(output_dir)
             if not courses:
                 raise ValueError('No markdown in output/clean/pre_setup_course matches presetup_sample.json. Run --presetup first.')
         else:
@@ -3185,7 +2941,6 @@ class LlmExtractCLI:
         print(f'Input: {input_label}', flush=True)
         print(f'Courses to process: {len(courses)}', flush=True)
         print(f'Output: {output_label}', flush=True)
-        course_filter = CourseTypeFilter.from_code_dir(code_dir)
         skip_batch = 0
         for index, entry in enumerate(courses, start=1):
             slug = course_slug_from_url(entry['course_url'])
@@ -3196,16 +2951,6 @@ class LlmExtractCLI:
             if skip_batch:
                 print(f'Resume: skipped {skip_batch} already-completed course(s)', flush=True)
                 skip_batch = 0
-            md_path = output_dir / entry['clean_md']
-            if course_filter.enabled and md_path.is_file():
-                md_text = md_path.read_text(encoding='utf-8')
-                if course_filter.should_exclude_markdown(md_text, url=entry.get('course_url')):
-                    print(
-                        f"[{index}/{len(courses)}] {entry['md_file']} — skipped "
-                        f"(excluded course type/mode; COURSE_EXCLUDE_COURSE_TYPES)",
-                        flush=True,
-                    )
-                    continue
             print(f"[{index}/{len(courses)}] {entry['md_file']} — {entry['course_url']}", flush=True)
             try:
                 row, stage1_output, stage2_output, output_json = CourseExtractor.extract_course(code_dir, entry, model=model, host=host, skip_stage1=skip_stage1)

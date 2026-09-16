@@ -55,7 +55,7 @@ LEVEL_MATCH_ORDER = (
     "undergraduate",
 )
 
-LEVEL_CSV_COLUMNS = ("course_url", "study_level", "source_scope", "course_name")
+LEVEL_CSV_COLUMNS = ("course_url", "study_level", "source_scope")
 
 PRESETUP_SAMPLE_JSON = "presetup_sample.json"
 PRESETUP_SAMPLE_SIZE = 10
@@ -231,16 +231,8 @@ class UrlLevelMap:
     """url -> {study_level: source_scope}."""
 
     levels: dict[str, dict[str, str]] = field(default_factory=dict)
-    course_names: dict[str, str] = field(default_factory=dict)
 
-    def add(
-        self,
-        url: str,
-        study_level: str,
-        source_scope: str = "",
-        *,
-        course_name: str = "",
-    ) -> None:
+    def add(self, url: str, study_level: str, source_scope: str = "") -> None:
         url = (url or "").strip()
         level = (study_level or "").strip()
         if not url or not level:
@@ -248,8 +240,6 @@ class UrlLevelMap:
         bucket = self.levels.setdefault(url, {})
         if level not in bucket or source_scope:
             bucket[level] = source_scope or bucket.get(level, "")
-        if course_name:
-            self.course_names[url] = course_name.strip()
 
     def add_many(self, urls: list[str] | set[str], study_level: str, source_scope: str = "") -> None:
         for url in urls:
@@ -315,7 +305,6 @@ class UrlLevelMap:
                         "course_url": url,
                         "study_level": level,
                         "source_scope": source_scope,
-                        "course_name": self.course_names.get(url, ""),
                     }
                 )
         return rows
@@ -339,12 +328,7 @@ class UrlLevelMap:
     def merge(self, other: UrlLevelMap) -> None:
         for url, levels in other.levels.items():
             for level, source_scope in levels.items():
-                self.add(
-                    url,
-                    level,
-                    source_scope,
-                    course_name=other.course_names.get(url, ""),
-                )
+                self.add(url, level, source_scope)
 
 
 def read_presetup_urls_csv(output_dir: Path) -> list[dict[str, str]]:
@@ -449,7 +433,6 @@ def write_presetup_urls_csv(output_dir: Path, courses: list[dict[str, str]]) -> 
                     "course_url": row.get("course_url", ""),
                     "study_level": row.get("study_level", ""),
                     "source_scope": row.get("source_scope") or "PRESETUP_SCRAPE",
-                    "course_name": row.get("course_name", ""),
                 }
             )
     return path
@@ -466,8 +449,7 @@ def read_level_csvs(output_dir: Path) -> UrlLevelMap:
                 url = (row.get("course_url") or row.get("url") or "").strip()
                 level = (row.get("study_level") or "").strip()
                 source_scope = (row.get("source_scope") or "").strip()
-                course_name = (row.get("course_name") or "").strip()
-                mapping.add(url, level, source_scope, course_name=course_name)
+                mapping.add(url, level, source_scope)
     return mapping
 
 

@@ -1,8 +1,4 @@
-"""Exclude courses by URL path, catalogue link text, or course-type label.
-
-Used at scrape (COURSE_EXCLUDE_LINK_TEXT_PATTERNS + URL patterns), download/clean,
-and LLM index build.
-"""
+"""Exclude short-course, CPD, and part-time courses from download/clean pipeline."""
 
 from __future__ import annotations
 
@@ -22,8 +18,6 @@ DEFAULT_COURSE_TYPE_SELECTORS = (
 )
 
 _COURSE_TYPE_MARKDOWN_RE = re.compile(r"^\*\*Course type:\*\*\s*(.+)\s*$", re.M | re.I)
-_MODE_MARKDOWN_RE = re.compile(r"^\-\s+\*\*Mode:\*\*\s*(.+)\s*$", re.M | re.I)
-_STUDY_MODE_HEADINGS = frozenset({"study mode", "mode"})
 
 
 class CourseTypePatternMatcher:
@@ -82,57 +76,11 @@ class CourseTypeExtractor:
         text = match.group(1).strip()
         return text or None
 
-    @staticmethod
-    def from_markdown_mode(markdown: str) -> str | None:
-        match = _MODE_MARKDOWN_RE.search(markdown)
-        if not match:
-            return None
-        text = match.group(1).strip()
-        return text or None
-
-    @staticmethod
-    def _banner_detail_value(detail) -> str:
-        button = detail.select_one(".dropdown-button")
-        if button:
-            return button.get_text(" ", strip=True)
-        option = detail.select_one(".optionText")
-        if option:
-            return option.get_text(" ", strip=True)
-        value = detail.select_one("span.value")
-        if value:
-            return value.get_text(" ", strip=True)
-        heading = detail.select_one(".heading")
-        text = detail.get_text(" ", strip=True)
-        if heading:
-            label = heading.get_text(" ", strip=True)
-            if text.startswith(label):
-                text = text[len(label) :].strip()
-        return text
-
-    @staticmethod
-    def from_html_study_mode(html: str) -> str | None:
-        soup = BeautifulSoup(html, "html.parser")
-        banner = soup.select_one(".course-details-banner")
-        if not banner:
-            return None
-        for detail in banner.select(".detail"):
-            heading = detail.select_one(".heading")
-            if not heading:
-                continue
-            label = heading.get_text(" ", strip=True).casefold()
-            if label not in _STUDY_MODE_HEADINGS:
-                continue
-            text = CourseTypeExtractor._banner_detail_value(detail).strip()
-            if text:
-                return text
-        return None
-
 
 @dataclass
 class CourseTypeFilter:
     exclude_course_types: list[str]
     exclude_url_patterns: list[str]
-    exclude_link_text_patterns: list[str]
     course_type_selectors: list[str]
 
     @classmethod
@@ -148,42 +96,12 @@ class CourseTypeFilter:
             exclude_url_patterns=CourseTypePatternMatcher.parse_env_list(
                 env.get("COURSE_EXCLUDE_URL_PATTERNS")
             ),
-            exclude_link_text_patterns=CourseTypePatternMatcher.parse_env_list(
-                env.get("COURSE_EXCLUDE_LINK_TEXT_PATTERNS")
-            ),
             course_type_selectors=selectors or list(DEFAULT_COURSE_TYPE_SELECTORS),
         )
 
     @property
     def enabled(self) -> bool:
-        return bool(
-            self.exclude_course_types
-            or self.exclude_url_patterns
-            or self.exclude_link_text_patterns
-        )
-
-    def link_text_is_excluded(self, text: str | None) -> bool:
-        if not text or not self.exclude_link_text_patterns:
-            return False
-        for pattern in self.exclude_link_text_patterns:
-            if CourseTypePatternMatcher.pattern_matches(text, pattern):
-                return True
-        return False
-
-    def prune_url_catalogue(self, all_urls: set[str], url_levels) -> int:
-        """Remove excluded URLs from scrape sets and UrlLevelMap (mutates in place)."""
-        from study_level import normalize_url
-
-        removed = 0
-        for url in list(all_urls):
-            if not self.url_is_excluded(url):
-                continue
-            all_urls.discard(url)
-            removed += 1
-            for key in (url, normalize_url(url)):
-                url_levels.levels.pop(key, None)
-                url_levels.course_names.pop(key, None)
-        return removed
+        return bool(self.exclude_course_types or self.exclude_url_patterns)
 
     def url_is_excluded(self, url: str | None) -> bool:
         if not url or not self.exclude_url_patterns:
@@ -211,10 +129,7 @@ class CourseTypeFilter:
             html,
             selectors=self.course_type_selectors,
         )
-        if self.course_type_is_excluded(course_type):
-            return True
-        study_mode = CourseTypeExtractor.from_html_study_mode(html)
-        return self.course_type_is_excluded(study_mode)
+        return self.course_type_is_excluded(course_type)
 
     def should_exclude_markdown(self, markdown: str, *, url: str | None = None) -> bool:
         if not self.enabled:
@@ -222,10 +137,9 @@ class CourseTypeFilter:
         if self.url_is_excluded(url):
             return True
         course_type = CourseTypeExtractor.from_markdown(markdown)
-        if course_type and self.course_type_is_excluded(course_type):
-            return True
-        mode = CourseTypeExtractor.from_markdown_mode(markdown)
-        return self.course_type_is_excluded(mode)
+        if course_type:
+            return self.course_type_is_excluded(course_type)
+        return False
 
 
 # Backward-compatible aliases
@@ -233,5 +147,3 @@ _parse_env_list = CourseTypePatternMatcher.parse_env_list
 _pattern_matches = CourseTypePatternMatcher.pattern_matches
 extract_course_type_from_html = CourseTypeExtractor.from_html
 extract_course_type_from_markdown = CourseTypeExtractor.from_markdown
-extract_study_mode_from_html = CourseTypeExtractor.from_html_study_mode
-extract_mode_from_markdown = CourseTypeExtractor.from_markdown_mode

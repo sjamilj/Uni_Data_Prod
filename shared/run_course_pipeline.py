@@ -340,14 +340,7 @@ class PipelineOrchestrator:
                 self._print("  skip (already extracted)")
                 continue
             try:
-                clean_result = self._download_and_clean_urls(code_dir, [url], fresh=False)
-                if not (clean_result or {}).get("courses"):
-                    skipped += 1
-                    self._print(
-                        "  skip (no clean output — excluded course type/mode "
-                        "or part-time per COURSE_EXCLUDE_COURSE_TYPES)"
-                    )
-                    continue
+                self._download_and_clean_urls(code_dir, [url], fresh=False)
                 run_extraction(
                     code_dir,
                     resume=resume,

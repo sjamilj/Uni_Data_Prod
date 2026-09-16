@@ -67,11 +67,7 @@ Universities with no extra rules: template no-op `cleanup_course_markdown_uni()`
 ```powershell
 python course_markdown_cleanup.py .
 python "../../shared/course_markdown_cleanup.py" .
-python "../../shared/course_markdown_cleanup.py" . --presetup
-python "../../shared/course_markdown_cleanup.py" . --all
 ```
-
-Use `--presetup` when markdown lives under `output/clean/pre_setup_course/` (no `clean/courses/` yet).
 
 ## Manual extra clean (second pass, folder-specific)
 

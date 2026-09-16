@@ -25,9 +25,8 @@ Per-university HTML engines: COURSE_CLEAN_ENGINE in .env (generic | utopian | pl
 Per-university markdown post-processing: shared/course_markdown_cleanup.py (.env
 section removal) plus optional {University}/code/course_markdown_cleanup.py.
 
-Course type filter: COURSE_EXCLUDE_COURSE_TYPES / COURSE_EXCLUDE_URL_PATTERNS /
-COURSE_EXCLUDE_LINK_TEXT_PATTERNS in .env skip matching URLs at scrape (catalogue
-link text + path), download, and LLM index.
+Course type filter: COURSE_EXCLUDE_COURSE_TYPES / COURSE_EXCLUDE_URL_PATTERNS in
+.env skip short-course, CPD, and part-time pages after download and during clean.
 """
 
 from __future__ import annotations
@@ -318,8 +317,6 @@ class CourseMarkdownBuilder:
         warnings: list[CleanWarning] | None = None,
         source_html: str = "",
         source_url: str = "",
-        catalogue_url: str = "",
-        course_name: str = "",
     ) -> str:
         soup = BeautifulSoup(html, "html.parser")
 
@@ -327,11 +324,7 @@ class CourseMarkdownBuilder:
         if module is not None:
             preprocess_html = getattr(module, "preprocess_course_html_uni", None)
             if callable(preprocess_html):
-                preprocess_html(
-                    soup,
-                    catalogue_url=catalogue_url,
-                    course_name=course_name,
-                )
+                preprocess_html(soup)
 
         engine = get_course_html_engine(
             clean_config.engine,
@@ -340,33 +333,17 @@ class CourseMarkdownBuilder:
 
         sections: list[str] = []
 
-        is_enuic_foundation = bool(
-            module is not None
-            and course_name
-            and callable(getattr(module, "is_enuic_foundation_catalogue_url", None))
-            and module.is_enuic_foundation_catalogue_url(catalogue_url)
-        )
-
         title = engine.course_title_from_soup(
             soup,
             clean_config,
         )
 
-        if is_enuic_foundation:
-            sections.append(f"Course: {course_name}")
-            sections.append("")
-        elif title:
+        if title:
             sections.append(f"# {title}")
 
         blocks_produced = 0
 
-        block_list = clean_config.blocks
-        if is_enuic_foundation and module is not None:
-            override = getattr(module, "enuic_foundation_clean_blocks", None)
-            if callable(override):
-                block_list = override()
-
-        for env_heading, selector in block_list:
+        for env_heading, selector in clean_config.blocks:
             node, resolved_selector = engine.find_block(
                 soup,
                 env_heading,
@@ -420,9 +397,7 @@ class CourseMarkdownBuilder:
             if not body:
                 continue
 
-            if is_enuic_foundation and heading:
-                block = f"{heading}\n\n{body}"
-            elif heading:
+            if heading:
                 block = (
                     f"## {heading}"
                     + "\n\n"
@@ -1053,8 +1028,7 @@ class CoursePagesCleaner:
             # --------------------------------------------------------
 
             slug_base = course_slug_from_url(
-                course_url
-                or source_url
+                source_url
                 or html_path.stem
             )
 
@@ -1072,15 +1046,6 @@ class CoursePagesCleaner:
             # Build markdown
             # --------------------------------------------------------
 
-            catalogue_url = (course_url or "").strip()
-            course_name = (
-                url_levels.course_names.get(catalogue_url, "")
-                or url_levels.course_names.get(
-                    normalize_url(catalogue_url),
-                    "",
-                )
-            )
-
             if clean_config.blocks:
                 markdown = (
                     CourseMarkdownBuilder.from_config(
@@ -1090,8 +1055,6 @@ class CoursePagesCleaner:
                         warnings=warnings,
                         source_html=html_rel,
                         source_url=source_url,
-                        catalogue_url=catalogue_url,
-                        course_name=course_name,
                     )
                 )
             else:
@@ -1100,6 +1063,12 @@ class CoursePagesCleaner:
                         raw_html
                     )
                 )
+
+            markdown = (
+                self.markdown_cleanup.cleanup_course(
+                    markdown
+                )
+            )
 
             # --------------------------------------------------------
             # Write one markdown per study level
@@ -1193,7 +1162,7 @@ class CoursePagesCleaner:
                 # Write markdown
                 # ----------------------------------------------------
 
-                full_markdown = (
+                output_path.write_text(
                     ManifestWriter.build_frontmatter(
                         source_html=html_rel,
                         source_url=source_url,
@@ -1203,12 +1172,9 @@ class CoursePagesCleaner:
                         course_url=course_url,
                     )
                     + markdown
-                    + "\n"
+                    + "\n",
+                    encoding="utf-8",
                 )
-                full_markdown = self.markdown_cleanup.cleanup_course(
-                    full_markdown
-                )
-                output_path.write_text(full_markdown, encoding="utf-8")
 
                 # ----------------------------------------------------
                 # Manifest path
@@ -1513,18 +1479,9 @@ class CleaningOrchestrator:
             replace_courses=not subset,
         )
 
-        if not course_manifest.get("courses"):
-            if urls is not None:
-                print(
-                    "No course markdown produced for URL subset "
-                    "(page may be excluded by COURSE_EXCLUDE_COURSE_TYPES "
-                    "or download did not save HTML)."
-                )
-                return {
-                    "courses": [],
-                    "uni_pages": [],
-                    "skipped_clean": True,
-                }
+        if not course_manifest.get(
+            "courses"
+        ):
             raise ValueError(
                 f"Nothing to clean: "
                 f"no HTML in "

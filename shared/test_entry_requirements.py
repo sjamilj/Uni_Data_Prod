@@ -16,7 +16,6 @@ from llm_extract import (  # noqa: E402
     build_output_json,
     canonicalize_requirement_degree,
     derive_uk_equivalent_requirements,
-    enrich_english_parsed,
     enrich_stage1_from_markdown,
     extract_bangladesh_section_text,
     extract_entry_lines_from_course_markdown,
@@ -393,27 +392,6 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(program["ProgramName"], "Group B")
         self.assertEqual(program["TestRequirements"][0]["ieltsMinOverall"], "6.5")
 
-    def test_enrich_english_prefers_uni_json_over_stage1_for_foundation(self) -> None:
-        english_md = Path(
-            _SHARED.parent
-            / "Canterbury Christ Church University/output/clean/uni/english-requirements.md"
-        )
-        if not english_md.is_file():
-            self.skipTest("CCCU english-requirements.md not present")
-        content = english_md.read_text(encoding="utf-8")
-        stage1 = {"ieltsMinOverall": "6.0", "ieltsMinSection": "5.5", "pteMinOverall": "59", "pteMinSection": "59"}
-        parsed = enrich_english_parsed(
-            {},
-            content,
-            course_name="BSc Accounting with Foundation Year",
-            course_level="foundation",
-            stage1_json=stage1,
-        )
-        self.assertEqual(parsed["ieltsMinOverall"], "5.0")
-        self.assertEqual(parsed["ieltsMinSection"], "4.0")
-        self.assertEqual(parsed["pteMinOverall"], "43")
-        self.assertEqual(parsed["pteMinSection"], "43")
-
     def test_keele_stage1_fields_from_key_information(self) -> None:
         body = """## Key information
 ### Year of entry
@@ -447,36 +425,6 @@ class EntryRequirementsTests(unittest.TestCase):
         hints = extract_stage1_fields_from_md(body)
         self.assertEqual(hints["intakeInfo"], "September 2026")
         self.assertEqual(hints["tuitionFee"], "18200")
-
-    def test_cccu_overseas_fee_table_parses_tuition(self) -> None:
-        body = """## Key course information
-
-- **Start date:** September 2026
-- **Duration:** 4 years
-
-## Fees
-
-The 2026/27 annual tuition fees for this course are:
-
-|  | Overseas |
-| --- | --- |
-| Full-time - Foundation Year 0 | £17,000 |
-| Full-time - years 1-3 | £17,000 |
-"""
-        hints = extract_stage1_fields_from_md(body)
-        self.assertEqual(hints["tuitionFee"], "17000")
-        self.assertEqual(hints["currency"], "GBP")
-
-    def test_cccu_overseas_fee_table_single_row(self) -> None:
-        body = """## Fees
-
-|  | Overseas |
-| --- | --- |
-| Full-time | £17,000 |
-"""
-        hints = extract_stage1_fields_from_md(body)
-        self.assertEqual(hints["tuitionFee"], "17000")
-        self.assertEqual(hints["currency"], "GBP")
 
 
 def format_report_issues(report) -> str:

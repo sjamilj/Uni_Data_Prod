@@ -41,7 +41,9 @@ build/
 .DS_Store
 Thumbs.db
 desktop.ini
-.cursor/
+.cursor/*
+!.cursor/skills/
+!.cursor/skills/**
 .vscode/
 .idea/
 *.swp
