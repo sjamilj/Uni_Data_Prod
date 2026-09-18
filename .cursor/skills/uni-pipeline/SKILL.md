@@ -1,6 +1,9 @@
 ---
 name: uni-pipeline
-description: Router for the full new-university onboarding sequence across setup, URL scrape, course clean, uni_req JSON, and presetup. Use only when the user explicitly says uni-pipeline or asks for the whole onboarding order.
+description: >-
+  Full new-university onboarding router (new-uni-setup → course URLs → course clean →
+  uni_req JSON → presetup). Use when the user says uni-pipeline, whole onboarding order,
+  all pipeline steps, or full setup for a new uni. Runbook docs/PIPELINE.md.
 disable-model-invocation: true
 ---
 
@@ -14,7 +17,7 @@ Run phases in order. Each phase has its own skill; do not duplicate their full i
 
 | Step | Skill | Outcome |
 |------|-------|---------|
-| 1 | **new-uni-setup** | `shared/` at `shared/v1.1.0`, variant CSV → `STRATEGY`, `ENV.MD` / `.env` aligned |
+| 1 | **new-uni-setup** | `shared/` at `shared/v1.2.0`, variant CSV → `STRATEGY`, `ENV.MD` / `.env` aligned |
 | 2 | **uni-course-urls** | `output/course_urls.csv`, exclusions for online/part-time at download time |
 | 3 | **uni-course-clean** | `COURSE_CLEAN_*` tuned from `course_detail/`; markdown matches Stage 1 parser contract |
 | 4 | **uni-req-json** | `output/clean/uni/*.md` (bangladesh-entry, english-requirements, scholarships, deposit) |
@@ -33,4 +36,4 @@ If `stage1_parsed.json` has empty `intakeInfo`, `courseDuration`, or `tuitionFee
 
 ## Operator phrases
 
-Non-technical wording lives in [README.md](../../README.md) § Working with the agent.
+Non-technical wording: [README.md](../../README.md) § Working with the agent. Step-by-step commands: [docs/PIPELINE.md](../../docs/PIPELINE.md), [docs/07-how-to-run.md](../../docs/07-how-to-run.md).

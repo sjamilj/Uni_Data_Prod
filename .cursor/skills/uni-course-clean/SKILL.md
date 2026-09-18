@@ -1,6 +1,9 @@
 ---
 name: uni-course-clean
-description: Tunes COURSE_CLEAN_BLOCKS and course_markdown_cleanup from course_detail HTML so cleaned course markdown exposes intake, duration, tuition fee, and IELTS for Stage 1. Use when course-details.html, COURSE_CLEAN_BLOCKS, or cleaned course pages missing intake duration fee.
+description: >-
+  COURSE_CLEAN_BLOCKS and course_markdown_cleanup so cleaned markdown has intake, duration,
+  tuition fee, IELTS for Stage 1. Use for course-details.html, missing fee/duration/intake
+  on cleaned pages, empty stage1_parsed intakeInfo or tuitionFee, COURSE_CLEAN_BLOCKS tuning.
 ---
 
 # Course page clean (Stage 1–ready markdown)
@@ -25,7 +28,7 @@ Produce `output/clean/pre_setup_course/{level}/*.md` (or `clean/courses/`) whose
 | `COURSE_CLEAN_BLOCKS` | `Heading :: css-selector` per block (overview, entry, fees) |
 | `COURSE_CLEAN_STRIP_WITHIN` | `script`, `noscript`, `nav`, etc. |
 | `COURSE_CLEAN_EXPAND_TABS` | `true` when fees/entry are in tabs |
-| `COURSE_MARKDOWN_REMOVE_SECTIONS` | `level :: heading` — see [shared/course_markdown_cleanup.md](../../shared/course_markdown_cleanup.md) |
+| `COURSE_MARKDOWN_REMOVE_SECTIONS` | `level :: heading` — see [docs/shared/course_markdown_cleanup.md](../../docs/shared/course_markdown_cleanup.md) |
 
 Syntax for removals: `4 :: *part-time*`, `3 :: UK students`, etc.
 

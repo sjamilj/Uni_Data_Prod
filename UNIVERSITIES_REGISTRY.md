@@ -32,8 +32,10 @@ git tag -l "uni/aru/foundation/*"
 | Tag pattern | Meaning |
 |-------------|---------|
 | `shared/v1.0.0` | Original shared pipeline baseline (`d5f7088`) |
-| `shared/v1.1.0` | **Current shared reset baseline** — audit CSV, degreeName inference, studyLevel export; use `git checkout shared/v1.1.0 -- shared/` before a new uni |
+| `shared/v1.2.0` | **Current shared reset baseline** — CDP/device-profile download, UG higherDegree mapping, uni backup packaging; use `git checkout shared/v1.2.0 -- shared/` before a new uni |
+| `shared/v1.1.0` | Older baseline (audit CSV, degreeName inference, studyLevel export) |
 | `infra/onboarding-skills/v1.0.0` | Cursor agent skills under `.cursor/skills/` + README operator guide |
+| `infra/onboarding-skills/v1.0.2` | Skill YAML trigger descriptions, `docs/PIPELINE.md` links, `shared/v1.2.0` in skills |
 | `uni/{slug}/v1.0.0` | Full university complete (all study levels) |
 | `unit-NN` | Same snapshot as full `uni/{slug}/v1.0.0` |
 | `uni/{slug}/foundation/v1.0.0` | Foundation slice only |

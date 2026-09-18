@@ -1,6 +1,9 @@
 ---
 name: new-uni-setup
-description: Resets shared pipeline code to shared/v1.1.0, picks variant CSV and STRATEGY for a new university folder. Use only when the user explicitly says new-uni-setup or asks to start a brand-new university onboarding from scratch.
+description: >-
+  Reset shared/ to shared/v1.2.0, pick variant CSV and STRATEGY for a new university folder.
+  Use when the user says new-uni-setup, start a brand-new university, onboarding from scratch,
+  or reset shared before a new uni.
 disable-model-invocation: true
 ---
 
@@ -10,13 +13,13 @@ disable-model-invocation: true
 
 Follow [git-for-operator.md](../git-for-operator.md). Do not run git in the terminal. Give separate command blocks with recommended commit/tag `-m` text for each git step.
 
-- Shared reset baseline: [CONTRIBUTING.md](../../CONTRIBUTING.md#shared-infrastructure-baseline) (`shared/v1.1.0`).
+- Shared reset baseline: [CONTRIBUTING.md](../../CONTRIBUTING.md#shared-infrastructure-baseline) (`shared/v1.2.0`).
 - University scope for later commits: look up `unit-NN` / slug in [UNIVERSITIES_REGISTRY.md](../../UNIVERSITIES_REGISTRY.md).
 - Optional helpers: [scripts/README.md](../../scripts/README.md) (`checkout-uni.cmd`, `commit-uni.cmd` with `-Pick infra` only for repo-wide docs/skills).
 
 ## Before anything destructive
 
-Ask the user to run `git status` (or they paste output). List every modified path under `shared/` that would be lost on reset. Do not tell them to run `git checkout shared/v1.1.0 -- shared/` until they confirm.
+Ask the user to run `git status` (or they paste output). List every modified path under `shared/` that would be lost on reset. Do not tell them to run `git checkout shared/v1.2.0 -- shared/` until they confirm.
 
 Per-university behaviour belongs in `{University}/code/.env`, `code/ENV.MD`, and `code/course_markdown_cleanup.py` — never in `shared/`.
 
@@ -25,8 +28,8 @@ Per-university behaviour belongs in `{University}/code/.env`, `code/ENV.MD`, and
 Give the user (one command block; they run it):
 
 ```powershell
-cd "E:\Project Next\UK UNIVERSITIES\UNI\Uni_Data_Prod"
-git checkout shared/v1.1.0 -- shared/
+cd "<repo-root>"
+git checkout shared/v1.2.0 -- shared/
 ```
 
 ## Pick the university

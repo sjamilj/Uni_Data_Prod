@@ -1,6 +1,9 @@
 ---
 name: uni-presetup
-description: Runs the 5-course presetup download and clean, human review checkpoint, then presetup-llm extraction. Use for presetup, presetup-llm, or a sample of 5 test courses before full execute.
+description: >-
+  Five-course presetup download/clean, human review, then presetup-llm. Use for presetup,
+  presetup-llm, 5-course test, trial before execute, run the LLM on test courses,
+  pre_setup_course sample.
 ---
 
 # Presetup (5 courses + LLM)

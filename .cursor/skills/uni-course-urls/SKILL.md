@@ -1,6 +1,9 @@
 ---
 name: uni-course-urls
-description: Derives COURSE_PATH_PATTERNS from saved course_listing HTML, runs scrape_course_urls.py, configures online and part-time URL exclusions, and switches to Cloudflare CDP when bot challenges appear. Use when finding course URLs, path patterns, scrape, bot challenge, or Cloudflare blocks listing download.
+description: >-
+  COURSE_PATH_PATTERNS from course_listing HTML, scrape_course_urls.py, online/part-time
+  URL exclusions, Cloudflare CDP. Use for course links, URL scrape, path patterns, empty or
+  wrong course_urls.csv, bot challenge, verifying you are human, Cloudflare listing block.
 ---
 
 # Course URL scrape

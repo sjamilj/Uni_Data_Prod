@@ -1,6 +1,9 @@
 ---
 name: uni-req-json
-description: Builds output/clean/uni bangladesh-entry, english-requirements, scholarships, and deposit markdown with embedded JSON from operator-pasted university requirement text. Use for manual help, Bangladesh entry, deposit, English requirements, or scholarships JSON.
+description: >-
+  clean/uni bangladesh-entry, english-requirements, scholarships, deposit (markdown + JSON)
+  from pasted requirement text. Use when user pastes Bangladesh entry, English requirements,
+  scholarships, deposit, uni_req, or asks for requirement JSON manual help.
 ---
 
 # Uni requirement JSON (manual help)
