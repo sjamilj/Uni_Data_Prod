@@ -58,9 +58,9 @@ Squash or reword `wip(...)` commits to `feat(unit-NN/slug): ...` before merging 
 
 | What | Value |
 |------|-------|
-| Tag | `shared/v1.1.0` (current reset baseline; `shared/v1.0.0` is older) |
-| Commit | `14cc330` (tag `shared/v1.1.0`) |
-| Message | Keele-era shared: audit CSV, degreeName inference, studyLevel export |
+| Tag | `shared/v1.2.0` (current reset baseline; `shared/v1.1.0` / `shared/v1.0.0` are older) |
+| Commit | *(set after you tag `shared/v1.2.0` on `main`)* |
+| Message | CDP/device-profile download, UG higherDegree mapping, uni backup packaging |
 
 ### Start work on a new university
 
@@ -81,9 +81,9 @@ git switch -c dev/kingston
 Use this when finishing one uni and starting another, or when local `shared/` edits should not carry over:
 
 ```powershell
-git restore --source shared/v1.1.0 -- shared
+git restore --source shared/v1.2.0 -- shared
 # or detached pin:
-git checkout shared/v1.1.0 -- shared
+git checkout shared/v1.2.0 -- shared
 ```
 
 Stay on your branch; only `shared/` is replaced. University folders are unchanged.
@@ -193,22 +193,23 @@ University tags (`uni/…`) mark a **university export** snapshot. **Shared** ch
 |-----|------|
 | `shared/v1.0.0` | Pipeline baseline |
 | `shared/v1.1.0` | Audit CSV export, degreeName LLM inference, `studyLevel` column, foundation/UG as separate export rows |
+| `shared/v1.2.0` | Cloudflare/CDP + device-profile launch (`browser_device_profile`), `BrowserSession` reads `.env`; UG `higherDegreeName`/`higherGpa` for HSC+Diploma+bachelor paths; `package_uni_backup.py`; course-type filter tests |
 
 ```powershell
 # List shared tags
 git tag -l "shared/*"
 
 # Tag current HEAD after shared work is committed (bump minor for new tools, patch for fixes)
-git tag -a shared/v1.2.0 -m "shared: describe what changed"
+git tag -a shared/v1.2.0 -m "shared: CDP download, UG higher degree export, uni backup script"
 
 # Push when ready
 git push origin shared/v1.2.0
 
 # Check out shared code at the current baseline
-git checkout shared/v1.1.0 -- shared/
+git checkout shared/v1.2.0 -- shared/
 ```
 
-Bump **minor** (`v1.1.0` → `v1.2.0`) for new shared modules or export behaviour; bump **patch** (`v1.1.0` → `v1.1.1`) for fixes only. Tag **after** tests pass and at least one university has been re-exported with the new shared code.
+Bump **minor** (`v1.1.0` → `v1.2.0`) for new shared modules or export behaviour; bump **patch** (`v1.1.1`) for fixes only. Tag **after** tests pass and at least one university has been re-exported with the new shared code.
 
 ### Infra tags (not `shared/`)
 

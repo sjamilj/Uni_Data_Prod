@@ -221,7 +221,7 @@ Tag **after** you run the commit commands and verify the work.
 
 
 
-## 3. Shared baseline (`shared/v1.0.0`)
+## 3. Shared baseline (`shared/v1.2.0`)
 
 Before starting a **new** university, pin `shared/` to the general baseline so another uni's experiments do not leak in:
 
@@ -231,10 +231,10 @@ git switch main
 git pull
 
 # reset shared/ only (keeps your branch and all university folders)
-git restore --source shared/v1.0.0 -- shared
+git restore --source shared/v1.2.0 -- shared
 ```
 
-Tag `shared/v1.0.0` points at commit `d5f7088` (`(chore) Shared infra in general`). List: `git tag -l "shared/*"`. See [CONTRIBUTING.md](../CONTRIBUTING.md#shared-infrastructure-baseline).
+Current baseline: **`shared/v1.2.0`** (older: `shared/v1.1.0` @ `14cc330`, `shared/v1.0.0`). List: `git tag -l "shared/*"`. See [CONTRIBUTING.md](../CONTRIBUTING.md#shared-infrastructure-baseline).
 
 ---
 

@@ -75,6 +75,14 @@ if str(_SHARED_DIR) not in sys.path:
     sys.path.insert(0, str(_SHARED_DIR))
 
 from uni_paths import resolve_code_dir, resolve_output_dir
+from browser_device_profile import (
+    CourseDownloadBrowserConfig,
+    close_course_download_browser,
+    is_cloudflare_challenge_page,
+    launch_course_download_browser,
+    maybe_auto_click_cloudflare,
+    wait_for_cloudflare_clear,
+)
 from course_type_filter import CourseTypeFilter
 from study_level import (
     EXECUTE_LEVEL_ORDER,
@@ -1005,25 +1013,51 @@ class ArtifactStore:
 # ============================================================================
 
 class BrowserSession:
-    """Thin wrapper around a headless Chromium page, used as a context manager."""
+    """Playwright page for listing/download; launch from code/.env (see cloudflare-course-download.md)."""
 
-    def __init__(self):
+    def __init__(self, code_dir: Path | None = None, env: dict[str, str] | None = None):
+        self.code_dir = resolve_code_dir(code_dir) if code_dir is not None else None
+        self._env = env
         self._playwright = None
-        self._browser = None
+        self._handle = None
+        self._close_mode = ""
+        self._config: CourseDownloadBrowserConfig | None = None
         self.page = None
+
+    def _resolve_config(self) -> CourseDownloadBrowserConfig:
+        if self._config is None:
+            if self._env is not None:
+                self._config = CourseDownloadBrowserConfig.from_env(self._env)
+            elif self.code_dir is not None:
+                self._config = CourseDownloadBrowserConfig.from_env(
+                    EnvFile(self.code_dir / ENV_FILE).values
+                )
+            else:
+                self._config = CourseDownloadBrowserConfig()
+        return self._config
 
     def __enter__(self) -> "BrowserSession":
         self._playwright = sync_playwright().start()
-        self._browser = self._playwright.chromium.launch(headless=True)
-        context = self._browser.new_context(user_agent=DEFAULT_USER_AGENT)
-        self.page = context.new_page()
+        config = self._resolve_config()
+        work_dir = self.code_dir or Path.cwd()
+        self._handle, self.page, self._close_mode = launch_course_download_browser(
+            self._playwright,
+            code_dir=work_dir,
+            config=config,
+            user_agent=DEFAULT_USER_AGENT,
+        )
         return self
 
     def __exit__(self, exc_type, exc, tb) -> None:
-        if self._browser:
-            self._browser.close()
+        if self._handle is not None:
+            close_course_download_browser(self._handle, self._close_mode)
+            self._handle = None
         if self._playwright:
             self._playwright.stop()
+
+    @staticmethod
+    def is_cloudflare_challenge(title: str, html: str) -> bool:
+        return is_cloudflare_challenge_page(title, html)
 
     @staticmethod
     def dismiss_cookies(page) -> None:
@@ -1060,27 +1094,52 @@ class BrowserSession:
             except PlaywrightTimeoutError:
                 continue
 
+    def _settle_page(self, *, wait_for_results: bool) -> tuple[str, str]:
+        assert self.page is not None
+        config = self._resolve_config()
+        if config.cloudflare_warmup:
+            self.page.wait_for_timeout(1500)
+        title = self.page.title() or ""
+        html = self.page.content()
+        if is_cloudflare_challenge_page(title, html):
+            if config.cloudflare_auto_click:
+                maybe_auto_click_cloudflare(self.page)
+            if config.cloudflare_wait_seconds:
+                wait_for_cloudflare_clear(
+                    self.page,
+                    max_seconds=config.cloudflare_wait_seconds,
+                )
+            title = self.page.title() or ""
+            html = self.page.content()
+            if is_cloudflare_challenge_page(title, html):
+                raise RuntimeError(
+                    "Cloudflare challenge still active. Use CDP "
+                    "(COURSE_DOWNLOAD_CDP_URL) — see docs/shared/cloudflare-course-download.md"
+                )
+        self.dismiss_cookies(self.page)
+        try:
+            self.page.wait_for_load_state("networkidle", timeout=15000)
+        except PlaywrightTimeoutError:
+            self.page.wait_for_load_state("load", timeout=15000)
+        if wait_for_results:
+            self.wait_for_listing(self.page)
+        else:
+            self.page.wait_for_timeout(800)
+        html = self.page.content()
+        if not html or len(html) < 200:
+            raise RuntimeError("Empty or tiny HTML response")
+        title = self.page.title() or "catalogue"
+        return title, html
+
     def download_html(self, url: str, *, wait_for_results: bool = False) -> tuple[str, str]:
         """Navigate to url and return (page_title, html). Retries transient failures."""
         assert self.page is not None
+        config = self._resolve_config()
         last_error: Exception | None = None
         for attempt in range(1, LISTING_DOWNLOAD_RETRIES + 1):
             try:
                 self.page.goto(url, wait_until="domcontentloaded", timeout=60000)
-                self.dismiss_cookies(self.page)
-                try:
-                    self.page.wait_for_load_state("networkidle", timeout=15000)
-                except PlaywrightTimeoutError:
-                    self.page.wait_for_load_state("load", timeout=15000)
-                if wait_for_results:
-                    self.wait_for_listing(self.page)
-                else:
-                    self.page.wait_for_timeout(800)
-                html = self.page.content()
-                if not html or len(html) < 200:
-                    raise RuntimeError("Empty or tiny HTML response")
-                title = self.page.title() or "catalogue"
-                return title, html
+                return self._settle_page(wait_for_results=wait_for_results)
             except Exception as exc:
                 last_error = exc
                 print(f"    Retry {attempt}/{LISTING_DOWNLOAD_RETRIES}: {exc}")
@@ -1241,7 +1300,7 @@ class CatalogueUrlExtractor:
         letter_browser = browser
         close_browser = False
         if letter_browser is None:
-            letter_browser = BrowserSession().__enter__()
+            letter_browser = BrowserSession(self.code_dir).__enter__()
             close_browser = True
         try:
             for index, letter_url in enumerate(pending_letters, start=1):
@@ -1833,7 +1892,7 @@ class CourseUrlScraper:
         needs_browser = any(not source.catalogue_html for source in sources)
         browser: BrowserSession | None = None
         if needs_browser:
-            browser = BrowserSession().__enter__()
+            browser = BrowserSession(self.code_dir).__enter__()
         try:
             for source in sources:
                 if source.scope:
@@ -1932,7 +1991,7 @@ class CourseUrlScraper:
                 f"({listing_config.search_path})"
             )
 
-        with BrowserSession() as browser:
+        with BrowserSession(self.code_dir) as browser:
             extractor = PaginatedListingExtractor(
                 self.code_dir,
                 self.config,
@@ -2031,7 +2090,7 @@ class CoursePageDownloader:
         stats = {"total": len(urls), "downloaded": 0, "failed": 0, "skipped": 0, "excluded": 0}
         course_filter = CourseTypeFilter.from_code_dir(self.code_dir)
 
-        with BrowserSession() as browser:
+        with BrowserSession(self.code_dir) as browser:
             for index, url in enumerate(urls, start=1):
                 if url in downloaded:
                     stats["skipped"] += 1
