@@ -417,6 +417,16 @@ class DevCoursesExporter:
         if portal_lookup:
             portal_lookup.apply_to_row(row)
 
+        if not str(row.get("degreeName") or "").strip():
+            from degree_name_dictionary import load_degree_name_dictionary
+
+            degree = load_degree_name_dictionary().lookup(
+                course_name,
+                study_level=str(row.get("studyLevel") or ""),
+            )
+            if degree:
+                row["degreeName"] = degree
+
         return row
 
     def write_dev_courses_csv(self, output_path: Path, rows: list[dict[str, object]]) -> None:

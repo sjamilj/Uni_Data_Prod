@@ -200,6 +200,28 @@ class DevCoursesValidator:
         )
 
     @classmethod
+    @classmethod
+    def infer_degree_name(
+        cls,
+        row: dict[str, str],
+        dictionary: object,
+    ) -> str:
+        """Fill empty degreeName from the dictionary. Returns the comment, or ''."""
+        if cls.cell(row, "degreeName") or not cls.cell(row, "courseName"):
+            return ""
+        degree = dictionary.lookup(
+            cls.cell(row, "courseName"),
+            study_level=cls.cell(row, "studyLevel"),
+        )
+        if not degree:
+            return ""
+        row["degreeName"] = degree
+        return cls.format_import_error(
+            "COMMENT",
+            f"degreeName inferred from dictionary ({degree})",
+        )
+
+    @classmethod
     def infer_programme_name_from_llm(
         cls,
         row: dict[str, str],
@@ -613,13 +635,23 @@ class DevCoursesValidator:
         level_resolver = CourseLevelResolver(output_dir)
         scholarship_catalog = self.load_scholarship_catalog(output_dir)
         programme_dict = load_programme_name_dictionary()
+        from degree_name_dictionary import load_degree_name_dictionary
+
+        degree_dict = load_degree_name_dictionary()
         comments: list[str] = []
         inferred_rows = 0
+        degree_inferred_rows = 0
         for row in rows:
+            parts: list[str] = []
             inferred = self.infer_programme_name(row, programme_dict)
             if inferred:
                 inferred_rows += 1
-            comments.append(inferred)
+                parts.append(inferred)
+            degree_inferred = self.infer_degree_name(row, degree_dict)
+            if degree_inferred:
+                degree_inferred_rows += 1
+                parts.append(degree_inferred)
+            comments.append(" | ".join(parts))
 
         llm_inferred_rows = 0
         if use_llm_programme:
@@ -652,7 +684,7 @@ class DevCoursesValidator:
             out["errorReason"] = " | ".join(issues)
             reviewed_rows.append(out)
 
-        if inferred_rows or llm_inferred_rows:
+        if inferred_rows or llm_inferred_rows or degree_inferred_rows:
             write_dev_courses_csv(csv_path, rows)
 
         self.write_reviewed_csv(reviewed_path, list(DEV_COURSE_CSV_COLUMNS), reviewed_rows)
