@@ -3,11 +3,12 @@ UNIVERSITY_NAME=Buckinghamshire New University
 STRATEGY=DEGREE_SCOPED_PAGINATED
 
 # --- DEGREE_SCOPED_PAGINATED: all programmes in one run ---
-UNDERGRADUATE_COURSE_LISTING_PAGE_1=https://www.bucks.ac.uk/search/courses?query=&field_location_name=All&field_course_level_name=All&field_study_mode_name=Full%20Time&field_subject_area_name=All&field_available_in_clearing=All&field_course_start_month_year=All&antibot_key=RqEkfPFykDbFTtRgDNrp4bfBzjbp9oGcpkvCLSV5NfM&page=0
-UNDERGRADUATE_COURSE_LISTING_PAGE_2=https://www.bucks.ac.uk/search/courses?query=&field_location_name=All&field_course_level_name=All&field_study_mode_name=Full%20Time&field_subject_area_name=All&field_available_in_clearing=All&field_course_start_month_year=All&antibot_key=RqEkfPFykDbFTtRgDNrp4bfBzjbp9oGcpkvCLSV5NfM&page=1
+# As part of our ongoing commitment to visa compliance, we are currently unable to consider undergraduate applications from students whose most recent studies were completed in Bangladesh
+# UNDERGRADUATE_COURSE_LISTING_PAGE_1=https://www.bucks.ac.uk/search/courses?query=&field_location_name=All&field_course_level_name=All&field_study_mode_name=Full%20Time&field_subject_area_name=All&field_available_in_clearing=All&field_course_start_month_year=All&antibot_key=RqEkfPFykDbFTtRgDNrp4bfBzjbp9oGcpkvCLSV5NfM&page=0
+# UNDERGRADUATE_COURSE_LISTING_PAGE_2=https://www.bucks.ac.uk/search/courses?query=&field_location_name=All&field_course_level_name=All&field_study_mode_name=Full%20Time&field_subject_area_name=All&field_available_in_clearing=All&field_course_start_month_year=All&antibot_key=RqEkfPFykDbFTtRgDNrp4bfBzjbp9oGcpkvCLSV5NfM&page=1
 
-# POSTGRADUATE_COURSE_LISTING_PAGE_1=https://www.canterbury.ac.uk/search/postgraduate-taught-courses?pageIndex=1
-# POSTGRADUATE_COURSE_LISTING_PAGE_2=https://www.canterbury.ac.uk/search/postgraduate-taught-courses?pageIndex=2
+POSTGRADUATE_COURSE_LISTING_PAGE_1=https://www.bucks.ac.uk/search/courses?query=&field_course_level_name=Postgraduate&field_study_mode_name=Full%20Time&antibot_key=RqEkfPFykDbFTtRgDNrp4bfBzjbp9oGcpkvCLSV5NfM&page=0
+POSTGRADUATE_COURSE_LISTING_PAGE_2=https://www.bucks.ac.uk/search/courses?query=&field_course_level_name=Postgraduate&field_study_mode_name=Full%20Time&antibot_key=RqEkfPFykDbFTtRgDNrp4bfBzjbp9oGcpkvCLSV5NfM&page=1
 
 # FOUNDATION_COURSE_LISTING_PAGE_1=https://www.canterbury.ac.uk/search/foundation-year?pageIndex=1
 # FOUNDATION_COURSE_LISTING_PAGE_2=https://www.canterbury.ac.uk/search/foundation-year?pageIndex=2
@@ -31,9 +32,14 @@ UNIVERSITY_BASE_URL=https://www.bucks.ac.uk
 # Optional CSS selector — only scan these anchors (leave blank = all <a href>)
 #COURSE_LINK_SELECTOR=
 
-# CCCU course page paths under /study-here/courses/
+# BNU course slugs under /courses/{level}/ (exclude online delivery variants, e.g. ma-*-online)
 COURSE_PATH_PATTERNS="
-^/courses/(?:undergraduate|postgraduate|professional|htq)/[a-z0-9][a-z0-9-]*$
+^/courses/(?:undergraduate|postgraduate|professional|htq)/(?!.*-online)[a-z0-9][a-z0-9-]*$
+"
+
+# URL scrape keeps matching paths; download/clean also skips these slugs
+COURSE_EXCLUDE_URL_PATTERNS="
+*-online*
 "
 
 # --- Study-level URL split (fallback when a catalogue is not degree-scoped) ---
@@ -82,9 +88,9 @@ COURSE_CLEAN_ENGINE=generic
 
 # One CSS selector per line; optional heading with :: or |
 COURSE_CLEAN_BLOCKS="
-Course overview :: #main-content
-Entry requirements :: section[id*="entry"]
-Fees and funding :: section[id*="fee"]
+Course overview :: .bnu-course-summary__container
+Entry requirements :: section#requirements
+Fees and funding :: section#fees .bnu-course-fees
 "
 
 # Noise removed inside each matched block before markdown conversion
@@ -92,6 +98,7 @@ COURSE_CLEAN_STRIP_WITHIN="
 script
 noscript
 nav
+.bnu-full-width-text-fees
 "
 
 COURSE_CLEAN_EXPAND_TABS=true

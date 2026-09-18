@@ -1,0 +1,25 @@
+Course Type,DegreeScopedPaginated.csv,,,,,,,,
+Uni Name,,,,,,,,,
+Uni Link,,,,,,,,,
+Programme,ALL Course Listing URL,Paginated Course Listing URL - Page 1,Paginated Course Listing URL - Page 2,Course Detail Page URL,Bangladesh Entry Requirements URL,English Language Requirements URL,Scholarship Information URL,Deposit Information URL,Comments
+All,,,,,https://www.bucks.ac.uk/study/international/your-country/bangladesh,https://www.bucks.ac.uk/study/general-entry-requirements,https://www.bucks.ac.uk/life/fees-and-funding/financial-support-bursaries-and-scholarships/international?gad_source=1&gad_campaignid=23990156539&gbraid=0AAAAADDoV_6wmN_rTa08QlWV_fmvucQ6V&gclid=CjwKCAjwyuDTBhB-EiwANCQhLNkf7X1tKhLAeXZgywgI3X0ACYG2tK09JKzNKuw7sWfYo6PSzpa8JRoCDTsQAvD_BwE,"{
+  ""initialDeposit"": ""50%"",
+  ""feesMetaData"": [
+    {
+      ""subtitle"": ""Initial tuition deposit"",
+      ""description"": [
+        ""International applicants must pay a minimum deposit of 50%.""
+      ]
+    },
+    {
+      ""subtitle"": ""Credibility interview deposit"",
+      ""description"": [
+        ""If a credibility interview is required for that country, an additional £250 credibility interview deposit will also apply.""
+      ]
+    }
+  ]
+}",
+Foundation,,,,,,,,,
+Undergraduate,,https://www.bucks.ac.uk/search/courses?query=&field_course_level_name=Undergraduate&field_study_mode_name=Full%20Time&antibot_key=RqEkfPFykDbFTtRgDNrp4bfBzjbp9oGcpkvCLSV5NfM&page=0,https://www.bucks.ac.uk/search/courses?query=&field_course_level_name=Undergraduate&field_study_mode_name=Full%20Time&antibot_key=RqEkfPFykDbFTtRgDNrp4bfBzjbp9oGcpkvCLSV5NfM&page=1,,,,,,
+Postgraduate,,https://www.bucks.ac.uk/search/courses?query=&field_course_level_name=Postgraduate&field_study_mode_name=Full%20Time&antibot_key=RqEkfPFykDbFTtRgDNrp4bfBzjbp9oGcpkvCLSV5NfM&page=0,https://www.bucks.ac.uk/search/courses?query=&field_course_level_name=Postgraduate&field_study_mode_name=Full%20Time&antibot_key=RqEkfPFykDbFTtRgDNrp4bfBzjbp9oGcpkvCLSV5NfM&page=1,,,,,,
+Postgraduate Research,,,,,,,,,
