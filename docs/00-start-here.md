@@ -1,11 +1,11 @@
 # Start here — learning the codebase
 
-This `/docs` tree is a **guided course** for understanding `shared/` (pipeline) and `dashboard/` (desktop UI). It supplements operational runbooks — it does not replace them.
+This `docs/` tree holds **operational runbooks** ([PIPELINE.md](PIPELINE.md), [dashboard.md](dashboard.md)) and a **guided course** for understanding `shared/` (pipeline) and `dashboard/` (desktop UI).
 
 | Need | Read |
 |------|------|
-| Run the pipeline step-by-step | [PIPELINE.md](../PIPELINE.md) |
-| Dashboard buttons and status columns | [dashboard.md](../dashboard.md) |
+| Run the pipeline step-by-step | [PIPELINE.md](PIPELINE.md) |
+| Dashboard buttons and status columns | [dashboard.md](dashboard.md) |
 | **Understand why the code is shaped this way** | This folder |
 
 ---

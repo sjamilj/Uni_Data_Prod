@@ -1,6 +1,6 @@
 # Dashboard — code documentation index
 
-Level 3 docs for the PySide6 desktop UI. Operational guide: [dashboard.md](../../dashboard.md).
+Level 3 docs for the PySide6 desktop UI. Operational guide: [dashboard.md](../dashboard.md).
 
 ---
 

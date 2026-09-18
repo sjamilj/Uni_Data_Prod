@@ -83,4 +83,4 @@ Everything under `{University}/output/` and `uni_req/` — see [04-data-flow.md]
 
 1. [features/dashboard-ui-flow.md](../features/dashboard-ui-flow.md)
 2. [dashboard/status_loader.md](../dashboard/status_loader.md)
-3. [dashboard.md](../../dashboard.md)
+3. [dashboard.md](../dashboard.md)

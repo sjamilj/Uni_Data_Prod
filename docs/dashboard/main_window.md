@@ -33,7 +33,7 @@ main.py → MainWindow(repo_root, config)
 
 - Summary label (uni counts)
 - Filter combo (URLs not started / done / incomplete)
-- `QTableWidget` — 9 columns per [dashboard.md](../../dashboard.md)
+- `QTableWidget` — 9 columns per [dashboard.md](../dashboard.md)
 - Phase buttons 1–5 + Run remaining + Open folder + Cancel
 - Study level checkboxes + Full/Number radio
 - `TerminalWidget`

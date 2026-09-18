@@ -157,4 +157,4 @@ Foundation courses share `/study/undergraduate/...` paths with UG — level spli
 - [_university_template/README.md](../_university_template/README.md) — Template.csv workflow
 - [shared/build_env.md](shared/build_env.md)
 - [features/scrape-urls-flow.md](features/scrape-urls-flow.md)
-- [PIPELINE.md](../PIPELINE.md) — Presetup review checklist
+- [PIPELINE.md](PIPELINE.md) — Presetup review checklist

@@ -45,10 +45,7 @@ function Invoke-SparseCheckout {
     )
     Set-Location $Root
     git sparse-checkout init --cone
-    $sparsePaths = @("shared", $UniversityName, "RUN.md", "UNIVERSITIES_REGISTRY.md", "CONTRIBUTING.md")
-    if (Test-Path -LiteralPath (Join-Path $Root "PIPELINE.md")) {
-        $sparsePaths += "PIPELINE.md"
-    }
+    $sparsePaths = @("shared", $UniversityName, "docs", "UNIVERSITIES_REGISTRY.md", "CONTRIBUTING.md")
     git sparse-checkout set @sparsePaths
     git switch --detach $Ref
     Write-Host "Detached at $Ref"
@@ -151,7 +148,7 @@ if ($DryRun) {
             Write-Host "  cd $repoRoot"
         }
         Write-Host "  git sparse-checkout init --cone"
-        Write-Host "  git sparse-checkout set shared $university RUN.md UNIVERSITIES_REGISTRY.md CONTRIBUTING.md"
+        Write-Host "  git sparse-checkout set shared $university docs UNIVERSITIES_REGISTRY.md CONTRIBUTING.md"
         Write-Host "  git switch --detach $resolvedRef"
     } else {
         Write-Host "  cd $repoRoot"

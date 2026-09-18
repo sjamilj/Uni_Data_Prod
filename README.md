@@ -2,7 +2,7 @@
 
 Pipeline for scraping UK university course pages, cleaning HTML to markdown, and extracting international admission requirements (entry, English, scholarships, deposits).
 
-See [PIPELINE.md](PIPELINE.md) for the full workflow and [CONTRIBUTING.md](CONTRIBUTING.md) for git commit scopes (`feat(unit-03/bcu): ...`) so you can find each university later. Unit numbers live in [UNIVERSITIES_REGISTRY.md](UNIVERSITIES_REGISTRY.md).
+See [docs/PIPELINE.md](docs/PIPELINE.md) for the full workflow and [CONTRIBUTING.md](CONTRIBUTING.md) for git commit scopes (`feat(unit-03/bcu): ...`) so you can find each university later. Unit numbers live in [UNIVERSITIES_REGISTRY.md](UNIVERSITIES_REGISTRY.md).
 
 ## Working with the agent
 

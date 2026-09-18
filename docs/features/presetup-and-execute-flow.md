@@ -116,4 +116,4 @@ Execute requires study-level checkboxes ticked in UI.
 1. [shared/run_course_pipeline.md](../shared/run_course_pipeline.md)
 2. [shared/study_level.md](../shared/study_level.md)
 3. [llm-extraction-flow.md](llm-extraction-flow.md)
-4. [PIPELINE.md](../../PIPELINE.md) — review checklist
+4. [PIPELINE.md](../PIPELINE.md) — review checklist

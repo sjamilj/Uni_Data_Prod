@@ -17,7 +17,7 @@ Run phases in order. Each phase has its own skill; do not duplicate their full i
 
 | Step | Skill | Outcome |
 |------|-------|---------|
-| 1 | **new-uni-setup** | `shared/` at `shared/v1.2.0`, variant CSV → `STRATEGY`, `ENV.MD` / `.env` aligned |
+| 1 | **new-uni-setup** | `shared/` at `shared/v1.2.1`, variant CSV → `STRATEGY`, `ENV.MD` / `.env` aligned |
 | 2 | **uni-course-urls** | `output/course_urls.csv`, exclusions for online/part-time at download time |
 | 3 | **uni-course-clean** | `COURSE_CLEAN_*` tuned from `course_detail/`; markdown matches Stage 1 parser contract |
 | 4 | **uni-req-json** | `output/clean/uni/*.md` (bangladesh-entry, english-requirements, scholarships, deposit) |

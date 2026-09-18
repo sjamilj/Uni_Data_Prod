@@ -8,7 +8,7 @@ Chains three steps for one university without the dashboard:
 2. `normalize_admission_data.py`
 3. `export_dev_courses.py`
 
-Portable alternative to PowerShell `run_llm_to_dev_csv.ps1`.
+Primary CLI for phases 3–5 when not using the dashboard or `run_course_pipeline.py`.
 
 ---
 

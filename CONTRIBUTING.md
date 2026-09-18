@@ -33,7 +33,7 @@ fix(unit-02/aston): clear unavailable international fees
 | `wip` | In-progress work on a `dev_*` branch (cleanup rules, Presetup, partial Execute) |
 | `feat` | University newly completed (`output/dev_courses_*.csv` exists) or a study-level slice is done |
 | `fix` | Correction after that university or study level was already tagged |
-| `docs` | Registry, RUN.md, PIPELINE.md, `docs/` learning guides |
+| `docs` | Registry, `docs/PIPELINE.md`, `docs/dashboard.md`, learning guides |
 | `chore` | Shared infra that is not tied to one uni |
 
 **Scope** is always `unit-NN/slug` (zero-padded). Search later with:
@@ -58,9 +58,9 @@ Squash or reword `wip(...)` commits to `feat(unit-NN/slug): ...` before merging 
 
 | What | Value |
 |------|-------|
-| Tag | `shared/v1.2.0` (current reset baseline; `shared/v1.1.0` / `shared/v1.0.0` are older) |
-| Commit | *(set after you tag `shared/v1.2.0` on `main`)* |
-| Message | CDP/device-profile download, UG higherDegree mapping, uni backup packaging |
+| Tag | `shared/v1.2.1` (current reset baseline) |
+| Commit | `5b969dd` |
+| Message | degreeName dictionary v2 by studyLevel; export/validate `degreeName` fill |
 
 ### Start work on a new university
 
@@ -81,9 +81,9 @@ git switch -c dev/kingston
 Use this when finishing one uni and starting another, or when local `shared/` edits should not carry over:
 
 ```powershell
-git restore --source shared/v1.2.0 -- shared
+git restore --source shared/v1.2.1 -- shared
 # or detached pin:
-git checkout shared/v1.2.0 -- shared
+git checkout shared/v1.2.1 -- shared
 ```
 
 Stay on your branch; only `shared/` is replaced. University folders are unchanged.
@@ -93,13 +93,15 @@ Stay on your branch; only `shared/` is replaced. University folders are unchange
 | Situation | How |
 |-----------|-----|
 | Shared change needed **for one uni** (presetup, cleanup, extract) | `.\scripts\commit-uni.ps1 -Pick keele -Type wip -IncludeShared` |
-| Shared change is **general** (fixes all unis) | `.\scripts\commit-uni.ps1 -Pick infra -Type chore -Summary "..."` then tag `shared/v1.0.1` |
+| Shared change is **general** (fixes all unis) | `.\scripts\commit-uni.cmd -Pick infra -Type chore -Summary "..."` then tag next `shared/v*` (patch bump) |
 | Never | Two university folders in one commit |
 
 After a general shared commit, bump the tag:
 
 ```powershell
-git tag -a shared/v1.0.1 -m "shared: describe what changed"
+# After chore(shared): … commit on main — bump patch from current baseline (e.g. v1.2.1 → v1.2.2)
+git tag -a shared/v1.2.2 -m "shared: describe what changed"
+git push origin shared/v1.2.2
 ```
 
 List baselines: `git tag -l "shared/*"`
@@ -189,27 +191,27 @@ Legacy wrapper (full uni only): `.\scripts\tag-unit-complete.ps1 -University "As
 
 University tags (`uni/…`) mark a **university export** snapshot. **Shared** changes get their own tag when `shared/` gains new behaviour (audit CSV, export rules, inference helpers, etc.) — usually after a `chore(shared): …` commit or a university commit that included `-IncludeShared`.
 
-| Tag | When |
-|-----|------|
-| `shared/v1.0.0` | Pipeline baseline |
-| `shared/v1.1.0` | Audit CSV export, degreeName LLM inference, `studyLevel` column, foundation/UG as separate export rows |
-| `shared/v1.2.0` | Cloudflare/CDP + device-profile launch (`browser_device_profile`), `BrowserSession` reads `.env`; UG `higherDegreeName`/`higherGpa` for HSC+Diploma+bachelor paths; `package_uni_backup.py`; course-type filter tests |
+| Tag | Commit | When |
+|-----|--------|------|
+| `shared/v1.0.0` | `d5f7088` | Pipeline baseline |
+| `shared/v1.1.0` | `14cc330` | Audit CSV export, degreeName LLM inference, `studyLevel` column, foundation/UG as separate export rows |
+| `shared/v1.2.0` | `f99ad58` | Cloudflare/CDP + device-profile launch (`browser_device_profile`), `BrowserSession` reads `.env`; UG `higherDegreeName`/`higherGpa` for HSC+Diploma+bachelor paths; `package_uni_backup.py`; course-type filter tests |
+| `shared/v1.2.1` | `5b969dd` | **Current reset baseline** — `degree_name_dictionary.py` + `degreeName_dictionary.json` (v2, by study level); `export_dev_courses` / `validate_dev_courses` lookup with `studyLevel` |
 
 ```powershell
-# List shared tags
+# List shared tags (peel annotated tags to commits)
 git tag -l "shared/*"
+git rev-parse --short "shared/v1.2.1^{commit}"
 
-# Tag current HEAD after shared work is committed (bump minor for new tools, patch for fixes)
-git tag -a shared/v1.2.0 -m "shared: CDP download, UG higher degree export, uni backup script"
+# Tag current HEAD after shared work is committed (minor = new modules/behaviour, patch = fixes)
+git tag -a shared/v1.2.2 -m "shared: describe what changed"
+git push origin shared/v1.2.2
 
-# Push when ready
-git push origin shared/v1.2.0
-
-# Check out shared code at the current baseline
-git checkout shared/v1.2.0 -- shared/
+# Pin shared/ to the current baseline
+git restore --source shared/v1.2.1 -- shared/
 ```
 
-Bump **minor** (`v1.1.0` → `v1.2.0`) for new shared modules or export behaviour; bump **patch** (`v1.1.1`) for fixes only. Tag **after** tests pass and at least one university has been re-exported with the new shared code.
+Bump **minor** (`v1.2.1` → `v1.3.0`) for large new subsystems; bump **patch** (`v1.2.1` → `v1.2.2`) for export/validation helpers and dictionary updates. Tag **after** tests pass and at least one university has been re-exported with the new shared code. Then update this table, [UNIVERSITIES_REGISTRY.md](UNIVERSITIES_REGISTRY.md), [scripts/README.md](scripts/README.md), and `.cursor/skills` reset baseline.
 
 ### Infra tags (not `shared/`)
 
@@ -238,7 +240,7 @@ When you change a **Tier 3** module (listed in [docs/shared/README.md](docs/shar
 
 Use [docs/templates/code-file-template.md](docs/templates/code-file-template.md) for new module docs. Tier 4 utilities only need a one-line row in `docs/shared/README.md`.
 
-Operational runbooks ([PIPELINE.md](PIPELINE.md), [dashboard.md](dashboard.md)) stay separate; `/docs` explains **why**, not step-by-step commands.
+Operational runbooks ([docs/PIPELINE.md](docs/PIPELINE.md), [docs/dashboard.md](docs/dashboard.md)) sit under `docs/`; numbered guides (`00-start-here.md`, …) explain **why**, runbooks explain **how**.
 
 ---
 
@@ -302,9 +304,6 @@ python shared\missing_field_stats.py "Keele University" --force
 
 ```powershell
 python shared\package_review_output.py "Anglia Ruskin University - ARU"
-# or:
-package_review.bat "Anglia Ruskin University - ARU"
-# PowerShell: .\package_review.bat "Anglia Ruskin University - ARU"
 ```
 
 Creates (gitignored):
@@ -330,8 +329,8 @@ When many files are dirty, stage **one university folder at a time** plus only t
 
 | Commit type | Stage |
 |-------------|--------|
-| `chore(shared): ...` | `shared/`, `_university_template/`, `package_review.bat`, `.gitignore` — **no** `{University}/` paths |
-| `docs: ...` | `docs/`, `README.md`, `CONTRIBUTING.md`, `scrape_course_urls_CMD.md`, `shared/README.md` |
+| `chore(shared): ...` | `shared/`, `_university_template/`, `.gitignore` — **no** `{University}/` paths |
+| `docs: ...` | `docs/`, `README.md`, `CONTRIBUTING.md`, `shared/README.md` |
 | `wip(unit-NN/slug): ...` | Only that university’s folder |
 
 Restore accidental deletions before committing a `complete` university:

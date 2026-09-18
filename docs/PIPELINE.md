@@ -461,4 +461,4 @@ python "..\..\shared\validate_dev_courses.py" .
 - [ ] Scrape URLs, Presetup 10 mixed courses, review HTML/md/.env, Presetup LLM
 - [ ] Execute selected levels (full or N), then confirm `dev_courses_*.csv`
 
-**Related docs:** `_university_template/README.md` · `shared/course_markdown_cleanup.md` · `scrape_course_urls_CMD.md` · [CONTRIBUTING.md](CONTRIBUTING.md)
+**Related docs:** [`../_university_template/README.md`](../_university_template/README.md) · [shared/course_markdown_cleanup.md](shared/course_markdown_cleanup.md) · [07-how-to-run.md](07-how-to-run.md) · [CONTRIBUTING.md](../CONTRIBUTING.md)

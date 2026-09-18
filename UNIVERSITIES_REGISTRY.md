@@ -29,13 +29,14 @@ git tag -l "uni/aru/foundation/*"
 | Git tag | **Version here** | `uni/aston/foundation/v1.0.0` |
 | Fix after tag | New commit + `-BumpPatch` | `v1.0.0` → `v1.0.1` |
 
-| Tag pattern | Meaning |
-|-------------|---------|
-| `shared/v1.0.0` | Original shared pipeline baseline (`d5f7088`) |
-| `shared/v1.2.0` | **Current shared reset baseline** — CDP/device-profile download, UG higherDegree mapping, uni backup packaging; use `git checkout shared/v1.2.0 -- shared/` before a new uni |
-| `shared/v1.1.0` | Older baseline (audit CSV, degreeName inference, studyLevel export) |
+| Tag pattern | Commit | Meaning |
+|-------------|--------|---------|
+| `shared/v1.0.0` | `d5f7088` | Original shared pipeline baseline |
+| `shared/v1.1.0` | `14cc330` | Audit CSV, degreeName LLM inference, studyLevel export rows |
+| `shared/v1.2.0` | `f99ad58` | CDP/device-profile download, UG higherDegree mapping, `package_uni_backup.py` |
+| `shared/v1.2.1` | `5b969dd` | **Current reset baseline** — `degreeName_dictionary` v2 by study level; export/validate `degreeName` fill; `git restore --source shared/v1.2.1 -- shared/` |
 | `infra/onboarding-skills/v1.0.0` | Cursor agent skills under `.cursor/skills/` + README operator guide |
-| `infra/onboarding-skills/v1.0.2` | Skill YAML trigger descriptions, `docs/PIPELINE.md` links, `shared/v1.2.0` in skills |
+| `infra/onboarding-skills/v1.0.2` | Skill YAML trigger descriptions, `docs/PIPELINE.md` links, shared baseline in skills |
 | `uni/{slug}/v1.0.0` | Full university complete (all study levels) |
 | `unit-NN` | Same snapshot as full `uni/{slug}/v1.0.0` |
 | `uni/{slug}/foundation/v1.0.0` | Foundation slice only |

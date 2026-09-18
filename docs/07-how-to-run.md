@@ -1,6 +1,6 @@
 # How to run
 
-Quick reference for CLI and dashboard. For full command examples, see [PIPELINE.md](../PIPELINE.md).
+Quick reference for CLI and dashboard. For full command examples, see [PIPELINE.md](PIPELINE.md).
 
 ---
 
@@ -35,7 +35,7 @@ python main.py
 3. Click phase buttons 1–5
 4. For Execute: tick study levels, choose Full or Number
 
-See [dashboard.md](../dashboard.md) and [features/dashboard-ui-flow.md](features/dashboard-ui-flow.md).
+See [dashboard.md](dashboard.md) and [features/dashboard-ui-flow.md](features/dashboard-ui-flow.md).
 
 ---
 
@@ -105,8 +105,6 @@ After `dev_courses_{University}_reviewed.csv` exists in `{University}/output/`, 
 
 ```powershell
 python shared/package_review_output.py "Anglia Ruskin University - ARU"
-# or from repo root (PowerShell needs .\ prefix):
-.\package_review.bat "Anglia Ruskin University - ARU"
 ```
 
 Output layout:
@@ -122,14 +120,29 @@ Fails if the university folder, root variant CSV, or reviewed CSV is missing.
 
 ---
 
-## PowerShell wrappers (repo root)
+## Extra CLI (same university, repo root)
 
-| Script | Purpose |
-|--------|---------|
-| `run_scrape_urls.ps1` | URL scrape |
-| `run_uni_clean.ps1` | Uni page clean |
-| `run_upto_llm_extract.ps1` | Through LLM |
-| `run_llm_to_dev_csv.ps1` | LLM → CSV |
+**Phases 1–2 without LLM** (resume uses `output/scrape_progress.json`):
+
+```powershell
+python shared/scrape_course_urls.py --code-dir "Aston University/code" --resume
+python shared/download_and_clean_course_pages.py --code-dir "Aston University/code" --resume
+python shared/download_and_clean_course_pages.py --code-dir "Aston University/code" --clean-only --resume
+```
+
+**Uni requirement pages only** (`uni_req` → `clean/uni`):
+
+```powershell
+python shared/download_and_clean_course_pages.py --code-dir "Aston University/code" --clean-uni-only
+```
+
+**Re-run Bangladesh entry JSON only** (existing `output/extracted/`):
+
+```powershell
+python shared/rerun_entry_requirements.py "Aston University/code" --merge-only --normalize --export-dev-csv
+```
+
+Batch download/clean (optional): `python shared/run_all_download_clean.py --resume`
 
 ---
 
@@ -158,5 +171,5 @@ Fails if the university folder, root variant CSV, or reviewed CSV is missing.
 
 - [shared/cloudflare-course-download.md](shared/cloudflare-course-download.md) — **Cloudflare loops on course download (CDP method)**
 - [00-start-here.md](00-start-here.md) — learning path
-- [PIPELINE.md](../PIPELINE.md) — detailed workflow
-- [dashboard.md](../dashboard.md) — UI reference
+- [PIPELINE.md](PIPELINE.md) — detailed workflow
+- [dashboard.md](dashboard.md) — UI reference
