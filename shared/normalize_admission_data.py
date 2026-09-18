@@ -210,9 +210,11 @@ class DegreeNormalizer:
         """
         requirements: list of {"degree": str, "grade": str}
         Returns (min_degree_name, min_gpa_raw, higher_degree_name, higher_gpa_raw)
-        choosing the LOWEST-ranked qualifying degree as 'min' and the
-        HIGHEST-ranked as 'higher' (per: choose minimum entry requirement
-        if multiple exist; higher-degree fields capture postgrad-level asks).
+
+        min — lowest entry tier present (HSC/Diploma before BA/BSc, etc.).
+        higher — if MA/MSc/MBA/PhD appear, the highest postgrad tier; else when min
+        is HSC/Diploma (rank 0) and bachelor degrees (rank 1) are also listed,
+        higher is the bachelor row (typical UG Bangladesh pathways).
         """
         normalized = []
         for req in requirements or []:
@@ -224,12 +226,19 @@ class DegreeNormalizer:
             return "", "", "", ""
 
         normalized.sort(key=lambda x: x[2])
+        min_rank = normalized[0][2]
         min_deg, min_grade = normalized[0][0], normalized[0][1]
 
-        higher_candidates = [n for n in normalized if n[2] >= 2]  # MA/MSc/MBA/PhD tier
-        if higher_candidates:
-            higher_candidates.sort(key=lambda x: -x[2])
-            higher_deg, higher_grade = higher_candidates[0][0], higher_candidates[0][1]
+        postgrad_higher = [n for n in normalized if n[2] >= 2]
+        if postgrad_higher:
+            postgrad_higher.sort(key=lambda x: -x[2])
+            higher_deg, higher_grade = postgrad_higher[0][0], postgrad_higher[0][1]
+        elif min_rank == 0:
+            bachelor_higher = [n for n in normalized if n[2] == 1]
+            if bachelor_higher:
+                higher_deg, higher_grade = bachelor_higher[0][0], bachelor_higher[0][1]
+            else:
+                higher_deg, higher_grade = "", ""
         else:
             higher_deg, higher_grade = "", ""
 
@@ -876,7 +885,13 @@ class AdmissionRecordNormalizer:
             out["minGpa"] = min_gpa
         else:
             out["minGpa"] = ""
-        out["higherGpa"] = self.gpa_converter.normalize_gpa(higher_grade_raw, higher_deg, uni_key=uni_key) if higher_deg else ""
+        if higher_deg:
+            higher_gpa = self.gpa_converter.max_gpa_for_degree(raw.get("requirements", []), higher_deg, uni_key=uni_key)
+            if higher_gpa == "":
+                higher_gpa = self.gpa_converter.normalize_gpa(higher_grade_raw, higher_deg, uni_key=uni_key)
+            out["higherGpa"] = higher_gpa
+        else:
+            out["higherGpa"] = ""
         # convert numeric GPA back to string for schema consistency (matches example: "2.75")
         if isinstance(out["minGpa"], float):
             out["minGpa"] = f"{out['minGpa']:.2f}".rstrip("0").rstrip(".") if out["minGpa"] % 1 else str(out["minGpa"])

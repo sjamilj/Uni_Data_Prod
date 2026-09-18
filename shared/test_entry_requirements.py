@@ -360,6 +360,37 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(result["minGpa"], "3.5")
         self.assertEqual(result["higherGpa"], "")
 
+    def test_process_record_ug_hsc_and_bsc_sets_higher_bachelor(self) -> None:
+        result = process_record(
+            {
+                "courseName": "Access HE",
+                "courseUrl": "https://example.com",
+                "requirements": [
+                    {"degree": "HSC", "grade": "Grade C / 40% / GPA 2.0 in Maths (English tbc)"},
+                    {"degree": "BSc", "grade": "50% overall"},
+                    {"degree": "Diploma", "grade": "60% overall"},
+                ],
+            }
+        )
+        self.assertEqual(result["minDegreeName"], "HSC")
+        self.assertEqual(result["minGpa"], "2.0")
+        self.assertEqual(result["higherDegreeName"], "BSc")
+        self.assertEqual(result["higherGpa"], "2.5")
+
+    def test_process_record_pg_bsc_and_msc_keeps_higher_postgrad(self) -> None:
+        result = process_record(
+            {
+                "courseName": "MSc Example",
+                "courseUrl": "https://example.com",
+                "requirements": [
+                    {"degree": "BSc", "grade": "50%"},
+                    {"degree": "MSc", "grade": "60%"},
+                ],
+            }
+        )
+        self.assertEqual(result["minDegreeName"], "BSc")
+        self.assertEqual(result["higherDegreeName"], "MSc")
+
     def test_derive_hsc_gpa_from_ucas_text(self) -> None:
         self.assertEqual(
             derive_hsc_gpa_from_uk_entry_text("80 UCAS Tariff points / CDD"),
