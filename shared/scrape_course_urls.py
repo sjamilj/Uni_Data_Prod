@@ -1012,17 +1012,6 @@ class ArtifactStore:
 # Browser control (Playwright)
 # ============================================================================
 
-def _invoke_uni_course_page_settle(code_dir: Path, page, url: str) -> None:
-    from course_markdown_cleanup import CourseMarkdownCleaner
-
-    module = CourseMarkdownCleaner.load_uni_course_cleanup_module(code_dir)
-    if module is None:
-        return
-    settle = getattr(module, "settle_course_page_after_download", None)
-    if callable(settle):
-        settle(page, url)
-
-
 class BrowserSession:
     """Playwright page for listing/download; launch from code/.env (see cloudflare-course-download.md)."""
 
@@ -1034,7 +1023,6 @@ class BrowserSession:
         self._close_mode = ""
         self._config: CourseDownloadBrowserConfig | None = None
         self.page = None
-        self._current_url = ""
 
     def _resolve_config(self) -> CourseDownloadBrowserConfig:
         if self._config is None:
@@ -1137,12 +1125,6 @@ class BrowserSession:
             self.wait_for_listing(self.page)
         else:
             self.page.wait_for_timeout(800)
-            if self.code_dir is not None and self._current_url:
-                _invoke_uni_course_page_settle(
-                    self.code_dir,
-                    self.page,
-                    self._current_url,
-                )
         html = self.page.content()
         if not html or len(html) < 200:
             raise RuntimeError("Empty or tiny HTML response")
@@ -1156,7 +1138,6 @@ class BrowserSession:
         last_error: Exception | None = None
         for attempt in range(1, LISTING_DOWNLOAD_RETRIES + 1):
             try:
-                self._current_url = url
                 self.page.goto(url, wait_until="domcontentloaded", timeout=60000)
                 return self._settle_page(wait_for_results=wait_for_results)
             except Exception as exc:
@@ -1489,7 +1470,6 @@ class PaginatedListingExtractor:
                     scope=scope,
                     classifier=self.config.level_classifier,
                     source_scope=scope,
-                    scope_determines_level=True,
                 )
             new_count = len(all_urls) - before_count
             if not page_urls:
@@ -1659,7 +1639,7 @@ class CourseUrlScraper:
         completed.update(keep)
 
     def _reclassify_url_levels(self, url_levels: UrlLevelMap) -> UrlLevelMap:
-        if self.config.strategy in (STRATEGY_ALL_COURSE, STRATEGY_DEGREE_SCOPED_PAGINATED):
+        if self.config.strategy == STRATEGY_ALL_COURSE:
             rebuilt = UrlLevelMap()
             for record in url_levels.records():
                 source = record.get("source_scope") or ""

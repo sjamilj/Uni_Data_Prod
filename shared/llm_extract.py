@@ -1096,15 +1096,9 @@ class Stage1MarkdownParser:
             if start_date_match and not fields.get("intakeInfo"):
                 fields['intakeInfo'] = normalize_intake_text(start_date_match.group(1).strip())
                 break
-        duration_match = re.search(
-            r'-\s*\*\*Duration:\*\*\s*([^\n]+)|\*\*Duration:\*\*\s*(.+)',
-            body,
-            re.I,
-        )
+        duration_match = re.search('\\*\\*Duration:\\*\\*\\s*(.+)', body, re.I)
         if duration_match and not fields.get('courseDuration'):
-            fields['courseDuration'] = (
-                duration_match.group(1) or duration_match.group(2) or ''
-            ).strip()
+            fields['courseDuration'] = duration_match.group(1).strip()
         if not fields.get('courseDuration'):
             research_duration = Stage1MarkdownParser.extract_research_course_duration(body)
             if research_duration:
@@ -1123,31 +1117,6 @@ class Stage1MarkdownParser:
             if research_fee:
                 fields['tuitionFee'] = research_fee
                 fields['currency'] = 'GBP'
-        if not fields.get('tuitionFee'):
-            fees_heading = re.search(
-                r'## Fees(?:\s*&\s*Funding)?\s*\n(.*?)(?=\n## |\Z)',
-                body,
-                re.S | re.I,
-            )
-            if fees_heading:
-                section = fees_heading.group(1)
-                hull_fee = re.search(
-                    r'For International students,?\s+the standard course fee is\s+£\s*([\d,]+)',
-                    section,
-                    re.I,
-                )
-                if hull_fee:
-                    fields['tuitionFee'] = hull_fee.group(1).replace(',', '').strip()
-                    fields['currency'] = 'GBP'
-                else:
-                    prose_fee = re.search(
-                        r'International[^£\n]{0,160}£\s*([\d,]+)',
-                        section,
-                        re.I,
-                    )
-                    if prose_fee:
-                        fields['tuitionFee'] = prose_fee.group(1).replace(',', '').strip()
-                        fields['currency'] = 'GBP'
         intl_section = extract_international_fees_section(body)
         if intl_section:
             if not fields.get('tuitionFee'):
@@ -1167,6 +1136,18 @@ class Stage1MarkdownParser:
             if not fields.get('currency') and (fields.get('tuitionFee') or '£' in intl_section):
                 fields['currency'] = 'GBP'
         ielts_match = re.search('IELTS\\s+([\\d.]+)\\s+overall\\s+with\\s+no\\s+less\\s+than\\s+([\\d.]+)\\s+in\\s+each\\s+band', body, re.I)
+        if not ielts_match:
+            ielts_match = re.search(
+                'IELTS\\s+([\\d.]+)\\s+with\\s+no\\s+element\\s+below\\s+([\\d.]+)\\b',
+                body,
+                re.I,
+            )
+        if not ielts_match:
+            ielts_match = re.search(
+                'IELTS\\s+score\\s+of\\s+([\\d.]+)\\s*\\(\\s*with\\s+no\\s+element\\s+below\\s+([\\d.]+)\\s*\\)',
+                body,
+                re.I,
+            )
         if ielts_match:
             fields['ieltsMinOverall'] = ielts_match.group(1)
             fields['ieltsMinSection'] = ielts_match.group(2)

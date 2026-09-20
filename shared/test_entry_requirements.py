@@ -443,24 +443,6 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(hints["tuitionFee"], "18200")
         self.assertEqual(hints["currency"], "GBP")
 
-    def test_hull_key_facts_bullet_duration_and_fees_prose(self) -> None:
-        body = """## Key facts
-
-- **UCAS code:** F410
-- **Duration:** 3 years
-- **Start date:** September 2027
-
-## Fees & Funding
-
-### How much is it?
-
-For International students, the standard course fee is £21,520 per year.
-"""
-        hints = extract_stage1_fields_from_md(body)
-        self.assertEqual(hints["courseDuration"], "3 years")
-        self.assertEqual(hints["tuitionFee"], "21520")
-        self.assertEqual(hints["currency"], "GBP")
-
     def test_keele_stage1_fields_pg_month_of_entry(self) -> None:
         body = """## Key information
 ### Month of entry
@@ -474,6 +456,180 @@ For International students, the standard course fee is £21,520 per year.
         hints = extract_stage1_fields_from_md(body)
         self.assertEqual(hints["intakeInfo"], "September 2026")
         self.assertEqual(hints["tuitionFee"], "18200")
+
+    def test_salford_cleanup_picks_latest_international_fee(self) -> None:
+        import importlib.util
+        from pathlib import Path
+
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "University of Salford"
+            / "code"
+            / "course_markdown_cleanup.py"
+        )
+        spec = importlib.util.spec_from_file_location("salford_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+
+        body = """## Fees and funding
+
+Intro text.
+
+### 2026/27
+
+| Type of study | Fees |
+| --- | --- |
+| Full-time | £10,620 per year |
+| Part-time | Calculated on a pro rata basis |
+
+### 2027/28
+
+| Type of study | Fees |
+| --- | --- |
+| Full-time | £10,800 per year |
+| Part-time | Calculated on a pro rata basis |
+
+### 2026/27
+
+| Type of study | Fees |
+| --- | --- |
+| Full-time | £19,980 per year |
+
+### 2027/28
+
+| Type of study | Fees |
+| --- | --- |
+| Full-time | £20,520 per year |
+
+We review tuition fees annually.
+"""
+        cleaned = module.cleanup_course_markdown_uni(body)
+        hints = extract_stage1_fields_from_md(cleaned)
+        self.assertEqual(hints.get("tuitionFee"), "20520")
+        self.assertEqual(hints.get("currency"), "GBP")
+        self.assertNotIn("£10,620", cleaned)
+
+    def test_salford_preprocess_injects_key_facts_from_course_summary(self) -> None:
+        import importlib.util
+        from pathlib import Path
+
+        from bs4 import BeautifulSoup
+
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "University of Salford"
+            / "code"
+            / "course_markdown_cleanup.py"
+        )
+        spec = importlib.util.spec_from_file_location("salford_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+
+        html = """
+        <main>
+          <div class="uos-course__summary">
+            <div class="uos-course__summary__item">
+              <h3 class="uos-course__summary__item__title">What is the UCAS code?</h3>
+              <p class="uos-course__summary__item__body">W615</p>
+            </div>
+            <div class="uos-course__summary__item">
+              <h3 class="uos-course__summary__item__title">How long will I study?</h3>
+              <p class="uos-course__summary__item__body">Three years</p>
+              <p class="uos-course__summary__item__body">Six years</p>
+            </div>
+          </div>
+        </main>
+        """
+        soup = BeautifulSoup(html, "html.parser")
+        module.preprocess_course_html_uni(soup)
+        facts = soup.select_one("#salford-course-key-facts")
+        self.assertIsNotNone(facts)
+        text = facts.get_text(" ", strip=True)
+        self.assertIn("Duration", text)
+        self.assertIn("Three years", text)
+        self.assertIn("UCAS code", text)
+        self.assertIn("W615", text)
+        self.assertNotIn("Six years", text)
+
+    def test_salford_trim_entry_drops_applicant_profile_before_standard_entry(self) -> None:
+        import importlib.util
+        from pathlib import Path
+
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "University of Salford"
+            / "code"
+            / "course_markdown_cleanup.py"
+        )
+        spec = importlib.util.spec_from_file_location("salford_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+
+        body = """## Entry requirements
+
+APPPLICANT PROFILE
+
+Marketing about the MA programme.
+
+The Application and Audition Process
+
+Audition dates TBC.
+
+Standard entry requirements Standard entry requirements
+
+To join this MA you should have a second class honours degree, 2:2 or above.
+"""
+        cleaned = module.cleanup_course_markdown_uni(body)
+        self.assertNotIn("APPPLICANT PROFILE", cleaned)
+        self.assertNotIn("Audition", cleaned)
+        self.assertIn("Standard entry requirements", cleaned)
+        self.assertIn("second class honours degree", cleaned)
+        self.assertNotIn("Standard entry requirements Standard entry requirements", cleaned)
+
+    def test_salford_cleanup_drops_main_content_until_entry(self) -> None:
+        import importlib.util
+        from pathlib import Path
+
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "University of Salford"
+            / "code"
+            / "course_markdown_cleanup.py"
+        )
+        spec = importlib.util.spec_from_file_location("salford_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+
+        body = """## Fees and funding
+
+Annual tuition fees: | £20,520
+
+## Main content
+
+junk
+
+## Overview
+
+duplicate marketing
+
+## Modules
+
+module list
+
+## Entry requirements
+
+IELTS 6.0
+"""
+        cleaned = module.cleanup_course_markdown_uni(body)
+        self.assertNotIn("## Main content", cleaned)
+        self.assertNotIn("duplicate marketing", cleaned)
+        self.assertNotIn("module list", cleaned)
+        self.assertIn("## Entry requirements", cleaned)
+        self.assertIn("IELTS 6.0", cleaned)
 
 
 def format_report_issues(report) -> str:
