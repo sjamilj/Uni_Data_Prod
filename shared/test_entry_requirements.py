@@ -443,6 +443,24 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(hints["tuitionFee"], "18200")
         self.assertEqual(hints["currency"], "GBP")
 
+    def test_hull_key_facts_bullet_duration_and_fees_prose(self) -> None:
+        body = """## Key facts
+
+- **UCAS code:** F410
+- **Duration:** 3 years
+- **Start date:** September 2027
+
+## Fees & Funding
+
+### How much is it?
+
+For International students, the standard course fee is £21,520 per year.
+"""
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["courseDuration"], "3 years")
+        self.assertEqual(hints["tuitionFee"], "21520")
+        self.assertEqual(hints["currency"], "GBP")
+
     def test_keele_stage1_fields_pg_month_of_entry(self) -> None:
         body = """## Key information
 ### Month of entry
