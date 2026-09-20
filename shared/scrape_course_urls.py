@@ -1079,14 +1079,31 @@ class BrowserSession:
             except Exception:
                 continue
 
-    @staticmethod
-    def wait_for_listing(page) -> None:
-        selectors = [
-            'a[href*="/study-here/courses/"]',
-            ".course-card",
-            "a.sc-eJZSpO",
-        ]
-        for selector in selectors:
+    def _listing_wait_selectors(self) -> list[str]:
+        link_selector = ""
+        if self._env is not None:
+            link_selector = (self._env.get("COURSE_LINK_SELECTOR") or "").strip()
+        elif self.code_dir is not None:
+            link_selector = (
+                EnvFile(self.code_dir / ENV_FILE).values.get("COURSE_LINK_SELECTOR") or ""
+            ).strip()
+        selectors: list[str] = []
+        if link_selector:
+            selectors.append(link_selector)
+        selectors.extend(
+            [
+                'a[rel="bookmark"][href*="/course/"]',
+                'a[href*="/study-here/courses/"]',
+                ".course-card",
+                "a.sc-eJZSpO",
+            ]
+        )
+        return selectors
+
+    def wait_for_listing(self) -> None:
+        assert self.page is not None
+        page = self.page
+        for selector in self._listing_wait_selectors():
             try:
                 page.wait_for_selector(selector, timeout=20000)
                 page.wait_for_timeout(1000)
@@ -1122,7 +1139,7 @@ class BrowserSession:
         except PlaywrightTimeoutError:
             self.page.wait_for_load_state("load", timeout=15000)
         if wait_for_results:
-            self.wait_for_listing(self.page)
+            self.wait_for_listing()
         else:
             self.page.wait_for_timeout(800)
         html = self.page.content()
@@ -1470,6 +1487,7 @@ class PaginatedListingExtractor:
                     scope=scope,
                     classifier=self.config.level_classifier,
                     source_scope=scope,
+                    scope_determines_level=bool(scope_to_level(scope)),
                 )
             new_count = len(all_urls) - before_count
             if not page_urls:
