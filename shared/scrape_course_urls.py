@@ -1142,6 +1142,21 @@ class BrowserSession:
             self.wait_for_listing()
         else:
             self.page.wait_for_timeout(800)
+            if self.code_dir is not None:
+                try:
+                    from course_markdown_cleanup import _load_uni_course_cleanup_module
+
+                    module = _load_uni_course_cleanup_module(self.code_dir)
+                    if module is not None:
+                        settle = getattr(
+                            module,
+                            "settle_course_page_after_download",
+                            None,
+                        )
+                        if callable(settle):
+                            settle(self.page, self.page.url, self.code_dir)
+                except Exception as exc:
+                    print(f"    Warning: settle_course_page_after_download: {exc}")
         html = self.page.content()
         if not html or len(html) < 200:
             raise RuntimeError("Empty or tiny HTML response")

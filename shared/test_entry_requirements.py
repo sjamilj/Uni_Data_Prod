@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -23,6 +24,7 @@ from llm_extract import (  # noqa: E402
     filter_bangladesh_descriptions_for_course,
     infer_degree_name_from_md,
     merge_requirement_lists,
+    merge_stage2_row,
     parse_bangladesh_json_requirements,
     select_english_json_program,
 )
@@ -630,6 +632,153 @@ IELTS 6.0
         self.assertNotIn("module list", cleaned)
         self.assertIn("## Entry requirements", cleaned)
         self.assertIn("IELTS 6.0", cleaned)
+
+    def test_birmingham_21_picks_compound_grade_and_subject_degrees(self) -> None:
+        data = {
+            "studyLevels": [
+                {
+                    "studyLevel": "Postgraduate",
+                    "programs": [
+                        {
+                            "program": "Postgraduate taught 2:1",
+                            "requirements": [
+                                {"degree": "BA", "grade": "GPA 3.0-3.3/4.0 or 65%"},
+                                {"degree": "BSc", "grade": "GPA 3.0-3.3/4.0 or 65%"},
+                                {"degree": "BCom", "grade": "GPA 3.0-3.3/4.0 or 65%"},
+                                {"degree": "BEng", "grade": "GPA 3.0-3.3/4.0 or 65%"},
+                            ],
+                        },
+                        {
+                            "program": "Postgraduate taught 2:2",
+                            "requirements": [
+                                {"degree": "BA", "grade": "GPA 2.6-3.1/4.0 or 60%"},
+                                {"degree": "BSc", "grade": "GPA 2.6-3.1/4.0 or 60%"},
+                                {"degree": "BCom", "grade": "GPA 2.6-3.1/4.0 or 60%"},
+                                {"degree": "BEng", "grade": "GPA 2.6-3.1/4.0 or 60%"},
+                            ],
+                        },
+                    ],
+                }
+            ]
+        }
+        chemical = """## Entry requirements
+
+- 2:1 Honours degree
+in a relevant subject (eg, Chemical Engineering or Chemistry with sufficient Mathematics)
+
+### International entry requirements
+
+Holders of Bachelors degree will normally be expected to have achieved a GPA of 3.0-3.3/4.0 or 65% or above for 2:1 equivalency, or a GPA of 2.6-3.1/4.0 or 60% or above for 2:2 equivalency depending on the awarding institution.
+"""
+        self.assertEqual(
+            parse_bangladesh_json_requirements(data, "postgraduate", course_body=chemical),
+            [
+                {"degree": "BSc", "grade": "GPA 3.0-3.3/4.0 or 65%"},
+                {"degree": "BEng", "grade": "GPA 3.0-3.3/4.0 or 65%"},
+            ],
+        )
+        economics = """## Entry requirements
+
+- 2:1 Honours degree
+or postgraduate diploma from a UK university (or overseas equivalent) in a subject with a quantitative element, such as Economics, Finance, Accounting, Engineering, Mathematics, Statistics, Science or Commerce.
+"""
+        self.assertEqual(
+            parse_bangladesh_json_requirements(data, "postgraduate", course_body=economics),
+            [
+                {"degree": "BA", "grade": "GPA 3.0-3.3/4.0 or 65%"},
+                {"degree": "BSc", "grade": "GPA 3.0-3.3/4.0 or 65%"},
+                {"degree": "BCom", "grade": "GPA 3.0-3.3/4.0 or 65%"},
+                {"degree": "BEng", "grade": "GPA 3.0-3.3/4.0 or 65%"},
+            ],
+        )
+
+    def test_birmingham_22_picks_lower_bangladesh_clause(self) -> None:
+        data = {
+            "studyLevels": [
+                {
+                    "studyLevel": "Postgraduate",
+                    "programs": [
+                        {
+                            "program": "Postgraduate taught",
+                            "requirements": [
+                                {
+                                    "degree": "BEng",
+                                    "grade": "GPA 3.0-3.3/4.0 or 65%+ (2:1); GPA 2.6-3.1/4.0 or 60%+ (2:2)",
+                                },
+                                {
+                                    "degree": "BSc",
+                                    "grade": "GPA 3.0-3.3/4.0 or 65%+ (2:1); GPA 2.6-3.1/4.0 or 60%+ (2:2)",
+                                },
+                            ],
+                        }
+                    ],
+                }
+            ]
+        }
+        body = """## Entry requirements
+
+- 2:2 Honours degree
+in Chemical Engineering
+"""
+        self.assertEqual(
+            parse_bangladesh_json_requirements(data, "postgraduate", course_body=body),
+            [
+                {"degree": "BEng", "grade": "GPA 2.6-3.1/4.0 or 60%"},
+            ],
+        )
+
+    def test_merge_stage2_drops_llm_msc_when_course_has_uk_class(self) -> None:
+        data = {
+            "studyLevels": [
+                {
+                    "studyLevel": "Postgraduate",
+                    "programs": [
+                        {
+                            "program": "Postgraduate taught 2:1",
+                            "requirements": [
+                                {"degree": "BSc", "grade": "GPA 3.0-3.3/4.0 or 65%"},
+                                {"degree": "BEng", "grade": "GPA 3.0-3.3/4.0 or 65%"},
+                            ],
+                            "description": ["2:1 Bangladesh equivalency"],
+                        }
+                    ],
+                }
+            ]
+        }
+        uni_content = json.dumps(data)
+        course_body = """## Entry requirements
+
+- 2:1 Honours degree
+in Chemical Engineering
+"""
+        merged = merge_stage2_row(
+            {
+                "uniName": "University of Birmingham",
+                "courseUrlExternal": "https://example.test/chemical",
+                "courseName": "Advanced Chemical Engineering MSc",
+                "programmeName": "Advanced Chemical Engineering MSc",
+                "degreeName": "MSc",
+                "requirements": [],
+            },
+            {
+                "requirements": [
+                    {"degree": "BSc", "grade": "GPA 3.0-3.3/4.0 or 65%+ (2:1)"},
+                    {"degree": "MSc", "grade": "GPA 3.0-3.3/4.0 or 65%+ (2:1)"},
+                    {"degree": "PhD", "grade": "GPA 3.0-3.3/4.0 or 65%+ (2:1)"},
+                ]
+            },
+            uni_content=uni_content,
+            entry_content=uni_content,
+            course_level="postgraduate",
+            course_body=course_body,
+        )
+        self.assertEqual(merged["degreeName"], "MSc")
+        self.assertEqual(
+            merged["requirements"],
+            [
+                {"degree": "BEng", "grade": "GPA 3.0-3.3/4.0 or 65%"},
+            ],
+        )
 
 
 def format_report_issues(report) -> str:
