@@ -42,10 +42,11 @@ URL matching (required):
   EXCLUDED_PATH_PREFIXES= optional path prefixes to skip
   COURSE_LINK_SELECTOR=   optional CSS selector limiting which <a> tags are scanned
 
-  LISTING_PAGINATION_MODE=url (default) | ajax_click
-    ajax_click — same listing URL for every page; paginate via in-page controls
-    (e.g. Umbraco DoCourseSearch). Set LISTING_AJAX_WAIT_SELECTOR and
+  LISTING_PAGINATION_MODE=url (default) | ajax_click | click
+    ajax_click — same listing URL for every page; paginate via numbered in-page
+    controls (Umbraco DoCourseSearch). Set LISTING_AJAX_WAIT_SELECTOR and
     LISTING_AJAX_PAGE_BUTTON_SELECTOR if the site differs from Bedfordshire defaults.
+    click — same listing URL; click Next (LISTING_CLICK_NEXT_SELECTOR) after each page.
   LISTING_AJAX_MODE_CHECKBOX_IDS=     default study mode(s), e.g. Full-time_614 (Beds)
   {SCOPE}_LISTING_AJAX_LEVEL_CHECKBOX_IDS= / {SCOPE}_LISTING_AJAX_MODE_CHECKBOX_IDS=
   {SCOPE}_LISTING_AJAX_VARIANT_CHECKBOX_IDS=  (Beds: with Foundation Year_1519)
@@ -95,8 +96,10 @@ from browser_device_profile import (
 )
 from course_type_filter import CourseTypeFilter
 from listing_ajax_pagination import (
+    DEFAULT_LISTING_CLICK_NEXT_SELECTOR,
     DO_COURSE_SEARCH_PATH_FRAGMENT,
     LISTING_PAGINATION_MODE_AJAX_CLICK,
+    LISTING_PAGINATION_MODE_CLICK,
     LISTING_PAGINATION_MODE_URL,
     ListingAjaxSettings,
     VALID_LISTING_PAGINATION_MODES,
@@ -993,6 +996,11 @@ class ConfigLoader:
             level_checkbox_ids=level_ids,
             mode_checkbox_ids=mode_ids,
             variant_checkbox_ids=variant_ids,
+            next_button_selector=env.get(
+                "LISTING_CLICK_NEXT_SELECTOR",
+                DEFAULT_LISTING_CLICK_NEXT_SELECTOR,
+            ).strip()
+            or DEFAULT_LISTING_CLICK_NEXT_SELECTOR,
         )
         return config
 
@@ -1162,6 +1170,9 @@ class BrowserSession:
     def dismiss_cookies(page) -> None:
         selectors = [
             "#ccc-notify-accept",
+            "#ccc-recommended-settings",
+            "#ccc-dismiss-button",
+            "#ccc button:has-text('Accept')",
             "button.agree-button.eu-cookie-compliance-default-button",
             "button:has-text('Accept all categories')",
             "button:has-text('Accept all')",
@@ -1171,12 +1182,24 @@ class BrowserSession:
         for selector in selectors:
             try:
                 button = page.locator(selector).first
+                if button.count() == 0:
+                    continue
                 if button.is_visible(timeout=1500):
-                    button.click(timeout=3000)
-                    page.wait_for_timeout(500)
-                    return
+                    button.click(timeout=3000, force=True)
+                    page.wait_for_timeout(400)
+                    break
             except Exception:
                 continue
+        try:
+            page.evaluate(
+                """() => {
+                  const hide = (el) => { if (el) el.style.setProperty('display', 'none', 'important'); };
+                  hide(document.getElementById('ccc-overlay'));
+                  hide(document.getElementById('ccc'));
+                }"""
+            )
+        except Exception:
+            pass
 
     def _listing_wait_selectors(self) -> list[str]:
         link_selector = ""
@@ -1424,6 +1447,82 @@ class BrowserSession:
         self.page.wait_for_selector(settings.wait_selector, timeout=45000)
         self.page.wait_for_timeout(500)
         html = self.page.content()
+        return title, html, session_loaded
+
+    @staticmethod
+    def _locator_is_disabled(locator) -> bool:
+        if locator.count() == 0:
+            return True
+        aria = (locator.get_attribute("aria-disabled") or "").strip().lower()
+        if aria in {"true", "1"}:
+            return True
+        if locator.get_attribute("disabled") is not None:
+            return True
+        try:
+            return not locator.is_enabled()
+        except Exception:
+            return False
+
+    def fetch_click_listing_page(
+        self,
+        base_listing_url: str,
+        page_index: int,
+        settings: ListingAjaxSettings,
+        *,
+        session_loaded: bool,
+    ) -> tuple[str, str, bool]:
+        """Stay on PAGE_1 URL; click Next for page 2+ (LISTING_PAGINATION_MODE=click)."""
+        assert self.page is not None
+        if not session_loaded:
+            self.page.goto(base_listing_url, wait_until="domcontentloaded", timeout=60000)
+            self.page.wait_for_selector(settings.wait_selector, timeout=45000)
+            self.dismiss_cookies(self.page)
+            self.page.wait_for_timeout(800)
+            session_loaded = True
+            title = self.page.title() or "listing"
+            html = self.page.content()
+            if page_index <= 1:
+                return title, html, session_loaded
+
+        if page_index <= 1:
+            title = self.page.title() or "listing"
+            return title, self.page.content(), session_loaded
+
+        self.dismiss_cookies(self.page)
+        next_btn = self.page.locator(settings.next_button_selector).first
+        if self._locator_is_disabled(next_btn):
+            raise RuntimeError(
+                f"Next button missing or disabled ({settings.next_button_selector})"
+            )
+        previous_href = ""
+        try:
+            previous_href = self.page.eval_on_selector(
+                settings.wait_selector,
+                "el => el.getAttribute('href') || el.href || ''",
+            ) or ""
+        except Exception:
+            previous_href = ""
+        next_btn.click(timeout=15000, force=True)
+        self.page.wait_for_selector(settings.wait_selector, timeout=45000)
+        if previous_href:
+            try:
+                self.page.wait_for_function(
+                    """([sel, prev]) => {
+                      const el = document.querySelector(sel);
+                      if (!el) return false;
+                      const href = el.getAttribute('href') || el.href || '';
+                      return href && href !== prev;
+                    }""",
+                    arg=[settings.wait_selector, previous_href],
+                    timeout=20000,
+                )
+            except PlaywrightTimeoutError:
+                pass
+        self.page.wait_for_timeout(600)
+        title = self.page.title() or "listing"
+        html = self.page.content()
+        if not html or len(html) < 200:
+            raise RuntimeError("Empty or tiny HTML after Next click")
         return title, html, session_loaded
 
 
@@ -1710,11 +1809,15 @@ class PaginatedListingExtractor:
         pagination_param = state.get("pagination_param") or pagination_param
         page_step = int(state.get("page_step") or page_step)
         use_ajax = self.config.listing_pagination_mode == LISTING_PAGINATION_MODE_AJAX_CLICK
+        use_click = self.config.listing_pagination_mode == LISTING_PAGINATION_MODE_CLICK
+        use_inpage = use_ajax or use_click
         ajax_session_loaded = bool(state.get("ajax_session_loaded", False))
 
         print(f"  [{scope}] Search listing: {label} ({base_listing_url.split('?')[0]})")
         if use_ajax:
             print(f"    [{scope}] LISTING_PAGINATION_MODE=ajax_click (in-page pager)")
+        elif use_click:
+            print(f"    [{scope}] LISTING_PAGINATION_MODE=click (Next button)")
 
         while (
             empty_streak < PAGINATION_EMPTY_LIMIT
@@ -1724,13 +1827,15 @@ class PaginatedListingExtractor:
                 print(f"    [{scope}] Reached last page ({max_pages}) for {label}")
                 break
 
-            if use_ajax:
+            if use_inpage:
                 listing_url = listing_page_resume_key(base_listing_url, page_index, scope=scope)
                 normalized = listing_url
             else:
                 listing_url = UrlNormalizer.set_page_number(base_listing_url, page_index, pagination_param)
                 normalized = UrlNormalizer.normalize(listing_url, keep_query=True)
-            if normalized in completed:
+            # Next-button mode must walk pages in order; skipping a completed page
+            # would leave the tab on the wrong results set.
+            if normalized in completed and not use_click:
                 page_index += page_step
                 continue
 
@@ -1746,13 +1851,20 @@ class PaginatedListingExtractor:
                         scope=scope,
                         listing_config=listing_config,
                     )
+                elif use_click:
+                    _title, html, ajax_session_loaded = self.browser.fetch_click_listing_page(
+                        base_listing_url,
+                        page_index,
+                        self.config.listing_ajax,
+                        session_loaded=ajax_session_loaded,
+                    )
                 else:
                     _title, html = self.browser.download_html(listing_url, wait_for_results=True)
             except RuntimeError as exc:
                 empty_streak += 1
                 print(f"    [{scope}] No HTML ({empty_streak}/{PAGINATION_EMPTY_LIMIT}): {exc}")
                 self.logger.error(f"[{scope}] Listing page failed: {listing_url} — {exc}")
-                if not (use_ajax and not ajax_session_loaded):
+                if not (use_inpage and not ajax_session_loaded):
                     page_index += page_step
                 continue
 

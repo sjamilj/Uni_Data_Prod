@@ -8,8 +8,9 @@ from urllib.parse import urlparse
 
 LISTING_PAGINATION_MODE_URL = "url"
 LISTING_PAGINATION_MODE_AJAX_CLICK = "ajax_click"
-# Reserved for Vue/Next-button listings (e.g. Kingston); not the same as ajax_click.
+# In-page Next-button listings (UEA / Kingston Vue). URL does not change; not ajax_click.
 LISTING_PAGINATION_MODE_CLICK = "click"
+DEFAULT_LISTING_CLICK_NEXT_SELECTOR = 'button[aria-label="Next Page"]'
 VALID_LISTING_PAGINATION_MODES = {
     LISTING_PAGINATION_MODE_URL,
     LISTING_PAGINATION_MODE_AJAX_CLICK,
@@ -97,7 +98,7 @@ UMBRACO_LEVEL_FILTER_JS = UMBRACO_COURSE_SEARCH_FILTER_JS
 
 @dataclass(frozen=True)
 class ListingAjaxSettings:
-    """Playwright selectors for LISTING_PAGINATION_MODE=ajax_click."""
+    """Playwright selectors for LISTING_PAGINATION_MODE=ajax_click or click."""
 
     wait_selector: str = "a.search-results__title__link"
     page_button_selector_template: str = '.pagination button.page-link[data-page="{page}"]'
@@ -105,6 +106,7 @@ class ListingAjaxSettings:
     level_checkbox_ids: tuple[str, ...] = ()
     mode_checkbox_ids: tuple[str, ...] = ()
     variant_checkbox_ids: tuple[str, ...] = ()
+    next_button_selector: str = DEFAULT_LISTING_CLICK_NEXT_SELECTOR
 
 
 def parse_umbraco_course_search_meta(html: str) -> tuple[int | None, int | None, int | None, int | None, int | None]:
