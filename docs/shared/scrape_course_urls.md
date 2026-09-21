@@ -75,7 +75,11 @@ Loops `page_index` until:
 
 **Does not stop** when a page has URLs but zero *new* unique URLs (fixes ARU foundation/UG overlap).
 
-`LISTING_PAGINATION_MODE=click` stays on the first listing page and clicks **Next** instead of `goto(?page=N)`. Use this when the pager is a Vue/button control (Kingston).
+| Mode | Behaviour |
+|------|-----------|
+| `url` (default) | `goto` each `*_COURSE_LISTING_PAGE_N` or `?page=` URL |
+| `ajax_click` | Stay on `*_COURSE_LISTING_PAGE_1`; click numbered pager buttons and wait for `DoCourseSearch` (Bedfordshire / Umbraco) |
+| `click` | Reserved for Vue **Next**-button listings (Kingston) — separate from `ajax_click` |
 
 ### `CourseUrlMatcher.is_course_url(url)`
 
