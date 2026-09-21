@@ -1,0 +1,9 @@
+Course Type,DegreeScopedPaginated.csv,,,,,,,,
+Uni Name,University of Bedfordshire,,,,,,,,
+Uni Link,https://www.beds.ac.uk,,,,,,,,
+Programme,ALL Course Listing URL,Paginated Course Listing URL - Page 1,Paginated Course Listing URL - Page 2,Course Detail Page URL,Bangladesh Entry Requirements URL,English Language Requirements URL,Scholarship Information URL,Deposit Information URL,Comments
+All,,,,,https://www.beds.ac.uk/international/countries/bangladesh/,https://www.beds.ac.uk/international/international-entry-requirements/,https://www.beds.ac.uk/international/fees-and-scholarships/,https://www.beds.ac.uk/international/fees-and-scholarships/,Uni requirement pages (deposit policy on fees page)
+Foundation,,https://www.beds.ac.uk/howtoapply/courses/undergraduatestudy/,,,,,,,FOUNDATION_LISTING_AJAX_VARIANT=with Foundation Year
+Undergraduate,,https://www.beds.ac.uk/howtoapply/courses/undergraduatestudy/,,,,,,,UNDERGRADUATE_LISTING_AJAX_LEVEL=Undergraduate
+Postgraduate,,https://www.beds.ac.uk/howtoapply/courses/postgraduate/,,,,,,,POSTGRADUATE_LISTING_AJAX_LEVEL=Postgraduate
+Postgraduate Research,,https://www.beds.ac.uk/howtoapply/courses/postgraduate/,,,,,,,POSTGRADUATE_RESEARCH_LISTING_AJAX_LEVEL=Postgraduate Research Scheme
