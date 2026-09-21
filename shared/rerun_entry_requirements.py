@@ -14,15 +14,17 @@ import json
 import sys
 from pathlib import Path
 
-from llm_extract import (
+from llm_extract import (  # noqa: E402
     COURSE_CSV_COLUMNS,
     ENGLISH_TEST_KEYS,
     EXTRACTED_CSV_REL,
+    PRESETUP_EXTRACT_SUBDIR,
     build_deterministic_row,
     build_output_json,
     combine_stage2_llm_parts,
     configure_code_dir,
     course_slug_from_url,
+    entries_from_presetup_clean,
     fill_template,
     finalize_academic_requirements_metadata,
     enrich_entry_parsed,
@@ -247,7 +249,12 @@ def rerun_entry_requirements_course(
     course_url = course_entry.get("course_url") or course_entry.get("courseUrlExternal", "")
     study_level = course_entry.get("study_level", "").strip()
     slug = course_slug_from_url(course_url)
-    audit_dir = extraction_dir(output_dir, slug, study_level)
+    audit_dir = extraction_dir(
+        output_dir,
+        slug,
+        study_level,
+        extract_root=course_entry.get("extract_root") or None,
+    )
 
     stage1_path = audit_dir / "stage1_parsed.json"
     if not stage1_path.exists():
@@ -319,6 +326,7 @@ def rerun_entry_requirements_course(
                     uni_content,
                     course_level,
                     entry_content=uni_sections.get("entry", ""),
+                    course_body=course_body,
                 ),
                 "AcademicRequirementsMetaData": [],
             },
@@ -367,6 +375,7 @@ def run_entry_rerun(
     normalize: bool = False,
     export_dev_csv: bool = False,
     skip_uni_validation: bool = False,
+    presetup: bool = False,
 ) -> None:
     code_dir = resolve_code_dir(code_dir)
     output_dir = resolve_output_dir(code_dir)
@@ -376,13 +385,17 @@ def run_entry_rerun(
 
         ensure_uni_clean_valid(output_dir, university_name=code_dir.parent.name, code_dir=code_dir)
 
-    courses = [index_row_to_entry(row) for row in read_course_index_csv(output_dir)]
+    if presetup:
+        courses = entries_from_presetup_clean(output_dir)
+        output_csv = output_dir / "extracted" / PRESETUP_EXTRACT_SUBDIR / "extracted_courses.csv"
+    else:
+        courses = [index_row_to_entry(row) for row in read_course_index_csv(output_dir)]
+        output_csv = output_dir / EXTRACTED_CSV_REL
     if limit is not None:
         courses = courses[:limit]
 
     progress = load_entry_rerun_progress(output_dir)
     completed = set(progress.get("completed", []))
-    output_csv = output_dir / EXTRACTED_CSV_REL
 
     mode = "LLM entry re-extract" if use_llm else "JSON merge-only entry fix"
     print(f"University: {code_dir.parent.name}", flush=True)
@@ -410,13 +423,14 @@ def run_entry_rerun(
                 use_llm=use_llm,
             )
             upsert_extracted_csv_row(output_csv, row)
-            update_course_index_outputs(
-                output_dir,
-                md_file=entry["md_file"],
-                stage1_output="",
-                stage2_output=stage2_output,
-                output_json=output_json,
-            )
+            if not presetup:
+                update_course_index_outputs(
+                    output_dir,
+                    md_file=entry["md_file"],
+                    stage1_output="",
+                    stage2_output=stage2_output,
+                    output_json=output_json,
+                )
             completed.add(slug)
             progress["completed"] = sorted(completed)
             save_entry_rerun_progress(output_dir, progress)
@@ -482,6 +496,11 @@ def main() -> int:
         action="store_true",
         help="Skip output/clean/uni validation gate before entry rerun",
     )
+    parser.add_argument(
+        "--presetup",
+        action="store_true",
+        help="Re-run entry for extracted/pre_setup_course_extracted instead of the full catalogue",
+    )
     args = parser.parse_args()
 
     try:
@@ -496,6 +515,7 @@ def main() -> int:
             normalize=args.normalize or args.export_dev_csv,
             export_dev_csv=args.export_dev_csv,
             skip_uni_validation=args.skip_uni_validation,
+            presetup=args.presetup,
         )
     except Exception as exc:
         print(f"Error: {exc}", file=sys.stderr)

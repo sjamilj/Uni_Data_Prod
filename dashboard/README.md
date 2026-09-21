@@ -4,7 +4,7 @@ Double-click `START.bat` on Windows, or run `START.sh` on macOS/Linux. No machin
 
 The window lists every university folder that has `code/ENV.MD` and shows pipeline status from files on disk. Phase buttons run `shared/*.py` with `--code-dir`.
 
-Full wiring guide: [`../dashboard.md`](../dashboard.md)
+Full wiring guide: [`../docs/dashboard.md`](../docs/dashboard.md)
 
 ## Run mode
 

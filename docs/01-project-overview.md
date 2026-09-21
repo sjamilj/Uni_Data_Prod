@@ -65,6 +65,6 @@ The dashboard labels these as buttons 1–5 plus normalize/export at the end of 
 
 ## See also
 
-- Operational workflow: [PIPELINE.md](../PIPELINE.md)
+- Operational workflow: [PIPELINE.md](PIPELINE.md)
 - Architecture detail: [02-architecture.md](02-architecture.md)
 - Learning path: [00-start-here.md](00-start-here.md)

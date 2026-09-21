@@ -11,7 +11,7 @@ F1 pipeline configuration for [Anglia Ruskin University](https://www.aru.ac.uk).
 | **CMS / layout** | Sitecore **Utopian** course templates (`#utopian-course-overview`, tabs, accordions) |
 | **Portal CSV** | `Anglia Ruskin University - ARU_portal.csv` |
 
-Full pipeline reference: [`../PIPELINE.md`](../PIPELINE.md)
+Full pipeline reference: [`../docs/PIPELINE.md`](../docs/PIPELINE.md)
 
 ---
 
@@ -293,7 +293,7 @@ python "..\..\shared\download_and_clean_course_pages.py" --code-dir "D:\DATA SCO
 
 | Doc | Topic |
 |-----|-------|
-| [`../PIPELINE.md`](../PIPELINE.md) | Full F1 pipeline + Mermaid flowcharts |
-| [`../scrape_course_urls_CMD.md`](../scrape_course_urls_CMD.md) | Phase 1 CMD commands (this PC) |
+| [`../docs/PIPELINE.md`](../docs/PIPELINE.md) | Full F1 pipeline + Mermaid flowcharts |
+| [`../docs/07-how-to-run.md`](../docs/07-how-to-run.md) | CLI commands (any PC) |
 | [`../shared/course_markdown_cleanup.md`](../shared/course_markdown_cleanup.md) | Cleanup module contract |
 | [`../_university_template/README.md`](../_university_template/README.md) | Generic university template |

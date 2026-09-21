@@ -110,4 +110,4 @@ Before modifying this file, understand:
 
 1. [related-module.md](../shared/related-module.md)
 2. [feature-flow.md](../features/feature-flow.md)
-3. Operational runbook: [PIPELINE.md](../../PIPELINE.md)
+3. Operational runbook: [PIPELINE.md](../PIPELINE.md)

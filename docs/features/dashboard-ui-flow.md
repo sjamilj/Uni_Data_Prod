@@ -106,4 +106,4 @@ The dashboard could have imported `CourseUrlScraper` directly, but subprocess is
 1. [dashboard/main_window.md](../dashboard/main_window.md)
 2. [dashboard/task_runner.md](../dashboard/task_runner.md)
 3. [shared/pipeline_status.md](../shared/pipeline_status.md)
-4. [dashboard.md](../../dashboard.md)
+4. [dashboard.md](../dashboard.md)

@@ -1,0 +1,5 @@
+Course Type,DegreeScopedPaginated.csv,,,,,,,,
+Uni Name,University of Salford,,,,,,,,
+Uni Link,https://www.salford.ac.uk,,,,,,,,
+Programme,ALL Course Listing URL,Paginated Course Listing URL - Page 1,Paginated Course Listing URL - Page 2,Course Detail Page URL,Bangladesh Entry Requirements URL,English Language Requirements URL,Scholarship Information URL,Deposit Information URL,Comments
+All,,https://www.salford.ac.uk/search/courses?query=&field_enrolment_year=All&field_subject_area_name=All&field_delivery_mode_name%5BFulltime%5D=Fulltime&field_available_to_international=1&page=0,https://www.salford.ac.uk/search/courses?query=&field_enrolment_year=All&field_subject_area_name=All&field_delivery_mode_name%5BFulltime%5D=Fulltime&field_available_to_international=1&page=1,https://www.salford.ac.uk/courses/postgraduate/accounting-and-finance,https://www.salford.ac.uk/international/your-country-or-region/bangladesh,https://www.salford.ac.uk/international/english-language-requirements,https://www.salford.ac.uk/international/scholarships,,

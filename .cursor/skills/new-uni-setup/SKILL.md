@@ -1,7 +1,7 @@
 ---
 name: new-uni-setup
 description: >-
-  Reset shared/ to shared/v1.2.0, pick variant CSV and STRATEGY for a new university folder.
+  Reset shared/ to shared/v1.2.1, pick variant CSV and STRATEGY for a new university folder.
   Use when the user says new-uni-setup, start a brand-new university, onboarding from scratch,
   or reset shared before a new uni.
 disable-model-invocation: true
@@ -13,13 +13,13 @@ disable-model-invocation: true
 
 Follow [git-for-operator.md](../git-for-operator.md). Do not run git in the terminal. Give separate command blocks with recommended commit/tag `-m` text for each git step.
 
-- Shared reset baseline: [CONTRIBUTING.md](../../CONTRIBUTING.md#shared-infrastructure-baseline) (`shared/v1.2.0`).
+- Shared reset baseline: [CONTRIBUTING.md](../../CONTRIBUTING.md#shared-infrastructure-baseline) (`shared/v1.2.1`).
 - University scope for later commits: look up `unit-NN` / slug in [UNIVERSITIES_REGISTRY.md](../../UNIVERSITIES_REGISTRY.md).
 - Optional helpers: [scripts/README.md](../../scripts/README.md) (`checkout-uni.cmd`, `commit-uni.cmd` with `-Pick infra` only for repo-wide docs/skills).
 
 ## Before anything destructive
 
-Ask the user to run `git status` (or they paste output). List every modified path under `shared/` that would be lost on reset. Do not tell them to run `git checkout shared/v1.2.0 -- shared/` until they confirm.
+Ask the user to run `git status` (or they paste output). List every modified path under `shared/` that would be lost on reset. Do not tell them to run `git checkout shared/v1.2.1 -- shared/` until they confirm.
 
 Per-university behaviour belongs in `{University}/code/.env`, `code/ENV.MD`, and `code/course_markdown_cleanup.py` — never in `shared/`.
 
@@ -29,7 +29,7 @@ Give the user (one command block; they run it):
 
 ```powershell
 cd "<repo-root>"
-git checkout shared/v1.2.0 -- shared/
+git checkout shared/v1.2.1 -- shared/
 ```
 
 ## Pick the university

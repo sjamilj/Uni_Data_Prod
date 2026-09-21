@@ -99,7 +99,7 @@ Discovery is in `shared/pipeline_status.py`:
 - **Include** if `{Folder}/code/ENV.MD` exists.
 - **Skip** `shared`, `dashboard`, `_university_template`, and dot-folders.
 
-The **folder name** is passed as `--code-dir "{Folder}/code"` to the Python scripts. Keep folder names aligned with `RUN.md`.
+The **folder name** is passed as `--code-dir "{Folder}/code"` to the Python scripts. Keep folder names aligned with [UNIVERSITIES_REGISTRY.md](../UNIVERSITIES_REGISTRY.md) and `UK Course.csv`.
 
 ---
 
@@ -187,7 +187,7 @@ These were **added**; they do not replace existing pipeline scripts.
 | `shared/pipeline_status.py` | Disk scanner + CLI (`--json`) |
 | `shared/run_llm_to_dev_csv.py` | Phases 3–5 (dashboard + CLI) |
 
-Repo-root `run_*.ps1` files remain optional PowerShell wrappers. They use `$PSScriptRoot` (no hardcoded drives).
+All phases are invoked via `python shared/*.py` from the repo root (`--code-dir`); see [07-how-to-run.md](07-how-to-run.md).
 
 ---
 
@@ -211,8 +211,8 @@ No changes to `shared/scrape_course_urls.py`, `shared/download_and_clean_course_
 
 | File | Change |
 |------|--------|
-| `RUN.md` | Dashboard quick start, equivalent PowerShell one-liners, `pipeline_status.py` CLI |
-| `PIPELINE.md` | Dashboard section at top; manual script examples |
+| [PIPELINE.md](PIPELINE.md) | Full workflow; dashboard section and manual script examples |
+| [07-how-to-run.md](07-how-to-run.md) | CLI quick reference (`pipeline_status.py`, per-phase `shared/*.py`) |
 | `scrape_course_urls_RUN.md` | Notes that `scrape.log` / `scrape_progress.json` are tracked |
 
 ### 3. `.gitignore` comments
@@ -240,7 +240,7 @@ The dashboard only passes through flags the wrappers already supported (`--fresh
 2. Ensure `{New University Name}/code/ENV.MD` exists (required for discovery).
 3. Save the three `uni_req/*.html` files for Setup = done.
 4. Restart or click **Refresh** — the row appears automatically.
-5. Run phases in order from the dashboard or matching `run_*.ps1` commands.
+5. Run phases in order from the dashboard or `python shared/*.py` (see [07-how-to-run.md](07-how-to-run.md)).
 
 No dashboard code changes are needed unless you add custom phase scripts.
 
@@ -286,14 +286,12 @@ Python phase scripts (called by the dashboard):
 | `shared/download_and_clean_course_pages.py` | 2b — download + clean courses |
 | `shared/run_llm_to_dev_csv.py` | 3–5 — LLM → normalize → dev CSV |
 
-Repo-root `.ps1` wrappers still exist for PowerShell users; the dashboard does not require them.
-
-Equivalent command references: [`scrape_course_urls_CMD.md`](scrape_course_urls_CMD.md), [`download_and_clean_course_pages_CMD.md`](download_and_clean_course_pages_CMD.md), [`run_llm_to_dev_csv_CMD.md`](run_llm_to_dev_csv_CMD.md).
+Per-phase detail: [`shared/`](shared/) (e.g. [`scrape_course_urls.md`](shared/scrape_course_urls.md), [`download_and_clean_course_pages.md`](shared/download_and_clean_course_pages.md), [`run_llm_to_dev_csv.md`](shared/run_llm_to_dev_csv.md)).
 
 ---
 
 ## Related docs
 
-- [`RUN.md`](RUN.md) — full command reference
-- [`PIPELINE.md`](PIPELINE.md) — phase flow and artifacts
-- [`dashboard/README.md`](dashboard/README.md) — short operator cheat sheet
+- [PIPELINE.md](PIPELINE.md) — phase flow and artifacts
+- [07-how-to-run.md](07-how-to-run.md) — CLI quick reference
+- [`../dashboard/README.md`](../dashboard/README.md) — short operator cheat sheet

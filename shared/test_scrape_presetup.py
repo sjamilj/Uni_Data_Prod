@@ -90,6 +90,27 @@ class ScrapePresetupSampleTests(unittest.TestCase):
             "foundation",
         )
 
+    def test_same_url_can_be_undergraduate_and_foundation_via_listing_scope(self) -> None:
+        classifier = StudyLevelClassifier.from_env_lists(
+            {"undergraduate": [r"^/course/undergraduate/"]}
+        )
+        url = "https://www.uwl.ac.uk/course/undergraduate/business-studies"
+        mapping = UrlLevelMap()
+        mapping.tag_urls(
+            [url],
+            scope="search",
+            classifier=classifier,
+            source_scope="search",
+        )
+        mapping.tag_urls(
+            [url],
+            scope="FOUNDATION",
+            classifier=classifier,
+            source_scope="FOUNDATION",
+            scope_determines_level=True,
+        )
+        self.assertEqual(set(mapping.levels_for(url)), {"foundation", "undergraduate"})
+
     def test_presetup_scrape_does_not_replace_full_course_urls(self) -> None:
         import tempfile
         from scrape_course_urls import ArtifactStore, ProgressStore

@@ -1,18 +1,23 @@
-# University of Hull — degree-scoped ALL_COURSE catalogues (one run for all scopes)
+# University of Hull — degree-scoped paginated search listings (Template.csv)
 UNIVERSITY_NAME=University of Hull
 
-STRATEGY=ALL_COURSE
-
-UNDERGRADUATE_COURSE_CATALOGUE_URL=https://www.hull.ac.uk/study/undergraduate/courses
-UNDERGRADUATE_COURSE_CATALOGUE_HTML=../course_listing/All Undergraduate Courses _ University of Hull.html
-
-POSTGRADUATE_COURSE_CATALOGUE_URL=https://www.hull.ac.uk/study/postgraduate-taught/courses
-POSTGRADUATE_COURSE_CATALOGUE_HTML=../course_listing/All Postgraduate Taught Courses _ University of Hull.html
-
-POSTGRADUATE_RESEARCH_COURSE_CATALOGUE_URL=https://www.hull.ac.uk/study/postgraduate-research/courses
-POSTGRADUATE_RESEARCH_COURSE_CATALOGUE_HTML=../course_listing/All postgraduate research areas of study _ University of Hull.html
+STRATEGY=DEGREE_SCOPED_PAGINATED
 
 UNIVERSITY_BASE_URL=https://www.hull.ac.uk
+
+# --- DEGREE_SCOPED_PAGINATED: COURSE_LISTING_PAGE_1 / PAGE_2 (from Template.csv) ---
+# Foundation
+FOUNDATION_COURSE_LISTING_PAGE_1=https://www.hull.ac.uk/search/courses?q=&level=undergraduate&option=foundation-year&year=2027&mode=full-time&page=1
+FOUNDATION_COURSE_LISTING_PAGE_2=https://www.hull.ac.uk/search/courses?q=&level=undergraduate&option=foundation-year&year=2027&mode=full-time&page=2
+# Undergraduate
+UNDERGRADUATE_COURSE_LISTING_PAGE_1=https://www.hull.ac.uk/search/courses?q=&mode=full-time&page=1&level=undergraduate&year=2027
+UNDERGRADUATE_COURSE_LISTING_PAGE_2=https://www.hull.ac.uk/search/courses?q=&mode=full-time&page=2&level=undergraduate&year=2027
+# Postgraduate
+POSTGRADUATE_COURSE_LISTING_PAGE_1=https://www.hull.ac.uk/search/courses?q=&mode=full-time&page=1&level=postgraduate-taught&year=2027
+POSTGRADUATE_COURSE_LISTING_PAGE_2=https://www.hull.ac.uk/search/courses?q=&mode=full-time&page=2&level=postgraduate-taught&year=2027
+# Postgraduate Research
+POSTGRADUATE_RESEARCH_COURSE_LISTING_PAGE_1=https://www.hull.ac.uk/search/courses?q=&mode=full-time&page=1&level=postgraduate-research&year=2027
+POSTGRADUATE_RESEARCH_COURSE_LISTING_PAGE_2=https://www.hull.ac.uk/search/courses?q=&mode=full-time&page=2&level=postgraduate-research&year=2027
 
 #COURSE_LINK_SELECTOR=
 
@@ -60,13 +65,6 @@ EXCLUDED_PATH_PREFIXES="
 /events/
 "
 
-
-
-"
-
-
-"
-
 # --- Course page cleaning (download_and_clean_course_pages.py — course_detail/) ---
 
 COURSE_PAGE_TITLE_SELECTOR=main h1
@@ -76,7 +74,9 @@ COURSE_CLEAN_ENGINE=generic
 
 # One CSS selector per line; optional heading with :: or |
 COURSE_CLEAN_BLOCKS="
-Course content :: main
+Key facts :: #hull-course-key-facts
+Entry Requirements :: section[aria-label="Entry Requirements"]
+Fees & Funding :: section[aria-label="Fees & Funding"]
 "
 
 # Noise removed inside each matched block before markdown conversion
@@ -92,10 +92,25 @@ COURSE_CLEAN_EXPAND_TABS=true
 
 # --- Course markdown cleanup (shared/course_markdown_cleanup.py) ---
 COURSE_MARKDOWN_REMOVE_SECTIONS="
+2 :: Course content
+2 :: Boost your CV
+2 :: AMBA & AACSB
+2 :: Study abroad
+2 :: Specialise
+2 :: Participate in live projects
+2 :: About this course
+2 :: Module options
+2 :: Our facilities
+2 :: Featured academics
+2 :: Future prospects
+2 :: Become part of the next generation*
+2 :: Not ready to apply yet?
+2 :: You may also be interested in*
 2 :: Latest news
 2 :: Be part of our community
 2 :: Alumni services
 2 :: *Read more news*
+3 :: Watchlist
 4 :: With placement
 4 :: With foundation year
 4 :: Important additional notes
@@ -110,5 +125,5 @@ COURSE_MARKDOWN_REMOVE_SECTIONS="
 UNI_REQ_SOURCE_URLS="
 bangladesh-entry :: https://www.hull.ac.uk/study/international-students/your-country/bangladesh
 english-requirements :: https://www.hull.ac.uk/study/international-students/how-to-apply/english-language-requirements#accepted-english-qualifications
-scholarships :: page_type:
+scholarships :: https://www.hull.ac.uk/study/postgraduate-taught/fees-and-funding/scholarships-and-awards
 "

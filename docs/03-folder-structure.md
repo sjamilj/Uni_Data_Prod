@@ -4,12 +4,10 @@
 
 ```
 UK_Uni_Data/
-├── docs/                    # Learning documentation (this tree)
+├── docs/                    # Learning docs + runbooks (PIPELINE.md, dashboard.md, …)
 ├── shared/                  # Shared pipeline Python + prompts
 ├── dashboard/               # PySide6 desktop UI
 ├── _university_template/    # Copy for new universities
-├── PIPELINE.md              # Operational runbook
-├── dashboard.md             # Dashboard wiring guide
 ├── README.md
 └── {University Name}/       # One folder per university
 ```

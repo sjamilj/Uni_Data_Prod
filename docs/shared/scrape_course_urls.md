@@ -130,4 +130,4 @@ Strategy comes from `STRATEGY` in `.env` — no code change needed to switch uni
 
 1. [features/scrape-urls-flow.md](../features/scrape-urls-flow.md)
 2. [study_level.md](study_level.md)
-3. [PIPELINE.md](../../PIPELINE.md)
+3. [PIPELINE.md](../PIPELINE.md)

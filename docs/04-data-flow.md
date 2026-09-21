@@ -115,12 +115,12 @@ The dashboard does not compute progress itself — `pipeline_status.py` infers c
 | Norm | `normalized.json` exists per slug |
 | CSV | `dev_courses_*.csv` exists |
 
-See [dashboard.md](../dashboard.md) for full column definitions.
+See [dashboard.md](dashboard.md) for full column definitions.
 
 ---
 
 ## See also
 
 - [features/](features/) — step-by-step flows per phase
-- [PIPELINE.md](../PIPELINE.md) — commands and examples
+- [PIPELINE.md](PIPELINE.md) — commands and examples
 - [02-architecture.md](02-architecture.md)
