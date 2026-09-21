@@ -1,93 +1,123 @@
+# University of East London — degree-scoped ALL_COURSE catalogues
 UNIVERSITY_NAME=University of East London
 
 STRATEGY=ALL_COURSE
 
-# --- ALL_COURSE: saved catalogue HTML ---
-UNDERGRADUATE_COURSE_CATALOGUE_HTML=../course_listing/undergraduate.html
+# --- ALL_COURSE: catalogues (DegreeScopedALLCourse.csv) ---
+# Foundation uses saved HTML. UG/PG: save listing HTML, then uncomment the HTML keys.
+FOUNDATION_COURSE_CATALOGUE_URL=https://uelisc.com/our-programmes/international-foundation-programme/
+FOUNDATION_COURSE_CATALOGUE_HTML=../course_listing/foundation.html
+
 UNDERGRADUATE_COURSE_CATALOGUE_URL=https://www.uel.ac.uk/study/undergraduate/courses
+# UNDERGRADUATE_COURSE_CATALOGUE_HTML=../course_listing/undergraduate.html
 
-POSTGRADUATE_COURSE_CATALOGUE_HTML=../course_listing/postgraduate.html
 POSTGRADUATE_COURSE_CATALOGUE_URL=https://www.uel.ac.uk/study/postgraduate/courses
+# POSTGRADUATE_COURSE_CATALOGUE_HTML=../course_listing/postgraduate.html
 
-# --- DEGREE_SCOPED_PAGINATED (not used for ALL_COURSE) ---
-# UNDERGRADUATE_COURSE_LISTING_PAGE_1=
+# Foundation listing = UEL ISC IFP page. Scrape takes progression-degree <a href>s
+# (Business & Management + Engineering, Computing & Science) as foundation URLs on uel.ac.uk.
+# The IFP page itself is also kept. Same UG URL may also appear under undergraduate.
+# PGR (MPhil/PhD, Prof Doc, EdD) is listed on the postgraduate catalogue.
 
 UNIVERSITY_BASE_URL=https://www.uel.ac.uk
 
 # Optional — only scan matching anchors (blank = all <a href>)
 #COURSE_LINK_SELECTOR=
 
+# Sample paths: /undergraduate/courses/bsc-hons-computer-science
+#               /postgraduate/courses/msc-civil-engineering
+#               /our-programmes/international-foundation-programme/ (uelisc.com)
 COURSE_PATH_PATTERNS="
 ^/(?:undergraduate|postgraduate)/courses/[a-z0-9\-]+$
+^/our-programmes/international-foundation-programme/?$
 "
 
 # --- Study-level URL split (fallback when a catalogue is not degree-scoped) ---
 UNDERGRADUATE_URL_PATTERNS="
 ^/undergraduate(?:/|$)
-(?:^|[-_/])(?:bsc|ba|beng|llb|mbchb|moptom|mpharm)(?:[-_/]|$)
+(?:^|[-_/])(?:bsc|ba|beng|llb|mbchb|moptom|mpharm|fdsc)(?:[-_/]|$)
 "
 
 POSTGRADUATE_URL_PATTERNS="
 ^/postgraduate(?:/|$)
-(?:^|[-_/])(?:msc|mba|llm|pgdip|pgcert|ma)(?:[-_/]|$)
+(?:^|[-_/])(?:msc|mba|llm|pgdip|pgcert|ma|march)(?:[-_/]|$)
 "
 
 POSTGRADUATE_RESEARCH_URL_PATTERNS="
-courses-phd
-(?:^|[-_/])(?:phd|mres|engd|psychd)(?:[-_/]|$)
+(?:^|[-_/])(?:mphil-phd|prof-doc|edd|phd|mres|engd|psychd|mphil)(?:[-_/]|$)
 "
 
 FOUNDATION_URL_PATTERNS="
+international-foundation-programme
 foundation
+(?:^|[-_/])fdsc(?:[-_/]|$)
 "
 
 EXCLUDED_COURSE_PATHS="
+/study/undergraduate/courses
+/study/postgraduate/courses
+/undergraduate/courses
+/postgraduate/courses
+/our-programmes
+/our-programmes/international-year-one
+/our-programmes/pre-masters-business-and-humanities
+/our-programmes/pre-masters-english-and-research-skills
 "
 
 EXCLUDED_PATH_PREFIXES="
+/international/
+/study/fees-funding/
+/clearing/
+/current-students/
+/alumni
+/information/
+/about/
+/research/
+/news/
+/events/
+/blog/
+/visa-immigration-advice/
+/zh/
+/vi/
+/th/
+/ar/
+/ru/
 "
 
-
-
-Course overview ::
-Entry requirements ::
-Fees and funding ::
+# Skip online / distance-learning slugs at download/clean (they can still appear in course_urls.csv)
+COURSE_EXCLUDE_URL_PATTERNS="
+*-online
+*distance-learning*
+*distance*
+*part-time*
+*parttime*
 "
 
-script
-noscript
+COURSE_EXCLUDE_COURSE_TYPES="
+*part-time*
+*distance learning*
+*online*
 "
 
+# --- Course page cleaning (tune from course_detail/ samples) ---
+# Keep h1 + international full-time .course-option-details + start-date buttons.
+# Home / part-time / overview / entry are dropped in preprocess_course_html_uni.
 
-4 :: With placement
-4 :: With foundation year
-3 :: UK students
-"
-
-bangladesh-entry :: https://www.uel.ac.uk/international/guidance-your-region/south-asia/bangladesh
-english-requirements :: https://www.uel.ac.uk/regions/english-language-requirements
-"
-
-# --- Course page cleaning (download_and_clean_course_pages.py — course_detail/) ---
-
-COURSE_PAGE_TITLE_SELECTOR=.postgraduate--course-page h1
+COURSE_PAGE_TITLE_SELECTOR=h1
 
 # generic (default) | utopian (ARU) | plugin | auto
 COURSE_CLEAN_ENGINE=generic
 
-# One CSS selector per line; optional heading with :: or |
 COURSE_CLEAN_BLOCKS="
-Course page :: .page-node-type-course-page main
-Overview :: .coh-ce-cpt_course_page_progressive_reve-89a86a32
-Entry requirements :: section[id*="entry-requirements"]
-Fees :: section[id*="fees"]
+ :: #uel-clean-facts
 "
 
-# Noise removed inside each matched block before markdown conversion
 COURSE_CLEAN_STRIP_WITHIN="
 script
 noscript
 nav
+.apply-link
+.right
 .progressive-reveal-modal
 .coh-modal
 "
@@ -97,23 +127,16 @@ COURSE_CLEAN_EXPAND_TABS=true
 # --- Course markdown cleanup (shared/course_markdown_cleanup.py) ---
 COURSE_MARKDOWN_REMOVE_SECTIONS="
 2 :: Latest news
-2 :: Be part of our community
-2 :: Alumni services
-2 :: *Read more news*
+3 :: Home Applicant
+3 :: UK students
+4 :: *part-time*
 4 :: With placement
 4 :: With foundation year
-4 :: Important additional notes
-4 :: *part-time*
-3 :: UK students
-3 :: Contextual offers
-3 :: Living costs
-5 :: UK students*
-5 :: *part-time*
 "
 
 UNI_REQ_SOURCE_URLS="
-bangladesh-entry ::
-english-requirements ::
-scholarships ::
-deposit ::
+bangladesh-entry :: https://www.uel.ac.uk/international/guidance-your-region/south-asia/bangladesh
+english-requirements :: https://www.uel.ac.uk/regions/english-language-requirements
+scholarships :: https://www.uel.ac.uk/study/fees-funding/international-fees-funding/international-scholarships
+deposit :: https://www.uel.ac.uk/study/fees-funding/paying-your-fees-international-students
 "

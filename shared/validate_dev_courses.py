@@ -200,6 +200,7 @@ class DevCoursesValidator:
         )
 
     @classmethod
+    @classmethod
     def infer_degree_name(
         cls,
         row: dict[str, str],
