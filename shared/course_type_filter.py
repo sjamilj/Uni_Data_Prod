@@ -21,6 +21,13 @@ _COURSE_TYPE_MARKDOWN_RE = re.compile(r"^\*\*Course type:\*\*\s*(.+)\s*$", re.M 
 _DURATION_MARKDOWN_RE = re.compile(r"^\*\*Duration:\*\*\s*(.+)\s*$", re.M | re.I)
 _FULL_TIME_MODE_RE = re.compile(r"\bfull[-\s]?time\b", re.I)
 _PART_TIME_MODE_RE = re.compile(r"\bpart[-\s]?time\b", re.I)
+_SANDWICH_MODE_RE = re.compile(r"\bsandwich\b|\bindustrial practice\b", re.I)
+_OVERSEAS_HEADING_RE = re.compile(r"available to overseas students\??", re.I)
+_YES_NO_RE = re.compile(r"^(yes|no)\b", re.I)
+_OVERSEAS_NO_TEXT_RE = re.compile(
+    r"available to overseas students\??\s*no\b",
+    re.I,
+)
 
 
 def study_mode_is_part_time_only(text: str) -> bool:
@@ -28,6 +35,15 @@ def study_mode_is_part_time_only(text: str) -> bool:
     if not text or not text.strip():
         return False
     if not _PART_TIME_MODE_RE.search(text):
+        return False
+    return not _FULL_TIME_MODE_RE.search(text)
+
+
+def study_mode_is_sandwich_only(text: str) -> bool:
+    """True when duration is sandwich / industrial practice with no full-time mode."""
+    if not text or not text.strip():
+        return False
+    if not _SANDWICH_MODE_RE.search(text):
         return False
     return not _FULL_TIME_MODE_RE.search(text)
 
@@ -116,14 +132,49 @@ class CourseTypeExtractor:
         return CourseTypeExtractor.study_options_from_plaintext(markdown)
 
     @staticmethod
+    def duration_from_html(html: str) -> str | None:
+        """Greenwich (and similar) duration lives in #prog-mode, not Study options."""
+        soup = BeautifulSoup(html, "html.parser")
+        mode = soup.select_one("#prog-mode")
+        if mode is None:
+            return None
+        text = mode.get_text(" ", strip=True)
+        return text or None
+
+    @staticmethod
     def study_options_from_html(html: str) -> str | None:
         soup = BeautifulSoup(html, "html.parser")
+        mode = soup.select_one("#prog-mode")
+        if mode is not None:
+            text = mode.get_text(" ", strip=True)
+            if text:
+                return text
         root = soup.select_one("#key-course-details") or soup.body or soup
         if not root:
             return None
         return CourseTypeExtractor.study_options_from_plaintext(
             root.get_text("\n", strip=True),
         )
+
+    @staticmethod
+    def overseas_available_from_html(html: str) -> bool | None:
+        """True/False from Greenwich 'Available to overseas students?'; None if absent."""
+        soup = BeautifulSoup(html, "html.parser")
+        for heading in soup.find_all(["h2", "h3", "h4", "h5"]):
+            if not _OVERSEAS_HEADING_RE.search(heading.get_text(" ", strip=True)):
+                continue
+            nxt = heading.find_next(["p", "li"])
+            if nxt is None:
+                return None
+            match = _YES_NO_RE.match(nxt.get_text(" ", strip=True))
+            if not match:
+                return None
+            return match.group(1).casefold() == "yes"
+        return None
+
+    @staticmethod
+    def overseas_closed_from_text(text: str) -> bool:
+        return bool(_OVERSEAS_NO_TEXT_RE.search(text or ""))
 
 
 @dataclass
@@ -172,12 +223,25 @@ class CourseTypeFilter:
     def excludes_part_time_study_modes(self) -> bool:
         return self.course_type_is_excluded("part-time")
 
+    def excludes_sandwich_study_modes(self) -> bool:
+        return self.course_type_is_excluded("sandwich") or any(
+            "sandwich" in pattern.casefold() or "industrial-practice" in pattern.casefold()
+            for pattern in self.exclude_url_patterns
+        )
+
     def _exclude_part_time_only_study_mode(self, study_text: str | None) -> bool:
         if not self.excludes_part_time_study_modes() or not study_text:
             return False
         return study_mode_is_part_time_only(study_text)
 
+    def _exclude_sandwich_only_study_mode(self, study_text: str | None) -> bool:
+        if not self.excludes_sandwich_study_modes() or not study_text:
+            return False
+        return study_mode_is_sandwich_only(study_text)
+
     def should_exclude_html(self, html: str, *, url: str | None = None) -> bool:
+        if CourseTypeExtractor.overseas_available_from_html(html) is False:
+            return True
         if not self.enabled:
             return False
         if self.url_is_excluded(url):
@@ -188,10 +252,19 @@ class CourseTypeFilter:
         )
         if self.course_type_is_excluded(course_type):
             return True
+        duration = CourseTypeExtractor.duration_from_html(html)
+        if self._exclude_part_time_only_study_mode(duration):
+            return True
+        if self._exclude_sandwich_only_study_mode(duration):
+            return True
         study = CourseTypeExtractor.study_options_from_html(html)
-        return self._exclude_part_time_only_study_mode(study)
+        if self._exclude_part_time_only_study_mode(study):
+            return True
+        return self._exclude_sandwich_only_study_mode(study)
 
     def should_exclude_markdown(self, markdown: str, *, url: str | None = None) -> bool:
+        if CourseTypeExtractor.overseas_closed_from_text(markdown):
+            return True
         if not self.enabled:
             return False
         if self.url_is_excluded(url):
@@ -200,10 +273,15 @@ class CourseTypeFilter:
         if course_type and self.course_type_is_excluded(course_type):
             return True
         duration_match = _DURATION_MARKDOWN_RE.search(markdown)
-        if duration_match and self._exclude_part_time_only_study_mode(duration_match.group(1)):
+        duration = duration_match.group(1) if duration_match else None
+        if self._exclude_part_time_only_study_mode(duration):
+            return True
+        if self._exclude_sandwich_only_study_mode(duration):
             return True
         study = CourseTypeExtractor.study_options_from_markdown(markdown)
-        return self._exclude_part_time_only_study_mode(study)
+        if self._exclude_part_time_only_study_mode(study):
+            return True
+        return self._exclude_sandwich_only_study_mode(study)
 
 
 # Backward-compatible aliases

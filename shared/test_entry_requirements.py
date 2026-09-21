@@ -299,6 +299,63 @@ class EntryRequirementsTests(unittest.TestCase):
         )
         self.assertEqual(kept, descriptions)
 
+    def test_pg_bangladesh_picks_2_2_gpa_not_2_1(self) -> None:
+        data = {
+            "studyLevels": [
+                {
+                    "studyLevel": "Postgraduate",
+                    "programs": [
+                        {
+                            "program": "UK 2:2",
+                            "requirements": [
+                                {"degree": "BA", "grade": "GPA 2.5"},
+                                {"degree": "BSc", "grade": "GPA 2.5"},
+                            ],
+                            "description": [
+                                "Four-year bachelor degree with a minimum GPA 2.5 for UK 2:2."
+                            ],
+                        },
+                        {
+                            "program": "UK 2:1",
+                            "requirements": [
+                                {"degree": "BA", "grade": "GPA 2.8"},
+                                {"degree": "BSc", "grade": "GPA 2.8"},
+                            ],
+                            "description": [
+                                "Four-year bachelor degree with a minimum GPA 2.8 for UK 2:1."
+                            ],
+                        },
+                    ],
+                }
+            ]
+        }
+        course_text = (
+            "An undergraduate (honours) degree at 2:2, or above, in Forensic Science."
+        )
+        requirements = parse_bangladesh_json_requirements(
+            data,
+            "postgraduate",
+            course_text=course_text,
+        )
+        self.assertEqual(
+            requirements,
+            [
+                {"degree": "BA", "grade": "GPA 2.5"},
+                {"degree": "BSc", "grade": "GPA 2.5"},
+            ],
+        )
+        kept = filter_bangladesh_descriptions_for_course(
+            [
+                "Four-year bachelor degree with a minimum GPA 2.5 for UK 2:2.",
+                "Four-year bachelor degree with a minimum GPA 2.8 for UK 2:1.",
+            ],
+            course_text=course_text,
+        )
+        self.assertEqual(
+            kept,
+            ["Four-year bachelor degree with a minimum GPA 2.5 for UK 2:2."],
+        )
+
     def test_extract_entry_lines_from_bcu_foundation_markdown(self) -> None:
         repo_root = _SHARED.parent
         md_path = repo_root / BCU_FOUNDATION_MD

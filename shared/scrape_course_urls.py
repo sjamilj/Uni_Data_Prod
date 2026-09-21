@@ -564,24 +564,10 @@ class CourseUrlMatcher:
     def __init__(self, domain: str, rules: MatchingRules):
         self.domain = domain
         self.rules = rules
-        allowed = self.host_aliases(domain)
-        if rules.base_url:
-            allowed |= self.host_aliases(urlparse(rules.base_url).netloc)
-        self.allowed_hosts = allowed
-
-    @staticmethod
-    def host_aliases(host: str) -> set[str]:
-        """www and apex forms of a host (pathway catalogues often link to the main uni)."""
-        host = (host or "").strip().lower()
-        if host.startswith("www."):
-            host = host[4:]
-        if not host:
-            return set()
-        return {host, f"www.{host}"}
 
     def is_valid(self, url: str) -> bool:
         parsed = urlparse(url)
-        if parsed.netloc.lower() not in self.allowed_hosts:
+        if parsed.netloc.lower() != self.domain:
             return False
         path_lower = parsed.path.lower().rstrip("/") or "/"
         if path_lower in {"/", "/courses", "/courses-atoz", "/study/courses"}:
