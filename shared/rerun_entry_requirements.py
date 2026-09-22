@@ -319,7 +319,6 @@ def rerun_entry_requirements_course(
                     uni_content,
                     course_level,
                     entry_content=uni_sections.get("entry", ""),
-                    course_text=f"{course_name}\n{course_body}",
                 ),
                 "AcademicRequirementsMetaData": [],
             },

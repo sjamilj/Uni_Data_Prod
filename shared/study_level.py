@@ -901,6 +901,21 @@ class PresetupSampler:
         return (url or "").strip().rstrip("/")
 
     @staticmethod
+    def url_identity_keys(url: str) -> set[str]:
+        """Keys for matching full course URLs to path-only markdown source_url."""
+        raw = PresetupSampler.normalize_url(url)
+        if not raw:
+            return set()
+        keys = {raw}
+        if "://" in raw:
+            path = urlparse(raw).path or ""
+            if path:
+                keys.add(PresetupSampler.normalize_url(path))
+        elif raw.startswith("/"):
+            keys.add(raw)
+        return keys
+
+    @staticmethod
     def unique_urls(urls: list[str]) -> list[str]:
         seen: set[str] = set()
         out: list[str] = []
@@ -1167,6 +1182,7 @@ relative_course_md = StudyLevelPathResolver.relative_course_md
 extraction_dir = StudyLevelPathResolver.extraction_dir
 iter_extracted_json = StudyLevelPathResolver.iter_extracted_json
 normalize_url = PresetupSampler.normalize_url
+url_identity_keys = PresetupSampler.url_identity_keys
 unique_urls = PresetupSampler.unique_urls
 presetup_sample_path = PresetupSampler.presetup_sample_path
 load_presetup_sample = PresetupSampler.load_presetup_sample

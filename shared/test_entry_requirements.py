@@ -31,6 +31,7 @@ from normalize_admission_data import (  # noqa: E402
     alevel_combo_to_hsc_gpa,
     derive_hsc_gpa_from_uk_entry_text,
     process_record,
+    register_uni_alevel_to_hsc_map,
     sanitize_international_tuition_fee,
     ucas_points_to_alevel_combo,
 )
@@ -299,63 +300,6 @@ class EntryRequirementsTests(unittest.TestCase):
         )
         self.assertEqual(kept, descriptions)
 
-    def test_pg_bangladesh_picks_2_2_gpa_not_2_1(self) -> None:
-        data = {
-            "studyLevels": [
-                {
-                    "studyLevel": "Postgraduate",
-                    "programs": [
-                        {
-                            "program": "UK 2:2",
-                            "requirements": [
-                                {"degree": "BA", "grade": "GPA 2.5"},
-                                {"degree": "BSc", "grade": "GPA 2.5"},
-                            ],
-                            "description": [
-                                "Four-year bachelor degree with a minimum GPA 2.5 for UK 2:2."
-                            ],
-                        },
-                        {
-                            "program": "UK 2:1",
-                            "requirements": [
-                                {"degree": "BA", "grade": "GPA 2.8"},
-                                {"degree": "BSc", "grade": "GPA 2.8"},
-                            ],
-                            "description": [
-                                "Four-year bachelor degree with a minimum GPA 2.8 for UK 2:1."
-                            ],
-                        },
-                    ],
-                }
-            ]
-        }
-        course_text = (
-            "An undergraduate (honours) degree at 2:2, or above, in Forensic Science."
-        )
-        requirements = parse_bangladesh_json_requirements(
-            data,
-            "postgraduate",
-            course_text=course_text,
-        )
-        self.assertEqual(
-            requirements,
-            [
-                {"degree": "BA", "grade": "GPA 2.5"},
-                {"degree": "BSc", "grade": "GPA 2.5"},
-            ],
-        )
-        kept = filter_bangladesh_descriptions_for_course(
-            [
-                "Four-year bachelor degree with a minimum GPA 2.5 for UK 2:2.",
-                "Four-year bachelor degree with a minimum GPA 2.8 for UK 2:1.",
-            ],
-            course_text=course_text,
-        )
-        self.assertEqual(
-            kept,
-            ["Four-year bachelor degree with a minimum GPA 2.5 for UK 2:2."],
-        )
-
     def test_extract_entry_lines_from_bcu_foundation_markdown(self) -> None:
         repo_root = _SHARED.parent
         md_path = repo_root / BCU_FOUNDATION_MD
@@ -387,6 +331,41 @@ class EntryRequirementsTests(unittest.TestCase):
 
     def test_cdd_maps_to_hsc_gpa_3_5(self) -> None:
         self.assertEqual(alevel_combo_to_hsc_gpa("CDD"), 3.5)
+
+    def test_suffolk_bbc_uses_into_pdf_hsc_gpa(self) -> None:
+        register_uni_alevel_to_hsc_map(
+            "University of Suffolk",
+            {"BBC": 3.5, "BBB": 3.5, "CCC": 3.0, "CDD": 2.0},
+        )
+        self.assertEqual(alevel_combo_to_hsc_gpa("BBC", "University of Suffolk"), 3.5)
+        self.assertEqual(
+            derive_hsc_gpa_from_uk_entry_text(
+                "Entry requirements\nA Level requirements BBC",
+                "University of Suffolk",
+            ),
+            "GPA 3.5",
+        )
+        self.assertEqual(
+            derive_uk_equivalent_requirements(
+                "A-level BBC",
+                "undergraduate",
+                university_name="University of Suffolk",
+            ),
+            [{"degree": "HSC", "grade": "GPA 3.5"}],
+        )
+
+    def test_suffolk_uk_class_to_bsc_gpa(self) -> None:
+        suffolk_code = _SHARED.parent / "University of Suffolk" / "code"
+        if str(suffolk_code) not in sys.path:
+            sys.path.insert(0, str(suffolk_code))
+        from suffolk_uk_class_mapping import (  # noqa: WPS433
+            suffolk_bangladesh_requirement,
+        )
+
+        req_21, _ = suffolk_bangladesh_requirement("2:1")
+        self.assertEqual(req_21, {"degree": "BSc", "grade": "GPA 3.0"})
+        req_22, _ = suffolk_bangladesh_requirement("lower second class honours")
+        self.assertEqual(req_22, {"degree": "BSc", "grade": "GPA 2.75"})
 
     def test_derive_uk_equivalent_requirements(self) -> None:
         repo_root = _SHARED.parent

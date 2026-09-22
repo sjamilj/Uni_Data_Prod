@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import importlib.util
 import json
 import re
 import sys
@@ -25,6 +26,24 @@ from ollama_client import chat
 from llm_stage2_config import LlmStage2Config
 from uni_paths import resolve_code_dir, resolve_output_dir
 from course_type_filter import CourseTypeFilter
+
+
+def load_uni_alevel_mapping_from_code_dir(code_dir: Path) -> None:
+    """Import {University}/code/suffolk_alevel_mapping.py (or future *_alevel_mapping.py) once."""
+    root = resolve_code_dir(code_dir)
+    for name in ("suffolk_alevel_mapping.py", "alevel_mapping.py"):
+        path = root / name
+        if not path.is_file():
+            continue
+        module_name = f"uni_alevel_mapping_{abs(hash(path.resolve()))}"
+        spec = importlib.util.spec_from_file_location(module_name, path)
+        if spec is None or spec.loader is None:
+            continue
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        break
+
+
 from study_level import (
     PRESETUP_CLEAN_SUBDIR,
     PRESETUP_EXTRACT_SUBDIR,
@@ -42,6 +61,7 @@ from study_level import (
     relative_course_md,
     study_level_from_markdown,
     unique_urls,
+    url_identity_keys,
 )
 
 _SHARED_DIR = Path(__file__).resolve().parent
@@ -380,7 +400,7 @@ ALLOWED_METADATA_SUBTITLES = {"entry requirements", "english requirement"}
 
 
 UG_ENTRY_DEGREES = {"HSC", "A Level", "Diploma", "BA", "BSc", "BBA", "BEng", "BCom"}
-FOUNDATION_ENTRY_DEGREES = {"HSC"}
+FOUNDATION_ENTRY_DEGREES = {"HSC", "A Level"}
 PG_ENTRY_DEGREES = {
     "BA",
     "BSc",
@@ -432,7 +452,6 @@ SCHOLARSHIP_JSON_LEVEL_ALIASES = {
 
 
 UK_GRADE_LINE_RE = re.compile(r"^([A-D]{3})\s*[—\-–]")
-_UK_HONOURS_CLASS_RE = re.compile(r"\b2\s*:\s*([12])\b")
 _ENGLISH_PROGRAM_HINTS: tuple[tuple[tuple[str, ...], str], ...] = (
     (("audiology",), "healthcare science (audiology)"),
     (("pharmacy", "nursing", "midwifery"), "biomedical science, healthcare science (audiology), pharmacy"),
@@ -1485,7 +1504,9 @@ class CourseIndexManager:
     def entries_from_presetup_clean(output_dir: Path) -> list[dict[str, str]]:
         sample = load_presetup_sample(output_dir)
         sample_urls = presetup_sample_urls(sample)
-        wanted = {normalize_url(url) for url in sample_urls}
+        wanted: set[str] = set()
+        for url in sample_urls:
+            wanted.update(url_identity_keys(url))
         url_level: dict[str, str] = {}
         for row in sample.get('courses') or []:
             if not isinstance(row, dict):
@@ -1497,13 +1518,40 @@ class CourseIndexManager:
         entries: list[dict[str, str]] = []
         for md_path in iter_course_markdown(courses_dir):
             meta, body = split_frontmatter(md_path.read_text(encoding='utf-8'))
-            source_url = (meta.get('source_url') or '').strip()
-            key = normalize_url(source_url)
-            if wanted and key not in wanted:
+            md_keys: set[str] = set()
+            for field in ('course_url', 'source_url'):
+                md_keys.update(url_identity_keys(str(meta.get(field) or '')))
+            if wanted and not (md_keys & wanted):
+                continue
+            matched_url = ''
+            for sample_url in sample_urls:
+                if url_identity_keys(sample_url) & md_keys:
+                    matched_url = sample_url
+                    break
+            if not matched_url:
                 continue
             rel = relative_course_md(md_path, courses_dir)
-            study_level = url_level.get(key) or study_level_from_markdown(md_path, meta, courses_dir=courses_dir, course_url=source_url)
-            entries.append({'uniName': '', 'courseName': ExtractionPathConfig.infer_course_name(body, source_url), 'degreeName': '', 'course_url': source_url, 'courseUrlExternal': source_url, 'md_file': rel, 'clean_md': f'clean/{PRESETUP_CLEAN_SUBDIR}/{rel}'.replace('\\', '/'), 'study_level': study_level, 'extract_root': PRESETUP_EXTRACT_SUBDIR})
+            norm_matched = normalize_url(matched_url)
+            sample_study_level = url_level.get(norm_matched, '')
+            md_study_level = study_level_from_markdown(
+                md_path, meta, courses_dir=courses_dir, course_url=matched_url
+            )
+            if sample_study_level and md_study_level != sample_study_level:
+                continue
+            study_level = sample_study_level or md_study_level
+            entries.append(
+                {
+                    'uniName': '',
+                    'courseName': ExtractionPathConfig.infer_course_name(body, matched_url),
+                    'degreeName': '',
+                    'course_url': matched_url,
+                    'courseUrlExternal': matched_url,
+                    'md_file': rel,
+                    'clean_md': f'clean/{PRESETUP_CLEAN_SUBDIR}/{rel}'.replace('\\', '/'),
+                    'study_level': study_level,
+                    'extract_root': PRESETUP_EXTRACT_SUBDIR,
+                }
+            )
         return entries
 
     @staticmethod
@@ -1601,35 +1649,6 @@ class Stage1Enricher:
         return grades
 
     @staticmethod
-    def uk_honours_classes_in_text(text: str) -> set[str]:
-        return {f"2:{match.group(1)}" for match in _UK_HONOURS_CLASS_RE.finditer(text or "")}
-
-    @staticmethod
-    def extract_uk_honours_class(text: str) -> str | None:
-        """Minimum UK honours class on the course page (2:2 from '2:2, or above')."""
-        found = uk_honours_classes_in_text(text)
-        if "2:2" in found:
-            return "2:2"
-        if "2:1" in found:
-            return "2:1"
-        return None
-
-    @staticmethod
-    def bangladesh_program_matches_uk_class(program: dict, uk_class: str | None) -> bool:
-        if not uk_class:
-            return True
-        parts = [str(program.get("program", "") or "")]
-        for requirement in program.get("requirements") or []:
-            if isinstance(requirement, dict):
-                parts.append(str(requirement.get("grade", "") or ""))
-        for line in program.get("description") or []:
-            parts.append(str(line))
-        classes = uk_honours_classes_in_text(" ".join(parts))
-        if not classes:
-            return True
-        return uk_class in classes
-
-    @staticmethod
     def filter_bangladesh_descriptions_for_course(
     descriptions: list[str],
     *,
@@ -1639,22 +1658,14 @@ class Stage1Enricher:
         if not descriptions:
             return []
         uk_grades = extract_uk_offer_grades(course_text)
-        uk_class = extract_uk_honours_class(course_text)
-        if not uk_grades and not uk_class:
+        if not uk_grades:
             return descriptions
         kept: list[str] = []
         for line in descriptions:
             stripped = line.strip()
-            classes = uk_honours_classes_in_text(stripped)
-            if uk_class and classes and uk_class not in classes:
-                continue
-            if uk_class and classes == {"2:1", "2:2"}:
-                continue
             grade_match = UK_GRADE_LINE_RE.match(stripped)
             if grade_match:
-                if uk_grades and grade_match.group(1).upper() in uk_grades:
-                    kept.append(line)
-                elif not uk_grades:
+                if grade_match.group(1).upper() in uk_grades:
                     kept.append(line)
                 continue
             kept.append(line)
@@ -2041,21 +2052,17 @@ class Stage2Enricher:
         if not isinstance(entry_json, dict):
             return []
         aliases = BANGLADESH_JSON_LEVEL_ALIASES.get(course_level, (course_level,))
-        uk_class = extract_uk_honours_class(course_text)
         for level in entry_json.get('studyLevels', []):
             if not isinstance(level, dict):
                 continue
             study_level = str(level.get('studyLevel', '') or '').strip().lower()
             if study_level not in aliases:
                 continue
-            descriptions: list[str] = []
             for program in level.get('programs', []):
                 if not isinstance(program, dict):
                     continue
-                if not bangladesh_program_matches_uk_class(program, uk_class):
-                    continue
-                descriptions.extend(Stage1Enricher.normalize_description_list(program.get('description')))
-            return Stage1Enricher.filter_bangladesh_descriptions_for_course(descriptions, course_text=course_text)
+                descriptions = Stage1Enricher.normalize_description_list(program.get('description'))
+                return Stage1Enricher.filter_bangladesh_descriptions_for_course(descriptions, course_text=course_text)
         return []
 
     @staticmethod
@@ -2116,14 +2123,8 @@ class Stage2Enricher:
         return filter_academic_metadata(result)
 
     @staticmethod
-    def parse_bangladesh_json_requirements(
-    data: dict,
-    course_level: str,
-    *,
-    course_text: str = "",
-) -> list[dict[str, str]]:
+    def parse_bangladesh_json_requirements(data: dict, course_level: str) -> list[dict[str, str]]:
         aliases = BANGLADESH_JSON_LEVEL_ALIASES.get(course_level, (course_level,))
-        uk_class = extract_uk_honours_class(course_text)
         requirements: list[dict[str, str]] = []
         for level in data.get('studyLevels', []):
             if not isinstance(level, dict):
@@ -2133,8 +2134,6 @@ class Stage2Enricher:
                 continue
             for program in level.get('programs', []):
                 if not isinstance(program, dict):
-                    continue
-                if not bangladesh_program_matches_uk_class(program, uk_class):
                     continue
                 for requirement in program.get('requirements', []):
                     if not isinstance(requirement, dict):
@@ -2151,21 +2150,13 @@ class Stage2Enricher:
     course_level: str,
     *,
     entry_content: str | None = None,
-    course_text: str = "",
 ) -> list[dict[str, str]]:
         for source in (entry_content, uni_content):
             if not source:
                 continue
             entry_json = parse_uni_json_payload(source, 'bangladesh-entry')
             if isinstance(entry_json, dict):
-                json_requirements = normalize_requirements_list(
-                    parse_bangladesh_json_requirements(
-                        entry_json,
-                        course_level,
-                        course_text=course_text,
-                    ),
-                    course_level=course_level,
-                )
+                json_requirements = normalize_requirements_list(parse_bangladesh_json_requirements(entry_json, course_level), course_level=course_level)
                 if json_requirements:
                     return json_requirements
         text = extract_bangladesh_section_text(entry_content or uni_content, course_level)
@@ -2477,11 +2468,12 @@ class Stage2Enricher:
     def derive_uk_equivalent_requirements(
     course_body: str,
     course_level: str,
+    university_name: str = "",
 ) -> list[dict[str, str]]:
         """Derive an HSC GPA row from UK UCAS / A-Level text on the course page."""
         if course_level not in {'foundation', 'undergraduate'}:
             return []
-        grade = derive_hsc_gpa_from_uk_entry_text(course_body)
+        grade = derive_hsc_gpa_from_uk_entry_text(course_body, university_name=university_name)
         if not grade:
             return []
         return [{'degree': 'HSC', 'grade': grade}]
@@ -2681,15 +2673,7 @@ class Stage2Enricher:
         if deposit_fees:
             merged['feesMetaData'] = merge_fees_metadata(merged.get('feesMetaData'), deposit_fees)
         if (entry_content or uni_content) and course_level:
-            fallback = normalize_requirements_list(
-                parse_bangladesh_requirements(
-                    uni_content,
-                    course_level,
-                    entry_content=entry_content,
-                    course_text=course_body,
-                ),
-                course_level=course_level,
-            )
+            fallback = normalize_requirements_list(parse_bangladesh_requirements(uni_content, course_level, entry_content=entry_content), course_level=course_level)
             existing = normalize_requirements_list(merged.get('requirements'), course_level=course_level)
             use_fallback = bool(fallback) and (not existing or (course_level == 'postgraduate' and all((item['degree'] in UG_ENTRY_DEGREES for item in existing))))
             if use_fallback:
@@ -2699,7 +2683,12 @@ class Stage2Enricher:
             elif fallback:
                 merged['requirements'] = fallback
         if course_body and course_level:
-            merged['requirements'] = merge_requirement_lists(merged.get('requirements', []), derive_uk_equivalent_requirements(course_body, course_level), course_level=course_level)
+            uni_name = str(deterministic.get('uniName', '') or '').strip()
+            merged['requirements'] = merge_requirement_lists(
+                merged.get('requirements', []),
+                derive_uk_equivalent_requirements(course_body, course_level, university_name=uni_name),
+                course_level=course_level,
+            )
         return merged
 
     @staticmethod
@@ -2826,6 +2815,7 @@ class CourseExtractor:
 ) -> dict:
         code_dir = resolve_code_dir(code_dir)
         output_dir = resolve_output_dir(code_dir)
+        load_uni_alevel_mapping_from_code_dir(code_dir)
         university_name = code_dir.parent.name
         course_url = course_entry.get('course_url') or course_entry.get('courseUrlExternal', '')
         slug = course_slug_from_url(course_url)
@@ -3147,9 +3137,6 @@ filter_stage1_entry_description = Stage1Enricher.filter_stage1_entry_description
 extract_stage1_entry_descriptions = Stage1Enricher.extract_stage1_entry_descriptions
 normalize_description_list = Stage1Enricher.normalize_description_list
 extract_uk_offer_grades = Stage1Enricher.extract_uk_offer_grades
-uk_honours_classes_in_text = Stage1Enricher.uk_honours_classes_in_text
-extract_uk_honours_class = Stage1Enricher.extract_uk_honours_class
-bangladesh_program_matches_uk_class = Stage1Enricher.bangladesh_program_matches_uk_class
 filter_bangladesh_descriptions_for_course = Stage1Enricher.filter_bangladesh_descriptions_for_course
 extract_entry_lines_from_course_markdown = Stage1Enricher.extract_entry_lines_from_course_markdown
 assert_grounded = Stage1Enricher.assert_grounded
