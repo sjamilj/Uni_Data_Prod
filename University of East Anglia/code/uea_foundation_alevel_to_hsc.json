@@ -1,0 +1,19 @@
+{
+  "university": "University of East Anglia",
+  "studyLevel": "foundation",
+  "description": "Typical Offer on foundation-year course pages → HSC (see bangladesh-entry.md).",
+  "typicalOffer": {
+    "CCC": {
+      "degree": "HSC",
+      "grade": "GPA 3.5",
+      "courseCount": 27,
+      "source": "clean/uni/bangladesh-entry.md"
+    }
+  },
+  "contextualOffer": {
+    "CDD": {
+      "courseCount": 27,
+      "note": "UK contextual; not used for international HSC mapping"
+    }
+  }
+}

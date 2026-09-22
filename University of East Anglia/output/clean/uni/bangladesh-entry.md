@@ -17,11 +17,12 @@ cleaned_at: 2026-09-22
           "requirements": [
             {
               "degree": "HSC",
-              "grade": "score of 40; Maths 65% SSC or 50% HSC"
+              "grade": "GPA 3.5; Maths 65% SSC or 50% HSC"
             }
           ],
           "description": [
-            "Successful completion of High Secondary Certificate with a score of 40, including a score of 65% from SSC or 50% from HSC in Maths.",
+            "Successful completion of Higher Secondary Certificate at GPA 3.5 on the 5.0 scale, including Maths 65% from SSC or 50% from HSC.",
+            "UEA country page wording may refer to a minimum score of 40; use GPA 3.5 and the Maths percentages above for structured entry.",
             "English: IELTS 5.0 (minimum 4.5 in all subskills) or equivalent."
           ]
         },
@@ -30,24 +31,46 @@ cleaned_at: 2026-09-22
           "requirements": [
             {
               "degree": "HSC",
-              "grade": "60% average; passes in 4 or more subjects"
+              "grade": "GPA 3.5 (60% average; passes in 4 or more subjects)"
             }
           ],
           "description": [
-            "Successful completion of High School Certificate with an average grade of 60% with passes in 4 or more subjects.",
+            "Successful completion of Higher School Certificate with 60% average (GPA 3.5 on the 5.0 Bangladesh scale) and passes in 4 or more subjects.",
             "English: IELTS 5.0 (with 5.0 in writing and a minimum of 4.5 in all other subskills) or equivalent."
           ]
         },
         {
-          "program": "UEA Foundation Year (A-level CCC equivalent)",
+          "program": "UEA Foundation Year (with a Foundation Year)",
           "requirements": [
+            {
+              "degree": "HSC",
+              "grade": "GPA 5.0 (A-level AAA)"
+            },
+            {
+              "degree": "HSC",
+              "grade": "GPA 5.0 (A-level AAB)"
+            },
+            {
+              "degree": "HSC",
+              "grade": "GPA 5.0 (A-level ABB)"
+            },
+            {
+              "degree": "HSC",
+              "grade": "GPA 4.0 (A-level BBB)"
+            },
             {
               "degree": "HSC",
               "grade": "GPA 3.5 (A-level CCC)"
             }
           ],
           "description": [
-            "A-level CCC equivalent: HSC GPA 3.5."
+            "A-level AAA equivalent: HSC GPA 5.0.",
+            "A-level AAB equivalent: HSC GPA 5.0.",
+            "A-level ABB equivalent: HSC GPA 5.0.",
+            "A-level BBB equivalent: HSC GPA 4.0.",
+            "A-level CCC equivalent: HSC GPA 3.5.",
+            "Match the Typical Offer on the course page (foundation-year programmes are usually CCC / GPA 3.5).",
+            "English: IELTS 5.0 (minimum 4.5 in all subskills) or equivalent for Foundation Year entry unless a higher band is stated on the course page."
           ]
         }
       ]

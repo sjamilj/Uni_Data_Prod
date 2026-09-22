@@ -120,6 +120,8 @@ def _inject_stage1_key_facts(soup: BeautifulSoup) -> None:
     start = pairs.get("course start date", "")
     attendance = pairs.get("attendance", "")
     award = pairs.get("award", "")
+    typical_offer = pairs.get("typical offer", "")
+    contextual_offer = pairs.get("contextual offer", "")
     dl = content.find("dl")
     if dl is not None:
         dl.decompose()
@@ -139,6 +141,14 @@ def _inject_stage1_key_facts(soup: BeautifulSoup) -> None:
     if award:
         line = soup.new_tag("p")
         line.string = f"- Award {award}"
+        facts.append(line)
+    if typical_offer:
+        line = soup.new_tag("p")
+        line.string = f"- **Typical Offer:** {typical_offer}"
+        facts.append(line)
+    if contextual_offer:
+        line = soup.new_tag("p")
+        line.string = f"- **Contextual Offer:** {contextual_offer}"
         facts.append(line)
     if facts.contents:
         content.append(facts)
@@ -256,6 +266,22 @@ def cleanup_course_markdown_uni(markdown: str) -> str:
         parts.append(f"- **Attendance:** {attendance.group(1).strip()}")
     if award := re.search(r"- Award\s+([^\n]+)", key_body or markdown, re.I):
         parts.append(f"- Award {award.group(1).strip()}")
+    typical_offer = ""
+    contextual_offer = ""
+    if match := re.search(
+        r"-\s+\*\*Typical Offer:\*\*\s*([^\n]+)",
+        key_body or markdown,
+        re.I,
+    ):
+        typical_offer = match.group(1).strip()
+        parts.append(f"- **Typical Offer:** {typical_offer}")
+    if match := re.search(
+        r"-\s+\*\*Contextual Offer:\*\*\s*([^\n]+)",
+        key_body or markdown,
+        re.I,
+    ):
+        contextual_offer = match.group(1).strip()
+        parts.append(f"- **Contextual Offer:** {contextual_offer}")
     if fee_match:
         amount = fee_match.group(1)
         parts.extend(
@@ -273,6 +299,16 @@ def cleanup_course_markdown_uni(markdown: str) -> str:
         parts.append("")
         if ielts:
             parts.append(ielts)
+            parts.append("")
+        if typical_offer or contextual_offer:
+            offer_bits = []
+            if typical_offer:
+                offer_bits.append(f"A Levels **{typical_offer}**")
+            if contextual_offer:
+                offer_bits.append(f"Contextual offer: **{contextual_offer}**")
+            parts.append(
+                "- **Typical UK Entry Requirements:** " + " ".join(offer_bits)
+            )
             parts.append("")
         if entry_body:
             cleaned_entry = _strip_entry_noise(entry_body)

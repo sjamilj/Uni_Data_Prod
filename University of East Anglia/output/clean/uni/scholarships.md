@@ -9,6 +9,19 @@ cleaned_at: 2026-09-22
 
 [
   {
+    "scholarshipName": "International Early Payment Awards",
+    "scholarshipType": "Amount",
+    "scholarshipStudyLevel": "Foundation",
+    "Eligibility": "Automatic award for students paying overseas fees.",
+    "Amount": "Up to £1,000",
+    "description": [
+      "Course type: Foundation.",
+      "Funding type: Tuition fees.",
+      "Value: up to £1,000.",
+      "Criteria: automatic award for students paying overseas fees."
+    ]
+  },
+  {
     "scholarshipName": "International UG Merit Scholarship",
     "scholarshipType": "Amount",
     "scholarshipStudyLevel": "Undergraduate",

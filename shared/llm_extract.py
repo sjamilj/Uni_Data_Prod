@@ -447,7 +447,8 @@ BANGLADESH_JSON_LEVEL_ALIASES = {
 ENGLISH_JSON_LEVEL_ALIASES = {
     "foundation": ("foundation year", "foundation"),
     "undergraduate": ("undergraduate",),
-    "postgraduate": ("postgraduate", "postgraduate research"),
+    "postgraduate": ("postgraduate",),
+    "postgraduate_research": ("postgraduate research",),
 }
 SCHOLARSHIP_JSON_LEVEL_ALIASES = {
     "foundation": ("foundation", "foundation year"),
@@ -2008,12 +2009,57 @@ class Stage2Enricher:
         return ""
 
     @staticmethod
+    def _normalize_english_score(value: str) -> str:
+        text = str(value or "").strip()
+        if not text:
+            return ""
+        try:
+            return str(float(text))
+        except ValueError:
+            return text
+
+    @staticmethod
+    def program_ielts_pair(program: dict) -> tuple[str, str] | None:
+        for test in program.get("TestRequirements") or []:
+            if not isinstance(test, dict):
+                continue
+            if "ielts" not in str(test.get("TestName", "") or "").lower():
+                continue
+            overall = str(test.get("ieltsMinOverall", "") or "").strip()
+            section = str(test.get("ieltsMinSection", "") or "").strip()
+            if overall and section:
+                return overall, section
+        return None
+
+    @staticmethod
+    def test_scalars_from_english_program(program: dict | None) -> dict[str, str]:
+        scalars = {key: "" for key in ENGLISH_TEST_KEYS}
+        if not isinstance(program, dict):
+            return scalars
+        for test in program.get("TestRequirements") or []:
+            if not isinstance(test, dict):
+                continue
+            name = str(test.get("TestName", "") or "").lower()
+            if "ielts" in name:
+                scalars["ieltsMinOverall"] = str(test.get("ieltsMinOverall", "") or "").strip()
+                scalars["ieltsMinSection"] = str(test.get("ieltsMinSection", "") or "").strip()
+            elif "toefl" in name:
+                scalars["toeflMinOverall"] = str(test.get("toeflMinOverall", "") or "").strip()
+                scalars["toeflMinSection"] = str(test.get("toeflMinSection", "") or "").strip()
+            elif "pearson" in name or "pte" in name:
+                scalars["pteMinOverall"] = str(test.get("pteMinOverall", "") or "").strip()
+                scalars["pteMinSection"] = str(test.get("pteMinSection", "") or "").strip()
+        return scalars
+
+    @staticmethod
     def select_english_json_program(
     programs: list[dict],
     *,
     course_level: str,
     course_name: str,
     course_body: str = "",
+    ielts_overall: str = "",
+    ielts_section: str = "",
 ) -> dict | None:
         group_name = Stage2Enricher.detect_english_group(course_body, course_name)
         if group_name:
@@ -2027,6 +2073,23 @@ class Stage2Enricher:
         candidates = [item for item in programs if isinstance(item, dict) and str(item.get('TestStudyLevel', '') or '').strip().lower() in aliases]
         if not candidates:
             return None
+        if ielts_overall and ielts_section:
+            want_overall = Stage2Enricher._normalize_english_score(ielts_overall)
+            want_section = Stage2Enricher._normalize_english_score(ielts_section)
+            ielts_matched = []
+            for item in candidates:
+                pair = Stage2Enricher.program_ielts_pair(item)
+                if not pair:
+                    continue
+                if (
+                    Stage2Enricher._normalize_english_score(pair[0]) == want_overall
+                    and Stage2Enricher._normalize_english_score(pair[1]) == want_section
+                ):
+                    ielts_matched.append(item)
+            if len(ielts_matched) == 1:
+                return ielts_matched[0]
+            if ielts_matched:
+                candidates = ielts_matched
         if len(candidates) == 1:
             return candidates[0]
         haystack = f'{course_name}\n{course_body}'.casefold()
@@ -2396,37 +2459,45 @@ class Stage2Enricher:
         parsed = dict(english_json) if isinstance(english_json, dict) else {}
         lookup_content = english_lookup_content or english_content
         fallback = parse_english_test_scores(lookup_content, course_name=course_name, course_level=course_level)
+        stage1_json = stage1_json or {}
+        ielts_overall = str(stage1_json.get("ieltsMinOverall", "") or parsed.get("ieltsMinOverall", "") or "").strip()
+        ielts_section = str(stage1_json.get("ieltsMinSection", "") or parsed.get("ieltsMinSection", "") or "").strip()
+        programs_payload = parse_uni_json_payload(lookup_content, "english-requirements") or []
         json_program = select_english_json_program(
-            parse_uni_json_payload(lookup_content, 'english-requirements') or [],
+            programs_payload if isinstance(programs_payload, list) else [],
             course_level=course_level,
             course_name=course_name,
-            course_body=f'{course_body}\n{english_content}',
+            course_body=f"{course_body}\n{english_content}",
+            ielts_overall=ielts_overall,
+            ielts_section=ielts_section,
         )
-        if isinstance(json_program, dict):
-            for test in json_program.get('TestRequirements', []):
-                if not isinstance(test, dict):
-                    continue
-                name = str(test.get('TestName', '') or '').lower()
-                if 'ielts' in name:
-                    fallback['ieltsMinOverall'] = str(test.get('ieltsMinOverall', '') or '').strip()
-                    fallback['ieltsMinSection'] = str(test.get('ieltsMinSection', '') or '').strip()
-                elif 'toefl' in name:
-                    fallback['toeflMinOverall'] = str(test.get('toeflMinOverall', '') or '').strip()
-                    fallback['toeflMinSection'] = str(test.get('toeflMinSection', '') or '').strip()
-                elif 'pearson' in name or 'pte' in name:
-                    fallback['pteMinOverall'] = str(test.get('pteMinOverall', '') or '').strip()
-                    fallback['pteMinSection'] = str(test.get('pteMinSection', '') or '').strip()
+        program_scalars = Stage2Enricher.test_scalars_from_english_program(json_program)
+        for key, value in program_scalars.items():
+            if value:
+                fallback[key] = value
         for key in ENGLISH_TEST_KEYS:
-            current = str(parsed.get(key, '') or '').strip()
+            current = str(parsed.get(key, "") or "").strip()
             if not current:
-                parsed[key] = fallback.get(key, '')
+                parsed[key] = fallback.get(key, "")
             else:
                 parsed[key] = current
-        stage1_json = stage1_json or {}
-        for key in ('ieltsMinOverall', 'ieltsMinSection'):
-            stage1_val = str(stage1_json.get(key, '') or '').strip()
+        for key in ("ieltsMinOverall", "ieltsMinSection"):
+            stage1_val = str(stage1_json.get(key, "") or "").strip()
             if stage1_val:
                 parsed[key] = stage1_val
+        if ielts_overall and ielts_section:
+            matched = select_english_json_program(
+                programs_payload if isinstance(programs_payload, list) else [],
+                course_level=course_level,
+                course_name=course_name,
+                course_body=f"{course_body}\n{english_content}",
+                ielts_overall=parsed.get("ieltsMinOverall", ""),
+                ielts_section=parsed.get("ieltsMinSection", ""),
+            )
+            equivalents = Stage2Enricher.test_scalars_from_english_program(matched)
+            for key in ("pteMinOverall", "pteMinSection", "toeflMinOverall", "toeflMinSection"):
+                if not str(parsed.get(key, "") or "").strip() and equivalents.get(key):
+                    parsed[key] = equivalents[key]
         meta = normalize_metadata_array(parsed.get('AcademicRequirementsMetaData'), default_subtitle='English Requirement')
         meta = filter_academic_metadata(meta)
         json_descriptions = extract_english_json_descriptions(
