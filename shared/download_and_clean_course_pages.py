@@ -930,6 +930,7 @@ class CoursePagesCleaner:
         )
 
         excluded_count = 0
+        excluded_urls: list[str] = []
 
         # NEW:
         # Track collisions instead of silently skipping them.
@@ -1010,6 +1011,9 @@ class CoursePagesCleaner:
                 url=source_url or course_url,
             ):
                 excluded_count += 1
+                drop_url = (source_url or course_url or "").strip().rstrip("/")
+                if drop_url:
+                    excluded_urls.append(drop_url)
 
                 self._delete_markdown_for_source(
                     courses_out,
@@ -1225,8 +1229,15 @@ class CoursePagesCleaner:
         if excluded_count:
             print(
                 f"Excluded {excluded_count} "
-                f"short-course/part-time pages"
+                f"course page(s) (type / URL / HTML rules)"
             )
+            log_path = self.output_dir / "excluded_course_urls.txt"
+            unique_urls = sorted(set(excluded_urls))
+            log_path.write_text(
+                "\n".join(unique_urls) + ("\n" if unique_urls else ""),
+                encoding="utf-8",
+            )
+            print(f"Wrote {log_path} ({len(unique_urls)} URL(s))")
 
         # NEW:
         # Explicit duplicate summary.
