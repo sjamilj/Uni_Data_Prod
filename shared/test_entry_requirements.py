@@ -22,6 +22,7 @@ from llm_extract import (  # noqa: E402
     build_output_json,
     canonicalize_requirement_degree,
     derive_uk_equivalent_requirements,
+    enrich_english_parsed,
     enrich_stage1_from_markdown,
     extract_bangladesh_section_text,
     extract_entry_lines_from_course_markdown,
@@ -429,6 +430,64 @@ class EntryRequirementsTests(unittest.TestCase):
         )
         self.assertEqual(program["ProgramName"], "Group B")
         self.assertEqual(program["TestRequirements"][0]["ieltsMinOverall"], "6.5")
+
+    def test_select_english_json_program_by_ielts_band(self) -> None:
+        programs = [
+            {
+                "TestStudyLevel": "Postgraduate Research",
+                "ProgramName": "Faculty of Science",
+                "TestRequirements": [
+                    {"TestName": "IELTS Academic", "ieltsMinOverall": "6.5", "ieltsMinSection": "6.0"},
+                    {"TestName": "PTE", "pteMinOverall": "61", "pteMinSection": "60"},
+                    {"TestName": "TOEFL iBT", "toeflMinOverall": "88", "toeflMinSection": "19"},
+                ],
+            },
+            {
+                "TestStudyLevel": "Postgraduate Research",
+                "ProgramName": "ClinPsyD",
+                "TestRequirements": [
+                    {"TestName": "IELTS Academic", "ieltsMinOverall": "7.0", "ieltsMinSection": "7.0"},
+                    {"TestName": "PTE", "pteMinOverall": "76", "pteMinSection": "76"},
+                ],
+            },
+        ]
+        program = select_english_json_program(
+            programs,
+            course_level="postgraduate_research",
+            course_name="PhD Biology",
+            course_body="",
+            ielts_overall="6.5",
+            ielts_section="6.0",
+        )
+        self.assertEqual(program["ProgramName"], "Faculty of Science")
+
+    def test_enrich_english_fills_pte_toefl_from_ielts_matched_program(self) -> None:
+        english_md = """# English Language Requirements
+[
+  {
+    "TestStudyLevel": "Postgraduate Research",
+    "ProgramName": "Faculty of Science",
+    "TestRequirements": [
+      {"TestName": "IELTS Academic", "ieltsMinOverall": "6.5", "ieltsMinSection": "6.0"},
+      {"TestName": "Pearson PTE", "pteMinOverall": "61", "pteMinSection": "60"},
+      {"TestName": "TOEFL iBT", "toeflMinOverall": "88", "toeflMinSection": "19"}
+    ],
+    "description": ["IELTS 6.5 overall with 6.0 in each component."]
+  }
+]
+"""
+        enriched = enrich_english_parsed(
+            {},
+            english_md,
+            course_name="PhD Example",
+            course_level="postgraduate_research",
+            stage1_json={"ieltsMinOverall": "6.5", "ieltsMinSection": "6.0"},
+        )
+        self.assertEqual(enriched["ieltsMinOverall"], "6.5")
+        self.assertEqual(enriched["pteMinOverall"], "61")
+        self.assertEqual(enriched["pteMinSection"], "60")
+        self.assertEqual(enriched["toeflMinOverall"], "88")
+        self.assertEqual(enriched["toeflMinSection"], "19")
 
     def test_keele_stage1_fields_from_key_information(self) -> None:
         body = """## Key information

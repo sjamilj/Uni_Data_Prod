@@ -79,7 +79,7 @@ Loops `page_index` until:
 |------|-----------|
 | `url` (default) | `goto` each `*_COURSE_LISTING_PAGE_N` or `?page=` URL |
 | `ajax_click` | Stay on `*_COURSE_LISTING_PAGE_1`; click numbered pager buttons and wait for `DoCourseSearch` (Bedfordshire / Umbraco) |
-| `click` | Reserved for Vue **Next**-button listings (Kingston) — separate from `ajax_click` |
+| `click` | Stay on `*_COURSE_LISTING_PAGE_1`; click **Next** (`LISTING_CLICK_NEXT_SELECTOR`, default `button[aria-label="Next Page"]`) after each page (UEA / Kingston Vue) |
 
 ### `CourseUrlMatcher.is_course_url(url)`
 

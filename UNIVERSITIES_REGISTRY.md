@@ -81,6 +81,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the full commit + tag workflow.
 | unit-29 | winchester | University of Winchester | in_progress | | |
 | unit-30 | mmu | Manchester Metropolitan University | in_progress | | |
 | unit-31 | beds | University of Bedfordshire | in_progress | | |
+| unit-32 | uea | University of East Anglia | in_progress | | |
 
 **Status:** `complete` means `output/dev_courses_*.csv` exists. `in_progress` means the university folder has `code/` but the full pipeline export is not done. `not_started` is unused while every listed uni has `code/ENV.MD`.
 
