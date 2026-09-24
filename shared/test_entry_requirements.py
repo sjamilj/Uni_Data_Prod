@@ -12,13 +12,20 @@ if str(_SHARED) not in sys.path:
     sys.path.insert(0, str(_SHARED))
 
 from export_dev_courses import PortalLookup  # noqa: E402
+from entry_requirements_mapping import (  # noqa: E402
+    bangladesh_hsc_requirements_for_llm,
+    parse_ielts_bands,
+    resolve_english_tests_for_course,
+)
 from llm_extract import (  # noqa: E402
+    apply_percentage_scholarship_gbp,
     build_output_json,
     canonicalize_requirement_degree,
     derive_uk_equivalent_requirements,
     enrich_stage1_from_markdown,
     extract_bangladesh_section_text,
     extract_entry_lines_from_course_markdown,
+    extract_grade_from_requirement_text,
     extract_stage1_fields_from_md,
     filter_bangladesh_descriptions_for_course,
     infer_degree_name_from_md,
@@ -31,7 +38,6 @@ from normalize_admission_data import (  # noqa: E402
     alevel_combo_to_hsc_gpa,
     derive_hsc_gpa_from_uk_entry_text,
     process_record,
-    register_uni_alevel_to_hsc_map,
     sanitize_international_tuition_fee,
     ucas_points_to_alevel_combo,
 )
@@ -332,41 +338,6 @@ class EntryRequirementsTests(unittest.TestCase):
     def test_cdd_maps_to_hsc_gpa_3_5(self) -> None:
         self.assertEqual(alevel_combo_to_hsc_gpa("CDD"), 3.5)
 
-    def test_suffolk_bbc_uses_into_pdf_hsc_gpa(self) -> None:
-        register_uni_alevel_to_hsc_map(
-            "University of Suffolk",
-            {"BBC": 3.5, "BBB": 3.5, "CCC": 3.0, "CDD": 2.0},
-        )
-        self.assertEqual(alevel_combo_to_hsc_gpa("BBC", "University of Suffolk"), 3.5)
-        self.assertEqual(
-            derive_hsc_gpa_from_uk_entry_text(
-                "Entry requirements\nA Level requirements BBC",
-                "University of Suffolk",
-            ),
-            "GPA 3.5",
-        )
-        self.assertEqual(
-            derive_uk_equivalent_requirements(
-                "A-level BBC",
-                "undergraduate",
-                university_name="University of Suffolk",
-            ),
-            [{"degree": "HSC", "grade": "GPA 3.5"}],
-        )
-
-    def test_suffolk_uk_class_to_bsc_gpa(self) -> None:
-        suffolk_code = _SHARED.parent / "University of Suffolk" / "code"
-        if str(suffolk_code) not in sys.path:
-            sys.path.insert(0, str(suffolk_code))
-        from suffolk_uk_class_mapping import (  # noqa: WPS433
-            suffolk_bangladesh_requirement,
-        )
-
-        req_21, _ = suffolk_bangladesh_requirement("2:1")
-        self.assertEqual(req_21, {"degree": "BSc", "grade": "GPA 3.0"})
-        req_22, _ = suffolk_bangladesh_requirement("lower second class honours")
-        self.assertEqual(req_22, {"degree": "BSc", "grade": "GPA 2.75"})
-
     def test_derive_uk_equivalent_requirements(self) -> None:
         repo_root = _SHARED.parent
         body = (repo_root / BCU_FOUNDATION_MD).read_text(encoding="utf-8").split("---", 2)[-1]
@@ -492,6 +463,93 @@ class EntryRequirementsTests(unittest.TestCase):
         hints = extract_stage1_fields_from_md(body)
         self.assertEqual(hints["intakeInfo"], "September 2026")
         self.assertEqual(hints["tuitionFee"], "18200")
+
+    def test_process_record_bare_hsc_decimal_sets_min_gpa(self) -> None:
+        result = process_record(
+            {
+                "courseName": "Applied Education BA (Hons)",
+                "courseUrl": "https://example.com",
+                "requirements": [{"degree": "HSC", "grade": "3.00"}],
+            }
+        )
+        self.assertEqual(result["minDegreeName"], "HSC")
+        self.assertEqual(result["minGpa"], "3.0")
+
+    def test_extract_grade_keeps_bare_decimal_gpa(self) -> None:
+        self.assertEqual(extract_grade_from_requirement_text("3.00"), "3.00")
+        self.assertEqual(extract_grade_from_requirement_text("2.50"), "2.50")
+        self.assertEqual(extract_grade_from_requirement_text("2.75"), "2.75")
+
+    def test_percentage_scholarship_uses_tuition_fee(self) -> None:
+        row_small = {
+            "scholarshipType": "Percentage",
+            "scholarshipAmount": "",
+            "scholarshipMetaData": [
+                {"subtitle": "Scholarships", "description": ["5%"]}
+            ],
+        }
+        apply_percentage_scholarship_gbp(row_small, "100")
+        self.assertEqual(row_small["scholarshipAmount"], "5")
+        row_uel = {
+            "scholarshipType": "Percentage",
+            "scholarshipAmount": "",
+            "scholarshipMetaData": [
+                {"subtitle": "Scholarships", "description": ["5%"]}
+            ],
+        }
+        apply_percentage_scholarship_gbp(row_uel, "16020")
+        self.assertEqual(row_uel["scholarshipAmount"], "801")
+
+    def test_ielts_min_section_keeps_decimal(self) -> None:
+        overall, section = parse_ielts_bands(
+            "IELTS 6.0 with a minimum of 6.0 in Writing and Speaking; "
+            "5.5 in Listening and Reading (or recognised equivalent)."
+        )
+        self.assertEqual(overall, "6.0")
+        self.assertEqual(section, "5.5")
+
+    def test_resolve_english_prefers_course_md_ielts(self) -> None:
+        repo_root = _SHARED.parent
+        english = (
+            repo_root
+            / "University of East London/output/clean/uni/english-requirements.md"
+        )
+        if not english.exists():
+            self.skipTest("UEL english-requirements.md not in workspace")
+        course = (
+            "### English Language requirements\n\n"
+            "- IELTS 6.0 with a minimum of 6.0 in Writing and Speaking; "
+            "5.5 in Listening and Reading (or recognised equivalent).\n"
+        )
+        resolved = resolve_english_tests_for_course(
+            course_markdown=course,
+            study_level="foundation",
+            english_requirements_content=english.read_text(encoding="utf-8"),
+        )
+        self.assertEqual(resolved["ielts_source"], "course_markdown")
+        self.assertEqual(resolved["ieltsMinOverall"], "6.0")
+        self.assertEqual(resolved["ieltsMinSection"], "5.5")
+        self.assertIn("IELTS 6.0", resolved["english_description"])
+        self.assertTrue(resolved["pteMinOverall"] or resolved["toeflMinOverall"])
+
+    def test_foundation_ucas_maps_one_hsc_gpa(self) -> None:
+        repo_root = _SHARED.parent
+        bangladesh = (
+            repo_root / "University of East London/output/clean/uni/bangladesh-entry.md"
+        )
+        if not bangladesh.exists():
+            self.skipTest("UEL bangladesh-entry.md not in workspace")
+        course = (
+            "## Entry requirements - Degree with foundation year\n\n"
+            "64 UCAS points from an equivalent Level 3 qualification listed on the "
+            "[UCAS tariff calculator](https://www.ucas.com/ucas/tariff-calculator).\n"
+        )
+        rows = bangladesh_hsc_requirements_for_llm(
+            study_level="foundation",
+            course_body=course,
+            entry_content=bangladesh.read_text(encoding="utf-8"),
+        )
+        self.assertEqual(rows, [{"degree": "HSC", "grade": "3.00"}])
 
 
 def format_report_issues(report) -> str:

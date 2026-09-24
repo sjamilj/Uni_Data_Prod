@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -11,6 +12,7 @@ _SHARED = Path(__file__).resolve().parent
 if str(_SHARED) not in sys.path:
     sys.path.insert(0, str(_SHARED))
 
+from scrape_course_urls import CourseUrlMatcher, MatchingRules
 from study_level import (
     PRESETUP_URLS_CSV,
     StudyLevelClassifier,
@@ -167,6 +169,37 @@ class ScrapePresetupSampleTests(unittest.TestCase):
             self.assertTrue(presetup_download_sample_stale(output_dir, old_urls))
             all_urls = [row["course_url"] for row in scrape_courses]
             self.assertFalse(presetup_download_sample_stale(output_dir, all_urls))
+
+
+class CourseUrlMatcherHostTests(unittest.TestCase):
+    def _matcher(self) -> CourseUrlMatcher:
+        pattern = re.compile(r"^/(?:undergraduate|postgraduate)/courses/[a-z0-9\-]+$", re.I)
+        ifp = re.compile(r"^/our-programmes/international-foundation-programme/?$", re.I)
+        rules = MatchingRules(
+            path_patterns=[pattern, ifp],
+            path_pattern_sources=[],
+            excluded_paths=set(),
+            excluded_prefixes=(),
+            link_selector="",
+            base_url="https://www.uel.ac.uk",
+        )
+        return CourseUrlMatcher("uelisc.com", rules)
+
+    def test_allows_university_host_and_www_alias(self) -> None:
+        matcher = self._matcher()
+        self.assertTrue(
+            matcher.is_valid("https://www.uel.ac.uk/undergraduate/courses/bsc-hons-computer-science")
+        )
+        self.assertTrue(
+            matcher.is_valid("https://uel.ac.uk/undergraduate/courses/ba-hons-airline-airport-management")
+        )
+        self.assertTrue(
+            matcher.is_valid("https://uelisc.com/our-programmes/international-foundation-programme")
+        )
+
+    def test_rejects_other_hosts(self) -> None:
+        matcher = self._matcher()
+        self.assertFalse(matcher.is_valid("https://malvernhouse.com/undergraduate/courses/bsc-hons-computer-science"))
 
 
 if __name__ == "__main__":

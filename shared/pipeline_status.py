@@ -8,7 +8,6 @@ import csv
 import json
 import sys
 from pathlib import Path
-from urllib.parse import urlparse
 
 
 class PipelineStatusConfig:
@@ -23,23 +22,6 @@ class PipelineStatusConfig:
         }
     )
     UNI_REQ_FILES = ("bangladesh-entry.html", "english-requirements.html", "scholarships.html")
-
-
-def url_identity_keys(url: str) -> set[str]:
-    """Normalized URL keys for matching full URLs to markdown source_url paths."""
-    from study_level import normalize_url
-
-    raw = normalize_url(url)
-    if not raw:
-        return set()
-    keys = {raw}
-    if "://" in raw:
-        path = urlparse(raw).path or ""
-        if path:
-            keys.add(normalize_url(path))
-    elif raw.startswith("/"):
-        keys.add(raw)
-    return keys
 
 
 class StatusLabel:
@@ -90,7 +72,7 @@ class PipelineStatusIO:
     def clean_source_urls(courses_dir: Path) -> set[str]:
         if not courses_dir.is_dir():
             return set()
-        from study_level import iter_course_markdown
+        from study_level import iter_course_markdown, normalize_url
 
         found: set[str] = set()
         for md_path in iter_course_markdown(courses_dir):
@@ -99,9 +81,9 @@ class PipelineStatusIO:
             except OSError:
                 continue
             for line in text.splitlines()[:40]:
-                if line.startswith("source_url:") or line.startswith("course_url:"):
-                    value = line.split(":", 1)[1].strip()
-                    found.update(url_identity_keys(value))
+                if line.startswith("source_url:"):
+                    found.add(normalize_url(line.split(":", 1)[1].strip()))
+                    break
         return found
 
 
@@ -150,6 +132,7 @@ class UniversityStatusDetector:
             iter_extracted_json,
             level_url_counts,
             load_presetup_sample,
+            normalize_url,
             presetup_sample_urls,
         )
 
@@ -176,11 +159,7 @@ class UniversityStatusDetector:
         sample = load_presetup_sample(output)
         sample_urls = presetup_sample_urls(sample)
         clean_urls = self.io.clean_source_urls(presetup_dir) if sample_urls else set()
-        sample_clean = sum(
-            1
-            for url in sample_urls
-            if url_identity_keys(url) & clean_urls
-        )
+        sample_clean = sum(1 for url in sample_urls if normalize_url(url) in clean_urls)
         if sample_urls and sample_clean >= len(sample_urls):
             presetup = "done"
         elif sample_urls or sample_clean:

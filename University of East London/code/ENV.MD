@@ -4,9 +4,7 @@ UNIVERSITY_NAME=University of East London
 STRATEGY=ALL_COURSE
 
 # --- ALL_COURSE: catalogues (DegreeScopedALLCourse.csv) ---
-# Foundation uses saved HTML. UG/PG: save listing HTML, then uncomment the HTML keys.
-FOUNDATION_COURSE_CATALOGUE_URL=https://uelisc.com/our-programmes/international-foundation-programme/
-FOUNDATION_COURSE_CATALOGUE_HTML=../course_listing/foundation.html
+
 
 UNDERGRADUATE_COURSE_CATALOGUE_URL=https://www.uel.ac.uk/study/undergraduate/courses
 # UNDERGRADUATE_COURSE_CATALOGUE_HTML=../course_listing/undergraduate.html
@@ -101,7 +99,10 @@ COURSE_EXCLUDE_COURSE_TYPES="
 
 # --- Course page cleaning (tune from course_detail/ samples) ---
 # Keep h1 + international full-time .course-option-details + start-date buttons.
-# Home / part-time / overview / entry are dropped in preprocess_course_html_uni.
+# Home / part-time / overview are dropped; full-entry modal (academic + English per route) is kept in #uel-entry-requirements.
+# UG pages with both modal routes produce two markdown files (same URL): clean/courses/undergraduate/{slug}.md uses
+# Degree (including contextual offer); clean/courses/foundation/{slug}.md uses Degree with foundation year.
+# PG: Full entry requirements modal content (flat h3 sections, no route picker) is taken from dialog.modal-entry in the block.
 
 COURSE_PAGE_TITLE_SELECTOR=h1
 
@@ -110,6 +111,7 @@ COURSE_CLEAN_ENGINE=generic
 
 COURSE_CLEAN_BLOCKS="
  :: #uel-clean-facts
+ :: #uel-entry-requirements
 "
 
 COURSE_CLEAN_STRIP_WITHIN="

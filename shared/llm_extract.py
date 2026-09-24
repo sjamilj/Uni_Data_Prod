@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import argparse
 import csv
-import importlib.util
 import json
 import re
 import sys
@@ -15,6 +14,12 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from course_markdown_cleanup import parse_uni_json_payload
+from entry_requirements_mapping import (
+    bangladesh_hsc_requirements_for_llm,
+    build_stage1_mapping_hints,
+    resolve_english_tests_for_course,
+    resolve_ielts_for_course,
+)
 from normalize_admission_data import derive_hsc_gpa_from_uk_entry_text
 from uni_pages import (
     UNI_MD_BY_ROLE,
@@ -26,24 +31,6 @@ from ollama_client import chat
 from llm_stage2_config import LlmStage2Config
 from uni_paths import resolve_code_dir, resolve_output_dir
 from course_type_filter import CourseTypeFilter
-
-
-def load_uni_alevel_mapping_from_code_dir(code_dir: Path) -> None:
-    """Import {University}/code/suffolk_alevel_mapping.py (or future *_alevel_mapping.py) once."""
-    root = resolve_code_dir(code_dir)
-    for name in ("suffolk_alevel_mapping.py", "alevel_mapping.py"):
-        path = root / name
-        if not path.is_file():
-            continue
-        module_name = f"uni_alevel_mapping_{abs(hash(path.resolve()))}"
-        spec = importlib.util.spec_from_file_location(module_name, path)
-        if spec is None or spec.loader is None:
-            continue
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
-        break
-
-
 from study_level import (
     PRESETUP_CLEAN_SUBDIR,
     PRESETUP_EXTRACT_SUBDIR,
@@ -61,7 +48,6 @@ from study_level import (
     relative_course_md,
     study_level_from_markdown,
     unique_urls,
-    url_identity_keys,
 )
 
 _SHARED_DIR = Path(__file__).resolve().parent
@@ -400,7 +386,7 @@ ALLOWED_METADATA_SUBTITLES = {"entry requirements", "english requirement"}
 
 
 UG_ENTRY_DEGREES = {"HSC", "A Level", "Diploma", "BA", "BSc", "BBA", "BEng", "BCom"}
-FOUNDATION_ENTRY_DEGREES = {"HSC", "A Level"}
+FOUNDATION_ENTRY_DEGREES = {"HSC"}
 PG_ENTRY_DEGREES = {
     "BA",
     "BSc",
@@ -1504,9 +1490,7 @@ class CourseIndexManager:
     def entries_from_presetup_clean(output_dir: Path) -> list[dict[str, str]]:
         sample = load_presetup_sample(output_dir)
         sample_urls = presetup_sample_urls(sample)
-        wanted: set[str] = set()
-        for url in sample_urls:
-            wanted.update(url_identity_keys(url))
+        wanted = {normalize_url(url) for url in sample_urls}
         url_level: dict[str, str] = {}
         for row in sample.get('courses') or []:
             if not isinstance(row, dict):
@@ -1518,40 +1502,13 @@ class CourseIndexManager:
         entries: list[dict[str, str]] = []
         for md_path in iter_course_markdown(courses_dir):
             meta, body = split_frontmatter(md_path.read_text(encoding='utf-8'))
-            md_keys: set[str] = set()
-            for field in ('course_url', 'source_url'):
-                md_keys.update(url_identity_keys(str(meta.get(field) or '')))
-            if wanted and not (md_keys & wanted):
-                continue
-            matched_url = ''
-            for sample_url in sample_urls:
-                if url_identity_keys(sample_url) & md_keys:
-                    matched_url = sample_url
-                    break
-            if not matched_url:
+            source_url = (meta.get('source_url') or '').strip()
+            key = normalize_url(source_url)
+            if wanted and key not in wanted:
                 continue
             rel = relative_course_md(md_path, courses_dir)
-            norm_matched = normalize_url(matched_url)
-            sample_study_level = url_level.get(norm_matched, '')
-            md_study_level = study_level_from_markdown(
-                md_path, meta, courses_dir=courses_dir, course_url=matched_url
-            )
-            if sample_study_level and md_study_level != sample_study_level:
-                continue
-            study_level = sample_study_level or md_study_level
-            entries.append(
-                {
-                    'uniName': '',
-                    'courseName': ExtractionPathConfig.infer_course_name(body, matched_url),
-                    'degreeName': '',
-                    'course_url': matched_url,
-                    'courseUrlExternal': matched_url,
-                    'md_file': rel,
-                    'clean_md': f'clean/{PRESETUP_CLEAN_SUBDIR}/{rel}'.replace('\\', '/'),
-                    'study_level': study_level,
-                    'extract_root': PRESETUP_EXTRACT_SUBDIR,
-                }
-            )
+            study_level = url_level.get(key) or study_level_from_markdown(md_path, meta, courses_dir=courses_dir, course_url=source_url)
+            entries.append({'uniName': '', 'courseName': ExtractionPathConfig.infer_course_name(body, source_url), 'degreeName': '', 'course_url': source_url, 'courseUrlExternal': source_url, 'md_file': rel, 'clean_md': f'clean/{PRESETUP_CLEAN_SUBDIR}/{rel}'.replace('\\', '/'), 'study_level': study_level, 'extract_root': PRESETUP_EXTRACT_SUBDIR})
         return entries
 
     @staticmethod
@@ -1733,9 +1690,9 @@ class Stage1Enricher:
         return all((token.casefold() in body_cf for token in tokens))
 
     @staticmethod
-    def parser_hints_payload(hints: dict[str, str], course_body: str) -> dict[str, object]:
+    def parser_hints_payload(hints: dict, course_body: str) -> dict[str, object]:
         snippets: dict[str, str] = {}
-        fee = hints.get('tuitionFee', '')
+        fee = str(hints.get('tuitionFee', '') or '')
         for line in course_body.splitlines():
             stripped = line.strip()
             if not stripped:
@@ -1796,6 +1753,9 @@ class Stage1Enricher:
     course_body: str,
     course_name: str,
     course_url: str,
+    course_level: str = "",
+    entry_content: str = "",
+    english_content: str = "",
     warnings: list[str] | None = None,
 ) -> dict:
         """Apply parser-owned fields, then drop ungrounded LLM scalars."""
@@ -1812,6 +1772,22 @@ class Stage1Enricher:
         dropped = drop_ungrounded_stage1_scalars(parsed, course_body)
         if warnings is not None:
             warnings.extend(dropped)
+        mapping = {}
+        if course_level or entry_content or english_content:
+            mapping = build_stage1_mapping_hints(
+                course_body=course_body,
+                course_level=course_level or 'undergraduate',
+                entry_content=entry_content,
+                english_content=english_content,
+                degree_name=str(parsed.get('degreeName', '') or degree or ''),
+            )
+            for key in ENGLISH_TEST_KEYS:
+                value = str(mapping.get(key, '') or '').strip()
+                if value:
+                    parsed[key] = value
+            mapped_requirements = mapping.get('requirements') or []
+            if mapped_requirements:
+                parsed['requirements'] = mapped_requirements
         if not extract_stage1_entry_descriptions(parsed):
             entry_lines = extract_entry_lines_from_course_markdown(course_body)
             if not entry_lines:
@@ -1824,6 +1800,12 @@ class Stage1Enricher:
                             entry_lines.append(stripped)
             if entry_lines:
                 parsed['AcademicRequirementsMetaData'] = [{'subtitle': 'Entry Requirements', 'description': entry_lines}]
+        english_line = str(mapping.get('english_description') or mapping.get('ielts') or '').strip()
+        if english_line:
+            meta = normalize_metadata_array(parsed.get('AcademicRequirementsMetaData'))
+            meta = [item for item in meta if str(item.get('subtitle', '')).strip().lower() != 'english requirement']
+            meta.append({'subtitle': 'English Requirement', 'description': [english_line]})
+            parsed['AcademicRequirementsMetaData'] = meta
         return parsed
 
     @staticmethod
@@ -1871,6 +1853,8 @@ class Stage2Enricher:
         value = (text or '').strip()
         if not value:
             return ''
+        if re.fullmatch(r'\d+\.\d{1,2}', value):
+            return value
         cgpa = re.search('CGPA\\s*([\\d.]+)', value, re.I)
         if cgpa:
             return f'CGPA {cgpa.group(1)}'
@@ -2104,7 +2088,13 @@ class Stage2Enricher:
             if line not in seen:
                 entry_descriptions.append(line)
                 seen.add(line)
-        english_descriptions = extract_english_json_descriptions(english_content, course_level, course_name=course_name, course_body=course_body)
+        english_descriptions: list[str] = []
+        for item in normalize_metadata_array(stage1_json.get('AcademicRequirementsMetaData')):
+            if str(item.get('subtitle', '')).strip().lower() == 'english requirement':
+                english_descriptions = Stage1Enricher.normalize_description_list(item.get('description'))
+                break
+        if not english_descriptions:
+            english_descriptions = extract_english_json_descriptions(english_content, course_level, course_name=course_name, course_body=course_body)
         if not english_descriptions:
             for item in normalize_metadata_array(metadata):
                 if str(item.get('subtitle', '')).strip().lower() == 'english requirement':
@@ -2273,10 +2263,15 @@ class Stage2Enricher:
     stage1_json: dict | None = None,
     course_body: str = "",
     english_lookup_content: str = "",
-) -> dict:
+    ) -> dict:
         """Ensure english_requirements_parsed.json has test scalars (+ metadata)."""
         parsed = dict(english_json) if isinstance(english_json, dict) else {}
         lookup_content = english_lookup_content or english_content
+        course_ielts = resolve_ielts_for_course(
+            course_markdown=course_body,
+            study_level=course_level,
+            english_requirements_content=lookup_content,
+        )
         fallback = parse_english_test_scores(lookup_content, course_name=course_name, course_level=course_level)
         json_program = select_english_json_program(
             parse_uni_json_payload(lookup_content, 'english-requirements') or [],
@@ -2298,6 +2293,21 @@ class Stage2Enricher:
                 elif 'pearson' in name or 'pte' in name:
                     fallback['pteMinOverall'] = str(test.get('pteMinOverall', '') or '').strip()
                     fallback['pteMinSection'] = str(test.get('pteMinSection', '') or '').strip()
+        mapped_english = resolve_english_tests_for_course(
+            course_markdown=course_body,
+            study_level=course_level,
+            english_requirements_content=lookup_content,
+        )
+        if mapped_english.get('ieltsMinOverall'):
+            parsed['ieltsMinOverall'] = mapped_english['ieltsMinOverall']
+        if mapped_english.get('ieltsMinSection'):
+            parsed['ieltsMinSection'] = mapped_english['ieltsMinSection']
+        for key in ENGLISH_TEST_KEYS:
+            if key.startswith('ielts'):
+                continue
+            mapped_val = str(mapped_english.get(key, '') or '').strip()
+            if mapped_val:
+                parsed[key] = mapped_val
         for key in ENGLISH_TEST_KEYS:
             current = str(parsed.get(key, '') or '').strip()
             if not current:
@@ -2305,21 +2315,31 @@ class Stage2Enricher:
             else:
                 parsed[key] = current
         stage1_json = stage1_json or {}
-        for key in ('ieltsMinOverall', 'ieltsMinSection'):
+        for key in ENGLISH_TEST_KEYS:
             stage1_val = str(stage1_json.get(key, '') or '').strip()
             if stage1_val:
                 parsed[key] = stage1_val
         meta = normalize_metadata_array(parsed.get('AcademicRequirementsMetaData'), default_subtitle='English Requirement')
         meta = filter_academic_metadata(meta)
-        json_descriptions = extract_english_json_descriptions(
-            lookup_content,
-            course_level,
-            course_name=course_name,
-            course_body=f'{course_body}\n{english_content}',
-        )
-        if json_descriptions:
-            meta = [{'subtitle': 'English Requirement', 'description': json_descriptions}]
-        elif not meta and parsed.get('ieltsMinOverall'):
+        stage1_english = []
+        for item in normalize_metadata_array(stage1_json.get('AcademicRequirementsMetaData')):
+            if str(item.get('subtitle', '')).strip().lower() == 'english requirement':
+                stage1_english = Stage1Enricher.normalize_description_list(item.get('description'))
+                break
+        if stage1_english:
+            meta = [{'subtitle': 'English Requirement', 'description': stage1_english}]
+        elif mapped_english.get('english_description') or course_ielts.get('ielts'):
+            meta = [{'subtitle': 'English Requirement', 'description': [mapped_english.get('english_description') or course_ielts.get('ielts')]}]
+        else:
+            json_descriptions = extract_english_json_descriptions(
+                lookup_content,
+                course_level,
+                course_name=course_name,
+                course_body=f'{course_body}\n{english_content}',
+            )
+            if json_descriptions:
+                meta = [{'subtitle': 'English Requirement', 'description': json_descriptions}]
+        if not meta and parsed.get('ieltsMinOverall'):
             overall = parsed['ieltsMinOverall']
             section = parsed.get('ieltsMinSection', '')
             sentence = f'IELTS {overall} overall with no element below {section}' if section else f'IELTS {overall} overall'
@@ -2332,6 +2352,69 @@ class Stage2Enricher:
         aliases = SCHOLARSHIP_JSON_LEVEL_ALIASES.get(course_level, (course_level,))
         tokens = [token.strip().lower() for token in re.split('[,/&]', study_level) if token.strip()]
         return any((token in aliases for token in tokens))
+
+    @staticmethod
+    def parse_scholarship_percent(item: dict | None = None, *texts: str) -> float | None:
+        blobs: list[str] = []
+        if isinstance(item, dict):
+            blobs.append(str(item.get('Amount', '') or ''))
+            blobs.append(str(item.get('Eligibility', '') or ''))
+            description = item.get('description', '')
+            if isinstance(description, list):
+                blobs.extend(str(part) for part in description)
+            else:
+                blobs.append(str(description or ''))
+        blobs.extend(texts)
+        for blob in blobs:
+            if not blob:
+                continue
+            match = re.search(
+                r'(\d+(?:\.\d+)?)\s*(?:%|per\s*cent|percent)',
+                str(blob),
+                re.I,
+            )
+            if match:
+                return float(match.group(1))
+        return None
+
+    @staticmethod
+    def apply_percentage_scholarship_gbp(
+        target: dict,
+        tuition_fee: str,
+        *,
+        percent: float | None = None,
+    ) -> None:
+        scholarship_type = str(target.get('scholarshipType', '') or '').strip()
+        if scholarship_type.lower() != 'percentage':
+            return
+        fee_digits = re.sub(r'[^\d]', '', str(tuition_fee or ''))
+        if not fee_digits:
+            return
+        fee = int(fee_digits)
+        pct = percent
+        if pct is None:
+            meta_text = ''
+            for item in normalize_metadata_array(
+                target.get('scholarshipMetaData'),
+                default_subtitle='Scholarships',
+            ):
+                for line in item.get('description') or []:
+                    meta_text += f'\n{line}'
+            pct = parse_scholarship_percent(
+                None,
+                str(target.get('scholarshipAmount', '') or ''),
+                meta_text,
+            )
+        if pct is None:
+            return
+        current = str(target.get('scholarshipAmount', '') or '').strip()
+        if current and current not in {str(int(pct)), str(pct), f'{int(pct)}%'}:
+            try:
+                if int(re.sub(r'[^\d]', '', current) or 0) > pct:
+                    return
+            except ValueError:
+                pass
+        target['scholarshipAmount'] = str(round(fee * pct / 100))
 
     @staticmethod
     def parse_scholarship_numeric_amount(item: dict) -> float:
@@ -2372,15 +2455,18 @@ class Stage2Enricher:
 
     @staticmethod
     def scholarship_item_to_parsed(item: dict) -> dict:
-        amount_value = parse_scholarship_numeric_amount(item)
-        amount = str(int(amount_value)) if amount_value >= 0 else ''
         scholarship_type = str(item.get('scholarshipType', '') or '').strip()
-        if scholarship_type.lower() == 'percentage':
+        percent = parse_scholarship_percent(item)
+        if scholarship_type.lower() == 'percentage' or percent is not None:
             scholarship_type = 'Percentage'
-        elif scholarship_type.lower() == 'amount' or amount:
-            scholarship_type = 'Amount'
+            amount = ''
         else:
-            scholarship_type = ''
+            amount_value = parse_scholarship_numeric_amount(item)
+            amount = str(int(amount_value)) if amount_value >= 0 else ''
+            if scholarship_type.lower() == 'amount' or amount:
+                scholarship_type = 'Amount'
+            else:
+                scholarship_type = ''
         descriptions: list[str] = []
         for field in ('Eligibility', 'Amount', 'description'):
             value = str(item.get(field, '') or '').strip()
@@ -2468,12 +2554,11 @@ class Stage2Enricher:
     def derive_uk_equivalent_requirements(
     course_body: str,
     course_level: str,
-    university_name: str = "",
 ) -> list[dict[str, str]]:
         """Derive an HSC GPA row from UK UCAS / A-Level text on the course page."""
         if course_level not in {'foundation', 'undergraduate'}:
             return []
-        grade = derive_hsc_gpa_from_uk_entry_text(course_body, university_name=university_name)
+        grade = derive_hsc_gpa_from_uk_entry_text(course_body)
         if not grade:
             return []
         return [{'degree': 'HSC', 'grade': grade}]
@@ -2504,8 +2589,13 @@ class Stage2Enricher:
             row[key] = str(stage1_json.get(key, '') or '').strip()
         fees_meta = stage1_json.get('feesMetaData')
         row['feesMetaData'] = normalize_metadata_array(fees_meta) if fees_meta else []
-        row['requirements'] = []
-        row['AcademicRequirementsMetaData'] = []
+        row['requirements'] = normalize_requirements_list(
+            stage1_json.get('requirements'),
+            course_level='',
+        )
+        row['AcademicRequirementsMetaData'] = normalize_metadata_array(
+            stage1_json.get('AcademicRequirementsMetaData')
+        )
         row['scholarshipMetaData'] = []
         row['Result'] = 'ok'
         row['Paste_AI_output'] = ''
@@ -2644,13 +2734,14 @@ class Stage2Enricher:
     entry_content: str = "",
     course_level: str = "",
     course_body: str = "",
+    degree_name: str = "",
 ) -> dict[str, object]:
         merged = dict(deterministic)
         merged['uniName'] = deterministic['uniName']
         merged['courseUrlExternal'] = deterministic['courseUrlExternal']
         merged['courseName'] = deterministic['courseName']
         merged['programmeName'] = deterministic['programmeName']
-        merged['degreeName'] = deterministic['degreeName']
+        merged['degreeName'] = deterministic['degreeName'] or degree_name
         llm_fields = extract_llm_stage2_fields(llm_json, course_level=course_level)
         for key in LLM_STAGE2_KEYS:
             value = llm_fields.get(key)
@@ -2661,18 +2752,26 @@ class Stage2Enricher:
             value = str(llm_json.get(key, '') or '').strip()
             if not value:
                 continue
-            if key.startswith('ielts'):
-                if not str(merged.get(key, '') or '').strip():
-                    merged[key] = value
-            else:
-                merged[key] = value
+            if str(merged.get(key, '') or '').strip():
+                continue
+            merged[key] = value
         deposit_initial = str(llm_json.get('initialDeposit', '') or '').strip()
         if deposit_initial:
             merged['initialDeposit'] = deposit_initial
         deposit_fees = normalize_metadata_array(llm_json.get('feesMetaData'), default_subtitle='Initial tuition Deposit')
         if deposit_fees:
             merged['feesMetaData'] = merge_fees_metadata(merged.get('feesMetaData'), deposit_fees)
-        if (entry_content or uni_content) and course_level:
+        mapped = []
+        if entry_content and course_body and course_level:
+            mapped = bangladesh_hsc_requirements_for_llm(
+                study_level=course_level,
+                course_body=course_body,
+                entry_content=entry_content,
+                degree_name=str(merged.get('degreeName', '') or degree_name or ''),
+            )
+        if mapped:
+            merged['requirements'] = normalize_requirements_list(mapped, course_level=course_level)
+        elif (entry_content or uni_content) and course_level:
             fallback = normalize_requirements_list(parse_bangladesh_requirements(uni_content, course_level, entry_content=entry_content), course_level=course_level)
             existing = normalize_requirements_list(merged.get('requirements'), course_level=course_level)
             use_fallback = bool(fallback) and (not existing or (course_level == 'postgraduate' and all((item['degree'] in UG_ENTRY_DEGREES for item in existing))))
@@ -2682,13 +2781,16 @@ class Stage2Enricher:
                 merged['requirements'] = merge_requirement_lists(existing, fallback, course_level=course_level)
             elif fallback:
                 merged['requirements'] = fallback
-        if course_body and course_level:
-            uni_name = str(deterministic.get('uniName', '') or '').strip()
-            merged['requirements'] = merge_requirement_lists(
-                merged.get('requirements', []),
-                derive_uk_equivalent_requirements(course_body, course_level, university_name=uni_name),
-                course_level=course_level,
-            )
+            if course_body:
+                merged['requirements'] = merge_requirement_lists(
+                    merged.get('requirements', []),
+                    derive_uk_equivalent_requirements(course_body, course_level),
+                    course_level=course_level,
+                )
+        apply_percentage_scholarship_gbp(
+            merged,
+            str(merged.get('tuitionFee', '') or ''),
+        )
         return merged
 
     @staticmethod
@@ -2799,6 +2901,7 @@ class OutputJsonBuilder:
         currency = str(output.get('currency', '') or '').strip()
         if tuition_fee and currency:
             output['tuitionFeeCandidates'] = [{'label': 'INTERNATIONAL', 'amount': tuition_fee, 'currency': currency}]
+        apply_percentage_scholarship_gbp(output, tuition_fee)
         return output
 
 class CourseExtractor:
@@ -2815,7 +2918,6 @@ class CourseExtractor:
 ) -> dict:
         code_dir = resolve_code_dir(code_dir)
         output_dir = resolve_output_dir(code_dir)
-        load_uni_alevel_mapping_from_code_dir(code_dir)
         university_name = code_dir.parent.name
         course_url = course_entry.get('course_url') or course_entry.get('courseUrlExternal', '')
         slug = course_slug_from_url(course_url)
@@ -2852,7 +2954,29 @@ class CourseExtractor:
         )
         stage1_json_text = ''
         parser_hints = Stage1MarkdownParser.extract_stage1_fields_from_md(course_body)
-        ExtractionPathConfig.save_audit(audit_dir, 'parser_hints.json', json.dumps(Stage1Enricher.parser_hints_payload(parser_hints, course_body), indent=2, ensure_ascii=False))
+        mapping_hints = build_stage1_mapping_hints(
+            course_body=course_body,
+            course_level=course_level,
+            entry_content=entry_content,
+            english_content=english_lookup_content or english_content,
+            degree_name=degree_name,
+        )
+        for key, value in mapping_hints.items():
+            if key in parser_hints and parser_hints.get(key) and key not in {
+                'requirements',
+                'english_description',
+                'ielts',
+                'ielts_source',
+                'ielts_program_name',
+                'postgraduate_class',
+                'ucas_standard',
+                'ucas_contextual',
+                'ucas_foundation',
+            }:
+                continue
+            if value not in ('', None, []):
+                parser_hints[key] = value
+        ExtractionPathConfig.save_audit(audit_dir, 'parser_hints.json', json.dumps(Stage1Enricher.parser_hints_payload(parser_hints, course_body), indent=2, ensure_ascii=False, default=str))
         stage1_path = audit_dir / 'stage1_parsed.json'
         stage1_response_path = audit_dir / 'stage1_response.json'
         stage1_content = ''
@@ -2869,7 +2993,16 @@ class CourseExtractor:
             stage1_content = ExtractionPathConfig.extract_response_content(stage1_raw)
             ExtractionPathConfig.save_audit(audit_dir, 'stage1_response.json', json.dumps(stage1_raw, indent=2))
         grounding_warnings: list[str] = []
-        stage1_json = Stage1Enricher.enrich_stage1_from_markdown(stage1_json, course_body=course_body, course_name=course_name, course_url=course_url, warnings=grounding_warnings)
+        stage1_json = Stage1Enricher.enrich_stage1_from_markdown(
+            stage1_json,
+            course_body=course_body,
+            course_name=course_name,
+            course_url=course_url,
+            course_level=course_level,
+            entry_content=entry_content,
+            english_content=english_lookup_content or english_content,
+            warnings=grounding_warnings,
+        )
         if not degree_name and str(stage1_json.get('degreeName', '') or '').strip():
             degree_name = str(stage1_json['degreeName']).strip()
         ExtractionPathConfig.save_audit(audit_dir, 'extraction_warnings.json', json.dumps({'grounding': grounding_warnings}, indent=2, ensure_ascii=False))
@@ -2892,7 +3025,15 @@ class CourseExtractor:
         ExtractionPathConfig.save_audit(audit_dir, 'stage2_llm_parsed.json', json.dumps(llm_json, indent=2, ensure_ascii=False))
         stage2_content = json.dumps(llm_json, ensure_ascii=False)
         deterministic = Stage2Enricher.build_deterministic_row(stage1_json, university_name=university_name, course_url=course_url, course_name=course_name, degree_name=degree_name)
-        stage2_json = Stage2Enricher.merge_stage2_row(deterministic, llm_json, uni_content=uni_content, entry_content=entry_content, course_level=course_level, course_body=course_body)
+        stage2_json = Stage2Enricher.merge_stage2_row(
+            deterministic,
+            llm_json,
+            uni_content=uni_content,
+            entry_content=entry_content,
+            course_level=course_level,
+            course_body=course_body,
+            degree_name=degree_name,
+        )
         stage2_json['AcademicRequirementsMetaData'] = Stage2Enricher.finalize_academic_requirements_metadata(stage2_json.get('AcademicRequirementsMetaData'), stage1_json=stage1_json, uni_content=uni_content, english_content=english_lookup_content or english_content, course_level=course_level, english_scalars={key: llm_json.get(key, '') for key in ENGLISH_TEST_KEYS}, course_name=course_name, course_body=f'{course_body}\n{english_content}', entry_content=entry_content)
         stage2_json['uniName'] = university_name
         stage2_json['courseUrlExternal'] = course_url
@@ -3163,6 +3304,8 @@ select_english_row_label = Stage2Enricher.select_english_row_label
 parse_english_test_scores = Stage2Enricher.parse_english_test_scores
 enrich_english_parsed = Stage2Enricher.enrich_english_parsed
 scholarship_study_level_matches = Stage2Enricher.scholarship_study_level_matches
+parse_scholarship_percent = Stage2Enricher.parse_scholarship_percent
+apply_percentage_scholarship_gbp = Stage2Enricher.apply_percentage_scholarship_gbp
 parse_scholarship_numeric_amount = Stage2Enricher.parse_scholarship_numeric_amount
 select_scholarships_for_course = Stage2Enricher.select_scholarships_for_course
 scholarship_item_to_parsed = Stage2Enricher.scholarship_item_to_parsed

@@ -15,12 +15,20 @@ cleaned_at: 2026-09-21
       "programs": [
         {
           "program": "International Foundation Programme",
-          "requirements": [],
+          "requirements": [
+            {
+              "degree": "HSC",
+              "grade": "3.00"
+            },
+            {
+              "degree": "HSC",
+              "grade": "2.50"
+            }
+          ],
           "description": [
-            "UEL ISC International Foundation Programme (uelisc.com).",
-            "Academic entry: GCSE/iGCSE with minimum grades of 44444 (or equivalent), approximately 5 subjects at grade C.",
-            "Each application is considered individually.",
-            "The Bangladesh country page does not publish a separate HSC/Diploma grade for foundation."
+            "Minimum 64 UCAS points from Level 3 qualifications on the UCAS tariff (including A Levels).",
+            "Qualifications not listed on the tariff are considered case by case.",
+            "HSC equivalency: GPA 3.00 (64 UCAS); GPA 2.50 (48 UCAS)."
           ]
         }
       ]
@@ -33,7 +41,15 @@ cleaned_at: 2026-09-21
           "requirements": [
             {
               "degree": "HSC",
-              "grade": "GPA 4.5 (exceptional) plus high SSC grades, or HSC plus a recognised International Foundation"
+              "grade": "4.50"
+            },
+            {
+              "degree": "HSC",
+              "grade": "4.00"
+            },
+            {
+              "degree": "HSC",
+              "grade": "3.50"
             },
             {
               "degree": "Diploma",
@@ -41,9 +57,9 @@ cleaned_at: 2026-09-21
             }
           ],
           "description": [
-            "Higher Secondary Certificate (HSC) and a recognised International Foundation course or equivalent.",
-            "Exceptional students with a GPA of 4.5 in HSC / Intermediate Certificate (or First Class under the previous grading system) and high grades in Secondary School Certificate (SSC).",
-            "Diploma (from the Bangladesh Technical Education Board) with an overall CGPA of at least 3.0 (out of 4) or 65 per cent plus."
+            "HSC equivalency: GPA 4.50 (112 UCAS); GPA 4.00 (96 UCAS); GPA 3.50 (72 UCAS).",
+            "Recognised International Foundation or equivalent may also meet entry where applicable.",
+            "Diploma (Bangladesh Technical Education Board): minimum CGPA 3.0/4.0 or 65%+."
           ]
         }
       ]
@@ -56,24 +72,40 @@ cleaned_at: 2026-09-21
           "requirements": [
             {
               "degree": "BA",
-              "grade": "second division/class or CGPA 2.75/4.0"
+              "grade": "2.75"
+            },
+            {
+              "degree": "BA",
+              "grade": "3.00"
             },
             {
               "degree": "BSc",
-              "grade": "second division/class or CGPA 2.75/4.0"
+              "grade": "2.75"
+            },
+            {
+              "degree": "BSc",
+              "grade": "3.00"
             },
             {
               "degree": "MA",
-              "grade": "second class/division or CGPA 2.75/4.0"
+              "grade": "2.75"
+            },
+            {
+              "degree": "MA",
+              "grade": "3.00"
             },
             {
               "degree": "MSc",
-              "grade": "second class/division or CGPA 2.75/4.0"
+              "grade": "2.75"
+            },
+            {
+              "degree": "MSc",
+              "grade": "3.00"
             }
           ],
           "description": [
-            "A 3-year or 4-year bachelor’s (Hons) degree with at least a second division/class or CGPA 2.75 out of 4.0.",
-            "A master’s degree with a minimum second class/division or CGPA 2.75 out of 4.0."
+            "UK 2:2 (second class) = CGPA 2.75; UK 2:1 = CGPA 3.00.",
+            "Applies to bachelor’s (Hons) and master’s degrees where a UK 2:2 or 2:1 is required."
           ]
         }
       ]

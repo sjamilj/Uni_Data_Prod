@@ -12,7 +12,7 @@ cleaned_at: 2026-09-21
   
   {
     "scholarshipName": "Early Payment Discount",
-    "scholarshipType": "Discount",
+    "scholarshipType": "Percentage",
     "scholarshipStudyLevel": "Undergraduate, Postgraduate, Foundation",
     "Eligibility": "Self-funded students paying the overseas fee rate who pay tuition fees in full two weeks prior to the start date, or in full before or at enrolment.",
     "Amount": "5%",

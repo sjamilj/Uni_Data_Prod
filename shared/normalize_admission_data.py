@@ -104,16 +104,6 @@ ALEVEL_TO_HSC_EQUIVALENT = {
     "DDD": 2.0,
 }
 
-# Per-university A-Level combo → HSC CGPA (out of 5). Register via register_uni_alevel_to_hsc_map().
-UNI_ALEVEL_TO_HSC_OVERRIDES: dict[str, dict[str, float]] = {}
-
-
-def register_uni_alevel_to_hsc_map(university_name: str, mapping: dict[str, float]) -> None:
-    key = (university_name or "").strip()
-    if not key or not mapping:
-        return
-    UNI_ALEVEL_TO_HSC_OVERRIDES[key] = {combo.upper(): float(gpa) for combo, gpa in mapping.items()}
-
 # ------------------------------------------------------------
 # UNI-SPECIFIC OVERRIDE TEMPLATE
 # Copy this block, fill in the exact %->GPA table a university
@@ -300,22 +290,19 @@ class GpaConverter:
             return ""
         return sorted(matches)[-1]
 
-    def alevel_combo_to_hsc_gpa(self, combo: str, university_name: str = "") -> float | str:
+    def alevel_combo_to_hsc_gpa(self, combo: str) -> float | str:
         combo = (combo or "").strip().upper()
         if not combo:
             return ""
-        uni_map = UNI_ALEVEL_TO_HSC_OVERRIDES.get((university_name or "").strip())
-        if uni_map and combo in uni_map:
-            return uni_map[combo]
         return ALEVEL_TO_HSC_EQUIVALENT.get(combo, "")
 
-    def derive_hsc_gpa_from_uk_entry_text(self, text: str, university_name: str = "") -> str:
+    def derive_hsc_gpa_from_uk_entry_text(self, text: str) -> str:
         """UCAS points and/or A-Level combo -> HSC GPA grade string for requirements[]."""
         combo = self.parse_alevel_combo(text)
         points = self.parse_ucas_points(text)
         if not combo and points:
             combo = self.ucas_points_to_alevel_combo(points)
-        gpa = self.alevel_combo_to_hsc_gpa(combo, university_name=university_name)
+        gpa = self.alevel_combo_to_hsc_gpa(combo)
         if gpa == "":
             return ""
         if isinstance(gpa, float):
@@ -380,6 +367,8 @@ class GpaConverter:
 
         if gpa_match:
             results.append(round(float(gpa_match.group(1)), 2))
+        elif re.fullmatch(r"\d+\.\d{1,2}", text.strip()):
+            results.append(round(float(text.strip()), 2))
 
         if alevel_match and not gpa_match:
             mapped = ALEVEL_TO_HSC_EQUIVALENT.get(alevel_match.group(1))
