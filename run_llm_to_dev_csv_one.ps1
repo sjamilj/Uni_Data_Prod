@@ -35,6 +35,23 @@ $NormalizeScript = Join-Path $RepoRoot "shared\normalize_admission_data.py"
 $ExportScript = Join-Path $RepoRoot "shared\export_dev_courses.py"
 $CourseIndexCsv = Join-Path $OutputDir "courses.csv"
 
+function Get-RelativePathFromRoot {
+    param(
+        [string]$Root,
+        [string]$FullPath
+    )
+
+    $rootFull = [System.IO.Path]::GetFullPath($Root)
+    if (-not $rootFull.EndsWith([System.IO.Path]::DirectorySeparatorChar)) {
+        $rootFull += [System.IO.Path]::DirectorySeparatorChar
+    }
+    $full = [System.IO.Path]::GetFullPath($FullPath)
+    if ($full.StartsWith($rootFull, [StringComparison]::OrdinalIgnoreCase)) {
+        return $full.Substring($rootFull.Length)
+    }
+    throw "Path is not under root: $FullPath"
+}
+
 function Invoke-PythonStep {
     param(
         [string]$Label,
@@ -69,16 +86,16 @@ function Resolve-CleanMdForIndex {
 
     $candidate = Join-Path $CoursesRoot $InputPath
     if (Test-Path $candidate) {
-        return ([System.IO.Path]::GetRelativePath($CoursesRoot, $candidate)).Replace('\', '/')
+        return (Get-RelativePathFromRoot -Root $CoursesRoot -FullPath $candidate).Replace('\', '/')
     }
 
     $name = [System.IO.Path]::GetFileName($InputPath)
     $found = @(Get-ChildItem $CoursesRoot -Filter $name -File -Recurse -ErrorAction SilentlyContinue)
     if ($found.Count -eq 1) {
-        return ([System.IO.Path]::GetRelativePath($CoursesRoot, $found[0].FullName)).Replace('\', '/')
+        return (Get-RelativePathFromRoot -Root $CoursesRoot -FullPath $found[0].FullName).Replace('\', '/')
     }
     if ($found.Count -gt 1) {
-        $list = ($found | ForEach-Object { ([System.IO.Path]::GetRelativePath($CoursesRoot, $_.FullName)).Replace('\', '/') }) -join ", "
+        $list = ($found | ForEach-Object { (Get-RelativePathFromRoot -Root $CoursesRoot -FullPath $_.FullName).Replace('\', '/') }) -join ", "
         throw "Multiple clean markdown files named $name. Use a path relative to clean/courses: $list"
     }
 
@@ -89,7 +106,7 @@ if (-not (Test-Path $CodeDir)) {
     throw "University code folder not found: $CodeDir"
 }
 if (-not (Test-Path $CoursesDir)) {
-    throw "Missing $CoursesDir — run download/clean first."
+    throw "Missing $CoursesDir - run download/clean first."
 }
 foreach ($script in @($ExtractScript, $NormalizeScript, $ExportScript)) {
     if (-not (Test-Path $script)) {
