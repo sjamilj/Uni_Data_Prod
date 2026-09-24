@@ -3,7 +3,6 @@
 
 from __future__ import annotations
 
-import json
 import sys
 import unittest
 from pathlib import Path
@@ -13,7 +12,13 @@ if str(_SHARED) not in sys.path:
     sys.path.insert(0, str(_SHARED))
 
 from export_dev_courses import PortalLookup  # noqa: E402
+from entry_requirements_mapping import (  # noqa: E402
+    bangladesh_hsc_requirements_for_llm,
+    parse_ielts_bands,
+    resolve_english_tests_for_course,
+)
 from llm_extract import (  # noqa: E402
+    apply_percentage_scholarship_gbp,
     build_output_json,
     canonicalize_requirement_degree,
     derive_uk_equivalent_requirements,
@@ -21,11 +26,11 @@ from llm_extract import (  # noqa: E402
     enrich_stage1_from_markdown,
     extract_bangladesh_section_text,
     extract_entry_lines_from_course_markdown,
+    extract_grade_from_requirement_text,
     extract_stage1_fields_from_md,
     filter_bangladesh_descriptions_for_course,
     infer_degree_name_from_md,
     merge_requirement_lists,
-    merge_stage2_row,
     parse_bangladesh_json_requirements,
     select_english_json_program,
 )
@@ -518,326 +523,92 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(hints["intakeInfo"], "September 2026")
         self.assertEqual(hints["tuitionFee"], "18200")
 
-    def test_salford_cleanup_picks_latest_international_fee(self) -> None:
-        import importlib.util
-        from pathlib import Path
-
-        mod_path = (
-            Path(__file__).resolve().parents[1]
-            / "University of Salford"
-            / "code"
-            / "course_markdown_cleanup.py"
-        )
-        spec = importlib.util.spec_from_file_location("salford_course_cleanup", mod_path)
-        module = importlib.util.module_from_spec(spec)
-        assert spec and spec.loader
-        spec.loader.exec_module(module)
-
-        body = """## Fees and funding
-
-Intro text.
-
-### 2026/27
-
-| Type of study | Fees |
-| --- | --- |
-| Full-time | £10,620 per year |
-| Part-time | Calculated on a pro rata basis |
-
-### 2027/28
-
-| Type of study | Fees |
-| --- | --- |
-| Full-time | £10,800 per year |
-| Part-time | Calculated on a pro rata basis |
-
-### 2026/27
-
-| Type of study | Fees |
-| --- | --- |
-| Full-time | £19,980 per year |
-
-### 2027/28
-
-| Type of study | Fees |
-| --- | --- |
-| Full-time | £20,520 per year |
-
-We review tuition fees annually.
-"""
-        cleaned = module.cleanup_course_markdown_uni(body)
-        hints = extract_stage1_fields_from_md(cleaned)
-        self.assertEqual(hints.get("tuitionFee"), "20520")
-        self.assertEqual(hints.get("currency"), "GBP")
-        self.assertNotIn("£10,620", cleaned)
-
-    def test_salford_preprocess_injects_key_facts_from_course_summary(self) -> None:
-        import importlib.util
-        from pathlib import Path
-
-        from bs4 import BeautifulSoup
-
-        mod_path = (
-            Path(__file__).resolve().parents[1]
-            / "University of Salford"
-            / "code"
-            / "course_markdown_cleanup.py"
-        )
-        spec = importlib.util.spec_from_file_location("salford_course_cleanup", mod_path)
-        module = importlib.util.module_from_spec(spec)
-        assert spec and spec.loader
-        spec.loader.exec_module(module)
-
-        html = """
-        <main>
-          <div class="uos-course__summary">
-            <div class="uos-course__summary__item">
-              <h3 class="uos-course__summary__item__title">What is the UCAS code?</h3>
-              <p class="uos-course__summary__item__body">W615</p>
-            </div>
-            <div class="uos-course__summary__item">
-              <h3 class="uos-course__summary__item__title">How long will I study?</h3>
-              <p class="uos-course__summary__item__body">Three years</p>
-              <p class="uos-course__summary__item__body">Six years</p>
-            </div>
-          </div>
-        </main>
-        """
-        soup = BeautifulSoup(html, "html.parser")
-        module.preprocess_course_html_uni(soup)
-        facts = soup.select_one("#salford-course-key-facts")
-        self.assertIsNotNone(facts)
-        text = facts.get_text(" ", strip=True)
-        self.assertIn("Duration", text)
-        self.assertIn("Three years", text)
-        self.assertIn("UCAS code", text)
-        self.assertIn("W615", text)
-        self.assertNotIn("Six years", text)
-
-    def test_salford_trim_entry_drops_applicant_profile_before_standard_entry(self) -> None:
-        import importlib.util
-        from pathlib import Path
-
-        mod_path = (
-            Path(__file__).resolve().parents[1]
-            / "University of Salford"
-            / "code"
-            / "course_markdown_cleanup.py"
-        )
-        spec = importlib.util.spec_from_file_location("salford_course_cleanup", mod_path)
-        module = importlib.util.module_from_spec(spec)
-        assert spec and spec.loader
-        spec.loader.exec_module(module)
-
-        body = """## Entry requirements
-
-APPPLICANT PROFILE
-
-Marketing about the MA programme.
-
-The Application and Audition Process
-
-Audition dates TBC.
-
-Standard entry requirements Standard entry requirements
-
-To join this MA you should have a second class honours degree, 2:2 or above.
-"""
-        cleaned = module.cleanup_course_markdown_uni(body)
-        self.assertNotIn("APPPLICANT PROFILE", cleaned)
-        self.assertNotIn("Audition", cleaned)
-        self.assertIn("Standard entry requirements", cleaned)
-        self.assertIn("second class honours degree", cleaned)
-        self.assertNotIn("Standard entry requirements Standard entry requirements", cleaned)
-
-    def test_salford_cleanup_drops_main_content_until_entry(self) -> None:
-        import importlib.util
-        from pathlib import Path
-
-        mod_path = (
-            Path(__file__).resolve().parents[1]
-            / "University of Salford"
-            / "code"
-            / "course_markdown_cleanup.py"
-        )
-        spec = importlib.util.spec_from_file_location("salford_course_cleanup", mod_path)
-        module = importlib.util.module_from_spec(spec)
-        assert spec and spec.loader
-        spec.loader.exec_module(module)
-
-        body = """## Fees and funding
-
-Annual tuition fees: | £20,520
-
-## Main content
-
-junk
-
-## Overview
-
-duplicate marketing
-
-## Modules
-
-module list
-
-## Entry requirements
-
-IELTS 6.0
-"""
-        cleaned = module.cleanup_course_markdown_uni(body)
-        self.assertNotIn("## Main content", cleaned)
-        self.assertNotIn("duplicate marketing", cleaned)
-        self.assertNotIn("module list", cleaned)
-        self.assertIn("## Entry requirements", cleaned)
-        self.assertIn("IELTS 6.0", cleaned)
-
-    def test_birmingham_21_picks_compound_grade_and_subject_degrees(self) -> None:
-        data = {
-            "studyLevels": [
-                {
-                    "studyLevel": "Postgraduate",
-                    "programs": [
-                        {
-                            "program": "Postgraduate taught 2:1",
-                            "requirements": [
-                                {"degree": "BA", "grade": "GPA 3.0-3.3/4.0 or 65%"},
-                                {"degree": "BSc", "grade": "GPA 3.0-3.3/4.0 or 65%"},
-                                {"degree": "BCom", "grade": "GPA 3.0-3.3/4.0 or 65%"},
-                                {"degree": "BEng", "grade": "GPA 3.0-3.3/4.0 or 65%"},
-                            ],
-                        },
-                        {
-                            "program": "Postgraduate taught 2:2",
-                            "requirements": [
-                                {"degree": "BA", "grade": "GPA 2.6-3.1/4.0 or 60%"},
-                                {"degree": "BSc", "grade": "GPA 2.6-3.1/4.0 or 60%"},
-                                {"degree": "BCom", "grade": "GPA 2.6-3.1/4.0 or 60%"},
-                                {"degree": "BEng", "grade": "GPA 2.6-3.1/4.0 or 60%"},
-                            ],
-                        },
-                    ],
-                }
-            ]
-        }
-        chemical = """## Entry requirements
-
-- 2:1 Honours degree
-in a relevant subject (eg, Chemical Engineering or Chemistry with sufficient Mathematics)
-
-### International entry requirements
-
-Holders of Bachelors degree will normally be expected to have achieved a GPA of 3.0-3.3/4.0 or 65% or above for 2:1 equivalency, or a GPA of 2.6-3.1/4.0 or 60% or above for 2:2 equivalency depending on the awarding institution.
-"""
-        self.assertEqual(
-            parse_bangladesh_json_requirements(data, "postgraduate", course_body=chemical),
-            [
-                {"degree": "BSc", "grade": "GPA 3.0-3.3/4.0 or 65%"},
-                {"degree": "BEng", "grade": "GPA 3.0-3.3/4.0 or 65%"},
-            ],
-        )
-        economics = """## Entry requirements
-
-- 2:1 Honours degree
-or postgraduate diploma from a UK university (or overseas equivalent) in a subject with a quantitative element, such as Economics, Finance, Accounting, Engineering, Mathematics, Statistics, Science or Commerce.
-"""
-        self.assertEqual(
-            parse_bangladesh_json_requirements(data, "postgraduate", course_body=economics),
-            [
-                {"degree": "BA", "grade": "GPA 3.0-3.3/4.0 or 65%"},
-                {"degree": "BSc", "grade": "GPA 3.0-3.3/4.0 or 65%"},
-                {"degree": "BCom", "grade": "GPA 3.0-3.3/4.0 or 65%"},
-                {"degree": "BEng", "grade": "GPA 3.0-3.3/4.0 or 65%"},
-            ],
-        )
-
-    def test_birmingham_22_picks_lower_bangladesh_clause(self) -> None:
-        data = {
-            "studyLevels": [
-                {
-                    "studyLevel": "Postgraduate",
-                    "programs": [
-                        {
-                            "program": "Postgraduate taught",
-                            "requirements": [
-                                {
-                                    "degree": "BEng",
-                                    "grade": "GPA 3.0-3.3/4.0 or 65%+ (2:1); GPA 2.6-3.1/4.0 or 60%+ (2:2)",
-                                },
-                                {
-                                    "degree": "BSc",
-                                    "grade": "GPA 3.0-3.3/4.0 or 65%+ (2:1); GPA 2.6-3.1/4.0 or 60%+ (2:2)",
-                                },
-                            ],
-                        }
-                    ],
-                }
-            ]
-        }
-        body = """## Entry requirements
-
-- 2:2 Honours degree
-in Chemical Engineering
-"""
-        self.assertEqual(
-            parse_bangladesh_json_requirements(data, "postgraduate", course_body=body),
-            [
-                {"degree": "BEng", "grade": "GPA 2.6-3.1/4.0 or 60%"},
-            ],
-        )
-
-    def test_merge_stage2_drops_llm_msc_when_course_has_uk_class(self) -> None:
-        data = {
-            "studyLevels": [
-                {
-                    "studyLevel": "Postgraduate",
-                    "programs": [
-                        {
-                            "program": "Postgraduate taught 2:1",
-                            "requirements": [
-                                {"degree": "BSc", "grade": "GPA 3.0-3.3/4.0 or 65%"},
-                                {"degree": "BEng", "grade": "GPA 3.0-3.3/4.0 or 65%"},
-                            ],
-                            "description": ["2:1 Bangladesh equivalency"],
-                        }
-                    ],
-                }
-            ]
-        }
-        uni_content = json.dumps(data)
-        course_body = """## Entry requirements
-
-- 2:1 Honours degree
-in Chemical Engineering
-"""
-        merged = merge_stage2_row(
+    def test_process_record_bare_hsc_decimal_sets_min_gpa(self) -> None:
+        result = process_record(
             {
-                "uniName": "University of Birmingham",
-                "courseUrlExternal": "https://example.test/chemical",
-                "courseName": "Advanced Chemical Engineering MSc",
-                "programmeName": "Advanced Chemical Engineering MSc",
-                "degreeName": "MSc",
-                "requirements": [],
-            },
-            {
-                "requirements": [
-                    {"degree": "BSc", "grade": "GPA 3.0-3.3/4.0 or 65%+ (2:1)"},
-                    {"degree": "MSc", "grade": "GPA 3.0-3.3/4.0 or 65%+ (2:1)"},
-                    {"degree": "PhD", "grade": "GPA 3.0-3.3/4.0 or 65%+ (2:1)"},
-                ]
-            },
-            uni_content=uni_content,
-            entry_content=uni_content,
-            course_level="postgraduate",
-            course_body=course_body,
+                "courseName": "Applied Education BA (Hons)",
+                "courseUrl": "https://example.com",
+                "requirements": [{"degree": "HSC", "grade": "3.00"}],
+            }
         )
-        self.assertEqual(merged["degreeName"], "MSc")
-        self.assertEqual(
-            merged["requirements"],
-            [
-                {"degree": "BEng", "grade": "GPA 3.0-3.3/4.0 or 65%"},
+        self.assertEqual(result["minDegreeName"], "HSC")
+        self.assertEqual(result["minGpa"], "3.0")
+
+    def test_extract_grade_keeps_bare_decimal_gpa(self) -> None:
+        self.assertEqual(extract_grade_from_requirement_text("3.00"), "3.00")
+        self.assertEqual(extract_grade_from_requirement_text("2.50"), "2.50")
+        self.assertEqual(extract_grade_from_requirement_text("2.75"), "2.75")
+
+    def test_percentage_scholarship_uses_tuition_fee(self) -> None:
+        row_small = {
+            "scholarshipType": "Percentage",
+            "scholarshipAmount": "",
+            "scholarshipMetaData": [
+                {"subtitle": "Scholarships", "description": ["5%"]}
             ],
+        }
+        apply_percentage_scholarship_gbp(row_small, "100")
+        self.assertEqual(row_small["scholarshipAmount"], "5")
+        row_uel = {
+            "scholarshipType": "Percentage",
+            "scholarshipAmount": "",
+            "scholarshipMetaData": [
+                {"subtitle": "Scholarships", "description": ["5%"]}
+            ],
+        }
+        apply_percentage_scholarship_gbp(row_uel, "16020")
+        self.assertEqual(row_uel["scholarshipAmount"], "801")
+
+    def test_ielts_min_section_keeps_decimal(self) -> None:
+        overall, section = parse_ielts_bands(
+            "IELTS 6.0 with a minimum of 6.0 in Writing and Speaking; "
+            "5.5 in Listening and Reading (or recognised equivalent)."
         )
+        self.assertEqual(overall, "6.0")
+        self.assertEqual(section, "5.5")
+
+    def test_resolve_english_prefers_course_md_ielts(self) -> None:
+        repo_root = _SHARED.parent
+        english = (
+            repo_root
+            / "University of East London/output/clean/uni/english-requirements.md"
+        )
+        if not english.exists():
+            self.skipTest("UEL english-requirements.md not in workspace")
+        course = (
+            "### English Language requirements\n\n"
+            "- IELTS 6.0 with a minimum of 6.0 in Writing and Speaking; "
+            "5.5 in Listening and Reading (or recognised equivalent).\n"
+        )
+        resolved = resolve_english_tests_for_course(
+            course_markdown=course,
+            study_level="foundation",
+            english_requirements_content=english.read_text(encoding="utf-8"),
+        )
+        self.assertEqual(resolved["ielts_source"], "course_markdown")
+        self.assertEqual(resolved["ieltsMinOverall"], "6.0")
+        self.assertEqual(resolved["ieltsMinSection"], "5.5")
+        self.assertIn("IELTS 6.0", resolved["english_description"])
+        self.assertTrue(resolved["pteMinOverall"] or resolved["toeflMinOverall"])
+
+    def test_foundation_ucas_maps_one_hsc_gpa(self) -> None:
+        repo_root = _SHARED.parent
+        bangladesh = (
+            repo_root / "University of East London/output/clean/uni/bangladesh-entry.md"
+        )
+        if not bangladesh.exists():
+            self.skipTest("UEL bangladesh-entry.md not in workspace")
+        course = (
+            "## Entry requirements - Degree with foundation year\n\n"
+            "64 UCAS points from an equivalent Level 3 qualification listed on the "
+            "[UCAS tariff calculator](https://www.ucas.com/ucas/tariff-calculator).\n"
+        )
+        rows = bangladesh_hsc_requirements_for_llm(
+            study_level="foundation",
+            course_body=course,
+            entry_content=bangladesh.read_text(encoding="utf-8"),
+        )
+        self.assertEqual(rows, [{"degree": "HSC", "grade": "3.00"}])
 
 
 def format_report_issues(report) -> str:

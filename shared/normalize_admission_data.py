@@ -367,6 +367,8 @@ class GpaConverter:
 
         if gpa_match:
             results.append(round(float(gpa_match.group(1)), 2))
+        elif re.fullmatch(r"\d+\.\d{1,2}", text.strip()):
+            results.append(round(float(text.strip()), 2))
 
         if alevel_match and not gpa_match:
             mapped = ALEVEL_TO_HSC_EQUIVALENT.get(alevel_match.group(1))

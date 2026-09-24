@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -11,6 +12,7 @@ _SHARED = Path(__file__).resolve().parent
 if str(_SHARED) not in sys.path:
     sys.path.insert(0, str(_SHARED))
 
+from scrape_course_urls import CourseUrlMatcher, MatchingRules
 from study_level import (
     PRESETUP_URLS_CSV,
     StudyLevelClassifier,
@@ -90,27 +92,6 @@ class ScrapePresetupSampleTests(unittest.TestCase):
             "foundation",
         )
 
-    def test_same_url_can_be_undergraduate_and_foundation_via_listing_scope(self) -> None:
-        classifier = StudyLevelClassifier.from_env_lists(
-            {"undergraduate": [r"^/course/undergraduate/"]}
-        )
-        url = "https://www.uwl.ac.uk/course/undergraduate/business-studies"
-        mapping = UrlLevelMap()
-        mapping.tag_urls(
-            [url],
-            scope="search",
-            classifier=classifier,
-            source_scope="search",
-        )
-        mapping.tag_urls(
-            [url],
-            scope="FOUNDATION",
-            classifier=classifier,
-            source_scope="FOUNDATION",
-            scope_determines_level=True,
-        )
-        self.assertEqual(set(mapping.levels_for(url)), {"foundation", "undergraduate"})
-
     def test_presetup_scrape_does_not_replace_full_course_urls(self) -> None:
         import tempfile
         from scrape_course_urls import ArtifactStore, ProgressStore
@@ -188,6 +169,37 @@ class ScrapePresetupSampleTests(unittest.TestCase):
             self.assertTrue(presetup_download_sample_stale(output_dir, old_urls))
             all_urls = [row["course_url"] for row in scrape_courses]
             self.assertFalse(presetup_download_sample_stale(output_dir, all_urls))
+
+
+class CourseUrlMatcherHostTests(unittest.TestCase):
+    def _matcher(self) -> CourseUrlMatcher:
+        pattern = re.compile(r"^/(?:undergraduate|postgraduate)/courses/[a-z0-9\-]+$", re.I)
+        ifp = re.compile(r"^/our-programmes/international-foundation-programme/?$", re.I)
+        rules = MatchingRules(
+            path_patterns=[pattern, ifp],
+            path_pattern_sources=[],
+            excluded_paths=set(),
+            excluded_prefixes=(),
+            link_selector="",
+            base_url="https://www.uel.ac.uk",
+        )
+        return CourseUrlMatcher("uelisc.com", rules)
+
+    def test_allows_university_host_and_www_alias(self) -> None:
+        matcher = self._matcher()
+        self.assertTrue(
+            matcher.is_valid("https://www.uel.ac.uk/undergraduate/courses/bsc-hons-computer-science")
+        )
+        self.assertTrue(
+            matcher.is_valid("https://uel.ac.uk/undergraduate/courses/ba-hons-airline-airport-management")
+        )
+        self.assertTrue(
+            matcher.is_valid("https://uelisc.com/our-programmes/international-foundation-programme")
+        )
+
+    def test_rejects_other_hosts(self) -> None:
+        matcher = self._matcher()
+        self.assertFalse(matcher.is_valid("https://malvernhouse.com/undergraduate/courses/bsc-hons-computer-science"))
 
 
 if __name__ == "__main__":

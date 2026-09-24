@@ -282,34 +282,17 @@ def cdp_endpoint(cdp_url: str) -> str:
     return DEFAULT_CDP_URL
 
 
-def page_from_cdp_browser(browser: Any, *, prefer_host: str = "") -> Any:
+def page_from_cdp_browser(browser: Any) -> Any:
     context = browser.contexts[0] if browser.contexts else browser.new_context()
-    pages = list(context.pages)
-    host = (prefer_host or "").strip().lower()
-    if host and pages:
-        for page in pages:
-            try:
-                if host in (page.url or "").lower():
-                    return page
-            except Exception:
-                continue
-    return pages[0] if pages else context.new_page()
+    return context.pages[0] if context.pages else context.new_page()
 
 
-def try_connect_cdp(
-    playwright: Any,
-    cdp_url: str,
-    *,
-    prefer_host: str = "",
-) -> tuple[Any, Any] | None:
+def try_connect_cdp(playwright: Any, cdp_url: str) -> tuple[Any, Any] | None:
     try:
         browser = playwright.chromium.connect_over_cdp(cdp_endpoint(cdp_url))
     except Exception:
         return None
-    page = page_from_cdp_browser(browser, prefer_host=prefer_host)
-    if prefer_host:
-        print(f"Using CDP tab: {page.url or '(new tab)'}")
-    return browser, page
+    return browser, page_from_cdp_browser(browser)
 
 
 def launch_device_browser_context(
@@ -360,13 +343,12 @@ def launch_course_download_browser(
     code_dir: Path,
     config: CourseDownloadBrowserConfig,
     user_agent: str,
-    prefer_host: str = "",
 ) -> tuple[Any, Any, str]:
     """Return (handle, page, close_mode). close_mode: cdp | persistent | ephemeral."""
     code_dir = resolve_code_dir(code_dir)
 
     if config.cdp_url:
-        connected = try_connect_cdp(playwright, config.cdp_url, prefer_host=prefer_host)
+        connected = try_connect_cdp(playwright, config.cdp_url)
         if not connected:
             browser_spec = resolve_device_browser(config.browser)
             raise RuntimeError(
