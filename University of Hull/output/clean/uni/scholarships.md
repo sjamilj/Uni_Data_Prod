@@ -46,7 +46,7 @@ cleaned_at: 2026-09-20
     "scholarshipType": "Amount",
     "scholarshipStudyLevel": "Foundation",
     "Eligibility": "",
-    "Amount": "",
+    "Amount": "£2,000",
     "description": [
       "International Foundation Fee Waivers"
     ]

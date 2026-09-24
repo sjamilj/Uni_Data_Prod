@@ -61,6 +61,25 @@ _UK_STANDARD_FEE_WIDGET_RE = re.compile(
     r"^Standard Tuition Fee\s*\n+£[\d,]+ / year\s*\n+.*?(?=\n*$|\Z)",
     re.M | re.S | re.I,
 )
+def _hull_fees_how_much_section(markdown: str) -> str:
+    fees_match = re.search(
+        r"## Fees[^\n]*\n(.*?)(?=\n## |\Z)",
+        markdown,
+        re.S | re.I,
+    )
+    if not fees_match:
+        return ""
+    body = fees_match.group(1)
+    how_match = re.search(
+        r"### How much is it\?\s*(.*?)(?=\n### |\n## |\Z)",
+        body,
+        re.S | re.I,
+    )
+    return how_match.group(1) if how_match else body
+
+
+def _hull_fees_section_has_amount(markdown: str) -> bool:
+    return bool(re.search(r"£\s*[\d,]+", _hull_fees_how_much_section(markdown)))
 
 
 def _combobox_value(main: Tag, label_prefix: str) -> str:
@@ -322,6 +341,168 @@ def _remove_duplicate_h1(markdown: str) -> str:
     return "\n".join(kept)
 
 
+def _normalize_hull_html_for_fee_scan(html: str) -> str:
+    text = html.replace("\\u0026pound;", "£").replace("&pound;", "£")
+    text = text.replace("\\u003c", "<").replace("\\u003e", ">")
+    return text
+
+
+def _extract_hull_fees_from_html(html: str) -> dict[str, str]:
+    text = _normalize_hull_html_for_fee_scan(html)
+    fees: dict[str, str] = {}
+    patterns = {
+        "standard": r"For International students.*?standard course fee.*?£\s*([\d,]+)",
+        "accelerated": r"accelerated learning course is.*?£\s*([\d,]+)",
+        "foundation": r"foundation year as part of your course.*?the fee is.*?£\s*([\d,]+)",
+        "masters": r"Masters Fee.*?£\s*([\d,]+)",
+        "pg_overall": r"The overall fee for this course is £\s*([\d,]+)",
+        "pgt_intl": r"£\s*([\d,]+)\s*\(PGT[^)]*International",
+        "pgr_full_time": r"(?:Our\s+)?standard course fee is £\s*([\d,]+)\s*a year for full-time",
+    }
+    for key, pattern in patterns.items():
+        match = re.search(pattern, text, re.I)
+        if match:
+            fees[key] = match.group(1).replace(",", "").strip()
+    return fees
+
+
+def _format_gbp_amount(amount: str) -> str:
+    digits = amount.replace(",", "").strip()
+    if not digits.isdigit():
+        return amount
+    return f"£{int(digits):,}"
+
+
+def _study_level_from_markdown(markdown: str) -> str:
+    pipeline = re.search(r"study_level=(\w+)", markdown, re.I)
+    if pipeline:
+        return pipeline.group(1).strip().lower()
+    front = re.search(r"^study_level:\s*(\S+)\s*$", markdown, re.I | re.M)
+    if front:
+        return front.group(1).strip().lower()
+    return ""
+
+
+def _pick_hull_fee_amount(
+    fees: dict[str, str],
+    *,
+    study_level: str,
+    want_foundation: bool,
+) -> str:
+    if want_foundation:
+        return (
+            fees.get("foundation")
+            or fees.get("standard")
+            or fees.get("accelerated")
+            or fees.get("masters")
+            or fees.get("pg_overall")
+            or fees.get("pgt_intl")
+            or fees.get("pgr_full_time")
+            or ""
+        )
+    if study_level in ("postgraduate", "postgraduate_research"):
+        return (
+            fees.get("masters")
+            or fees.get("pg_overall")
+            or fees.get("pgt_intl")
+            or fees.get("pgr_full_time")
+            or fees.get("standard")
+            or fees.get("accelerated")
+            or ""
+        )
+    return (
+        fees.get("accelerated")
+        or fees.get("standard")
+        or fees.get("masters")
+        or fees.get("pg_overall")
+        or ""
+    )
+
+
+def _inject_hull_fees_into_markdown(
+    markdown: str,
+    fees: dict[str, str],
+    *,
+    study_level: str = "",
+) -> str:
+    if not fees or _hull_fees_section_has_amount(markdown):
+        return markdown
+
+    level = (study_level or _study_level_from_markdown(markdown)).strip().lower()
+    option_match = re.search(r"-\s*\*\*Course option:\*\*\s*([^\n]+)", markdown, re.I)
+    course_option = (option_match.group(1) if option_match else "").casefold()
+    want_foundation = level == "foundation" or "foundation year" in course_option
+
+    amount = _pick_hull_fee_amount(fees, study_level=level, want_foundation=want_foundation)
+    if not amount:
+        return markdown
+
+    lines: list[str] = []
+    if fees.get("accelerated") and amount == fees.get("accelerated"):
+        lines.append(
+            "The fee for our accelerated learning course is "
+            f"{_format_gbp_amount(amount)} per year."
+        )
+    elif level == "postgraduate_research" and fees.get("pgr_full_time"):
+        lines.append(
+            f"Our standard course fee is {_format_gbp_amount(amount)} a year for full-time study."
+        )
+    else:
+        lines.append(
+            "For International students, the standard course fee is "
+            f"{_format_gbp_amount(amount)} per year."
+        )
+    if fees.get("foundation") and fees["foundation"] != amount:
+        lines.append(
+            "If you choose to study a foundation year as part of your course, "
+            f"the fee is {_format_gbp_amount(fees['foundation'])}."
+        )
+    block = "\n".join(lines) + "\n"
+
+    marker = "### How much is it?"
+    if marker in markdown:
+        if markdown.rstrip().endswith(marker):
+            return markdown.rstrip() + "\n\n" + block
+        patched, count = re.subn(
+            r"(### How much is it\?\s*)",
+            r"\1\n\n" + block,
+            markdown,
+            count=1,
+            flags=re.I,
+        )
+        if count:
+            return patched
+    if "## Fees" in markdown:
+        return re.sub(
+            r"(## Fees[^\n]*\n)",
+            r"\1\n" + block,
+            markdown,
+            count=1,
+            flags=re.I,
+        )
+    return markdown + "\n\n## Fees & Funding\n\n### How much is it?\n\n" + block
+
+
+def supplement_course_markdown_from_source_html(
+    markdown: str,
+    *,
+    code_dir: Path,
+    source_html: str = "",
+    study_level: str = "",
+) -> str:
+    html_path = _resolve_hull_course_html(code_dir, source_html)
+    if not html_path:
+        return markdown
+    fees = _extract_hull_fees_from_html(
+        html_path.read_text(encoding="utf-8", errors="replace")
+    )
+    return _inject_hull_fees_into_markdown(
+        markdown,
+        fees,
+        study_level=study_level,
+    )
+
+
 def _apply_foundation_scope_duration(markdown: str, study_level: str) -> str:
     """Foundation listing scope includes a foundation year — show total length (typically +1 year)."""
     if study_level.strip().lower() != "foundation":
@@ -392,7 +573,17 @@ def main(argv: list[str] | None = None) -> int:
                 rebuilt = _rebuild_body_from_html(html_path, code_dir)
                 if rebuilt:
                     body = rebuilt
-            cleaned_body = cleaner.cleanup_course_markdown(body.rstrip("\n"), code_dir=code_dir)
+                body = supplement_course_markdown_from_source_html(
+                    body,
+                    code_dir=code_dir,
+                    source_html=meta.get("source_html", ""),
+                    study_level=str(meta.get("study_level", "")),
+                )
+            cleaned_body = cleaner.cleanup_course_markdown(
+                body.rstrip("\n"),
+                code_dir=code_dir,
+                source_html=str(meta.get("source_html", "")),
+            )
             cleaned_body = _apply_foundation_scope_duration(
                 cleaned_body.rstrip("\n"),
                 meta.get("study_level", ""),
