@@ -42,17 +42,6 @@ URL matching (required):
   EXCLUDED_PATH_PREFIXES= optional path prefixes to skip
   COURSE_LINK_SELECTOR=   optional CSS selector limiting which <a> tags are scanned
 
-  LISTING_PAGINATION_MODE=url (default) | ajax_click | click
-    ajax_click — same listing URL for every page; paginate via numbered in-page
-    controls (Umbraco DoCourseSearch). Set LISTING_AJAX_WAIT_SELECTOR and
-    LISTING_AJAX_PAGE_BUTTON_SELECTOR if the site differs from Bedfordshire defaults.
-    click — same listing URL; click Next (LISTING_CLICK_NEXT_SELECTOR) after each page.
-  LISTING_AJAX_MODE_CHECKBOX_IDS=     default study mode(s), e.g. Full-time_614 (Beds)
-  {SCOPE}_LISTING_AJAX_LEVEL_CHECKBOX_IDS= / {SCOPE}_LISTING_AJAX_MODE_CHECKBOX_IDS=
-  {SCOPE}_LISTING_AJAX_VARIANT_CHECKBOX_IDS=  (Beds: with Foundation Year_1519)
-    per-programme filters (UNDERGRADUATE, POSTGRADUATE, POSTGRADUATE_RESEARCH, FOUNDATION, …)
-    Comment out a scope’s *_COURSE_LISTING_PAGE_1 to skip that pass.
-
 Run from a university code/ folder (uses .env in cwd, or pass --code-dir):
 
   cd "{University}/code"
@@ -95,23 +84,6 @@ from browser_device_profile import (
     wait_for_cloudflare_clear,
 )
 from course_type_filter import CourseTypeFilter
-from listing_ajax_pagination import (
-    DEFAULT_LISTING_CLICK_NEXT_SELECTOR,
-    DO_COURSE_SEARCH_PATH_FRAGMENT,
-    LISTING_PAGINATION_MODE_AJAX_CLICK,
-    LISTING_PAGINATION_MODE_CLICK,
-    LISTING_PAGINATION_MODE_URL,
-    ListingAjaxSettings,
-    VALID_LISTING_PAGINATION_MODES,
-    listing_page_resume_key,
-    page_button_selector,
-    parse_umbraco_course_search_meta,
-    resolve_ajax_level_checkbox_ids,
-    resolve_ajax_mode_checkbox_ids,
-    resolve_ajax_variant_checkbox_ids,
-    UMBRACO_COURSE_SEARCH_FILTER_JS,
-    UMBRACO_SUBMIT_COURSE_SEARCH_JS,
-)
 from study_level import (
     EXECUTE_LEVEL_ORDER,
     LEVEL_CSV_NAMES,
@@ -604,13 +576,7 @@ class CourseUrlMatcher:
             return False
         if path_lower in self.rules.excluded_paths:
             return False
-        path = parsed.path
-        path_variants = {path, path.rstrip("/"), f"{path.rstrip('/')}/"}
-        return any(
-            pattern.search(candidate)
-            for pattern in self.rules.path_patterns
-            for candidate in path_variants
-        )
+        return any(pattern.search(parsed.path) for pattern in self.rules.path_patterns)
 
     def extract_from_html(self, html: str, base_url: str) -> set[str]:
         soup = BeautifulSoup(html, "html.parser")
@@ -745,9 +711,6 @@ class ListingConfig:
     programme: str
     seeds: list[str]
     search_path: str
-    ajax_level_checkbox_ids: tuple[str, ...] = ()
-    ajax_mode_checkbox_ids: tuple[str, ...] = ()
-    ajax_variant_checkbox_ids: tuple[str, ...] = ()
 
 
 class ListingConfigLoader:
@@ -775,14 +738,6 @@ class ListingConfigLoader:
         return seeds
 
     @staticmethod
-    def _scope_checkbox_ids(env: EnvFile, scope: str, kind: str) -> tuple[str, ...]:
-        scoped = tuple(item.strip() for item in env.get_list(f"{scope}_LISTING_AJAX_{kind}_CHECKBOX_IDS") if item.strip())
-        if scoped:
-            return scoped
-        global_ids = tuple(item.strip() for item in env.get_list(f"LISTING_AJAX_{kind}_CHECKBOX_IDS") if item.strip())
-        return global_ids
-
-    @staticmethod
     def collect_degree_listings(env: EnvFile, env_path: Path) -> list[ListingConfig]:
         configs: list[ListingConfig] = []
         for scope in DEGREE_SCOPES:
@@ -796,15 +751,7 @@ class ListingConfigLoader:
                     f"(found: {', '.join(search_paths)})"
                 )
             configs.append(
-                ListingConfig(
-                    scope=scope,
-                    programme=scope,
-                    seeds=seeds,
-                    search_path=search_paths[0],
-                    ajax_level_checkbox_ids=ListingConfigLoader._scope_checkbox_ids(env, scope, "LEVEL"),
-                    ajax_mode_checkbox_ids=ListingConfigLoader._scope_checkbox_ids(env, scope, "MODE"),
-                    ajax_variant_checkbox_ids=ListingConfigLoader._scope_checkbox_ids(env, scope, "VARIANT"),
-                )
+                ListingConfig(scope=scope, programme=scope, seeds=seeds, search_path=search_paths[0])
             )
         return configs
 
@@ -823,14 +770,7 @@ class ListingConfigLoader:
     @staticmethod
     def fingerprint(listing_configs: list[ListingConfig]) -> list[dict]:
         return [
-            {
-                "scope": item.scope,
-                "seeds": item.seeds,
-                "search_path": item.search_path,
-                "ajax_level_checkbox_ids": list(item.ajax_level_checkbox_ids),
-                "ajax_mode_checkbox_ids": list(item.ajax_mode_checkbox_ids),
-                "ajax_variant_checkbox_ids": list(item.ajax_variant_checkbox_ids),
-            }
+            {"scope": item.scope, "seeds": item.seeds, "search_path": item.search_path}
             for item in listing_configs
         ]
 
@@ -851,8 +791,6 @@ class ScraperConfig:
     degree_listings: list[ListingConfig] = field(default_factory=list)
     single_catalogue: CatalogueSource | None = None
     level_classifier: StudyLevelClassifier = field(default_factory=StudyLevelClassifier)
-    listing_pagination_mode: str = LISTING_PAGINATION_MODE_URL
-    listing_ajax: ListingAjaxSettings = field(default_factory=ListingAjaxSettings)
 
     # Convenience passthroughs so extraction code can read config.path_patterns etc.
     @property
@@ -963,45 +901,6 @@ class ConfigLoader:
             config.base_url = f"{parsed.scheme}://{parsed.netloc}"
         config.degree_listings = degree_listings
         config.domain = urlparse(config.base_url).netloc.lower()
-        mode = env.get("LISTING_PAGINATION_MODE", LISTING_PAGINATION_MODE_URL).strip().lower()
-        if mode not in VALID_LISTING_PAGINATION_MODES:
-            raise ValueError(
-                f"{env_path}: LISTING_PAGINATION_MODE must be one of "
-                f"{sorted(VALID_LISTING_PAGINATION_MODES)!r} (got {mode!r})."
-            )
-        config.listing_pagination_mode = mode
-        level_ids = tuple(
-            item.strip()
-            for item in env.get_list("LISTING_AJAX_LEVEL_CHECKBOX_IDS")
-            if item.strip()
-        )
-        mode_ids = tuple(
-            item.strip()
-            for item in env.get_list("LISTING_AJAX_MODE_CHECKBOX_IDS")
-            if item.strip()
-        )
-        variant_ids = tuple(
-            item.strip()
-            for item in env.get_list("LISTING_AJAX_VARIANT_CHECKBOX_IDS")
-            if item.strip()
-        )
-        config.listing_ajax = ListingAjaxSettings(
-            wait_selector=env.get("LISTING_AJAX_WAIT_SELECTOR", "a.search-results__title__link").strip()
-            or "a.search-results__title__link",
-            page_button_selector_template=env.get(
-                "LISTING_AJAX_PAGE_BUTTON_SELECTOR",
-                '.pagination button.page-link[data-page="{page}"]',
-            ).strip()
-            or '.pagination button.page-link[data-page="{page}"]',
-            level_checkbox_ids=level_ids,
-            mode_checkbox_ids=mode_ids,
-            variant_checkbox_ids=variant_ids,
-            next_button_selector=env.get(
-                "LISTING_CLICK_NEXT_SELECTOR",
-                DEFAULT_LISTING_CLICK_NEXT_SELECTOR,
-            ).strip()
-            or DEFAULT_LISTING_CLICK_NEXT_SELECTOR,
-        )
         return config
 
 
@@ -1113,6 +1012,17 @@ class ArtifactStore:
 # Browser control (Playwright)
 # ============================================================================
 
+def _invoke_uni_course_page_settle(code_dir: Path, page, url: str) -> None:
+    from course_markdown_cleanup import CourseMarkdownCleaner
+
+    module = CourseMarkdownCleaner.load_uni_course_cleanup_module(code_dir)
+    if module is None:
+        return
+    settle = getattr(module, "settle_course_page_after_download", None)
+    if callable(settle):
+        settle(page, url)
+
+
 class BrowserSession:
     """Playwright page for listing/download; launch from code/.env (see cloudflare-course-download.md)."""
 
@@ -1124,6 +1034,7 @@ class BrowserSession:
         self._close_mode = ""
         self._config: CourseDownloadBrowserConfig | None = None
         self.page = None
+        self._current_url = ""
 
     def _resolve_config(self) -> CourseDownloadBrowserConfig:
         if self._config is None:
@@ -1141,17 +1052,11 @@ class BrowserSession:
         self._playwright = sync_playwright().start()
         config = self._resolve_config()
         work_dir = self.code_dir or Path.cwd()
-        prefer_host = ""
-        if self.code_dir is not None:
-            base = EnvFile(self.code_dir / ENV_FILE).get("UNIVERSITY_BASE_URL", "").strip()
-            if base:
-                prefer_host = urlparse(base).netloc.lower()
         self._handle, self.page, self._close_mode = launch_course_download_browser(
             self._playwright,
             code_dir=work_dir,
             config=config,
             user_agent=DEFAULT_USER_AGENT,
-            prefer_host=prefer_host,
         )
         return self
 
@@ -1170,9 +1075,6 @@ class BrowserSession:
     def dismiss_cookies(page) -> None:
         selectors = [
             "#ccc-notify-accept",
-            "#ccc-recommended-settings",
-            "#ccc-dismiss-button",
-            "#ccc button:has-text('Accept')",
             "button.agree-button.eu-cookie-compliance-default-button",
             "button:has-text('Accept all categories')",
             "button:has-text('Accept all')",
@@ -1182,50 +1084,21 @@ class BrowserSession:
         for selector in selectors:
             try:
                 button = page.locator(selector).first
-                if button.count() == 0:
-                    continue
                 if button.is_visible(timeout=1500):
-                    button.click(timeout=3000, force=True)
-                    page.wait_for_timeout(400)
-                    break
+                    button.click(timeout=3000)
+                    page.wait_for_timeout(500)
+                    return
             except Exception:
                 continue
-        try:
-            page.evaluate(
-                """() => {
-                  const hide = (el) => { if (el) el.style.setProperty('display', 'none', 'important'); };
-                  hide(document.getElementById('ccc-overlay'));
-                  hide(document.getElementById('ccc'));
-                }"""
-            )
-        except Exception:
-            pass
 
-    def _listing_wait_selectors(self) -> list[str]:
-        link_selector = ""
-        if self._env is not None:
-            link_selector = (self._env.get("COURSE_LINK_SELECTOR") or "").strip()
-        elif self.code_dir is not None:
-            link_selector = (
-                EnvFile(self.code_dir / ENV_FILE).values.get("COURSE_LINK_SELECTOR") or ""
-            ).strip()
-        selectors: list[str] = []
-        if link_selector:
-            selectors.append(link_selector)
-        selectors.extend(
-            [
-                'a[rel="bookmark"][href*="/course/"]',
-                'a[href*="/study-here/courses/"]',
-                ".course-card",
-                "a.sc-eJZSpO",
-            ]
-        )
-        return selectors
-
-    def wait_for_listing(self) -> None:
-        assert self.page is not None
-        page = self.page
-        for selector in self._listing_wait_selectors():
+    @staticmethod
+    def wait_for_listing(page) -> None:
+        selectors = [
+            'a[href*="/study-here/courses/"]',
+            ".course-card",
+            "a.sc-eJZSpO",
+        ]
+        for selector in selectors:
             try:
                 page.wait_for_selector(selector, timeout=20000)
                 page.wait_for_timeout(1000)
@@ -1243,22 +1116,17 @@ class BrowserSession:
         if is_cloudflare_challenge_page(title, html):
             if config.cloudflare_auto_click:
                 maybe_auto_click_cloudflare(self.page)
-            wait_seconds = config.cloudflare_wait_seconds
-            if not wait_seconds and config.cdp_url:
-                wait_seconds = 180
-            if wait_seconds:
+            if config.cloudflare_wait_seconds:
                 wait_for_cloudflare_clear(
                     self.page,
-                    max_seconds=wait_seconds,
+                    max_seconds=config.cloudflare_wait_seconds,
                 )
             title = self.page.title() or ""
             html = self.page.content()
             if is_cloudflare_challenge_page(title, html):
                 raise RuntimeError(
-                    "Cloudflare challenge still active. In your CDP browser, complete "
-                    "verification on the tab Playwright uses (often the leftmost tab), "
-                    "or set COURSE_DOWNLOAD_CLOUDFLARE_WAIT_SECONDS=300 in .env. "
-                    "See docs/shared/cloudflare-course-download.md"
+                    "Cloudflare challenge still active. Use CDP "
+                    "(COURSE_DOWNLOAD_CDP_URL) — see docs/shared/cloudflare-course-download.md"
                 )
         self.dismiss_cookies(self.page)
         try:
@@ -1266,48 +1134,20 @@ class BrowserSession:
         except PlaywrightTimeoutError:
             self.page.wait_for_load_state("load", timeout=15000)
         if wait_for_results:
-            self.wait_for_listing()
+            self.wait_for_listing(self.page)
         else:
             self.page.wait_for_timeout(800)
-        self._apply_course_page_download_prep()
+            if self.code_dir is not None and self._current_url:
+                _invoke_uni_course_page_settle(
+                    self.code_dir,
+                    self.page,
+                    self._current_url,
+                )
         html = self.page.content()
         if not html or len(html) < 200:
             raise RuntimeError("Empty or tiny HTML response")
         title = self.page.title() or "catalogue"
         return title, html
-
-    def _apply_course_page_download_prep(self) -> None:
-        """Optional per-university course page UI (e.g. Beds course-selector dropdowns)."""
-        assert self.page is not None
-        if self.code_dir is None:
-            return
-        env = EnvFile(self.code_dir / ENV_FILE).values
-        selects: list[tuple[str, str]] = []
-        study_type = (env.get("COURSE_DOWNLOAD_STUDY_TYPE") or "").strip()
-        if study_type:
-            study_sel = (env.get("COURSE_DOWNLOAD_STUDY_TYPE_SELECT") or "#studyType").strip()
-            selects.append((study_sel, study_type))
-        study_mode = (env.get("COURSE_DOWNLOAD_STUDY_MODE") or "").strip()
-        if study_mode:
-            selects.append(("#studyMode", study_mode))
-        intake_month = (env.get("COURSE_DOWNLOAD_INTAKE_MONTH") or "").strip()
-        if intake_month:
-            selects.append(("#intakeMonth", intake_month))
-        location = (env.get("COURSE_DOWNLOAD_LOCATION") or "").strip()
-        if location:
-            selects.append(("#location", location))
-        if not selects:
-            return
-        for css, value in selects:
-            try:
-                field = self.page.locator(css).first
-                if field.count() == 0:
-                    continue
-                field.select_option(value=value, timeout=10000)
-                self.page.wait_for_timeout(400)
-            except Exception:
-                continue
-        self.page.wait_for_timeout(600)
 
     def download_html(self, url: str, *, wait_for_results: bool = False) -> tuple[str, str]:
         """Navigate to url and return (page_title, html). Retries transient failures."""
@@ -1316,6 +1156,7 @@ class BrowserSession:
         last_error: Exception | None = None
         for attempt in range(1, LISTING_DOWNLOAD_RETRIES + 1):
             try:
+                self._current_url = url
                 self.page.goto(url, wait_until="domcontentloaded", timeout=60000)
                 return self._settle_page(wait_for_results=wait_for_results)
             except Exception as exc:
@@ -1323,207 +1164,6 @@ class BrowserSession:
                 print(f"    Retry {attempt}/{LISTING_DOWNLOAD_RETRIES}: {exc}")
                 time.sleep(min(2 * attempt, 8))
         raise RuntimeError(f"Failed to download {url}: {last_error}")
-
-    @staticmethod
-    def _is_do_course_search_response(response) -> bool:
-        return (
-            DO_COURSE_SEARCH_PATH_FRAGMENT in response.url
-            and response.request.method == "POST"
-        )
-
-    @staticmethod
-    def _listing_paths_match(current_url: str, target_url: str) -> bool:
-        current = urlparse(current_url)
-        target = urlparse(target_url)
-        return (
-            current.netloc.lower() == target.netloc.lower()
-            and current.path.rstrip("/").lower() == target.path.rstrip("/").lower()
-        )
-
-    def apply_ajax_listing_filters(
-        self,
-        listing_url: str,
-        scope: str,
-        settings: ListingAjaxSettings,
-        listing_config: ListingConfig | None = None,
-    ) -> None:
-        """Set CourseLevels + Modes checkboxes (e.g. Postgraduate + Full-time) and re-search."""
-        assert self.page is not None
-        level_configured = (
-            listing_config.ajax_level_checkbox_ids if listing_config else settings.level_checkbox_ids
-        )
-        mode_configured = (
-            listing_config.ajax_mode_checkbox_ids if listing_config else settings.mode_checkbox_ids
-        )
-        variant_configured = (
-            listing_config.ajax_variant_checkbox_ids if listing_config else settings.variant_checkbox_ids
-        )
-        keep_levels = resolve_ajax_level_checkbox_ids(listing_url, scope, level_configured)
-        keep_modes = resolve_ajax_mode_checkbox_ids(mode_configured)
-        keep_variants = resolve_ajax_variant_checkbox_ids(variant_configured)
-        if not keep_levels and not keep_modes and not keep_variants:
-            return
-        self.page.wait_for_selector("#course-search-form", timeout=30000)
-        payload = {"keepLevels": keep_levels, "keepModes": keep_modes, "keepVariants": keep_variants}
-        changed = self.page.evaluate(UMBRACO_COURSE_SEARCH_FILTER_JS, payload)
-        if changed:
-            with self.page.expect_response(self._is_do_course_search_response, timeout=60000):
-                self.page.evaluate(UMBRACO_SUBMIT_COURSE_SEARCH_JS)
-            parts: list[str] = []
-            if keep_levels:
-                parts.append(f"levels={', '.join(keep_levels)}")
-            if keep_modes:
-                parts.append(f"modes={', '.join(keep_modes)}")
-            if keep_variants:
-                parts.append(f"variants={', '.join(keep_variants)}")
-            print(f"    Applied course search filters: {'; '.join(parts)}")
-        else:
-            print("    Course search filters already match (no new search)")
-
-    def download_ajax_listing_initial(
-        self,
-        url: str,
-        settings: ListingAjaxSettings,
-        *,
-        scope: str = "",
-        listing_config: ListingConfig | None = None,
-    ) -> tuple[str, str]:
-        """Open a course-search listing; wait for the first DoCourseSearch AJAX payload."""
-        assert self.page is not None
-        last_error: Exception | None = None
-        for attempt in range(1, LISTING_DOWNLOAD_RETRIES + 1):
-            try:
-                current_url = self.page.url or ""
-                if self._listing_paths_match(current_url, url):
-                    print(f"    Reusing open listing tab (no goto): {current_url.split('?')[0]}")
-                    title = self.page.title() or "listing"
-                else:
-                    self.page.goto(url, wait_until="domcontentloaded", timeout=60000)
-                    title, _html = self._settle_page(wait_for_results=False)
-                self.apply_ajax_listing_filters(url, scope, settings, listing_config)
-                self.page.wait_for_selector(settings.wait_selector, timeout=45000)
-                self.page.wait_for_timeout(800)
-                html = self.page.content()
-                if not html or len(html) < 200:
-                    raise RuntimeError("Empty or tiny HTML response")
-                return title, html
-            except Exception as exc:
-                last_error = exc
-                print(f"    Retry {attempt}/{LISTING_DOWNLOAD_RETRIES}: {exc}")
-                time.sleep(min(2 * attempt, 8))
-        raise RuntimeError(f"Failed to open AJAX listing {url}: {last_error}")
-
-    def fetch_ajax_listing_page(
-        self,
-        base_listing_url: str,
-        page_index: int,
-        settings: ListingAjaxSettings,
-        *,
-        session_loaded: bool,
-        scope: str = "",
-        listing_config: ListingConfig | None = None,
-    ) -> tuple[str, str, bool]:
-        """Return (title, html, session_loaded) for the requested in-page page index."""
-        assert self.page is not None
-        if not session_loaded:
-            title, html = self.download_ajax_listing_initial(
-                base_listing_url,
-                settings,
-                scope=scope,
-                listing_config=listing_config,
-            )
-            session_loaded = True
-        else:
-            title = self.page.title() or "listing"
-            html = self.page.content()
-
-        current_page, total_pages, _, _, _ = parse_umbraco_course_search_meta(html)
-        if current_page == page_index:
-            return title, html, session_loaded
-
-        selector = page_button_selector(settings, page_index)
-        with self.page.expect_response(self._is_do_course_search_response, timeout=60000):
-            self.page.locator(selector).first.click(timeout=15000)
-        self.page.wait_for_selector(settings.wait_selector, timeout=45000)
-        self.page.wait_for_timeout(500)
-        html = self.page.content()
-        return title, html, session_loaded
-
-    @staticmethod
-    def _locator_is_disabled(locator) -> bool:
-        if locator.count() == 0:
-            return True
-        aria = (locator.get_attribute("aria-disabled") or "").strip().lower()
-        if aria in {"true", "1"}:
-            return True
-        if locator.get_attribute("disabled") is not None:
-            return True
-        try:
-            return not locator.is_enabled()
-        except Exception:
-            return False
-
-    def fetch_click_listing_page(
-        self,
-        base_listing_url: str,
-        page_index: int,
-        settings: ListingAjaxSettings,
-        *,
-        session_loaded: bool,
-    ) -> tuple[str, str, bool]:
-        """Stay on PAGE_1 URL; click Next for page 2+ (LISTING_PAGINATION_MODE=click)."""
-        assert self.page is not None
-        if not session_loaded:
-            self.page.goto(base_listing_url, wait_until="domcontentloaded", timeout=60000)
-            self.page.wait_for_selector(settings.wait_selector, timeout=45000)
-            self.dismiss_cookies(self.page)
-            self.page.wait_for_timeout(800)
-            session_loaded = True
-            title = self.page.title() or "listing"
-            html = self.page.content()
-            if page_index <= 1:
-                return title, html, session_loaded
-
-        if page_index <= 1:
-            title = self.page.title() or "listing"
-            return title, self.page.content(), session_loaded
-
-        self.dismiss_cookies(self.page)
-        next_btn = self.page.locator(settings.next_button_selector).first
-        if self._locator_is_disabled(next_btn):
-            raise RuntimeError(
-                f"Next button missing or disabled ({settings.next_button_selector})"
-            )
-        previous_href = ""
-        try:
-            previous_href = self.page.eval_on_selector(
-                settings.wait_selector,
-                "el => el.getAttribute('href') || el.href || ''",
-            ) or ""
-        except Exception:
-            previous_href = ""
-        next_btn.click(timeout=15000, force=True)
-        self.page.wait_for_selector(settings.wait_selector, timeout=45000)
-        if previous_href:
-            try:
-                self.page.wait_for_function(
-                    """([sel, prev]) => {
-                      const el = document.querySelector(sel);
-                      if (!el) return false;
-                      const href = el.getAttribute('href') || el.href || '';
-                      return href && href !== prev;
-                    }""",
-                    arg=[settings.wait_selector, previous_href],
-                    timeout=20000,
-                )
-            except PlaywrightTimeoutError:
-                pass
-        self.page.wait_for_timeout(600)
-        title = self.page.title() or "listing"
-        html = self.page.content()
-        if not html or len(html) < 200:
-            raise RuntimeError("Empty or tiny HTML after Next click")
-        return title, html, session_loaded
 
 
 # ============================================================================
@@ -1540,12 +1180,9 @@ class ListingResultParser:
     @staticmethod
     def get_result_info(html: str) -> tuple[int | None, int | None, int | None]:
         match = ListingResultParser._RESULT_INFO_RE.search(html)
-        if match:
-            return int(match.group(1)), int(match.group(2)), int(match.group(3))
-        _current, _total_pages, start, end, total = parse_umbraco_course_search_meta(html)
-        if total is not None and start is not None and end is not None:
-            return start, end, total
-        return None, None, None
+        if not match:
+            return None, None, None
+        return int(match.group(1)), int(match.group(2)), int(match.group(3))
 
     @staticmethod
     def estimated_total_pages(total_results: int, page_size: int) -> int:
@@ -1767,7 +1404,6 @@ class PaginatedListingExtractor:
                 group_state=group_state,
                 page_counter=page_counter,
                 url_levels=url_levels,
-                listing_config=listing_config,
             )
         return page_counter
 
@@ -1785,7 +1421,6 @@ class PaginatedListingExtractor:
         group_state: dict[str, dict],
         page_counter: int,
         url_levels: UrlLevelMap,
-        listing_config: ListingConfig | None = None,
     ) -> int:
         label = SEARCH_PATH_LABELS.get(path_key, scope)
         pagination_param = UrlNormalizer.detect_pagination_param(base_listing_url)
@@ -1808,16 +1443,8 @@ class PaginatedListingExtractor:
         previous_page_urls = set(state.get("previous_page_urls") or [])
         pagination_param = state.get("pagination_param") or pagination_param
         page_step = int(state.get("page_step") or page_step)
-        use_ajax = self.config.listing_pagination_mode == LISTING_PAGINATION_MODE_AJAX_CLICK
-        use_click = self.config.listing_pagination_mode == LISTING_PAGINATION_MODE_CLICK
-        use_inpage = use_ajax or use_click
-        ajax_session_loaded = bool(state.get("ajax_session_loaded", False))
 
         print(f"  [{scope}] Search listing: {label} ({base_listing_url.split('?')[0]})")
-        if use_ajax:
-            print(f"    [{scope}] LISTING_PAGINATION_MODE=ajax_click (in-page pager)")
-        elif use_click:
-            print(f"    [{scope}] LISTING_PAGINATION_MODE=click (Next button)")
 
         while (
             empty_streak < PAGINATION_EMPTY_LIMIT
@@ -1827,58 +1454,27 @@ class PaginatedListingExtractor:
                 print(f"    [{scope}] Reached last page ({max_pages}) for {label}")
                 break
 
-            if use_inpage:
-                listing_url = listing_page_resume_key(base_listing_url, page_index, scope=scope)
-                normalized = listing_url
-            else:
-                listing_url = UrlNormalizer.set_page_number(base_listing_url, page_index, pagination_param)
-                normalized = UrlNormalizer.normalize(listing_url, keep_query=True)
-            # Next-button mode must walk pages in order; skipping a completed page
-            # would leave the tab on the wrong results set.
-            if normalized in completed and not use_click:
+            listing_url = UrlNormalizer.set_page_number(base_listing_url, page_index, pagination_param)
+            normalized = UrlNormalizer.normalize(listing_url, keep_query=True)
+            if normalized in completed:
                 page_index += page_step
                 continue
 
             page_counter += 1
             print(f"  [{scope}] Downloading listing page {page_counter}: {listing_url}")
             try:
-                if use_ajax:
-                    _title, html, ajax_session_loaded = self.browser.fetch_ajax_listing_page(
-                        base_listing_url,
-                        page_index,
-                        self.config.listing_ajax,
-                        session_loaded=ajax_session_loaded,
-                        scope=scope,
-                        listing_config=listing_config,
-                    )
-                elif use_click:
-                    _title, html, ajax_session_loaded = self.browser.fetch_click_listing_page(
-                        base_listing_url,
-                        page_index,
-                        self.config.listing_ajax,
-                        session_loaded=ajax_session_loaded,
-                    )
-                else:
-                    _title, html = self.browser.download_html(listing_url, wait_for_results=True)
+                _title, html = self.browser.download_html(listing_url, wait_for_results=True)
             except RuntimeError as exc:
                 empty_streak += 1
                 print(f"    [{scope}] No HTML ({empty_streak}/{PAGINATION_EMPTY_LIMIT}): {exc}")
                 self.logger.error(f"[{scope}] Listing page failed: {listing_url} — {exc}")
-                if not (use_inpage and not ajax_session_loaded):
-                    page_index += page_step
+                page_index += page_step
                 continue
 
             completed.add(normalized)
 
             start, end, total = ListingResultParser.get_result_info(html)
-            _current_page, total_pages_meta, _, _, _ = parse_umbraco_course_search_meta(html)
-            if total_pages_meta is not None and max_pages is None:
-                max_pages = total_pages_meta
-                print(
-                    f"    [{scope}] {label}: page {_current_page or page_index} of {max_pages} "
-                    f"({total or '?'} courses)"
-                )
-            elif total is not None and max_pages is None:
+            if total is not None and max_pages is None:
                 page_size = (end - start + 1) if start and end else 12
                 max_pages = ListingResultParser.estimated_total_pages(total, page_size)
                 print(f"    [{scope}] {label}: {total} results, ~{max_pages} pages ({page_size} per page)")
@@ -1893,7 +1489,7 @@ class PaginatedListingExtractor:
                     scope=scope,
                     classifier=self.config.level_classifier,
                     source_scope=scope,
-                    scope_determines_level=bool(scope_to_level(scope)),
+                    scope_determines_level=True,
                 )
             new_count = len(all_urls) - before_count
             if not page_urls:
@@ -1968,7 +1564,6 @@ class PaginatedListingExtractor:
                 previous_page_urls=sorted(previous_page_urls),
                 pagination_param=pagination_param,
                 page_step=page_step,
-                ajax_session_loaded=ajax_session_loaded,
             )
             group_state[state_key] = state
 
@@ -2064,7 +1659,7 @@ class CourseUrlScraper:
         completed.update(keep)
 
     def _reclassify_url_levels(self, url_levels: UrlLevelMap) -> UrlLevelMap:
-        if self.config.strategy == STRATEGY_ALL_COURSE:
+        if self.config.strategy in (STRATEGY_ALL_COURSE, STRATEGY_DEGREE_SCOPED_PAGINATED):
             rebuilt = UrlLevelMap()
             for record in url_levels.records():
                 source = record.get("source_scope") or ""
@@ -2454,30 +2049,6 @@ class CourseUrlScraper:
 class CoursePageDownloader:
     """Downloads individual course pages listed in course_urls.csv."""
 
-    @staticmethod
-    def _enrich_downloaded_course_html(
-        html: str,
-        course_url: str,
-        browser: BrowserSession,
-        code_dir: Path,
-    ) -> str:
-        try:
-            from course_markdown_cleanup import _load_uni_course_cleanup_module
-
-            module = _load_uni_course_cleanup_module(code_dir)
-        except Exception:
-            module = None
-        if module is None:
-            return html
-        enrich = getattr(module, "enrich_downloaded_course_html", None)
-        if not callable(enrich):
-            return html
-        try:
-            return enrich(html, browser.page, course_url)
-        except Exception as exc:
-            print(f"    Course HTML enrich skipped: {exc}")
-            return html
-
     def __init__(self, code_dir: Path, *, strategy: str):
         self.code_dir = code_dir.resolve()
         self.output_dir = resolve_output_dir(self.code_dir)
@@ -2485,21 +2056,6 @@ class CoursePageDownloader:
         self.progress_store = ProgressStore(self.output_dir)
         self.artifacts = ArtifactStore(self.output_dir)
         self.logger = ScrapeLogger(self.output_dir)
-
-    def _course_page_html_exists(self, course_url: str) -> bool:
-        """True if course_page_map.csv (or course_pages/) still has HTML for this URL."""
-        map_path = self.output_dir / COURSE_PAGE_MAP_CSV
-        if map_path.exists():
-            with map_path.open(newline="", encoding="utf-8") as handle:
-                for row in csv.DictReader(handle):
-                    if (row.get("course_url") or "").strip() != course_url:
-                        continue
-                    html_rel = (
-                        row.get("html_path") or row.get("html_file") or ""
-                    ).strip()
-                    if html_rel and (self.output_dir / Path(html_rel)).is_file():
-                        return True
-        return False
 
     def run(
         self,
@@ -2556,19 +2112,12 @@ class CoursePageDownloader:
 
         with BrowserSession(self.code_dir) as browser:
             for index, url in enumerate(urls, start=1):
-                if url in downloaded and self._course_page_html_exists(url):
+                if url in downloaded:
                     stats["skipped"] += 1
                     continue
-                if url in downloaded and not self._course_page_html_exists(url):
-                    downloaded.discard(url)
-                    print(f"  [{index}/{len(urls)}] {url} (re-download; HTML missing)")
-                else:
-                    print(f"  [{index}/{len(urls)}] {url}")
+                print(f"  [{index}/{len(urls)}] {url}")
                 try:
                     title, html = browser.download_html(url)
-                    html = self._enrich_downloaded_course_html(
-                        html, url, browser, self.code_dir
-                    )
                     if course_filter.should_exclude_html(html, url=url):
                         stats["excluded"] += 1
                         downloaded.add(url)

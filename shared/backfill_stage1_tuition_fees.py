@@ -71,6 +71,7 @@ def backfill_course_dir(output_dir: Path, course_dir: Path) -> bool:
         course_body=course_body,
         course_name=course_name,
         course_url=course_url,
+        study_level=study_level,
     )
 
     new_fee = str(enriched.get("tuitionFee") or "").strip()
