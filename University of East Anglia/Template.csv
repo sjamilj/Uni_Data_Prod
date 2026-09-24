@@ -1,0 +1,9 @@
+Course Type,Paginated.csv,,,,,,,,
+Uni Name,University of East Anglia,,,,,,,,
+Uni Link,https://www.uea.ac.uk,,,,,,,,
+Programme,ALL Course Listing URL,Paginated Course Listing URL - Page 1,Paginated Course Listing URL - Page 2,Course Detail Page URL,Bangladesh Entry Requirements URL,English Language Requirements URL,Scholarship Information URL,Deposit Information URL,Comments
+All,,https://www.uea.ac.uk/search/courses,,https://www.uea.ac.uk/course/undergraduate/bsc-actuarial-science,https://www.uea.ac.uk/study/international-students/country-map/south-asia,https://www.uea.ac.uk/apply/our-admissions-policy/english-language-equivalencies,https://www.uea.ac.uk/study/international-students/fees-and-scholarships,https://www.uea.ac.uk/study/international-students/fees-and-scholarships,Next-button click; URL stays the same; no Cloudflare
+Foundation,,,,,,,,,,
+Undergraduate,,,,,,,,,,
+Postgraduate,,,,,,,,,,
+Postgraduate Research,,,,,,,,,,

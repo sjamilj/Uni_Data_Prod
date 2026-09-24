@@ -355,7 +355,7 @@ class GpaConverter:
         alevel_match = re.search(r"\b(AAA|AAB|ABB|BBB|BBC|BCC|CCC|CCD|CDD|DDD)\b", text_upper)
 
         # --- Explicit GPA/CGPA stated ---
-        gpa_match = re.search(r"(?:GPA|CGPA)\s*[:\-]?\s*([\d.]+)", text_upper)
+        gpa_match = re.search(r"(?:GPA|CGPA)\s*[:\-]?\s*(\d+(?:\.\d+)?)", text_upper)
 
         # --- UK degree classification wording ---
         uk_class_match = re.search(r"FIRST CLASS|UPPER SECOND|2:1|LOWER SECOND|2:2|THIRD CLASS", text_upper)

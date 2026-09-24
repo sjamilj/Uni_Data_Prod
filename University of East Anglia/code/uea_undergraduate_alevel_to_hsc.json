@@ -1,0 +1,59 @@
+{
+  "university": "University of East Anglia",
+  "studyLevel": "undergraduate",
+  "description": "Typical Offer on UG course pages → HSC.",
+  "typicalOffer": {
+    "AAA": {
+      "degree": "HSC",
+      "grade": "GPA 5.0",
+      "courseCount": 9,
+      "source": "shared ALEVEL_TO_HSC_EQUIVALENT (confirm with UEA if needed)"
+    },
+    "AAB": {
+      "degree": "HSC",
+      "grade": "GPA 5.0",
+      "courseCount": 75,
+      "source": "shared ALEVEL_TO_HSC_EQUIVALENT (confirm with UEA if needed)"
+    },
+    "ABB": {
+      "degree": "HSC",
+      "grade": "GPA 5.0",
+      "courseCount": 210,
+      "source": "clean/uni/bangladesh-entry.md"
+    },
+    "BBB": {
+      "degree": "HSC",
+      "grade": "GPA 4.0",
+      "courseCount": 34,
+      "source": "clean/uni/bangladesh-entry.md"
+    },
+    "CCC": {
+      "degree": "HSC",
+      "grade": "GPA 3.5",
+      "courseCount": 1,
+      "source": "shared ALEVEL_TO_HSC_EQUIVALENT (confirm with UEA if needed)"
+    }
+  },
+  "contextualOffer": {
+    "ABB": {
+      "courseCount": 9,
+      "note": "UK contextual only"
+    },
+    "BBB": {
+      "courseCount": 76,
+      "note": "UK contextual only"
+    },
+    "BBC": {
+      "courseCount": 210,
+      "note": "UK contextual only"
+    },
+    "BCC": {
+      "courseCount": 34,
+      "note": "UK contextual only"
+    },
+    "CDD": {
+      "courseCount": 1,
+      "note": "UK contextual only"
+    }
+  }
+}

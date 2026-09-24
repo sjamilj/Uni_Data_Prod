@@ -1117,8 +1117,17 @@ class Stage1MarkdownParser:
                     if value
                 }
             )
+        start_date_bullet = r"-\s*\*\*Start date:\*\*\s*([^\n]+)"
+        start_parts: list[str] = []
+        for start_date_match in re.finditer(start_date_bullet, body, re.I):
+            part = Stage1MarkdownParser.normalize_intake_text(
+                start_date_match.group(1).strip()
+            )
+            if part and part not in start_parts:
+                start_parts.append(part)
+        if start_parts:
+            fields["intakeInfo"] = ", ".join(start_parts)
         for pattern in (
-            '-\\s*\\*\\*Start date:\\*\\*\\s*([^\\n]+)',
             '-\\s*\\*\\*Start:\\*\\*\\s*([^\\n]+)',
             '- Start date\\s+([^\\n]+)',
             '\\*\\*Start date\\*\\*\\s*\\n+\\s*([^\\n#]+)',
@@ -1126,17 +1135,6 @@ class Stage1MarkdownParser:
         ):
             if fields.get("intakeInfo"):
                 break
-            if pattern.startswith('-\\\\s*\\\\*\\\\*Start date'):
-                start_parts: list[str] = []
-                for start_date_match in re.finditer(pattern, body, re.I):
-                    part = Stage1MarkdownParser.normalize_intake_text(
-                        start_date_match.group(1).strip()
-                    )
-                    if part and part not in start_parts:
-                        start_parts.append(part)
-                if start_parts:
-                    fields["intakeInfo"] = ", ".join(start_parts)
-                continue
             start_date_match = re.search(pattern, body, re.I)
             if start_date_match:
                 fields['intakeInfo'] = normalize_intake_text(start_date_match.group(1).strip())
