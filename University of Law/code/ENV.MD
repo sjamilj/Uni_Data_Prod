@@ -92,9 +92,11 @@ COURSE_CLEAN_ENGINE=generic
 
 # One CSS selector per line; optional heading with :: or |
 COURSE_CLEAN_BLOCKS="
-Course intro :: #course-details-header-intro
-Course details :: .accordion--course-details
-Fees and applying :: #fees-and-applying
+Key facts (normalized) :: .ulaw-normalized-stage1
+Key facts grid :: #courseKeyFactsBlock
+Course Start Dates :: .coursestartdateaccordionblock
+Key facts :: .key-facts__details
+Fees and applying :: .ulaw-normalized-fees
 "
 
 # Noise removed inside each matched block before markdown conversion
@@ -109,6 +111,8 @@ COURSE_CLEAN_EXPAND_TABS=true
 
 # --- Course markdown cleanup (shared/course_markdown_cleanup.py) ---
 COURSE_MARKDOWN_REMOVE_SECTIONS="
+2 :: Course intro
+2 :: Course details
 2 :: Latest news
 2 :: Be part of our community
 2 :: Alumni services
@@ -128,4 +132,17 @@ UNI_REQ_SOURCE_URLS="
 bangladesh-entry :: https://www.law.ac.uk/students/international/the-application-process/entry-requirements/
 english-requirements :: page_type:
 scholarships :: https://www.law.ac.uk/students/international/why-study-with-us/financial-information/international-scholarships/
+deposit :: https://www.law.ac.uk/study/undergraduate/course-fees-and-funding/
 "
+
+# Bangladesh per-subject entry + IELTS JSON (save country page HTML, then):
+#   python convert_country_entry_html.py
+#   python enrich_english_requirements_from_pdf.py
+# Default HTML: ../uni_req/International Entry Requirements _ University of Law.html
+# PDF enrich: ../uni_req/pdf_students_accepted-english-language-qualifications.pdf
+# Output: ../output/clean/uni/bangladesh-entry.md and english-requirements.md
+
+# Foundation Year routes (same URL as UG, separate intake line on course page):
+#   python split_foundation_year_courses.py
+#   python backfill_course_from_english.py
+# Writes output/clean/courses/foundation/*-with-foundation-year.md and trims those lines from undergraduate/.
