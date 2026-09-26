@@ -355,7 +355,7 @@ class GpaConverter:
         alevel_match = re.search(r"\b(AAA|AAB|ABB|BBB|BBC|BCC|CCC|CCD|CDD|DDD)\b", text_upper)
 
         # --- Explicit GPA/CGPA stated ---
-        gpa_match = re.search(r"(?:GPA|CGPA)\s*[:\-]?\s*([\d.]+)", text_upper)
+        gpa_match = re.search(r"(?:GPA|CGPA)\s*[:\-]?\s*(\d+(?:\.\d+)?)", text_upper)
 
         # --- UK degree classification wording ---
         uk_class_match = re.search(r"FIRST CLASS|UPPER SECOND|2:1|LOWER SECOND|2:2|THIRD CLASS", text_upper)
@@ -367,6 +367,8 @@ class GpaConverter:
 
         if gpa_match:
             results.append(round(float(gpa_match.group(1)), 2))
+        elif re.fullmatch(r"\d+\.\d{1,2}", text.strip()):
+            results.append(round(float(text.strip()), 2))
 
         if alevel_match and not gpa_match:
             mapped = ALEVEL_TO_HSC_EQUIVALENT.get(alevel_match.group(1))
@@ -423,58 +425,30 @@ class FeeNormalizer:
     """Tuition fee, deposit, and application fee normalization."""
 
     def normalize_money(self, raw):
-        """Strip currency symbols; return numeric string or comma-separated numerics."""
+        """Strip currency symbols/commas, return numeric string only, or ''."""
         if raw is None or raw == "":
             return ""
-        raw_str = str(raw).strip()
-        if "," in raw_str:
-            parts: list[str] = []
-            for chunk in raw_str.split(","):
-                match = re.search(r"[\d]+(?:\.\d+)?", chunk.strip())
-                if match:
-                    token = match.group(0).replace(",", "")
-                    if token:
-                        parts.append(token)
-            if parts:
-                return ",".join(parts)
-        match = re.search(r"[\d,]+(?:\.\d+)?", raw_str)
+        match = re.search(r"[\d,]+(?:\.\d+)?", str(raw))
         if not match:
             return ""
         return match.group(0).replace(",", "")
 
-    def _numeric_fee_tokens(self, raw_amount: str) -> list[float]:
-        normalized = self.normalize_money(raw_amount)
-        if not normalized:
-            return []
-        out: list[float] = []
-        for token in normalized.split(","):
-            token = token.strip()
-            if not token:
-                continue
-            try:
-                out.append(float(token))
-            except ValueError:
-                continue
-        return out
-
     def normalize_tuition_fee(self, fee_candidates):
         """
         fee_candidates: list of dicts like {"label": "International", "amount": "£17,000"}
-        Picks INTERNATIONAL amounts; multiple years are comma-joined (ascending).
+        Picks the INTERNATIONAL fee; if multiple international years exist,
+        picks the highest.
         """
-        intl_values: list[float] = []
+        intl_values = []
         for c in fee_candidates or []:
             label = c.get("label", "").upper()
             if "INTERNATIONAL" in label or "OVERSEAS" in label or "NON-UK" in label:
-                intl_values.extend(self._numeric_fee_tokens(c.get("amount", "")))
+                val = self.normalize_money(c.get("amount", ""))
+                if val:
+                    intl_values.append(float(val))
         if not intl_values:
             return ""
-        ordered = sorted(set(intl_values))
-        parts = [
-            str(int(v)) if v.is_integer() else str(v)
-            for v in ordered
-        ]
-        return ",".join(parts)
+        return str(int(max(intl_values)) if max(intl_values).is_integer() else max(intl_values))
 
     def _flatten_fees_metadata_text(self, fees_meta) -> str:
         lines: list[str] = []
@@ -492,12 +466,6 @@ class FeeNormalizer:
         amount = str(amount or "").strip()
         if not amount or not text:
             return False
-        if "," in amount:
-            return all(
-                self._fee_amount_in_text(part.strip(), text)
-                for part in amount.split(",")
-                if part.strip()
-            )
         if amount in text:
             return True
         if amount.isdigit():

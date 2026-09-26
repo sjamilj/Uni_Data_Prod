@@ -498,6 +498,9 @@ def update_manifest(
 def rebuild_index(code_dir: Path, *, dry_run: bool) -> int:
     if dry_run:
         return 0
+    courses_dir = resolve_output_dir(code_dir) / "clean" / "courses"
+    if not courses_dir.is_dir():
+        return 0
     from llm_extract import build_course_index
 
     index_path = build_course_index(code_dir)

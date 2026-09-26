@@ -130,6 +130,7 @@ class CourseTypeExtractor:
 class CourseTypeFilter:
     exclude_course_types: list[str]
     exclude_url_patterns: list[str]
+    exclude_html_contains: list[str]
     course_type_selectors: list[str]
 
     @classmethod
@@ -145,12 +146,19 @@ class CourseTypeFilter:
             exclude_url_patterns=CourseTypePatternMatcher.parse_env_list(
                 env.get("COURSE_EXCLUDE_URL_PATTERNS")
             ),
+            exclude_html_contains=CourseTypePatternMatcher.parse_env_list(
+                env.get("COURSE_EXCLUDE_HTML_CONTAINS")
+            ),
             course_type_selectors=selectors or list(DEFAULT_COURSE_TYPE_SELECTORS),
         )
 
     @property
     def enabled(self) -> bool:
-        return bool(self.exclude_course_types or self.exclude_url_patterns)
+        return bool(
+            self.exclude_course_types
+            or self.exclude_url_patterns
+            or self.exclude_html_contains
+        )
 
     def url_is_excluded(self, url: str | None) -> bool:
         if not url or not self.exclude_url_patterns:
@@ -177,9 +185,20 @@ class CourseTypeFilter:
             return False
         return study_mode_is_part_time_only(study_text)
 
+    def html_is_excluded(self, html: str) -> bool:
+        if not self.exclude_html_contains or not html:
+            return False
+        html_l = html.casefold()
+        for pattern in self.exclude_html_contains:
+            if CourseTypePatternMatcher.pattern_matches(html_l, pattern):
+                return True
+        return False
+
     def should_exclude_html(self, html: str, *, url: str | None = None) -> bool:
         if not self.enabled:
             return False
+        if self.html_is_excluded(html):
+            return True
         if self.url_is_excluded(url):
             return True
         course_type = CourseTypeExtractor.from_html(
@@ -194,6 +213,8 @@ class CourseTypeFilter:
     def should_exclude_markdown(self, markdown: str, *, url: str | None = None) -> bool:
         if not self.enabled:
             return False
+        if self.html_is_excluded(markdown):
+            return True
         if self.url_is_excluded(url):
             return True
         course_type = CourseTypeExtractor.from_markdown(markdown)
