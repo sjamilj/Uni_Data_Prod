@@ -234,7 +234,7 @@ git pull
 git restore --source shared/v1.2.1 -- shared
 ```
 
-Current baseline: **`shared/v1.2.1`** @ `5b969dd` (older: `shared/v1.2.0` @ `f99ad58`, `shared/v1.1.0` @ `14cc330`, `shared/v1.0.0` @ `d5f7088`). List: `git tag -l "shared/*"`. See [CONTRIBUTING.md](../CONTRIBUTING.md#shared-infrastructure-baseline).
+Current baseline: **`shared/v1.2.1`** @ `5c43b8f` (older: `shared/v1.2.0` @ `f99ad58`, `shared/v1.1.0` @ `14cc330`, `shared/v1.0.0` @ `d5f7088`). List: `git tag -l "shared/*"`. See [CONTRIBUTING.md](../CONTRIBUTING.md#shared-infrastructure-baseline).
 
 ---
 
