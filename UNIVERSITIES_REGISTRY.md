@@ -34,7 +34,7 @@ git tag -l "uni/aru/foundation/*"
 | `shared/v1.0.0` | `d5f7088` | Original shared pipeline baseline |
 | `shared/v1.1.0` | `14cc330` | Audit CSV, degreeName LLM inference, studyLevel export rows |
 | `shared/v1.2.0` | `f99ad58` | CDP/device-profile download, UG higherDegree mapping, `package_uni_backup.py` |
-| `shared/v1.2.1` | `5b969dd` | **Current reset baseline** — `degreeName_dictionary` v2 by study level; export/validate `degreeName` fill; `git restore --source shared/v1.2.1 -- shared/` |
+| `shared/v1.2.1` | `5c43b8f` | **Current reset baseline** — degreeName by study level; validate `degreeName` fill; comma `tuitionFee`; `git restore --source shared/v1.2.1 -- shared/` |
 | `infra/onboarding-skills/v1.0.0` | Cursor agent skills under `.cursor/skills/` + README operator guide |
 | `infra/onboarding-skills/v1.0.2` | Skill YAML trigger descriptions, `docs/PIPELINE.md` links, shared baseline in skills |
 | `uni/{slug}/v1.0.0` | Full university complete (all study levels) |
@@ -82,6 +82,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the full commit + tag workflow.
 | unit-30 | mmu | Manchester Metropolitan University | in_progress | | |
 | unit-31 | beds | University of Bedfordshire | in_progress | | |
 | unit-32 | uea | University of East Anglia | in_progress | | |
+| unit-33 | herts | University of Hertfordshire | in_progress | | |
 
 **Status:** `complete` means `output/dev_courses_*.csv` exists. `in_progress` means the university folder has `code/` but the full pipeline export is not done. `not_started` is unused while every listed uni has `code/ENV.MD`.
 
