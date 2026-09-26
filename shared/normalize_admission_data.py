@@ -423,30 +423,58 @@ class FeeNormalizer:
     """Tuition fee, deposit, and application fee normalization."""
 
     def normalize_money(self, raw):
-        """Strip currency symbols/commas, return numeric string only, or ''."""
+        """Strip currency symbols; return numeric string or comma-separated numerics."""
         if raw is None or raw == "":
             return ""
-        match = re.search(r"[\d,]+(?:\.\d+)?", str(raw))
+        raw_str = str(raw).strip()
+        if "," in raw_str:
+            parts: list[str] = []
+            for chunk in raw_str.split(","):
+                match = re.search(r"[\d]+(?:\.\d+)?", chunk.strip())
+                if match:
+                    token = match.group(0).replace(",", "")
+                    if token:
+                        parts.append(token)
+            if parts:
+                return ",".join(parts)
+        match = re.search(r"[\d,]+(?:\.\d+)?", raw_str)
         if not match:
             return ""
         return match.group(0).replace(",", "")
 
+    def _numeric_fee_tokens(self, raw_amount: str) -> list[float]:
+        normalized = self.normalize_money(raw_amount)
+        if not normalized:
+            return []
+        out: list[float] = []
+        for token in normalized.split(","):
+            token = token.strip()
+            if not token:
+                continue
+            try:
+                out.append(float(token))
+            except ValueError:
+                continue
+        return out
+
     def normalize_tuition_fee(self, fee_candidates):
         """
         fee_candidates: list of dicts like {"label": "International", "amount": "£17,000"}
-        Picks the INTERNATIONAL fee; if multiple international years exist,
-        picks the highest.
+        Picks INTERNATIONAL amounts; multiple years are comma-joined (ascending).
         """
-        intl_values = []
+        intl_values: list[float] = []
         for c in fee_candidates or []:
             label = c.get("label", "").upper()
             if "INTERNATIONAL" in label or "OVERSEAS" in label or "NON-UK" in label:
-                val = self.normalize_money(c.get("amount", ""))
-                if val:
-                    intl_values.append(float(val))
+                intl_values.extend(self._numeric_fee_tokens(c.get("amount", "")))
         if not intl_values:
             return ""
-        return str(int(max(intl_values)) if max(intl_values).is_integer() else max(intl_values))
+        ordered = sorted(set(intl_values))
+        parts = [
+            str(int(v)) if v.is_integer() else str(v)
+            for v in ordered
+        ]
+        return ",".join(parts)
 
     def _flatten_fees_metadata_text(self, fees_meta) -> str:
         lines: list[str] = []
@@ -464,6 +492,12 @@ class FeeNormalizer:
         amount = str(amount or "").strip()
         if not amount or not text:
             return False
+        if "," in amount:
+            return all(
+                self._fee_amount_in_text(part.strip(), text)
+                for part in amount.split(",")
+                if part.strip()
+            )
         if amount in text:
             return True
         if amount.isdigit():

@@ -55,7 +55,17 @@ LEVEL_MATCH_ORDER = (
     "undergraduate",
 )
 
-LEVEL_CSV_COLUMNS = ("course_url", "study_level", "source_scope")
+LEVEL_CSV_COLUMNS = (
+    "course_url",
+    "study_level",
+    "source_scope",
+    "listing_intake_month",
+)
+
+
+def normalize_listing_intake_month(raw: str) -> str:
+    """Lowercase month token from COURSE_LISTING_START_DATE / search facet (e.g. september)."""
+    return (raw or "").strip().lower()
 
 PRESETUP_SAMPLE_JSON = "presetup_sample.json"
 PRESETUP_SAMPLE_SIZE = 10
@@ -228,11 +238,18 @@ def collapse_duplicate_foundation_undergraduate_levels(
 
 @dataclass
 class UrlLevelMap:
-    """url -> {study_level: source_scope}."""
+    """url -> {study_level: source_scope}, plus optional listing intake month per (url, level)."""
 
     levels: dict[str, dict[str, str]] = field(default_factory=dict)
+    listing_intakes: dict[tuple[str, str], list[str]] = field(default_factory=dict)
 
-    def add(self, url: str, study_level: str, source_scope: str = "") -> None:
+    def add(
+        self,
+        url: str,
+        study_level: str,
+        source_scope: str = "",
+        listing_intake_month: str = "",
+    ) -> None:
         url = (url or "").strip()
         level = (study_level or "").strip()
         if not url or not level:
@@ -240,6 +257,12 @@ class UrlLevelMap:
         bucket = self.levels.setdefault(url, {})
         if level not in bucket or source_scope:
             bucket[level] = source_scope or bucket.get(level, "")
+        month = normalize_listing_intake_month(listing_intake_month)
+        if month:
+            key = (url, level)
+            months = self.listing_intakes.setdefault(key, [])
+            if month not in months:
+                months.append(month)
 
     def add_many(self, urls: list[str] | set[str], study_level: str, source_scope: str = "") -> None:
         for url in urls:
@@ -253,12 +276,15 @@ class UrlLevelMap:
         classifier: StudyLevelClassifier | None = None,
         source_scope: str = "",
         scope_determines_level: bool = False,
+        listing_intake_month: str = "",
     ) -> None:
         classifier = classifier or StudyLevelClassifier()
         level_from_scope = scope_to_level(scope)
         label = source_scope or scope or "ALL_COURSE"
+        month = normalize_listing_intake_month(listing_intake_month)
         if scope_determines_level and level_from_scope:
-            self.add_many(urls, level_from_scope, label)
+            for url in urls:
+                self.add(url, level_from_scope, label, listing_intake_month=month)
             return
         if classifier.has_custom_patterns:
             for url in urls:
@@ -267,13 +293,14 @@ class UrlLevelMap:
                     level = level_from_scope
                 else:
                     level = classified
-                self.add(url, level, label)
+                self.add(url, level, label, listing_intake_month=month)
             return
         if level_from_scope:
-            self.add_many(urls, level_from_scope, label)
+            for url in urls:
+                self.add(url, level_from_scope, label, listing_intake_month=month)
             return
         for url in urls:
-            self.add(url, classifier.classify(url), label)
+            self.add(url, classifier.classify(url), label, listing_intake_month=month)
 
     def urls(self) -> list[str]:
         return sorted(self.levels)
@@ -300,20 +327,37 @@ class UrlLevelMap:
         rows: list[dict[str, str]] = []
         for url in sorted(self.levels):
             for level, source_scope in sorted(self.levels[url].items()):
-                rows.append(
-                    {
-                        "course_url": url,
-                        "study_level": level,
-                        "source_scope": source_scope,
-                    }
-                )
+                months = self.listing_intakes.get((url, level)) or []
+                if not months:
+                    months = [""]
+                for month in months:
+                    rows.append(
+                        {
+                            "course_url": url,
+                            "study_level": level,
+                            "source_scope": source_scope,
+                            "listing_intake_month": month,
+                        }
+                    )
         return rows
 
     def to_progress(self) -> dict[str, dict[str, str]]:
         return {url: dict(levels) for url, levels in self.levels.items()}
 
+    def listing_intakes_to_progress(self) -> dict[str, list[str]]:
+        """Serialize listing_intakes for scrape_progress.json (key: url\\tlevel)."""
+        out: dict[str, list[str]] = {}
+        for (url, level), months in self.listing_intakes.items():
+            if months:
+                out[f"{url}\t{level}"] = list(months)
+        return out
+
     @classmethod
-    def from_progress(cls, payload: object) -> UrlLevelMap:
+    def from_progress(
+        cls,
+        payload: object,
+        listing_intakes_payload: object | None = None,
+    ) -> UrlLevelMap:
         mapping = cls()
         if isinstance(payload, dict):
             for url, levels in payload.items():
@@ -323,12 +367,25 @@ class UrlLevelMap:
                 elif isinstance(levels, list):
                     for level in levels:
                         mapping.add(str(url), str(level), "")
+        if isinstance(listing_intakes_payload, dict):
+            for key, months in listing_intakes_payload.items():
+                if not isinstance(months, list):
+                    continue
+                parts = str(key).split("\t", 1)
+                if len(parts) != 2:
+                    continue
+                url, level = parts[0].strip(), parts[1].strip()
+                for month in months:
+                    mapping.add(url, level, listing_intake_month=str(month))
         return mapping
 
     def merge(self, other: UrlLevelMap) -> None:
         for url, levels in other.levels.items():
             for level, source_scope in levels.items():
                 self.add(url, level, source_scope)
+        for (url, level), months in other.listing_intakes.items():
+            for month in months:
+                self.add(url, level, listing_intake_month=month)
 
 
 def read_presetup_urls_csv(output_dir: Path) -> list[dict[str, str]]:
@@ -433,6 +490,7 @@ def write_presetup_urls_csv(output_dir: Path, courses: list[dict[str, str]]) -> 
                     "course_url": row.get("course_url", ""),
                     "study_level": row.get("study_level", ""),
                     "source_scope": row.get("source_scope") or "PRESETUP_SCRAPE",
+                    "listing_intake_month": row.get("listing_intake_month", ""),
                 }
             )
     return path
@@ -449,7 +507,8 @@ def read_level_csvs(output_dir: Path) -> UrlLevelMap:
                 url = (row.get("course_url") or row.get("url") or "").strip()
                 level = (row.get("study_level") or "").strip()
                 source_scope = (row.get("source_scope") or "").strip()
-                mapping.add(url, level, source_scope)
+                intake = (row.get("listing_intake_month") or "").strip()
+                mapping.add(url, level, source_scope, listing_intake_month=intake)
     return mapping
 
 
@@ -469,7 +528,12 @@ def load_url_levels(output_dir: Path) -> UrlLevelMap:
             progress = json.loads(progress_path.read_text(encoding="utf-8"))
         except (json.JSONDecodeError, OSError):
             progress = {}
-        mapping.merge(UrlLevelMap.from_progress(progress.get("url_levels")))
+        mapping.merge(
+            UrlLevelMap.from_progress(
+                progress.get("url_levels"),
+                progress.get("url_listing_intakes"),
+            )
+        )
     return mapping
 
 

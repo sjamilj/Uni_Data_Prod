@@ -74,6 +74,7 @@ from engines import get_course_html_engine
 from markdown_converter import MarkdownConverter, Utils
 from uni_paths import resolve_code_dir, resolve_output_dir
 from uni_pages import UNI_MD_BY_ROLE, course_slug_from_url, uni_md_output_name
+from listing_intake_merge import listing_intake_months_for_url
 from study_level import (
     CLEAN_COURSES_SUBDIR,
     StudyLevelClassifier,
@@ -115,12 +116,8 @@ class CourseMarkdownCleanupBridge:
     def __init__(self, code_dir: Path):
         self.code_dir = resolve_code_dir(code_dir)
 
-    def cleanup_course(self, markdown: str, *, source_html: str = "") -> str:
-        return cleanup_course_markdown(
-            markdown,
-            code_dir=self.code_dir,
-            source_html=source_html,
-        )
+    def cleanup_course(self, markdown: str) -> str:
+        return cleanup_course_markdown(markdown, code_dir=self.code_dir)
 
     def cleanup_uni(self, markdown: str, **kwargs: object) -> str:
         return cleanup_uni_markdown(
@@ -321,6 +318,7 @@ class CourseMarkdownBuilder:
         warnings: list[CleanWarning] | None = None,
         source_html: str = "",
         source_url: str = "",
+        catalog_listing_intake_months: list[str] | None = None,
     ) -> str:
         soup = BeautifulSoup(html, "html.parser")
 
@@ -328,7 +326,14 @@ class CourseMarkdownBuilder:
         if module is not None:
             preprocess_html = getattr(module, "preprocess_course_html_uni", None)
             if callable(preprocess_html):
-                preprocess_html(soup)
+                import inspect
+
+                kwargs: dict[str, object] = {}
+                if catalog_listing_intake_months and "catalog_listing_intake_months" in inspect.signature(
+                    preprocess_html
+                ).parameters:
+                    kwargs["catalog_listing_intake_months"] = catalog_listing_intake_months
+                preprocess_html(soup, **kwargs)
 
         engine = get_course_html_engine(
             clean_config.engine,
@@ -1050,6 +1055,12 @@ class CoursePagesCleaner:
             # Build markdown
             # --------------------------------------------------------
 
+            catalog_months = listing_intake_months_for_url(
+                course_url or source_url,
+                url_levels,
+                study_level=study_levels[0] if study_levels else None,
+            )
+
             if clean_config.blocks:
                 markdown = (
                     CourseMarkdownBuilder.from_config(
@@ -1059,6 +1070,7 @@ class CoursePagesCleaner:
                         warnings=warnings,
                         source_html=html_rel,
                         source_url=source_url,
+                        catalog_listing_intake_months=catalog_months,
                     )
                 )
             else:
@@ -1079,9 +1091,10 @@ class CoursePagesCleaner:
                     + markdown
                 )
 
-            markdown = self.markdown_cleanup.cleanup_course(
-                markdown,
-                source_html=html_rel,
+            markdown = (
+                self.markdown_cleanup.cleanup_course(
+                    markdown
+                )
             )
 
             # --------------------------------------------------------

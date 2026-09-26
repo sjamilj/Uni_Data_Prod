@@ -24,6 +24,33 @@ from study_level import (
 )  # noqa: E402
 
 
+class UrlLevelIntakeTests(unittest.TestCase):
+    def test_same_url_two_listing_intake_months(self) -> None:
+        from study_level import UrlLevelMap
+
+        mapping = UrlLevelMap()
+        url = "https://www.herts.ac.uk/courses/postgraduate-masters/example"
+        mapping.add(url, "postgraduate", "POSTGRADUATE", listing_intake_month="september")
+        mapping.add(url, "postgraduate", "POSTGRADUATE", listing_intake_month="january")
+        rows = [r for r in mapping.records() if r["course_url"] == url]
+        self.assertEqual(len(rows), 2)
+        months = sorted(r["listing_intake_month"] for r in rows)
+        self.assertEqual(months, ["january", "september"])
+
+
+class ListingStartDateTests(unittest.TestCase):
+    def test_apply_listing_start_date_replaces_month_facet(self) -> None:
+        from scrape_course_urls import UrlNormalizer
+
+        url = (
+            "https://www.herts.ac.uk/courses/search?"
+            "f.Start+date%7CcourseStartDate=september&start_rank=0"
+        )
+        jan = UrlNormalizer.apply_listing_start_date(url, "january")
+        self.assertIn("courseStartDate=january", jan)
+        self.assertNotIn("courseStartDate=september", jan)
+
+
 class ScrapePresetupSampleTests(unittest.TestCase):
     def test_sample_urls_per_level_caps_each_level(self) -> None:
         mapping = UrlLevelMap()
