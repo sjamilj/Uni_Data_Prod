@@ -282,17 +282,38 @@ def cdp_endpoint(cdp_url: str) -> str:
     return DEFAULT_CDP_URL
 
 
-def page_from_cdp_browser(browser: Any) -> Any:
+def _iter_cdp_pages(browser: Any) -> list[Any]:
+    pages: list[Any] = []
+    for context in browser.contexts or []:
+        pages.extend(context.pages or [])
+    return pages
+
+
+def page_from_cdp_browser(browser: Any, *, prefer_host: str = "") -> Any:
+    pages = _iter_cdp_pages(browser)
+    host = (prefer_host or "").strip().lower()
+    if host and pages:
+        for page in pages:
+            try:
+                netloc = urlparse(page.url or "").netloc.lower()
+            except Exception:
+                continue
+            if netloc == host or netloc.endswith("." + host):
+                return page
+    if pages:
+        return pages[0]
     context = browser.contexts[0] if browser.contexts else browser.new_context()
     return context.pages[0] if context.pages else context.new_page()
 
 
-def try_connect_cdp(playwright: Any, cdp_url: str) -> tuple[Any, Any] | None:
+def try_connect_cdp(
+    playwright: Any, cdp_url: str, *, prefer_host: str = ""
+) -> tuple[Any, Any] | None:
     try:
         browser = playwright.chromium.connect_over_cdp(cdp_endpoint(cdp_url))
     except Exception:
         return None
-    return browser, page_from_cdp_browser(browser)
+    return browser, page_from_cdp_browser(browser, prefer_host=prefer_host)
 
 
 def launch_device_browser_context(
@@ -343,12 +364,13 @@ def launch_course_download_browser(
     code_dir: Path,
     config: CourseDownloadBrowserConfig,
     user_agent: str,
+    prefer_host: str = "",
 ) -> tuple[Any, Any, str]:
     """Return (handle, page, close_mode). close_mode: cdp | persistent | ephemeral."""
     code_dir = resolve_code_dir(code_dir)
 
     if config.cdp_url:
-        connected = try_connect_cdp(playwright, config.cdp_url)
+        connected = try_connect_cdp(playwright, config.cdp_url, prefer_host=prefer_host)
         if not connected:
             browser_spec = resolve_device_browser(config.browser)
             raise RuntimeError(

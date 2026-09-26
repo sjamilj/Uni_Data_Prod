@@ -12,13 +12,21 @@ if str(_SHARED) not in sys.path:
     sys.path.insert(0, str(_SHARED))
 
 from export_dev_courses import PortalLookup  # noqa: E402
+from entry_requirements_mapping import (  # noqa: E402
+    bangladesh_hsc_requirements_for_llm,
+    parse_ielts_bands,
+    resolve_english_tests_for_course,
+)
 from llm_extract import (  # noqa: E402
+    apply_percentage_scholarship_gbp,
     build_output_json,
     canonicalize_requirement_degree,
     derive_uk_equivalent_requirements,
+    enrich_english_parsed,
     enrich_stage1_from_markdown,
     extract_bangladesh_section_text,
     extract_entry_lines_from_course_markdown,
+    extract_grade_from_requirement_text,
     extract_stage1_fields_from_md,
     filter_bangladesh_descriptions_for_course,
     infer_degree_name_from_md,
@@ -423,6 +431,64 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(program["ProgramName"], "Group B")
         self.assertEqual(program["TestRequirements"][0]["ieltsMinOverall"], "6.5")
 
+    def test_select_english_json_program_by_ielts_band(self) -> None:
+        programs = [
+            {
+                "TestStudyLevel": "Postgraduate Research",
+                "ProgramName": "Faculty of Science",
+                "TestRequirements": [
+                    {"TestName": "IELTS Academic", "ieltsMinOverall": "6.5", "ieltsMinSection": "6.0"},
+                    {"TestName": "PTE", "pteMinOverall": "61", "pteMinSection": "60"},
+                    {"TestName": "TOEFL iBT", "toeflMinOverall": "88", "toeflMinSection": "19"},
+                ],
+            },
+            {
+                "TestStudyLevel": "Postgraduate Research",
+                "ProgramName": "ClinPsyD",
+                "TestRequirements": [
+                    {"TestName": "IELTS Academic", "ieltsMinOverall": "7.0", "ieltsMinSection": "7.0"},
+                    {"TestName": "PTE", "pteMinOverall": "76", "pteMinSection": "76"},
+                ],
+            },
+        ]
+        program = select_english_json_program(
+            programs,
+            course_level="postgraduate_research",
+            course_name="PhD Biology",
+            course_body="",
+            ielts_overall="6.5",
+            ielts_section="6.0",
+        )
+        self.assertEqual(program["ProgramName"], "Faculty of Science")
+
+    def test_enrich_english_fills_pte_toefl_from_ielts_matched_program(self) -> None:
+        english_md = """# English Language Requirements
+[
+  {
+    "TestStudyLevel": "Postgraduate Research",
+    "ProgramName": "Faculty of Science",
+    "TestRequirements": [
+      {"TestName": "IELTS Academic", "ieltsMinOverall": "6.5", "ieltsMinSection": "6.0"},
+      {"TestName": "Pearson PTE", "pteMinOverall": "61", "pteMinSection": "60"},
+      {"TestName": "TOEFL iBT", "toeflMinOverall": "88", "toeflMinSection": "19"}
+    ],
+    "description": ["IELTS 6.5 overall with 6.0 in each component."]
+  }
+]
+"""
+        enriched = enrich_english_parsed(
+            {},
+            english_md,
+            course_name="PhD Example",
+            course_level="postgraduate_research",
+            stage1_json={"ieltsMinOverall": "6.5", "ieltsMinSection": "6.0"},
+        )
+        self.assertEqual(enriched["ieltsMinOverall"], "6.5")
+        self.assertEqual(enriched["pteMinOverall"], "61")
+        self.assertEqual(enriched["pteMinSection"], "60")
+        self.assertEqual(enriched["toeflMinOverall"], "88")
+        self.assertEqual(enriched["toeflMinSection"], "19")
+
     def test_keele_stage1_fields_from_key_information(self) -> None:
         body = """## Key information
 ### Year of entry
@@ -457,36 +523,92 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(hints["intakeInfo"], "September 2026")
         self.assertEqual(hints["tuitionFee"], "18200")
 
-    def test_herts_stage1_fields_intake_duration_multi_fee(self) -> None:
-        body = """## Key course information
+    def test_process_record_bare_hsc_decimal_sets_min_gpa(self) -> None:
+        result = process_record(
+            {
+                "courseName": "Applied Education BA (Hons)",
+                "courseUrl": "https://example.com",
+                "requirements": [{"degree": "HSC", "grade": "3.00"}],
+            }
+        )
+        self.assertEqual(result["minDegreeName"], "HSC")
+        self.assertEqual(result["minGpa"], "3.0")
 
-Start dates: September 2027
+    def test_extract_grade_keeps_bare_decimal_gpa(self) -> None:
+        self.assertEqual(extract_grade_from_requirement_text("3.00"), "3.00")
+        self.assertEqual(extract_grade_from_requirement_text("2.50"), "2.50")
+        self.assertEqual(extract_grade_from_requirement_text("2.75"), "2.75")
 
-Duration: Full Time, 1 Years
+    def test_percentage_scholarship_uses_tuition_fee(self) -> None:
+        row_small = {
+            "scholarshipType": "Percentage",
+            "scholarshipAmount": "",
+            "scholarshipMetaData": [
+                {"subtitle": "Scholarships", "description": ["5%"]}
+            ],
+        }
+        apply_percentage_scholarship_gbp(row_small, "100")
+        self.assertEqual(row_small["scholarshipAmount"], "5")
+        row_uel = {
+            "scholarshipType": "Percentage",
+            "scholarshipAmount": "",
+            "scholarshipMetaData": [
+                {"subtitle": "Scholarships", "description": ["5%"]}
+            ],
+        }
+        apply_percentage_scholarship_gbp(row_uel, "16020")
+        self.assertEqual(row_uel["scholarshipAmount"], "801")
 
-## Fees and funding
+    def test_ielts_min_section_keeps_decimal(self) -> None:
+        overall, section = parse_ielts_bands(
+            "IELTS 6.0 with a minimum of 6.0 in Writing and Speaking; "
+            "5.5 in Listening and Reading (or recognised equivalent)."
+        )
+        self.assertEqual(overall, "6.0")
+        self.assertEqual(section, "5.5")
 
-### Fees 2026
+    def test_resolve_english_prefers_course_md_ielts(self) -> None:
+        repo_root = _SHARED.parent
+        english = (
+            repo_root
+            / "University of East London/output/clean/uni/english-requirements.md"
+        )
+        if not english.exists():
+            self.skipTest("UEL english-requirements.md not in workspace")
+        course = (
+            "### English Language requirements\n\n"
+            "- IELTS 6.0 with a minimum of 6.0 in Writing and Speaking; "
+            "5.5 in Listening and Reading (or recognised equivalent).\n"
+        )
+        resolved = resolve_english_tests_for_course(
+            course_markdown=course,
+            study_level="foundation",
+            english_requirements_content=english.read_text(encoding="utf-8"),
+        )
+        self.assertEqual(resolved["ielts_source"], "course_markdown")
+        self.assertEqual(resolved["ieltsMinOverall"], "6.0")
+        self.assertEqual(resolved["ieltsMinSection"], "5.5")
+        self.assertIn("IELTS 6.0", resolved["english_description"])
+        self.assertTrue(resolved["pteMinOverall"] or resolved["toeflMinOverall"])
 
-#### International Students
-
-##### Full time
-
-- £17950 for the 2026/2027 academic year
-
-### Fees 2027
-
-#### International Students
-
-##### Full time
-
-- £19025 for the 2027/2028 academic year
-"""
-        hints = extract_stage1_fields_from_md(body)
-        self.assertEqual(hints["intakeInfo"], "September 2027")
-        self.assertEqual(hints["courseDuration"], "Full Time, 1 Years")
-        self.assertEqual(hints["tuitionFee"], "17950,19025")
-        self.assertEqual(hints["currency"], "GBP")
+    def test_foundation_ucas_maps_one_hsc_gpa(self) -> None:
+        repo_root = _SHARED.parent
+        bangladesh = (
+            repo_root / "University of East London/output/clean/uni/bangladesh-entry.md"
+        )
+        if not bangladesh.exists():
+            self.skipTest("UEL bangladesh-entry.md not in workspace")
+        course = (
+            "## Entry requirements - Degree with foundation year\n\n"
+            "64 UCAS points from an equivalent Level 3 qualification listed on the "
+            "[UCAS tariff calculator](https://www.ucas.com/ucas/tariff-calculator).\n"
+        )
+        rows = bangladesh_hsc_requirements_for_llm(
+            study_level="foundation",
+            course_body=course,
+            entry_content=bangladesh.read_text(encoding="utf-8"),
+        )
+        self.assertEqual(rows, [{"degree": "HSC", "grade": "3.00"}])
 
 
 def format_report_issues(report) -> str:

@@ -289,8 +289,12 @@ class CourseMarkdownCleaner:
             return None
         module = importlib.util.module_from_spec(spec)
         uni_code = str(path.parent)
+        shared_root = str(Path(__file__).resolve().parent)
+        if shared_root not in sys.path:
+            sys.path.insert(0, shared_root)
+        # Append uni code so `course_markdown_cleanup` still resolves to shared.
         if uni_code not in sys.path:
-            sys.path.insert(0, uni_code)
+            sys.path.append(uni_code)
         spec.loader.exec_module(module)
         return module
 

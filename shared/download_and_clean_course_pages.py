@@ -74,9 +74,9 @@ from engines import get_course_html_engine
 from markdown_converter import MarkdownConverter, Utils
 from uni_paths import resolve_code_dir, resolve_output_dir
 from uni_pages import UNI_MD_BY_ROLE, course_slug_from_url, uni_md_output_name
-from listing_intake_merge import listing_intake_months_for_url
 from study_level import (
     CLEAN_COURSES_SUBDIR,
+    STUDY_LEVELS,
     StudyLevelClassifier,
     dedupe_course_entries_by_latest_intake,
     folder_for_level,
@@ -118,6 +118,50 @@ class CourseMarkdownCleanupBridge:
 
     def cleanup_course(self, markdown: str) -> str:
         return cleanup_course_markdown(markdown, code_dir=self.code_dir)
+
+    def extra_clean_course(self, markdown: str, *, study_level: str) -> str:
+        module = _load_uni_course_cleanup_module(self.code_dir)
+        if module is None:
+            return markdown
+        extra = getattr(module, "extra_clean_course_markdown_uni", None)
+        if callable(extra):
+            return extra(markdown, study_level=study_level)
+        return markdown
+
+    @staticmethod
+    def resolve_study_levels(
+        raw_html: str,
+        course_url: str,
+        *,
+        url_levels,
+        classifier: StudyLevelClassifier,
+        code_dir: Path,
+    ) -> list[str]:
+        default = levels_for_url(
+            course_url,
+            url_levels=url_levels,
+            classifier=classifier,
+        )
+        module = _load_uni_course_cleanup_module(code_dir)
+        if module is None:
+            return default
+        expand = getattr(module, "study_levels_for_course_html", None)
+        if not callable(expand):
+            return default
+        expanded = expand(
+            raw_html,
+            course_url=course_url,
+            default_levels=default,
+        )
+        if not expanded:
+            return default
+        order = {level: index for index, level in enumerate(STUDY_LEVELS)}
+        seen: list[str] = []
+        for level in expanded:
+            folder = folder_for_level(level)
+            if folder not in seen:
+                seen.append(folder)
+        return sorted(seen, key=lambda item: order.get(item, 99))
 
     def cleanup_uni(self, markdown: str, **kwargs: object) -> str:
         return cleanup_uni_markdown(
@@ -318,7 +362,6 @@ class CourseMarkdownBuilder:
         warnings: list[CleanWarning] | None = None,
         source_html: str = "",
         source_url: str = "",
-        catalog_listing_intake_months: list[str] | None = None,
     ) -> str:
         soup = BeautifulSoup(html, "html.parser")
 
@@ -326,14 +369,7 @@ class CourseMarkdownBuilder:
         if module is not None:
             preprocess_html = getattr(module, "preprocess_course_html_uni", None)
             if callable(preprocess_html):
-                import inspect
-
-                kwargs: dict[str, object] = {}
-                if catalog_listing_intake_months and "catalog_listing_intake_months" in inspect.signature(
-                    preprocess_html
-                ).parameters:
-                    kwargs["catalog_listing_intake_months"] = catalog_listing_intake_months
-                preprocess_html(soup, **kwargs)
+                preprocess_html(soup)
 
         engine = get_course_html_engine(
             clean_config.engine,
@@ -856,10 +892,16 @@ class CoursePagesCleaner:
             ] = []
 
             for course_url, html_path in entries:
-                found = levels_for_url(
+                raw_for_levels = html_path.read_text(
+                    encoding="utf-8",
+                    errors="replace",
+                )
+                found = CourseMarkdownCleanupBridge.resolve_study_levels(
+                    raw_for_levels,
                     course_url,
                     url_levels=url_levels,
                     classifier=classifier,
+                    code_dir=self.code_dir,
                 )
 
                 if any(
@@ -939,6 +981,7 @@ class CoursePagesCleaner:
         )
 
         excluded_count = 0
+        excluded_urls: list[str] = []
 
         # NEW:
         # Track collisions instead of silently skipping them.
@@ -1019,6 +1062,9 @@ class CoursePagesCleaner:
                 url=source_url or course_url,
             ):
                 excluded_count += 1
+                drop_url = (source_url or course_url or "").strip().rstrip("/")
+                if drop_url:
+                    excluded_urls.append(drop_url)
 
                 self._delete_markdown_for_source(
                     courses_out,
@@ -1045,21 +1091,29 @@ class CoursePagesCleaner:
             # Resolve study levels
             # --------------------------------------------------------
 
-            study_levels = levels_for_url(
-                course_url or source_url,
-                url_levels=url_levels,
-                classifier=classifier,
+            study_levels = (
+                CourseMarkdownCleanupBridge.resolve_study_levels(
+                    raw_html,
+                    course_url or source_url,
+                    url_levels=url_levels,
+                    classifier=classifier,
+                    code_dir=self.code_dir,
+                )
             )
+
+            if filter_levels:
+                allowed = set(filter_levels)
+                study_levels = [
+                    level
+                    for level in study_levels
+                    if level in allowed
+                ]
+                if not study_levels:
+                    continue
 
             # --------------------------------------------------------
             # Build markdown
             # --------------------------------------------------------
-
-            catalog_months = listing_intake_months_for_url(
-                course_url or source_url,
-                url_levels,
-                study_level=study_levels[0] if study_levels else None,
-            )
 
             if clean_config.blocks:
                 markdown = (
@@ -1070,7 +1124,6 @@ class CoursePagesCleaner:
                         warnings=warnings,
                         source_html=html_rel,
                         source_url=source_url,
-                        catalog_listing_intake_months=catalog_months,
                     )
                 )
             else:
@@ -1078,17 +1131,6 @@ class CoursePagesCleaner:
                     GenericMarkdownBuilder.from_html(
                         raw_html
                     )
-                )
-
-            pipeline_bits: list[str] = []
-            if source_url:
-                pipeline_bits.append(f"course_url={source_url.strip()}")
-            if study_levels:
-                pipeline_bits.append(f"study_level={study_levels[0]}")
-            if pipeline_bits:
-                markdown = (
-                    f"<!-- pipeline: {' '.join(pipeline_bits)} -->\n"
-                    + markdown
                 )
 
             markdown = (
@@ -1189,6 +1231,20 @@ class CoursePagesCleaner:
                 # Write markdown
                 # ----------------------------------------------------
 
+                pipeline_bits: list[str] = []
+                if source_url:
+                    pipeline_bits.append(
+                        f"course_url={source_url.strip()}"
+                    )
+                pipeline_bits.append(f"study_level={folder}")
+                level_markdown = (
+                    f"<!-- pipeline: {' '.join(pipeline_bits)} -->\n"
+                    + self.markdown_cleanup.extra_clean_course(
+                        markdown,
+                        study_level=folder,
+                    )
+                )
+
                 output_path.write_text(
                     ManifestWriter.build_frontmatter(
                         source_html=html_rel,
@@ -1198,7 +1254,7 @@ class CoursePagesCleaner:
                         study_level=folder,
                         course_url=course_url,
                     )
-                    + markdown
+                    + level_markdown
                     + "\n",
                     encoding="utf-8",
                 )
@@ -1241,8 +1297,15 @@ class CoursePagesCleaner:
         if excluded_count:
             print(
                 f"Excluded {excluded_count} "
-                f"short-course/part-time pages"
+                f"course page(s) (type / URL / HTML rules)"
             )
+            log_path = self.output_dir / "excluded_course_urls.txt"
+            unique_urls = sorted(set(excluded_urls))
+            log_path.write_text(
+                "\n".join(unique_urls) + ("\n" if unique_urls else ""),
+                encoding="utf-8",
+            )
+            print(f"Wrote {log_path} ({len(unique_urls)} URL(s))")
 
         # NEW:
         # Explicit duplicate summary.

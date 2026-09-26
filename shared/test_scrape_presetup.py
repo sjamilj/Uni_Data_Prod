@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -11,6 +12,7 @@ _SHARED = Path(__file__).resolve().parent
 if str(_SHARED) not in sys.path:
     sys.path.insert(0, str(_SHARED))
 
+from scrape_course_urls import CourseUrlMatcher, MatchingRules
 from study_level import (
     PRESETUP_URLS_CSV,
     StudyLevelClassifier,
@@ -22,33 +24,6 @@ from study_level import (
     write_level_csvs,
     presetup_download_sample_stale,
 )  # noqa: E402
-
-
-class UrlLevelIntakeTests(unittest.TestCase):
-    def test_same_url_two_listing_intake_months(self) -> None:
-        from study_level import UrlLevelMap
-
-        mapping = UrlLevelMap()
-        url = "https://www.herts.ac.uk/courses/postgraduate-masters/example"
-        mapping.add(url, "postgraduate", "POSTGRADUATE", listing_intake_month="september")
-        mapping.add(url, "postgraduate", "POSTGRADUATE", listing_intake_month="january")
-        rows = [r for r in mapping.records() if r["course_url"] == url]
-        self.assertEqual(len(rows), 2)
-        months = sorted(r["listing_intake_month"] for r in rows)
-        self.assertEqual(months, ["january", "september"])
-
-
-class ListingStartDateTests(unittest.TestCase):
-    def test_apply_listing_start_date_replaces_month_facet(self) -> None:
-        from scrape_course_urls import UrlNormalizer
-
-        url = (
-            "https://www.herts.ac.uk/courses/search?"
-            "f.Start+date%7CcourseStartDate=september&start_rank=0"
-        )
-        jan = UrlNormalizer.apply_listing_start_date(url, "january")
-        self.assertIn("courseStartDate=january", jan)
-        self.assertNotIn("courseStartDate=september", jan)
 
 
 class ScrapePresetupSampleTests(unittest.TestCase):
@@ -194,6 +169,37 @@ class ScrapePresetupSampleTests(unittest.TestCase):
             self.assertTrue(presetup_download_sample_stale(output_dir, old_urls))
             all_urls = [row["course_url"] for row in scrape_courses]
             self.assertFalse(presetup_download_sample_stale(output_dir, all_urls))
+
+
+class CourseUrlMatcherHostTests(unittest.TestCase):
+    def _matcher(self) -> CourseUrlMatcher:
+        pattern = re.compile(r"^/(?:undergraduate|postgraduate)/courses/[a-z0-9\-]+$", re.I)
+        ifp = re.compile(r"^/our-programmes/international-foundation-programme/?$", re.I)
+        rules = MatchingRules(
+            path_patterns=[pattern, ifp],
+            path_pattern_sources=[],
+            excluded_paths=set(),
+            excluded_prefixes=(),
+            link_selector="",
+            base_url="https://www.uel.ac.uk",
+        )
+        return CourseUrlMatcher("uelisc.com", rules)
+
+    def test_allows_university_host_and_www_alias(self) -> None:
+        matcher = self._matcher()
+        self.assertTrue(
+            matcher.is_valid("https://www.uel.ac.uk/undergraduate/courses/bsc-hons-computer-science")
+        )
+        self.assertTrue(
+            matcher.is_valid("https://uel.ac.uk/undergraduate/courses/ba-hons-airline-airport-management")
+        )
+        self.assertTrue(
+            matcher.is_valid("https://uelisc.com/our-programmes/international-foundation-programme")
+        )
+
+    def test_rejects_other_hosts(self) -> None:
+        matcher = self._matcher()
+        self.assertFalse(matcher.is_valid("https://malvernhouse.com/undergraduate/courses/bsc-hons-computer-science"))
 
 
 if __name__ == "__main__":
