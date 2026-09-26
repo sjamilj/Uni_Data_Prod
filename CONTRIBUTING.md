@@ -59,8 +59,8 @@ Squash or reword `wip(...)` commits to `feat(unit-NN/slug): ...` before merging 
 | What | Value |
 |------|-------|
 | Tag | `shared/v1.2.1` (current reset baseline) |
-| Commit | `5b969dd` |
-| Message | degreeName dictionary v2 by studyLevel; export/validate `degreeName` fill |
+| Commit | `5c43b8f` |
+| Message | degreeName by studyLevel; validate `infer_degree_name` fix; comma-separated `tuitionFee`; registry unit-33/herts |
 
 ### Start work on a new university
 
@@ -196,7 +196,7 @@ University tags (`uni/…`) mark a **university export** snapshot. **Shared** ch
 | `shared/v1.0.0` | `d5f7088` | Pipeline baseline |
 | `shared/v1.1.0` | `14cc330` | Audit CSV export, degreeName LLM inference, `studyLevel` column, foundation/UG as separate export rows |
 | `shared/v1.2.0` | `f99ad58` | Cloudflare/CDP + device-profile launch (`browser_device_profile`), `BrowserSession` reads `.env`; UG `higherDegreeName`/`higherGpa` for HSC+Diploma+bachelor paths; `package_uni_backup.py`; course-type filter tests |
-| `shared/v1.2.1` | `5b969dd` | **Current reset baseline** — `degree_name_dictionary.py` + `degreeName_dictionary.json` (v2, by study level); `export_dev_courses` / `validate_dev_courses` lookup with `studyLevel` |
+| `shared/v1.2.1` | `5c43b8f` | **Current reset baseline** — `degree_name_dictionary.py` (v2, by study level); `validate_dev_courses` `degreeName` fill + `infer_degree_name` fix; comma-separated international `tuitionFee` in normalize/export |
 
 ```powershell
 # List shared tags (peel annotated tags to commits)
