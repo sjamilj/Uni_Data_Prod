@@ -294,13 +294,7 @@ class CourseMarkdownCleaner:
         spec.loader.exec_module(module)
         return module
 
-    def cleanup_course_markdown(
-        self,
-        markdown: str,
-        *,
-        code_dir: Path | None = None,
-        source_html: str = "",
-    ) -> str:
+    def cleanup_course_markdown(self, markdown: str, *, code_dir: Path | None = None) -> str:
         """Apply optional uni preprocess, .env section removal, then cleanup_course_markdown_uni."""
         if code_dir is None:
             return markdown
@@ -310,18 +304,6 @@ class CourseMarkdownCleaner:
             preprocess = getattr(module, "preprocess_course_markdown_uni", None)
             if callable(preprocess):
                 working = preprocess(working)
-            supplement = getattr(module, "supplement_course_markdown_from_source_html", None)
-            if callable(supplement) and source_html:
-                study_level = ""
-                level_match = re.search(r"study_level=(\w+)", working, re.I)
-                if level_match:
-                    study_level = level_match.group(1)
-                working = supplement(
-                    working,
-                    code_dir=resolve_code_dir(code_dir),
-                    source_html=source_html,
-                    study_level=study_level,
-                )
         cleaned = MarkdownSectionRemover.apply_env_remove_sections(working, code_dir)
         if module is None:
             return cleaned

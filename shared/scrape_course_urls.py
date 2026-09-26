@@ -50,6 +50,12 @@ Run from a university code/ folder (uses .env in cwd, or pass --code-dir):
   python "../../shared/scrape_course_urls.py" --fresh --append-urls
   python "../../shared/scrape_course_urls.py" --append-urls --study-level foundation
   python "../../shared/scrape_course_urls.py" --pick-levels
+
+  Intake month on search URLs (e.g. Hertfordshire courseStartDate=september|january):
+    COURSE_LISTING_START_DATE=september   # in .env (template URLs may use september)
+    python "../../shared/scrape_course_urls.py" --fresh
+    # change to january (or --listing-start-date january) then merge:
+    python "../../shared/scrape_course_urls.py" --append-urls --listing-start-date january
 """
 
 from __future__ import annotations
@@ -360,6 +366,31 @@ class UrlNormalizer:
     @staticmethod
     def listing_path_key(url: str) -> str:
         return urlparse(url).path.rstrip("/").lower()
+
+    @staticmethod
+    def intake_month_from_listing_url(url: str) -> str:
+        match = re.search(r"courseStartDate=([a-zA-Z]+)", url or "", flags=re.IGNORECASE)
+        return match.group(1).lower() if match else ""
+
+    @staticmethod
+    def apply_listing_start_date(url: str, start_date: str) -> str:
+        """Replace courseStartDate=<month> in listing/catalogue URLs (Herts Funnelback facet)."""
+        month = (start_date or "").strip().lower()
+        if not month or not url.strip():
+            return url
+        return re.sub(
+            r"(courseStartDate=)([a-zA-Z]+)",
+            lambda match: f"{match.group(1)}{month}",
+            url,
+            flags=re.IGNORECASE,
+        )
+
+    @staticmethod
+    def listing_search_group_key(url: str) -> str:
+        """Separate paginated crawls per path and start-month facet (same path, sep vs jan)."""
+        path = UrlNormalizer.listing_path_key(url)
+        month = UrlNormalizer.intake_month_from_listing_url(url)
+        return f"{path}#start={month}" if month else path
 
     @staticmethod
     def infer_listing_programme(url: str) -> str:
@@ -686,10 +717,18 @@ class CatalogueSourceResolver:
         )
 
     @staticmethod
-    def collect_degree_scopes(work_dir: Path, env: EnvFile, env_path: Path) -> list[CatalogueSource]:
+    def collect_degree_scopes(
+        work_dir: Path,
+        env: EnvFile,
+        env_path: Path,
+        listing_start_date: str = "",
+    ) -> list[CatalogueSource]:
         scopes: list[CatalogueSource] = []
         for scope in DEGREE_SCOPES:
-            url = env.get(f"{scope}_COURSE_CATALOGUE_URL", "").strip()
+            url = UrlNormalizer.apply_listing_start_date(
+                env.get(f"{scope}_COURSE_CATALOGUE_URL", "").strip(),
+                listing_start_date,
+            )
             html = env.get(f"{scope}_COURSE_CATALOGUE_HTML", "").strip()
             if Utils.is_empty(url) and Utils.is_empty(html):
                 continue
@@ -717,7 +756,7 @@ class ListingConfigLoader:
     """Resolves .env keys into ListingConfig objects for STRATEGY=DEGREE_SCOPED_PAGINATED."""
 
     @staticmethod
-    def collect_seeds(env: EnvFile, scope: str = "") -> list[str]:
+    def collect_seeds(env: EnvFile, scope: str = "", listing_start_date: str = "") -> list[str]:
         prefix = f"{scope}_" if scope else ""
         seeds: list[str] = []
         seen: set[str] = set()
@@ -727,6 +766,7 @@ class ListingConfigLoader:
             value = env.get(key, "").strip()
             if Utils.is_empty(value):
                 break
+            value = UrlNormalizer.apply_listing_start_date(value, listing_start_date)
             url = UrlNormalizer.normalize(value, keep_query=True)
             parsed = urlparse(url)
             if not parsed.scheme or not parsed.netloc:
@@ -738,10 +778,14 @@ class ListingConfigLoader:
         return seeds
 
     @staticmethod
-    def collect_degree_listings(env: EnvFile, env_path: Path) -> list[ListingConfig]:
+    def collect_degree_listings(
+        env: EnvFile,
+        env_path: Path,
+        listing_start_date: str = "",
+    ) -> list[ListingConfig]:
         configs: list[ListingConfig] = []
         for scope in DEGREE_SCOPES:
-            seeds = ListingConfigLoader.collect_seeds(env, scope)
+            seeds = ListingConfigLoader.collect_seeds(env, scope, listing_start_date)
             if not seeds:
                 continue
             search_paths = sorted({UrlNormalizer.listing_path_key(url) for url in seeds})
@@ -791,6 +835,8 @@ class ScraperConfig:
     degree_listings: list[ListingConfig] = field(default_factory=list)
     single_catalogue: CatalogueSource | None = None
     level_classifier: StudyLevelClassifier = field(default_factory=StudyLevelClassifier)
+    listing_start_date: str = ""
+    listing_start_date_override: str = ""
 
     # Convenience passthroughs so extraction code can read config.path_patterns etc.
     @property
@@ -826,7 +872,7 @@ class ConfigLoader:
     """Builds a ScraperConfig by reading and validating the .env file."""
 
     @staticmethod
-    def load(work_dir: Path) -> ScraperConfig:
+    def load(work_dir: Path, listing_start_date: str | None = None) -> ScraperConfig:
         env_path = work_dir / ENV_FILE
         env = EnvFile(env_path)
 
@@ -838,11 +884,15 @@ class ConfigLoader:
             )
 
         matching = MatchingRulesLoader.load(env, env_path)
+        env_start = env.get("COURSE_LISTING_START_DATE", "").strip().lower()
+        cli_override = (listing_start_date or "").strip().lower()
         config = ScraperConfig(
             strategy=strategy,
             env_path=str(env_path),
             matching=matching,
             level_classifier=StudyLevelClassifier.from_env_file(env, env_path),
+            listing_start_date=env_start,
+            listing_start_date_override=cli_override,
         )
 
         if strategy == STRATEGY_ALL_COURSE:
@@ -851,14 +901,23 @@ class ConfigLoader:
 
     @staticmethod
     def _load_all_course(work_dir: Path, env: EnvFile, env_path: Path, config: ScraperConfig) -> ScraperConfig:
-        degree_scopes = CatalogueSourceResolver.collect_degree_scopes(work_dir, env, env_path)
+        apply_month = config.listing_start_date_override or config.listing_start_date
+        degree_scopes = CatalogueSourceResolver.collect_degree_scopes(
+            work_dir,
+            env,
+            env_path,
+            apply_month,
+        )
         if degree_scopes:
             config.degree_scopes = degree_scopes
             if not config.base_url:
                 config.base_url = f"https://{degree_scopes[0].domain}"
             return config
 
-        catalogue_url = env.get("COURSE_CATALOGUE_URL", "").strip()
+        catalogue_url = UrlNormalizer.apply_listing_start_date(
+            env.get("COURSE_CATALOGUE_URL", "").strip(),
+            apply_month,
+        )
         catalogue_html = env.get("COURSE_CATALOGUE_HTML", "").strip()
         if Utils.is_empty(catalogue_url) and Utils.is_empty(catalogue_html):
             raise ValueError(
@@ -875,10 +934,16 @@ class ConfigLoader:
 
     @staticmethod
     def _load_paginated(env: EnvFile, env_path: Path, config: ScraperConfig) -> ScraperConfig:
-        degree_listings = ListingConfigLoader.collect_degree_listings(env, env_path)
+        degree_listings = ListingConfigLoader.collect_degree_listings(
+            env,
+            env_path,
+            config.listing_start_date_override,
+        )
         if not degree_listings:
             legacy_scope = env.get("LISTING_PROGRAMME", "").strip()
-            legacy_seeds = ListingConfigLoader.collect_seeds(env, "")
+            legacy_seeds = ListingConfigLoader.collect_seeds(
+                env, "", config.listing_start_date_override
+            )
             if not legacy_seeds:
                 raise ValueError(
                     f"{env_path}: set UNDERGRADUATE_COURSE_LISTING_PAGE_1= (etc.) for one or more of "
@@ -988,6 +1053,7 @@ class ArtifactStore:
         progress["course_urls"] = sorted(set(urls))
         if url_levels is not None:
             progress["url_levels"] = url_levels.to_progress()
+            progress["url_listing_intakes"] = url_levels.listing_intakes_to_progress()
             write_level_csvs(self.output_dir, url_levels)
         self.write_course_urls(progress["course_urls"])
         progress_store.save(progress)
@@ -1012,17 +1078,6 @@ class ArtifactStore:
 # Browser control (Playwright)
 # ============================================================================
 
-def _invoke_uni_course_page_settle(code_dir: Path, page, url: str) -> None:
-    from course_markdown_cleanup import CourseMarkdownCleaner
-
-    module = CourseMarkdownCleaner.load_uni_course_cleanup_module(code_dir)
-    if module is None:
-        return
-    settle = getattr(module, "settle_course_page_after_download", None)
-    if callable(settle):
-        settle(page, url)
-
-
 class BrowserSession:
     """Playwright page for listing/download; launch from code/.env (see cloudflare-course-download.md)."""
 
@@ -1034,7 +1089,6 @@ class BrowserSession:
         self._close_mode = ""
         self._config: CourseDownloadBrowserConfig | None = None
         self.page = None
-        self._current_url = ""
 
     def _resolve_config(self) -> CourseDownloadBrowserConfig:
         if self._config is None:
@@ -1137,12 +1191,6 @@ class BrowserSession:
             self.wait_for_listing(self.page)
         else:
             self.page.wait_for_timeout(800)
-            if self.code_dir is not None and self._current_url:
-                _invoke_uni_course_page_settle(
-                    self.code_dir,
-                    self.page,
-                    self._current_url,
-                )
         html = self.page.content()
         if not html or len(html) < 200:
             raise RuntimeError("Empty or tiny HTML response")
@@ -1156,7 +1204,6 @@ class BrowserSession:
         last_error: Exception | None = None
         for attempt in range(1, LISTING_DOWNLOAD_RETRIES + 1):
             try:
-                self._current_url = url
                 self.page.goto(url, wait_until="domcontentloaded", timeout=60000)
                 return self._settle_page(wait_for_results=wait_for_results)
             except Exception as exc:
@@ -1199,7 +1246,7 @@ class SearchGroupBuilder:
     def build(seed_urls: list[str]) -> dict[str, str]:
         groups: dict[str, str] = {}
         for url in seed_urls:
-            key = UrlNormalizer.listing_path_key(url)
+            key = UrlNormalizer.listing_search_group_key(url)
             param = UrlNormalizer.detect_pagination_param(url)
             page_num = UrlNormalizer.get_page_number(url, param)
             if key not in groups:
@@ -1211,7 +1258,11 @@ class SearchGroupBuilder:
 
         normalized: dict[str, str] = {}
         for key, url in groups.items():
-            matching = [item for item in seed_urls if UrlNormalizer.listing_path_key(item) == key]
+            matching = [
+                item
+                for item in seed_urls
+                if UrlNormalizer.listing_search_group_key(item) == key
+            ]
             param = UrlNormalizer.detect_pagination_param(url)
             start_page = min(
                 UrlNormalizer.get_page_number(item, UrlNormalizer.detect_pagination_param(item))
@@ -1484,12 +1535,17 @@ class PaginatedListingExtractor:
             before_count = len(all_urls)
             if page_urls:
                 all_urls.update(page_urls)
+                intake_month = (
+                    self.config.listing_start_date_override
+                    or UrlNormalizer.intake_month_from_listing_url(listing_url)
+                    or self.config.listing_start_date
+                )
                 url_levels.tag_urls(
                     page_urls,
                     scope=scope,
                     classifier=self.config.level_classifier,
                     source_scope=scope,
-                    scope_determines_level=True,
+                    listing_intake_month=intake_month,
                 )
             new_count = len(all_urls) - before_count
             if not page_urls:
@@ -1573,6 +1629,7 @@ class PaginatedListingExtractor:
             if self.presetup:
                 if url_levels is not None:
                     self.progress["url_levels"] = url_levels.to_progress()
+                    self.progress["url_listing_intakes"] = url_levels.listing_intakes_to_progress()
                 self.progress_store.save(self.progress)
             else:
                 self.artifacts.persist_urls(
@@ -1659,7 +1716,7 @@ class CourseUrlScraper:
         completed.update(keep)
 
     def _reclassify_url_levels(self, url_levels: UrlLevelMap) -> UrlLevelMap:
-        if self.config.strategy in (STRATEGY_ALL_COURSE, STRATEGY_DEGREE_SCOPED_PAGINATED):
+        if self.config.strategy == STRATEGY_ALL_COURSE:
             rebuilt = UrlLevelMap()
             for record in url_levels.records():
                 source = record.get("source_scope") or ""
@@ -1825,13 +1882,23 @@ class CourseUrlScraper:
         if keep_existing and not presetup:
             existing = self.artifacts.read_course_urls()
             all_urls.update(existing)
-            url_levels.merge(UrlLevelMap.from_progress((progress or {}).get("url_levels")))
+            url_levels.merge(
+                UrlLevelMap.from_progress(
+                    (progress or {}).get("url_levels"),
+                    (progress or {}).get("url_listing_intakes"),
+                )
+            )
             url_levels.merge(read_level_csvs(self.output_dir))
             print(f"Keeping {len(existing)} existing URLs")
             progress = progress or ProgressStore.new("extracting_urls", strategy)
             progress["phase"] = "extracting_urls"
         elif presetup and progress and progress.get("url_levels"):
-            url_levels.merge(UrlLevelMap.from_progress(progress.get("url_levels")))
+            url_levels.merge(
+                UrlLevelMap.from_progress(
+                    progress.get("url_levels"),
+                    progress.get("url_listing_intakes"),
+                )
+            )
             all_urls.update(progress.get("course_urls") or [])
             progress = progress or ProgressStore.new("extracting_urls", strategy)
             progress["phase"] = "extracting_urls"
@@ -1841,7 +1908,12 @@ class CourseUrlScraper:
         completed: set[str] = set(progress.get("listing_completed", []))
         group_state: dict[str, dict] = dict(progress.get("group_state", {}))
         if not presetup and progress.get("url_levels"):
-            url_levels.merge(UrlLevelMap.from_progress(progress.get("url_levels")))
+            url_levels.merge(
+                UrlLevelMap.from_progress(
+                    progress.get("url_levels"),
+                    progress.get("url_listing_intakes"),
+                )
+            )
         if scoped:
             self._reset_selected_scope_progress(completed, group_state)
             print(f"Study levels: {', '.join(study_levels or [])}")
@@ -2282,6 +2354,15 @@ class ScraperCLI:
             default=None,
             help="Presetup scrape RNG seed (default: random)",
         )
+        parser.add_argument(
+            "--listing-start-date",
+            dest="listing_start_date",
+            metavar="MONTH",
+            help=(
+                "Override COURSE_LISTING_START_DATE (e.g. september, january) on "
+                "listing/catalogue URLs that use courseStartDate="
+            ),
+        )
         return parser
 
     @staticmethod
@@ -2323,7 +2404,10 @@ class ScraperCLI:
         args = ScraperCLI.build_arg_parser().parse_args()
         code_dir = resolve_work_dir(work_dir if work_dir is not None else args.code_dir)
         try:
-            config = ConfigLoader.load(code_dir)
+            config = ConfigLoader.load(code_dir, listing_start_date=args.listing_start_date)
+            active = config.listing_start_date_override or config.listing_start_date
+            if active:
+                print(f"COURSE_LISTING_START_DATE={active}")
             study_levels = parse_study_levels(args.study_level) if args.study_level else []
             if args.pick_levels:
                 study_levels = ScraperCLI.prompt_study_levels(ScraperCLI.available_scopes(config))

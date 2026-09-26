@@ -443,52 +443,6 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(hints["tuitionFee"], "18200")
         self.assertEqual(hints["currency"], "GBP")
 
-    def test_hull_key_facts_bullet_duration_and_fees_prose(self) -> None:
-        body = """## Key facts
-
-- **UCAS code:** F410
-- **Duration:** 3 years
-- **Start date:** September 2027
-
-## Fees & Funding
-
-### How much is it?
-
-For International students, the standard course fee is £21,520 per year.
-"""
-        hints = extract_stage1_fields_from_md(body)
-        self.assertEqual(hints["courseDuration"], "3 years")
-        self.assertEqual(hints["tuitionFee"], "21520")
-        self.assertEqual(hints["currency"], "GBP")
-
-    def test_hull_pgr_standard_course_fee(self) -> None:
-        body = """## Fees & Funding
-
-### How much is it?
-
-Our standard course fee is £21,703 a year for full-time study and £10,852 a yearfor part-time study.
-"""
-        hints = extract_stage1_fields_from_md(body, study_level="postgraduate_research")
-        self.assertEqual(hints["tuitionFee"], "21703")
-
-    def test_hull_accelerated_learning_fee_prose(self) -> None:
-        body = """## Key facts
-
-- **Course option:** Standard course
-
-## Fees & Funding
-
-### How much is it?
-
-The fee for our accelerated learning course is £22,670 per year.
-
-If you choose to study a foundation year as part of your course, the fee is £18,945.
-"""
-        hints = extract_stage1_fields_from_md(body, study_level="undergraduate")
-        self.assertEqual(hints["tuitionFee"], "22670")
-        foundation = extract_stage1_fields_from_md(body, study_level="foundation")
-        self.assertEqual(foundation["tuitionFee"], "18945")
-
     def test_keele_stage1_fields_pg_month_of_entry(self) -> None:
         body = """## Key information
 ### Month of entry
@@ -502,6 +456,37 @@ If you choose to study a foundation year as part of your course, the fee is £18
         hints = extract_stage1_fields_from_md(body)
         self.assertEqual(hints["intakeInfo"], "September 2026")
         self.assertEqual(hints["tuitionFee"], "18200")
+
+    def test_herts_stage1_fields_intake_duration_multi_fee(self) -> None:
+        body = """## Key course information
+
+Start dates: September 2027
+
+Duration: Full Time, 1 Years
+
+## Fees and funding
+
+### Fees 2026
+
+#### International Students
+
+##### Full time
+
+- £17950 for the 2026/2027 academic year
+
+### Fees 2027
+
+#### International Students
+
+##### Full time
+
+- £19025 for the 2027/2028 academic year
+"""
+        hints = extract_stage1_fields_from_md(body)
+        self.assertEqual(hints["intakeInfo"], "September 2027")
+        self.assertEqual(hints["courseDuration"], "Full Time, 1 Years")
+        self.assertEqual(hints["tuitionFee"], "17950,19025")
+        self.assertEqual(hints["currency"], "GBP")
 
 
 def format_report_issues(report) -> str:

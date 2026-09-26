@@ -811,6 +811,28 @@ class Stage1MarkdownParser:
         return match.group(1) if match else ''
 
     @staticmethod
+    def extract_herts_international_full_time_fees(body: str) -> list[str]:
+        """University of Hertfordshire: #### International Students / ##### Full time fee bullets."""
+        fees: list[str] = []
+        for block in re.finditer(
+            r'####\s+International Students\s*\n+#####\s+Full time\s*\n+(.*?)(?=#####\s+Part time|###\s+Fees|\n####\s|\Z)',
+            body,
+            re.I | re.S,
+        ):
+            section = block.group(1)
+            for line in section.splitlines():
+                lower = line.casefold()
+                if 'per 15 credits' in lower:
+                    continue
+                match = re.search(r'£([\d,]+)\s+for the\s+\d{4}/\d{4}', line, re.I)
+                if not match:
+                    continue
+                amount = match.group(1).replace(',', '')
+                if amount not in fees:
+                    fees.append(amount)
+        return fees
+
+    @staticmethod
     def parse_international_fee_options(section: str) -> list[dict[str, str]]:
         options: list[dict[str, str]] = []
         lines = [line.strip() for line in section.splitlines()]
@@ -877,39 +899,6 @@ class Stage1MarkdownParser:
         if match:
             return match.group(1).replace(',', '')
         return ''
-
-    @staticmethod
-    def extract_hull_tuition_fee(
-        section: str,
-        *,
-        study_level: str = "",
-        course_option: str = "",
-    ) -> str:
-        """Hull international fees prose (accelerated degree / optional foundation year)."""
-        accelerated = ""
-        foundation = ""
-        acc_match = re.search(
-            r"(?:fee for our )?accelerated learning course is\s+£\s*([\d,]+)",
-            section,
-            re.I,
-        )
-        if acc_match:
-            accelerated = acc_match.group(1).replace(",", "").strip()
-        fnd_match = re.search(
-            r"foundation year as part of your course,?\s+the fee is\s+£\s*([\d,]+)",
-            section,
-            re.I,
-        )
-        if fnd_match:
-            foundation = fnd_match.group(1).replace(",", "").strip()
-        level = (study_level or "").strip().casefold()
-        option = (course_option or "").strip().casefold()
-        want_foundation = level == "foundation" or "foundation year" in option
-        if want_foundation and foundation:
-            return foundation
-        if accelerated:
-            return accelerated
-        return foundation
 
     @staticmethod
     def extract_research_course_duration(body: str) -> str:
@@ -1107,13 +1096,9 @@ class Stage1MarkdownParser:
         return fields
 
     @staticmethod
-    def extract_stage1_fields_from_md(body: str, *, study_level: str = "") -> dict[str, str]:
+    def extract_stage1_fields_from_md(body: str) -> dict[str, str]:
         """Parse intake, fees, duration, and IELTS scalars from clean course markdown."""
         fields: dict[str, str] = {}
-        course_option = ""
-        option_match = re.search(r"-\s*\*\*Course option:\*\*\s*([^\n]+)", body, re.I)
-        if option_match:
-            course_option = option_match.group(1).strip()
         if "## Key information" in body:
             fields.update(
                 {
@@ -1124,6 +1109,8 @@ class Stage1MarkdownParser:
             )
         for pattern in (
             '-\\s*\\*\\*Start date:\\*\\*\\s*([^\\n]+)',
+            '-\\s*\\*\\*Start dates?:\\*\\*\\s*([^\\n]+)',
+            '\\*\\*Start dates?:\\*\\*\\s*([^\\n]+)',
             '-\\s*\\*\\*Start:\\*\\*\\s*([^\\n]+)',
             '- Start date\\s+([^\\n]+)',
             '\\*\\*Start date\\*\\*\\s*\\n+\\s*([^\\n#]+)',
@@ -1133,15 +1120,17 @@ class Stage1MarkdownParser:
             if start_date_match and not fields.get("intakeInfo"):
                 fields['intakeInfo'] = normalize_intake_text(start_date_match.group(1).strip())
                 break
-        duration_match = re.search(
-            r'-\s*\*\*Duration:\*\*\s*([^\n]+)|\*\*Duration:\*\*\s*(.+)',
-            body,
-            re.I,
-        )
+        if not fields.get('intakeInfo'):
+            plain_start = re.search(r'(?m)^Start dates?:\s*(.+)\s*$', body, re.I)
+            if plain_start:
+                fields['intakeInfo'] = normalize_intake_text(plain_start.group(1).strip())
+        duration_match = re.search('\\*\\*Duration:\\*\\*\\s*(.+)', body, re.I)
         if duration_match and not fields.get('courseDuration'):
-            fields['courseDuration'] = (
-                duration_match.group(1) or duration_match.group(2) or ''
-            ).strip()
+            fields['courseDuration'] = duration_match.group(1).strip()
+        if not fields.get('courseDuration'):
+            plain_duration = re.search(r'(?m)^Duration:\s*(.+)\s*$', body, re.I)
+            if plain_duration:
+                fields['courseDuration'] = plain_duration.group(1).strip()
         if not fields.get('courseDuration'):
             research_duration = Stage1MarkdownParser.extract_research_course_duration(body)
             if research_duration:
@@ -1160,58 +1149,10 @@ class Stage1MarkdownParser:
             if research_fee:
                 fields['tuitionFee'] = research_fee
                 fields['currency'] = 'GBP'
-        if not fields.get('tuitionFee'):
-            fees_heading = re.search(
-                r'## Fees(?:\s*&\s*Funding)?\s*\n(.*?)(?=\n## |\Z)',
-                body,
-                re.S | re.I,
-            )
-            if fees_heading:
-                section = fees_heading.group(1)
-                hull_fee = re.search(
-                    r'For International students,?\s+the standard course fee is\s+£\s*([\d,]+)',
-                    section,
-                    re.I,
-                )
-                if hull_fee:
-                    fields['tuitionFee'] = hull_fee.group(1).replace(',', '').strip()
-                    fields['currency'] = 'GBP'
-                else:
-                    prose_fee = re.search(
-                        r'International[^£\n]{0,160}£\s*([\d,]+)',
-                        section,
-                        re.I,
-                    )
-                    if prose_fee:
-                        fields['tuitionFee'] = prose_fee.group(1).replace(',', '').strip()
-                        fields['currency'] = 'GBP'
-                if not fields.get('tuitionFee'):
-                    hull_fee = Stage1MarkdownParser.extract_hull_tuition_fee(
-                        section,
-                        study_level=study_level,
-                        course_option=course_option,
-                    )
-                    if hull_fee:
-                        fields['tuitionFee'] = hull_fee
-                        fields['currency'] = 'GBP'
-                if not fields.get('tuitionFee'):
-                    pgr_fee = re.search(
-                        r"(?:Our\s+)?standard course fee is\s+£\s*([\d,]+)\s*a year for full-time",
-                        section,
-                        re.I,
-                    )
-                    if pgr_fee:
-                        fields['tuitionFee'] = pgr_fee.group(1).replace(",", "").strip()
-                        fields['currency'] = 'GBP'
-                if not fields.get('tuitionFee'):
-                    overall_fee = re.search(
-                        r"The overall fee for this course is £\s*([\d,]+)",
-                        section,
-                        re.I,
-                    )
-                    if overall_fee:
-                        fields['tuitionFee'] = overall_fee.group(1).replace(",", "").strip()
-                        fields['currency'] = 'GBP'
+        herts_fees = Stage1MarkdownParser.extract_herts_international_full_time_fees(body)
+        if herts_fees:
+            fields['tuitionFee'] = ','.join(herts_fees)
+            fields['currency'] = 'GBP'
         intl_section = extract_international_fees_section(body)
         if intl_section:
             if not fields.get('tuitionFee'):
@@ -1312,6 +1253,12 @@ class Stage1MarkdownParser:
         amount = str(amount or '').strip()
         if not amount or not body:
             return False
+        if ',' in amount:
+            return all(
+                Stage1MarkdownParser.fee_amount_in_markdown(part.strip(), body)
+                for part in amount.split(',')
+                if part.strip()
+            )
         if amount in body:
             return True
         if amount.isdigit():
@@ -1842,7 +1789,6 @@ class Stage1Enricher:
     course_body: str,
     course_name: str,
     course_url: str,
-    study_level: str = "",
     warnings: list[str] | None = None,
 ) -> dict:
         """Apply parser-owned fields, then drop ungrounded LLM scalars."""
@@ -1851,10 +1797,7 @@ class Stage1Enricher:
             parsed['courseName'] = course_name
         if not str(parsed.get('courseUrl', '') or '').strip():
             parsed['courseUrl'] = course_url
-        hints = Stage1MarkdownParser.extract_stage1_fields_from_md(
-            course_body,
-            study_level=study_level,
-        )
+        hints = Stage1MarkdownParser.extract_stage1_fields_from_md(course_body)
         apply_parser_owned_stage1_fields(parsed, hints, course_body=course_body)
         degree = hints.get('degreeName') or ExtractionPathConfig.infer_degree_name_from_md(course_body)
         if degree and not str(parsed.get('degreeName', '') or '').strip():
@@ -1882,11 +1825,20 @@ class Stage1Enricher:
     tuition_fee: str,
 ) -> list[dict[str, object]]:
         """Replace LLM placeholder fee lines with the parsed international tuition fee."""
-        try:
-            fee_display = f"£{int(str(tuition_fee).replace(',', '')):,}"
-        except ValueError:
-            fee_display = f'£{tuition_fee}'
-        fee_line = f'International tuition fee: {fee_display}'
+        displays: list[str] = []
+        for part in str(tuition_fee).split(','):
+            token = part.strip().replace(',', '')
+            if not token:
+                continue
+            try:
+                displays.append(f"£{int(token):,}")
+            except ValueError:
+                displays.append(f"£{token}")
+        fee_line = (
+            f"International tuition fee: {', '.join(displays)}"
+            if displays
+            else f"International tuition fee: {tuition_fee}"
+        )
         meta = Stage2Enricher.normalize_metadata_array(fees_meta)
         patched = False
         for block in meta:
@@ -2894,10 +2846,7 @@ class CourseExtractor:
             or ExtractionPathConfig.infer_degree_name(course_name)
         )
         stage1_json_text = ''
-        parser_hints = Stage1MarkdownParser.extract_stage1_fields_from_md(
-            course_body,
-            study_level=study_level,
-        )
+        parser_hints = Stage1MarkdownParser.extract_stage1_fields_from_md(course_body)
         ExtractionPathConfig.save_audit(audit_dir, 'parser_hints.json', json.dumps(Stage1Enricher.parser_hints_payload(parser_hints, course_body), indent=2, ensure_ascii=False))
         stage1_path = audit_dir / 'stage1_parsed.json'
         stage1_response_path = audit_dir / 'stage1_response.json'
@@ -2915,14 +2864,7 @@ class CourseExtractor:
             stage1_content = ExtractionPathConfig.extract_response_content(stage1_raw)
             ExtractionPathConfig.save_audit(audit_dir, 'stage1_response.json', json.dumps(stage1_raw, indent=2))
         grounding_warnings: list[str] = []
-        stage1_json = Stage1Enricher.enrich_stage1_from_markdown(
-            stage1_json,
-            course_body=course_body,
-            course_name=course_name,
-            course_url=course_url,
-            study_level=study_level,
-            warnings=grounding_warnings,
-        )
+        stage1_json = Stage1Enricher.enrich_stage1_from_markdown(stage1_json, course_body=course_body, course_name=course_name, course_url=course_url, warnings=grounding_warnings)
         if not degree_name and str(stage1_json.get('degreeName', '') or '').strip():
             degree_name = str(stage1_json['degreeName']).strip()
         ExtractionPathConfig.save_audit(audit_dir, 'extraction_warnings.json', json.dumps({'grounding': grounding_warnings}, indent=2, ensure_ascii=False))
