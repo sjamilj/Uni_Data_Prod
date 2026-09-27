@@ -39,10 +39,6 @@ function Get-UniRegistry {
         }
     }
 
-    if (-not $rows) {
-        throw "No university rows parsed from $registryPath"
-    }
-
     return $rows
 }
 
@@ -65,6 +61,9 @@ function Resolve-UniEntry {
     } | Select-Object -First 1
 
     if (-not $entry) {
+        if (-not $registry) {
+            throw "No universities in $registryPath. Add a registry row and scaffold a folder from _university_template/ first."
+        }
         $choices = ($registry | ForEach-Object { "$($_.Unit) $($_.Slug) $($_.Folder)" }) -join "`n  "
         throw "Unknown university '$Pick'. Use unit-NN, slug, folder name, or unit-NN/slug.`n  $choices"
     }

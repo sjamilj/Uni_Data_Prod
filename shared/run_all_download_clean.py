@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """Run download_and_clean_course_pages.py for every university, one by one.
 
-Aston, ARU, and Birmingham City University are skipped by default (already done). Re-run with --resume after a
-crash: universities listed in all_download_clean_progress.json are skipped, and
+Re-run with --resume after a crash: universities listed in all_download_clean_progress.json are skipped, and
 the current university resumes from scrape_progress.json downloaded_urls.
 
 Examples (from repo root):
   python shared/run_all_download_clean.py --resume
-  python shared/run_all_download_clean.py --resume --university "Keele University"
+  python shared/run_all_download_clean.py --resume --university "Example University"
   python shared/run_all_download_clean.py --clean-only --resume
   python shared/run_all_download_clean.py --fresh
 """
@@ -27,11 +26,7 @@ if str(_SHARED_DIR) not in sys.path:
     sys.path.insert(0, str(_SHARED_DIR))
 
 SKIP_FOLDERS = frozenset({"shared", "dashboard", "_university_template"})
-DEFAULT_EXCLUDE = (
-    "Aston University",
-    "Anglia Ruskin University - ARU",
-    "Birmingham City University",
-)
+DEFAULT_EXCLUDE: tuple[str, ...] = ()
 PROGRESS_NAME = "all_download_clean_progress.json"
 DOWNLOAD_SCRIPT = _SHARED_DIR / "download_and_clean_course_pages.py"
 
@@ -260,7 +255,7 @@ class BatchDownloadCleanCLI:
     def parse_args() -> argparse.Namespace:
         parser = argparse.ArgumentParser(
             description=(
-                "Download and clean course pages for every university except Aston, ARU, and Birmingham City University. "
+                "Download and clean course pages for every university folder under the repo root. "
                 "Use --resume after a crash."
             )
         )
@@ -311,7 +306,7 @@ class BatchDownloadCleanCLI:
         parser.add_argument(
             "--include-done",
             action="store_true",
-            help="Do not auto-skip Aston, ARU, and Birmingham City University.",
+            help="Include universities listed in DEFAULT_EXCLUDE (none by default).",
         )
         parser.add_argument(
             "--fail-fast",

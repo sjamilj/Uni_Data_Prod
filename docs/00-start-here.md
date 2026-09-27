@@ -2,6 +2,16 @@
 
 This `docs/` tree holds **operational runbooks** ([PIPELINE.md](PIPELINE.md), [dashboard.md](dashboard.md)) and a **guided course** for understanding `shared/` (pipeline) and `dashboard/` (desktop UI).
 
+## Greenfield repo (no universities yet)
+
+When [UNIVERSITIES_REGISTRY.md](../UNIVERSITIES_REGISTRY.md) has no data rows:
+
+1. Reset or pin `shared/` to `shared/v1.2.2` if needed (see [CONTRIBUTING.md](../CONTRIBUTING.md#shared-infrastructure-baseline)).
+2. Scaffold the first folder from `_university_template/` and add `unit-01 | slug | folder | not_started` to the registry.
+3. Use **new-uni-setup** in Cursor (or [PIPELINE.md](PIPELINE.md)) for listing scrape → clean → requirements → presetup.
+
+Examples in older docs may still say `Anglia Ruskin University - ARU` or `Birmingham City University`; substitute your folder name from the registry. Dashboard lists only folders that exist on disk; E2E one-course pins live in `dashboard/e2e_course_pins.json` (empty until you run `dashboard/precalc_e2e_pins.py`).
+
 | Need | Read |
 |------|------|
 | Run the pipeline step-by-step | [PIPELINE.md](PIPELINE.md) |
