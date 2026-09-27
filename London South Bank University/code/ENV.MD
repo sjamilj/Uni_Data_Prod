@@ -50,41 +50,35 @@ EXCLUDED_PATH_PREFIXES="
 /study/course-finder?
 "
 
-
-
-Course overview ::
-Entry requirements ::
-Fees and funding ::
+COURSE_EXCLUDE_COURSE_TYPES="
+*part-time*
 "
 
-script
-noscript
-"
-
-
-4 :: With placement
-4 :: With foundation year
-3 :: UK students
-"
-
-bangladesh-entry :: https://www.lsbu.ac.uk/study/undergraduate/entry-requirements
-english-requirements :: https://www.lsbu.ac.uk/study/undergraduate/entry-requirements
-scholarships :: https://www.lsbu.ac.uk/international/fees-and-funding/scholarships
-"
+# --- Cloudflare: attach to Edge via CDP (see code/CLOUDFLARE-CDP.md) ---
+COURSE_DOWNLOAD_USE_DEVICE_PROFILE=false
+COURSE_DOWNLOAD_BROWSER=edge
+COURSE_DOWNLOAD_CDP_URL=http://127.0.0.1:9222
+COURSE_DOWNLOAD_CLOUDFLARE_WARMUP=false
+COURSE_DOWNLOAD_CLOUDFLARE_AUTO_CLICK=false
+COURSE_DOWNLOAD_HEADLESS=false
+COURSE_DOWNLOAD_CLOUDFLARE_WAIT_SECONDS=300
 
 # --- Course page cleaning (download_and_clean_course_pages.py — course_detail/) ---
 
-COURSE_PAGE_TITLE_SELECTOR=h1.top-banner__main-title
+COURSE_PAGE_TITLE_SELECTOR=h1.hero-banner-courses__title, h1.top-banner__main-title
+
+COURSE_DEFAULT_INTAKE_YEAR=2026
+
+LSBU_ENTRY_COUNTRY_SLUG=bangladesh
 
 # generic (default) | utopian (ARU) | plugin | auto
 COURSE_CLEAN_ENGINE=generic
 
 # One CSS selector per line; optional heading with :: or |
 COURSE_CLEAN_BLOCKS="
-Overview :: #overview
-Entry requirements :: #entry-requirements
+Key facts :: #lsbu-course-key-facts
+Entry requirements :: #lsbu-course-entry-requirements, #entry-requirements, #entry-level-requirements
 Fees :: #fees
-Course content :: #course-content
 "
 
 # Noise removed inside each matched block before markdown conversion
@@ -99,6 +93,7 @@ COURSE_CLEAN_EXPAND_TABS=true
 
 # --- Course markdown cleanup (shared/course_markdown_cleanup.py) ---
 COURSE_MARKDOWN_REMOVE_SECTIONS="
+2 :: Non-standard entry
 2 :: Latest news
 2 :: Be part of our community
 2 :: Alumni services
@@ -107,6 +102,10 @@ COURSE_MARKDOWN_REMOVE_SECTIONS="
 4 :: With foundation year
 4 :: Important additional notes
 4 :: *part-time*
+3 :: Choose your country
+3 :: Missing English and Maths qualifications?
+3 :: Possible fee changes
+3 :: Scholarships
 3 :: UK students
 3 :: Contextual offers
 3 :: Living costs
@@ -115,8 +114,8 @@ COURSE_MARKDOWN_REMOVE_SECTIONS="
 "
 
 UNI_REQ_SOURCE_URLS="
-bangladesh-entry ::
-english-requirements ::
-scholarships ::
-deposit ::
+bangladesh-entry :: https://www.lsbu.ac.uk/international/your-country/asia-and-oceania/bangladesh
+english-requirements :: https://www.lsbu.ac.uk/study/undergraduate/entry-requirements
+scholarships :: https://www.lsbu.ac.uk/international/fees-and-funding/scholarships
+deposit :: https://www.lsbu.ac.uk/international/fees-and-funding
 "

@@ -19,6 +19,10 @@ DEFAULT_COURSE_TYPE_SELECTORS = (
 
 _COURSE_TYPE_MARKDOWN_RE = re.compile(r"^\*\*Course type:\*\*\s*(.+)\s*$", re.M | re.I)
 _DURATION_MARKDOWN_RE = re.compile(r"^\*\*Duration:\*\*\s*(.+)\s*$", re.M | re.I)
+_STUDY_MODE_MARKDOWN_RE = re.compile(
+    r"^-\s*\*\*Study mode:\*\*\s*(.+)\s*$",
+    re.M | re.I,
+)
 _FULL_TIME_MODE_RE = re.compile(r"\bfull[-\s]?time\b", re.I)
 _PART_TIME_MODE_RE = re.compile(r"\bpart[-\s]?time\b", re.I)
 
@@ -125,12 +129,67 @@ class CourseTypeExtractor:
             root.get_text("\n", strip=True),
         )
 
+    @staticmethod
+    def _normalize_lsbu_mode_cell(text: str) -> str:
+        cleaned = re.sub(r"^Mode\s*", "", text.strip(), flags=re.I)
+        return cleaned.strip()
+
+    @staticmethod
+    def study_modes_from_lsbu_html(html: str) -> list[str]:
+        """LSBU overview table: Mode | Duration | Start date | Application code."""
+        soup = BeautifulSoup(html, "html.parser")
+        modes: list[str] = []
+        for row in soup.select("table.overview_course_info_table tr.overview_course_info_table__values"):
+            cells = row.find_all("td")
+            if not cells:
+                continue
+            mode = CourseTypeExtractor._normalize_lsbu_mode_cell(
+                cells[0].get_text(" ", strip=True),
+            )
+            if mode:
+                modes.append(mode)
+        return modes
+
+    @staticmethod
+    def study_mode_from_lsbu_hero_icons(html: str) -> str | None:
+        soup = BeautifulSoup(html, "html.parser")
+        for component in soup.select(".hero-banner-courses__icon-components .icon-component"):
+            header = component.select_one(".icon-component__header")
+            description = component.select_one(".icon-component__description")
+            if header is None or description is None:
+                continue
+            if header.get_text(" ", strip=True).casefold() != "study":
+                continue
+            value = description.get_text(" ", strip=True)
+            return value or None
+        return None
+
+    @staticmethod
+    def study_modes_from_lsbu_markdown(markdown: str) -> list[str]:
+        modes: list[str] = []
+        for row in re.finditer(
+            r"^\|\s*Mode\s*\|\s*([^\n|]+)",
+            markdown,
+            re.I | re.M,
+        ):
+            modes.append(row.group(1).strip())
+        if modes:
+            return modes
+        for match in re.finditer(
+            r"(?:^|\n)Mode\s*\n+([^\n]+)",
+            markdown,
+            re.I,
+        ):
+            value = match.group(1).strip()
+            if value.casefold() not in {"duration", "start date", "application code"}:
+                modes.append(value)
+        return modes
+
 
 @dataclass
 class CourseTypeFilter:
     exclude_course_types: list[str]
     exclude_url_patterns: list[str]
-    exclude_html_contains: list[str]
     course_type_selectors: list[str]
 
     @classmethod
@@ -146,19 +205,12 @@ class CourseTypeFilter:
             exclude_url_patterns=CourseTypePatternMatcher.parse_env_list(
                 env.get("COURSE_EXCLUDE_URL_PATTERNS")
             ),
-            exclude_html_contains=CourseTypePatternMatcher.parse_env_list(
-                env.get("COURSE_EXCLUDE_HTML_CONTAINS")
-            ),
             course_type_selectors=selectors or list(DEFAULT_COURSE_TYPE_SELECTORS),
         )
 
     @property
     def enabled(self) -> bool:
-        return bool(
-            self.exclude_course_types
-            or self.exclude_url_patterns
-            or self.exclude_html_contains
-        )
+        return bool(self.exclude_course_types or self.exclude_url_patterns)
 
     def url_is_excluded(self, url: str | None) -> bool:
         if not url or not self.exclude_url_patterns:
@@ -185,20 +237,14 @@ class CourseTypeFilter:
             return False
         return study_mode_is_part_time_only(study_text)
 
-    def html_is_excluded(self, html: str) -> bool:
-        if not self.exclude_html_contains or not html:
+    def _exclude_lsbu_part_time_only_modes(self, modes: list[str]) -> bool:
+        if not self.excludes_part_time_study_modes() or not modes:
             return False
-        html_l = html.casefold()
-        for pattern in self.exclude_html_contains:
-            if CourseTypePatternMatcher.pattern_matches(html_l, pattern):
-                return True
-        return False
+        return all(study_mode_is_part_time_only(mode) for mode in modes)
 
     def should_exclude_html(self, html: str, *, url: str | None = None) -> bool:
         if not self.enabled:
             return False
-        if self.html_is_excluded(html):
-            return True
         if self.url_is_excluded(url):
             return True
         course_type = CourseTypeExtractor.from_html(
@@ -208,13 +254,18 @@ class CourseTypeFilter:
         if self.course_type_is_excluded(course_type):
             return True
         study = CourseTypeExtractor.study_options_from_html(html)
-        return self._exclude_part_time_only_study_mode(study)
+        if self._exclude_part_time_only_study_mode(study):
+            return True
+        hero_study = CourseTypeExtractor.study_mode_from_lsbu_hero_icons(html)
+        if self._exclude_part_time_only_study_mode(hero_study):
+            return True
+        return self._exclude_lsbu_part_time_only_modes(
+            CourseTypeExtractor.study_modes_from_lsbu_html(html),
+        )
 
     def should_exclude_markdown(self, markdown: str, *, url: str | None = None) -> bool:
         if not self.enabled:
             return False
-        if self.html_is_excluded(markdown):
-            return True
         if self.url_is_excluded(url):
             return True
         course_type = CourseTypeExtractor.from_markdown(markdown)
@@ -223,8 +274,17 @@ class CourseTypeFilter:
         duration_match = _DURATION_MARKDOWN_RE.search(markdown)
         if duration_match and self._exclude_part_time_only_study_mode(duration_match.group(1)):
             return True
+        study_mode_match = _STUDY_MODE_MARKDOWN_RE.search(markdown)
+        if study_mode_match and self._exclude_part_time_only_study_mode(
+            study_mode_match.group(1),
+        ):
+            return True
         study = CourseTypeExtractor.study_options_from_markdown(markdown)
-        return self._exclude_part_time_only_study_mode(study)
+        if self._exclude_part_time_only_study_mode(study):
+            return True
+        return self._exclude_lsbu_part_time_only_modes(
+            CourseTypeExtractor.study_modes_from_lsbu_markdown(markdown),
+        )
 
 
 # Backward-compatible aliases

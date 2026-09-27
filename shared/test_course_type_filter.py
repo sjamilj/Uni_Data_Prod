@@ -35,7 +35,6 @@ class CourseTypeFilterTests(unittest.TestCase):
         filt = CourseTypeFilter(
             exclude_course_types=["*part-time*"],
             exclude_url_patterns=[],
-            exclude_html_contains=[],
             course_type_selectors=[],
         )
         self.assertTrue(filt.should_exclude_markdown(_PART_TIME_KEY_INFO_MD))
@@ -45,7 +44,6 @@ class CourseTypeFilterTests(unittest.TestCase):
         filt = CourseTypeFilter(
             exclude_course_types=["*part-time*"],
             exclude_url_patterns=[],
-            exclude_html_contains=[],
             course_type_selectors=[],
         )
         self.assertTrue(filt.should_exclude_markdown(md))
@@ -54,21 +52,43 @@ class CourseTypeFilterTests(unittest.TestCase):
         filt = CourseTypeFilter(
             exclude_course_types=["*part-time*"],
             exclude_url_patterns=[],
-            exclude_html_contains=[],
             course_type_selectors=[],
         )
         self.assertFalse(filt.should_exclude_markdown(_FULL_TIME_STUDY_MODE_MD))
 
-    def test_html_contains_closed_international(self) -> None:
+    def test_lsbu_part_time_only_mode_table_excluded(self) -> None:
+        html = """
+        <table class="overview_course_info_table">
+          <tr class="overview_course_info_table__values">
+            <td><span>Mode</span><span>PgCert: Part-time</span></td>
+            <td><span>Duration</span><span>1 year</span></td>
+          </tr>
+        </table>
+        """
         filt = CourseTypeFilter(
-            exclude_course_types=[],
+            exclude_course_types=["*part-time*"],
             exclude_url_patterns=[],
-            exclude_html_contains=["*not currently open to international applicants*"],
             course_type_selectors=[],
         )
-        html = "<h3>Closed for International applicants:</h3><p>not currently open to international applicants</p>"
         self.assertTrue(filt.should_exclude_html(html))
-        self.assertFalse(filt.should_exclude_html("<p>Open to all students</p>"))
+
+    def test_lsbu_mixed_modes_not_excluded(self) -> None:
+        html = """
+        <table class="overview_course_info_table">
+          <tr class="overview_course_info_table__values">
+            <td><span>Mode</span><span>BSc: Full-time</span></td>
+          </tr>
+          <tr class="overview_course_info_table__values">
+            <td><span>Mode</span><span>BSc: Part-time</span></td>
+          </tr>
+        </table>
+        """
+        filt = CourseTypeFilter(
+            exclude_course_types=["*part-time*"],
+            exclude_url_patterns=[],
+            course_type_selectors=[],
+        )
+        self.assertFalse(filt.should_exclude_html(html))
 
 
 if __name__ == "__main__":

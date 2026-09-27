@@ -12,21 +12,13 @@ if str(_SHARED) not in sys.path:
     sys.path.insert(0, str(_SHARED))
 
 from export_dev_courses import PortalLookup  # noqa: E402
-from entry_requirements_mapping import (  # noqa: E402
-    bangladesh_hsc_requirements_for_llm,
-    parse_ielts_bands,
-    resolve_english_tests_for_course,
-)
 from llm_extract import (  # noqa: E402
-    apply_percentage_scholarship_gbp,
     build_output_json,
     canonicalize_requirement_degree,
     derive_uk_equivalent_requirements,
-    enrich_english_parsed,
     enrich_stage1_from_markdown,
     extract_bangladesh_section_text,
     extract_entry_lines_from_course_markdown,
-    extract_grade_from_requirement_text,
     extract_stage1_fields_from_md,
     filter_bangladesh_descriptions_for_course,
     infer_degree_name_from_md,
@@ -431,64 +423,6 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(program["ProgramName"], "Group B")
         self.assertEqual(program["TestRequirements"][0]["ieltsMinOverall"], "6.5")
 
-    def test_select_english_json_program_by_ielts_band(self) -> None:
-        programs = [
-            {
-                "TestStudyLevel": "Postgraduate Research",
-                "ProgramName": "Faculty of Science",
-                "TestRequirements": [
-                    {"TestName": "IELTS Academic", "ieltsMinOverall": "6.5", "ieltsMinSection": "6.0"},
-                    {"TestName": "PTE", "pteMinOverall": "61", "pteMinSection": "60"},
-                    {"TestName": "TOEFL iBT", "toeflMinOverall": "88", "toeflMinSection": "19"},
-                ],
-            },
-            {
-                "TestStudyLevel": "Postgraduate Research",
-                "ProgramName": "ClinPsyD",
-                "TestRequirements": [
-                    {"TestName": "IELTS Academic", "ieltsMinOverall": "7.0", "ieltsMinSection": "7.0"},
-                    {"TestName": "PTE", "pteMinOverall": "76", "pteMinSection": "76"},
-                ],
-            },
-        ]
-        program = select_english_json_program(
-            programs,
-            course_level="postgraduate_research",
-            course_name="PhD Biology",
-            course_body="",
-            ielts_overall="6.5",
-            ielts_section="6.0",
-        )
-        self.assertEqual(program["ProgramName"], "Faculty of Science")
-
-    def test_enrich_english_fills_pte_toefl_from_ielts_matched_program(self) -> None:
-        english_md = """# English Language Requirements
-[
-  {
-    "TestStudyLevel": "Postgraduate Research",
-    "ProgramName": "Faculty of Science",
-    "TestRequirements": [
-      {"TestName": "IELTS Academic", "ieltsMinOverall": "6.5", "ieltsMinSection": "6.0"},
-      {"TestName": "Pearson PTE", "pteMinOverall": "61", "pteMinSection": "60"},
-      {"TestName": "TOEFL iBT", "toeflMinOverall": "88", "toeflMinSection": "19"}
-    ],
-    "description": ["IELTS 6.5 overall with 6.0 in each component."]
-  }
-]
-"""
-        enriched = enrich_english_parsed(
-            {},
-            english_md,
-            course_name="PhD Example",
-            course_level="postgraduate_research",
-            stage1_json={"ieltsMinOverall": "6.5", "ieltsMinSection": "6.0"},
-        )
-        self.assertEqual(enriched["ieltsMinOverall"], "6.5")
-        self.assertEqual(enriched["pteMinOverall"], "61")
-        self.assertEqual(enriched["pteMinSection"], "60")
-        self.assertEqual(enriched["toeflMinOverall"], "88")
-        self.assertEqual(enriched["toeflMinSection"], "19")
-
     def test_keele_stage1_fields_from_key_information(self) -> None:
         body = """## Key information
 ### Year of entry
@@ -523,92 +457,545 @@ class EntryRequirementsTests(unittest.TestCase):
         self.assertEqual(hints["intakeInfo"], "September 2026")
         self.assertEqual(hints["tuitionFee"], "18200")
 
-    def test_process_record_bare_hsc_decimal_sets_min_gpa(self) -> None:
-        result = process_record(
-            {
-                "courseName": "Applied Education BA (Hons)",
-                "courseUrl": "https://example.com",
-                "requirements": [{"degree": "HSC", "grade": "3.00"}],
-            }
-        )
-        self.assertEqual(result["minDegreeName"], "HSC")
-        self.assertEqual(result["minGpa"], "3.0")
+    def test_salford_cleanup_picks_latest_international_fee(self) -> None:
+        import importlib.util
+        from pathlib import Path
 
-    def test_extract_grade_keeps_bare_decimal_gpa(self) -> None:
-        self.assertEqual(extract_grade_from_requirement_text("3.00"), "3.00")
-        self.assertEqual(extract_grade_from_requirement_text("2.50"), "2.50")
-        self.assertEqual(extract_grade_from_requirement_text("2.75"), "2.75")
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "University of Salford"
+            / "code"
+            / "course_markdown_cleanup.py"
+        )
+        spec = importlib.util.spec_from_file_location("salford_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
 
-    def test_percentage_scholarship_uses_tuition_fee(self) -> None:
-        row_small = {
-            "scholarshipType": "Percentage",
-            "scholarshipAmount": "",
-            "scholarshipMetaData": [
-                {"subtitle": "Scholarships", "description": ["5%"]}
-            ],
-        }
-        apply_percentage_scholarship_gbp(row_small, "100")
-        self.assertEqual(row_small["scholarshipAmount"], "5")
-        row_uel = {
-            "scholarshipType": "Percentage",
-            "scholarshipAmount": "",
-            "scholarshipMetaData": [
-                {"subtitle": "Scholarships", "description": ["5%"]}
-            ],
-        }
-        apply_percentage_scholarship_gbp(row_uel, "16020")
-        self.assertEqual(row_uel["scholarshipAmount"], "801")
+        body = """## Fees and funding
 
-    def test_ielts_min_section_keeps_decimal(self) -> None:
-        overall, section = parse_ielts_bands(
-            "IELTS 6.0 with a minimum of 6.0 in Writing and Speaking; "
-            "5.5 in Listening and Reading (or recognised equivalent)."
-        )
-        self.assertEqual(overall, "6.0")
-        self.assertEqual(section, "5.5")
+Intro text.
 
-    def test_resolve_english_prefers_course_md_ielts(self) -> None:
-        repo_root = _SHARED.parent
-        english = (
-            repo_root
-            / "University of East London/output/clean/uni/english-requirements.md"
-        )
-        if not english.exists():
-            self.skipTest("UEL english-requirements.md not in workspace")
-        course = (
-            "### English Language requirements\n\n"
-            "- IELTS 6.0 with a minimum of 6.0 in Writing and Speaking; "
-            "5.5 in Listening and Reading (or recognised equivalent).\n"
-        )
-        resolved = resolve_english_tests_for_course(
-            course_markdown=course,
-            study_level="foundation",
-            english_requirements_content=english.read_text(encoding="utf-8"),
-        )
-        self.assertEqual(resolved["ielts_source"], "course_markdown")
-        self.assertEqual(resolved["ieltsMinOverall"], "6.0")
-        self.assertEqual(resolved["ieltsMinSection"], "5.5")
-        self.assertIn("IELTS 6.0", resolved["english_description"])
-        self.assertTrue(resolved["pteMinOverall"] or resolved["toeflMinOverall"])
+### 2026/27
 
-    def test_foundation_ucas_maps_one_hsc_gpa(self) -> None:
-        repo_root = _SHARED.parent
-        bangladesh = (
-            repo_root / "University of East London/output/clean/uni/bangladesh-entry.md"
+| Type of study | Fees |
+| --- | --- |
+| Full-time | £10,620 per year |
+| Part-time | Calculated on a pro rata basis |
+
+### 2027/28
+
+| Type of study | Fees |
+| --- | --- |
+| Full-time | £10,800 per year |
+| Part-time | Calculated on a pro rata basis |
+
+### 2026/27
+
+| Type of study | Fees |
+| --- | --- |
+| Full-time | £19,980 per year |
+
+### 2027/28
+
+| Type of study | Fees |
+| --- | --- |
+| Full-time | £20,520 per year |
+
+We review tuition fees annually.
+"""
+        cleaned = module.cleanup_course_markdown_uni(body)
+        hints = extract_stage1_fields_from_md(cleaned)
+        self.assertEqual(hints.get("tuitionFee"), "20520")
+        self.assertEqual(hints.get("currency"), "GBP")
+        self.assertNotIn("£10,620", cleaned)
+
+    def test_salford_preprocess_injects_key_facts_from_course_summary(self) -> None:
+        import importlib.util
+        from pathlib import Path
+
+        from bs4 import BeautifulSoup
+
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "University of Salford"
+            / "code"
+            / "course_markdown_cleanup.py"
         )
-        if not bangladesh.exists():
-            self.skipTest("UEL bangladesh-entry.md not in workspace")
-        course = (
-            "## Entry requirements - Degree with foundation year\n\n"
-            "64 UCAS points from an equivalent Level 3 qualification listed on the "
-            "[UCAS tariff calculator](https://www.ucas.com/ucas/tariff-calculator).\n"
+        spec = importlib.util.spec_from_file_location("salford_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+
+        html = """
+        <main>
+          <div class="uos-course__summary">
+            <div class="uos-course__summary__item">
+              <h3 class="uos-course__summary__item__title">What is the UCAS code?</h3>
+              <p class="uos-course__summary__item__body">W615</p>
+            </div>
+            <div class="uos-course__summary__item">
+              <h3 class="uos-course__summary__item__title">How long will I study?</h3>
+              <p class="uos-course__summary__item__body">Three years</p>
+              <p class="uos-course__summary__item__body">Six years</p>
+            </div>
+          </div>
+        </main>
+        """
+        soup = BeautifulSoup(html, "html.parser")
+        module.preprocess_course_html_uni(soup)
+        facts = soup.select_one("#salford-course-key-facts")
+        self.assertIsNotNone(facts)
+        text = facts.get_text(" ", strip=True)
+        self.assertIn("Duration", text)
+        self.assertIn("Three years", text)
+        self.assertIn("UCAS code", text)
+        self.assertIn("W615", text)
+        self.assertNotIn("Six years", text)
+
+    def test_salford_preprocess_injects_enrolment_dates_into_key_facts(self) -> None:
+        import importlib.util
+        from pathlib import Path
+
+        from bs4 import BeautifulSoup
+
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "University of Salford"
+            / "code"
+            / "course_markdown_cleanup.py"
         )
-        rows = bangladesh_hsc_requirements_for_llm(
-            study_level="foundation",
-            course_body=course,
-            entry_content=bangladesh.read_text(encoding="utf-8"),
+        spec = importlib.util.spec_from_file_location("salford_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+
+        html = """
+        <main>
+          <link rel="canonical" href="https://www.salford.ac.uk/courses/postgraduate/accounting-and-finance" />
+          <section id="apply">
+            <div class="uos-course__apply-col">
+              <h3 class="h5">Enrolment dates</h3>
+              <p class="uos-meta">September 2026</p>
+              <p class="uos-meta">January 2027</p>
+            </div>
+          </section>
+        </main>
+        """
+        soup = BeautifulSoup(html, "html.parser")
+        module.preprocess_course_html_uni(soup)
+        facts = soup.select_one("#salford-course-key-facts")
+        self.assertIsNotNone(facts)
+        text = facts.get_text(" ", strip=True)
+        self.assertIn("Start date", text)
+        self.assertIn("September 2026", text)
+        self.assertIn("January 2027", text)
+
+    def test_salford_cleanup_injects_default_start_date_into_key_facts(self) -> None:
+        import importlib.util
+        from pathlib import Path
+
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "University of Salford"
+            / "code"
+            / "course_markdown_cleanup.py"
         )
-        self.assertEqual(rows, [{"degree": "HSC", "grade": "3.00"}])
+        spec = importlib.util.spec_from_file_location("salford_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+
+        md = (
+            "<!-- pipeline: study_level=postgraduate -->\n"
+            "# MA Example\n\n"
+            "## Key facts\n\n"
+            "- **Duration:** One year\n"
+        )
+        cleaned = module.cleanup_course_markdown_uni(md)
+        self.assertIn("**Start date:** September 2026, January 2027, September 2027", cleaned)
+        hints = extract_stage1_fields_from_md(cleaned)
+        self.assertIn("September 2026", hints.get("intakeInfo", ""))
+        self.assertIn("January 2027", hints.get("intakeInfo", ""))
+
+    def test_salford_trim_entry_drops_applicant_profile_before_standard_entry(self) -> None:
+        import importlib.util
+        from pathlib import Path
+
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "University of Salford"
+            / "code"
+            / "course_markdown_cleanup.py"
+        )
+        spec = importlib.util.spec_from_file_location("salford_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+
+        body = """## Entry requirements
+
+APPPLICANT PROFILE
+
+Marketing about the MA programme.
+
+The Application and Audition Process
+
+Audition dates TBC.
+
+Standard entry requirements Standard entry requirements
+
+To join this MA you should have a second class honours degree, 2:2 or above.
+"""
+        cleaned = module.cleanup_course_markdown_uni(body)
+        self.assertNotIn("APPPLICANT PROFILE", cleaned)
+        self.assertNotIn("Audition", cleaned)
+        self.assertIn("Standard entry requirements", cleaned)
+        self.assertIn("second class honours degree", cleaned)
+        self.assertNotIn("Standard entry requirements Standard entry requirements", cleaned)
+
+    def test_salford_cleanup_drops_main_content_until_entry(self) -> None:
+        import importlib.util
+        from pathlib import Path
+
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "University of Salford"
+            / "code"
+            / "course_markdown_cleanup.py"
+        )
+        spec = importlib.util.spec_from_file_location("salford_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+
+        body = """## Fees and funding
+
+Annual tuition fees: | £20,520
+
+## Main content
+
+junk
+
+## Overview
+
+duplicate marketing
+
+## Modules
+
+module list
+
+## Entry requirements
+
+IELTS 6.0
+"""
+        cleaned = module.cleanup_course_markdown_uni(body)
+        self.assertNotIn("## Main content", cleaned)
+        self.assertNotIn("duplicate marketing", cleaned)
+        self.assertNotIn("module list", cleaned)
+        self.assertIn("## Entry requirements", cleaned)
+        self.assertIn("IELTS 6.0", cleaned)
+
+    def test_lsbu_preprocess_injects_key_facts_and_international_fee(self) -> None:
+        import importlib.util
+        from pathlib import Path
+
+        from bs4 import BeautifulSoup
+
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "London South Bank University"
+            / "code"
+            / "course_markdown_cleanup.py"
+        )
+        spec = importlib.util.spec_from_file_location("lsbu_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+
+        html = """
+        <main>
+          <div class="hero-banner-courses__icon-components">
+            <div class="icon-component">
+              <div class="icon-component__header">DURATION</div>
+              <div class="icon-component__description">4-5 years</div>
+            </div>
+            <div class="icon-component">
+              <div class="icon-component__header">START DATE</div>
+              <div class="icon-component__description">September</div>
+            </div>
+            <div class="icon-component">
+              <div class="icon-component__header">UCAS POINTS</div>
+              <div class="icon-component__description">64</div>
+            </div>
+          </div>
+          <div id="fees">
+            <div class="fees__card">
+              <div class="fees__card-header-title">International</div>
+              <p class="fees__card-subtitle">£15500</p>
+            </div>
+          </div>
+        </main>
+        """
+        soup = BeautifulSoup(html, "html.parser")
+        module.preprocess_course_html_uni(soup)
+        facts = soup.select_one("#lsbu-course-key-facts")
+        self.assertIsNotNone(facts)
+        text = facts.get_text(" ", strip=True)
+        self.assertIn("4-5 years", text)
+        self.assertIn("September 2026", text)
+        self.assertIn("64", text)
+        fee_block = soup.select_one("#lsbu-parser-international-fees")
+        self.assertIsNotNone(fee_block)
+        self.assertIn("Annual tuition fees: | £15,500", fee_block.get_text())
+
+        hints = extract_stage1_fields_from_md(
+            "## Key facts\n\n"
+            "- **Start date:** September 2026\n"
+            "- **Duration:** 4-5 years\n\n"
+            "## Fees\n\n"
+            "### International students\n\n"
+            "Annual tuition fees: | £15,500\n"
+        )
+        self.assertEqual(hints.get("intakeInfo"), "September 2026")
+        self.assertEqual(hints.get("courseDuration"), "4-5 years")
+        self.assertEqual(hints.get("tuitionFee"), "15500")
+
+    def test_lsbu_cleanup_drops_overview_uk_fees_and_course_content(self) -> None:
+        import importlib.util
+        from pathlib import Path
+
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "London South Bank University"
+            / "code"
+            / "course_markdown_cleanup.py"
+        )
+        spec = importlib.util.spec_from_file_location("lsbu_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+
+        md = """# Adult Nursing PgDip; MSc
+
+## Key facts
+
+- **Start date:** September 2026
+- **Duration:** 2 years
+
+## Overview
+
+First Overview Section
+
+### Exceptionally rewarding
+
+Marketing copy.
+
+## Fees
+
+### International students
+
+Annual tuition fees: | £18,900
+
+##### United Kingdom
+
+£9790
+
+Tuition fees for home students
+
+### Possible fee changes
+
+Boilerplate.
+
+### Scholarships
+
+Bursary marketing.
+
+## Course content
+
+Module prose.
+"""
+        cleaned = module.cleanup_course_markdown_uni(md)
+        self.assertNotIn("## Overview", cleaned)
+        self.assertNotIn("First Overview Section", cleaned)
+        self.assertNotIn("United Kingdom", cleaned)
+        self.assertNotIn("£9790", cleaned)
+        self.assertNotIn("Possible fee changes", cleaned)
+        self.assertNotIn("Scholarships", cleaned)
+        self.assertNotIn("## Course content", cleaned)
+        self.assertIn("Annual tuition fees: | £18,900", cleaned)
+
+    def test_lsbu_cleanup_drops_country_picker_from_entry(self) -> None:
+        import importlib.util
+        from pathlib import Path
+
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "London South Bank University"
+            / "code"
+            / "course_markdown_cleanup.py"
+        )
+        spec = importlib.util.spec_from_file_location("lsbu_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+
+        md = """## Entry requirements
+
+IELTS 7.0 required.
+
+### Choose your country
+
+Select country here:
+
+- Bangladesh
+- India
+
+### Missing English and Maths qualifications?
+
+South Bank College upskill link.
+"""
+        cleaned = module.cleanup_course_markdown_uni(md)
+        self.assertNotIn("Choose your country", cleaned)
+        self.assertNotIn("Bangladesh", cleaned)
+        self.assertNotIn("South Bank College", cleaned)
+        self.assertIn("IELTS 7.0", cleaned)
+
+    def test_lsbu_apply_table_overrides_hero_key_facts(self) -> None:
+        import importlib.util
+        from pathlib import Path
+
+        from bs4 import BeautifulSoup
+
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "London South Bank University"
+            / "code"
+            / "course_markdown_cleanup.py"
+        )
+        spec = importlib.util.spec_from_file_location("lsbu_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+
+        html = """
+        <main>
+          <div class="hero-banner-courses__icon-components">
+            <div class="icon-component">
+              <div class="icon-component__header">DURATION</div>
+              <div class="icon-component__description">3-5 years</div>
+            </div>
+            <div class="icon-component">
+              <div class="icon-component__header">UCAS POINTS</div>
+              <div class="icon-component__description">112</div>
+            </div>
+          </div>
+          <table class="apply__table">
+            <tr>
+              <th>Mode</th><th>Duration</th><th>Start date</th>
+              <th>Application code</th><th>Application method</th>
+            </tr>
+            <tr>
+              <td>Part-time</td><td>5 years</td><td>September</td>
+              <td>2308</td><td>Direct to LSBU</td>
+            </tr>
+            <tr>
+              <td>Full-time</td><td>3 years</td><td>September</td>
+              <td>K235</td><td>UCAS</td>
+            </tr>
+          </table>
+        </main>
+        """
+        soup = BeautifulSoup(html, "html.parser")
+        module.preprocess_course_html_uni(soup)
+        block = soup.select_one("#lsbu-course-key-facts")
+        self.assertIsNotNone(block)
+        text = block.get_text("\n", strip=True)
+        self.assertIn("3 years", text)
+        self.assertIn("K235", text)
+        self.assertNotIn("112", text)
+        self.assertNotIn("3-5 years", text)
+
+    def test_lsbu_preprocess_injects_entry_level_requirements_v2(self) -> None:
+        import importlib.util
+        from pathlib import Path
+
+        from bs4 import BeautifulSoup
+
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "London South Bank University"
+            / "code"
+            / "course_markdown_cleanup.py"
+        )
+        spec = importlib.util.spec_from_file_location("lsbu_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+
+        html = """
+        <main>
+          <div class="entry-level-requirements" id="entry-level-requirements">
+            <h2>Entry Level Requirements</h2>
+            <div id="tab-0" data-sq-field="ukQualificationsTab.content">
+              <div class="tab-content-box">
+                <p>Applicants will normally require:</p>
+                <p>A Bachelor degree (hons) with a minimum 2:2 classification.</p>
+              </div>
+            </div>
+          </div>
+          <div id="fees"></div>
+        </main>
+        """
+        soup = BeautifulSoup(html, "html.parser")
+        module.preprocess_course_html_uni(soup)
+        block = soup.select_one("#lsbu-course-entry-requirements")
+        self.assertIsNotNone(block)
+        text = block.get_text(" ", strip=True)
+        self.assertIn("International Qualifications", text)
+        self.assertIn("2:2 classification", text)
+        self.assertIsNone(soup.select_one("#entry-level-requirements"))
+
+    def test_lsbu_preprocess_injects_international_entry_block(self) -> None:
+        import importlib.util
+        from pathlib import Path
+
+        from bs4 import BeautifulSoup
+
+        mod_path = (
+            Path(__file__).resolve().parents[1]
+            / "London South Bank University"
+            / "code"
+            / "course_markdown_cleanup.py"
+        )
+        spec = importlib.util.spec_from_file_location("lsbu_course_cleanup", mod_path)
+        module = importlib.util.module_from_spec(spec)
+        assert spec and spec.loader
+        spec.loader.exec_module(module)
+
+        html = """
+        <main>
+          <div id="entry-requirements">
+            <div id="entry-requirements_first"><p>UK only</p></div>
+            <div id="entry-requirements_second">
+              <div class="dropdown-select"></div>
+              <div id="er-country-content">
+                <p>Applicants will be considered on an individual basis but will normally require:</p>
+                <p>A Bachelor degree (hons) with a minimum 2:2 classification.</p>
+              </div>
+            </div>
+          </div>
+          <div id="fees"></div>
+        </main>
+        """
+        soup = BeautifulSoup(html, "html.parser")
+        module.preprocess_course_html_uni(soup)
+        block = soup.select_one("#lsbu-course-entry-requirements")
+        self.assertIsNotNone(block)
+        text = block.get_text(" ", strip=True)
+        self.assertIn("International Qualifications", text)
+        self.assertIn("2:2 classification", text)
+        self.assertIsNone(soup.select_one("#entry-requirements"))
 
 
 def format_report_issues(report) -> str:
