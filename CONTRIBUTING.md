@@ -58,9 +58,9 @@ Squash or reword `wip(...)` commits to `feat(unit-NN/slug): ...` before merging 
 
 | What | Value |
 |------|-------|
-| Tag | `shared/v1.2.1` (current reset baseline) |
-| Commit | `5c43b8f` |
-| Message | degreeName by studyLevel; validate `infer_degree_name` fix; comma-separated `tuitionFee`; registry unit-33/herts |
+| Tag | `shared/v1.2.2` (current reset baseline) |
+| Commit | `c504489` |
+| Message | `audit_clean_course_markdown.py`; `test_entry_requirements.py`; course-type filter + scrape/llm tweaks |
 
 ### Start work on a new university
 
@@ -81,9 +81,9 @@ git switch -c dev/kingston
 Use this when finishing one uni and starting another, or when local `shared/` edits should not carry over:
 
 ```powershell
-git restore --source shared/v1.2.1 -- shared
+git restore --source shared/v1.2.2 -- shared
 # or detached pin:
-git checkout shared/v1.2.1 -- shared
+git checkout shared/v1.2.2 -- shared
 ```
 
 Stay on your branch; only `shared/` is replaced. University folders are unchanged.
@@ -99,9 +99,9 @@ Stay on your branch; only `shared/` is replaced. University folders are unchange
 After a general shared commit, bump the tag:
 
 ```powershell
-# After chore(shared): … commit on main — bump patch from current baseline (e.g. v1.2.1 → v1.2.2)
-git tag -a shared/v1.2.2 -m "shared: describe what changed"
-git push origin shared/v1.2.2
+# After chore(shared): … commit on main — bump patch from current baseline (e.g. v1.2.2 → v1.2.3)
+git tag -a shared/v1.2.3 -m "shared: describe what changed"
+git push origin shared/v1.2.3
 ```
 
 List baselines: `git tag -l "shared/*"`
@@ -196,22 +196,23 @@ University tags (`uni/…`) mark a **university export** snapshot. **Shared** ch
 | `shared/v1.0.0` | `d5f7088` | Pipeline baseline |
 | `shared/v1.1.0` | `14cc330` | Audit CSV export, degreeName LLM inference, `studyLevel` column, foundation/UG as separate export rows |
 | `shared/v1.2.0` | `f99ad58` | Cloudflare/CDP + device-profile launch (`browser_device_profile`), `BrowserSession` reads `.env`; UG `higherDegreeName`/`higherGpa` for HSC+Diploma+bachelor paths; `package_uni_backup.py`; course-type filter tests |
-| `shared/v1.2.1` | `5c43b8f` | **Current reset baseline** — `degree_name_dictionary.py` (v2, by study level); `validate_dev_courses` `degreeName` fill + `infer_degree_name` fix; comma-separated international `tuitionFee` in normalize/export |
+| `shared/v1.2.1` | `5c43b8f` | `degree_name_dictionary.py` (v2, by study level); `validate_dev_courses` `degreeName` fill + `infer_degree_name` fix; comma-separated international `tuitionFee` in normalize/export |
+| `shared/v1.2.2` | `c504489` | **Current reset baseline** — `audit_clean_course_markdown.py`; `test_entry_requirements.py`; course-type filter + scrape/llm tweaks |
 
 ```powershell
 # List shared tags (peel annotated tags to commits)
 git tag -l "shared/*"
-git rev-parse --short "shared/v1.2.1^{commit}"
+git rev-parse --short "shared/v1.2.2^{commit}"
 
 # Tag current HEAD after shared work is committed (minor = new modules/behaviour, patch = fixes)
-git tag -a shared/v1.2.2 -m "shared: describe what changed"
-git push origin shared/v1.2.2
+git tag -a shared/v1.2.3 -m "shared: describe what changed"
+git push origin shared/v1.2.3
 
 # Pin shared/ to the current baseline
-git restore --source shared/v1.2.1 -- shared/
+git restore --source shared/v1.2.2 -- shared/
 ```
 
-Bump **minor** (`v1.2.1` → `v1.3.0`) for large new subsystems; bump **patch** (`v1.2.1` → `v1.2.2`) for export/validation helpers and dictionary updates. Tag **after** tests pass and at least one university has been re-exported with the new shared code. Then update this table, [UNIVERSITIES_REGISTRY.md](UNIVERSITIES_REGISTRY.md), [scripts/README.md](scripts/README.md), and `.cursor/skills` reset baseline.
+Bump **minor** (`v1.2.2` → `v1.3.0`) for large new subsystems; bump **patch** (`v1.2.2` → `v1.2.3`) for export/validation helpers and dictionary updates. Tag **after** tests pass and at least one university has been re-exported with the new shared code. Then update this table, [UNIVERSITIES_REGISTRY.md](UNIVERSITIES_REGISTRY.md), [scripts/README.md](scripts/README.md), and `.cursor/skills` reset baseline.
 
 ### Infra tags (not `shared/`)
 
