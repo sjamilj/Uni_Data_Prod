@@ -1,0 +1,152 @@
+{
+  "description": "Pinned courses for dashboard step (5) Run Full Pipeline with One Course. Regenerate: python dashboard/precalc_e2e_pins.py",
+  "pins": {
+    "Birmingham City University": {
+      "slug": "bcu",
+      "study_level": "undergraduate",
+      "course_url": "https://www.bcu.ac.uk/courses/accounting-and-finance-bsc-hons-2026-27",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "Teesside University": {
+      "slug": "teesside",
+      "study_level": "undergraduate",
+      "course_url": "https://www.tees.ac.uk/undergraduate_courses/accounting_&_economics/ba_(hons)_business_and_accounting.cfm",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "Brunel University London": {
+      "slug": "brunel",
+      "study_level": "undergraduate",
+      "course_url": "https://www.brunel.ac.uk/study/courses/accountancy-bsc",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "Buckinghamshire New University": {
+      "slug": "bucks",
+      "study_level": "undergraduate",
+      "course_url": "https://www.bucks.ac.uk/courses/undergraduate/bsc-hons-social-work",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "Canterbury Christ Church University": {
+      "slug": "cccu",
+      "study_level": "undergraduate",
+      "course_url": "https://www.canterbury.ac.uk/study-here/courses/accounting-and-finance",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "Cardiff Metropolitan University": {
+      "slug": "cardiffmet",
+      "study_level": "undergraduate",
+      "course_url": "https://www.cardiffmet.ac.uk/courses/undergraduate/ba-accounting",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "Edinburgh Napier University": {
+      "slug": "napier",
+      "study_level": "undergraduate",
+      "course_url": "https://www.napier.ac.uk/courses/ba-accounting-west-lothian-college-ug-full-time",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "Keele University": {
+      "slug": "keele",
+      "study_level": "undergraduate",
+      "course_url": "https://www.keele.ac.uk/study/undergraduate/undergraduatecourses/accountingandfinance",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "Kingston University": {
+      "slug": "kingston",
+      "study_level": "undergraduate",
+      "course_url": "https://www.kingston.ac.uk/study/degree-apprenticeship/adult-nursing-bsc-hons-integrated-degree-apprenticeship",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "Manchester Metropolitan University": {
+      "slug": "mmu",
+      "study_level": "undergraduate",
+      "course_url": "https://www.mmu.ac.uk/study/undergraduate/course/ba-acting",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "University of Bedfordshire": {
+      "slug": "beds",
+      "study_level": "undergraduate",
+      "course_url": "https://www.beds.ac.uk/courses/accounting",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "University of Derby": {
+      "slug": "derby",
+      "study_level": "undergraduate",
+      "course_url": "https://www.derby.ac.uk/undergraduate/access-courses/access-to-higher-education-diploma-business-and-law",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "University of East Anglia": {
+      "slug": "uea",
+      "study_level": "undergraduate",
+      "course_url": "https://www.uea.ac.uk/course/undergraduate/ba-american-history",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "University of East London": {
+      "slug": "uel",
+      "study_level": "undergraduate",
+      "course_url": "https://www.uel.ac.uk/undergraduate/courses/ba-hons-acting-stage-screen",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "University of Greenwich": {
+      "slug": "greenwich",
+      "study_level": "undergraduate",
+      "course_url": "https://www.gre.ac.uk/undergraduate-courses/ach/animation-ba-hons",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "University of Hull": {
+      "slug": "hull",
+      "study_level": "undergraduate",
+      "course_url": "https://www.hull.ac.uk/study/undergraduate/courses/accounting-and-financial-management-bsc-hons",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "University of Law": {
+      "slug": "law",
+      "study_level": "undergraduate",
+      "course_url": "https://www.law.ac.uk/study/undergraduate/business/bsc-hons-accounting-with-finance",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "University of Salford": {
+      "slug": "salford",
+      "study_level": "undergraduate",
+      "course_url": "https://www.salford.ac.uk/courses/undergraduate/animation",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "University of South Wales": {
+      "slug": "usw",
+      "study_level": "undergraduate",
+      "course_url": "https://www.southwales.ac.uk/courses/-bsc-hons-nursing-learning-disabilities",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "University of Suffolk": {
+      "slug": "suffolk",
+      "study_level": "undergraduate",
+      "course_url": "https://www.uos.ac.uk/study/ai-and-automation-practitioner-ha",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    },
+    "University of West London": {
+      "slug": "uwl",
+      "study_level": "undergraduate",
+      "course_url": "https://www.uwl.ac.uk/course/undergraduate/beng-civil-and-environmental-engineering",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-09-28"
+    }
+  }
+}

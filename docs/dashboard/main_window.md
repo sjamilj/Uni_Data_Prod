@@ -34,7 +34,7 @@ main.py → MainWindow(repo_root, config)
 - Summary label (uni counts)
 - Filter combo (URLs not started / done / incomplete)
 - `QTableWidget` — 9 columns per [dashboard.md](../dashboard.md)
-- Phase buttons 1–5 + Run remaining + Open folder + Cancel
+- Pipeline steps (1)–(6): (1) Scrape URLs, (2) Presetup Scrape, (3) Presetup download_and_clean, (4) Presetup LLM, (5) Run Full Pipeline with One Course, (6) Execute. General row: (1), (6), Open folder, Cancel; presetup row: (2)–(5).
 - Study level checkboxes + Full/Number radio
 - `TerminalWidget`
 

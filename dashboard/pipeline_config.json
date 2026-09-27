@@ -1,47 +1,95 @@
 {
+
   "ollama_host": "http://localhost:11434",
+
+  "activate_on_select": true,
+
+  "shared_baseline_tag": "",
+
+  "back_to_main_source": "HEAD",
+
+  "back_to_main_fetch_origin": false,
+
+  "back_to_main_restore_all_unis": true,
+
+  "e2e_course_pins_file": "e2e_course_pins.json",
+
   "phases": [
+
     {
+
       "id": "scrape_presetup",
-      "label": "1 Presetup Scrape (5/level)",
+
+      "label": "(2) Presetup Scrape",
+
       "python": "shared/scrape_course_urls.py",
+
       "args": ["--presetup"],
+
       "fresh_args": ["--fresh", "--presetup"]
+
     },
+
     {
+
       "id": "scrape_urls",
-      "label": "1 Scrape URLs (full)",
+
+      "label": "(1) Scrape URLs",
+
       "python": "shared/scrape_course_urls.py",
+
       "resume_args": [],
+
       "fresh_args": ["--fresh"],
+
       "append_args": ["--append-urls"]
+
     },
+
     {
-      "id": "uni_clean",
-      "label": "2 Clean Uni Pages",
-      "python": "shared/download_and_clean_course_pages.py",
-      "args": ["--clean-uni-only"]
-    },
-    {
+
       "id": "presetup",
-      "label": "3 Presetup (scrape URLs)",
+
+      "label": "(3) Presetup download_and_clean",
+
       "python": "shared/run_course_pipeline.py",
+
       "args": ["--presetup"],
+
       "fresh_args": ["--fresh"]
+
     },
+
     {
+
       "id": "presetup_llm",
-      "label": "4 Presetup LLM",
+
+      "label": "(4) Presetup LLM",
+
       "python": "shared/run_course_pipeline.py",
+
       "args": ["--presetup-llm"],
+
       "resume_args": ["--resume"]
+
     },
+
     {
+
       "id": "execute",
-      "label": "5 Execute",
+
+      "label": "(6) Execute",
+
       "python": "shared/run_course_pipeline.py",
+
       "args": ["--execute"],
+
       "resume_args": ["--resume"]
+
     }
+
   ]
+
 }
+
+
