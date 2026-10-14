@@ -1,6 +1,6 @@
 # Universities registry
 
-Fixed unit numbers (alphabetical by folder). Use these in git scopes: `feat(unit-01/slug): ...`
+Fixed unit numbers (alphabetical by folder). Use these in Git scopes: `feat(unit-01/slug): ...`
 
 **Pick a university in scripts** by unit, slug, or folder name:
 
@@ -24,24 +24,24 @@ git tag -l "uni/<slug>/foundation/*"
 ## Version and tag rules
 
 | What | Where | Example |
-|------|-------|---------|
+|---|---|---|
 | Commit message | **No version** | `feat(unit-01/example): complete foundation pipeline` |
 | Git tag | **Version here** | `uni/example/foundation/v1.0.0` |
 | Fix after tag | New commit + `-BumpPatch` | `v1.0.0` → `v1.0.1` |
 
 | Tag pattern | Commit | Meaning |
-|-------------|--------|---------|
+|---|---|---|
 | `shared/v1.0.0` | `d5f7088` | Original shared pipeline baseline |
 | `shared/v1.1.0` | `14cc330` | Audit CSV, degreeName LLM inference, studyLevel export rows |
 | `shared/v1.2.0` | `f99ad58` | CDP/device-profile download, UG higherDegree mapping, `package_uni_backup.py` |
 | `shared/v1.2.1` | `5c43b8f` | degreeName by study level; validate `degreeName` fill; comma `tuitionFee` |
 | `shared/v1.2.2` | `c504489` | **Current reset baseline** — `audit_clean_course_markdown.py`; `test_entry_requirements.py`; course-type filter + scrape/llm tweaks; `git restore --source shared/v1.2.2 -- shared/` |
-| `infra/onboarding-skills/v1.0.0` | Cursor agent skills under `.cursor/skills/` + README operator guide |
-| `infra/onboarding-skills/v1.0.2` | Skill YAML trigger descriptions, `docs/PIPELINE.md` links, shared baseline in skills |
-| `uni/{slug}/v1.0.0` | Full university complete (all study levels) |
-| `unit-NN` | Same snapshot as full `uni/{slug}/v1.0.0` |
-| `uni/{slug}/foundation/v1.0.0` | Foundation slice only |
-| `uni/{slug}/foundation-undergraduate/v1.0.1` | Combined levels; patch bump after a fix |
+| `infra/onboarding-skills/v1.0.0` | — | Cursor agent skills under `.cursor/skills/` + README operator guide |
+| `infra/onboarding-skills/v1.0.2` | — | Skill YAML trigger descriptions, `docs/PIPELINE.md` links, shared baseline in skills |
+| `uni/{slug}/v1.0.0` | — | Full university complete (all study levels) |
+| `unit-NN` | — | Same snapshot as full `uni/{slug}/v1.0.0` |
+| `uni/{slug}/foundation/v1.0.0` | — | Foundation slice only |
+| `uni/{slug}/foundation-undergraduate/v1.0.1` | — | Combined levels; patch bump after a fix |
 
 Study levels: `foundation`, `undergraduate`, `postgraduate`, `postgraduate_research` (aliases: `ug`, `pg`, `pgr`). Commit/tag one level at a time or combine in one step when the university is ready.
 
@@ -49,10 +49,18 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the full commit + tag workflow.
 
 ## Registry
 
-| unit | slug | folder | status | tag | commit |
-|------|------|--------|--------|-----|--------|
+| unit | slug | folder | status | tag | commit | sheet |
+|---|---|---|---|---|---|---|
+| unit-01 | uoa | The University of Auckland | not_started | | | uoa |
+| unit-02 | uo | University of Otago | not_started | | | uo |
+| unit-03 | mu | Massey University | not_started | | | mu |
+| unit-04 | vuw | Victoria University of Wellington | not_started | | | vuw |
+| unit-05 | uc | University of Canterbury | not_started | | | uc |
+| unit-06 | wu | University of Waikato | not_started | | | wu |
+| unit-07 | lu | Lincoln University | not_started | | | lu |
+| unit-08 | aut | Auckland University of Technology | not_started | | | aut |
 
-Add the first row when you scaffold a university from `_university_template/` (alphabetical order by folder name). Example: `unit-01 | example-uni | Example University | not_started | | |`.
+Add a row when you scaffold a university from `_university_template/`. Preserve the fixed unit mapping shown above; do not renumber existing universities when adding more entries.
 
 **Status:** `complete` means `output/dev_courses_*.csv` exists for the intended study levels. `in_progress` means the university folder has `code/` but the full pipeline export is not done. `not_started` means the folder exists but pipeline work has not begun.
 
