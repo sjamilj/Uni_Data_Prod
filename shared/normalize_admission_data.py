@@ -75,21 +75,20 @@ UNIVERSITY_4_SCALE = {
     55: 2.75, 50: 2.50, 45: 2.25, 40: 2.00
 }
 
-# UK Degree Classification -> 4.0 scale
+# NZ Degree Classification -> 4.0 scale
 UK_DEGREE_CLASS_SCALE = [
-    (70, 4.00),  # First Class
-    (60, 3.00),  # Upper Second (2:1)
-    (50, 2.50),  # Lower Second (2:2)
-    (40, 2.00),  # Third Class
+    (90, 9.00),  # A+
+    (85, 8.00),  # A
+    (80, 7.00),  # A-
+    (75, 6.00),  # B+
+    (70, 5.00),  # B
+    (65, 4.00),  # B-
+    (60, 3.00),  # C+
+    (55, 2.00),  # C
+    (50, 1.00),  # C-
+    (0, 0.00),   # D range / Fail
 ]
 
-# UK GCSE grade -> 5.0-ish scale (kept separate; rarely used for GPA field
-# but included for completeness per original spec)
-UK_GCSE_SCALE = {
-    9: 5.00, 8: 5.00, 7: 5.00,
-    6: 4.00, 5: 4.00,
-    4: 2.00,
-}
 
 # Official UCAS Tariff points per single A-Level subject
 UCAS_TARIFF = {"A*": 56, "A": 48, "B": 40, "C": 32, "D": 24, "E": 16}

@@ -735,6 +735,99 @@ class ManifestWriter:
 # Cleaners
 # ============================================================================
 
+PARTTIME_ONLINE_CSV = "partime_online_course.csv"
+
+
+class PartTimeOnlineDetector:
+    """Detect part-time-only or online-only courses from the saved HTML.
+
+    Reads the quick-facts list (<dl class="quick-facts__list">):
+      * Duration: part-time only when every entry is part-time and none is
+        full-time (e.g. only "Part-time: Varies").
+      * Available locations: online only when every location contains
+        "Online" (e.g. "University of Auckland Online").
+    """
+
+    _FULL = re.compile(r"full[\s-]*time", re.I)
+    _PART = re.compile(r"part[\s-]*time", re.I)
+
+    @staticmethod
+    def _quick_facts(html: str) -> dict[str, list[str]]:
+        soup = BeautifulSoup(html, "html.parser")
+        facts: dict[str, list[str]] = {}
+        for dl in soup.select("dl.quick-facts__list"):
+            dt = dl.find("dt")
+            if dt is None:
+                continue
+            label = " ".join(dt.get_text(" ", strip=True).split()).casefold()
+            values = [
+                " ".join(dd.get_text(" ", strip=True).split())
+                for dd in dl.find_all("dd")
+                if dd.get_text(strip=True)
+            ]
+            facts.setdefault(label, []).extend(values)
+        return facts
+
+    @classmethod
+    def detect(cls, html: str) -> tuple[str, str, str] | None:
+        """Return (reason, duration, locations) or None when the course stays."""
+        facts = cls._quick_facts(html)
+        durations = facts.get("duration", [])
+        locations = [
+            part.strip()
+            for value in facts.get("available locations", [])
+            for part in value.split(",")
+            if part.strip()
+        ]
+        reasons: list[str] = []
+        if (
+            durations
+            and any(cls._PART.search(d) for d in durations)
+            and not any(cls._FULL.search(d) for d in durations)
+        ):
+            reasons.append("part-time only")
+        if locations and all("online" in loc.casefold() for loc in locations):
+            reasons.append("online")
+        if not reasons:
+            return None
+        return "; ".join(reasons), " | ".join(durations), ", ".join(locations)
+
+
+class PartTimeOnlineCsv:
+    """partime_online_course.csv in the output dir. Existing rows are kept, so
+    partial re-runs never lose earlier entries; one row per URL."""
+
+    FIELDS = ("course_url", "reason", "duration", "locations")
+
+    def __init__(self, path: Path):
+        self.path = path
+        self.rows: dict[str, dict[str, str]] = {}
+        if path.exists():
+            with path.open(encoding="utf-8-sig", newline="") as handle:
+                for row in csv.DictReader(handle):
+                    url = (row.get("course_url") or "").strip()
+                    if url:
+                        self.rows[url] = {k: (row.get(k) or "") for k in self.FIELDS}
+
+    def add(self, url: str, reason: str, duration: str, locations: str) -> None:
+        self.rows[url] = {
+            "course_url": url,
+            "reason": reason,
+            "duration": duration,
+            "locations": locations,
+        }
+
+    def save(self) -> None:
+        if not self.rows:
+            return
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        with self.path.open("w", encoding="utf-8-sig", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=self.FIELDS)
+            writer.writeheader()
+            for url in sorted(self.rows):
+                writer.writerow(self.rows[url])
+
+
 class CoursePagesCleaner:
     """Convert course_pages/*.html → clean/{courses|pre_setup_course}/*.md using .env selectors."""
 
@@ -930,6 +1023,8 @@ class CoursePagesCleaner:
         )
 
         excluded_count = 0
+        part_online_csv = PartTimeOnlineCsv(self.output_dir / PARTTIME_ONLINE_CSV)
+        part_online_count = 0
 
         # NEW:
         # Track collisions instead of silently skipping them.
@@ -1010,6 +1105,33 @@ class CoursePagesCleaner:
                 url=source_url or course_url,
             ):
                 excluded_count += 1
+
+                self._delete_markdown_for_source(
+                    courses_out,
+                    html_rel=html_rel,
+                    source_url=source_url,
+                )
+
+                html_path.unlink(
+                    missing_ok=True
+                )
+
+                continue
+
+            # --------------------------------------------------------
+            # Part-time-only / online-only courses: drop and log the URL
+            # --------------------------------------------------------
+
+            part_online = PartTimeOnlineDetector.detect(raw_html)
+            if part_online:
+                reason, duration_text, locations_text = part_online
+                part_online_csv.add(
+                    source_url or course_url,
+                    reason,
+                    duration_text,
+                    locations_text,
+                )
+                part_online_count += 1
 
                 self._delete_markdown_for_source(
                     courses_out,
@@ -1226,6 +1348,14 @@ class CoursePagesCleaner:
             print(
                 f"Excluded {excluded_count} "
                 f"short-course/part-time pages"
+            )
+
+        if part_online_count:
+            part_online_csv.save()
+            print(
+                f"Excluded {part_online_count} "
+                f"part-time-only/online page(s) -> "
+                f"{part_online_csv.path.name}"
             )
 
         # NEW:

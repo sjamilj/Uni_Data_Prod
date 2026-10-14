@@ -161,9 +161,7 @@ When converting Bangladesh or UK percentages to GPA inside the `grade` field, us
 **5.0 scale with university-specific thresholds** (when a university states Bangladesh SSC/HSC on this scale):
 `80%→5.00, 75%→4.69, 70%→4.38, 65%→4.06, 60%→3.75, 55%→3.44, 50%→3.13, 45%→2.81, 40%→2.50, <40%→0.00`
 
-**UK degree classification:** First (70%+)→4.00, Upper Second/2:1 (60–69%)→3.00, Lower Second/2:2 (50–59%)→2.50, Third (40–49%)→2.00.
-
-**UK GCSE:** 9–7/A*–A→5.00, 6–5/B→4.00, 4/C→2.00, below 4→0.00.
+**New Zealand university grading system:**  A+ (90–100%)→GPA 4.00, A (85–89%)→GPA 3.80, A− (80–84%)→GPA 3.50, B+ (75–79%)→GPA 3.00, B (70–74%)→GPA 2.70, B− (65–69%)→GPA 2.50, C+ (60–64%)→GPA 2.00, C (55–59%)→GPA 1.50, C− (50–54%)→GPA 1.00, D+/D/D− (below 50%)→GPA 0.00.
 
 If the source already states GPA/CGPA verbatim, copy into `grade` unchanged (e.g. `CGPA 2.5/4.0`).
 
