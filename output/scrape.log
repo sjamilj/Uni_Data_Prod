@@ -1,4 +1,0 @@
-2026-09-23 01:54:04 +0600 [ERROR] Fatal: D:\DATA SCOL\UK_Uni_Data\.env: STRATEGY must be one of ['ALL_COURSE', 'DEGREE_SCOPED_PAGINATED'] (got '').
-2026-09-23 01:54:04 +0600 [END] status=error duration=0s message=D:\DATA SCOL\UK_Uni_Data\.env: STRATEGY must be one of ['ALL_COURSE', 'DEGREE_SCOPED_PAGINATED'] (got '').
-2026-09-23 02:46:06 +0600 [ERROR] Fatal: D:\DATA SCOL\UK_Uni_Data\.env: STRATEGY must be one of ['ALL_COURSE', 'DEGREE_SCOPED_PAGINATED'] (got '').
-2026-09-23 02:46:06 +0600 [END] status=error duration=0s message=D:\DATA SCOL\UK_Uni_Data\.env: STRATEGY must be one of ['ALL_COURSE', 'DEGREE_SCOPED_PAGINATED'] (got '').

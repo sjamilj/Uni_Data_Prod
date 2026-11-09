@@ -1,7 +1,0 @@
-{
-  "grounding": [
-    "initialDeposit: dropped ungrounded value '500'",
-    "applicationFee: dropped ungrounded value '100'",
-    "applicationDeadline: dropped ungrounded value '8 December 2026, 28 February 2028'"
-  ]
-}

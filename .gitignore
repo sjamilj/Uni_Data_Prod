@@ -66,8 +66,8 @@ REVIEW/
 # --- Local backup output (package_uni_backup.py writes here) ---
 BACKUP/
 
-# --- OUTPUT: all pipeline artifacts (re-run from {University}/code/) ---
-/output/**
+# --- OUTPUT: all university pipeline artifacts (re-run from {University}/code/) ---
+**/output/**
 !_university_template/output/
 !_university_template/output/.gitkeep
 
@@ -75,6 +75,16 @@ BACKUP/
 !**/output/clean/
 !**/output/clean/uni/
 !**/output/clean/uni/**
+
+# Manchester Metropolitan University keeps its cleaned markdown and URL lists
+!Manchester Metropolitan University/output/
+!Manchester Metropolitan University/output/clean/
+!Manchester Metropolitan University/output/clean/**
+!Manchester Metropolitan University/output/undergraduate_course_urls.csv
+!Manchester Metropolitan University/output/postgraduate_course_urls.csv
+!Manchester Metropolitan University/output/postgraduate_research_course_urls.csv
+!Manchester Metropolitan University/output/foundation_course_urls.csv
+!Manchester Metropolitan University/output/failed_urls.csv
 
 
 # --- OUTPUT: cross-uni resume state ---
