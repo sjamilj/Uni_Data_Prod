@@ -67,7 +67,7 @@ REVIEW/
 BACKUP/
 
 # --- OUTPUT: all pipeline artifacts (re-run from {University}/code/) ---
-#**/output/**
+/output/**
 !_university_template/output/
 !_university_template/output/.gitkeep
 
