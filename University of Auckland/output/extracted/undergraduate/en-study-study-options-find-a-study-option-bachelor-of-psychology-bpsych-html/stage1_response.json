@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:47:00.1021023Z",
+  "message": {
+    "role": "assistant",
+    "content": "{  \n  \"courseName\": \"Bachelor of Psychology\",  \n  \"description\": \"An exciting and rewarding degree that offers a wide range of career opportunities. \",  \n  \"duration\": \"Full-time: 3 years, Part-time: Varies\",  \n  \"nextStartDate\": \"2027 Semester One - 1 March\",  \n  \"availableLocations\": \"City\",  \n  \"points\": \"360\",  \n  \"programmeType\": \"Undergraduate\",  \n  \"entryRequirements\": [  \n    {  \n      \"qualification\": \"International Baccalaureate Diploma\",  \n      \"scoreRequired\": \"26\"  \n    },  \n    {  \n      \"qualification\": \"Cambridge International Examinations\",  \n      \"scoreRequired\": \"170\"  \n    },  \n    {  \n      \"qualification\": \"GCE A Level\",  \n      \"scoreRequired\": \"BCC\"  \n    }  \n  ],  \n  \"priorTertiaryStudy\": {  \n    \"requirements\": [  \n      {  \n        \"qualification\": \"one year successful bachelor-degree level study at a recognised university (or similar institution) overseas\",  \n        \"guaranteedGrade\": \"3.0\"  \n      }  \n    ]  \n  },  \n  \"fees\": {  \n    \"international\": \"NZ$49,582\"  \n  },  \n  \"keyDates\": [  \n    {  \n      \"applicationClosingDate\": \"8 December 2026\",  \n      \"semester\": \"Semester One 2027\"  \n    },  \n    {  \n      \"applicationClosingDate\": \"4 July 2027\",  \n      \"semester\": \"Semester Two 2027\"  \n    }  \n  ]  \n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11212087200,
+  "load_duration": 3107500,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2743108000,
+  "eval_count": 355,
+  "eval_duration": 8386507000
+}

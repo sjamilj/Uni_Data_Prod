@@ -1,0 +1,17 @@
+{
+  "degreeName": "BA",
+  "requirements": [
+    {
+      "degree": "BA",
+      "grade": "Minimum 75% and above"
+    }
+  ],
+  "AcademicRequirementsMetaData": [
+    {
+      "subtitle": "Entry Requirements",
+      "description": [
+        "UG Diploma (Level 5–6): Higher secondary certificate (HSC), minimum 65%."
+      ]
+    }
+  ]
+}

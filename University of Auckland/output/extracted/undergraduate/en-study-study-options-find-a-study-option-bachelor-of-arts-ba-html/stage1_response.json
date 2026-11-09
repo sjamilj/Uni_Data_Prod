@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:11:59.8461722Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \n  \"courseName\": \"Bachelor of Arts BA\",\n  \"courseDuration\": \"Full-time: 3 years\",\n  \"availableLocations\": [\"City\"],\n  \"points\": 360,\n  \"programmeType\": \"Undergraduate\",\n  \"conjointOptions\": true,\n  \"nextStartDates\": \"2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July\",\n  \"intakeInfo\": \"March, July\",\n  \"fees\": [\n    {\"currency\": \"NZD\", \"amount\": 42236, \"type\": \"International\"},\n    {\"currency\": \"NZD\", \"amount\": 51020, \"type\": \"International\"}\n  ],\n  \"tuitionFee\": 42236,\n  \"tuitionFeeCurrency\": \"NZD\",\n  \"applicationDeadline\": \"8 December 2026\",\n  \"englishLanguageRequirement\": \"6.0\",\n  \"englishLanguageRequirementBands\": \"No bands less than 5.5\",\n  \"englishLanguageRequirementAlternative\": \"https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/undergraduate-english-language-requirements.html\",\n  \"entryRequirements\": [\n    {\n      \"qualification\": \"IB International Baccalaureate Diploma\",\n      \"score\": \"26\"\n    },\n    {\n      \"qualification\": \"GCE A Level/CIE General Certificate of Education Advanced Level\",\n      \"score\": \"CCC\"\n    },\n    {\n      \"qualification\": \"GPE Grade Point Equivalent\",\n      \"score\": \"2.4\"\n    },\n    {\n      \"qualification\": \"IELTS Academic International English Language Testing System\",\n      \"score\": \"6.0\"\n    }\n  ],\n  \"alternativePathways\": [\n    \"Bridge your educational gap with a preparation and foundation programme .\",\n    \"If you have an offer of place from us that is conditional on meeting English language requirements, you may be considered for English Pathway courses from the University of Auckland English Language Academy (ELA)\",\n    \"If you are 20 on or before the first day of semester, have no formal University Entrance (UE) qualification, and are a New Zealand or Australian citizen or permanent resident you can apply for special admission .\"\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 14119601900,
+  "load_duration": 3093900,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2737418000,
+  "eval_count": 475,
+  "eval_duration": 11259933000
+}

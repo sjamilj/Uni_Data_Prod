@@ -1,0 +1,53 @@
+{
+  "courseName": "Bachelor of Arts / Bachelor of Commerce Conjoint",
+  "courseDuration": "Full-time: 4 years",
+  "duration": "Full-time: 4 years",
+  "availableLocations": [
+    "City"
+  ],
+  "points": "540",
+  "programmeType": "Undergraduate",
+  "conjointOptions": "available",
+  "nextStartDates": [
+    "2027 Semester One \u2013 1 March",
+    "2027 Semester Two \u2013 19 July"
+  ],
+  "entryRequirements": {
+    "IB": {
+      "score": "28"
+    },
+    "GCE A Level/CIE": {
+      "score": "BBC"
+    },
+    "priorTertiaryStudy": {
+      "description": "One year successful bachelor-degree level study at a recognised university (or similar institution) overseas.",
+      "gpe": "3.9"
+    }
+  },
+  "englishLanguageRequirements": {
+    "IB": {
+      "score": "6.0"
+    },
+    "GCE A Level/CIE": {
+      "score": "6.0"
+    },
+    "priorTertiaryStudy": {
+      "score": "6.0"
+    }
+  },
+  "tuitionFees": {
+    "international": "57,398"
+  },
+  "applicationDeadline": {
+    "summerSchool": "1 December 2026",
+    "semesterOne": "8 December 2026",
+    "semesterTwo": "8 July 2027"
+  },
+  "initialDeposit": "",
+  "currency": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-arts-commerce.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

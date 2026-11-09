@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:52:05.2779032Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \"courseName\": \"Bachelor of Commerce / Bachelor of Property Conjoint\", \"duration\": \"Full-time: 4 years\", \"nextStartDates\": \"2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July\", \"availableLocations\": \"City\", \"points\": \"540\", \"programmeType\": \"Undergraduate\", \"conjointOptions\": \"Conjoint options available\", \"entryRequirements\": { \"internationalBaccalaureateDiploma\": \"24\", \"gceAdvancedLevel\": \"BBC\", \"ieltsAcademic\": \"6.0, No bands less than 5.5\", \"priorTertiaryStudyRequirements\": \"One year successful bachelor-degree level study at a recognised university (or similar institution) overseas. \", \"gradeRequired\": \"3.9\", \"gceAlevelCie\": \"BBC\", \"priorTertiaryStudy\": \" [See information about prior tertiary study requirements](https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/prior-tertiary-study.html) \" }, \"fees\": { \"internationalStudents\": \"NZ$57,398\", \"studentServicesFee\": \"NZ$1,274.40\" }, \"keyDates\": { \"applicationClosingDates\": \"Summer School 2027: 1 December 2026, Semester One 2027: 8 December 2026, Semester Two 2027: 4 July 2027\" } }"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10304235000,
+  "load_duration": 3097400,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2736434000,
+  "eval_count": 317,
+  "eval_duration": 7467121000
+}

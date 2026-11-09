@@ -1,0 +1,40 @@
+{
+  "courseName": "Bachelor of Arts / Bachelor of Engineering (Honours) Conjoint",
+  "duration": "Full-time: 5 years",
+  "intakeInfo": "",
+  "points": 690,
+  "programmeType": "Conjoint",
+  "tuitionFee": "",
+  "studyLocations": [
+    "City"
+  ],
+  "nextStartDates": [
+    "1 March 2027",
+    "28 February 2028"
+  ],
+  "internationalBaccalaureateDiploma": {
+    "score": 36,
+    "requirements": "Mathematics and Physics at HL level"
+  },
+  "gceAlevelCie": {
+    "score": "ABB",
+    "requirements": "Mathematics and Physics"
+  },
+  "priorTertiaryStudy": {
+    "grade": 5.0,
+    "requirements": "Grade Point Equivalent"
+  },
+  "englishLanguageRequirements": {
+    "score": 6.5,
+    "requirements": "No bands less than 6.0"
+  },
+  "additionalInformation": [
+    "You can transfer from another tertiary institution if you meet these requirements.",
+    "Bridge your educational gap with a preparation and foundation programme."
+  ],
+  "currency": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-arts-engineering-honours.html",
+  "courseDuration": "Full-time: 5 years",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

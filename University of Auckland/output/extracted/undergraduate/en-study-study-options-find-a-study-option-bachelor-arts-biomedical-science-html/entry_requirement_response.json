@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T17:16:27.3689475Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"degreeName\": \"BBiomedSc\", \"requirements\": [{\"degree\": \"HSC\", \"grade\": \"Minimum 75% and above\"}], \"AcademicRequirementsMetaData\": []}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4986428400,
+  "load_duration": 12548100,
+  "prompt_eval_count": 2708,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 3908634000,
+  "eval_count": 41,
+  "eval_duration": 956227000
+}

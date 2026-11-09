@@ -1,0 +1,38 @@
+{
+  "courseName": "Bachelor of Commerce / Bachelor of Science Conjoint",
+  "courseDuration": "Full-time: 4 years",
+  "nextStartDates": "2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July",
+  "availableLocations": "City, Grafton",
+  "points": 540,
+  "programmeType": "Undergraduate",
+  "conjointOptionsAvailable": true,
+  "fees": {
+    "2027": {
+      "internationalStudents": "NZ$54,479.25 \u2013 $68,523"
+    }
+  },
+  "entryRequirements": [
+    {
+      "qualification": "International Baccalaureate Diploma",
+      "scoreRequired": "28"
+    },
+    {
+      "qualification": "GCE A Level/CIE General Certificate of Education (GCE) Advanced Level",
+      "scoreRequired": "BBC"
+    },
+    {
+      "qualification": "Prior Tertiary Study",
+      "minimumGradeRequirements": "3.9"
+    }
+  ],
+  "englishScores": "6.0 No bands less than 5.5",
+  "keyDates": {
+    "applicationClosingDates": "Summer School 2027: 1 December 2026, Semester One 2027: 8 December 2026, Semester Two 2027: 4 July 2027"
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-commerce-science.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

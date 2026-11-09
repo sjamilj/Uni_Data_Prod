@@ -1,0 +1,31 @@
+{
+  "courseName": "Master of Organisational Psychology",
+  "studyLevel": "postgraduate",
+  "studyType": "Taught & research options available",
+  "duration": "Full-time: 18 months",
+  "availableLocations": "City",
+  "points": 180,
+  "programmeType": "Postgraduate",
+  "tuitionFee": "",
+  "intakeInfo": "",
+  "applicationDeadline": "",
+  "initialDeposit": "",
+  "entryRequirements": {
+    "minimumRequirements": {
+      "studyOption": "Taught",
+      "points": 120,
+      "gradeRequired": "GPE 5.0",
+      "qualification": "IELTS Academic",
+      "scoreRequired": "6.5",
+      "noBandsBelow": "6.0"
+    },
+    "studyOption": "Research",
+    "points": 180,
+    "gradeRequired": "GPE 5.0"
+  },
+  "currency": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-organisational-psychology-morgpsych.html",
+  "courseDuration": "Full-time: 18 months",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

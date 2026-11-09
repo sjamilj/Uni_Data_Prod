@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T21:25:38.5779945Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"scholarshipName\": \"International Student Excellence Scholarship\",\n  \"scholarshipAmount\": \"6250\",\n  \"scholarshipType\": \"Percentage\",\n  \"scholarshipMetaData\": [\n    {\n      \"description\": \"A tuition fees credit of up to 25% of the recipient's tuition fees for the first two semesters of their master's degree.\"\n    }\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4404704400,
+  "load_duration": 2720100,
+  "prompt_eval_count": 1762,
+  "prompt_eval_cached_count": 9,
+  "prompt_eval_duration": 2392932000,
+  "eval_count": 84,
+  "eval_duration": 1937237000
+}

@@ -1,0 +1,37 @@
+{
+  "courseName": "Master of Global Studies",
+  "courseDuration": "Full-time: 18 months",
+  "courseType": "Postgraduate",
+  "availableLocations": "City",
+  "coursePoints": 180,
+  "intakeInfo": "",
+  "programmeRequirements": {
+    "minimumRequirements": {
+      "studyOption": "Taught 180 points",
+      "gradeRequired": "GPE 5.0",
+      "qualification": {
+        "major": [
+          "Anthropology",
+          "Communication",
+          "Economics",
+          "Environmental Science",
+          "Gender Studies",
+          "Geography",
+          "History",
+          "Linguistics",
+          "Philosophy",
+          "Politics and International Relations",
+          "Psychology",
+          "Sociology"
+        ],
+        "university": "recognised university"
+      }
+    }
+  },
+  "tuitionFee": "",
+  "currency": "",
+  "applicationClosingDate": "8 December 2026",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-global-studies-mglobalst.html",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

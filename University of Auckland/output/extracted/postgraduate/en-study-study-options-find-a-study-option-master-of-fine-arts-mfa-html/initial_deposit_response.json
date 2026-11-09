@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:39:46.1700163Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"initialDeposit\": \"55484\",\n  \"feesMetaData\": [\n    {\n      \"subtitle\": \"Initial Tuition Fee Deposit\",\n      \"description\": [\n        \"International student enrolled in a full-year course or studying from outside New Zealand on a student visa, you are generally required to pay your full year's tuition fees upfront at the start of your first semester\"\n      ]\n    }\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4810160500,
+  "load_duration": 2583000,
+  "prompt_eval_count": 2060,
+  "prompt_eval_cached_count": 9,
+  "prompt_eval_duration": 2761191000,
+  "eval_count": 85,
+  "eval_duration": 1979035000
+}

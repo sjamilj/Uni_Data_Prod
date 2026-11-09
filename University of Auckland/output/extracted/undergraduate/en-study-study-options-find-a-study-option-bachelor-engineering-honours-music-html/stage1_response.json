@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:00:08.2909422Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \"courseName\": \"Bachelor of Engineering (Honours) / Bachelor of Music Conjoint BE(Hons)/BMus\", \"courseDuration\": \"Full-time: 5 years\", \"availableLocations\": [\"City\"], \"points\": 690, \"programmeType\": \"Undergraduate\", \"conjointOptionsAvailable\": true, \"entryRequirements\": [ { \"qualification\": \"IB International Baccalaureate Diploma\", \"score\": 36, \"requirements\": \"Mathematics and Physics at HL level\" }, { \"qualification\": \"GCE A Level/CIE\", \"score\": \"ABB\", \"requirements\": \"Mathematics and Physics\" }, { \"qualification\": \"Prior tertiary study\", \"score\": \"GPE Grade Point Equivalent 5.0\", \"requirements\": \"One year successful bachelor-degree level study at a recognised university (or similar institution) overseas\" } ], \"englishScores\": [ { \"qualification\": \"IELTS Academic\", \"score\": 6.5, \"bands\": \"No bands less than 6.0\" } ], \"fees\": { \"international\": { \"amount\": 55779, \"currency\": \"NZD\" } }, \"keyDates\": [ \"Next start date: 2027 Semester One \u2013 1 March\", \"2028 Semester One \u2013 28 February\" ], \"applicationClosingDates\": { \"semesterOne2027\": \"8 December 2026\" }, \"initialDeposit\": \"\" }"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9914520000,
+  "load_duration": 3093700,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2735378000,
+  "eval_count": 301,
+  "eval_duration": 7079240000
+}

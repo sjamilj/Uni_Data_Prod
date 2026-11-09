@@ -1,0 +1,69 @@
+{
+  "courseName": "Bachelor of Dance Studies",
+  "intakeInfo": "",
+  "programmeType": "Undergraduate",
+  "tuitionFee": "",
+  "currency": "",
+  "applicationDeadline": "8 December 2026",
+  "intakeDates": [
+    "January 2027",
+    "July 2027"
+  ],
+  "courseDuration": "Full-time: 3 years",
+  "studyLevel": "undergraduate",
+  "programmeCode": "BDanceSt",
+  "campus": [
+    "City"
+  ],
+  "points": 360,
+  "requirements": {
+    "IB International Baccalaureate Diploma": {
+      "score": 26
+    },
+    "IELTS Academic": {
+      "score": 6.0,
+      "bands": {
+        "no": 5.5
+      }
+    },
+    "GCE A Level/CIE": {
+      "score": "CCC"
+    }
+  },
+  "audition": {
+    "type": "group",
+    "description": "1\u20132 hour movement exploration workshop followed by a group discussion"
+  },
+  "transfer": {
+    "requirements": {
+      "prior tertiary study": {
+        "requirements": {
+          "GPE Grade Point Equivalent": {
+            "grade": 2.2
+          },
+          "IELTS Academic": {
+            "score": 6.0,
+            "bands": {
+              "no": 5.5
+            }
+          }
+        }
+      }
+    }
+  },
+  "additionalInfo": {
+    "curriculum": {
+      "description": "Dance Studies students value dance as an academic discipline of study"
+    },
+    "eligibility": {
+      "english language requirements": {
+        "alternative requirements": {
+          "ELA English Pathway courses": ""
+        }
+      }
+    }
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-dance-studies-bdancest.html",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

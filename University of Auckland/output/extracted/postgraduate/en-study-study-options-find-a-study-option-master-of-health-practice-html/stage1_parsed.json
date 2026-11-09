@@ -1,0 +1,37 @@
+{
+  "currency": "",
+  "courseName": "Master of Health Practice MHlthPrac",
+  "courseDuration": "Full-time: Varies",
+  "intakeInfo": "",
+  "location": "City, Grafton",
+  "entryRequirements": {
+    "programmeRequirements": {
+      "minimumRequirements": [
+        {
+          "studyOption": "Taught 120 points",
+          "gradeRequired": "GPE",
+          "gradePointEquivalent": "5.0",
+          "qualification": "one year of postgraduate study"
+        },
+        {
+          "studyOption": "Taught 180 points",
+          "gradeRequired": "GPE",
+          "gradePointEquivalent": "5.0",
+          "qualification": "Relevant undergraduate degree"
+        },
+        {
+          "qualification": "IELTS Academic",
+          "internationalEnglishLanguageTestingSystem": "6.5"
+        }
+      ]
+    }
+  },
+  "tuitionFee": "",
+  "englishScore": null,
+  "scholarship": null,
+  "applicationDeadline": "8 December 2026",
+  "initialDeposit": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-health-practice.html",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

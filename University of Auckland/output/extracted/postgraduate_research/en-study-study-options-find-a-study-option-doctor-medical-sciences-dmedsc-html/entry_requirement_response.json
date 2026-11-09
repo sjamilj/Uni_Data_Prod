@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T21:37:15.1433031Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"degreeName\": \"Doctor of Medical Sciences DMedSc\",\n  \"requirements\": [\n    {\n      \"degree\": \"MSc\",\n      \"grade\": \"More than 60-65% and above\"\n    }\n  ],\n  \"AcademicRequirementsMetaData\": []\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4924877500,
+  "load_duration": 2609000,
+  "prompt_eval_count": 2500,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 3450149000,
+  "eval_count": 59,
+  "eval_duration": 1381814000
+}

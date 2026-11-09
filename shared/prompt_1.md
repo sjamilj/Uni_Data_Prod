@@ -52,7 +52,14 @@ Variables
 - `{INPUT_CONTENT}`
 - `{KNOWN_FIELDS}`
 
-Python already parsed structured fields from the course page. `{KNOWN_FIELDS}` is JSON. Do not contradict it. Leave `tuitionFee`, `currency`, `intakeInfo`, and `courseDuration` empty in your output.
+## How to treat `{KNOWN_FIELDS}`   (CHANGED)
+
+`{KNOWN_FIELDS}` is JSON produced by earlier automated steps.
+
+- A non-empty value is authoritative. Do not contradict it.
+- An empty value ("" or []) means "not found yet", NOT "not on the page".
+  You MUST still extract that field yourself from `{INPUT_CONTENT}` using the rules below.
+- Never copy an empty value from `{KNOWN_FIELDS}` without first checking `{INPUT_CONTENT}`.
 
 Example
 
@@ -73,13 +80,14 @@ Input Content
 The input may contain:
 
 - Course Overview
+- Quick facts (Duration, Next start date, Locations, Points)
 - Entry Requirements
 - Country Requirements
 - English Language Requirements
 - Tuition Fees
 - Scholarships
 - Funding
-- Deadlines
+- Key dates / Application closing dates
 - Course Duration
 - Intakes
 
@@ -140,7 +148,7 @@ Return only the subtitles that exist.
 
 ---
 
-# English Language Requirements
+# English Language Requirements   (CHANGED)
 
 Extract only explicitly stated minimum scores.
 
@@ -165,6 +173,13 @@ Rules
 - Never infer section scores.
 - Never calculate values.
 - Never convert formats.
+- ieltsMinOverall: the overall IELTS score exactly as written (e.g. "6.5").
+- ieltsMinSection: the minimum band score from phrases like "No bands less than 6.0" (e.g. "6.0").
+- Phrase pattern: "Score required 6.0 with no bands less than 5.5" means
+  ieltsMinOverall "6.0" and ieltsMinSection "5.5".
+- If the same IELTS requirement repeats across several qualification rows, store it ONCE
+  in the scalar fields.
+- If TOEFL or PTE are not explicitly stated, leave them "".
 
 Also store all English language requirement text inside AcademicRequirementsMetaData using:
 
@@ -175,15 +190,28 @@ Also store all English language requirement text inside AcademicRequirementsMeta
 }
 ```
 
-If TOEFL or PTE are not explicitly stated, leave them empty.
+---
 
-Python fills `ieltsMinOverall` and `ieltsMinSection` from the course page. Leave those two fields empty unless you copy a score that appears verbatim in `{INPUT_CONTENT}`.
+# Tuition Fees   (CHANGED)
 
-# Tuition Fees
+Fields
 
-Python fills `tuitionFee` and `currency` from the course page. Leave both fields empty.
+- tuitionFee
+- currency
 
-Do not invent a fee or currency. Do not copy amounts from this prompt.
+Rules
+
+- tuitionFee: find the line that starts with "International students" in the fees section
+  (for example under a "fees" heading for a given year).
+- Copy the amount as a number with NO currency symbol, NO "NZ$", NO "$" and NO trailing
+  asterisk. Keep commas and decimals exactly as written.
+  Format example: "International students: NZ$53,179.20 – $68,523 *" becomes "53,179.20".
+  (Format example only. Never copy this value into another course.)
+- If the fee is a range, output ONLY the FIRST amount. Never output both amounts.
+- Ignore domestic fees, the Student Services Fee and all other charges.
+- currency: ALWAYS return "NZD".
+- If no international fee is present, tuitionFee is "" (currency is still "NZD").
+- Do not invent a fee. Do not copy amounts from this prompt.
 
 ---
 
@@ -208,10 +236,12 @@ Rules
 - Preserve ordering.
 - Do not summarize.
 - Include only tuition fee related text.
+- Store fee-related sentences from `{INPUT_CONTENT}` only when they appear in the input.
+  Do not invent links or placeholder fee pages.
 
 ---
 
-# Initial Deposit
+# Initial Deposit   (CHANGED)
 
 Field
 
@@ -219,8 +249,10 @@ Field
 
 Rules
 
-- Copy exactly as written.
-- Do not infer.
+- Fill ONLY if the input explicitly states a deposit amount (the word "deposit" with an amount).
+- Do NOT use the tuition fee as the deposit.
+- Do NOT infer a deposit from statements like "pay fees upfront" or "full year's fees".
+- Copy the amount exactly as written, without currency symbol.
 - If missing:
 
 ```
@@ -246,7 +278,7 @@ Rules
 
 ---
 
-# Application Deadline
+# Application Deadline   (CHANGED)
 
 Field
 
@@ -254,21 +286,40 @@ Field
 
 Rules
 
-- Copy exactly as written.
+- Look for the heading "Application closing dates" (under "Key dates").
+- Take EVERY date listed under it, in order.
+- Copy the date only, exactly as written. Drop the label before the colon.
+  Format example: "- **Semester One 2027:** 8 December 2026" becomes "8 December 2026".
+  (Format example only. Never copy this value into another course.)
+- Do not include the intake label.
 - Never calculate or infer dates.
 - If multiple deadlines exist, join using ", ".
+- If none is present, return "".
 
 ---
 
-# Intake
+# Intake   (CHANGED)
 
 Field
 
 - intakeInfo
 
-Python fills this field from the course page. Leave `intakeInfo` empty.
+Rules
 
-Do not append a year. Do not invent dates.
+- Find the "Next start date" line in Quick facts.
+- Take that entry AND every following bullet line that has a year and a semester,
+  until the next blank "Available locations" / "Points" / other quick-fact line.
+  The extra entries may be written as plain "- 2028 Semester One – 28 February"
+  lines without the bold "Next start date" label. Include them.
+- Convert each entry to the format "Month Year", using the month name and the year that
+  appear in that entry. Drop the semester label and the day number.
+  - "2027 Semester One – 1 March" becomes "March 2027"
+  - "2028 Semester One – 28 February" becomes "February 2028"
+- Keep the order they appear in.
+- Join the entries with ", ".
+- This is an explicit exception to the verbatim rule. Do not invent dates, months or
+  years that are not in the entry.
+- If no start date is present, return "".
 
 ---
 
@@ -278,9 +329,10 @@ Field
 
 - courseDuration
 
-Python fills this field from the course page. Leave `courseDuration` empty.
+Rules
 
-Do not convert years into months. Do not invent a duration.
+- Copy the "Duration" value verbatim (e.g. "Full-time: varies Part-time: varies").
+- Do not convert units. Do not convert years into months. Do not invent a duration.
 
 ---
 
@@ -305,7 +357,8 @@ Rules
 - Preserve wording.
 - Preserve ordering.
 - Do not summarize.
-- Do not infer scholarships from fee discounts or financial aid unless explicitly described as a scholarship, bursary, award or funding opportunity.
+- Do not infer scholarships from fee discounts or financial aid unless explicitly described
+  as a scholarship, bursary, award or funding opportunity.
 
 If no scholarship information exists:
 
@@ -340,6 +393,8 @@ Rules
 - Never return null.
 - Never return an object.
 - description must always be an array of strings.
+- Every requirement goes inside these metadata arrays as {"subtitle": "...", "description": ["..."]},
+  never as nested objects.
 
 ---
 
@@ -356,12 +411,16 @@ Rules
 - Keep only the first occurrence of identical sentences or bullets.
 - If two entries describe the same requirement, keep the most complete version.
 - If one sentence is completely contained within another, keep only the longer sentence.
-- Remove repeated standalone fragments (e.g. "112 UCAS Tariff points") that appear multiple times across qualification tables.
-- Do NOT remove qualification-specific requirements that contain different qualification names or additional information, even if they share the same score or value.
+- Remove repeated standalone fragments (e.g. "112 UCAS Tariff points") that appear multiple
+  times across qualification tables.
+- Do NOT remove qualification-specific requirements that contain different qualification names
+  or additional information, even if they share the same score or value.
 - Preserve the original wording and ordering.
 - Never rewrite, merge, invent, or output identical strings more than once.
 
-# Output Rules
+---
+
+# Output Rules   (CHANGED)
 
 Return exactly one valid JSON object inside a single `json` code block.
 
@@ -374,6 +433,14 @@ Do not include:
 - additional fields
 
 The output must match the schema exactly.
+
+- Output ONLY the keys in the Output Schema, exactly as named (camelCase), in the same order.
+- The first key must be "courseName".
+- Never add keys such as name, type, study_level, programme_type, duration, points,
+  available_locations, next_start_date, tuition_fee, fees, key_dates, entry_requirements,
+  application_closing_dates.
+- Data that has no field in the schema (for example Points, Locations, GPE grade) is dropped,
+  or kept only inside AcademicRequirementsMetaData if it is an entry requirement.
 
 ---
 
@@ -414,7 +481,7 @@ Return:
 ""
 ```
 
-when the value is not explicitly present.
+when the value is not explicitly present (except `currency`, which is always "NZD").
 
 Never return:
 
@@ -538,14 +605,6 @@ Never:
 
 ---
 
-# Fee Rules
-
-Leave `tuitionFee` and `currency` empty. Python fills them.
-
-Store fee-related sentences from `{INPUT_CONTENT}` inside `feesMetaData` only when those sentences appear in the input. Do not invent links or placeholder fee pages.
-
----
-
 # Hallucination Prevention
 
 Never:
@@ -558,10 +617,11 @@ Never:
 - infer tuition fees
 - infer English scores
 - infer scholarships
-- infer currency
 - infer duration
+- infer a deposit
 
-If the information is not explicitly present, return an empty value according to the schema.
+The only fixed value is `currency`, which is always "NZD". For every other field, if the
+information is not explicitly present, return an empty value according to the schema.
 
 ---
 
@@ -571,11 +631,15 @@ Before generating the JSON, verify that:
 
 ✓ Only official input content was used.
 
-✓ Every schema field is present.
+✓ Every schema field is present, and no extra keys exist (no fees, key_dates, entry_requirements, duration).
 
-✓ Missing strings are "".
+✓ Keys follow the Output Schema order, starting with courseName.
+
+✓ Missing strings are "" (except currency, which is "NZD").
 
 ✓ Missing arrays are [].
+
+✓ Fields that were empty in `{KNOWN_FIELDS}` were still checked against `{INPUT_CONTENT}`.
 
 ✓ Metadata fields use the required format.
 
@@ -585,7 +649,13 @@ Before generating the JSON, verify that:
 
 ✓ English scores are extracted only when explicitly stated.
 
-✓ Only International tuition fee is returned.
+✓ tuitionFee is the FIRST international amount, as a bare number (no NZ$, no asterisk).
+
+✓ intakeInfo uses the "Month Year" format for ALL start-date lines, joined with ", ".
+
+✓ applicationDeadline is the date only, with no label.
+
+✓ initialDeposit is "" unless a deposit amount is explicitly written.
 
 ✓ Text has not been rewritten, summarized, paraphrased or normalized unless explicitly instructed.
 

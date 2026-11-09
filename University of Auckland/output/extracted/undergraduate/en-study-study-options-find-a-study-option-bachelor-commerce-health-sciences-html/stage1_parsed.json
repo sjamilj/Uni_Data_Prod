@@ -1,0 +1,31 @@
+{
+  "courseName": "Bachelor of Commerce / Bachelor of Health Sciences Conjoint",
+  "courseDuration": "Full-time: 4 years",
+  "programmeType": "Undergraduate",
+  "nextStartDate": "1 March 2027, 28 February 2028",
+  "availableLocations": "City",
+  "points": 540,
+  "fees": "NZ$50,579 \u2013 $57,398",
+  "applicationClosingDate": "8 December 2026",
+  "entryRequirements": {
+    "IB Diploma": {
+      "minimumScore": 28
+    },
+    "GCE A Level/CIE": {
+      "minimumScore": "BBC"
+    },
+    "priorTertiaryStudy": {
+      "minimumRequirements": {
+        "grade": 3.9,
+        "qualification": "IELTS Academic",
+        "score": 6.0
+      }
+    }
+  },
+  "currency": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-commerce-health-sciences.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

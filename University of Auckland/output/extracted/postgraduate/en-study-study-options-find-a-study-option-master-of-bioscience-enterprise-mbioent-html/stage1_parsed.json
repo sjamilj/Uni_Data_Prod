@@ -1,0 +1,43 @@
+{
+  "courseName": "Master of Bioscience Enterprise",
+  "courseDuration": "Full-time: 1 year",
+  "courseDurationPartTime": "Varies",
+  "availableLocations": "City",
+  "nextStartDates": [
+    "1 March 2027",
+    "28 February 2028"
+  ],
+  "intakeInfo": "",
+  "intakeInfoDates": [
+    "1 March 2027",
+    "28 February 2028"
+  ],
+  "points": 120,
+  "programmeType": "Postgraduate",
+  "researchOptions": "available",
+  "entryRequirements": {
+    "programmeRequirements": {
+      "description": "You must have completed the requirements for the Postgraduate Diploma in Bioscience Enterprise (PGDipBioEnt) from this University with a Grade Point Average of 6.0 or higher.",
+      "links": [
+        "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/postgraduate-diploma-in-bioscience-enterprise-pgdipbioent.html"
+      ]
+    },
+    "alternativePathways": "contact us to discuss alternative pathways into our programmes"
+  },
+  "fees": {
+    "tuitionFees": {
+      "international": "NZ$58,258"
+    },
+    "studentServicesFee": "NZ$1,132.80"
+  },
+  "keyDates": {
+    "applicationClosingDates": {
+      "semesterOne2027": "8 December 2026"
+    }
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-bioscience-enterprise-mbioent.html",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

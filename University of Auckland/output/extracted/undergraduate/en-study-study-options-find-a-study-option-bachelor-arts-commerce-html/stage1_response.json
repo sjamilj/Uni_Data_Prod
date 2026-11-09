@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:15:19.0733317Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Bachelor of Arts / Bachelor of Commerce Conjoint\",\n  \"courseDuration\": \"\",\n  \"duration\": \"Full-time: 4 years\",\n  \"availableLocations\": [\"City\"],\n  \"points\": \"540\",\n  \"programmeType\": \"Undergraduate\",\n  \"conjointOptions\": \"available\",\n  \"nextStartDates\": [\"2027 Semester One \u2013 1 March\", \"2027 Semester Two \u2013 19 July\"],\n  \"entryRequirements\": {\n    \"IB\": {\n      \"score\": \"28\"\n    },\n    \"GCE A Level/CIE\": {\n      \"score\": \"BBC\"\n    },\n    \"priorTertiaryStudy\": {\n      \"description\": \"One year successful bachelor-degree level study at a recognised university (or similar institution) overseas.\",\n      \"gpe\": \"3.9\"\n    }\n  },\n  \"englishLanguageRequirements\": {\n    \"IB\": {\n      \"score\": \"6.0\"\n    },\n    \"GCE A Level/CIE\": {\n      \"score\": \"6.0\"\n    },\n    \"priorTertiaryStudy\": {\n      \"score\": \"6.0\"\n    }\n  },\n  \"tuitionFees\": {\n    \"international\": \"57,398\"\n  },\n  \"applicationDeadline\": {\n    \"summerSchool\": \"1 December 2026\",\n    \"semesterOne\": \"8 December 2026\",\n    \"semesterTwo\": \"8 July 2027\"\n  },\n  \"initialDeposit\": \"\",\n  \"currency\": \"NZD\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 15079271500,
+  "load_duration": 4537458000,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 2818427000,
+  "eval_count": 323,
+  "eval_duration": 7702423000
+}

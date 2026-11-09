@@ -1,0 +1,43 @@
+{
+  "courseName": "Master of Architecture (Professional) and Urban Design",
+  "programmeType": "Postgraduate",
+  "duration": "Full-time: 30 months",
+  "nextStartDates": "2027 Semester One \u2013 1 March, 2028 Semester One \u2013 28 February",
+  "availableLocations": "City",
+  "points": "300",
+  "fees": {
+    "currency": "NZD",
+    "international": "58582.80",
+    "domestic": "58582.80"
+  },
+  "entryRequirements": {
+    "programmeRequirements": {
+      "minimumProgrammeRequirements": [
+        {
+          "studyOption": "Taught",
+          "points": "300",
+          "gradeRequired": "GPE",
+          "gpeGradeEquivalent": "4.0",
+          "qualification": "An undergraduate degree in architecture",
+          "ieltsAcademic": "6.5",
+          "ieltsBands": "No bands less than 6.0"
+        }
+      ]
+    },
+    "taught300Points": {
+      "portfolioContent": "Your portfolio should convey your design ability and sensibility, your creativity and your skill with a range of architectural media. It must consist of between 12 and 15 pages of your own drawings and / or other creative works.",
+      "writtenStatement": "This one-page document should outline your reasons for wanting to participate in the MArch(Prof) programme.",
+      "cvContent": "This brief CV should include descriptions and examples of relevant work experience or any other activities considered relevant to the application. Details of any academic and/or professional design awards/prizes should also be included."
+    }
+  },
+  "keyDates": {
+    "applicationClosingDates": "Semester One 2027: 8 December 2026"
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-architecture-professional-and-urban-design-marchprofurdes.html",
+  "intakeInfo": "",
+  "courseDuration": "Full-time: 30 months",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

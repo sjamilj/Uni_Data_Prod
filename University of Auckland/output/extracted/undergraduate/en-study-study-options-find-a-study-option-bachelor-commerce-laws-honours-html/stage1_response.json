@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:49:08.5175891Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \"courseName\": \"Bachelor of Commerce / Bachelor of Laws (Honours) Conjoint\", \"currency\": \"NZD\", \"tuitionFee\": \"49578\", \"intakeInfo\": \"February, 28; July, 17\", \"applicationDeadline\": \"2026-12-08, 2027-07-08\", \"duration\": \"\", \"programmeType\": \"Undergraduate\", \"availableLocations\": \"City\", \"programmeOptions\": \"Conjoint\", \"entryRequirements\": \"Overseas qualifications: Entry is by invitation for high-achieving Bachelor of Commerce / Bachelor of Laws (BCom/LLB) Part II students. To be considered for the Honours programme in Law, you must achieve a B+ average or higher across all your law courses at the completion of LLB Part  II during your BCom/LLB. (This is usually at the end of your third year.) You could be eligible for [another programme](https://www.auckland.ac.nz/en/study/study-options/find-a-study-option.html), or check out these alternative pathways: - Bridge your educational gap with a preparation and foundation programme . - If you have an offer of place from us that is conditional on meeting English language requirements, you may be considered for English Pathway courses from the University of Auckland English Language Academy (ELA)\", \"englishScores\": \"\", \"scholarships\": \"\", \"points\": \"735\" }"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9903812200,
+  "load_duration": 3082500,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2736248000,
+  "eval_count": 299,
+  "eval_duration": 7070216000
+}

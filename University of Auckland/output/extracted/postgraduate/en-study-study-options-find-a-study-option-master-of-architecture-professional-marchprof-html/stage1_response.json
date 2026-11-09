@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:59:51.5090856Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Master of Architecture (Professional) MArch(Prof)\",\n  \"courseDuration\": \"Full-time: 2 years, Part-time: Varies\",\n  \"nextStartDates\": \"2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July\",\n  \"availableLocations\": \"City\",\n  \"points\": 240,\n  \"programmeType\": \"Postgraduate\",\n  \"programmeTypeSubcategory\": \"Research options available\",\n  \"studyOption\": \"Research 240 points\",\n  \"gradeRequired\": \"GPE 4.0\",\n  \"qualification\": \"An undergraduate degree in architecture or equivalent\",\n  \"qualificationIELTS\": \"6.5\",\n  \"qualificationIELTSBands\": \"No bands less than 6.0\",\n  \"portfolioContent\": \"Your portfolio should convey your design ability and sensibility, your creativity and your skill with a range of architectural media.\",\n  \"writtenStatement\": \"This one page document should outline your reasons for wanting to participate in the MArch(Prof) programme.\",\n  \"cvContent\": \"This brief CV should include descriptions and examples of relevant work experience or any other activities considered relevant to the application.\",\n  \"fees\": {\n    \"internationalStudents\": {\n      \"2027Fees\": 58258\n    }\n  },\n  \"keyDates\": {\n    \"applicationClosingDates\": {\n      \"SemesterOne2027\": \"8 December 2026\",\n      \"SemesterTwo2027\": \"4 July 2027\"\n    }\n  },\n  \"currency\": \"NZD\",\n  \"alternativeEnglishLanguageRequirements\": \"https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/postgraduate-entry-requirements/postgraduate-english-language-requirements.html\",\n  \"calculateGPE\": \"http://www.gpecalculator.auckland.ac.nz/?utm_source=auckland&utm_medium=postgraduate\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12389669200,
+  "load_duration": 3078200,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2738381000,
+  "eval_count": 404,
+  "eval_duration": 9551068000
+}

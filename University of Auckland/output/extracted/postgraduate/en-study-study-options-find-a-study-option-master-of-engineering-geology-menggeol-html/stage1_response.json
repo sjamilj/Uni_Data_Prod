@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:31:30.3261512Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Master of Engineering Geology MEngGeol\",\n  \"courseDuration\": \"\",\n  \"availableLocations\": [\"City\"],\n  \"studyOptions\": [\"Taught\", \"Research\"],\n  \"programmeType\": \"Postgraduate\",\n  \"programmeTypeOption\": \"Taught & research options available\",\n  \"studyLevel\": \"postgraduate\",\n  \"nextStartDates\": [\"2027 Semester One \u2013 1 March\", \"2027 Semester Two \u2013 19 July\"],\n  \"studyPoints\": [\"120\", \"180\"],\n  \"tuitionFees\": [\n    {\"currency\": \"NZD\", \"amount\": 58258, \"type\": \"International students\"}\n  ],\n  \"entryRequirements\": {\n    \"studyOption\": \"Research\",\n    \"studyPoints\": \"120\",\n    \"gradeRequired\": \"GPE Grade Point Equivalent 5.0\",\n    \"qualification\": {\n      \"type\": \"Bachelor of Advanced Science (Honours), Bachelor of Science (Honours), Bachelor of Engineering, Bachelor of Engineering (Honours) or Postgraduate Diploma in Science\",\n      \"IELTS\": {\n        \"type\": \"Academic International English Language Testing System\",\n        \"score\": \"6.5\",\n        \"bands\": \"No bands less than 6.0\"\n      }\n    }\n  },\n  \"intakeInfo\": [\n    \"2027 Semester One \u2013 1 March\",\n    \"2027 Semester Two \u2013 19 July\"\n  ],\n  \"applicationDeadline\": \"2027 Summer School \u2013 1 December 2026\",\n  \"applicationDeadline2\": \"2027 Semester One \u2013 8 December 2026\",\n  \"applicationDeadline3\": \"2027 Semester Two \u2013 4 July 2027\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11410987500,
+  "load_duration": 3186100,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2728953000,
+  "eval_count": 364,
+  "eval_duration": 8583690000
+}

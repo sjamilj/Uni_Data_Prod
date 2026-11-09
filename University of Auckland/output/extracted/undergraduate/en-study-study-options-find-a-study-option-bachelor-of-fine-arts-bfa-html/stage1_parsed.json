@@ -1,0 +1,32 @@
+{
+  "courseName": "Bachelor of Fine Arts BFA",
+  "courseDuration": "Full-time: 3 years",
+  "programmeType": "Undergraduate",
+  "nextStartDates": "2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July",
+  "availableLocations": "City",
+  "points": 360,
+  "courseFees": "NZ$47,221",
+  "entryRequirements": {
+    "IB International Baccalaureate Diploma": {
+      "scoreRequired": 26
+    },
+    "GCE A Level/CIE": {
+      "scoreRequired": "CCC"
+    },
+    "priorTertiaryStudy": {
+      "studyDuration": "1 year",
+      "studyType": "bachelor-degree level",
+      "minimumGrade": "GPE 2.4"
+    }
+  },
+  "applicationClosingDates": {
+    "Semester One 2027": "8 December 2026",
+    "Semester Two 2027": "4 July 2026"
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-fine-arts-bfa.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

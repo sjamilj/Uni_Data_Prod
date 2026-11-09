@@ -1,0 +1,48 @@
+{
+  "courseName": "Doctor of Fine Arts",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/doctor-of-fine-arts-docfa.html",
+  "studyLevel": "postgraduate_research",
+  "courseType": "doctorate",
+  "duration": "Full-time: 3 to 4 years\nPart-time: 6 to 8 years",
+  "points": "120 points per year of full-time study",
+  "availableLocations": "City",
+  "entryRequirements": {
+    "programmeRequirements": {
+      "minimumProgrammeRequirements": {
+        "gradeRequired": {
+          "gpe": "5.5",
+          "qualification": "Masters-level qualification in fine arts"
+        },
+        "levelOfTraining": {
+          "required": "Level of training and ability necessary to undertake advanced doctoral study in fine arts creative practice and research"
+        },
+        "qualificationRequired": {
+          "ieltsAcademic": {
+            "requiredScore": "6.5",
+            "noBandsLessThan": "6.0"
+          }
+        }
+      },
+      "supervisionAndResearchRequirements": {
+        "meetingAcademicRequirements": "Meeting our academic requirements does not guarantee entry.",
+        "researchRequirements": "You must demonstrate an ability to research independently, and possess a high level of theoretical understanding. Acceptance is subject to staff availability for supervision, and appropriate resources and facilities.",
+        "researchIntent": "You must write an initial statement of research intent to demonstrate your research capability and experience.",
+        "englishLanguageRequirements": "All students must meet our English-language requirements as a condition of entry."
+      }
+    }
+  },
+  "tuitionFees": {
+    "internationalStudents": {
+      "fees": "NZ$58,178.40",
+      "notes": "Fees are set in advance of each calendar year and will be updated on this website. Fees are inclusive of 15% GST, but do not include the Student Services Fee, course books, travel and health insurance, or living costs. Amounts shown are indicative only. In addition to the tuition fees, there is a Student Services Fee of $9.44 per point, estimated at $1,132.80 for full-time study (120 points). Fees will be confirmed upon completion of enrolment."
+    }
+  },
+  "intakeInfo": "",
+  "applicationDeadline": "",
+  "initialDeposit": "",
+  "currency": "",
+  "courseDuration": "Full-time: 3 to 4 years",
+  "tuitionFee": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

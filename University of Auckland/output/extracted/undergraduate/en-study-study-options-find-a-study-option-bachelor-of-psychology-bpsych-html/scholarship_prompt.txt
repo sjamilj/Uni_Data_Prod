@@ -1,0 +1,167 @@
+# Stage 2c — Scholarships (LLM only)
+
+Extract **only** scholarship fields from the scholarships page (and Stage 1 if course-specific).
+
+Do **not** output `uniName`, course URL, fees, intake, duration, IELTS, or academic `requirements` — Python fills those.
+
+Use only the provided input. Never use outside knowledge, guess, infer, or estimate. Missing → `""` or `[]`.
+
+## Input
+- Course: `Bachelor of Psychology BPsych`
+- URL: `https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-psychology-bpsych.html`
+- Stage 1 JSON (optional course-specific scholarship notes):
+
+```json
+{
+  "courseName": "Bachelor of Psychology",
+  "description": "An exciting and rewarding degree that offers a wide range of career opportunities. ",
+  "duration": "Full-time: 3 years, Part-time: Varies",
+  "nextStartDate": "2027 Semester One - 1 March",
+  "availableLocations": "City",
+  "points": "360",
+  "programmeType": "Undergraduate",
+  "entryRequirements": [
+    {
+      "qualification": "International Baccalaureate Diploma",
+      "scoreRequired": "26"
+    },
+    {
+      "qualification": "Cambridge International Examinations",
+      "scoreRequired": "170"
+    },
+    {
+      "qualification": "GCE A Level",
+      "scoreRequired": "BCC"
+    }
+  ],
+  "priorTertiaryStudy": {
+    "requirements": [
+      {
+        "qualification": "one year successful bachelor-degree level study at a recognised university (or similar institution) overseas",
+        "guaranteedGrade": "3.0"
+      }
+    ]
+  },
+  "fees": {
+    "international": "NZ$49,582"
+  },
+  "keyDates": [
+    {
+      "applicationClosingDate": "8 December 2026",
+      "semester": "Semester One 2027"
+    },
+    {
+      "applicationClosingDate": "4 July 2027",
+      "semester": "Semester Two 2027"
+    }
+  ],
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-psychology-bpsych.html",
+  "intakeInfo": "",
+  "courseDuration": "Full-time: 3 years",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}
+```
+
+- Scholarships page only:
+
+```
+# Scholarships
+
+Source file: clean/uni/scholarships.md
+
+# Scholarships
+
+```json
+[
+  {
+    "scholarshipName": "Foundation High Achiever Award",
+    "scholarshipType": "Amount",
+    "scholarshipStudyLevel": "Foundation",
+    "Eligibility": "Exceptional academic performance before Foundation",
+    "Amount": "Up to NZ$5,000",
+    "description": [
+      "Offered through University of Auckland International College (UP Education)."
+    ]
+  },
+  {
+    "scholarshipName": "Foundation Pathway High Achiever Award",
+    "scholarshipType": "Amount",
+    "scholarshipStudyLevel": "Undergraduate",
+    "Eligibility": "Top Foundation students progressing to a University of Auckland bachelor's degree",
+    "Amount": "Up to NZ$20,000",
+    "description": [
+      "Offered through University of Auckland International College (UP Education).",
+      "Eligibility: top Foundation students progressing to a University of Auckland bachelor's degree.",
+      "More information: https://www.auckland.ac.nz/assets/study/scholarships-and-funding/find-a-scholarship-or-award/regulations/university-of-auckland-foundation-pathway-high-achiever-award.pdf"
+    ]
+  },
+  {
+    "scholarshipName": "International Student Excellence Scholarship",
+    "scholarshipType": "Percentage",
+    "scholarshipStudyLevel": "Postgraduate",
+    "Eligibility": "Applicant must: (a) be an international student; (b) have received a conditional or unconditional offer of admission to an eligible master's programme at the University of Auckland; and (c) have an Admissions GPE of at least 7.0.",
+    "Amount": "Up to 25% of tuition fees for the first two semesters",
+    "description": [
+      "A tuition fees credit of up to 25% of the recipient's tuition fees for the first two semesters of their master's degree.",
+      "Eligibility: applicant must be an international student.",
+      "Eligibility: applicant must have received a conditional or unconditional offer of admission to an eligible master's programme at the University of Auckland.",
+      "Eligibility: applicant must have an Admissions GPE of at least 7.0.",
+      "More information: https://www.auckland.ac.nz/assets/study/scholarships-and-funding/find-a-scholarship-or-award/regulations/university-of-auckland-international-student-excellence-scholarship.pdf"
+    ]
+  },
+  {
+    "scholarshipName": "University of Auckland Doctoral Scholarship",
+    "scholarshipType": "Amount",
+    "scholarshipStudyLevel": "Postgraduate Research",
+    "Eligibility": "Applicant must be a domestic student, or an international student who is eligible to pay domestic fees for the doctoral programme. Applicant must not already hold a doctorate, must not have previously received payment for a University of Auckland Doctoral Scholarship, and must not be enrolled in a doctoral programme (with limited exceptions for masters transfers, doctoral transfers and bridging programme entrants).",
+    "Amount": "Stipend of NZ$35,468 per annum (2026) for up to 42 months of full-time equivalent enrolment, plus the Student Services Fee, compulsory tuition fees and, for international students, compulsory single student health insurance",
+    "description": [
+      "Supports excellent domestic and international doctoral candidates whose research aligns with the strategic objectives of the University of Auckland.",
+      "Applicable programmes: PhD, DMedSc, DClinPsy, DocFA, EdD and DHSc.",
+      "Term: up to 42 months of full-time equivalent enrolment.",
+      "Application: no separate application is required. Applicants indicate in their doctoral application that they wish to be considered.",
+      "Selection: based on alignment with the strategic objectives of the University and the relevant faculty or research institute.",
+      "Eligibility: applicant must be a domestic student, or an international student who is eligible to pay domestic fees for the doctoral programme.",
+      "Eligibility: applicant must not already hold a doctorate or have previously received payment for a University of Auckland Doctoral Scholarship.",
+      "Eligibility: applicant must not be enrolled in a doctoral programme, except for approved transfers.",
+      "More information: https://www.auckland.ac.nz/assets/study/scholarships-and-funding/find-a-scholarship-or-award/regulations/university-of-auckland-doctoral-scholarship.pdf"
+    ]
+  }
+]
+```
+```
+
+## Fields
+
+| Field | Rule |
+|---|---|
+| `scholarshipName` | Official name of highest-value scholarship |
+| `scholarshipAmount` | Highest numeric **total** value, digits only (e.g. `4500` not `£4,500`) |
+| `scholarshipType` | Exactly `"Amount"` or `"Percentage"` or `""` |
+| `scholarshipMetaData` | Always subtitle exactly `"Scholarships"`; `description` = one complete sentence per fact |
+
+Prefer an explicit multi-year total when stated (e.g. £4,500 across three years → amount `4500`, type `Amount`). Do not invent scholarships from other universities.
+
+## No scholarship found
+
+If the input contains no scholarship, bursary, award or funding opportunity for this course:
+
+- `scholarshipName` = `""`, `scholarshipAmount` = `""`, `scholarshipType` = `""`
+- `scholarshipMetaData` = `[]` (empty array — no object with empty or placeholder text)
+- **Never** output `"N/A"`, `"None"`, `"Not found"` or any placeholder, in any field or in `description`.
+
+## Output
+
+Return exactly one JSON object in a single ` ```json ` block. **Only these keys:**
+
+```json
+{
+  "scholarshipName": "",
+  "scholarshipAmount": "",
+  "scholarshipType": "",
+  "scholarshipMetaData": []
+}
+```

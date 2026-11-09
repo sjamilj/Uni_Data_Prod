@@ -1,0 +1,44 @@
+{
+  "courseName": "Master of Social Work (Professional) MSW(Prof)",
+  "courseDuration": "Full-time: 2 years",
+  "availableLocations": "City",
+  "points": 240,
+  "programmeType": "Postgraduate",
+  "nextStartDates": [
+    "2027 Semester One \u2013 1 March",
+    "2028 Semester One \u2013 28 February"
+  ],
+  "applicationClosingDates": [
+    "8 December 2026"
+  ],
+  "tuitionFees": [
+    {
+      "type": "International",
+      "amount": 45857
+    }
+  ],
+  "englishScores": [
+    {
+      "type": "IELTS Academic",
+      "score": 6.5
+    }
+  ],
+  "entryRequirements": [
+    {
+      "type": "Taught 240 points",
+      "minimumRequirements": [
+        {
+          "qualification": "An undergraduate degree",
+          "grade": "5.0",
+          "gpe": "5.0"
+        }
+      ]
+    }
+  ],
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-social-work-professional-mswprof.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

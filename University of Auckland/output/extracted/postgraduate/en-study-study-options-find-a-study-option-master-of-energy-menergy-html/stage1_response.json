@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:30:22.9148917Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Master of Energy\",\n  \"duration\": \"Full-time: Varies\",\n  \"availableLocations\": \"City\",\n  \"points\": \"120 or 180\",\n  \"programmeType\": \"Postgraduate\",\n  \"nextStartDates\": \"2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July\",\n  \"entryRequirements\": [\n    {\n      \"studyOption\": \"Taught 120 points\",\n      \"gradeRequired\": \"GPE 5.0\",\n      \"qualification\": \"Four-year engineering degree or postgraduate study in science or commerce\"\n    },\n    {\n      \"studyOption\": \"Taught 180 points\",\n      \"gradeRequired\": \"GPE 5.0\",\n      \"qualification\": \"An undergraduate degree in engineering, science or commerce\"\n    },\n    {\n      \"studyOption\": \"Research 120 points\",\n      \"gradeRequired\": \"GPE 5.0\",\n      \"qualification\": \"Four-year engineering degree or postgraduate study in science or commerce\"\n    }\n  ],\n  \"englishScore\": {\n    \"test\": \"IELTS Academic\",\n    \"scoreRequired\": \"6.5\",\n    \"bandRequirements\": \"No bands less than 6.0\"\n  },\n  \"tuitionFees\": {\n    \"internationalStudents\": \"NZ$58,258\"\n  },\n  \"applicationDeadlines\": [\n    {\n      \"semester\": \"Semester One 2027\",\n      \"date\": \"1 October 2026\"\n    },\n    {\n      \"semester\": \"Semester Two 2027\",\n      \"date\": \"3 April 2026\"\n    }\n  ],\n  \"programmeDescription\": \"The Master of Energy is a limited entry programme with only 40 students accepted into the programme each year. Applications are reviewed at the same time by the programme selection committee. The application will be ranked based on your academic achievement in relevant tertiary study, and a qualitative assessment of your work experience to date.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12691510100,
+  "load_duration": 4081600,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2729456000,
+  "eval_count": 417,
+  "eval_duration": 9869922000
+}

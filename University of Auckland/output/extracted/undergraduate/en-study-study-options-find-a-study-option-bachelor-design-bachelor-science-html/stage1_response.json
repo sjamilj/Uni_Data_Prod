@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:58:32.3616771Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \"courseName\": \"Bachelor of Design / Bachelor of Science Conjoint\", \"courseDuration\": \"Full-time: 4 years\", \"courseLocations\": [\"City\"], \"coursePoints\": 540, \"courseType\": \"Undergraduate\", \"intakeInfo\": \"2027 Semester One \u2013 1 March, 2028 Semester One \u2013 28 February\", \"entryRequirements\": [{ \"qualification\": \"International Baccalaureate Diploma\", \"score\": 28 }, { \"qualification\": \"GCE A Level/CIE\", \"score\": \"BBC\", \"additional\": \"IELTS Academic 6.0, No bands less than 5.5\" }, { \"qualification\": \"Prior tertiary study\", \"additional\": \"One year successful bachelor-degree level study at a recognised university (or similar institution) overseas\" }], \"minimumGrade\": 3.9, \"englishScore\": 6.0, \"alternativeEnglish\": [\"https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/undergraduate-english-language-requirements.html\"], \"fees\": { \"international\": { \"amount\": 54479.25, \"currency\": \"NZD\" } }, \"tuitionFee\": 54479.25, \"studentServicesFee\": 1274.40, \"applicationDeadline\": \"8 December 2026\", \"initialDeposit\": \"\" }"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9800813200,
+  "load_duration": 3204000,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2736734000,
+  "eval_count": 296,
+  "eval_duration": 6971786000
+}

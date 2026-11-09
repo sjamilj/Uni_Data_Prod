@@ -1,0 +1,51 @@
+{
+  "courseName": "Master of Biomedical Science MBiomedSc",
+  "courseDuration": "Full-time: Varies",
+  "availableLocations": [
+    "City",
+    "Grafton"
+  ],
+  "nextStartDate": [
+    "2026 Late Year Term \u2013 1 December",
+    "2027 Semester One \u2013 1 March"
+  ],
+  "points": [
+    "120 or 240"
+  ],
+  "programmeType": "Postgraduate",
+  "programmeResearch": true,
+  "tuitionFees": {
+    "currency": "NZD",
+    "amounts": [
+      "$57,974",
+      "$58,258"
+    ],
+    "type": "full-fee paying"
+  },
+  "englishScores": {
+    "required": 6.5,
+    "minimumBands": 6.0
+  },
+  "programmeRequirements": {
+    "oneYearPostgraduate": {
+      "gpeRequired": 5.0,
+      "qualification": "one year of postgraduate study in biomedical science"
+    },
+    "undergraduateDegree": {
+      "gpeRequired": 5.0,
+      "qualification": "an undergraduate degree in biomedical science"
+    }
+  },
+  "applicationClosingDates": {
+    "semesterOne2027": "8 December 2026",
+    "semesterTwo2027": "4 July 2027",
+    "lateYear2026": "11 November 2026"
+  },
+  "initialDeposit": "",
+  "intakeInfo": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-biomedical-science-mbiomedsc.html",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

@@ -1,0 +1,28 @@
+{
+  "courseName": "Doctor of Medical Sciences DMedSc",
+  "studyLevel": "postgraduate_research",
+  "duration": "Full-time: Varies",
+  "startDates": [
+    "Flexible start dates"
+  ],
+  "locations": [
+    "Grafton"
+  ],
+  "points": 480,
+  "programmeType": "Doctorate",
+  "tuitionFee": "",
+  "internationalTuitionFee": true,
+  "englishScores": {
+    "qualification": "IELTS Academic",
+    "score": 6.5,
+    "noBandsLessThan": 6.0
+  },
+  "applicationDeadline": "",
+  "initialDeposit": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/doctor-medical-sciences-dmedsc.html",
+  "intakeInfo": "",
+  "courseDuration": "Full-time: Varies",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

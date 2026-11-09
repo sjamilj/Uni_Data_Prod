@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:10:00.4412842Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Bachelor Nursing Science.Html\",\n  \"courseUrl\": \"https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-nursing-science.html\",\n  \"AcademicRequirementsMetaData\": [\n    {\n      \"subtitle\": \"Entry Requirements\",\n      \"description\": [\n        \"\"\n      ]\n    }\n  ],\n  \"intakeInfo\": \"\",\n  \"courseDuration\": \"Full-time: varies Part-time: varies\",\n  \"tuitionFee\": \"53,179.20\",\n  \"currency\": \"NZD\",\n  \"initialDeposit\": \"\",\n  \"applicationFee\": \"\",\n  \"feesMetaData\": [\n    {\n      \"subtitle\": \"Fees\",\n      \"description\": [\n        \"\"\n      ]\n    }\n  ],\n  \"applicationDeadline\": \"8 December 2026, 22 March 2027\",\n  \"ieltsMinOverall\": \"6.5\",\n  \"ieltsMinSection\": \"6.0\",\n  \"toeflMinOverall\": \"\",\n  \"toeflMinSection\": \"\",\n  \"pteMinOverall\": \"\",\n  \"pteMinSection\": \"\",\n  \"scholarshipMetaData\": [\n    {\n      \"subtitle\": \"Scholarships\",\n      \"description\": [\n        \"\"\n      ]\n    }\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11857445700,
+  "load_duration": 2537100,
+  "prompt_eval_count": 3423,
+  "prompt_eval_cached_count": 6,
+  "prompt_eval_duration": 5136501000,
+  "eval_count": 270,
+  "eval_duration": 6638165000
+}

@@ -1,0 +1,119 @@
+# Stage 2d: Initial deposit (LLM only)
+
+Read the **international student tuition fee for one full year** from the course page. Output it as `initialDeposit`, with a fixed `feesMetaData` description.
+
+Do **not** output `uniName`, course URL, `requirements`, IELTS/PTE/TOEFL, scholarships, intake, duration, `applicationFee` or `currency`. Python fills those.
+
+Use only the provided input. Never use outside knowledge.
+
+## Input
+- Course: `Bachelor of Music / Bachelor of Laws (Honours) Conjoint BMus/LLB(Hons)`
+- URL: `https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-music-laws-honours.html`
+- Course page:
+
+```
+<!-- pipeline: course_url=https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-music-laws-honours.html study_level=undergraduate -->
+# Bachelor of Music / Bachelor of Laws (Honours) Conjoint BMus/LLB(Hons)
+
+## Quick facts
+
+- **Duration:** Full-time: 6 years
+- Part-time: Varies
+
+- **Next start date:** 2028 Semester One – 28 February
+
+- **Available locations:** City
+
+- **Points:** 735
+
+- **Programme type:** Undergraduate
+- Conjoint options available
+
+## 2027 entry requirements
+
+### Overseas qualifications
+
+Entry is by invitation for high-achieving Bachelor of Music/Bachelor of Laws (BMus/LLB) Part II students.
+
+To be considered for the Honours programme in Law, you must achieve a B+ average or higher across all your law courses at the completion of LLB Part II during your BMus/LLB. (This is usually at the end of your third year.)
+
+You could be eligible for [another programme](https://www.auckland.ac.nz/en/study/study-options/find-a-study-option.html), or check out these alternative pathways:
+
+- Bridge your educational gap with a preparation and foundation programme .
+- If you have an offer of place from us that is conditional on meeting English language requirements, you may be considered for English Pathway courses from the University of Auckland English Language Academy (ELA)
+
+## How much does a Bachelor of Music / Bachelor of Laws (Honours) Conjoint cost per year?
+
+### 2027 fees
+
+- **International students:** NZ$49,578 – $55,779 *
+
+Fees are set in advance of each calendar year and will be updated on this website. Fees are inclusive of 15% GST, but do not include the Student Services Fee, course books, travel and health insurance, or living costs. Amounts shown are indicative only. In addition to the tuition fees, there is a Student Services Fee of $9.44 per point, estimated at $1,274.40 for full-time study (135 points). Fees will be confirmed upon completion of enrolment into courses.
+
+*Please note: amounts shown are indicative and estimates only.
+
+[See course fees for each faculty](https://www.auckland.ac.nz/en/study/fees-and-money-matters/tuition-fees/fees-by-faculty.html)
+
+## Key dates
+
+Please note: We will consider late applications if places are still available. International students should start the application process as early as possible to allow sufficient time to apply for a visa.
+
+### Application closing dates
+
+- **Semester One 2027:** 8 December 2026
+```
+
+## Rules
+
+### 1. `initialDeposit`
+- `initialDeposit` is the **international student tuition fee for one full year**, taken from the course page.
+- It is a **top-level** field, outside `feesMetaData`.
+- Digits only: no currency symbol (`$`, `NZ$`), no currency code, no commas, no spaces.
+- Keep decimals only when needed (e.g. `42236.4`).
+- Use the **International** fee only. Never use a Domestic, Home or New Zealand fee.
+- If the page gives a per-point or per-semester fee but no full-year fee, do **not** calculate one. Use `""`.
+- If the page gives a range or several fees, use the one for this course. If you cannot tell which applies, use `""`.
+- If no international tuition fee is on the page, use `""`.
+- Do not guess, convert currencies or invent amounts.
+
+### 2. `feesMetaData`
+- If `initialDeposit` is not empty, output exactly this one item, word for word:
+
+```json
+{
+  "subtitle": "Initial Tuition Fee Deposit",
+  "description": [
+    "International student enrolled in a full-year course or studying from outside New Zealand on a student visa, you are generally required to pay your full year's tuition fees upfront at the start of your first semester"
+  ]
+}
+```
+
+- If `initialDeposit` is `""`, output `"feesMetaData": []`.
+- Do not change, shorten or add to the description text.
+
+## Output
+
+Return exactly one JSON object in a single ` ```json ` block, with only these keys:
+
+```json
+{
+  "initialDeposit": "",
+  "feesMetaData": []
+}
+```
+
+### Example (format only; do not copy the values)
+
+```json
+{
+  "initialDeposit": "51020.4",
+  "feesMetaData": [
+    {
+      "subtitle": "Initial Tuition Fee Deposit",
+      "description": [
+        "International student enrolled in a full-year course or studying from outside New Zealand on a student visa, you are generally required to pay your full year's tuition fees upfront at the start of your first semester"
+      ]
+    }
+  ]
+}
+```

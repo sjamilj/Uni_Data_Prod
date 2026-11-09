@@ -1,0 +1,36 @@
+{
+  "courseName": "Bachelor of Music / Bachelor of Laws (Honours) Conjoint",
+  "courseDuration": "Full-time: 6 years",
+  "courseDurationPartTime": "Varies",
+  "nextStart": "28 February 2028",
+  "availableLocations": "City",
+  "coursePoints": 735,
+  "programmeType": "Undergraduate",
+  "conjointOptions": true,
+  "entryRequirements": {
+    "overseasQualifications": "Entry is by invitation for high-achieving Bachelor of Music/Bachelor of Laws (BMus/LLB) Part II students. To be considered for the Honours programme in Law, you must achieve a B+ average or higher across all your law courses at the completion of LLB Part II during your BMus/LLB. (This is usually at the end of your third year.)",
+    "alternativePathways": [
+      "Bridge your educational gap with a preparation and foundation programme .",
+      "If you have an offer of place from us that is conditional on meeting English language requirements, you may be considered for English Pathway courses from the University of Auckland English Language Academy (ELA)"
+    ]
+  },
+  "fees": {
+    "internationalStudents": {
+      "2027": {
+        "min": 49578,
+        "max": 55779
+      }
+    }
+  },
+  "keyDates": {
+    "applicationClosingDates": {
+      "Semester One 2027": "8 December 2026"
+    }
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-music-laws-honours.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

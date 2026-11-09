@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:28:15.9718956Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \"degreeName\": \"MEdPrac\", \"requirements\": [{\"degree\": \"BA\", \"grade\": \"More than 60-65% and above\"}], \"AcademicRequirementsMetaData\": [] }"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4617402100,
+  "load_duration": 3768000,
+  "prompt_eval_count": 2518,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 3509984000,
+  "eval_count": 44,
+  "eval_duration": 1022530000
+}

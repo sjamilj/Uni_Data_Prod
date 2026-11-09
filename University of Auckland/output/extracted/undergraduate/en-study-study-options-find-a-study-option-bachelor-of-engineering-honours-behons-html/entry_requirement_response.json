@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:29:35.47533Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \n    \"degreeName\": \"Bachelor of Engineering (Honours) BE(Hons)\", \n    \"requirements\": [\n        {\"degree\": \"HSC\", \"grade\": \"Minimum 75% and above\"}\n    ], \n    \"AcademicRequirementsMetaData\": []\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5381337900,
+  "load_duration": 2602900,
+  "prompt_eval_count": 2709,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 3932690000,
+  "eval_count": 57,
+  "eval_duration": 1343337000
+}

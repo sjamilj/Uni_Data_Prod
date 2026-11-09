@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:55:08.8480524Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Master of Literature MLitt\",\n  \"courseDescription\": \"A research-based postgraduate qualification in literature, enabling you to undertake original research under the guidance of a supervisor.\",\n  \"courseDuration\": \"Full-time: 1 year, Part-time: Varies\",\n  \"availableLocations\": \"City\",\n  \"programmeType\": \"Postgraduate\",\n  \"researchOptions\": \"Research options available\",\n  \"entryRequirements\": {\n    \"studyOption\": \"Research 120 points\",\n    \"gradeRequired\": \"GPE 4.0\",\n    \"qualification\": \"Masters degree\",\n    \"englishScore\": {\n      \"test\": \"IELTS Academic\",\n      \"score\": \"6.5\",\n      \"bands\": \"No bands less than 6.0.\"\n    }\n  },\n  \"fees\": {\n    \"internationalStudents\": {\n      \"min\": \"NZ$44,970\",\n      \"max\": \"NZ$55,484\"\n    },\n    \"gst\": \"15%\",\n    \"servicesFee\": \"NZ$9.44 per point\"\n  },\n  \"intakeInfo\": {\n    \"semesterOne\": \"2027 Semester One \u2013 1 March\",\n    \"semesterTwo\": \"2027 Semester Two \u2013 19 July\"\n  },\n  \"keyDates\": {\n    \"applicationClosingDates\": {\n      \"semesterOne\": \"8 December 2026\",\n      \"semesterTwo\": \"4 July 2027\"\n    }\n  }\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10143633600,
+  "load_duration": 3368200,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2729457000,
+  "eval_count": 310,
+  "eval_duration": 7312794000
+}

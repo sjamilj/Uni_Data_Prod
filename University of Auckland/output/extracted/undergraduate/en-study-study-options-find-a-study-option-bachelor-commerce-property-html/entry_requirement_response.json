@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:52:12.3982997Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \"degreeName\": \"BCom/BProp\", \"requirements\": [ { \"degree\": \"HSC\", \"grade\": \"Minimum 75% and above\" } ], \"AcademicRequirementsMetaData\": [] }"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5105691000,
+  "load_duration": 2562800,
+  "prompt_eval_count": 2704,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 3931283000,
+  "eval_count": 45,
+  "eval_duration": 1057704000
+}

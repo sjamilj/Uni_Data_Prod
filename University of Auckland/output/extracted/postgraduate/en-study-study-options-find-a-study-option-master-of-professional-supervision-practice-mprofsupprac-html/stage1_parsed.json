@@ -1,0 +1,53 @@
+{
+  "courseName": "Master of Professional Supervision Practice MProfSupPrac",
+  "studyLevel": "postgraduate",
+  "courseDuration": "Full-time: 18 months",
+  "availableLocations": "City",
+  "coursePoints": 180,
+  "programmeType": "Postgraduate",
+  "taughtOptions": true,
+  "entryRequirements": {
+    "minimumProgrammeRequirements": [
+      {
+        "studyOption": "Taught 180 points",
+        "gradeRequired": "GPE",
+        "gradePointEquivalent": 5.0,
+        "qualification": "IELTS Academic",
+        "scoreRequired": 6.5,
+        "noBandsBelow": 6.0
+      }
+    ],
+    "taught180Points": [
+      {
+        "requirement": "You must have completed a bachelors degree in a relevant subject. Relevant subjects may include counselling, education, health, or social and human services.",
+        "requirement2": "You must have at least three years of relevant professional experience and be currently employed or volunteering in a relevant professional context. Relevant contexts may include health, counselling, education, social or human services."
+      },
+      {
+        "requirement": "If you have not met the requirement you can still gain entry if you have attained an equivalent and relevant, practical, professional or scholarly experience."
+      }
+    ]
+  },
+  "fees": {
+    "internationalStudents": {
+      "2027Fees": 45857,
+      "currency": "NZD"
+    }
+  },
+  "keyDates": {
+    "applicationClosingDates": {
+      "semesterOne2027": "19 February 2027",
+      "semesterTwo2027": "4 July 2027"
+    }
+  },
+  "additionalInfo": {
+    "tuitionFeesFaculty": "https://www.auckland.ac.nz/en/study/fees-and-money-matters/tuition-fees/fees-by-faculty.html",
+    "postgraduateEnglishLanguageRequirements": "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/postgraduate-entry-requirements/postgraduate-english-language-requirements.html",
+    "gradePointEquivalentCalculator": "http://www.gpecalculator.auckland.ac.nz/?utm_source=auckland&utm_medium=postgraduate"
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-professional-supervision-practice-mprofsupprac.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

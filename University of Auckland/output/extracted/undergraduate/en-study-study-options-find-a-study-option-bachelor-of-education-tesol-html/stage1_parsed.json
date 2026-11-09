@@ -1,0 +1,37 @@
+{
+  "courseName": "Bachelor of Education (Teaching English to Speakers of Other Languages)",
+  "currency": "",
+  "tuitionFee": "",
+  "intakeInfo": "",
+  "applicationDeadline": "8 December 2026, 4 July 2027",
+  "initialDeposit": "",
+  "duration": "Full-time: 3 years",
+  "nextStartDate": "1 March 2027, 19 July 2027",
+  "availableLocations": "City",
+  "points": 360,
+  "programmeType": "Undergraduate",
+  "qualification": [
+    {
+      "name": "International Baccalaureate Diploma",
+      "scoreRequired": "26"
+    },
+    {
+      "name": "GCE A Level/CIE",
+      "scoreRequired": "CCC"
+    }
+  ],
+  "englishScores": {
+    "required": "6.0",
+    "bands": "No bands less than 5.5"
+  },
+  "priorTertiaryStudy": {
+    "requirements": "One year successful bachelor-degree level study at a recognised university (or similar institution) overseas."
+  },
+  "guaranteedGradeRequirements": {
+    "gradeRequired": "GPE 2.4"
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-education-tesol.html",
+  "courseDuration": "Full-time: 3 years",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

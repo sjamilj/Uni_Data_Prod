@@ -1,0 +1,36 @@
+{
+  "courseName": "Master of Behaviour Analysis",
+  "studyLevel": "postgraduate",
+  "researchOptionsAvailable": true,
+  "duration": "Full-time: 2 years",
+  "nextStartDate": "1 March 2027, 28 February 2028",
+  "availableLocations": "City",
+  "points": 240,
+  "entryRequirements": {
+    "programmeRequirements": {
+      "minimumProgrammeRequirements": {
+        "studyOption": "Research",
+        "points": 240,
+        "gradeRequired": "GPE",
+        "gradePointEquivalent": 5.0
+      }
+    }
+  },
+  "englishLanguageRequirements": {
+    "qualification": "IELTS Academic",
+    "scoreRequired": 7.0
+  },
+  "fees": {
+    "internationalStudents": 58258
+  },
+  "keyDates": {
+    "applicationClosingDates": "15 October 2026"
+  },
+  "currency": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-behaviour-analysis.html",
+  "intakeInfo": "",
+  "courseDuration": "Full-time: 2 years",
+  "tuitionFee": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

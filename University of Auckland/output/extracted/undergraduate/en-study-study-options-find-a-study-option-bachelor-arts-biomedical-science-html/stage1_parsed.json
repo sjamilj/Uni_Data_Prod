@@ -1,0 +1,33 @@
+{
+  "courseName": "Bachelor of Arts/Bachelor of Biomedical Science Conjoint",
+  "courseDuration": "Full-time: 4 years",
+  "intakeInfo": "",
+  "availableLocations": [
+    "City",
+    "Grafton"
+  ],
+  "points": 540,
+  "programmeType": "Undergraduate",
+  "studyLevel": "Undergraduate",
+  "fees": {
+    "international": 53579.2
+  },
+  "englishScores": {
+    "IELTS Academic": "6.0 with no bands less than 5.5"
+  },
+  "courseFeesFacultyLink": "https://www.auckland.ac.nz/en/study/fees-and-money-matters/tuition-fees/fees-by-faculty.html",
+  "priorTertiaryStudyRequirements": "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/prior-tertiary-study.html",
+  "priorTertiaryStudyMinimumGradeRequirements": {
+    "GPE": "3.9"
+  },
+  "priorTertiaryStudyEnglishLanguageRequirements": {
+    "IELTS Academic": "6.0 with no bands less than 5.5"
+  },
+  "otherProgrammesLink": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option.html",
+  "englishPathwayCoursesLink": "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/undergraduate-english-language-requirements.html",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-arts-biomedical-science.html",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

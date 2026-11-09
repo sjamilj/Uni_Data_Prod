@@ -1,0 +1,47 @@
+{
+  "courseName": "Bachelor of Communication/Bachelor of Global Studies Conjoint",
+  "currency": "",
+  "duration": "Full-time: 4 years",
+  "programmeType": "Undergraduate",
+  "points": 540,
+  "availableLocations": [
+    "City"
+  ],
+  "entryRequirements": [
+    {
+      "qualification": "International Baccalaureate Diploma",
+      "minimumScore": 24,
+      "alternativeEnglishLanguageRequirements": [
+        "IELTS Academic International English Language Testing System",
+        "Score required: 6.5",
+        "No band less than 6.0"
+      ]
+    },
+    {
+      "qualification": "General Certificate of Education (GCE) Advanced Level",
+      "minimumScore": "BBC",
+      "alternativeEnglishLanguageRequirements": [
+        "IELTS Academic International English Language Testing System",
+        "Score required: 6.5",
+        "No band less than 6.0"
+      ]
+    },
+    {
+      "qualification": "Cambridge International Examinations (CIE)",
+      "minimumScore": "230 +",
+      "alternativeEnglishLanguageRequirements": [
+        "IELTS Academic International English Language Testing System",
+        "Score required: 6.5",
+        "No band less than 6.0"
+      ]
+    }
+  ],
+  "tuitionFee": "",
+  "intakeInfo": "",
+  "applicationDeadline": "8 December 2026",
+  "initialDeposit": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-communication-bachelor-global-studies.html",
+  "courseDuration": "Full-time: 4 years",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

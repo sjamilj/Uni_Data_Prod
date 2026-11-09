@@ -1,0 +1,69 @@
+{
+  "courseName": "Master of Arts MA",
+  "studyLevel": "postgraduate",
+  "courseDuration": "Full-time: Varies",
+  "nextStartDates": [
+    "2027 Semester One \u2013 1 March",
+    "2027 Semester Two \u2013 19 July"
+  ],
+  "availableLocations": [
+    "City"
+  ],
+  "points": [
+    "120",
+    "180"
+  ],
+  "programmeType": [
+    "Taught & research options available"
+  ],
+  "entryRequirements": {
+    "minimumProgrammeRequirements": [
+      {
+        "studyOption": "Taught 120 points",
+        "gradeRequired": "GPE Grade Point Equivalent 5.0",
+        "description": "One year of postgraduate study"
+      },
+      {
+        "studyOption": "Taught 180 points",
+        "gradeRequired": "GPE Grade Point Equivalent 5.0",
+        "description": "An undergraduate degree"
+      },
+      {
+        "studyOption": "Research 120 points",
+        "gradeRequired": "GPE Grade Point Equivalent 5.0",
+        "description": "One year of postgraduate study"
+      }
+    ],
+    "qualification": {
+      "name": "IELTS Academic",
+      "scoreRequired": "6.5",
+      "description": "No bands less than 6.0. Translation Studies specialisation has a higher requirement."
+    },
+    "englishLanguageRequirements": {
+      "url": "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/postgraduate-entry-requirements/postgraduate-english-language-requirements.html"
+    },
+    "gpeCalculatorUrl": "http://www.gpecalculator.auckland.ac.nz/?utm_source=auckland&utm_medium=postgraduate"
+  },
+  "tuitionFees": {
+    "internationalStudents": [
+      "NZ$45,857",
+      "NZ$58,258"
+    ]
+  },
+  "keyDates": {
+    "applicationClosingDates": [
+      "8 December 2026",
+      "4 July 2027"
+    ],
+    "applicationClosingDateNotes": [
+      "Semester Two admission may not be available for some subjects.",
+      "Applications for the MA in Psychology close on 1 December."
+    ]
+  },
+  "currency": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-arts-ma.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

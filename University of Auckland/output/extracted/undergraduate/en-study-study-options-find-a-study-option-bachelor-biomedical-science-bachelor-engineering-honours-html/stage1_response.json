@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:36:12.4455977Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \n    \"courseName\": \"Bachelor of Biomedical Science/Bachelor of Engineering (Honours) Conjoint\",\n    \"courseDuration\": \"5 years\",\n    \"availableLocations\": [\"City\", \"Grafton\"],\n    \"points\": 690,\n    \"programmeType\": \"Undergraduate\",\n    \"intakeInfo\": \"March, 2027 - 28 February, 2028\",\n    \"applicationDeadline\": \"8 December 2026\",\n    \"tuitionFee\": \"53,179.20\",\n    \"initialDeposit\": \"\",\n    \"englishScore\": \"6.5\",\n    \"currency\": \"NZD\",\n    \"qualification\": [\"IB\", \"GCE\", \"CIE\"],\n    \"guaranteedGrade\": {\n        \"IB\": \"34\",\n        \"GCE\": \"320\",\n        \"CIE\": \"320\"\n    }\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7144013200,
+  "load_duration": 3625600,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2735659000,
+  "eval_count": 183,
+  "eval_duration": 4288904999
+}

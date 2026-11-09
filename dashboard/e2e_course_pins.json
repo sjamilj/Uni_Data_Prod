@@ -1,4 +1,12 @@
 {
   "description": "Pinned courses for dashboard step (5) Run Full Pipeline with One Course. Regenerate: python dashboard/precalc_e2e_pins.py",
-  "pins": {}
+  "pins": {
+    "University of Auckland": {
+      "slug": "",
+      "study_level": "undergraduate",
+      "course_url": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-arts-biomedical-science.html",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-11-05"
+    }
+  }
 }

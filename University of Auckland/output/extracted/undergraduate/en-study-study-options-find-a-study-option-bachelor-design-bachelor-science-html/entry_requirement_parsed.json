@@ -1,0 +1,17 @@
+{
+  "degreeName": "BDes/BSc",
+  "requirements": [
+    {
+      "qualification": "HSC",
+      "grade": "Minimum 75%"
+    }
+  ],
+  "AcademicRequirementsMetaData": [
+    {
+      "subtitle": "Entry Requirements",
+      "description": [
+        "UG Diploma (Level 5–6): Higher secondary certificate (HSC), minimum 65%."
+      ]
+    }
+  ]
+}

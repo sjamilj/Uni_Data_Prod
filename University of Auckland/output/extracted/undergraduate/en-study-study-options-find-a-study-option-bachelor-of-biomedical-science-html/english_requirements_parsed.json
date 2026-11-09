@@ -1,0 +1,19 @@
+{
+  "AcademicRequirementsMetaData": [
+    {
+      "subtitle": "English Requirement",
+      "description": [
+        "IELTS Academic: Minimum overall score of 6.0, with no band below 5.5",
+        "PTE Academic: Minimum overall score of 50, with no communicative skill below 42",
+        "TOEFL iBT (120 scale): Minimum overall score of 80, with a minimum Writing score of 21",
+        "TOEFL iBT (6-point scale): Minimum overall score of 4.0, with a minimum Writing score of 4.0"
+      ]
+    }
+  ],
+  "ieltsMinOverall": "6.0",
+  "ieltsMinSection": "5.5",
+  "toeflMinOverall": "80",
+  "toeflMinSection": "21",
+  "pteMinOverall": "50",
+  "pteMinSection": "42"
+}

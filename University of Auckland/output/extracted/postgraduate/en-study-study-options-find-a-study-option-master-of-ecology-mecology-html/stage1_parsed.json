@@ -1,0 +1,51 @@
+{
+  "courseName": "Master of Ecology",
+  "studyLevel": "postgraduate",
+  "studyOption": "Taught 180 points",
+  "gradeRequired": "4.0",
+  "qualification": {
+    "name": "Bachelor\u2019s degree majoring in Biological Sciences or an equivalent subject from a recognised academic institution",
+    "ielts": {
+      "score": 6.5,
+      "bands": [
+        "No bands below 6.0"
+      ]
+    }
+  },
+  "fees": {
+    "currency": "NZD",
+    "amount": 58258
+  },
+  "duration": "Full-time: 18 months",
+  "nextStartDates": [
+    "2027 Semester One \u2013 1 March",
+    "2027 Semester Two \u2013 19 July"
+  ],
+  "availableLocations": "City",
+  "points": 180,
+  "programmeType": "Postgraduate",
+  "intakeInfo": "",
+  "applicationDeadline": "8 December 2025",
+  "initialDeposit": "",
+  "entryRequirements": {
+    "minimumRequirements": {
+      "studyOption": "Taught 180 points",
+      "gradeRequired": "4.0",
+      "qualification": {
+        "name": "Bachelor\u2019s degree majoring in Biological Sciences or an equivalent subject from a recognised academic institution",
+        "ielts": {
+          "score": 6.5,
+          "bands": [
+            "No bands below 6.0"
+          ]
+        }
+      }
+    }
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-ecology-mecology.html",
+  "courseDuration": "Full-time: 18 months",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

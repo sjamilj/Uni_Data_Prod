@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:33:47.8398745Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Master of Engineering ME\",\n  \"duration\": \"Full-time: Varies\",\n  \"nextStart\": {\n    \"2026 Late Year Term\": \"1 December\",\n    \"2027 Semester One\": \"1 March\"\n  },\n  \"availableLocations\": [\"City\", \"Grafton\", \"Newmarket\"],\n  \"points\": [120, 180],\n  \"programmeType\": \"Postgraduate\",\n  \"researchOptionsAvailable\": true,\n  \"entryRequirements\": {\n    \"studyOption\": {\n      \"Research 120 points\": {\n        \"gradeRequired\": \"GPE Grade Point Equivalent 5.0\",\n        \"qualification\": \"Four-year engineering degree\"\n      },\n      \"Research 180 points\": {\n        \"gradeRequired\": \"GPE Grade Point Equivalent 5.0\",\n        \"qualification\": \"An engineering degree\"\n      }\n    },\n    \"qualification\": {\n      \"IELTS Academic\": {\n        \"scoreRequired\": \"6.5\",\n        \"bands\": \"No bands less than 6.0\"\n      }\n    }\n  },\n  \"fees\": {\n    \"2027\": {\n      \"International students\": \"NZ$58,258\"\n    }\n  },\n  \"keyDates\": {\n    \"Application closing dates\": {\n      \"Semester One 2027\": \"8 December 2026\",\n      \"Semester Two 2027\": \"8 July 2027\",\n      \"Late Year Semester 2026\": \"11 November 2026\"\n    }\n  },\n  \"currency\": \"NZD\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10571207300,
+  "load_duration": 3054500,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2741454000,
+  "eval_count": 329,
+  "eval_duration": 7748098000
+}

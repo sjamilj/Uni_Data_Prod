@@ -1,0 +1,37 @@
+{
+  "courseName": "Master of Social Work MSW",
+  "studyLevel": "postgraduate",
+  "courseDuration": "Full-time: Varies",
+  "nextStartDates": [
+    "2027 Semester One \u2013 1 March",
+    "2027 Semester Two \u2013 19 July"
+  ],
+  "availableLocations": "City",
+  "points": "120 or 240",
+  "programmeType": "Postgraduate",
+  "qualification": "Social Work",
+  "languageScore": "6.5",
+  "languageType": "IELTS Academic",
+  "tuitionFee": "",
+  "currency": "",
+  "initialDeposit": "",
+  "applicationDeadline": "8 December 2026",
+  "intakeInfo": "",
+  "entryRequirements": {
+    "minimumRequirements": [
+      {
+        "studyOption": "Research 120 points",
+        "gradeRequired": "5.0",
+        "description": "One year of postgraduate study in social work."
+      },
+      {
+        "studyOption": "Research 240 points",
+        "gradeRequired": "5.0",
+        "description": "Undergraduate degree in social work."
+      }
+    ]
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-social-work-msw.html",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

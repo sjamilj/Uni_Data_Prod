@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:20:20.5859987Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \"degreeName\": \"LLM\", \"requirements\": [ { \"degree\": \"BA\", \"grade\": \"More than 60-65% and above\" } ], \"AcademicRequirementsMetaData\": [] }"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4694901100,
+  "load_duration": 2562900,
+  "prompt_eval_count": 2527,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 3534150000,
+  "eval_count": 45,
+  "eval_duration": 1057002999
+}

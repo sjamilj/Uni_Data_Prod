@@ -1,0 +1,275 @@
+# Stage 2d: Initial deposit (LLM only)
+
+Read the **international student tuition fee for one full year** from the course page. Output it as `initialDeposit`, with a fixed `feesMetaData` description.
+
+Do **not** output `uniName`, course URL, `requirements`, IELTS/PTE/TOEFL, scholarships, intake, duration, `applicationFee` or `currency`. Python fills those.
+
+Use only the provided input. Never use outside knowledge.
+
+## Input
+- Course: `Bachelor of Medicine and Bachelor of Surgery MBChB`
+- URL: `https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-medicine-and-bachelor-of-surgery-mbchb.html`
+- Course page:
+
+```
+<!-- pipeline: course_url=https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-medicine-and-bachelor-of-surgery-mbchb.html study_level=undergraduate -->
+# Bachelor of Medicine and Bachelor of Surgery MBChB
+
+## Quick facts
+
+- **Duration:** Full-time: 6 years
+
+- **Next start date:** 2027 Semester One – 1 March
+- 2028 Semester One – 28 February
+
+- **Available locations:** Grafton
+
+- **Points:** 720
+
+- **Programme type:** Undergraduate
+
+## 2027 entry requirements
+
+### Category One: First Year entry from the BHSc or BSc (Biomedical Science) only
+
+The below entry requirements relate to 2027 entry only:
+
+First Year applicants need to complete the eight required courses (listed below) in the first year of either the [Bachelor of Health Sciences (BHSc)](/en/study/study-options/find-a-study-option/bachelor-of-health-sciences-bhsc.html) or the [Bachelor of Science (BSc) Biomedical Science](/en/study/study-options/find-a-study-option/bachelor-of-science-bsc.html) at the University of Auckland. This needs to be completed on a full time basis and in the year of application for MBChB. Only the first attempt for these courses will be considered for MBChB admission in the First Year category.
+
+First Year BHSc courses:
+
+- **CHEM 110** : Chemistry of the Living World
+- **BIOSCI 107** : Biology for Biomedical Science - Cellular Processes and Development
+- **MEDSCI 142** : Biology for Biomedical Science - Organ Systems
+- **POPLHLTH 111** : Population Health
+- **POPLHLTH 101** : Health Systems I
+- **POPLHLTH 102** : Health and Society
+- **HLTHPSYC 122** : Behaviour, Health and Development
+- WTRMHS 100: Foundations for Effective Health Practice in Aotearoa
+
+First Year BSc (Biomedical Science) courses:
+
+- **CHEM 110** : Chemistry of the Living World
+- **BIOSCI 107** : Biology for Biomedical Science - Cellular Processes and Development
+- **MEDSCI 142** : Biology for Biomedical Science - Organ Systems
+- **POPLHLTH 111** : Population Health
+- **BIOSCI 101** : Essential Biology: From Genomes to Organisms
+- **PHYSICS 160** : Physics for the Life Sciences
+- **BIOSCI 106** : Foundations of Biochemistry
+- WTRSCI 100: Contemporary Science in Aotearoa, New Zealand
+
+Interview Eligibility
+
+You will need to achieve a minimum [Grade Point Average (GPA)](https://uoa.custhelp.com/app/answers/detail/a_id/2454) of 6.0 across the seven first year courses listed above in bold, with no fails, to be eligible for consideration for an admission interview ([MMI – Multi Mini Interviews](/en/fmhs/study-with-us/application-and-admission/mmi.html)). All students must pass WTRMHS 100 or WTRSCI 100.
+
+Interview RankingIf eligible, you will be ranked for interview invitation. This ranking will be based on your grades in the courses (in boldabove). If your final grades are not available at the time of interview ranking, an interim grade (highest possible) will be temporarily assigned. Official final results will be used for the final selection.
+
+Final Selection RankingApplicants will be offered admission to the programme according to the rank order until the available places in the category are filled. Interviewed applicants’ final ranking is based on a weighting of the following components:
+
+- GPA for four courses (BIOSCI 107, CHEM 110, MEDSCI 142. POPLHLTH 111): 60%
+- UCAT ANZ Final Score : 15%
+- Multi Mini Interview: 25%
+
+Please note that selection criteria may change from year to year. For further information, refer to our [FAQs](https://www.fmhs.auckland.ac.nz/en/faculty/for/current-students/faq.html) or submit an [online enquiry](https://uoa.custhelp.com/app/ask).
+
+The below entry requirements relate to 2028 entry only:
+
+First Year applicants must complete eight courses (see below) in the first year of one of the following University of Auckland programmes:
+
+- Bachelor of Biomedical Science (BBiomedSc)
+- Bachelor of Health Sciences (BHSc) – Community Health major
+- Bachelor of Health Sciences (BHSc) – Health Systems and Data Analytics major
+- Bachelor of Science (BSc) – Cell and Molecular Bioscience major
+- Bachelor of Science (BSc) – Exercise Sciences major
+- Bachelor of Science (BSc) – Medicinal Chemistry major
+- Bachelor of Science (BSc) – Nutrition major
+- Bachelor of Science (BSc) – Pharmacology major
+- Bachelor of Science (BSc) – Physiology major
+
+First Year required courses (BHSc or BBiomedSc):
+
+- BIOSCI 107: Biology for Biomedical Science - Cellular Processes
+- CHEM 190: Chemistry for Medical and Life Sciences
+- MEDSCI 142: Biology for Biomedical Science - Organ Systems
+- POPLHLTH 111: Population Health
+- WTRMHS 100: Foundations for Effective Health Practice in Aotearoa
+- 3 x 15 point courses from your degree
+
+First Year required courses (BSc):
+
+- BIOSCI 107: Biology for Biomedical Science - Cellular Processes
+- CHEM 190: Chemistry for Medical and Life Sciences
+- MEDSCI 142: Biology for Biomedical Science - Organ Systems
+- POPLHLTH 111: Population Health
+- WTRSCI 100: Contemporary Science in Aotearoa, New Zealand
+- 3 x 15 point courses from your degree
+
+This study must be completed on a full time basis and in the year of application for MBChB. Only the first attempt for these courses will be considered for admission in the First Year category.
+
+First Year entry applicants must:
+
+- achieve a minimum GPA of 6.0 across the four core courses (BIOSCI 107, CHEM 190, POPLHLTH 111 and MEDSCI 142)
+- have no grade lower than a B in any of their eight first year courses
+- have completed the University of Auckland situational judgement test (Casper) in the year of application
+
+Interview eligibility and invitation
+
+Interview places will be offered to applicants enrolled in the eight required courses in an eligible programme who:
+
+- achieve a minimum GPA of 6.0 across BIOSCI 107, CHEM 190, POPLHLTH 111 and MEDSCI 142, including interim grades (highest possible grade) for any courses in Semester Two, and
+- have no grade lower than a B in any of their Semester One courses
+
+Final selection eligibilityFollowing the release of Semester Two grades, eligibility of applicants is reconfirmed by assessing applicants have:
+
+- achieved a minimum GPA of 6.0 across BIOSCI 107, CHEM 190, POPLHLTH 111 and MEDSCI 142, and
+- no grade lower than a B in any of their eight courses
+
+Final selection rankingApplicants will be offered admission to the programme according to the rank order until the available places in the category are filled. Interviewed applicants’ final ranking is based on a weighting of the following components:
+
+- MMI fair score: 50% (a minimum threshold will apply)
+- Situational judgement test (Casper): 50%
+
+Please note that selection criteria may change from year to year. For further information, refer to our FAQs or submit an online enquiry.
+
+### Category Two: Graduate entry
+
+The below entry requirements relate to 2027 entry only:
+
+Domestic applicantsDomestic applicants please refer to the relevant domestic admissions information by selecting “New Zealand” on the radio button above. Please note that your status is determined by your citizenship/residency, not where you completed your degree.
+
+International applicants
+
+To apply for the MBChB under the Graduate entry category, international applicants need to have completed a relevant degree on a full time basis at a recognised university with a minimum GPA/GPE of 6.0. A relevant degree is defined as one in which applicants have completed courses equivalent to CHEM 110, BIOSCI 107, MEDSCI 142 and POPLHLTH 111.
+
+Your last year of full time study must be no more than five years prior to the year of application. Shortlisted international applicants will be interviewed via Kira Talent. International graduate applicants will receive an individual interview link from Kira Talent via email if invited to interview. Interviews will take place between June-July. International Graduate applicants are not required to sit UCAT ANZ.
+
+Interview eligibility and invitation
+
+In order to be eligible for consideration for an admission interview, international applicants need to have completed a relevant degree on a full time basis at a recognised university with a minimum GPA/GPE of 6.0.
+
+Your last year of full time study must be no more than five years prior to the year of application. Applicants with a GPA/GPE of 6.0 or higher will be offered an interview.
+
+Final selection eligibility
+
+Following the release of final grades, eligibility of applicants is reconfirmed by assessing applicants have achieved a minimum GPA/GPE of 6.0.
+
+Graduate applicants who are due to complete their degree in the year of application, must provide finalised results no later than 30 November in the year of application.
+
+Final selection ranking
+
+Applicants will be offered admission to the programme according to the rank order until the available places in the category are filled. Interviewed applicants’ final ranking is based on a weighting of the following components:
+
+- Interview score: 50%
+- GPA/GPE: 50%
+
+Please note that selection criteria may change from year to year. For further information, refer to our [FAQs](https://www.fmhs.auckland.ac.nz/en/faculty/for/current-students/faq.html) or submit an [online enquiry](https://uoa.custhelp.com/app/ask).
+
+The below entry requirements relate to 2028 entry only:
+
+Domestic applicantsDomestic applicants please refer to the relevant domestic admissions information by selecting “New Zealand” on the radio button above. Please note that your status is determined by your citizenship/residency, not where you completed your degree.
+
+International applicantsTo apply for the MBChB under the Graduate entry category, international applicants need to have completed a relevant degree on a full time basis at a recognised university with a minimum GPA/GPE of 6.0. A relevant degree is defined as one in which applicants have completed courses equivalent to CHEM 190, BIOSCI 107, MEDSCI 142 and POPLHLTH 111.
+
+Your last year of full time study must be no more than five years prior to the year of application. Shortlisted international applicants will be interviewed via Kira Talent. International graduate applicants will receive an individual interview link from Kira Talent via email if invited to interview. Interviews will take place between June-July. International Graduate applicants are not required to sit a situational judgement test (Casper).
+
+International applicants are also required to have English language skills of an IELTS overall score of 7.5 or higher, with no band below 7.0, if they have not undertaken their prior tertiary studies in English.
+
+Interview eligibility and invitationIn order to be eligible for consideration for an admission interview, international applicants need to have completed a relevant degree on a full time basis at a recognised university with a minimum GPA/GPE of 6.0. Your last year of full time study must be no more than five years prior to the year of application. Applicants with a GPA/GPE of 6.0 or higher will be offered an interview.
+
+Final selection eligibilityFollowing the release of final grades, eligibility of applicants is reconfirmed by assessing applicants have achieved a minimum GPA/GPE of 6.0.
+
+Graduate applicants who are due to complete their degree in the year of application, must provide finalised results no later than 30 November in the year of application.
+
+Final selection rankingApplicants will be offered admission to the programme according to the rank order until the available places in the category are filled. Interviewed applicants’ final ranking is based on a weighting of the following components:
+
+- Interview score: 50%
+- GPA/GPE: 50%
+
+Please note that selection criteria may change from year to year. For further information, refer to our [FAQs](https://www.fmhs.auckland.ac.nz/en/faculty/for/current-students/faq.html) or submit an [online enquiry](https://uoa.custhelp.com/app/ask).
+
+You could be eligible for [another programme](https://www.auckland.ac.nz/en/study/study-options/find-a-study-option.html), or check out these alternative pathways:
+
+- Bridge your educational gap with a preparation and foundation programme .
+- If you have an offer of place from us that is conditional on meeting English language requirements, you may be considered for English Pathway courses from the University of Auckland English Language Academy (ELA)
+
+## How much does a Bachelor of Medicine & Bachelor of Surgery cost per year?
+
+### 2027 fees
+
+- **International students:** NZ$86,561 *
+
+Fees are set in advance of each calendar year and will be updated on this website. Fees are inclusive of 15% GST, but do not include the Student Services Fee, course books, travel and health insurance, or living costs. Amounts shown are indicative only. In addition to the tuition fees, there is a Student Services Fee of $9.44 per point, estimated at $1,132.80 for full-time study (120 points). Fees will be confirmed upon completion of enrolment into courses.
+
+*Please note: amounts shown are indicative and estimates only.
+
+[See course fees for each faculty](https://www.auckland.ac.nz/en/study/fees-and-money-matters/tuition-fees/fees-by-faculty.html)
+
+## Key dates
+
+Important information those applying for the Bachelor of Medicine and Bachelor of Surgery or MBChB
+
+Please note:
+
+- Late or incomplete applications are not accepted
+- International students should start the application process as early as possible to allow sufficient time to apply for a visa
+- The Bachelor of Medicine and Bachelor of Surgery programme does not follow the standard University semester system. Year Two begins **one week earlier** than the general advertised start date for Semester One
+
+### Application closing dates
+
+- **Semester One 2028:** 1 July 2027
+```
+
+## Rules
+
+### 1. `initialDeposit`
+- `initialDeposit` is the **international student tuition fee for one full year**, taken from the course page.
+- It is a **top-level** field, outside `feesMetaData`.
+- Digits only: no currency symbol (`$`, `NZ$`), no currency code, no commas, no spaces.
+- Keep decimals only when needed (e.g. `42236.4`).
+- Use the **International** fee only. Never use a Domestic, Home or New Zealand fee.
+- If the page gives a per-point or per-semester fee but no full-year fee, do **not** calculate one. Use `""`.
+- If the page gives a range or several fees, use the one for this course. If you cannot tell which applies, use `""`.
+- If no international tuition fee is on the page, use `""`.
+- Do not guess, convert currencies or invent amounts.
+
+### 2. `feesMetaData`
+- If `initialDeposit` is not empty, output exactly this one item, word for word:
+
+```json
+{
+  "subtitle": "Initial Tuition Fee Deposit",
+  "description": [
+    "International student enrolled in a full-year course or studying from outside New Zealand on a student visa, you are generally required to pay your full year's tuition fees upfront at the start of your first semester"
+  ]
+}
+```
+
+- If `initialDeposit` is `""`, output `"feesMetaData": []`.
+- Do not change, shorten or add to the description text.
+
+## Output
+
+Return exactly one JSON object in a single ` ```json ` block, with only these keys:
+
+```json
+{
+  "initialDeposit": "",
+  "feesMetaData": []
+}
+```
+
+### Example (format only; do not copy the values)
+
+```json
+{
+  "initialDeposit": "51020.4",
+  "feesMetaData": [
+    {
+      "subtitle": "Initial Tuition Fee Deposit",
+      "description": [
+        "International student enrolled in a full-year course or studying from outside New Zealand on a student visa, you are generally required to pay your full year's tuition fees upfront at the start of your first semester"
+      ]
+    }
+  ]
+}
+```

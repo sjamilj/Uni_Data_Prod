@@ -1,0 +1,44 @@
+{
+  "courseName": "Master of Engineering Studies",
+  "courseDuration": "Full-time: Varies",
+  "availableLocations": "City, Grafton, Newmarket",
+  "programmeType": "Postgraduate",
+  "programmeTypeOptions": "Taught & research options available",
+  "nextStartDates": "2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July",
+  "points": "120 or 180",
+  "intakeInfo": "",
+  "applicationClosingDates": {
+    "Semester One 2027": "8 December 2026",
+    "Semester Two 2027": "8 July 2027"
+  },
+  "tuitionFee": "",
+  "initialDeposit": "",
+  "englishScores": {
+    "IELTS Academic": "6.5",
+    "No bands less than 6.0": true
+  },
+  "entryRequirements": {
+    "minimumProgrammeRequirements": [
+      {
+        "studyOption": "Taught 120 points",
+        "gradeRequired": "GPE Grade Point Equivalent 4.0",
+        "qualification": "Four-year engineering degree"
+      },
+      {
+        "studyOption": "Taught 180 points",
+        "gradeRequired": "GPE Grade Point Equivalent 4.0",
+        "qualification": "An undergraduate degree in engineering"
+      },
+      {
+        "studyOption": "Research 120 points",
+        "gradeRequired": "GPE Grade Point Equivalent 4.0",
+        "qualification": "Four-year engineering degree"
+      }
+    ]
+  },
+  "gpe": "4.0",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-engineering-studies-mengst.html",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

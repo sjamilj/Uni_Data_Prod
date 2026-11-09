@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T21:12:57.6008601Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"degreeName\": \"MProfEng\",\n  \"requirements\": [\n    {\n      \"degree\": \"MBA\",\n      \"grade\": \"More than 60-65% and above\"\n    }\n  ],\n  \"AcademicRequirementsMetaData\": []\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4898440400,
+  "load_duration": 2777300,
+  "prompt_eval_count": 2524,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 3525208000,
+  "eval_count": 55,
+  "eval_duration": 1291589000
+}

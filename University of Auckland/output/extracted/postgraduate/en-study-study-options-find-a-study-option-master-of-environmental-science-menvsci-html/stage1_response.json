@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:38:23.1691682Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Master of Environmental Science\",\n  \"currency\": \"NZD\",\n  \"fees\": {\n    \"international\": 58258\n  },\n  \"duration\": \"Full-time: 18 months\",\n  \"intakeInfo\": [\n    \"2027 Semester One \u2013 1 March\",\n    \"2027 Semester Two \u2013 19 July\"\n  ],\n  \"applicationDeadline\": \"8 December 2026\",\n  \"programmeType\": \"Postgraduate\",\n  \"programmeRequirements\": {\n    \"minimum\": {\n      \"studyOption\": [\n        {\n          \"name\": \"Taught\",\n          \"points\": 180,\n          \"gradeRequired\": \"GPE\",\n          \"gradePointEquivalent\": 4.0\n        },\n        {\n          \"name\": \"Research\",\n          \"points\": 180,\n          \"gradeRequired\": \"GPE\",\n          \"gradePointEquivalent\": 4.0\n        }\n      ],\n      \"qualification\": {\n        \"name\": \"IELTS Academic\",\n        \"scoreRequired\": 6.5,\n        \"bands\": {\n          \"min\": 6.0\n        }\n      }\n    }\n  },\n  \"englishScore\": {\n    \"test\": \"IELTS Academic\",\n    \"score\": 6.5,\n    \"bands\": {\n      \"min\": 6.0\n    }\n  },\n  \"englishRequirements\": {\n    \"url\": \"https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/postgraduate-entry-requirements/postgraduate-english-language-requirements.html\"\n  },\n  \"calculateGPE\": {\n    \"url\": \"http://www.gpecalculator.auckland.ac.nz/?utm_source=auckland&utm_medium=postgraduate\"\n  },\n  \"initialDeposit\": \"\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11656983200,
+  "load_duration": 2583000,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2729324000,
+  "eval_count": 375,
+  "eval_duration": 8833255000
+}

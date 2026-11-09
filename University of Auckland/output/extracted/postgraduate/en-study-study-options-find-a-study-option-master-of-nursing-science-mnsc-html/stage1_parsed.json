@@ -1,0 +1,51 @@
+{
+  "courseName": "Master of Nursing Science MNSc",
+  "courseDuration": "Full-time: 2 years",
+  "availableLocations": [
+    "Grafton"
+  ],
+  "studyPoints": 240,
+  "programmeType": "Postgraduate",
+  "taughtOptions": true,
+  "entryRequirements": {
+    "minimumProgrammeRequirements": {
+      "studyOption": "Taught 240 points",
+      "gradeRequired": "",
+      "gpe": "5.0",
+      "qualification": [
+        {
+          "degree": "Bachelor of Science"
+        }
+      ],
+      "englishLanguageTestingSystem": {
+        "scoreRequired": "6.5",
+        "bandsBelow": "6.0"
+      },
+      "alternativeEnglishLanguageRequirements": "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/postgraduate-entry-requirements/postgraduate-english-language-requirements.html"
+    },
+    "taught240Points": {
+      "relevantCompletedBachelorsDegree": true,
+      "notInNursing": true,
+      "relevantAreas": [
+        "Physiology",
+        "Psychology"
+      ],
+      "priorQualificationsInNursing": false
+    }
+  },
+  "tuitionFees": {
+    "internationalStudents": "NZ$57,974"
+  },
+  "keyDates": {
+    "applicationClosingDates": {
+      "semesterOne2027": "1 October 2026"
+    }
+  },
+  "nextStartDate": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-nursing-science-mnsc.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

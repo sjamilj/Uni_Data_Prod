@@ -1,0 +1,62 @@
+{
+  "courseName": "Master of Chemistry",
+  "programmeType": "Postgraduate",
+  "programmeTypeList": [
+    "Taught",
+    "180 points"
+  ],
+  "duration": "Full-time: 18 months",
+  "nextStartDates": [
+    "1 March 2027",
+    "19 July 2027"
+  ],
+  "availableLocations": [
+    "City"
+  ],
+  "points": 180,
+  "currency": "",
+  "tuitionFee": "",
+  "tuitionFeeList": [
+    "International students"
+  ],
+  "tuitionFeeNote": [
+    "Fees are set in advance of each calendar year and will be updated on this website. Fees are inclusive of 15% GST, but do not include the Student Services Fee, course books, travel and health insurance, or living costs."
+  ],
+  "tuitionFeeEstimate": 1132.8,
+  "englishScore": 6.5,
+  "englishScoreNote": "No bands below 6.0.",
+  "englishScoreRequirement": "IELTS Academic International English Language Testing System",
+  "entryRequirements": {
+    "minimumRequirements": {
+      "studyOption": "Taught 180 points",
+      "gradeRequired": "GPE",
+      "gradePointEquivalent": 4.0,
+      "qualification": {
+        "qualificationNote": "Minimum requirements listed here are the likely grades required and do not guarantee entry. We assess each application individually and applicants may require a higher grade to be offered a place.",
+        "qualificationList": [
+          "Bachelor of Science",
+          "Bachelor of Engineering"
+        ],
+        "relevantMajors": [
+          "chemistry",
+          "medicinal chemistry",
+          "green chemistry",
+          "food science",
+          "chemical engineering",
+          "materials engineering"
+        ]
+      }
+    }
+  },
+  "keyDates": {
+    "applicationClosingDates": {
+      "semesterOne": "8 December 2026",
+      "semesterTwo": "4 July 2027"
+    }
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-chemistry-mchem.html",
+  "intakeInfo": "",
+  "courseDuration": "Full-time: 18 months",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

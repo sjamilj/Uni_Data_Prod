@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:07:53.5921298Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Master of Chemistry\",\n  \"programmeType\": \"Postgraduate\",\n  \"programmeTypeList\": [\"Taught\", \"180 points\"],\n  \"duration\": \"Full-time: 18 months\",\n  \"nextStartDates\": [\"1 March 2027\", \"19 July 2027\"],\n  \"availableLocations\": [\"City\"],\n  \"points\": 180,\n  \"currency\": \"NZD\",\n  \"tuitionFee\": 58258,\n  \"tuitionFeeList\": [\"International students\"],\n  \"tuitionFeeNote\": [\"Fees are set in advance of each calendar year and will be updated on this website. Fees are inclusive of 15% GST, but do not include the Student Services Fee, course books, travel and health insurance, or living costs.\"],\n  \"tuitionFeeEstimate\": 1132.80,\n  \"englishScore\": 6.5,\n  \"englishScoreNote\": \"No bands below 6.0.\",\n  \"englishScoreRequirement\": \"IELTS Academic International English Language Testing System\",\n  \"entryRequirements\": {\n    \"minimumRequirements\": {\n      \"studyOption\": \"Taught 180 points\",\n      \"gradeRequired\": \"GPE\",\n      \"gradePointEquivalent\": 4.0,\n      \"qualification\": {\n        \"qualificationNote\": \"Minimum requirements listed here are the likely grades required and do not guarantee entry. We assess each application individually and applicants may require a higher grade to be offered a place.\",\n        \"qualificationList\": [\"Bachelor of Science\", \"Bachelor of Engineering\"],\n        \"relevantMajors\": [\"chemistry\", \"medicinal chemistry\", \"green chemistry\", \"food science\", \"chemical engineering\", \"materials engineering\"]\n      }\n    }\n  },\n  \"keyDates\": {\n    \"applicationClosingDates\": {\n      \"semesterOne\": \"8 December 2026\",\n      \"semesterTwo\": \"4 July 2027\"\n    }\n  }\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12497266800,
+  "load_duration": 3864900,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2725656000,
+  "eval_count": 408,
+  "eval_duration": 9666593000
+}

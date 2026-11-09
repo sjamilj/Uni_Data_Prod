@@ -1,0 +1,37 @@
+{
+  "courseName": "Bachelor of Sport, Health and Physical Education BSportHPE",
+  "courseDuration": "Full-time: 3 years",
+  "nextStartDates": "2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July",
+  "availableLocations": "City",
+  "points": "360",
+  "programmeType": "Undergraduate",
+  "fees": {
+    "2027Fees": {
+      "internationalStudents": "NZ$42,521",
+      "studentServicesFee": "NZ$1,132.80"
+    }
+  },
+  "entryRequirements": {
+    "SecondarySchool": {
+      "IBInternationalBaccalaureateDiploma": "24",
+      "GCEAlevel": "CCC",
+      "IELTSScore": "6.0",
+      "minimumBands": "5.5"
+    },
+    "PriorTertiaryStudy": {
+      "gradePointEquivalent": "2.4",
+      "IELTSScore": "6.0",
+      "minimumBands": "5.5"
+    }
+  },
+  "keyDates": {
+    "semesterOne2027": "31 January 2027",
+    "semesterTwo2027": "4 July 2027"
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-sport-health-and-physical-education-bsporthpe.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

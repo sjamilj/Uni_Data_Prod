@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:51:08.9183078Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \n  \"courseName\": \"Bachelor of Commerce / Bachelor of Music Conjoint\", \n  \"courseDuration\": \"\", \n  \"availableLocations\": [\"City\"], \n  \"points\": 540, \n  \"programmeType\": \"Undergraduate\", \n  \"conjointOptions\": true, \n  \"entryRequirements\": { \n    \"secondarySchool\": { \n      \"internationalBaccalaureateDiploma\": { \n        \"score\": 24 \n      }, \n      \"gceAdvancedLevel\": { \n        \"grades\": [\"BBC\"] \n      }, \n      \"cambridgeInternationalExaminations\": { \n        \"grades\": [\"BBC\"] \n      } \n    }, \n    \"tertiaryInstitution\": { \n      \"minimumGradeRequirements\": { \n        \"gpe\": 3.9, \n        \"ielts\": { \n          \"score\": 6.0, \n          \"bands\": [5.5] \n        } \n      } \n    } \n  }, \n  \"fees\": { \n    \"2027Fees\": { \n      \"internationalStudents\": [55979, 57398] \n    } \n  }, \n  \"keyDates\": { \n    \"applicationClosingDates\": [\"8 December 2026\"] \n  } \n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9366282000,
+  "load_duration": 3295300,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2744189000,
+  "eval_count": 276,
+  "eval_duration": 6527572000
+}

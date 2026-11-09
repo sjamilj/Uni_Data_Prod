@@ -1,0 +1,48 @@
+{
+  "courseName": "Master of Nutrition and Dietetics",
+  "currency": "",
+  "courseDuration": "Full-time: 2 years",
+  "availableLocations": [
+    "Grafton"
+  ],
+  "points": 240,
+  "programmeType": "Postgraduate",
+  "researchOptions": "available",
+  "entryRequirements": {
+    "programmeRequirements": {
+      "minimumProgrammeRequirements": [
+        {
+          "studyOption": "Research",
+          "points": 240,
+          "gradeRequired": {
+            "gpe": 5.0,
+            "grade": "A relevant undergraduate degree (see further programme requirements for details)."
+          },
+          "qualification": {
+            "ieltsscore": 7.5,
+            "alternativelanguagerequirements": "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/postgraduate-entry-requirements/postgraduate-english-language-requirements.html"
+          }
+        }
+      ],
+      "research240points": {
+        "limitedentry": "true",
+        "programmelimitations": "https://www.auckland.ac.nz/en/about-us/about-the-university/the-university/official-publications/university-calendar/current-calendar/programme-and-course-limitations.html",
+        "multiminiinterviews": "https://www.auckland.ac.nz/en/fmhs/study-with-us/application-and-admission/mmi.html"
+      }
+    }
+  },
+  "fees": {
+    "internationalStudents": 57974,
+    "studentServicesFee": 1132.8
+  },
+  "keyDates": {
+    "applicationClosingDates": {
+      "semesterOne2028": "1 July 2027"
+    }
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-nutrition-and-dietetics.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

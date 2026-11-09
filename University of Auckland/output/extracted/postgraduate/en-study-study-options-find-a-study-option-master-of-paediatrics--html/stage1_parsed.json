@@ -1,0 +1,44 @@
+{
+  "courseName": "Master of Paediatrics",
+  "courseDuration": "Full-time: Varies",
+  "courseDurationPartTime": "Part-time: Varies",
+  "nextStartDate": "2027 Semester One - 1 March, 2027 Semester Two - 19 July",
+  "availableLocations": "Grafton",
+  "points": "120 or 180",
+  "programmeType": "Postgraduate",
+  "taughtOptionsAvailable": "true",
+  "entryRequirements": {
+    "programmeRequirements": {
+      "minimumProgrammeRequirements": {
+        "studyOption": "Taught",
+        "points": "180",
+        "gradeRequired": {
+          "gpe": "4"
+        },
+        "qualification": "IELTS Academic",
+        "internationalEnglishLanguageTestingSystemScoreRequired": "6.5",
+        "noBandsLessThan": "6.0"
+      },
+      "progressionOptions": "Students can enrol into the MPaed programme with a relevant bachelors degree or they can progress onto the programme by completing a PGCertPaed or a PGDipPaed."
+    }
+  },
+  "fees": {
+    "feesSetInAdvance": "true",
+    "feesInclusiveOfGst": "15%",
+    "studentServicesFee": "$9.44 per point",
+    "estimatedStudentServicesFeeForFullTimeStudy": "$1,699.20",
+    "amountsShownAreIndicativeOnly": "true"
+  },
+  "keyDates": {
+    "applicationClosingDates": {
+      "semesterOne2027": "8 December 2026",
+      "semesterTwo2027": "4 July 2027"
+    }
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-paediatrics-.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:32:39.4887286Z",
+  "message": {
+    "role": "assistant",
+    "content": "{  \n    \"courseName\": \"Master of Engineering Management MEMgt\",\n    \"courseDescription\": \"This postgraduate programme is designed to help you develop the skills and knowledge required to manage engineering projects effectively.\",\n    \"currency\": \"NZD\",\n    \"tuitionFee\": 56327,\n    \"tuitionFeeRange\": \"NZ$56,327 *\",\n    \"tuitionFeeNote\": \"Fees are set in advance of each calendar year and will be updated on this website.\",\n    \"availableLocations\": [\"City\", \"University of Auckland Online\"],\n    \"nextStartDates\": [\"2027 Semester One \u2013 1 March\", \"2027 Semester Two \u2013 19 July\"],\n    \"programmeType\": \"Postgraduate\",\n    \"studyDuration\": \"Full-time: 1 year\",\n    \"studyDurationPartTime\": \"Part-time: Varies\",\n    \"programmeEntryRequirements\": {\n        \"minimumRequirements\": {\n            \"studyOption\": \"Taught 120 points\",\n            \"gradeRequired\": \"GPE 5.0\",\n            \"qualification\": \"Four-year engineering degree\",\n            \"englishLanguage\": {\n                \"test\": \"IELTS Academic\",\n                \"score\": \"6.5\",\n                \"bands\": \"No bands less than 6.0\"\n            }\n        }\n    },\n    \"programmeRequirements\": {\n        \"minimumProgrammeRequirements\": {\n            \"studyOption\": \"Taught 120 points\",\n            \"gradeRequired\": \"GPE 5.0\",\n            \"qualification\": \"Four-year bachelors degree in engineering at a recognised university (or similar institution)\",\n            \"requirements\": [\n                \"Broad coverage in your first year of the foundational science topics that underpin engineering disciplines: mathematical modelling, chemical and materials science, electrical engineering theory, mechanics, programming, and engineering design.\",\n                \"One year of postgraduate-level study.\",\n                \"A research project or dissertation comprising at least one-quarter of the final year.\"\n            ]\n        }\n    },\n    \"applicationClosingDates\": [\"2027 Semester One: 8 December 2026\", \"2027 Semester Two: 8 July 2027\"],\n    \"initialDeposit\": \"\",\n    \"metadata\": {\n        \"courseUrl\": \"https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-engineering-management-memgt.html\",\n        \"studyLevel\": \"postgraduate\"\n    }\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 14640378200,
+  "load_duration": 2574200,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2722408000,
+  "eval_count": 500,
+  "eval_duration": 11832444000
+}

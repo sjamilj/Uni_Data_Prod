@@ -1,0 +1,35 @@
+{
+  "courseName": "Master of Educational Leadership",
+  "currency": "",
+  "tuitionFee": "",
+  "intakeInfo": "",
+  "applicationDeadline": "1 December 2026, 8 December 2026, 4 July 2027",
+  "initialDeposit": "",
+  "duration": "Full-time: Varies, Part-time: Varies",
+  "entryRequirements": [
+    {
+      "programmeRequirements": "Taught 120 points",
+      "gradeRequired": "GPE 5.0",
+      "description": "One year of postgraduate study in education"
+    },
+    {
+      "programmeRequirements": "Taught 180 points",
+      "gradeRequired": "GPE 5.0",
+      "description": "A bachelor\u2019s degree in education or similar undergraduate degree"
+    },
+    {
+      "programmeRequirements": "Research 120 points",
+      "gradeRequired": "GPE 5.0",
+      "description": "One year of postgraduate study in education"
+    },
+    {
+      "programmeRequirements": "Research 180 points",
+      "gradeRequired": "GPE 5.0",
+      "description": "A bachelors degree in education or similar undergraduate degree"
+    }
+  ],
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-educational-leadership-medld.html",
+  "courseDuration": "Full-time: Varies",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

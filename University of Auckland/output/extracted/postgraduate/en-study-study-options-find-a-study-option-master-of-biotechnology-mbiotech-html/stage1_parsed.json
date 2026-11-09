@@ -1,0 +1,25 @@
+{
+  "courseName": "Master of Biotechnology",
+  "programmeType": "Postgraduate",
+  "duration": "18 months",
+  "intakeInfo": "",
+  "availableLocations": "City",
+  "points": 180,
+  "tuitionFee": "",
+  "currency": "",
+  "applicationDeadline": "8 December 2026",
+  "initialDeposit": "",
+  "entryRequirements": {
+    "minimumGPA": 4.0,
+    "requiredQualification": "Bachelor's degree majoring in Biotechnology, Biological Sciences or an equivalent subject",
+    "englishScore": {
+      "score": 6.5,
+      "qualification": "IELTS Academic",
+      "requiredBand": "No bands below 6.0"
+    }
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-biotechnology-mbiotech.html",
+  "courseDuration": "Full-time: 18 months",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

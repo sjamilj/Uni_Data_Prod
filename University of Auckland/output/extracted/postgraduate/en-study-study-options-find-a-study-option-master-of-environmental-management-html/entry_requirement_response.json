@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:37:25.2236726Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"degreeName\": \"MEnvMgt\",\n  \"requirements\": [\n    {\n      \"degree\": \"BSc\",\n      \"grade\": \"More than 60-65% and above\"\n    }\n  ],\n  \"AcademicRequirementsMetaData\": []\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4958384600,
+  "load_duration": 2890600,
+  "prompt_eval_count": 2550,
+  "prompt_eval_cached_count": 5,
+  "prompt_eval_duration": 3544072000,
+  "eval_count": 56,
+  "eval_duration": 1318051000
+}

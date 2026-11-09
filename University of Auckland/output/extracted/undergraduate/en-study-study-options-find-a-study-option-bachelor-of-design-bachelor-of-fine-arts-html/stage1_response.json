@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:24:06.9665109Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \n  \"courseName\": \"Bachelor of Design / Bachelor of Fine Arts Conjoint\",\n  \"studyLevel\": \"undergraduate\",\n  \"availableLocations\": \"City\",\n  \"programmeType\": \"Undergraduate\",\n  \"duration\": \"Full-time: 4 years\",\n  \"nextStartDates\": [\"1 March 2027\", \"28 February 2028\"],\n  \"points\": 540,\n  \"fees\": {\n    \"currency\": \"NZD\",\n    \"amount\": 58149,\n    \"type\": \"International\"\n  },\n  \"entryRequirements\": [\n    {\n      \"qualification\": \"IB\",\n      \"scoreRequired\": 28,\n      \"englishScoreRequired\": 6.0,\n      \"englishBands\": [5.5]\n    },\n    {\n      \"qualification\": \"CIE\",\n      \"scoreRequired\": 230,\n      \"englishScoreRequired\": 6.0,\n      \"englishBands\": [5.5]\n    },\n    {\n      \"qualification\": \"GCE A Level\",\n      \"scoreRequired\": \"BBC\",\n      \"englishScoreRequired\": 6.0,\n      \"englishBands\": [5.5]\n    },\n    {\n      \"qualification\": \"Prior Tertiary Study\",\n      \"gpeRequired\": 3.9,\n      \"englishScoreRequired\": 6.0,\n      \"englishBands\": [5.5]\n    }\n  ],\n  \"keyDates\": {\n    \"applicationClosingDate\": \"8 December 2026\"\n  }\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10386931800,
+  "load_duration": 3341100,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2736521000,
+  "eval_count": 321,
+  "eval_duration": 7566253000
+}

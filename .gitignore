@@ -67,7 +67,7 @@ REVIEW/
 BACKUP/
 
 # --- OUTPUT: all pipeline artifacts (re-run from {University}/code/) ---
-**/output/**
+#**/output/**
 !_university_template/output/
 !_university_template/output/.gitkeep
 
@@ -76,15 +76,6 @@ BACKUP/
 !**/output/clean/uni/
 !**/output/clean/uni/**
 
-# Manchester Metropolitan University — clean/courses + listing URL CSVs
-!Manchester Metropolitan University/output/
-!Manchester Metropolitan University/output/clean/
-!Manchester Metropolitan University/output/clean/**
-!Manchester Metropolitan University/output/undergraduate_course_urls.csv
-!Manchester Metropolitan University/output/postgraduate_course_urls.csv
-!Manchester Metropolitan University/output/postgraduate_research_course_urls.csv
-!Manchester Metropolitan University/output/foundation_course_urls.csv
-!Manchester Metropolitan University/output/failed_urls.csv
 
 # --- OUTPUT: cross-uni resume state ---
 all_download_clean_progress.json

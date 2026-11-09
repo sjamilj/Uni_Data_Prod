@@ -30,7 +30,7 @@ from pathlib import Path
 
 ALLOWED_DEGREES = ["HSC", "Diploma", "BA", "BSc", "BBA", "BEng", "BCom",
                     "MA", "MSc", "MBA", "PhD"]
-
+DEFAULT_CURRENCY = "NZD"
 # Order matters: more specific patterns checked before generic ones
 DEGREE_PATTERNS = [
     (r"\bA[\s-]?LEVEL\b", "HSC"),          # A-Level treated as HSC-equivalent entry
@@ -911,7 +911,7 @@ class AdmissionRecordNormalizer:
         if not tuition_fee and raw.get("tuitionFee"):
             tuition_fee = self.fee_normalizer.normalize_money(raw.get("tuitionFee"))
         out["tuitionFee"] = tuition_fee
-        out["currency"] = raw.get("currency", "")
+        out["currency"] = DEFAULT_CURRENCY
         out["initialDeposit"] = self.fee_normalizer.normalize_money(raw.get("initialDeposit", ""))
         out["applicationFee"] = self.fee_normalizer.normalize_money(raw.get("applicationFee", ""))
         out["feesMetaData"] = self.metadata_enforcer.enforce_metadata_structure(raw.get("feesMetaData", []))

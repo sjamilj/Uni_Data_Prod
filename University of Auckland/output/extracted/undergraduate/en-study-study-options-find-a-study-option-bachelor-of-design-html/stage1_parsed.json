@@ -1,0 +1,37 @@
+{
+  "courseName": "Bachelor of Design BDes",
+  "courseDuration": "Full-time: 3 years",
+  "nextStartDates": "March 2027, February 2028",
+  "availableLocations": "City",
+  "points": 360,
+  "programmeType": "Undergraduate",
+  "entryRequirements": {
+    "tertiary": {
+      "oneYearStudy": true,
+      "gradeRequired": "3.0"
+    },
+    "tertiaryEnglish": {
+      "scoreRequired": 6.0,
+      "bandsRequired": "5.5"
+    },
+    "tertiaryQualification": "GCE 'A' Level"
+  },
+  "fees": {
+    "international": 51688
+  },
+  "applicationDeadline": "8 December 2026",
+  "initialDeposit": "",
+  "keyDates": {
+    "semesterOne2027": "8 December 2026"
+  },
+  "englishScores": {
+    "required": 6.0,
+    "bandsRequired": "5.5"
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-design.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

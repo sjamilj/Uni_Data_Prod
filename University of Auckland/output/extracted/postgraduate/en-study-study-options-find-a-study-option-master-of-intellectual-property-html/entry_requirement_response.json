@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:50:43.773352Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \"degreeName\": \"MIP\", \"requirements\": [{\"degree\": \"BA\", \"grade\": \"More than 60-65% and above\"}], \"AcademicRequirementsMetaData\": [] }"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4824384700,
+  "load_duration": 3096700,
+  "prompt_eval_count": 2621,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 3743839000,
+  "eval_count": 42,
+  "eval_duration": 984402000
+}

@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:49:15.7292608Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"degreeName\": \"LLB(Hons)\",\n  \"requirements\": [\n    {\n      \"degree\": \"HSC\",\n      \"grade\": \"Minimum 75% and above\"\n    }\n  ],\n  \"AcademicRequirementsMetaData\": []\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5183402400,
+  "load_duration": 2568100,
+  "prompt_eval_count": 2655,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 3833171000,
+  "eval_count": 53,
+  "eval_duration": 1249526000
+}

@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:50:17.0037381Z",
+  "message": {
+    "role": "assistant",
+    "content": "{  \n    \"courseName\": \"Bachelor of Commerce / Bachelor of Laws Conjoint\",  \n    \"courseDuration\": \"Full-time: 5 years\",  \n    \"courseDurationPartTime\": \"Part-time: Varies\",  \n    \"courseType\": \"Undergraduate\",  \n    \"availableLocations\": \"City\",  \n    \"points\": 675,  \n    \"intakeInfo\": \"2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July\",  \n    \"tuitionFee\": 49578,  \n    \"initialDeposit\": \"\",  \n    \"englishScore\": 6.0,  \n    \"applicationDeadline\": \"2027 Summer School: 1 December 2026, 2027 Semester One: 8 December 2026, 2027 Semester Two: 4 July 2027\",  \n    \"currency\": \"NZD\",  \n    \"programmeType\": \"Conjoint options available\",  \n    \"requiredQualifications\": [\"International Baccalaureate Diploma\", \"General Certificate of Education (GCE) Advanced Level\", \"Cambridge International Examinations (CIE)\"],  \n    \"minimumGradeRequirements\": {  \n        \"International Baccalaureate Diploma\": 28,  \n        \"General Certificate of Education (GCE) Advanced Level\": \"BBC\",  \n        \"Cambridge International Examinations (CIE)\": \"BBC\"  \n    },  \n    \"englishLanguageRequirements\": {  \n        \"International English Language Testing System (IELTS)\": \"6.0, No bands less than 5.5\"  \n    }  \n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10740117700,
+  "load_duration": 3091800,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2747574000,
+  "eval_count": 335,
+  "eval_duration": 7924026000
+}

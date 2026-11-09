@@ -1,0 +1,50 @@
+{
+  "courseName": "Bachelor of Communication",
+  "courseDuration": "Full-time: 3 years",
+  "nextStartDates": [
+    "2027 Semester One \u2013 1 March",
+    "2027 Semester Two \u2013 19 July"
+  ],
+  "availableLocations": [
+    "City"
+  ],
+  "points": 360,
+  "programmeType": "Undergraduate",
+  "internationalFees": [
+    "NZ$49,582 \u2013 $51,020"
+  ],
+  "applicationClosingDates": [
+    "2027 Semester One \u2013 8 December 2026",
+    "2027 Semester Two \u2013 4 July 2027"
+  ],
+  "priorTertiaryRequirements": {
+    "priorTertiaryQualifications": [
+      "IB Diploma",
+      "GCE A Level",
+      "CIE"
+    ],
+    "minimumGradeRequirements": {
+      "IB Diploma": {
+        "score": 27
+      },
+      "GCE A Level": {
+        "score": "BCC"
+      },
+      "CIE": {
+        "score": "BCC"
+      }
+    },
+    "priorTertiaryEnglishRequirements": {
+      "score": "6.0"
+    },
+    "priorTertiaryEnglishBands": {
+      "bands": "5.5"
+    }
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-communication0.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

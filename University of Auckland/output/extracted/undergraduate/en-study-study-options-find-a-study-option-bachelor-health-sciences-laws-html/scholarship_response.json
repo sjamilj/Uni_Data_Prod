@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:05:52.0314345Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"scholarshipName\": \"University of Auckland Doctoral Scholarship\",\n  \"scholarshipAmount\": \"35468\",\n  \"scholarshipType\": \"Amount\",\n  \"scholarshipMetaData\": [\n    \"Supports excellent domestic and international doctoral candidates whose research aligns with the strategic objectives of the University of Auckland.\",\n    \"Applicable programmes: PhD, DMedSc, DClinPsy, DocFA, EdD and DHSc.\",\n    \"Term: up to 42 months of full-time equivalent enrolment.\",\n    \"Application: no separate application is required. Applicants indicate in their doctoral application that they wish to be considered.\",\n    \"Selection: based on alignment with the strategic objectives of the University and the relevant faculty or research institute.\",\n    \"Eligibility: applicant must be a domestic student, or an international student who is eligible to pay domestic fees for the doctoral programme.\",\n    \"Eligibility: applicant must not already hold a doctorate or have previously received payment for a University of Auckland Doctoral Scholarship.\",\n    \"Eligibility: applicant must not be enrolled in a doctoral programme, except for approved transfers.\",\n    \"More information: https://www.auckland.ac.nz/assets/study/scholarships-and-funding/find-a-scholarship-or-award/regulations/university-of-auckland-doctoral-scholarship.pdf\"\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8982792900,
+  "load_duration": 2573600,
+  "prompt_eval_count": 1682,
+  "prompt_eval_cached_count": 9,
+  "prompt_eval_duration": 2316342000,
+  "eval_count": 284,
+  "eval_duration": 6584921000
+}

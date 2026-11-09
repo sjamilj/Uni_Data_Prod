@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:02:30.3918901Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \n    \"courseName\": \"Master of Audiology\",\n    \"currency\": \"NZD\",\n    \"tuitionFee\": 57974,\n    \"duration\": \"Full-time: 2 years\",\n    \"intakeInfo\": \"2027 Semester One \u2013 1 March, 2028 Semester One \u2013 28 February\",\n    \"availableLocations\": \"Grafton\",\n    \"programmeType\": \"Postgraduate\",\n    \"researchOptions\": \"Yes\",\n    \"englishRequirement\": {\n        \"qualification\": \"IELTS Academic\",\n        \"score\": 7.5\n    },\n    \"entryRequirements\": {\n        \"studyOption\": \"Research 240 points\",\n        \"minimumRequirements\": {\n            \"grade\": \"GPE\",\n            \"gradePointEquivalent\": 5.0\n        },\n        \"degree\": {\n            \"qualification\": \"An undergraduate degree\",\n            \"description\": \"A relevant degree may include subjects in one of health sciences, public health, or science.\"\n        }\n    },\n    \"applicationDeadline\": \"1 July 2027\",\n    \"initialDeposit\": \"\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8173830100,
+  "load_duration": 2562500,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2736265000,
+  "eval_count": 228,
+  "eval_duration": 5354357000
+}

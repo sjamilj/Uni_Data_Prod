@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T21:23:02.0747563Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n\n  \"courseName\": \"Master of Science MSc\",\n\n  \"studyLevel\": \"postgraduate\",\n\n  \"programmeType\": \"research\",\n\n  \"availableLocations\": [\"City\", \"Grafton\", \"Leigh Marine\", \"Newmarket\"],\n\n  \"duration\": \"Full-time: Varies, Part-time: Varies\",\n\n  \"nextStartDates\": [\"2026 Late Year Term \u2013 1 December\", \"2027 Semester One \u2013 1 March\"],\n\n  \"intakeInfo\": \"Month Year\",  \"points\": [\"120\", \"240\"],\n\n  \"entryRequirements\": {\n\n    \"minimumProgrammeRequirements\": [\n\n      {\n\n        \"studyOption\": \"Taught 120 points\",\n\n        \"gradeRequired\": \"GPE 5.0\",\n\n        \"oneYearOfPostgraduateStudy\": true\n\n      },\n\n      {\n\n        \"studyOption\": \"Taught 240 points\",\n\n        \"gradeRequired\": \"GPE 5.0\",\n\n        \"undergraduateDegreeInScience\": true\n\n      },\n\n      {\n\n        \"studyOption\": \"Research 120 points\",\n\n        \"gradeRequired\": \"GPE 5.0\",\n\n        \"oneYearOfPostgraduateStudy\": true\n\n      },\n\n      {\n\n        \"studyOption\": \"Research 240 points\",\n\n        \"gradeRequired\": \"GPE 5.0\",\n\n        \"undergraduateDegreeInScience\": true\n\n      }\n\n    ],\n\n    \"englishLanguageRequirements\": {\n\n      \"qualification\": \"IELTS Academic International English Language Testing System\",\n\n      \"scoreRequired\": \"6.5\",\n\n      \"bands\": [\"No bands less than 6.0\"]\n\n    }\n\n  },\n\n  \"fees\": {\n\n    \"internationalStudents\": [\"NZ$58,258 *\"]\n\n  },\n\n  \"applicationDates\": {\n\n    \"semesterOneClosingDates\": [\n\n      {\"specialisation\": \"Forensic Science\", \"date\": \"1 November\"},\n\n      {\"specialisation\": \"Clinical Exercise Physiology \", \"date\": \"1 November\"},\n\n      {\"specialisation\": \"Psychology\", \"date\": \"1 December\"}\n\n    ],\n\n    \"applicationClosingDates\": [\n\n      {\"semester\": \"Summer School 2027\", \"date\": \"1 December 2026\"},\n\n      {\"semester\": \"Semester One 2027\", \"date\": \"8 December 2026\"},\n\n      {\"semester\": \"Semester Two 2027\", \"date\": \"4 July 2027\"}\n\n    ]\n\n  }\n\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 14964753300,
+  "load_duration": 3092000,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2727489000,
+  "eval_count": 510,
+  "eval_duration": 12152482000
+}

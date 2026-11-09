@@ -1,0 +1,52 @@
+{
+  "courseName": "Bachelor of Engineering (Honours) BE(Hons)",
+  "duration": "Full-time: 4 years",
+  "availableLocations": [
+    "City"
+  ],
+  "points": "480",
+  "programmeType": "Undergraduate",
+  "conjointOptionsAvailable": true,
+  "entryRequirements": [
+    {
+      "qualification": "International Baccalaureate Diploma",
+      "scoreRequired": "24",
+      "additionalRequirements": "Mathematics and Physics at HL level"
+    },
+    {
+      "qualification": "GCE A Level/CIE",
+      "scoreRequired": "BBB",
+      "additionalRequirements": "Mathematics and Physics"
+    },
+    {
+      "qualification": "Prior Tertiary Study",
+      "minimumGradeRequirements": "GPE 5.0",
+      "additionalRequirements": "One year successful bachelor-degree level study at a recognised university (or similar institution) overseas"
+    }
+  ],
+  "englishLanguageRequirements": {
+    "qualification": "IELTS Academic",
+    "scoreRequired": "6.5",
+    "additionalRequirements": "No bands less than 6.0"
+  },
+  "tuitionFees": {
+    "internationalStudents": "NZ$60,910"
+  },
+  "keyDates": [
+    {
+      "applicationClosingDate": "Semester One 2027: 8 December 2026",
+      "additionalInfo": ""
+    },
+    {
+      "applicationClosingDate": "Semester Two 2027: 4 July 2027",
+      "additionalInfo": ""
+    }
+  ],
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-engineering-honours-behons.html",
+  "intakeInfo": "",
+  "courseDuration": "Full-time: 4 years",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

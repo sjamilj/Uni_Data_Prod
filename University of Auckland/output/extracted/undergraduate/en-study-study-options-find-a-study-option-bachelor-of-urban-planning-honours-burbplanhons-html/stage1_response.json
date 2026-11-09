@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:51:21.6681884Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Bachelor of Urban Planning (Honours)\",\n  \"courseDuration\": \"4 years\",\n  \"nextStartDates\": [\"1 March 2027\", \"28 February 2028\"],\n  \"availableLocations\": [\"City\"],\n  \"points\": 480,\n  \"programmeType\": \"Undergraduate\",\n  \"entryRequirements\": {\n    \"secondarySchool\": {\n      \"qualifications\": [\"IB Diploma\", \"GCE A Level\", \"CIE\"],\n      \"scores\": [\"31\", \"BCC\"]\n    },\n    \"tertiaryInstitution\": {\n      \"qualifications\": [\"Bachelor degree\"],\n      \"scores\": [\"3.0\"]\n    }\n  },\n  \"englishLanguageRequirements\": {\n    \"score\": 6.0,\n    \"bands\": [\"No bands less than 5.5\"]\n  },\n  \"fees\": {\n    \"2027\": {\n      \"international\": 49582\n    }\n  },\n  \"applicationClosingDates\": {\n    \"2027\": \"8 December 2026\"\n  },\n  \"initialDeposit\": \"\",\n  \"currency\": \"NZD\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8413628500,
+  "load_duration": 3608700,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2732554000,
+  "eval_count": 237,
+  "eval_duration": 5568622000
+}

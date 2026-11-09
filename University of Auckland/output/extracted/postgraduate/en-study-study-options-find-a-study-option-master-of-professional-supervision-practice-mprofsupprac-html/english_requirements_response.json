@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T21:16:43.7501824Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"AcademicRequirementsMetaData\": [],\n  \"ieltsMinOverall\": \"6.5\",\n  \"ieltsMinSection\": \"6\",\n  \"toeflMinOverall\": \"90\",\n  \"toeflMinSection\": \"21\",\n  \"pteMinOverall\": \"58\",\n  \"pteMinSection\": \"50\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4451759900,
+  "load_duration": 2583500,
+  "prompt_eval_count": 1976,
+  "prompt_eval_cached_count": 9,
+  "prompt_eval_duration": 2657744000,
+  "eval_count": 73,
+  "eval_duration": 1688900000
+}

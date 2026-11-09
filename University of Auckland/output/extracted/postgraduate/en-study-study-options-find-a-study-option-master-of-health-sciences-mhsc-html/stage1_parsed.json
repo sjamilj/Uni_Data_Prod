@@ -1,0 +1,58 @@
+{
+  "courseName": "Master of Health Sciences MHSc",
+  "courseType": "Postgraduate",
+  "availableLocations": [
+    "Grafton"
+  ],
+  "intakeInfo": "",
+  "programmeType": "Taught & research options available",
+  "duration": "Full-time: Varies, Part-time: Varies",
+  "points": [
+    120,
+    180
+  ],
+  "programmeRequirements": [
+    {
+      "studyOption": "Taught 120 points",
+      "gradeRequired": {
+        "GPE": 5.0
+      },
+      "description": "One year of postgraduate study"
+    },
+    {
+      "studyOption": "Taught 180 points",
+      "gradeRequired": {
+        "GPE": 5.0
+      },
+      "description": "An undergraduate degree"
+    },
+    {
+      "studyOption": "Research 120 points",
+      "gradeRequired": {
+        "GPE": 5.0
+      },
+      "description": "One year of postgraduate study"
+    }
+  ],
+  "englishScores": [
+    {
+      "qualification": "IELTS Academic",
+      "scoreRequired": 6.5,
+      "bandsRequired": {
+        "noBandsLessThan": 6.0
+      }
+    }
+  ],
+  "tuitionFee": "",
+  "applicationDeadline": [
+    "8 December 2026",
+    "4 July 2027",
+    "11 November 2026"
+  ],
+  "initialDeposit": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-health-sciences-mhsc.html",
+  "courseDuration": "Full-time: Varies",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

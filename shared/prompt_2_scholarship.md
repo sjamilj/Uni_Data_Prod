@@ -32,6 +32,14 @@ Use only the provided input. Never use outside knowledge, guess, infer, or estim
 
 Prefer an explicit multi-year total when stated (e.g. £4,500 across three years → amount `4500`, type `Amount`). Do not invent scholarships from other universities.
 
+## No scholarship found
+
+If the input contains no scholarship, bursary, award or funding opportunity for this course:
+
+- `scholarshipName` = `""`, `scholarshipAmount` = `""`, `scholarshipType` = `""`
+- `scholarshipMetaData` = `[]` (empty array — no object with empty or placeholder text)
+- **Never** output `"N/A"`, `"None"`, `"Not found"` or any placeholder, in any field or in `description`.
+
 ## Output
 
 Return exactly one JSON object in a single ` ```json ` block. **Only these keys:**

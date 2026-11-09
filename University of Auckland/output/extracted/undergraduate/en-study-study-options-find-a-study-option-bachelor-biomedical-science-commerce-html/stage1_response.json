@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:43:57.442431Z",
+  "message": {
+    "role": "assistant",
+    "content": "{  \n  \"courseName\": \"Bachelor of Biomedical Science/Bachelor of Commerce Conjoint\",  \n  \"courseDuration\": \"Full-time: 4 years\",  \n  \"programmeType\": \"Undergraduate\",  \n  \"studyLevel\": \"undergraduate\",  \n  \"nextStartDates\": \"2027 Semester One \u2013 1 March, 2028 Semester One \u2013 28 February\",  \n  \"availableLocations\": \"City, Grafton\",  \n  \"points\": 540,  \n  \"intakeInfo\": \"March, February\",  \n  \"qualification\": \"IB, IELTS, CIE, GCE\",  \n  \"entryRequirements\": {  \n    \"minimumGrade\": {  \n      \"IB\": \"28\",  \n      \"CIE\": \"230\",  \n      \"GCE\": \"BBC\"  \n    },  \n    \"minimumSubject\": {  \n      \"IB\": \"\",  \n      \"CIE\": \"\",  \n      \"GCE\": \"\"  \n    },  \n    \"englishScore\": {  \n      \"IB\": \"\",  \n      \"CIE\": \"\",  \n      \"GCE\": \"\"  \n    }  \n  },  \n  \"fees\": {  \n    \"currency\": \"NZD\",  \n    \"amount\": \"53,179.20 \u2013 57,398\"  \n  },  \n  \"applicationDeadline\": \"8 December 2026\",  \n  \"initialDeposit\": \"\"  \n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9863075800,
+  "load_duration": 3349600,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2732759000,
+  "eval_count": 298,
+  "eval_duration": 7030526000
+}

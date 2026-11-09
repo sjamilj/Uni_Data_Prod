@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:00:43.8038871Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \"courseName\": \"Master of Artificial Intelligence MAI\", \"courseDuration\": \"Full-time: Varies, Part-time: Varies\", \"nextStartDates\": [\"1 March 2027\", \"28 February 2028\"], \"availableLocations\": [\"City\"], \"points\": [120, 180], \"programmeType\": \"Postgraduate\", \"entryRequirements\": [{ \"studyOption\": \"Taught 120 points\", \"gradeRequired\": \"GPE 4.0\" }, { \"studyOption\": \"Taught 180 points\", \"gradeRequired\": \"GPE 4.0\" }, { \"qualification\": \"IELTS Academic\", \"scoreRequired\": \"6.5\", \"englishRequirements\": \"No bands below 6.0\" }], \"fees\": [{ \"internationalStudents\": \"NZ$57,292 \u2013 $57,293\" }], \"keyDates\": [{ \"applicationClosingDates\": \"8 December 2026\" }] }"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7619105900,
+  "load_duration": 3114700,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2737547000,
+  "eval_count": 204,
+  "eval_duration": 4789289000
+}

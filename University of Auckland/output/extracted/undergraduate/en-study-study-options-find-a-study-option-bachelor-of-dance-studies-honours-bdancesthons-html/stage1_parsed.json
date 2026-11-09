@@ -1,0 +1,37 @@
+{
+  "courseName": "Bachelor of Dance Studies (Honours)",
+  "courseDuration": "Full-time: 1 year",
+  "availableLocations": [
+    "City"
+  ],
+  "coursePoints": 120,
+  "programmeType": "Postgraduate",
+  "entryRequirements": {
+    "programmeRequirements": {
+      "minimumProgrammeRequirements": {
+        "studyOption": "Taught 120 points",
+        "gradeRequired": {
+          "gpe": 5.0,
+          "description": "An undergraduate degree in dance"
+        }
+      }
+    }
+  },
+  "intakeInfo": "",
+  "englishScores": {
+    "qualification": "IELTS Academic",
+    "scoreRequired": 6.5,
+    "noBandsLessThan": 6.0
+  },
+  "tuitionFee": "",
+  "keyDates": {
+    "applicationClosingDates": {
+      "semesterOne": "8 December 2026",
+      "semesterTwo": "4 July 2027"
+    }
+  },
+  "currency": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-dance-studies-honours-bdancesthons.html",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

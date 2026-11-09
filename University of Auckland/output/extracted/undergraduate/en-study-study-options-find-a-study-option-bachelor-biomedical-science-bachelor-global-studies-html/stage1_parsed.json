@@ -1,0 +1,50 @@
+{
+  "courseName": "Bachelor of Biomedical Science/Bachelor of Global Studies Conjoint",
+  "quickFacts": {
+    "duration": "Full-time: 4 years",
+    "nextStartDates": [
+      "2027 Semester One \u2013 1 March",
+      "2028 Semester One \u2013 28 February"
+    ],
+    "availableLocations": [
+      "City, Grafton"
+    ],
+    "points": 540,
+    "programmeType": "Undergraduate"
+  },
+  "entryRequirements": {
+    "secondarySchool": {
+      "qualifications": [
+        "International Baccalaureate Diploma",
+        "General Certificate of Education (GCE) Advanced Level",
+        "Cambridge International Examinations (CIE)"
+      ],
+      "minimumScores": {
+        "IB": 24,
+        "GCE": 3,
+        "CIE": 3
+      }
+    },
+    "priorTertiaryStudy": {
+      "minimumGradeRequirements": {
+        "GPE": 3.9
+      },
+      "englishLanguageRequirements": "6.0 with no bands less than 5.5"
+    }
+  },
+  "fees": {
+    "internationalStudents": "NZ$53,179.20 \u2013 $61,599"
+  },
+  "keyDates": {
+    "applicationClosingDates": {
+      "semesterOne2027": "8 December 2026"
+    }
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-biomedical-science-bachelor-global-studies.html",
+  "intakeInfo": "",
+  "courseDuration": "Full-time: 4 years",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

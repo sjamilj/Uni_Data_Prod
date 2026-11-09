@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:13:14.3206368Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"scholarshipName\": \"\", \"scholarshipAmount\": \"\", \"scholarshipType\": \"\", \"scholarshipMetaData\": []}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3229921900,
+  "load_duration": 2859200,
+  "prompt_eval_count": 1833,
+  "prompt_eval_cached_count": 9,
+  "prompt_eval_duration": 2476181000,
+  "eval_count": 30,
+  "eval_duration": 678550000
+}

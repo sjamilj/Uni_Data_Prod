@@ -1,0 +1,41 @@
+{
+  "courseName": "Bachelor of Music (Honours)",
+  "courseDescription": "A research-based postgraduate qualification that focuses on developing your academic skills and researching a topic of interest in music.",
+  "courseDuration": "Full-time: 1 year",
+  "availableLocations": [
+    "City"
+  ],
+  "coursePoints": 120,
+  "programmeType": "Postgraduate",
+  "studyOptions": [
+    "Taught 120 points"
+  ],
+  "entryRequirements": {
+    "studyOption": "Taught 120 points",
+    "gradeRequired": "5.0",
+    "gpe": "Grade Point Equivalent",
+    "qualification": "An undergraduate degree",
+    "englishLanguage": {
+      "qualification": "IELTS Academic",
+      "scoreRequired": "6.5",
+      "bands": {
+        "minimum": "6.0"
+      }
+    }
+  },
+  "fees": {
+    "international": "NZ$49,582"
+  },
+  "keyDates": {
+    "applicationClosingDates": {
+      "semesterOne": "8 December 2026",
+      "semesterTwo": "4 July 2027"
+    }
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-music-honours-bmus-hons.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

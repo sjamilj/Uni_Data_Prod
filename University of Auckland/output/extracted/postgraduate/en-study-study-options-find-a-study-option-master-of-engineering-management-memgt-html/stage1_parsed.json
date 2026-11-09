@@ -1,0 +1,57 @@
+{
+  "courseName": "Master of Engineering Management MEMgt",
+  "courseDescription": "This postgraduate programme is designed to help you develop the skills and knowledge required to manage engineering projects effectively.",
+  "currency": "",
+  "tuitionFee": "",
+  "tuitionFeeRange": "NZ$56,327 *",
+  "tuitionFeeNote": "Fees are set in advance of each calendar year and will be updated on this website.",
+  "availableLocations": [
+    "City",
+    "University of Auckland Online"
+  ],
+  "nextStartDates": [
+    "2027 Semester One \u2013 1 March",
+    "2027 Semester Two \u2013 19 July"
+  ],
+  "programmeType": "Postgraduate",
+  "studyDuration": "Full-time: 1 year",
+  "studyDurationPartTime": "Part-time: Varies",
+  "programmeEntryRequirements": {
+    "minimumRequirements": {
+      "studyOption": "Taught 120 points",
+      "gradeRequired": "GPE 5.0",
+      "qualification": "Four-year engineering degree",
+      "englishLanguage": {
+        "test": "IELTS Academic",
+        "score": "6.5",
+        "bands": "No bands less than 6.0"
+      }
+    }
+  },
+  "programmeRequirements": {
+    "minimumProgrammeRequirements": {
+      "studyOption": "Taught 120 points",
+      "gradeRequired": "GPE 5.0",
+      "qualification": "Four-year bachelors degree in engineering at a recognised university (or similar institution)",
+      "requirements": [
+        "Broad coverage in your first year of the foundational science topics that underpin engineering disciplines: mathematical modelling, chemical and materials science, electrical engineering theory, mechanics, programming, and engineering design.",
+        "One year of postgraduate-level study.",
+        "A research project or dissertation comprising at least one-quarter of the final year."
+      ]
+    }
+  },
+  "applicationClosingDates": [
+    "2027 Semester One: 8 December 2026",
+    "2027 Semester Two: 8 July 2027"
+  ],
+  "initialDeposit": "",
+  "metadata": {
+    "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-engineering-management-memgt.html",
+    "studyLevel": "postgraduate"
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-engineering-management-memgt.html",
+  "intakeInfo": "",
+  "courseDuration": "Full-time: 1 year",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

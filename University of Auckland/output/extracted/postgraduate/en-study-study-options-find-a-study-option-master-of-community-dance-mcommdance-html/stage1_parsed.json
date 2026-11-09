@@ -1,0 +1,58 @@
+{
+  "courseName": "Master of Community Dance MCommDance",
+  "courseDuration": "Full-time: 1 year",
+  "availableLocations": [
+    "City"
+  ],
+  "programmeType": "Postgraduate",
+  "researchOptions": true,
+  "programmeRequirements": {
+    "minimumRequirements": [
+      {
+        "studyOption": "Research 120 points",
+        "gradeRequired": "5.0",
+        "gpe": "5.0",
+        "qualification": "One year of postgraduate study"
+      },
+      {
+        "studyOption": "Research 120 points",
+        "gradeRequired": "6.5",
+        "gpe": "",
+        "qualification": "IELTS Academic"
+      }
+    ]
+  },
+  "entryRequirements": {
+    "research120Points": {
+      "completed": [
+        "a one-year postgraduate qualification, following an undergraduate degree, in dance studies",
+        "a one-year postgraduate degree and have demonstrated the ability to undertake advanced studies in community dance"
+      ],
+      "studyMustHaveBeenAt": "a recognised university (or similar institution)",
+      "gpeRequired": "5.0",
+      "submitResearchProposal": true,
+      "cvInterview": true
+    }
+  },
+  "tuitionFees": {
+    "internationalStudents": 58257.6
+  },
+  "keyDates": {
+    "nextStartDate": [
+      "2026 Late Year Term \u2013 1 December",
+      "2027 Semester One \u2013 1 March"
+    ],
+    "applicationClosingDates": [
+      "8 December 2026",
+      "4 July 2027",
+      "11 November 2025",
+      "11 November 2026"
+    ]
+  },
+  "currency": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-community-dance-mcommdance.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

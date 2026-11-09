@@ -1,0 +1,56 @@
+{
+  "courseName": "Master of Engineering ME",
+  "duration": "Full-time: Varies",
+  "nextStart": {
+    "2026 Late Year Term": "1 December",
+    "2027 Semester One": "1 March"
+  },
+  "availableLocations": [
+    "City",
+    "Grafton",
+    "Newmarket"
+  ],
+  "points": [
+    120,
+    180
+  ],
+  "programmeType": "Postgraduate",
+  "researchOptionsAvailable": true,
+  "entryRequirements": {
+    "studyOption": {
+      "Research 120 points": {
+        "gradeRequired": "GPE Grade Point Equivalent 5.0",
+        "qualification": "Four-year engineering degree"
+      },
+      "Research 180 points": {
+        "gradeRequired": "GPE Grade Point Equivalent 5.0",
+        "qualification": "An engineering degree"
+      }
+    },
+    "qualification": {
+      "IELTS Academic": {
+        "scoreRequired": "6.5",
+        "bands": "No bands less than 6.0"
+      }
+    }
+  },
+  "fees": {
+    "2027": {
+      "International students": "NZ$58,258"
+    }
+  },
+  "keyDates": {
+    "Application closing dates": {
+      "Semester One 2027": "8 December 2026",
+      "Semester Two 2027": "8 July 2027",
+      "Late Year Semester 2026": "11 November 2026"
+    }
+  },
+  "currency": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-engineering-me.html",
+  "intakeInfo": "",
+  "courseDuration": "Full-time: Varies",
+  "tuitionFee": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

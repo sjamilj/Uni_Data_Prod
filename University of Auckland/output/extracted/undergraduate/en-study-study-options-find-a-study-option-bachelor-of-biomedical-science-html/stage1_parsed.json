@@ -1,0 +1,28 @@
+{
+  "courseName": "Bachelor of Biomedical Science",
+  "currency": "",
+  "tuitionFee": "",
+  "duration": "",
+  "intakeInfo": "",
+  "applicationDeadline": "8 December 2026",
+  "initialDeposit": "",
+  "englishScore": 6.0,
+  "entryRequirements": [
+    {
+      "qualification": "International Baccalaureate Diploma",
+      "scoreRequired": 28
+    },
+    {
+      "qualification": "GCE A Level/CIE",
+      "scoreRequired": 200
+    },
+    {
+      "qualification": "Prior tertiary study",
+      "gpe": 3.5
+    }
+  ],
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-biomedical-science.html",
+  "courseDuration": "Full-time: 3 years",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

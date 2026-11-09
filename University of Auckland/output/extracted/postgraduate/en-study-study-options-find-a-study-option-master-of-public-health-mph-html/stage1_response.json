@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T21:18:12.7010546Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Master of Public Health (MPH)\",\n  \"courseDuration\": \"Full-time: Varies, Part-time: Varies\",\n  \"nextStartDate\": \"2026 Late Year Term - 1 December, 2027 Semester One - 1 March\",\n  \"availableLocations\": \"Grafton\",\n  \"points\": \"120 or 240\",\n  \"programmeType\": \"Postgraduate\",\n  \"programmeTypeDescription\": \"Taught & research options available\",\n  \"fees\": {\n    \"internationalStudents\": \"NZ$57,974\"\n  },\n  \"studentServicesFee\": \"NZ$1,132.80\",\n  \"entryRequirements\": {\n    \"minimumProgrammeRequirements\": [\n      {\n        \"studyOption\": \"Taught\",\n        \"points\": \"120\",\n        \"gradeRequired\": \"5.0\",\n        \"description\": \"One year of postgraduate study in public health at a recognised university (or similar institution) following an undergraduate degree.\"\n      },\n      {\n        \"studyOption\": \"Research\",\n        \"points\": \"120\",\n        \"gradeRequired\": \"5.0\",\n        \"description\": \"One year of postgraduate study in public health at a recognised university (or similar institution) following an undergraduate degree.\"\n      },\n      {\n        \"studyOption\": \"Taught\",\n        \"points\": \"240\",\n        \"gradeRequired\": \"5.0\",\n        \"description\": \"An undergraduate degree at a recognised university (or similar institution) in one of the following subjects: dentistry, health sciences, medicine, nursing, occupational therapy, optometry, pharmacy, physiotherapy, psychology, public health, optometry science, social sciences for public health.\"\n      },\n      {\n        \"studyOption\": \"Research\",\n        \"points\": \"240\",\n        \"gradeRequired\": \"5.0\",\n        \"description\": \"An undergraduate degree at a recognised university (or similar institution) in one of the following subjects: dentistry, health sciences, medicine, nursing, occupational therapy, optometry, pharmacy, physiotherapy, psychology, public health, optometry science, social sciences for public health.\"\n      }\n    ],\n    \"qualificationRequirements\": {\n      \"ieltsAcademic\": \"6.5\",\n      \"noBandsLessThan\": \"6.0\"\n    },\n    \"alternativeEnglishLanguageRequirements\": \"https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/postgraduate-entry-requirements/postgraduate-english-language-requirements.html\"\n  },\n  \"keyDates\": {\n    \"1DecemberStart\": \"Subject to supervisor availability\",\n    \"applicationClosingDates\": [\n      \"Semester One 2027: 8 December 2026\",\n      \"Semester Two 2027: 4 July 2027\",\n      \"Late Year Semester 2026: Domestic 11 November 2026, International\"\n    ]\n  }\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 17256394500,
+  "load_duration": 2557300,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2724796000,
+  "eval_count": 609,
+  "eval_duration": 14444532000
+}

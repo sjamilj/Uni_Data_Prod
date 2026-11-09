@@ -1,0 +1,27 @@
+{
+  "approach": "ALL_COURSE",
+  "phase": "urls_complete",
+  "course_urls": [
+    "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-music-science.html",
+    "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-commerce-health-sciences.html",
+    "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-arts-science.html",
+    "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-health-sciences-laws-honours.html",
+    "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-commerce-global-studies.html",
+    "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-information-technology-minfotech.html",
+    "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-taxation-studies-mtaxs.html",
+    "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-operations-research-and-analytics-moran.html",
+    "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-teaching-english-to-speakers-of-other-languages-mtesol.html",
+    "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-design-mdes.html",
+    "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/doctor-of-clinical-psychology-dclinpsy.html",
+    "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/doctor-of-education-edd.html",
+    "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/doctor-of-health-sciences-dhsc.html",
+    "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/doctor-of-fine-arts-docfa.html",
+    "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/doctor-of-philosophy-phd.html"
+  ],
+  "listing_completed": [],
+  "group_state": {},
+  "listing_configs": [],
+  "url_levels": {},
+  "started_at": "2026-11-01T18:27:42+00:00",
+  "updated_at": "2026-11-01T18:27:42+00:00"
+}

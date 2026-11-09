@@ -1,0 +1,64 @@
+{
+  "courseName": "Master of Teaching English to Speakers of Other Languages MTESOL",
+  "courseDuration": "Full-time: Varies",
+  "intakeInfo": "",
+  "availableLocations": [
+    "City"
+  ],
+  "programmeType": "Postgraduate",
+  "taughtOptions": "Taught options available",
+  "programmeRequirements": {
+    "minimumProgrammeRequirements": [
+      {
+        "studyOption": "Taught 120 points",
+        "gradeRequired": "GPE 3.5",
+        "description": "One year of relevant postgraduate study or a relevant undergraduate degree and work experience"
+      },
+      {
+        "studyOption": "Taught 180 points",
+        "gradeRequired": "GPE 3.5",
+        "description": "A relevant bachelors degree"
+      },
+      {
+        "qualification": "IELTS Academic",
+        "scoreRequired": "6.5",
+        "description": "No bands less than 6.0"
+      }
+    ]
+  },
+  "tuitionFees": {
+    "internationalStudents": [
+      {
+        "year": "2027",
+        "amount": "$46,877"
+      },
+      {
+        "year": "2027",
+        "amount": "$47,218"
+      }
+    ]
+  },
+  "keyDates": {
+    "applicationClosingDates": [
+      {
+        "year": "2027",
+        "semester": "Semester One",
+        "date": "8 December 2026"
+      },
+      {
+        "year": "2027",
+        "semester": "Semester Two",
+        "date": "4 July 2027"
+      }
+    ]
+  },
+  "currency": "",
+  "englishScores": {
+    "required": "6.5",
+    "minBand": "6.0"
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-teaching-english-to-speakers-of-other-languages-mtesol.html",
+  "tuitionFee": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

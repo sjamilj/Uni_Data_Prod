@@ -1,0 +1,18 @@
+{
+  "degreeName": "MHRM",
+  "requirements": [
+    {
+      "degree": "BA",
+      "grade": "More than 60-65% and above"
+    }
+  ],
+  "AcademicRequirementsMetaData": [
+    {
+      "subtitle": "Entry Requirements",
+      "description": [
+        "A bachelor's degree with a GPA of 3.0 or higher in a relevant field. Applicants must provide evidence of appropriate knowledge and skills in Human Resource Management, organisational theory, research methods and statistical analysis.",
+        "Graduate Diploma (Level 7): More than 60% and above in Graduation"
+      ]
+    }
+  ]
+}

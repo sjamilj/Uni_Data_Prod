@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:29:57.9881901Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \"courseName\": \"Bachelor of Arts / Bachelor of Global Studies Conjoint\", \"courseDuration\": \"Full-time: 4 years\", \"availableLocations\": \"City\", \"points\": 540, \"programmeType\": \"Undergraduate\", \"conjointOptionsAvailable\": true, \"nextStartDates\": \"2027 Semester One \u2013 1 March, 2028 Semester One \u2013 28 February\", \"entryRequirements\": [ { \"qualification\": \"International Baccalaureate Diploma\", \"scoreRequired\": 28 }, { \"qualification\": \"GCE A Level/CIE\", \"scoreRequired\": \"BBC\" }, { \"qualification\": \"Prior tertiary study\", \"minimumGradeRequirements\": \"3.9\", \"minimumEnglishScore\": \"6.0\" } ], \"fees\": { \"internationalStudents\": 61699 }, \"applicationClosingDates\": \"8 December 2026\", \"intakeInfo\": \"Month Year\", \"applicationDeadline\": \"2027-12-08\", \"initialDeposit\": \"\" }"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7866042600,
+  "load_duration": 4126400,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2752891000,
+  "eval_count": 213,
+  "eval_duration": 5014605000
+}

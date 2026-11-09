@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:41:18.2706799Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \n  \"courseName\": \"Bachelor of Biomedical Science/Bachelor of Laws Conjoint\",\n  \"availableLocations\": [\"City\", \"Grafton\"],\n  \"studyLevel\": \"undergraduate\",\n  \"programmeType\": \"Undergraduate\",\n  \"points\": 675,\n  \"duration\": \"Full-time: 5 years\",\n  \"nextStartDates\": [\"2027 Semester One \u2013 1 March\", \"2028 Semester One \u2013 28 February\"],\n  \"guaranteedGradesRequirements\": {\n    \"Qualification\": {\n      \"IB\": {\n        \"scoreRequired\": 28,\n        \"IELTSScoreRequired\": 6.0\n      },\n      \"CIE\": {\n        \"scoreRequired\": 230,\n        \"IELTSScoreRequired\": 6.0\n      },\n      \"GCE A Level\": {\n        \"scoreRequired\": \"BBC\",\n        \"IELTSScoreRequired\": 6.0\n      },\n      \"GPE\": {\n        \"scoreRequired\": 3.9,\n        \"IELTSScoreRequired\": 6.0\n      }\n    }\n  },\n  \"tuitionFee\": \"NZ$47,270.40\",\n  \"studentServicesFee\": \"NZ$1,132.80\",\n  \"englishScores\": {\n    \"IELTS\": {\n      \"scoreRequired\": 6.0,\n      \"bandsRequired\": \"5.5\"\n    }\n  },\n  \"alternativeEnglishLanguageRequirements\": \"https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/undergraduate-english-language-requirements.html\",\n  \"priorTertiaryStudyRequirements\": \"https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/prior-tertiary-study.html\",\n  \"applicationClosingDates\": {\n    \"Semester One 2027\": \"8 December 2026\"\n  },\n  \"intakeInfo\": \"March, 28 February\",\n  \"initialDeposit\": \"\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 13089113500,
+  "load_duration": 3143600,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 5,
+  "prompt_eval_duration": 2726764000,
+  "eval_count": 435,
+  "eval_duration": 10273646000
+}

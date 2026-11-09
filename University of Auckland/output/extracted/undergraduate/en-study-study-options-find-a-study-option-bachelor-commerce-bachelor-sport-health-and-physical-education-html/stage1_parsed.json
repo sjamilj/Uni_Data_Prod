@@ -1,0 +1,53 @@
+{
+  "courseName": "Bachelor of Commerce / Bachelor of Sport, Health and Physical Education Conjoint",
+  "availableLocations": [
+    "City"
+  ],
+  "programmeType": "Undergraduate",
+  "duration": "Full-time: 4 years\nPart-time: Varies",
+  "nextStartDates": [
+    "2027 Semester One \u2013 1 March",
+    "2027 Semester Two \u2013 19 July"
+  ],
+  "points": 540,
+  "intakeInfo": "",
+  "entryRequirements": {
+    "secondarySchool": {
+      "qualification": [
+        "IB International Baccalaureate Diploma",
+        "General Certificate of Education (GCE) Advanced Level",
+        "Cambridge International Examinations (CIE)"
+      ],
+      "score": [
+        "28",
+        "BBC"
+      ],
+      "englishScore": {
+        "score": "6.0",
+        "bands": "No bands less than 5.5"
+      }
+    },
+    "tertiaryInstitution": {
+      "qualification": "One year successful bachelor-degree level study at a recognised university (or similar institution) overseas",
+      "score": "",
+      "englishScore": {
+        "score": "6.0",
+        "bands": "No bands less than 5.5"
+      }
+    }
+  },
+  "tuitionFees": {
+    "NZ$57,398": "*Please note: amounts shown are indicative and estimates only."
+  },
+  "applicationDeadlines": [
+    "8 December 2026",
+    "4 July 2027"
+  ],
+  "initialDeposit": "",
+  "currency": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-commerce-bachelor-sport-health-and-physical-education.html",
+  "courseDuration": "Full-time: 4 years",
+  "tuitionFee": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

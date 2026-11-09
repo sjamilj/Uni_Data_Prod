@@ -1,0 +1,133 @@
+# Stage 2d: Initial deposit (LLM only)
+
+Read the **international student tuition fee for one full year** from the course page. Output it as `initialDeposit`, with a fixed `feesMetaData` description.
+
+Do **not** output `uniName`, course URL, `requirements`, IELTS/PTE/TOEFL, scholarships, intake, duration, `applicationFee` or `currency`. Python fills those.
+
+Use only the provided input. Never use outside knowledge.
+
+## Input
+- Course: `Master Of Regional Development Mregdev.Html`
+- URL: `https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-regional-development-mregdev.html`
+- Course page:
+
+```
+<!-- pipeline: course_url=https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-regional-development-mregdev.html study_level=postgraduate -->
+## Quick facts
+
+- **Duration**
+
+- **Available locations**
+
+- **Programme type**
+
+## 2027 entry requirements
+
+### Programme requirements
+
+#### Minimum programme requirements
+
+Minimum requirements listed here are the likely grades required and do not guarantee entry. We assess each application individually and applicants may require a higher grade to be offered a place.
+
+- Study option Taught 120 points Grade required GPE Grade Point Equivalent 5.0
+- Study option Taught 180 points Grade required GPE Grade Point Equivalent 5.0
+- Qualification IELTS Academic International English Language Testing System Score required 6.5  No bands below 6.0.
+[See alternative English language requirements](https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/postgraduate-entry-requirements/postgraduate-english-language-requirements.html)
+
+[Calculate your Grade Point Equivalent (GPE)](http://www.gpecalculator.auckland.ac.nz/?utm_source=auckland&utm_medium=postgraduate)
+
+You must have either:
+
+A one-year postgraduate qualification with at least a GPA of 5.0 from a recognised university (or similar institution) and have at least two years of relevant professional experience in regional development or equivalent,
+
+or
+
+a bachelors degree from a recognised university (or similar institution), and have passed 60 points towards the Postgraduate Certificate in Regional Development from the University of Auckland with at least a GPA of 5.0, provided that the postgraduate certificate has not been awarded.
+
+You must have either:
+
+A bachelors degree with at least a GPA of 5.0 from a recognised university (or similar institution) and have at least two years of relevant professional experience in regional development or equivalent,
+
+or
+
+a bachelors degree from a recognised university (or similar institution) and have passed 60 points towards the Postgraduate Certificate in Regional Development from this university with at least a GPA of 5.0, provided that the postgraduate certificate has not been awarded.
+
+## How much does a Master of Regional Development cost per year?
+
+### 2027 fees
+
+- **International students:** NZ$58,258 *
+
+Fees are set in advance of each calendar year and will be updated on this website. Fees are inclusive of 15% GST, but do not include the Student Services Fee, course books, travel and health insurance, or living costs. Amounts shown are indicative only. In addition to the tuition fees, there is a Student Services Fee of $9.44 per point, estimated at $1,132.80 for full-time study (120 points). Fees will be confirmed upon completion of enrolment into courses.
+
+*Please note: amounts shown are indicative and estimates only.
+
+[See course fees for each faculty](https://www.auckland.ac.nz/en/study/fees-and-money-matters/tuition-fees/fees-by-faculty.html)
+
+## Key dates
+
+Note: For international applicants, the application closing date for Semester Two 2024 is24 May 2024.
+
+Please note: We will consider late applications if places are still available. International students should start the application process as early as possible to allow sufficient time to apply for a visa.
+
+### Application closing dates
+
+- **Semester One 2025:** 8 December 2024
+
+- **Semester Two 2024:** 4 July 2024
+```
+
+## Rules
+
+### 1. `initialDeposit`
+- `initialDeposit` is the **international student tuition fee for one full year**, taken from the course page.
+- It is a **top-level** field, outside `feesMetaData`.
+- Digits only: no currency symbol (`$`, `NZ$`), no currency code, no commas, no spaces.
+- Keep decimals only when needed (e.g. `42236.4`).
+- Use the **International** fee only. Never use a Domestic, Home or New Zealand fee.
+- If the page gives a per-point or per-semester fee but no full-year fee, do **not** calculate one. Use `""`.
+- If the page gives a range or several fees, use the one for this course. If you cannot tell which applies, use `""`.
+- If no international tuition fee is on the page, use `""`.
+- Do not guess, convert currencies or invent amounts.
+
+### 2. `feesMetaData`
+- If `initialDeposit` is not empty, output exactly this one item, word for word:
+
+```json
+{
+  "subtitle": "Initial Tuition Fee Deposit",
+  "description": [
+    "International student enrolled in a full-year course or studying from outside New Zealand on a student visa, you are generally required to pay your full year's tuition fees upfront at the start of your first semester"
+  ]
+}
+```
+
+- If `initialDeposit` is `""`, output `"feesMetaData": []`.
+- Do not change, shorten or add to the description text.
+
+## Output
+
+Return exactly one JSON object in a single ` ```json ` block, with only these keys:
+
+```json
+{
+  "initialDeposit": "",
+  "feesMetaData": []
+}
+```
+
+### Example (format only; do not copy the values)
+
+```json
+{
+  "initialDeposit": "51020.4",
+  "feesMetaData": [
+    {
+      "subtitle": "Initial Tuition Fee Deposit",
+      "description": [
+        "International student enrolled in a full-year course or studying from outside New Zealand on a student visa, you are generally required to pay your full year's tuition fees upfront at the start of your first semester"
+      ]
+    }
+  ]
+}
+```

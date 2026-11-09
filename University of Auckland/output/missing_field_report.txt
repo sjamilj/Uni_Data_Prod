@@ -1,0 +1,97 @@
+==============================================================================
+University of Auckland — missing field statistics
+==============================================================================
+Source: D:\DATA SCOL\UK_Uni_Data\University of Auckland\output\dev_courses_University of Auckland_reviewed.csv
+Total courses: 193
+
+Required fields: uniName, programmeName, degreeName, courseName, minDegreeName, minGpa, intakeInfo
+
+Courses per level:
+  Postgraduate Research     5
+  Postgraduate             93
+  Undergraduate            95
+
+------------------------------------------------------------------------------
+REQUIRED fields — courses missing at least one required field
+------------------------------------------------------------------------------
+  Postgraduate Research     5/5  (100.0%)
+  Postgraduate             93/93  (100.0%)
+  Undergraduate            95/95  (100.0%)
+
+------------------------------------------------------------------------------
+Key fields summary
+------------------------------------------------------------------------------
+
+Postgraduate Research (5 courses):
+  degreeName               4/5  (80.0% missing)
+  courseDuration           2/5  (40.0% missing)
+  tuitionFee               5/5  (100.0% missing)
+  currency                 0/5  (0.0% missing)
+  applicationDeadline      4/5  (80.0% missing)
+
+Postgraduate (93 courses):
+  degreeName              90/93  (96.8% missing)
+  courseDuration          49/93  (52.7% missing)
+  tuitionFee              93/93  (100.0% missing)
+  currency                 0/93  (0.0% missing)
+  applicationDeadline     63/93  (67.7% missing)
+
+Undergraduate (95 courses):
+  degreeName              55/95  (57.9% missing)
+  courseDuration           3/95  (3.2% missing)
+  tuitionFee              95/95  (100.0% missing)
+  currency                 0/95  (0.0% missing)
+  applicationDeadline     54/95  (56.8% missing)
+
+------------------------------------------------------------------------------
+Per-field missing counts (empty cells)
+------------------------------------------------------------------------------
+Field                     Postgraduate R  Postgraduate Undergraduate
+--------------------------------------------------------------------
+uniName                                0             0             0
+programmeName                          5            93            95
+courseName                             0             0             0
+minDegreeName                          0             0             0
+minGpa                                 0             0             0
+higherDegreeName                       2            79            76
+higherGpa                              2            79            76
+AcademicRequirementsMetaData             0             0             0
+intakeInfo                             5            93            95
+courseDuration                         2            49             3
+tuitionFee                             5            93            95
+currency                               0             0             0
+initialDeposit                         0             0             0
+applicationFee                         5            93            95
+feesMetaData                           0             0             0
+commission                             5            93            95
+applicationDeadline                    4            63            54
+ieltsMinOverall                        0             0             0
+ieltsMinSection                        0             0             0
+toeflMinOverall                        0             0             0
+toeflMinSection                        0             0             0
+pteMinOverall                          0             0             0
+pteMinSection                          0             0             0
+scholarshipName                        0             0             0
+scholarshipAmount                      5            93            95
+scholarshipType                        0             0             0
+scholarshipMetaData                    0             0             0
+degreeName                             4            90            55
+courseUrlExternal                      0             0             0
+studyLevel                             0             0             0
+
+------------------------------------------------------------------------------
+errorReason breakdown
+------------------------------------------------------------------------------
+
+Postgraduate Research:
+    4  MISSING: programmeName, degreeName, intakeInfo  (80.0%)
+    1  MISSING: programmeName, intakeInfo  (20.0%)
+
+Postgraduate:
+   90  MISSING: programmeName, degreeName, intakeInfo  (96.8%)
+    3  MISSING: programmeName, intakeInfo  (3.2%)
+
+Undergraduate:
+   55  MISSING: programmeName, degreeName, intakeInfo  (57.9%)
+   40  MISSING: programmeName, intakeInfo  (42.1%)
+

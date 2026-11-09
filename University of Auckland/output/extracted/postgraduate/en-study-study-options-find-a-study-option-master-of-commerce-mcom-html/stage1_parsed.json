@@ -1,0 +1,46 @@
+{
+  "courseName": "Master of Commerce MCom",
+  "courseDuration": "Full-time: Varies",
+  "nextStartDates": [
+    "2027 Semester One \u2013 1 March",
+    "2027 Semester Two \u2013 19 July"
+  ],
+  "availableLocations": [
+    "City"
+  ],
+  "points": [
+    "120 or 180"
+  ],
+  "programmeType": "Postgraduate",
+  "taughtAndResearchOptions": [
+    "Taught & research options available"
+  ],
+  "entryRequirements": {
+    "programmeRequirements": {
+      "minimumProgrammeRequirements": {
+        "studyOption": [
+          "Taught 180 points",
+          "Research 120 points"
+        ],
+        "gradeRequired": "GPE 5.0",
+        "qualification": [
+          "An undergraduate degree",
+          "One year of postgraduate study"
+        ],
+        "ieltsAcademic": "6.5",
+        "noBandsLessThan": "6.0"
+      }
+    }
+  },
+  "tuitionFee": "",
+  "studentServicesFee": "1,132.80",
+  "applicationClosingDates": {
+    "semesterOne": "8 December 2026",
+    "semesterTwo": "8 July 2027"
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-commerce-mcom.html",
+  "intakeInfo": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

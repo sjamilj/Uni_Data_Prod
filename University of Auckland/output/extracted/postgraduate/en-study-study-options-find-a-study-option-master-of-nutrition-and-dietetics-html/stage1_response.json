@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T21:05:17.8366187Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Master of Nutrition and Dietetics\",\n  \"currency\": \"NZD\",\n  \"courseDuration\": \"Full-time: 2 years\",\n  \"availableLocations\": [\"Grafton\"],\n  \"points\": 240,\n  \"programmeType\": \"Postgraduate\",\n  \"researchOptions\": \"available\",\n  \"entryRequirements\": {\n    \"programmeRequirements\": {\n      \"minimumProgrammeRequirements\": [\n        {\n          \"studyOption\": \"Research\",\n          \"points\": 240,\n          \"gradeRequired\": {\n            \"gpe\": 5.0,\n            \"grade\": \"A relevant undergraduate degree (see further programme requirements for details).\"\n          },\n          \"qualification\": {\n            \"ieltsscore\": 7.5,\n            \"alternativelanguagerequirements\": \"https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/postgraduate-entry-requirements/postgraduate-english-language-requirements.html\"\n          }\n        }\n      ],\n      \"research240points\": {\n        \"limitedentry\": \"true\",\n        \"programmelimitations\": \"https://www.auckland.ac.nz/en/about-us/about-the-university/the-university/official-publications/university-calendar/current-calendar/programme-and-course-limitations.html\",\n        \"multiminiinterviews\": \"https://www.auckland.ac.nz/en/fmhs/study-with-us/application-and-admission/mmi.html\"\n      }\n    }\n  },\n  \"fees\": {\n    \"internationalStudents\": 57974,\n    \"studentServicesFee\": 1132.80\n  },\n  \"keyDates\": {\n    \"applicationClosingDates\": {\n      \"semesterOne2028\": \"1 July 2027\"\n    }\n  }\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11619532700,
+  "load_duration": 2571100,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2740044000,
+  "eval_count": 371,
+  "eval_duration": 8779132000
+}

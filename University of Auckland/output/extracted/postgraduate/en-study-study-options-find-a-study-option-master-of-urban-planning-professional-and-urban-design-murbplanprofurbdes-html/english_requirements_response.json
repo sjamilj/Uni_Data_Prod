@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T21:34:13.445944Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \"courseName\": \"Master of Urban Planning (Professional) and Urban Design\", \"courseDuration\": \"Full-time: 30 months\", \"courseLocations\": [ \"City\" ], \"courseType\": \"Postgraduate\", \"points\": 300, \"currency\": \"\", \"tuitionFee\": \"\", \"intakeInfo\": \"\", \"applicationDeadline\": \"8 December 2026\", \"initialDeposit\": \"\", \"entryRequirements\": { \"minimumRequirements\": [ { \"studyOption\": \"Taught 300 points\", \"gradeRequired\": \"GPE 5.0\", \"relatedFields\": [ \"environmental science\", \"politics and international relations\", \"economics\", \"geography\", \"landscape architecture\" ] } ] }, \"englishScores\": { \"qualification\": \"IELTS Academic\", \"scoreRequired\": 6.5, \"bandRequirements\": [ \"No bands less than 6.0\" ] }, \"courseUrl\": \"https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-urban-planning-professional-and-urban-design-murbplanprofurbdes.html\", \"ieltsMinOverall\": \"\", \"ieltsMinSection\": \"\" }"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8224267200,
+  "load_duration": 2571800,
+  "prompt_eval_count": 1704,
+  "prompt_eval_cached_count": 9,
+  "prompt_eval_duration": 2327209000,
+  "eval_count": 249,
+  "eval_duration": 5802474000
+}

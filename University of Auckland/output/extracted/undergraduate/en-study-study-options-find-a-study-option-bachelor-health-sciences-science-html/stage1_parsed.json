@@ -1,0 +1,40 @@
+{
+  "courseName": "Bachelor of Health Sciences / Bachelor of Science Conjoint",
+  "courseDuration": "Full-time: 4 years",
+  "availableLocations": [
+    "City",
+    "Grafton"
+  ],
+  "programmeType": "Undergraduate",
+  "points": 540,
+  "conjointOptionsAvailable": true,
+  "intakeInfo": "",
+  "applicationDeadline": "8 December 2026",
+  "initialDeposit": "",
+  "currency": "",
+  "tuitionFee": "",
+  "englishScore": 6.0,
+  "qualification": [
+    "International Baccalaureate Diploma",
+    "General Certificate of Education (GCE) Advanced Level",
+    "Cambridge International Examinations (CIE)",
+    "One year successful bachelor-degree level study at a recognised university (or similar institution) overseas"
+  ],
+  "englishScoreBands": [
+    5.5,
+    5.5
+  ],
+  "keyDates": {
+    "applicationClosingDate": "8 December 2026",
+    "nextStartDate": "1 March 2027"
+  },
+  "fees": {
+    "international": {
+      "min": 50579,
+      "max": 68523
+    }
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-health-sciences-science.html",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

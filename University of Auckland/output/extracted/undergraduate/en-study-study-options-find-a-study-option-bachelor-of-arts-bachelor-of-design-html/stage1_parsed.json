@@ -1,0 +1,49 @@
+{
+  "courseName": "Bachelor of Arts / Bachelor of Design Conjoint BA/BDes",
+  "courseDuration": "Full-time: 4 years",
+  "nextStartDates": [
+    "2027 Semester One \u2013 1 March",
+    "2028 Semester One \u2013 28 February"
+  ],
+  "availableLocations": [
+    "City"
+  ],
+  "points": 540,
+  "programmeType": "Undergraduate",
+  "entryRequirements": [
+    {
+      "qualification": "International Baccalaureate Diploma",
+      "scoreRequired": 24
+    },
+    {
+      "qualification": "General Certificate of Education (GCE) Advanced Level",
+      "scoreRequired": "BBC"
+    },
+    {
+      "qualification": "Cambridge International Examinations (CIE)",
+      "scoreRequired": "BBC"
+    }
+  ],
+  "englishLanguageRequirements": {
+    "qualification": "International English Language Testing System (IELTS) Academic",
+    "scoreRequired": 6.0,
+    "bandsRequired": 5.5
+  },
+  "fees": {
+    "international": {
+      "amount": 55739,
+      "currency": "NZD"
+    }
+  },
+  "applicationClosingDates": [
+    "8 December 2026"
+  ],
+  "intakeInfo": "",
+  "applicationDeadline": "8 December 2026",
+  "initialDeposit": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-arts-bachelor-of-design.html",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

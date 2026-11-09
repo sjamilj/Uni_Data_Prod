@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:47:19.2926729Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \n  \"courseName\": \"Bachelor of Commerce / Bachelor of Global Studies Conjoint\", \n  \"courseDuration\": \"Full-time: 4 years\", \n  \"nextStartDates\": [\"March 2027\", \"February 2028\"], \n  \"availableLocations\": [\"City\"], \n  \"points\": 540, \n  \"programmeType\": \"Undergraduate\", \n  \"conjointOptions\": \"Conjoint options available\", \n  \"entryRequirements\": { \n    \"Secondary School\": { \n      \"Qualification\": [\"International Baccalaureate Diploma\", \"General Certificate of Education (GCE) Advanced Level\", \"Cambridge International Examinations (CIE)\"], \n      \"Score\": [\"24\", \"BBC\", \"28\"] \n    }, \n    \"Tertiary Institution\": { \n      \"Qualification\": [\"One year successful bachelor-degree level study at a recognised university (or similar institution) overseas.\"], \n      \"Score\": [\"GPE 3.9\", \"IELTS 6.0 (no bands less than 5.5)\"] \n    } \n  }, \n  \"fees\": {\"International students\": \"NZ$61,599\"}, \n  \"keyDates\": {\"Application closing date\": \"8 December 2026\"} \n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9243808800,
+  "load_duration": 3076600,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2735371000,
+  "eval_count": 272,
+  "eval_duration": 6408986000
+}

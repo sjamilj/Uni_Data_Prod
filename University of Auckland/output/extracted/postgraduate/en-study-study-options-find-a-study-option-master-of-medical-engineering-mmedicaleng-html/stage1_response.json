@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T21:00:47.9532086Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \n    \"courseName\": \"Master of Medical Engineering\",\n    \"currency\": \"NZD\",\n    \"courseDuration\": \"Full-time: Varies\",\n    \"intakeInfo\": \"March, July\",\n    \"studyOptions\": [\"Taught 120 points\", \"Taught 180 points\"],\n    \"entryRequirements\": {\n        \"minimumRequirements\": {\n            \"Study option Taught 120 points\": {\"Grade required\": \"GPE Grade Point Equivalent 4.0\"},\n            \"Study option Taught 180 points\": {\"Grade required\": \"GPE Grade Point Equivalent 4.0\"},\n            \"Qualification\": {\"IELTS Academic\": \"International English Language Testing System Score required 6.5\", \"No bands below 6.0\": null}\n        },\n        \"additionalRequirements\": {\n            \"fourYearBachelorDegree\": {\n                \"Description\": \"Broad coverage in your first year of the foundational science topics that underpin engineering disciplines: mathematical modelling, chemical and materials science, electrical engineering theory, mechanics, programming, and engineering design. One year of postgraduate-level study. A research project or dissertation comprising at least one-quarter of the final year.\",\n                \"GPE\": \"4.0\"\n            },\n            \"oneYearPostgraduateStudy\": {\n                \"Description\": \"One year of postgraduate-level study, following an undergraduate degree, in a relevant subject at a recognised university (or similar institution) with a GPE of 4.0.\",\n                \"Relevant Subjects\": [\"applied science\", \"bioengineering\", \"computer science\", \"data science\", \"electrical engineering\", \"electronic engineering\", \"information technology\", \"mechatronics\", \"science\", \"technology\"]\n            },\n            \"undergraduateDegree\": {\n                \"Description\": \"An undergraduate degree in a relevant subject at a recognised university (or similar institution) with a GPE of 4.0.\",\n                \"Relevant Subjects\": [\"applied science\", \"bioengineering\", \"computer science\", \"data science\", \"electrical engineering\", \"electronic engineering\", \"information technology\", \"mechatronics\", \"science\", \"technology\"]\n            }\n        }\n    },\n    \"tuitionFee\": 58258,\n    \"applicationDeadline\": \"8 December 2026\",\n    \"keyDates\": {\n        \"Application closing dates\": {\n            \"Semester One 2027\": \"8 December 2026\",\n            \"Semester Two 2026\": \"8 July 2027\"\n        }\n    },\n    \"additionalInfo\": {\n        \"Student Services Fee\": \"NZ$1,132.80 for full-time study (120 points)\"\n    }\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 15705477800,
+  "load_duration": 3093400,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2730228000,
+  "eval_count": 547,
+  "eval_duration": 12872574000
+}

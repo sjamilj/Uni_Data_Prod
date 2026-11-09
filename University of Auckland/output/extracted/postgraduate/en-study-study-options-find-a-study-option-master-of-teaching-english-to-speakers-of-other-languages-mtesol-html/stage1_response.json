@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T21:30:50.5086343Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Master of Teaching English to Speakers of Other Languages MTESOL\",\n  \"courseDuration\": \"\",\n  \"intakeInfo\": \"2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July\",\n  \"availableLocations\": [\"City\"],\n  \"programmeType\": \"Postgraduate\",\n  \"taughtOptions\": \"Taught options available\",\n  \"programmeRequirements\": {\n    \"minimumProgrammeRequirements\": [\n      {\n        \"studyOption\": \"Taught 120 points\",\n        \"gradeRequired\": \"GPE 3.5\",\n        \"description\": \"One year of relevant postgraduate study or a relevant undergraduate degree and work experience\"\n      },\n      {\n        \"studyOption\": \"Taught 180 points\",\n        \"gradeRequired\": \"GPE 3.5\",\n        \"description\": \"A relevant bachelors degree\"\n      },\n      {\n        \"qualification\": \"IELTS Academic\",\n        \"scoreRequired\": \"6.5\",\n        \"description\": \"No bands less than 6.0\"\n      }\n    ]\n  },\n  \"tuitionFees\": {\n    \"internationalStudents\": [\n      {\n        \"year\": \"2027\",\n        \"amount\": \"$46,877\"\n      },\n      {\n        \"year\": \"2027\",\n        \"amount\": \"$47,218\"\n      }\n    ]\n  },\n  \"keyDates\": {\n    \"applicationClosingDates\": [\n      {\n        \"year\": \"2027\",\n        \"semester\": \"Semester One\",\n        \"date\": \"8 December 2026\"\n      },\n      {\n        \"year\": \"2027\",\n        \"semester\": \"Semester Two\",\n        \"date\": \"4 July 2027\"\n      }\n    ]\n  },\n  \"currency\": \"NZD\",\n  \"englishScores\": {\n    \"required\": \"6.5\",\n    \"minBand\": \"6.0\"\n  }\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12429549400,
+  "load_duration": 3074100,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2730138000,
+  "eval_count": 407,
+  "eval_duration": 9598660000
+}

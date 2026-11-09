@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:30:17.7946903Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Bachelor of Fine Arts / Bachelor of Science Conjoint\",\n  \"courseDuration\": \"\",\n  \"nextStartDates\": [\"2027 Semester One \u2013 1 March\", \"2027 Semester Two \u2013 19 July\"],\n  \"availableLocations\": [\"City\"],\n  \"points\": 540,\n  \"programmeType\": \"Undergraduate\",\n  \"entryRequirements\": {\n    \"secondarySchool\": {\n      \"qualification\": [\"International Baccalaureate Diploma\", \"General Certificate of Education (GCE) Advanced Level\", \"Cambridge International Examinations (CIE)\"],\n      \"score\": {\n        \"International Baccalaureate Diploma\": \"24\",\n        \"General Certificate of Education (GCE) Advanced Level\": \"BBC +\",\n        \"Cambridge International Examinations (CIE)\": \"BBC +\"\n      }\n    },\n    \"priorTertiaryStudy\": {\n      \"qualification\": \"One year successful bachelor-degree level study at a recognised university (or similar institution) overseas\",\n      \"guaranteedGrade\": {\n        \"GradePointEquivalent\": 3.9,\n        \"IELTSScore\": 6.0\n      }\n    }\n  },\n  \"fees\": {\n    \"yearlyFees\": {\n      \"2027\": \"\"\n    }\n  },\n  \"keyDates\": {\n    \"applicationClosingDates\": {\n      \"SemesterOne 2027\": \"8 December 2026\",\n      \"SemesterTwo 2027\": \"4 July 2027\"\n    }\n  }\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10434929800,
+  "load_duration": 2792100,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2730747000,
+  "eval_count": 322,
+  "eval_duration": 7597020000
+}

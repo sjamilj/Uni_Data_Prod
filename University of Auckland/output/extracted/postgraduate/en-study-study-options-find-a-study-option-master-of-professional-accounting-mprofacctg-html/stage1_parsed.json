@@ -1,0 +1,52 @@
+{
+  "courseName": "Master of Professional Accounting MProfAcctg",
+  "courseDuration": "Full-time: 15 months",
+  "nextStartDates": [
+    "2027 Quarter Two \u2013 12 April",
+    "2027 Quarter Four \u2013 27 September"
+  ],
+  "availableLocations": "City",
+  "points": 180,
+  "programmeType": "Postgraduate",
+  "taughtOptions": true,
+  "entryRequirements": {
+    "programmeRequirements": {
+      "minimumProgrammeRequirements": {
+        "studyOption": "Taught 240 points",
+        "gradeRequired": "GPE Grade Point Equivalent 5.0",
+        "qualification": "An undergraduate degree."
+      },
+      "taught180Points": {
+        "description": "You must have completed a bachelors degree from a recognised university with the equivalent of at least a New Zealand B average in the most advanced courses."
+      }
+    }
+  },
+  "fees": {
+    "internationalStudents": 76722.98,
+    "domesticStudents": null
+  },
+  "keyDates": {
+    "applicationClosingDates": {
+      "quarterTwo2027": {
+        "domestic": "1 March 2027",
+        "international": "1 February 2027"
+      },
+      "quarterFour2027": {
+        "domestic": "1 August 2027",
+        "international": "1 July 2027"
+      }
+    }
+  },
+  "englishScores": {
+    "qualification": "IELTS Academic",
+    "score": 6.5
+  },
+  "tuitionFee": "",
+  "intakeInfo": "",
+  "applicationDeadline": "1 March 2027",
+  "initialDeposit": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-professional-accounting-mprofacctg.html",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

@@ -1,0 +1,127 @@
+# Stage 2d: Initial deposit (LLM only)
+
+Read the **international student tuition fee for one full year** from the course page. Output it as `initialDeposit`, with a fixed `feesMetaData` description.
+
+Do **not** output `uniName`, course URL, `requirements`, IELTS/PTE/TOEFL, scholarships, intake, duration, `applicationFee` or `currency`. Python fills those.
+
+Use only the provided input. Never use outside knowledge.
+
+## Input
+- Course: `Master of Ecology MEcology`
+- URL: `https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-ecology-mecology.html`
+- Course page:
+
+```
+<!-- pipeline: course_url=https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-ecology-mecology.html study_level=postgraduate -->
+# Master of Ecology MEcology
+
+## Quick facts
+
+- **Duration:** Full-time: 18 months
+- Part-time: Varies
+
+- **Next start date:** 2027 Semester One – 1 March
+- 2027 Semester Two – 19 July
+
+- **Available locations:** City
+
+- **Points:** 180
+
+- **Programme type:** Postgraduate
+- Taught options available
+
+## 2027 entry requirements
+
+### Programme requirements
+
+#### Minimum programme requirements
+
+Minimum requirements listed here are the likely grades required and do not guarantee entry. We assess each application individually and applicants may require a higher grade to be offered a place.
+
+- Study option Taught 180 points Grade required GPE Grade Point Equivalent 4.0  A Bachelor’s degree majoring in Biological Sciences or an equivalent subject from a recognised academic institution.
+- Qualification IELTS Academic International English Language Testing System Score required 6.5  No bands below 6.0.
+[See alternative English language requirements](https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/postgraduate-entry-requirements/postgraduate-english-language-requirements.html)
+
+[Calculate your Grade Point Equivalent (GPE)](http://www.gpecalculator.auckland.ac.nz/?utm_source=auckland&utm_medium=postgraduate)
+
+#### Taught 180 points
+
+You must have completed an undergraduate degree in Biological Sciences or an equivalent subject at a recognised university (or similar institution) with a GPE of 4.0.
+
+## How much does a Master of Ecology cost per year?
+
+### 2027 fees
+
+- **International students:** NZ$58,258 *
+
+Fees are set in advance of each calendar year and will be updated on this website. Fees are inclusive of 15% GST, but do not include the Student Services Fee, course books, travel and health insurance, or living costs. Amounts shown are indicative only. In addition to the tuition fees, there is a Student Services Fee of $9.44 per point, estimated at $1,699.20 for full-time study (180 points). Fees will be confirmed upon completion of enrolment into courses.
+
+*Please note: amounts shown are indicative and estimates only.
+
+[See course fees for each faculty](https://www.auckland.ac.nz/en/study/fees-and-money-matters/tuition-fees/fees-by-faculty.html)
+
+## Key dates
+
+Please note: We will consider late applications if places are still available. International students should start the application process as early as possible to allow sufficient time to apply for a visa.
+
+### Application closing dates
+
+- **Semester One 2026:** 8 December 2025
+
+- **Semester Two 2026:** 8 June 2026
+```
+
+## Rules
+
+### 1. `initialDeposit`
+- `initialDeposit` is the **international student tuition fee for one full year**, taken from the course page.
+- It is a **top-level** field, outside `feesMetaData`.
+- Digits only: no currency symbol (`$`, `NZ$`), no currency code, no commas, no spaces.
+- Keep decimals only when needed (e.g. `42236.4`).
+- Use the **International** fee only. Never use a Domestic, Home or New Zealand fee.
+- If the page gives a per-point or per-semester fee but no full-year fee, do **not** calculate one. Use `""`.
+- If the page gives a range or several fees, use the one for this course. If you cannot tell which applies, use `""`.
+- If no international tuition fee is on the page, use `""`.
+- Do not guess, convert currencies or invent amounts.
+
+### 2. `feesMetaData`
+- If `initialDeposit` is not empty, output exactly this one item, word for word:
+
+```json
+{
+  "subtitle": "Initial Tuition Fee Deposit",
+  "description": [
+    "International student enrolled in a full-year course or studying from outside New Zealand on a student visa, you are generally required to pay your full year's tuition fees upfront at the start of your first semester"
+  ]
+}
+```
+
+- If `initialDeposit` is `""`, output `"feesMetaData": []`.
+- Do not change, shorten or add to the description text.
+
+## Output
+
+Return exactly one JSON object in a single ` ```json ` block, with only these keys:
+
+```json
+{
+  "initialDeposit": "",
+  "feesMetaData": []
+}
+```
+
+### Example (format only; do not copy the values)
+
+```json
+{
+  "initialDeposit": "51020.4",
+  "feesMetaData": [
+    {
+      "subtitle": "Initial Tuition Fee Deposit",
+      "description": [
+        "International student enrolled in a full-year course or studying from outside New Zealand on a student visa, you are generally required to pay your full year's tuition fees upfront at the start of your first semester"
+      ]
+    }
+  ]
+}
+```

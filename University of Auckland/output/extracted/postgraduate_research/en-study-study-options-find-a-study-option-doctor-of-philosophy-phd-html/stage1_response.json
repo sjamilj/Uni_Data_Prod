@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T21:42:07.7832665Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"courseName\": \"Doctor of Philosophy PhD\", \"courseDuration\": \"Full-time: 3 to 4 years, Part-time: 6 to 8 years\", \"availableLocations\": \"City, Grafton, Newmarket, Overseas\", \"points\": \"120 points per year of full-time study\", \"programmeType\": \"Doctorate\", \"tuitionFee\": \"9,378\", \"applicationDeadline\": \"Month Year\", \"intakeInfo\": \"Month Year\", \"initialDeposit\": \"\", \"englishScores\": {\"score\": \"6.5\", \"requirements\": \"No bands less than 6.0\"}, \"qualificationRequirements\": {\"gradeRequired\": \"6.0\", \"qualifications\": [\"Masters-level qualification or the equivalent of a bachelors degree with honours\", \"Evidence of significant research, usually undertaken as part of prior study\"]}, \"supervisionAndResearchRequirements\": \"Meeting our academic requirements does not guarantee entry. You must demonstrate an ability to research independently, and possess a high level of theoretical understanding. Acceptance is subject to staff availability for supervision, and appropriate resources and facilities. You must write an initial statement of research intent to demonstrate your research capability and experience. All students must meet our English-language requirements as a condition of entry.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9075897100,
+  "load_duration": 3073400,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2735622000,
+  "eval_count": 266,
+  "eval_duration": 6269840000
+}

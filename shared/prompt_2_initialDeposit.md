@@ -1,118 +1,71 @@
-# Stage 2d — Initial deposit & tuition payment (LLM only)
+# Stage 2d: Initial deposit (LLM only)
 
-Extract **only** `initialDeposit` and deposit-related `feesMetaData` from the course page and university deposit page.
+Read the **international student tuition fee for one full year** from the course page. Output it as `initialDeposit`, with a fixed `feesMetaData` description.
 
-Do **not** output `uniName`, course URL, academic `requirements`, IELTS/PTE/TOEFL, scholarships, intake, duration, or `applicationFee` — Python fills those.
+Do **not** output `uniName`, course URL, `requirements`, IELTS/PTE/TOEFL, scholarships, intake, duration, `applicationFee` or `currency`. Python fills those.
 
-Use only the provided input. Never use outside knowledge. Missing → `""` or `[]`.
+Use only the provided input. Never use outside knowledge.
 
 ## Input
 - Course: `{COURSE_NAME}`
 - URL: `{COURSE_URL}`
-- **International tuition fee (use for percentage calculations):** `{TUITION_FEE}`
-- Stage 1 JSON (course-page fee facts — tuition fee reference):
-
-```json
-{STAGE1_JSON}
-```
-
-- Course page (fees / funding sections):
+- Course page:
 
 ```
 {COURSE_CONTENT}
 ```
 
-- University deposit / how-to-pay page only:
-
-```
-{DEPOSIT_CONTENT}
-```
-
 ## Rules
 
-### 1. `initialDeposit` (top-level field)
-- `initialDeposit` MUST be a top-level field, **outside** `feesMetaData`.
-- **Ignore** any `initialDeposit` value in Stage 1 JSON — it may be wrong. Extract deposit only from the **course page** and **deposit page**.
-- If the source explicitly gives a deposit amount, use that exact amount.
-- Example: `£4,000 deposit` → `"initialDeposit": "£4,000"`
-- Do **not** recalculate an explicitly stated deposit amount.
+### 1. `initialDeposit`
+- `initialDeposit` is the **international student tuition fee for one full year**, taken from the course page.
+- It is a **top-level** field, outside `feesMetaData`.
+- Digits only: no currency symbol (`$`, `NZ$`), no currency code, no commas, no spaces.
+- Keep decimals only when needed (e.g. `42236.4`).
+- Use the **International** fee only. Never use a Domestic, Home or New Zealand fee.
+- If the page gives a per-point or per-semester fee but no full-year fee, do **not** calculate one. Use `""`.
+- If the page gives a range or several fees, use the one for this course. If you cannot tell which applies, use `""`.
+- If no international tuition fee is on the page, use `""`.
+- Do not guess, convert currencies or invent amounts.
 
-### 2. Percentage deposit
-- If the source gives a deposit as a **percentage** and no exact amount is stated, calculate:
-
-  `Deposit = International tuition fee × Percentage ÷ 100`
-
-- Example: International tuition fee = `£20,000`, Deposit = `50%` → `"initialDeposit": "£10,000"`
-- Use `{TUITION_FEE}` / Stage 1 `tuitionFee` as the international fee when calculating.
-
-### 3. International student priority
-- If multiple tuition fees are provided, **always** use the **international student** tuition fee for percentage calculations.
-- Do **not** use the UK/Home tuition fee for an international student calculation.
-
-Example:
-
-- UK tuition fee = `£10,000`
-- International tuition fee = `£20,000`
-- Deposit = `50%`
-
-→ `"initialDeposit": "£10,000"`
-
-### 4. International-specific percentage
-- If the source gives different deposit percentages for UK/Home and International students, use the **International** percentage with the **International** tuition fee.
-
-Example:
-
-- UK deposit = `20%`
-- International deposit = `50%`
-- International tuition fee = `£20,000`
-
-→ `"initialDeposit": "£10,000"`
-
-### 5. If international tuition fee is missing
-- Do **not** use the UK/Home tuition fee as a substitute.
-- If the applicable international tuition fee cannot be identified, use `"initialDeposit": ""`.
-
-### 6. `feesMetaData`
-- Put payment details from the source inside `feesMetaData`.
-- Use a relevant `subtitle`, such as `"Initial tuition Deposit"`.
-- Include payment schedules, percentages, instalments, registration payments, and payment months in `description`.
-- Preserve source information accurately.
-- Do **not** invent or infer information.
-
-### 7. Strict rules
-- Use only the provided sources and provided tuition fee.
-- Do not guess. Do not invent amounts. Do not convert currencies.
-- Do not change explicitly stated monetary amounts.
-- Calculate only when a percentage **and** applicable international tuition fee are available.
-- Return valid JSON only.
-
-## Example
-
-Tuition fees: UK = `£10,000`, International = `£20,000`
-
-Source: *"International students must pay 50% of their tuition fee at registration and the remaining 50% in January."*
+### 2. `feesMetaData`
+- If `initialDeposit` is not empty, output exactly this one item, word for word:
 
 ```json
 {
-  "initialDeposit": "£10,000",
-  "feesMetaData": [
-    {
-      "subtitle": "Initial tuition Deposit",
-      "description": [
-        "International students must pay 50% of their tuition fee at registration and the remaining 50% in January."
-      ]
-    }
+  "subtitle": "Initial Tuition Fee Deposit",
+  "description": [
+    "International student enrolled in a full-year course or studying from outside New Zealand on a student visa, you are generally required to pay your full year's tuition fees upfront at the start of your first semester"
   ]
 }
 ```
 
+- If `initialDeposit` is `""`, output `"feesMetaData": []`.
+- Do not change, shorten or add to the description text.
+
 ## Output
 
-Return exactly one JSON object in a single ` ```json ` block. **Only these keys:**
+Return exactly one JSON object in a single ` ```json ` block, with only these keys:
 
 ```json
 {
   "initialDeposit": "",
   "feesMetaData": []
+}
+```
+
+### Example (format only; do not copy the values)
+
+```json
+{
+  "initialDeposit": "51020.4",
+  "feesMetaData": [
+    {
+      "subtitle": "Initial Tuition Fee Deposit",
+      "description": [
+        "International student enrolled in a full-year course or studying from outside New Zealand on a student visa, you are generally required to pay your full year's tuition fees upfront at the start of your first semester"
+      ]
+    }
+  ]
 }
 ```

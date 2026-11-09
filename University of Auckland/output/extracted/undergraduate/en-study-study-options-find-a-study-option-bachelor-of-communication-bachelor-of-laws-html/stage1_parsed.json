@@ -1,0 +1,41 @@
+{
+  "courseName": "Bachelor of Communication/Bachelor of Laws Conjoint BC/LLB",
+  "courseDuration": "Full-time: 5 years",
+  "nextStartDates": [
+    "2027 Semester One \u2013 1 March",
+    "2027 Semester Two \u2013 19 July"
+  ],
+  "availableLocations": [
+    "City"
+  ],
+  "points": 675,
+  "programmeType": "Undergraduate",
+  "entryRequirements": {
+    "secondarySchool": {
+      "Qualification": "International Baccalaureate Diploma",
+      "Score": "28"
+    },
+    "priorTertiaryStudy": {
+      "Grade": "GPE Grade Point Equivalent 3.9",
+      "Qualification": "IELTS Academic International English Language Testing System Score",
+      "Score": "6.0"
+    }
+  },
+  "fees": {
+    "2027Fees": {
+      "internationalStudents": "$49,582 \u2013 $51,020"
+    }
+  },
+  "keyDates": {
+    "applicationClosingDates": [
+      "8 December 2026",
+      "4 July 2027"
+    ]
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-communication-bachelor-of-laws.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

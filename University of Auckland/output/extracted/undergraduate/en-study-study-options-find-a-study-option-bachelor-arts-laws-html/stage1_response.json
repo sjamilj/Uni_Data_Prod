@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:32:33.8879902Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \n    \"courseName\": \"Bachelor of Arts / Bachelor of Laws Conjoint BA/LLB\", \n    \"courseDuration\": \"Full-time: 5 years\", \n    \"nextStartDate\": \"2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July\", \n    \"availableLocations\": \"City\", \n    \"points\": 675, \n    \"programmeType\": \"Undergraduate\", \n    \"programmeTypeOther\": \"Conjoint options available\", \n    \"entryRequirements\": { \n        \"international\": { \n            \"ibDiploma\": \"Minimum total score of 24\", \n            \"gceAlevel\": \"BBC\", \n            \"cie\": \"BBC\", \n            \"ielts\": \"6.0 No bands less than 5.5\" \n        }, \n        \"priorTertiary\": { \n            \"minimumGrade\": \"3.9\", \n            \"gpe\": \"3.9\", \n            \"ielts\": \"6.0 No bands less than 5.5\" \n        } \n    }, \n    \"fees\": { \n        \"international\": \"NZ$49,578 \u2013 $51,020\" \n    }, \n    \"keyDates\": { \n        \"summerSchool\": \"1 December 2026\", \n        \"semesterOne\": \"8 February 2027\", \n        \"semesterTwo\": \"8 July 2027\" \n    } \n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10075226100,
+  "load_duration": 3885900,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2738220000,
+  "eval_count": 308,
+  "eval_duration": 7263132000
+}

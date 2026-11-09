@@ -1,0 +1,31 @@
+{
+  "courseName": "Bachelor of Commerce / Bachelor of Laws Conjoint",
+  "courseDuration": "Full-time: 5 years",
+  "courseDurationPartTime": "Part-time: Varies",
+  "courseType": "Undergraduate",
+  "availableLocations": "City",
+  "points": 675,
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "initialDeposit": "",
+  "englishScore": 6.0,
+  "applicationDeadline": "2027 Summer School: 1 December 2026, 2027 Semester One: 8 December 2026, 2027 Semester Two: 4 July 2027",
+  "currency": "",
+  "programmeType": "Conjoint options available",
+  "requiredQualifications": [
+    "International Baccalaureate Diploma",
+    "General Certificate of Education (GCE) Advanced Level",
+    "Cambridge International Examinations (CIE)"
+  ],
+  "minimumGradeRequirements": {
+    "International Baccalaureate Diploma": 28,
+    "General Certificate of Education (GCE) Advanced Level": "BBC",
+    "Cambridge International Examinations (CIE)": "BBC"
+  },
+  "englishLanguageRequirements": {
+    "International English Language Testing System (IELTS)": "6.0, No bands less than 5.5"
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-commerce-laws.html",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

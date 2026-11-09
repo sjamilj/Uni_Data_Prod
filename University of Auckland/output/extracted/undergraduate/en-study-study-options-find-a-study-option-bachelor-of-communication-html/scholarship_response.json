@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:20:39.7821326Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"scholarshipName\": \"University of Auckland Doctoral Scholarship\",\n  \"scholarshipAmount\": \"35468\",\n  \"scholarshipType\": \"Amount\",\n  \"scholarshipMetaData\": [\n    {\n      \"description\": [\n        \"Supports excellent domestic and international doctoral candidates whose research aligns with the strategic objectives of the University of Auckland.\"\n      ]\n    },\n    {\n      \"description\": [\n        \"Applicable programmes: PhD, DMedSc, DClinPsy, DocFA, EdD and DHSc.\"\n      ]\n    },\n    {\n      \"description\": [\n        \"Term: up to 42 months of full-time equivalent enrolment.\"\n      ]\n    },\n    {\n      \"description\": [\n        \"Application: no separate application is required. Applicants indicate in their doctoral application that they wish to be considered.\"\n      ]\n    },\n    {\n      \"description\": [\n        \"Selection: based on alignment with the strategic objectives of the University and the relevant faculty or research institute.\"\n      ]\n    },\n    {\n      \"description\": [\n        \"Eligibility: applicant must be a domestic student, or an international student who is eligible to pay domestic fees for the doctoral programme.\"\n      ]\n    },\n    {\n      \"description\": [\n        \"Eligibility: applicant must not already hold a doctorate or have previously received payment for a University of Auckland Doctoral Scholarship.\"\n      ]\n    },\n    {\n      \"description\": [\n        \"Eligibility: applicant must not be enrolled in a doctoral programme, except for approved transfers.\"\n      ]\n    },\n    {\n      \"description\": [\n        \"More information: https://www.auckland.ac.nz/assets/study/scholarships-and-funding/find-a-scholarship-or-award/regulations/university-of-auckland-doctoral-scholarship.pdf\"\n      ]\n    }\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11337424000,
+  "load_duration": 2702000,
+  "prompt_eval_count": 1724,
+  "prompt_eval_cached_count": 9,
+  "prompt_eval_duration": 2338094000,
+  "eval_count": 383,
+  "eval_duration": 8938721000
+}

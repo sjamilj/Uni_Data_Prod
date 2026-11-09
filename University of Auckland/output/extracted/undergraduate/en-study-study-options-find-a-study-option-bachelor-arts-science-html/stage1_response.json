@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:34:12.1544051Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \n    \"courseName\": \"Bachelor of Arts / Bachelor of Science Conjoint\",\n    \"courseDuration\": \"Full-time: 4 years, Part-time: Varies\",\n    \"nextStartDate\": \"2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July\",\n    \"availableLocations\": \"City, Grafton\",\n    \"points\": 540,\n    \"programmeType\": \"Undergraduate\",\n    \"cohortType\": \"Conjoint\",\n    \"entryRequirements\": [\n        {\n            \"qualification\": \"IB International Baccalaureate Diploma\",\n            \"scoreRequired\": \"28\"\n        },\n        {\n            \"qualification\": \"IELTS Academic\",\n            \"scoreRequired\": \"6.0\",\n            \"bandsLessThan\": \"5.5\"\n        }\n    ],\n    \"tuitionFee\": 54479.25,\n    \"studentServicesFee\": 1274.40,\n    \"currency\": \"NZD\",\n    \"intakeInfo\": [\n        {\n            \"startDate\": \"March 2027\"\n        },\n        {\n            \"startDate\": \"July 2027\"\n        }\n    ],\n    \"applicationDeadline\": \"1 December 2026\",\n    \"initialDeposit\": \"\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8946575000,
+  "load_duration": 3097400,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2736167000,
+  "eval_count": 258,
+  "eval_duration": 6098003000
+}

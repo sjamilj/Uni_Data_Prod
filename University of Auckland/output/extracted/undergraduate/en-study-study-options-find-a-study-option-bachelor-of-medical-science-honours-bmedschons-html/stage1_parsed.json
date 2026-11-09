@@ -1,0 +1,56 @@
+{
+  "courseName": "Bachelor of Medical Science (Honours)",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-medical-science-honours-bmedschons.html",
+  "studyLevel": "postgraduate",
+  "duration": "Full-time: 1 year",
+  "nextStartDates": [
+    "2027 Semester One \u2013 1 March",
+    "2028 Semester One \u2013 28 February"
+  ],
+  "availableLocations": [
+    "Grafton"
+  ],
+  "points": 120,
+  "programmeType": "Postgraduate",
+  "entryRequirements": {
+    "programmeRequirements": {
+      "minimumProgrammeRequirements": {
+        "studyOption": "Research 120 points",
+        "gradeRequired": "5.0",
+        "gradePointEquivalent": true,
+        "qualification": "An undergraduate degree in medicine and surgery",
+        "qualificationRequirement": "IELTS Academic",
+        "scoreRequired": 6.5,
+        "noBandsLessThan": 6.0
+      }
+    }
+  },
+  "tuitionFees": {
+    "internationalStudents": {
+      "amount": 57974,
+      "currency": "NZD",
+      "feeIncludes": [
+        "15% GST"
+      ],
+      "feeExcludes": [
+        "Student Services Fee",
+        "course books",
+        "travel and health insurance",
+        "living costs"
+      ]
+    }
+  },
+  "applicationDeadline": "1 November 2026",
+  "initialDeposit": "",
+  "keyDates": {
+    "applicationClosingDates": [
+      "1 November 2026"
+    ]
+  },
+  "intakeInfo": "",
+  "courseDuration": "Full-time: 1 year",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

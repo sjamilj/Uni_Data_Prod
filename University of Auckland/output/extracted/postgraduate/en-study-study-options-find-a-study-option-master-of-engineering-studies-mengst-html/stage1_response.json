@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:36:07.1961022Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Master of Engineering Studies\",\n  \"courseDuration\": \"Full-time: Varies, Part-time: Varies\",\n  \"availableLocations\": \"City, Grafton, Newmarket\",\n  \"programmeType\": \"Postgraduate\",\n  \"programmeTypeOptions\": \"Taught & research options available\",\n  \"nextStartDates\": \"2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July\",\n  \"points\": \"120 or 180\",\n  \"intakeInfo\": \"1 December start available for 120-point research masters only, subject to supervisor availability.\",\n  \"applicationClosingDates\": {\n    \"Semester One 2027\": \"8 December 2026\",\n    \"Semester Two 2027\": \"8 July 2027\"\n  },\n  \"tuitionFee\": {\n    \"domestic\": \"\",\n    \"international\": \"NZ$58,258\",\n    \"domesticSpecialisation\": \"The domestic fee for the Light Metals Reduction Technology specialisation will exceed the estimated range due to its required courses.\"\n  },\n  \"initialDeposit\": \"\",\n  \"englishScores\": {\n    \"IELTS Academic\": \"6.5\",\n    \"No bands less than 6.0\": true\n  },\n  \"entryRequirements\": {\n    \"minimumProgrammeRequirements\": [\n      {\n        \"studyOption\": \"Taught 120 points\",\n        \"gradeRequired\": \"GPE Grade Point Equivalent 4.0\",\n        \"qualification\": \"Four-year engineering degree\"\n      },\n      {\n        \"studyOption\": \"Taught 180 points\",\n        \"gradeRequired\": \"GPE Grade Point Equivalent 4.0\",\n        \"qualification\": \"An undergraduate degree in engineering\"\n      },\n      {\n        \"studyOption\": \"Research 120 points\",\n        \"gradeRequired\": \"GPE Grade Point Equivalent 4.0\",\n        \"qualification\": \"Four-year engineering degree\"\n      }\n    ]\n  },\n  \"gpe\": \"4.0\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12780707600,
+  "load_duration": 3199600,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2727877000,
+  "eval_count": 421,
+  "eval_duration": 9958197000
+}

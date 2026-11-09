@@ -1,0 +1,44 @@
+{
+  "firstYearRequiredCourses": [
+    "BIOSCI 107: Biology for Biomedical Science - Cellular Processes",
+    "CHEM 190: Chemistry for Medical and Life Sciences",
+    "MEDSCI 142: Biology for Biomedical Science - Organ Systems",
+    "POPLHLTH 111: Population Health",
+    "WTRSCI 100: Contemporary Science in Aotearoa, New Zealand"
+  ],
+  "firstYearEntryApplicants": [
+    "achieve a minimum GPA of 5.0 across the four core courses (BIOSCI 107, CHEM 190, POPLHLTH 111 and MEDSCI 142)",
+    "have no fail grades in any of their eight first year courses"
+  ],
+  "interviewEligibility": [
+    "achieve a minimum GPA of 5.0 across BIOSCI 107, CHEM 190, POPLHLTH 111 and MEDSCI 142, including interim grades (highest possible grade) for any courses in Semester Two",
+    "have no fail grades in any of their Semester One courses"
+  ],
+  "interviewRanking": "based on the GPA of the four core courses (BIOSCI 107, CHEM 190, POPLHLTH 111 and MEDSCI 142) including interim grades (highest possible grade) for any courses in Semester Two",
+  "finalSelectionEligibility": [
+    "achieved a minimum GPA of 5.0 across BIOSCI 107, CHEM 190, POPLHLTH 111 and MEDSCI 142",
+    "no fail grades in any of their eight courses"
+  ],
+  "twoOrMoreYearsOfTertiaryStudy": [
+    "completed a minimum of two years of relevant study on a full time basis at a recognised university",
+    "Your last year of full time study must be no more than five years prior to the year of application",
+    "A minimum of 105 points over Semesters One and Two per academic year is required to be considered as full time study for BPharm admission",
+    "Relevant study is defined as having completed the four core courses (or equivalent): BIOSCI 107, CHEM 190, POPLHLTH 111 and MEDSCI 142",
+    "International applicants are also required to have English language skills of an IELTS overall score of 6.5 or higher, with no band below 6.0, if they have not undertaken their prior tertiary studies in English"
+  ],
+  "fees2027": [
+    "NZ$57,974 *",
+    "The Student Services Fee of $9.44 per point, estimated at $1,132.80 for full-time study (120 points)"
+  ],
+  "keyDates": {
+    "applicationClosingDate2027": "1 July 2026"
+  },
+  "courseName": "Bachelor of Pharmacy BPharm",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-pharmacy-bpharm.html",
+  "intakeInfo": "",
+  "courseDuration": "Full-time: 4 years",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

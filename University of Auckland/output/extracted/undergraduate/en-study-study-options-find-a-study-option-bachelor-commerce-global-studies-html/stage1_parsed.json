@@ -1,0 +1,49 @@
+{
+  "courseName": "Bachelor of Commerce / Bachelor of Global Studies Conjoint",
+  "courseDuration": "Full-time: 4 years",
+  "nextStartDates": [
+    "March 2027",
+    "February 2028"
+  ],
+  "availableLocations": [
+    "City"
+  ],
+  "points": 540,
+  "programmeType": "Undergraduate",
+  "conjointOptions": "Conjoint options available",
+  "entryRequirements": {
+    "Secondary School": {
+      "Qualification": [
+        "International Baccalaureate Diploma",
+        "General Certificate of Education (GCE) Advanced Level",
+        "Cambridge International Examinations (CIE)"
+      ],
+      "Score": [
+        "24",
+        "BBC",
+        "28"
+      ]
+    },
+    "Tertiary Institution": {
+      "Qualification": [
+        "One year successful bachelor-degree level study at a recognised university (or similar institution) overseas."
+      ],
+      "Score": [
+        "GPE 3.9",
+        "IELTS 6.0 (no bands less than 5.5)"
+      ]
+    }
+  },
+  "fees": {
+    "International students": "NZ$61,599"
+  },
+  "keyDates": {
+    "Application closing date": "8 December 2026"
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-commerce-global-studies.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

@@ -1,0 +1,46 @@
+{
+  "courseName": "Master of Health Leadership",
+  "courseDuration": "Full-time: Varies",
+  "nextStartDates": "2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July",
+  "availableLocations": "City, Grafton",
+  "programmeType": "Postgraduate",
+  "programmePoints": "120 or 180",
+  "programmeRequirements": {
+    "120-points": {
+      "gradeRequired": "GPE 5.0",
+      "description": "One year of postgraduate study"
+    },
+    "180-points": {
+      "gradeRequired": "GPE 5.0",
+      "description": "An undergraduate degree"
+    }
+  },
+  "englishLanguageRequirements": {
+    "qualification": "IELTS Academic",
+    "scoreRequired": "6.5",
+    "bandsLessThan": "6.0"
+  },
+  "entryRequirements": {
+    "relevantDisciplines": [
+      "all health professional degrees",
+      "non-clinical degrees in approved subjects including public health, health sciences, health social sciences, commerce and law"
+    ],
+    "minimumStudy": "at least a major, field of study or approximately 30% of programme content including a mix of introductory and advanced courses"
+  },
+  "fees": {
+    "internationalStudents": "NZ$57,974",
+    "studentServicesFee": "NZ$1,132.80 (estimated)"
+  },
+  "keyDates": {
+    "applicationClosingDates": {
+      "semesterOne2027": "8 December 2026",
+      "semesterTwo2027": "4 July 2027"
+    }
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-health-leadership-mhlthld.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

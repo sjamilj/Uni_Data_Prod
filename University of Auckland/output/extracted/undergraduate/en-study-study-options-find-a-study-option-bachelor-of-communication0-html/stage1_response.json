@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:21:15.413441Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \n    \"courseName\": \"Bachelor of Communication\", \n    \"courseDuration\": \"Full-time: 3 years\", \n    \"nextStartDates\": [\"2027 Semester One \u2013 1 March\", \"2027 Semester Two \u2013 19 July\"], \n    \"availableLocations\": [\"City\"], \n    \"points\": 360, \n    \"programmeType\": \"Undergraduate\", \n    \"internationalFees\": [\"NZ$49,582 \u2013 $51,020\"], \n    \"applicationClosingDates\": [\"2027 Semester One \u2013 8 December 2026\", \"2027 Semester Two \u2013 4 July 2027\"], \n    \"priorTertiaryRequirements\": {\n        \"priorTertiaryQualifications\": [\"IB Diploma\", \"GCE A Level\", \"CIE\"], \n        \"minimumGradeRequirements\": {\n            \"IB Diploma\": {\"score\": 27}, \n            \"GCE A Level\": {\"score\": \"BCC\"}, \n            \"CIE\": {\"score\": \"BCC\"}\n        }, \n        \"priorTertiaryEnglishRequirements\": {\"score\": \"6.0\"}, \n        \"priorTertiaryEnglishBands\": {\"bands\": \"5.5\"}\n    }\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8757698600,
+  "load_duration": 3064400,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2734876000,
+  "eval_count": 252,
+  "eval_duration": 5923635000
+}

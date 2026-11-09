@@ -1,0 +1,58 @@
+{
+  "courseName": "Bachelor of Music",
+  "duration": "Full-time: 3 years",
+  "availableLocations": [
+    "City"
+  ],
+  "programmeType": "Undergraduate",
+  "cojointOptions": true,
+  "points": 360,
+  "nextStartDate": "2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July",
+  "entryRequirements": [
+    {
+      "qualification": "International Baccalaureate Diploma",
+      "minimumScore": 24
+    },
+    {
+      "qualification": "GCE A Level/CIE",
+      "minimumGrade": "CCC"
+    }
+  ],
+  "englishLanguageRequirements": [
+    {
+      "qualification": "IELTS Academic",
+      "minimumScore": 6.0,
+      "bandRequirements": "No bands less than 5.5"
+    }
+  ],
+  "auditionPortfolioRequirements": [
+    {
+      "specialisation": "Performance",
+      "requirement": "Audition"
+    },
+    {
+      "specialisation": "Jazz",
+      "requirement": "Audition"
+    }
+  ],
+  "priorTertiaryStudyRequirements": [
+    {
+      "qualification": "One year successful bachelor-degree level study at a recognised university",
+      "minimumGrade": "GPE 2.2"
+    }
+  ],
+  "fees": {
+    "international": 49582
+  },
+  "applicationClosingDates": [
+    "8 December 2026",
+    "4 July 2027"
+  ],
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-music-bmus.html",
+  "intakeInfo": "",
+  "courseDuration": "Full-time: 3 years",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

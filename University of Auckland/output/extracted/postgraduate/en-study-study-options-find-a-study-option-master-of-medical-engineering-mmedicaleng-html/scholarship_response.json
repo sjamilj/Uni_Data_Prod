@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T21:01:11.1822657Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"scholarshipName\": \"University of Auckland International Student Excellence Scholarship\",\n  \"scholarshipAmount\": \"6250\",\n  \"scholarshipType\": \"Percentage\",\n  \"scholarshipMetaData\": [\n    {\n      \"description\": \"A tuition fees credit of up to 25% of the recipient's tuition fees for the first two semesters of their master's degree.\"\n    },\n    {\n      \"description\": \"Eligibility: applicant must be an international student.\"\n    },\n    {\n      \"description\": \"Eligibility: applicant must have received a conditional or unconditional offer of admission to an eligible master's programme at the University of Auckland.\"\n    },\n    {\n      \"description\": \"Eligibility: applicant must have an Admissions GPE of at least 7.0.\"\n    }\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7031918900,
+  "load_duration": 3101400,
+  "prompt_eval_count": 2095,
+  "prompt_eval_cached_count": 9,
+  "prompt_eval_duration": 2929789000,
+  "eval_count": 172,
+  "eval_duration": 4013094000
+}

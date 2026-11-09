@@ -1,0 +1,39 @@
+{
+  "courseName": "Bachelor of Biomedical Science/Bachelor of Commerce Conjoint",
+  "courseDuration": "Full-time: 4 years",
+  "programmeType": "Undergraduate",
+  "studyLevel": "undergraduate",
+  "nextStartDates": "2027 Semester One \u2013 1 March, 2028 Semester One \u2013 28 February",
+  "availableLocations": "City, Grafton",
+  "points": 540,
+  "intakeInfo": "",
+  "qualification": "IB, IELTS, CIE, GCE",
+  "entryRequirements": {
+    "minimumGrade": {
+      "IB": "28",
+      "CIE": "230",
+      "GCE": "BBC"
+    },
+    "minimumSubject": {
+      "IB": "",
+      "CIE": "",
+      "GCE": ""
+    },
+    "englishScore": {
+      "IB": "",
+      "CIE": "",
+      "GCE": ""
+    }
+  },
+  "fees": {
+    "currency": "NZD",
+    "amount": "53,179.20 \u2013 57,398"
+  },
+  "applicationDeadline": "8 December 2026",
+  "initialDeposit": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-biomedical-science-commerce.html",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

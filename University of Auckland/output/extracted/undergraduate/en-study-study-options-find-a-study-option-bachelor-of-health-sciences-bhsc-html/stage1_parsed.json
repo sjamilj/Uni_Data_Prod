@@ -1,0 +1,45 @@
+{
+  "courseName": "Bachelor of Health Sciences BHSc",
+  "courseDuration": "Full-time: 3 years",
+  "nextStartDates": "2027 Semester One - 1 March, 2027 Semester Two \u2013 19 July",
+  "availableLocations": [
+    "Grafton"
+  ],
+  "programmeType": "Undergraduate",
+  "points": 360,
+  "conjointOptions": "available",
+  "entryRequirements": {
+    "tertiaryStudy": {
+      "priorTertiaryStudyRequirements": "One year successful bachelor-degree level study at a recognised university (or similar institution) overseas.",
+      "gpeGradePointEquivalent": 3.5,
+      "ieltsscore": 6.0,
+      "ieltsscoreBands": [
+        "No bands less than 5.5"
+      ]
+    },
+    "tertiaryStudyTransfer": {
+      "priorTertiaryStudyRequirements": "One year successful bachelor-degree level study at a recognised university (or similar institution) overseas.",
+      "gpeGradePointEquivalent": 3.5,
+      "ieltsscore": 6.0,
+      "ieltsscoreBands": [
+        "No bands less than 5.5"
+      ]
+    }
+  },
+  "fees": {
+    "internationalStudents": "NZ$47,270.40",
+    "studentServicesFee": "NZ$1,132.80"
+  },
+  "keyDates": {
+    "applicationClosingDates": [
+      "8 December 2026",
+      "4 July 2027"
+    ]
+  },
+  "currency": "",
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-health-sciences-bhsc.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

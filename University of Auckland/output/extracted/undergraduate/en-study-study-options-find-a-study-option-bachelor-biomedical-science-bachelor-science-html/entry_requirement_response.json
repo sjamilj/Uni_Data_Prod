@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T18:42:16.2177319Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"degreeName\": \"BSc\",\n  \"requirements\": [\n    {\"degree\": \"HSC\", \"grade\": \"Minimum 65%\"}\n  ],\n  \"AcademicRequirementsMetaData\": []\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4989811300,
+  "load_duration": 2780200,
+  "prompt_eval_count": 2683,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 3854835000,
+  "eval_count": 44,
+  "eval_duration": 1030983000
+}

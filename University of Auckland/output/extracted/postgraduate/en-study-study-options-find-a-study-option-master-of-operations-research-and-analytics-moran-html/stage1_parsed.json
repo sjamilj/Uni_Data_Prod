@@ -1,0 +1,56 @@
+{
+  "courseName": "Master of Operations Research and Analytics MORAn",
+  "courseDuration": "Full-time: Varies",
+  "availableLocations": "City",
+  "intakeInfo": "",
+  "points": "120 or 180",
+  "programmeType": "Postgraduate",
+  "tuitionFee": "",
+  "englishScore": null,
+  "initialDeposit": "",
+  "currency": "",
+  "applicationDeadline": "8 December 2026, 8 July 2027",
+  "entryRequirements": {
+    "minimumProgrammeRequirements": {
+      "research": {
+        "points": 120,
+        "gradeRequired": "GPE 5.0",
+        "description": "One year of postgraduate study"
+      },
+      "taught": {
+        "points": 120,
+        "gradeRequired": "GPE 5.0",
+        "description": "One year of postgraduate study"
+      },
+      "research180": {
+        "points": 180,
+        "gradeRequired": "GPE 5.0",
+        "description": "An undergraduate degree in a relevant subject"
+      },
+      "taught180": {
+        "points": 180,
+        "gradeRequired": "GPE 5.0",
+        "description": "An undergraduate degree in a relevant subject"
+      }
+    },
+    "qualification": {
+      "ieltsscore": "6.5",
+      "description": "No bands below 6.0"
+    },
+    "postgraduateLevel": {
+      "description": "One year of postgraduate study"
+    },
+    "undergraduateDegree": {
+      "description": "A relevant undergraduate degree in a relevant subject area"
+    },
+    "alternativeEntry": {
+      "description": "Pass 60 points in Postgraduate Certificate in Engineering, Postgraduate Diploma in Engineering, Postgraduate Certificate in Operations Research and Analytics, or Postgraduate Diploma in Operations Research and Analytics"
+    },
+    "exceptionalCircumstances": {
+      "description": "Complete a bachelor's degree with 3 years of relevant professional work experience"
+    }
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-operations-research-and-analytics-moran.html",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

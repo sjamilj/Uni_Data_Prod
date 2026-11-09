@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:34:55.6064401Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"courseName\": \"Master of Engineering Project Management\",\n  \"courseDuration\": \"\",\n  \"programmeType\": \"Postgraduate\",\n  \"entryRequirements\": [\n    {\n      \"studyOption\": \"Taught 120 points\",\n      \"gradeRequired\": \"GPE 4.0\",\n      \"qualifications\": [\n        {\n          \"name\": \"Bachelor of Engineering or Bachelor of Engineering (Honours)\",\n          \"requirements\": \"Four-year degree in engineering\"\n        }\n      ]\n    },\n    {\n      \"studyOption\": \"Taught 180 points\",\n      \"gradeRequired\": \"GPE 4.0\",\n      \"qualifications\": [\n        {\n          \"name\": \"An undergraduate degree\",\n          \"requirements\": \"Four-year degree in any field\"\n        }\n      ]\n    }\n  ],\n  \"englishLanguageRequirements\": [\n    {\n      \"qualification\": \"IELTS Academic\",\n      \"scoreRequired\": \"6.5\",\n      \"bandRequirements\": \"No bands less than 6.0\"\n    }\n  ],\n  \"fees\": [\n    {\n      \"studentType\": \"International students\",\n      \"amount\": 58258\n    }\n  ],\n  \"applicationClosingDates\": [\n    {\n      \"semester\": \"Semester One 2027\",\n      \"date\": \"8 December 2026\"\n    },\n    {\n      \"semester\": \"Semester Two 2027\",\n      \"date\": \"8 July 2027\"\n    }\n  ],\n  \"currency\": \"NZD\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10265773000,
+  "load_duration": 3102300,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2734739000,
+  "eval_count": 316,
+  "eval_duration": 7447067000
+}

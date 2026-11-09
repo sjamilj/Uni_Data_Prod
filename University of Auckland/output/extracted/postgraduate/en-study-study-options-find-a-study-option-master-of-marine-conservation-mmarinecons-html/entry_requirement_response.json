@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:56:34.717065Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"degreeName\": \"Masters (Level 9)\",\n  \"requirements\": [\n    {\n      \"degree\": \"BSc\",\n      \"grade\": \"More than 60-65% and above\"\n    }\n  ],\n  \"AcademicRequirementsMetaData\": []\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5290095800,
+  "load_duration": 3075600,
+  "prompt_eval_count": 2640,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 3819247000,
+  "eval_count": 58,
+  "eval_duration": 1368437000
+}

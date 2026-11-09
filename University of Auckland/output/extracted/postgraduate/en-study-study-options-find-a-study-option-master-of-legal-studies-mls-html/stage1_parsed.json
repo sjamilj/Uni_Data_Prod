@@ -1,0 +1,64 @@
+{
+  "courseName": "Master of Legal Studies",
+  "duration": "Full-time: Varies, Part-time: Varies",
+  "nextStart": "1 December 2026, 1 March 2027",
+  "availableLocations": "City",
+  "points": "120 or 180",
+  "programmeType": "Postgraduate, Taught & Research options",
+  "entryRequirements": [
+    {
+      "studyOption": "Taught",
+      "points": 120,
+      "gradeRequired": "GPE 5.0",
+      "description": "One year of postgraduate study or a four-year bachelors degree"
+    },
+    {
+      "studyOption": "Research",
+      "points": 120,
+      "gradeRequired": "GPE 5.0",
+      "description": "One year of postgraduate study or a four-year bachelors degree"
+    },
+    {
+      "studyOption": "Taught",
+      "points": 180,
+      "gradeRequired": "GPE 5.0",
+      "description": "A three years bachelors degree"
+    },
+    {
+      "studyOption": "Research",
+      "points": 180,
+      "gradeRequired": "GPE 5.0",
+      "description": "A three years bachelors degree"
+    }
+  ],
+  "englishLanguageRequirements": {
+    "qualification": "IELTS Academic",
+    "score": 7.0,
+    "description": "No bands less than 6.5"
+  },
+  "fees": {
+    "international": [
+      {
+        "amount": "NZ$51,024"
+      },
+      {
+        "amount": "NZ$63,905"
+      }
+    ]
+  },
+  "keyDates": {
+    "1 December start": "Subject to supervisor availability",
+    "applicationClosingDates": {
+      "Semester One 2027": "8 December 2026",
+      "Semester Two 2027": "4 July 2027",
+      "Late Year Semester 2026": "11 November 2026"
+    }
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-legal-studies-mls.html",
+  "intakeInfo": "",
+  "courseDuration": "Full-time: Varies",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

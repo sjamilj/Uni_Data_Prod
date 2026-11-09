@@ -1,0 +1,54 @@
+{
+  "courseName": "Bachelor of Music / Bachelor of Laws Conjoint",
+  "courseDuration": "Full-time: 5 years",
+  "programmeType": "Undergraduate",
+  "conjointOptions": true,
+  "availableLocations": [
+    "City"
+  ],
+  "points": 675,
+  "nextStartDates": [
+    "2027 Semester One \u2013 1 March",
+    "2028 Semester One \u2013 28 February"
+  ],
+  "entryRequirements": [
+    {
+      "qualification": "International Baccalaureate Diploma",
+      "scoreRequired": 24
+    },
+    {
+      "qualification": "General Certificate of Education (GCE) Advanced Level",
+      "scoreRequired": "BBC"
+    },
+    {
+      "qualification": "Cambridge International Examinations (CIE)",
+      "scoreRequired": "BBC"
+    },
+    {
+      "qualification": "Prior tertiary study",
+      "scoreRequired": "3.9 (GPE Grade Point Equivalent)"
+    }
+  ],
+  "englishScores": [
+    {
+      "qualification": "IELTS Academic",
+      "scoreRequired": 6.0,
+      "minBands": 5.5
+    }
+  ],
+  "fees": [
+    {
+      "internationalStudents": 49578,
+      "gst": true
+    }
+  ],
+  "keyDates": [
+    "Semester One 2027: 8 December 2026"
+  ],
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-music-laws.html",
+  "intakeInfo": "",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

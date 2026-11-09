@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:28:34.4788771Z",
+  "message": {
+    "role": "assistant",
+    "content": "{  \n  \"courseName\": \"Bachelor of Education (Teaching English to Speakers of Other Languages)\",\n  \"currency\": \"NZD\",\n  \"tuitionFee\": 42521,\n  \"intakeInfo\": \"March 2027, July 2027\",\n  \"applicationDeadline\": \"8 December 2026, 4 July 2027\",\n  \"initialDeposit\": \"\",\n  \"duration\": \"Full-time: 3 years\",\n  \"nextStartDate\": \"1 March 2027, 19 July 2027\",\n  \"availableLocations\": \"City\",\n  \"points\": 360,\n  \"programmeType\": \"Undergraduate\",\n  \"qualification\": [\n    {\n      \"name\": \"International Baccalaureate Diploma\",\n      \"scoreRequired\": \"26\"\n    },\n    {\n      \"name\": \"GCE A Level/CIE\",\n      \"scoreRequired\": \"CCC\"\n    }\n  ],\n  \"englishScores\": {\n    \"required\": \"6.0\",\n    \"bands\": \"No bands less than 5.5\"\n  },\n  \"priorTertiaryStudy\": {\n    \"requirements\": \"One year successful bachelor-degree level study at a recognised university (or similar institution) overseas.\"\n  },\n  \"guaranteedGradeRequirements\": {\n    \"gradeRequired\": \"GPE 2.4\"\n  }\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9494718600,
+  "load_duration": 3086600,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2731119000,
+  "eval_count": 283,
+  "eval_duration": 6667591000
+}

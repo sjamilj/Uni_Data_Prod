@@ -1,0 +1,17 @@
+{
+  "degreeName": "MProfEng",
+  "requirements": [
+    {
+      "degree": "MBA",
+      "grade": "More than 60-65% and above"
+    }
+  ],
+  "AcademicRequirementsMetaData": [
+    {
+      "subtitle": "Entry Requirements",
+      "description": [
+        "Graduate Diploma (Level 7): More than 60% and above in Graduation"
+      ]
+    }
+  ]
+}

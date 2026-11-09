@@ -1,0 +1,48 @@
+{
+  "courseName": "Master of Dance Studies",
+  "duration": "Full-time: Varies, Part-time: Varies",
+  "nextStartDate": "2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July",
+  "availableLocations": "City",
+  "points": "120 or 180",
+  "programmeType": "Postgraduate, Research options available",
+  "entryRequirements": {
+    "minimumProgrammeRequirements": {
+      "studyOption": "Research 180 points",
+      "gradeRequired": "GPE Grade Point Equivalent 5.0",
+      "qualification": "IELTS Academic",
+      "scoreRequired": "6.5",
+      "noBandsLessThan": "6.0",
+      "alternativeEnglishLanguageRequirements": "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/postgraduate-entry-requirements/postgraduate-english-language-requirements.html",
+      "calculateGradePointEquivalent": "http://www.gpecalculator.auckland.ac.nz/?utm_source=auckland&utm_medium=postgraduate"
+    },
+    "additionalRequirements": {
+      "writtenStatement": "previous dance education, experience, involvement in community activities, practice/employment in dance, and details of any academic and/or professional awards and prizes you may have received",
+      "interview": "assessing your application"
+    },
+    "entryOptions": {
+      "postgraduateDiplomaInDanceStudies": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/postgraduate-diploma-in-dance-studies-pgdipdancest.html",
+      "admissionToMasterOfDanceStudies": "exceptional circumstances, extensive relevant practical, professional or scholarly experience"
+    }
+  },
+  "fees": {
+    "internationalStudents": "NZ$58,258",
+    "tuitionFees": "inclusive of 15% GST, but do not include the Student Services Fee, course books, travel and health insurance, or living costs",
+    "studentServicesFee": "NZ$9.44 per point, estimated at NZ$1,132.80 for full-time study (120 points)"
+  },
+  "keyDates": {
+    "subjectToSupervisorAvailability": "1 December start",
+    "lateApplications": "places are still available",
+    "internationalStudents": "start the application process as early as possible to allow sufficient time to apply for a visa"
+  },
+  "applicationClosingDates": {
+    "semesterOne2027": "8 December 2026",
+    "semesterTwo2027": "4 July 2027"
+  },
+  "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-dance-studies-mdancest.html",
+  "intakeInfo": "",
+  "courseDuration": "Full-time: Varies",
+  "tuitionFee": "",
+  "currency": "",
+  "ieltsMinOverall": "",
+  "ieltsMinSection": ""
+}

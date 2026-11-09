@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T19:43:33.5672709Z",
+  "message": {
+    "role": "assistant",
+    "content": "{ \n  \"firstYearRequiredCourses\": [\n    \"BIOSCI 107: Biology for Biomedical Science - Cellular Processes\",\n    \"CHEM 190: Chemistry for Medical and Life Sciences\",\n    \"MEDSCI 142: Biology for Biomedical Science - Organ Systems\",\n    \"POPLHLTH 111: Population Health\",\n    \"WTRSCI 100: Contemporary Science in Aotearoa, New Zealand\"\n  ],\n  \"firstYearEntryApplicants\": [\n    \"achieve a minimum GPA of 5.0 across the four core courses (BIOSCI 107, CHEM 190, POPLHLTH 111 and MEDSCI 142)\",\n    \"have no fail grades in any of their eight first year courses\"\n  ],\n  \"interviewEligibility\": [\n    \"achieve a minimum GPA of 5.0 across BIOSCI 107, CHEM 190, POPLHLTH 111 and MEDSCI 142, including interim grades (highest possible grade) for any courses in Semester Two\",\n    \"have no fail grades in any of their Semester One courses\"\n  ],\n  \"interviewRanking\": \"based on the GPA of the four core courses (BIOSCI 107, CHEM 190, POPLHLTH 111 and MEDSCI 142) including interim grades (highest possible grade) for any courses in Semester Two\",\n  \"finalSelectionEligibility\": [\n    \"achieved a minimum GPA of 5.0 across BIOSCI 107, CHEM 190, POPLHLTH 111 and MEDSCI 142\",\n    \"no fail grades in any of their eight courses\"\n  ],\n  \"twoOrMoreYearsOfTertiaryStudy\": [\n    \"completed a minimum of two years of relevant study on a full time basis at a recognised university\",\n    \"Your last year of full time study must be no more than five years prior to the year of application\",\n    \"A minimum of 105 points over Semesters One and Two per academic year is required to be considered as full time study for BPharm admission\",\n    \"Relevant study is defined as having completed the four core courses (or equivalent): BIOSCI 107, CHEM 190, POPLHLTH 111 and MEDSCI 142\",\n    \"International applicants are also required to have English language skills of an IELTS overall score of 6.5 or higher, with no band below 6.0, if they have not undertaken their prior tertiary studies in English\"\n  ],\n  \"fees2027\": [\n    \"NZ$57,974 *\",\n    \"The Student Services Fee of $9.44 per point, estimated at $1,132.80 for full-time study (120 points)\"\n  ],\n  \"keyDates\": {\n    \"applicationClosingDate2027\": \"1 July 2026\"\n  }\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 17111740000,
+  "load_duration": 3600100,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2742034000,
+  "eval_count": 598,
+  "eval_duration": 14237280000
+}

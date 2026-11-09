@@ -1,0 +1,17 @@
+{
+  "model": "llama3.1:8b",
+  "created_at": "2026-11-05T20:43:42.55257Z",
+  "message": {
+    "role": "assistant",
+    "content": "{  \n  \"currency\": \"NZD\",\n  \"courseName\": \"Master of Health Practice MHlthPrac\",\n  \"courseDuration\": null,\n  \"intakeInfo\": \"2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July\",\n  \"location\": \"City, Grafton\",\n  \"entryRequirements\": {\n    \"programmeRequirements\": {\n      \"minimumRequirements\": [\n        {\n          \"studyOption\": \"Taught 120 points\",\n          \"gradeRequired\": \"GPE\",\n          \"gradePointEquivalent\": \"5.0\",\n          \"qualification\": \"one year of postgraduate study\"\n        },\n        {\n          \"studyOption\": \"Taught 180 points\",\n          \"gradeRequired\": \"GPE\",\n          \"gradePointEquivalent\": \"5.0\",\n          \"qualification\": \"Relevant undergraduate degree\"\n        },\n        {\n          \"qualification\": \"IELTS Academic\",\n          \"internationalEnglishLanguageTestingSystem\": \"6.5\"\n        }\n      ]\n    }\n  },\n  \"tuitionFee\": 57974,\n  \"englishScore\": null,\n  \"scholarship\": null,\n  \"applicationDeadline\": \"8 December 2026\",\n  \"initialDeposit\": \"\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8947690100,
+  "load_duration": 13348200,
+  "prompt_eval_count": 2050,
+  "prompt_eval_cached_count": 4,
+  "prompt_eval_duration": 2721584000,
+  "eval_count": 260,
+  "eval_duration": 6129297000
+}
