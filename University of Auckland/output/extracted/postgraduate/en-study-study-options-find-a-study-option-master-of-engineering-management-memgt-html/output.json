@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Master of Engineering Management MEMgt",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-engineering-management-memgt.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: 1 year",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "56227",
+  "tuitionFee": "56327",
+  "currency": "NZD",
+  "initialDeposit": "56327",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -86,5 +86,12 @@
   "toeflMinOverall": "90",
   "toeflMinSection": "21",
   "pteMinOverall": "58",
-  "pteMinSection": "50"
+  "pteMinSection": "50",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "56327",
+      "currency": "NZD"
+    }
+  ]
 }

@@ -5,11 +5,11 @@
     "City"
   ],
   "courseType": "Postgraduate",
-  "intakeInfo": "",
+  "intakeInfo": "April 2027",
   "programmePoints": 180,
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "",
+  "tuitionFee": "76722",
+  "currency": "NZD",
+  "initialDeposit": "76722",
   "englishScore": "6.5",
   "applicationDeadline": "1 March 2027",
   "programmeLevel": "Postgraduate",
@@ -22,5 +22,6 @@
   ],
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-marketing-mmktg.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

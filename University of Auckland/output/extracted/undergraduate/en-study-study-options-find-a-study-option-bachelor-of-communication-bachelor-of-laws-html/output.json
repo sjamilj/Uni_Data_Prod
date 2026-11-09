@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Communication/Bachelor of Laws Conjoint BC/LLB",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-communication-bachelor-of-laws.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: 5 years",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "50120",
+  "tuitionFee": "49582",
+  "currency": "NZD",
+  "initialDeposit": "49582",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -71,5 +71,12 @@
   "toeflMinOverall": "80",
   "toeflMinSection": "21",
   "pteMinOverall": "50",
-  "pteMinSection": "42"
+  "pteMinSection": "42",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "49582",
+      "currency": "NZD"
+    }
+  ]
 }

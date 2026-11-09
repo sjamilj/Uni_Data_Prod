@@ -1,7 +1,7 @@
 {
   "courseName": "Master of Teaching English to Speakers of Other Languages MTESOL",
   "courseDuration": "Full-time: Varies",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "availableLocations": [
     "City"
   ],
@@ -52,13 +52,15 @@
       }
     ]
   },
-  "currency": "",
+  "currency": "NZD",
   "englishScores": {
     "required": "6.5",
     "minBand": "6.0"
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-teaching-english-to-speakers-of-other-languages-mtesol.html",
-  "tuitionFee": "",
+  "tuitionFee": "46877",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "46877"
 }

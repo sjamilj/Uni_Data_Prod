@@ -39,10 +39,11 @@
   },
   "intakeInfo": "",
   "applicationDeadline": "",
-  "initialDeposit": "",
-  "currency": "",
+  "initialDeposit": "58178",
+  "currency": "NZD",
   "courseDuration": "Full-time: 3 to 4 years",
-  "tuitionFee": "",
+  "tuitionFee": "58178",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

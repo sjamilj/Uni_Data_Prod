@@ -1,7 +1,7 @@
 {
   "courseName": "Bachelor of Arts/Bachelor of Biomedical Science Conjoint",
   "courseDuration": "Full-time: 4 years",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "availableLocations": [
     "City",
     "Grafton"
@@ -26,8 +26,10 @@
   "otherProgrammesLink": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option.html",
   "englishPathwayCoursesLink": "https://www.auckland.ac.nz/en/study/applications-and-admissions/entry-requirements/undergraduate-entry-requirements/undergraduate-english-language-requirements.html",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-arts-biomedical-science.html",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "53179",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "53179"
 }

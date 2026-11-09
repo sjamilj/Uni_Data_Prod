@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Engineering (Honours) BE(Hons)",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-engineering-honours-behons.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: 4 years",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "60110",
+  "tuitionFee": "60910",
+  "currency": "NZD",
+  "initialDeposit": "60910",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -70,5 +70,12 @@
   "toeflMinOverall": "90",
   "toeflMinSection": "21",
   "pteMinOverall": "58",
-  "pteMinSection": "50"
+  "pteMinSection": "50",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "60910",
+      "currency": "NZD"
+    }
+  ]
 }

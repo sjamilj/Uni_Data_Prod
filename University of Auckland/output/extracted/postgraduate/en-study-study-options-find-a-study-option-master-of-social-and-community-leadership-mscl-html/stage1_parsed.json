@@ -2,7 +2,7 @@
   "courseName": "Master of Social and Community Leadership",
   "studyLevel": "postgraduate",
   "courseDuration": "Full-time: 18 months",
-  "nextStartDates": "2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July",
+  "nextStartDates": "2027 Semester One – 1 March, 2027 Semester Two – 19 July",
   "availableLocations": "City, Online",
   "points": 180,
   "programmeType": "Postgraduate",
@@ -21,12 +21,12 @@
       },
       {
         "studyOption": "Research 180 points",
-        "qualification": "If you don\u2019t meet the GPE requirement you can still gain entry by passing 60 points towards the Postgraduate Certificate in Social and Community Leadership with a GPA of 5 or higher"
+        "qualification": "If you don’t meet the GPE requirement you can still gain entry by passing 60 points towards the Postgraduate Certificate in Social and Community Leadership with a GPA of 5 or higher"
       }
     ]
   },
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "45857",
+  "currency": "NZD",
   "keyDates": {
     "applicationClosingDates": [
       "Summer School 2027: 1 December 2026",
@@ -35,7 +35,9 @@
     ]
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-social-and-community-leadership-mscl.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "45857"
 }

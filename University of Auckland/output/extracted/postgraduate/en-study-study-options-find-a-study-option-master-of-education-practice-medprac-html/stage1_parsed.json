@@ -1,7 +1,7 @@
 {
   "courseName": "Master of Education Practice MEdPrac",
   "courseDuration": "Full-time: 18 months",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "availableLocations": "City",
   "points": "120 or 180",
   "programmeType": "Postgraduate",
@@ -17,11 +17,12 @@
       "bands": "No bands less than 6.0"
     }
   ],
-  "tuitionFee": "",
+  "tuitionFee": "45857",
   "applicationDeadline": "8 December 2026",
-  "initialDeposit": "",
-  "currency": "",
+  "initialDeposit": "45857",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-education-practice-medprac.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

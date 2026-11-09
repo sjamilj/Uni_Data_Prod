@@ -23,7 +23,7 @@
     "gst": "15%",
     "servicesFee": "NZ$9.44 per point"
   },
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "keyDates": {
     "applicationClosingDates": {
       "semesterOne": "8 December 2026",
@@ -31,8 +31,10 @@
     }
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-literature-mlitt.html",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "44970",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "44970"
 }

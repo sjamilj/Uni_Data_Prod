@@ -2,7 +2,7 @@
   "courseName": "Master of Creative Arts Therapy",
   "courseDuration": "Full-time: 2 years",
   "courseLevel": "Postgraduate",
-  "nextStartDates": "2029 Semester One \u2013 26 February",
+  "nextStartDates": "2029 Semester One – 26 February",
   "availableLocations": "City",
   "points": 240,
   "tuitionFees": {
@@ -37,10 +37,12 @@
       "semesterOne2028": "8 December 2027"
     }
   },
-  "currency": "",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-creative-arts-therapy.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
+  "intakeInfo": "February 2029",
+  "tuitionFee": "58258",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Communication/Bachelor of Laws (Honours) Conjoint BC/LLB(Hons)",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-communication-bachelor-of-laws--honours-.html",
-  "intakeInfo": "",
+  "intakeInfo": "February 2028",
   "courseDuration": "Full-time: 6 years",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "51224",
+  "tuitionFee": "51024",
+  "currency": "NZD",
+  "initialDeposit": "51024",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -71,5 +71,12 @@
   "toeflMinOverall": "80",
   "toeflMinSection": "21",
   "pteMinOverall": "50",
-  "pteMinSection": "42"
+  "pteMinSection": "42",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "51024",
+      "currency": "NZD"
+    }
+  ]
 }

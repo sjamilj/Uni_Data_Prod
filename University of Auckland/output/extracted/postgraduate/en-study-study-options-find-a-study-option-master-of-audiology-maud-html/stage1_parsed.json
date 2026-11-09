@@ -1,9 +1,9 @@
 {
   "courseName": "Master of Audiology",
-  "currency": "",
-  "tuitionFee": "",
+  "currency": "NZD",
+  "tuitionFee": "57974",
   "duration": "Full-time: 2 years",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "availableLocations": "Grafton",
   "programmeType": "Postgraduate",
   "researchOptions": "Yes",
@@ -23,9 +23,10 @@
     }
   },
   "applicationDeadline": "1 July 2027",
-  "initialDeposit": "",
+  "initialDeposit": "57974",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-audiology-maud.html",
   "courseDuration": "Full-time: 2 years",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

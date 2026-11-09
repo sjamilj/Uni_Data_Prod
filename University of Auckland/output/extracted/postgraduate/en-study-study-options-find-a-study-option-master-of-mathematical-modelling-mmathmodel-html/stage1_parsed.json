@@ -4,8 +4,8 @@
   "courseType": "Taught",
   "courseDuration": "Full-time: Varies",
   "nextStartDates": [
-    "2027 Semester One \u2013 1 March",
-    "2027 Semester Two \u2013 19 July"
+    "2027 Semester One – 1 March",
+    "2027 Semester Two – 19 July"
   ],
   "availableLocations": [
     "City"
@@ -23,12 +23,13 @@
     "4 July 2027"
   ],
   "englishScores": "6.5",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "applicationDeadline": "8 December 2026",
-  "initialDeposit": "",
+  "initialDeposit": "58258",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-mathematical-modelling-mmathmodel.html",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "58258",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

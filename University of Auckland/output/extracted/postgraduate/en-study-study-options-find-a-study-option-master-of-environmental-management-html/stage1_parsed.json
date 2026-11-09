@@ -1,7 +1,7 @@
 {
   "courseName": "Master of Environmental Management MEnvMgt",
   "courseDuration": "Full-time: 18 months",
-  "currency": "",
+  "currency": "NZD",
   "fees": [
     {
       "studyOption": "International students",
@@ -26,7 +26,7 @@
       "studyOption": "Taught 180 points"
     }
   ],
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "programmeType": "Postgraduate",
   "programmeTypeOptions": [
     "Taught"
@@ -34,7 +34,9 @@
   "location": "City",
   "points": 180,
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-environmental-management.html",
-  "tuitionFee": "",
+  "tuitionFee": "58258",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

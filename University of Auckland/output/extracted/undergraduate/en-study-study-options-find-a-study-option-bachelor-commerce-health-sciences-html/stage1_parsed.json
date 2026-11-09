@@ -5,7 +5,7 @@
   "nextStartDate": "1 March 2027, 28 February 2028",
   "availableLocations": "City",
   "points": 540,
-  "fees": "NZ$50,579 \u2013 $57,398",
+  "fees": "NZ$50,579 – $57,398",
   "applicationClosingDate": "8 December 2026",
   "entryRequirements": {
     "IB Diploma": {
@@ -22,10 +22,12 @@
       }
     }
   },
-  "currency": "",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-commerce-health-sciences.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
+  "intakeInfo": "March 2027, February 2028",
+  "tuitionFee": "50579",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "50579"
 }

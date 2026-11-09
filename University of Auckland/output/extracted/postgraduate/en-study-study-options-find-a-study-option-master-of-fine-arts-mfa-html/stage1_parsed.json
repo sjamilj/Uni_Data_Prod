@@ -4,12 +4,13 @@
   "availableLocations": "City",
   "programmeType": "Postgraduate",
   "points": "120 or 180",
-  "tuitionFee": "",
-  "intakeInfo": "",
+  "tuitionFee": "55484",
+  "intakeInfo": "March 2027, July 2027",
   "applicationDeadline": "8 December 2026, 4 July 2027",
-  "initialDeposit": "",
-  "currency": "",
+  "initialDeposit": "55484",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-fine-arts-mfa.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

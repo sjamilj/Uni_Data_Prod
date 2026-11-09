@@ -2,15 +2,15 @@
   "courseName": "Master of Professional Supervision",
   "courseDuration": "Full-time: 18 months",
   "nextStartDates": [
-    "2027 Semester One \u2013 1 March",
-    "2027 Semester Two \u2013 19 July"
+    "2027 Semester One – 1 March",
+    "2027 Semester Two – 19 July"
   ],
   "availableLocations": "City",
   "points": 180,
   "programmeType": "Postgraduate",
   "taughtAndResearchOptions": "Taught & research options available",
-  "currency": "",
-  "tuitionFee": "",
+  "currency": "NZD",
+  "tuitionFee": "45857",
   "internationalTuitionFee": 45857,
   "studentServicesFee": 1132.8,
   "feesNote": "Fees are set in advance of each calendar year and will be updated on this website. Fees are inclusive of 15% GST, but do not include the Student Services Fee, course books, travel and health insurance, or living costs.",
@@ -53,7 +53,9 @@
     }
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-professional-supervision-mprofsup.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "45857"
 }

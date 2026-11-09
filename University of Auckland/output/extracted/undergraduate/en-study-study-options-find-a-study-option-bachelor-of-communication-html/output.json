@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Communication BC",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-communication.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: 3 years",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "51020",
+  "tuitionFee": "49582",
+  "currency": "NZD",
+  "initialDeposit": "49582",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -70,5 +70,12 @@
   "toeflMinOverall": "80",
   "toeflMinSection": "21",
   "pteMinOverall": "50",
-  "pteMinSection": "42"
+  "pteMinSection": "42",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "49582",
+      "currency": "NZD"
+    }
+  ]
 }

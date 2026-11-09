@@ -2,10 +2,10 @@
   "uniName": "University of Auckland",
   "courseName": "Master of Professional Supervision MProfSup",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-professional-supervision-mprofsup.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: 18 months",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "45857",
+  "currency": "NZD",
   "initialDeposit": "45857",
   "applicationFee": "",
   "feesMetaData": [
@@ -86,5 +86,12 @@
   "toeflMinOverall": "90",
   "toeflMinSection": "21",
   "pteMinOverall": "58",
-  "pteMinSection": "50"
+  "pteMinSection": "50",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "45857",
+      "currency": "NZD"
+    }
+  ]
 }

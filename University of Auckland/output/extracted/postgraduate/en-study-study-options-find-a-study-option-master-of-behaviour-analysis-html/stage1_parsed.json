@@ -26,11 +26,13 @@
   "keyDates": {
     "applicationClosingDates": "15 October 2026"
   },
-  "currency": "",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-behaviour-analysis.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: 2 years",
-  "tuitionFee": "",
+  "tuitionFee": "58258",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

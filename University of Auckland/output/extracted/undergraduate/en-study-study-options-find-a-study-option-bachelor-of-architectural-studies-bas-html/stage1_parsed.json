@@ -6,8 +6,8 @@
     },
     {
       "nextStartDates": [
-        "2027 Semester One \u2013 1 March",
-        "2028 Semester One \u2013 28 February"
+        "2027 Semester One – 1 March",
+        "2028 Semester One – 28 February"
       ]
     },
     {
@@ -37,7 +37,7 @@
         }
       ],
       "minimumGradeSubjectOtherRequirements": {
-        "qualification": "GCE \u2018A\u2019 Level",
+        "qualification": "GCE ‘A’ Level",
         "minimumGrade": "BBB",
         "minimumSubjects": 3,
         "generalStudies": "cannot be included"
@@ -52,7 +52,7 @@
       "priorTertiaryStudyRequirements": "see information about prior tertiary study requirements"
     },
     "guaranteedGradeRequirements": {
-      "qualification": "GCE \u2018A\u2019 Level",
+      "qualification": "GCE ‘A’ Level",
       "minimumGrade": "4.7",
       "calculateGradePointEquivalent": "http://www.gpecalculator.auckland.ac.nz/?utm_source=auckland&utm_medium=prior-tertiary-NZ"
     }
@@ -74,17 +74,18 @@
     "studentServicesFee": "9.44 per point",
     "estimatedAmount": 1132.8
   },
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "applicationDeadline": "8 December 2026",
-  "initialDeposit": "",
+  "initialDeposit": "54755",
   "alternativePathways": [
     "Bridge your educational gap with a preparation and foundation programme",
     "If you have an offer of place from us that is conditional on meeting English language requirements, you may be considered for English Pathway courses from the University of Auckland English Language Academy (ELA)"
   ],
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-architectural-studies-bas.html",
   "courseDuration": "Full-time: 3 years",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "54755",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

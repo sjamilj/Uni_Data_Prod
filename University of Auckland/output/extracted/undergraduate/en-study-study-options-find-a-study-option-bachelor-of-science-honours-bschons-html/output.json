@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Science (Honours) BSc(Hons)",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-science-honours-bschons.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: 1 year",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "50948",
+  "tuitionFee": "50810",
+  "currency": "NZD",
+  "initialDeposit": "50810",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -67,5 +67,12 @@
   "toeflMinOverall": "90",
   "toeflMinSection": "21",
   "pteMinOverall": "58",
-  "pteMinSection": "50"
+  "pteMinSection": "50",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "50810",
+      "currency": "NZD"
+    }
+  ]
 }

@@ -2,10 +2,10 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Arts / Bachelor of Fine Arts Conjoint BA/BFA",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-arts-fine-arts.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: 4 years",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "53124",
+  "currency": "NZD",
   "initialDeposit": "53124",
   "applicationFee": "",
   "feesMetaData": [
@@ -71,5 +71,12 @@
   "toeflMinOverall": "80",
   "toeflMinSection": "21",
   "pteMinOverall": "50",
-  "pteMinSection": "42"
+  "pteMinSection": "42",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "53124",
+      "currency": "NZD"
+    }
+  ]
 }

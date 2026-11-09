@@ -1,11 +1,11 @@
 {
   "courseName": "Master of Indigenous Studies",
   "studyLevel": "postgraduate",
-  "currency": "",
-  "tuitionFee": "",
-  "intakeInfo": "",
+  "currency": "NZD",
+  "tuitionFee": "47218",
+  "intakeInfo": "March 2027, July 2027",
   "applicationDeadline": "8 December 2026, 4 July 2027",
-  "initialDeposit": "",
+  "initialDeposit": "47218",
   "nextStartDates": "1 March 2027, 19 July 2027",
   "availableLocations": "City, University of Auckland Online",
   "points": "120 or 180",
@@ -27,5 +27,6 @@
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-indigenous-studies-mindigst.html",
   "courseDuration": "Full-time: Varies",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

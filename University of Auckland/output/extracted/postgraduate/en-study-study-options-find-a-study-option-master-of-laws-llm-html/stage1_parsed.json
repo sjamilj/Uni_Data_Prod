@@ -28,11 +28,12 @@
     "nextStartDate": "1 December 2026 Late Year Term, 1 March 2027 Semester One",
     "applicationDeadline": "8 December 2026 Semester One 2027, 4 July 2027 Semester Two 2027, 11 November 2026 Late Year Semester 2026"
   },
-  "currency": "",
-  "initialDeposit": "",
+  "currency": "NZD",
+  "initialDeposit": "51024",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-laws-llm.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
+  "intakeInfo": "December 2026, March 2027",
+  "tuitionFee": "51024",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

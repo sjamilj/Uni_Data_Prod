@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Master of Applied Finance MAppFin",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-applied-finance.html",
-  "intakeInfo": "",
+  "intakeInfo": "September 2027",
   "courseDuration": "Full-time: 15 months",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "59750",
+  "tuitionFee": "76722",
+  "currency": "NZD",
+  "initialDeposit": "76722",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -86,5 +86,12 @@
   "toeflMinOverall": "90",
   "toeflMinSection": "21",
   "pteMinOverall": "58",
-  "pteMinSection": "50"
+  "pteMinSection": "50",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "76722",
+      "currency": "NZD"
+    }
+  ]
 }

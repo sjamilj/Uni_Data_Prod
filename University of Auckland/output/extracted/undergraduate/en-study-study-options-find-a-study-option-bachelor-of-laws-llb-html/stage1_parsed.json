@@ -3,13 +3,13 @@
   "provider": "University of Auckland",
   "qualificationType": "Bachelors",
   "level": "Undergraduate",
-  "currency": "",
-  "intakeInfo": "",
+  "currency": "NZD",
+  "intakeInfo": "March 2027, July 2027",
   "studyMode": "Full-time, Part-time",
   "duration": "4 years",
-  "tuitionFee": "",
+  "tuitionFee": "49578",
   "applicationDeadline": "8 December 2026",
-  "initialDeposit": "",
+  "initialDeposit": "49578",
   "englishScores": {
     "IELTS Academic": "7.0"
   },
@@ -24,5 +24,6 @@
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-laws-llb.html",
   "courseDuration": "Full-time: 4 years",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

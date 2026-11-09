@@ -23,7 +23,7 @@
     "semesterTwo2027": "17 May 2027"
   },
   "programmeDuration": "One year",
-  "intakeInfo": "",
+  "intakeInfo": "2027 Summer School - 18 Jan 27; Semester Two - 19 Jul 27",
   "tuitionFees": {
     "internationalStudents": 68785.2,
     "studentServicesFee": 1699.2
@@ -31,8 +31,10 @@
   "courseDescription": null,
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-teaching-and-learning--early-childhood-.html",
   "courseDuration": "Full-time: One year",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "68785",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "68785"
 }

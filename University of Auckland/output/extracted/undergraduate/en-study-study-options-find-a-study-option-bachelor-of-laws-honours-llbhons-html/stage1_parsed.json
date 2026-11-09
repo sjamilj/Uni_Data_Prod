@@ -22,9 +22,10 @@
     "lateApplications": "We will consider late applications if places are still available. International students should start the application process as early as possible to allow sufficient time to apply for a visa.",
     "applicationClosing": "1 December 2027"
   },
-  "intakeInfo": "",
+  "intakeInfo": "February 2028",
   "tuitionFee": "",
   "currency": "",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

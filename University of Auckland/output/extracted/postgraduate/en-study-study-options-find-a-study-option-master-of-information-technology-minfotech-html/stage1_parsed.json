@@ -1,7 +1,7 @@
 {
   "courseName": "Master of Information Technology MInfoTech",
   "duration": "Full-time: Varies",
-  "nextStartDate": "2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July",
+  "nextStartDate": "2027 Semester One – 1 March, 2027 Semester Two – 19 July",
   "availableLocations": "City",
   "points": "120, 180 or 240",
   "programmeType": "Postgraduate",
@@ -51,10 +51,12 @@
     ]
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-information-technology-minfotech.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: Varies",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "57974",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "57974"
 }

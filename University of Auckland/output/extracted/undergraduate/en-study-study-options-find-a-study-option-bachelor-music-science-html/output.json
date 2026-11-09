@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Music / Bachelor of Science Conjoint BMus/BSc",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-music-science.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: 4 years",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "54799.25",
+  "tuitionFee": "54479",
+  "currency": "NZD",
+  "initialDeposit": "54479",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -71,5 +71,12 @@
   "toeflMinOverall": "80",
   "toeflMinSection": "",
   "pteMinOverall": "50",
-  "pteMinSection": "42"
+  "pteMinSection": "42",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "54479",
+      "currency": "NZD"
+    }
+  ]
 }

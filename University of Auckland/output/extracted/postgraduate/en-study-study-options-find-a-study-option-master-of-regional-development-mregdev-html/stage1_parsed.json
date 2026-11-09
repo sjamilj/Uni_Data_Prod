@@ -1,11 +1,11 @@
 {
   "courseName": "Master of Regional Development",
-  "currency": "",
-  "tuitionFee": "",
+  "currency": "NZD",
+  "tuitionFee": "58258",
   "studentServicesFee": 1132.8,
   "intakeInfo": "",
   "applicationDeadline": "4 July 2024",
-  "initialDeposit": "",
+  "initialDeposit": "58258",
   "programmeType": "Taught",
   "duration": "",
   "availableLocations": "",
@@ -16,5 +16,6 @@
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-regional-development-mregdev.html",
   "courseDuration": "",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

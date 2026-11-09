@@ -1,7 +1,7 @@
 {
   "courseName": "Bachelor of Communication/Bachelor of Laws (Honours) Conjoint",
   "courseDuration": "Full-time: 6 years",
-  "intakeInfo": "",
+  "intakeInfo": "February 2028",
   "points": 735,
   "programmeType": "Undergraduate",
   "location": "City",
@@ -35,15 +35,16 @@
   "fees": {
     "international": 51024
   },
-  "currency": "",
+  "currency": "NZD",
   "applicationDeadline": "2028",
-  "initialDeposit": "",
+  "initialDeposit": "51024",
   "studyOptions": [
     "Bridge your educational gap with a preparation and foundation programme .",
     "If you have an offer of place from us that is conditional on meeting English language requirements, you may be considered for English Pathway courses from the University of Auckland English Language Academy (ELA)"
   ],
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-communication-bachelor-of-laws--honours-.html",
-  "tuitionFee": "",
+  "tuitionFee": "51024",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

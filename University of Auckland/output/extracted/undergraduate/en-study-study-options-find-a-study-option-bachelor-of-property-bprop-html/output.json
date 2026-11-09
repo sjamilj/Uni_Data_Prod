@@ -2,10 +2,10 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Property BProp",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-property-bprop.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: 3 years",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "51020",
+  "currency": "NZD",
   "initialDeposit": "51020",
   "applicationFee": "",
   "feesMetaData": [
@@ -70,5 +70,12 @@
   "toeflMinOverall": "80",
   "toeflMinSection": "21",
   "pteMinOverall": "50",
-  "pteMinSection": "42"
+  "pteMinSection": "42",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "51020",
+      "currency": "NZD"
+    }
+  ]
 }

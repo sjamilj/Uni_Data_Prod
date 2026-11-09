@@ -1,7 +1,7 @@
 {
   "courseName": "Bachelor of Arts / Bachelor of Communication Conjoint",
   "studyLevel": "undergraduate",
-  "currency": "",
+  "currency": "NZD",
   "courseDuration": "Full-time: 4 years",
   "nextStartDates": [
     "March 2027",
@@ -48,7 +48,7 @@
   "tuitionFees": {
     "international": {
       "amount": 55779,
-      "range": "NZ$55,779 \u2013 $57,398"
+      "range": "NZ$55,779 – $57,398"
     }
   },
   "keyDates": {
@@ -58,8 +58,10 @@
     }
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-arts-communication.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
+  "intakeInfo": "March 2027, July 2027",
+  "tuitionFee": "55779",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "55779"
 }

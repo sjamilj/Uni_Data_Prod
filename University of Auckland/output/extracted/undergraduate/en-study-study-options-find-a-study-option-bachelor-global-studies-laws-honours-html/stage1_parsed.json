@@ -20,13 +20,15 @@
       }
     }
   },
-  "tuitionFee": "",
+  "tuitionFee": "54755",
   "keyDates": {
     "applicationClosing": "8 December 2026"
   },
-  "currency": "",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-global-studies-laws-honours.html",
-  "intakeInfo": "",
+  "intakeInfo": "February 2028",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "54755"
 }

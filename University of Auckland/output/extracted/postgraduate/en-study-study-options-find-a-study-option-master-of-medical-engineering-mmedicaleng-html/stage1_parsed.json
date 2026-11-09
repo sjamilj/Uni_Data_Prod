@@ -1,8 +1,8 @@
 {
   "courseName": "Master of Medical Engineering",
-  "currency": "",
+  "currency": "NZD",
   "courseDuration": "Full-time: Varies",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "studyOptions": [
     "Taught 120 points",
     "Taught 180 points"
@@ -57,7 +57,7 @@
       }
     }
   },
-  "tuitionFee": "",
+  "tuitionFee": "58258",
   "applicationDeadline": "8 December 2026",
   "keyDates": {
     "Application closing dates": {
@@ -70,5 +70,7 @@
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-medical-engineering-mmedicaleng.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

@@ -19,9 +19,11 @@
   "programmeType": "Undergraduate",
   "conjointOptions": true,
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-science-laws-honours.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
-  "currency": "",
+  "intakeInfo": "February 2028",
+  "tuitionFee": "48426",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "48426"
 }

@@ -2,8 +2,8 @@
   "courseName": "Bachelor of Arts / Bachelor of Design Conjoint BA/BDes",
   "courseDuration": "Full-time: 4 years",
   "nextStartDates": [
-    "2027 Semester One \u2013 1 March",
-    "2028 Semester One \u2013 28 February"
+    "2027 Semester One – 1 March",
+    "2028 Semester One – 28 February"
   ],
   "availableLocations": [
     "City"
@@ -38,12 +38,13 @@
   "applicationClosingDates": [
     "8 December 2026"
   ],
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "applicationDeadline": "8 December 2026",
-  "initialDeposit": "",
+  "initialDeposit": "55380",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-arts-bachelor-of-design.html",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "55380",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

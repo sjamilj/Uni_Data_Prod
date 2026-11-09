@@ -6,11 +6,11 @@
   ],
   "courseType": "Postgraduate",
   "points": 300,
-  "currency": "",
-  "tuitionFee": "",
-  "intakeInfo": "",
+  "currency": "NZD",
+  "tuitionFee": "58258",
+  "intakeInfo": "March 2027, February 2028",
   "applicationDeadline": "8 December 2026",
-  "initialDeposit": "",
+  "initialDeposit": "58258",
   "entryRequirements": {
     "minimumRequirements": [
       {
@@ -35,5 +35,6 @@
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-urban-planning-professional-and-urban-design-murbplanprofurbdes.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

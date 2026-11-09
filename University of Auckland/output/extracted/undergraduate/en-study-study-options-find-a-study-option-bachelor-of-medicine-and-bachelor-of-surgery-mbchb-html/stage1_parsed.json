@@ -58,10 +58,12 @@
   },
   "courseName": "Bachelor of Medicine and Bachelor of Surgery MBChB",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-medicine-and-bachelor-of-surgery-mbchb.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: 6 years",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "86561",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "86561"
 }

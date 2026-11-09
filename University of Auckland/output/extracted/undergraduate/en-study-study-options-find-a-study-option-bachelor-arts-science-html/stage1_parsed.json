@@ -1,7 +1,7 @@
 {
   "courseName": "Bachelor of Arts / Bachelor of Science Conjoint",
   "courseDuration": "Full-time: 4 years",
-  "nextStartDate": "2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July",
+  "nextStartDate": "2027 Semester One – 1 March, 2027 Semester Two – 19 July",
   "availableLocations": "City, Grafton",
   "points": 540,
   "programmeType": "Undergraduate",
@@ -17,13 +17,14 @@
       "bandsLessThan": "5.5"
     }
   ],
-  "tuitionFee": "",
+  "tuitionFee": "54479",
   "studentServicesFee": 1274.4,
-  "currency": "",
-  "intakeInfo": "",
+  "currency": "NZD",
+  "intakeInfo": "March 2027, July 2027",
   "applicationDeadline": "1 December 2026",
-  "initialDeposit": "",
+  "initialDeposit": "54479",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-arts-science.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

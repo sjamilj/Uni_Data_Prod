@@ -1,10 +1,10 @@
 {
   "courseName": "Bachelor of Biomedical Science/Bachelor of Communication Conjoint",
-  "currency": "",
-  "tuitionFee": "",
-  "intakeInfo": "",
+  "currency": "NZD",
+  "tuitionFee": "53179",
+  "intakeInfo": "March 2027, February 2028",
   "applicationDeadline": "8 December 2026",
-  "initialDeposit": "",
+  "initialDeposit": "53179",
   "duration": "Full-time: 4 years",
   "studyLevel": "undergraduate",
   "programmeType": "Conjoint",
@@ -44,5 +44,6 @@
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-biomedical-science-bachelor-communication.html",
   "courseDuration": "Full-time: 4 years",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

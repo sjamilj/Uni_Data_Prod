@@ -4,7 +4,7 @@
   "studyOption": "Taught 180 points",
   "gradeRequired": "4.0",
   "qualification": {
-    "name": "Bachelor\u2019s degree majoring in Biological Sciences or an equivalent subject from a recognised academic institution",
+    "name": "Bachelor’s degree majoring in Biological Sciences or an equivalent subject from a recognised academic institution",
     "ielts": {
       "score": 6.5,
       "bands": [
@@ -18,21 +18,21 @@
   },
   "duration": "Full-time: 18 months",
   "nextStartDates": [
-    "2027 Semester One \u2013 1 March",
-    "2027 Semester Two \u2013 19 July"
+    "2027 Semester One – 1 March",
+    "2027 Semester Two – 19 July"
   ],
   "availableLocations": "City",
   "points": 180,
   "programmeType": "Postgraduate",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "applicationDeadline": "8 December 2025",
-  "initialDeposit": "",
+  "initialDeposit": "58258",
   "entryRequirements": {
     "minimumRequirements": {
       "studyOption": "Taught 180 points",
       "gradeRequired": "4.0",
       "qualification": {
-        "name": "Bachelor\u2019s degree majoring in Biological Sciences or an equivalent subject from a recognised academic institution",
+        "name": "Bachelor’s degree majoring in Biological Sciences or an equivalent subject from a recognised academic institution",
         "ielts": {
           "score": 6.5,
           "bands": [
@@ -44,8 +44,9 @@
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-ecology-mecology.html",
   "courseDuration": "Full-time: 18 months",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "58258",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

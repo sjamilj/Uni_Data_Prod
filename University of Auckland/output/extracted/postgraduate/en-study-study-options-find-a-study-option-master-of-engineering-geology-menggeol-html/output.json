@@ -2,10 +2,10 @@
   "uniName": "University of Auckland",
   "courseName": "Master of Engineering Geology MEngGeol",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-engineering-geology-menggeol.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: Varies",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "58258",
+  "currency": "NZD",
   "initialDeposit": "58258",
   "applicationFee": "",
   "feesMetaData": [
@@ -86,5 +86,12 @@
   "toeflMinOverall": "90",
   "toeflMinSection": "21",
   "pteMinOverall": "58",
-  "pteMinSection": "50"
+  "pteMinSection": "50",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "58258",
+      "currency": "NZD"
+    }
+  ]
 }

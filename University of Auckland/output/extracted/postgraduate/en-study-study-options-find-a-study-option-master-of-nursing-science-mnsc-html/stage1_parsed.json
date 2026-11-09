@@ -43,9 +43,11 @@
   },
   "nextStartDate": "",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-nursing-science-mnsc.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
-  "currency": "",
+  "intakeInfo": "January 2026",
+  "tuitionFee": "57974",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "57974"
 }

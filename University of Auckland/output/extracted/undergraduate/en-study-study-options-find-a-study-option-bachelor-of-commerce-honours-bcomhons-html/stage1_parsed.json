@@ -16,12 +16,13 @@
   "fees": {
     "tuitionFee": "NZ$50,534"
   },
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "applicationDeadline": "8 December 2026, 4 July 2027",
-  "initialDeposit": "",
+  "initialDeposit": "50534",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-commerce-honours-bcomhons.html",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "50534",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

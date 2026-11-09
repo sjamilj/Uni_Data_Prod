@@ -5,12 +5,12 @@
   "courseType": "Undergraduate",
   "availableLocations": "City",
   "points": 675,
-  "intakeInfo": "",
-  "tuitionFee": "",
-  "initialDeposit": "",
+  "intakeInfo": "March 2027, July 2027",
+  "tuitionFee": "49578",
+  "initialDeposit": "49578",
   "englishScore": 6.0,
   "applicationDeadline": "2027 Summer School: 1 December 2026, 2027 Semester One: 8 December 2026, 2027 Semester Two: 4 July 2027",
-  "currency": "",
+  "currency": "NZD",
   "programmeType": "Conjoint options available",
   "requiredQualifications": [
     "International Baccalaureate Diploma",
@@ -27,5 +27,6 @@
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-commerce-laws.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

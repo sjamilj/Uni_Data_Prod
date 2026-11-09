@@ -49,9 +49,11 @@
     ]
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-commerce-music.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
-  "currency": "",
+  "intakeInfo": "March 2027, February 2028",
+  "tuitionFee": "55779",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "55779"
 }

@@ -1,9 +1,9 @@
 {
   "courseName": "Bachelor of Dance Studies",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "programmeType": "Undergraduate",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "49582",
+  "currency": "NZD",
   "applicationDeadline": "8 December 2026",
   "intakeDates": [
     "January 2027",
@@ -32,7 +32,7 @@
   },
   "audition": {
     "type": "group",
-    "description": "1\u20132 hour movement exploration workshop followed by a group discussion"
+    "description": "1–2 hour movement exploration workshop followed by a group discussion"
   },
   "transfer": {
     "requirements": {
@@ -65,5 +65,7 @@
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-dance-studies-bdancest.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "49582"
 }

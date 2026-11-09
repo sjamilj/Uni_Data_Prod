@@ -5,8 +5,8 @@
   "points": 240,
   "programmeType": "Postgraduate",
   "nextStartDates": [
-    "2027 Semester One \u2013 1 March",
-    "2028 Semester One \u2013 28 February"
+    "2027 Semester One – 1 March",
+    "2028 Semester One – 28 February"
   ],
   "applicationClosingDates": [
     "8 December 2026"
@@ -36,9 +36,11 @@
     }
   ],
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-social-work-professional-mswprof.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
-  "currency": "",
+  "intakeInfo": "March 2027, February 2028",
+  "tuitionFee": "45857",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "45857"
 }

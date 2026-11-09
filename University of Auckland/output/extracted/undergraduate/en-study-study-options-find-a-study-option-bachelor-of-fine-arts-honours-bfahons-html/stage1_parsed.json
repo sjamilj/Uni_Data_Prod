@@ -1,15 +1,16 @@
 {
   "courseName": "Bachelor of Fine Arts (Honours) BFA(Hons)",
-  "currency": "",
+  "currency": "NZD",
   "duration": "1 year",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "applicationDeadline": "8 December 2026, 4 July 2027",
-  "tuitionFee": "",
+  "tuitionFee": "55848",
   "englishScores": "",
-  "initialDeposit": "",
+  "initialDeposit": "55848",
   "qualificationSpecificRequirements": "A GPA of 5.0 across all of your Stage III courses in Fine Arts.",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-fine-arts-honours-bfahons.html",
   "courseDuration": "Full-time: 1 year",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

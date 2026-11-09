@@ -1,10 +1,10 @@
 {
   "courseName": "Bachelor of Global Studies / Bachelor of Health Sciences Conjoint",
   "duration": "Full-time: 4 years",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "applicationDeadline": "8 December 2026",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "53179",
+  "currency": "NZD",
   "englishScore": "6.0",
   "englishRequirements": "No bands less than 5.5",
   "priorTertiaryStudy": "One year successful bachelor-degree level study at a recognised university (or similar institution) overseas",
@@ -14,5 +14,7 @@
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-global-studies-bachelor-of-health-sciences.html",
   "courseDuration": "Full-time: 4 years",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "53179"
 }

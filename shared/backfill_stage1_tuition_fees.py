@@ -89,11 +89,12 @@ def backfill_course_dir(output_dir: Path, course_dir: Path) -> bool:
         {
             "tuitionFee": new_fee,
             "currency": new_currency,
-            "feesMetaData": enriched.get("feesMetaData", stage1_parsed.get("feesMetaData", [])),
             "intakeInfo": enriched.get("intakeInfo", stage1_parsed.get("intakeInfo", "")),
             "courseDuration": enriched.get("courseDuration", stage1_parsed.get("courseDuration", "")),
         }
     )
+    if new_fee:
+        stage1_parsed["initialDeposit"] = new_fee
     stage1_parsed_path.write_text(
         json.dumps(stage1_parsed, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
@@ -101,6 +102,8 @@ def backfill_course_dir(output_dir: Path, course_dir: Path) -> bool:
 
     output["tuitionFee"] = new_fee
     output["currency"] = new_currency
+    if new_fee:
+        output["initialDeposit"] = new_fee
     if new_intake:
         output["intakeInfo"] = new_intake
     if new_duration:

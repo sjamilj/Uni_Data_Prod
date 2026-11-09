@@ -4,13 +4,13 @@
   "courseType": "Taught",
   "coursePoints": 180,
   "programmeType": "Postgraduate",
-  "currency": "",
+  "currency": "NZD",
   "fees": {
     "tuitionFee": 58258,
     "studentServicesFee": 1699.2,
     "otherFees": []
   },
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "applicationDeadline": "8 December 2026",
   "qualification": "Master of Wine Science MWineSci",
   "englishScore": {
@@ -27,7 +27,9 @@
     "Please note: We will consider late applications if places are still available. International students should start the application process as early as possible to allow sufficient time to apply for a visa."
   ],
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-wine-science-mwinesci.html",
-  "tuitionFee": "",
+  "tuitionFee": "58258",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

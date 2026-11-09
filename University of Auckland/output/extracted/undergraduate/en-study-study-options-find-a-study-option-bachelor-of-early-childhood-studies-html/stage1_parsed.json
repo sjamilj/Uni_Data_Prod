@@ -12,9 +12,9 @@
       "currency": "NZD"
     }
   },
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "applicationDeadline": "8 December 2026, 4 July 2027",
-  "initialDeposit": "",
+  "initialDeposit": "42521",
   "entryRequirements": {
     "IB International Baccalaureate Diploma": {
       "requiredScore": 26
@@ -40,8 +40,9 @@
     ]
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-early-childhood-studies.html",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "42521",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

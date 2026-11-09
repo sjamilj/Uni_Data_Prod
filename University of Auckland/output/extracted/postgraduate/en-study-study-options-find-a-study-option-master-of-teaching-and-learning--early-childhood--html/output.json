@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Master of Teaching and Learning (Early Childhood) MTchgLn(EC)",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-teaching-and-learning--early-childhood-.html",
-  "intakeInfo": "",
+  "intakeInfo": "2027 Summer School - 18 Jan 27; Semester Two - 19 Jul 27",
   "courseDuration": "Full-time: One year",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "68785.2",
+  "tuitionFee": "68785",
+  "currency": "NZD",
+  "initialDeposit": "68785",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -86,5 +86,12 @@
   "toeflMinOverall": "90",
   "toeflMinSection": "21",
   "pteMinOverall": "58",
-  "pteMinSection": "50"
+  "pteMinSection": "50",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "68785",
+      "currency": "NZD"
+    }
+  ]
 }

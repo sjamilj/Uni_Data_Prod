@@ -6,11 +6,11 @@
   "programmeType": "Undergraduate",
   "duration": "Full-time: 4 years\nPart-time: Varies",
   "nextStartDates": [
-    "2027 Semester One \u2013 1 March",
-    "2027 Semester Two \u2013 19 July"
+    "2027 Semester One – 1 March",
+    "2027 Semester Two – 19 July"
   ],
   "points": 540,
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "entryRequirements": {
     "secondarySchool": {
       "qualification": [
@@ -43,11 +43,12 @@
     "8 December 2026",
     "4 July 2027"
   ],
-  "initialDeposit": "",
-  "currency": "",
+  "initialDeposit": "57398",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-commerce-bachelor-sport-health-and-physical-education.html",
   "courseDuration": "Full-time: 4 years",
-  "tuitionFee": "",
+  "tuitionFee": "57398",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

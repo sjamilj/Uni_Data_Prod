@@ -6,13 +6,14 @@
   ],
   "coursePoints": 180,
   "courseType": "Postgraduate",
-  "intakeInfo": "",
+  "intakeInfo": "September 2027",
   "applicationDeadline": "1 August 2027",
   "englishScores": "6.5 (No band below 6.0)",
-  "tuitionFee": "",
-  "initialDeposit": "",
-  "currency": "",
+  "tuitionFee": "76722",
+  "initialDeposit": "76722",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-applied-finance.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

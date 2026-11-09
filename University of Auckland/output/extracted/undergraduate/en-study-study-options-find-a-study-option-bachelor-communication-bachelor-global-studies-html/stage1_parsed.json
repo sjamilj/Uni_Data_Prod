@@ -1,6 +1,6 @@
 {
   "courseName": "Bachelor of Communication/Bachelor of Global Studies Conjoint",
-  "currency": "",
+  "currency": "NZD",
   "duration": "Full-time: 4 years",
   "programmeType": "Undergraduate",
   "points": 540,
@@ -36,12 +36,13 @@
       ]
     }
   ],
-  "tuitionFee": "",
-  "intakeInfo": "",
+  "tuitionFee": "61599",
+  "intakeInfo": "March 2027, February 2028",
   "applicationDeadline": "8 December 2026",
-  "initialDeposit": "",
+  "initialDeposit": "61599",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-communication-bachelor-global-studies.html",
   "courseDuration": "Full-time: 4 years",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

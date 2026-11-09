@@ -4,7 +4,7 @@
   "availableLocations": [
     "Grafton"
   ],
-  "intakeInfo": "",
+  "intakeInfo": "December 2026, March 2027",
   "programmeType": "Taught & research options available",
   "duration": "Full-time: Varies, Part-time: Varies",
   "points": [
@@ -43,16 +43,17 @@
       }
     }
   ],
-  "tuitionFee": "",
+  "tuitionFee": "57974",
   "applicationDeadline": [
     "8 December 2026",
     "4 July 2027",
     "11 November 2026"
   ],
-  "initialDeposit": "",
+  "initialDeposit": "57974",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-health-sciences-mhsc.html",
   "courseDuration": "Full-time: Varies",
-  "currency": "",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

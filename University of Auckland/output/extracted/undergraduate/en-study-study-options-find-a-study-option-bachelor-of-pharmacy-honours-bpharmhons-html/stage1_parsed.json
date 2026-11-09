@@ -1,10 +1,12 @@
 {
   "courseName": "Bachelor of Pharmacy (Honours) BPharm(Hons)",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-pharmacy-honours-bpharmhons.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: 4 years",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "57974",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "57974"
 }

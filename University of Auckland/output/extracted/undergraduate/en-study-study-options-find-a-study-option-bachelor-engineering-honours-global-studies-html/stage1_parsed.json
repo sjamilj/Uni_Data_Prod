@@ -1,7 +1,7 @@
 {
   "courseName": "Bachelor of Engineering (Honours) / Bachelor of Global Studies Conjoint",
   "courseDuration": "Full-time: 5 years",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "points": 690,
   "programmeType": "Undergraduate",
   "location": "City",
@@ -21,8 +21,10 @@
     "applicationDeadline": "8 December 2026"
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-engineering-honours-global-studies.html",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "68523",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "68523"
 }

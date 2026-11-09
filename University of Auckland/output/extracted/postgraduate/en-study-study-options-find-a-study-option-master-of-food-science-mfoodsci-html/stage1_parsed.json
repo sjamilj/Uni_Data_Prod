@@ -27,11 +27,13 @@
   "keyDates": {
     "applicationClosingDate": "8 December 2026"
   },
-  "currency": "",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-food-science-mfoodsci.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: 18 months",
-  "tuitionFee": "",
+  "tuitionFee": "58257",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58257"
 }

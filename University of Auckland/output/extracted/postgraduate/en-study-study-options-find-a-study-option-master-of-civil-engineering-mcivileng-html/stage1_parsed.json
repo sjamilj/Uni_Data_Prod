@@ -76,11 +76,12 @@
       "intake": "Semester Two 2027"
     }
   ],
-  "initialDeposit": "",
+  "initialDeposit": "58258",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-civil-engineering-mcivileng.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
-  "currency": "",
+  "intakeInfo": "March 2027, July 2027",
+  "tuitionFee": "58258",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

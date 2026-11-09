@@ -10,7 +10,7 @@
   ],
   "points": 480,
   "programmeType": "Doctorate",
-  "tuitionFee": "",
+  "tuitionFee": "58178",
   "internationalTuitionFee": true,
   "englishScores": {
     "qualification": "IELTS Academic",
@@ -18,11 +18,12 @@
     "noBandsLessThan": 6.0
   },
   "applicationDeadline": "",
-  "initialDeposit": "",
+  "initialDeposit": "58178",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/doctor-medical-sciences-dmedsc.html",
-  "intakeInfo": "",
+  "intakeInfo": "Flexible start dates",
   "courseDuration": "Full-time: Varies",
-  "currency": "",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

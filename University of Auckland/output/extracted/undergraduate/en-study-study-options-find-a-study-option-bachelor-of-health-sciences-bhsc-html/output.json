@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Health Sciences BHSc",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-health-sciences-bhsc.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027",
   "courseDuration": "Full-time: 3 years",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "47270.4",
+  "tuitionFee": "47270",
+  "currency": "NZD",
+  "initialDeposit": "47270",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -82,5 +82,12 @@
   "toeflMinOverall": "80",
   "toeflMinSection": "21",
   "pteMinOverall": "50",
-  "pteMinSection": "42"
+  "pteMinSection": "42",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "47270",
+      "currency": "NZD"
+    }
+  ]
 }

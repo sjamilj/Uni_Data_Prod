@@ -6,10 +6,10 @@
   "availableLocations": "City",
   "points": 180,
   "programmeType": "Postgraduate",
-  "tuitionFee": "",
-  "intakeInfo": "",
+  "tuitionFee": "58258",
+  "intakeInfo": "March 2027, February 2028",
   "applicationDeadline": "",
-  "initialDeposit": "",
+  "initialDeposit": "58258",
   "entryRequirements": {
     "minimumRequirements": {
       "studyOption": "Taught",
@@ -23,9 +23,10 @@
     "points": 180,
     "gradeRequired": "GPE 5.0"
   },
-  "currency": "",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-organisational-psychology-morgpsych.html",
   "courseDuration": "Full-time: 18 months",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

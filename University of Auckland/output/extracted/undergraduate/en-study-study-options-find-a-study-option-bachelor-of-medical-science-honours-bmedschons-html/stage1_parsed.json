@@ -4,8 +4,8 @@
   "studyLevel": "postgraduate",
   "duration": "Full-time: 1 year",
   "nextStartDates": [
-    "2027 Semester One \u2013 1 March",
-    "2028 Semester One \u2013 28 February"
+    "2027 Semester One – 1 March",
+    "2028 Semester One – 28 February"
   ],
   "availableLocations": [
     "Grafton"
@@ -41,16 +41,17 @@
     }
   },
   "applicationDeadline": "1 November 2026",
-  "initialDeposit": "",
+  "initialDeposit": "57974",
   "keyDates": {
     "applicationClosingDates": [
       "1 November 2026"
     ]
   },
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: 1 year",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "57974",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

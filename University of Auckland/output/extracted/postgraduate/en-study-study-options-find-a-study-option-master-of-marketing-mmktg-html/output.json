@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Master of Marketing MMktg",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-marketing-mmktg.html",
-  "intakeInfo": "",
+  "intakeInfo": "April 2027",
   "courseDuration": "Full-time: Varies",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "76222.98",
+  "tuitionFee": "76722",
+  "currency": "NZD",
+  "initialDeposit": "76722",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -86,5 +86,12 @@
   "toeflMinOverall": "90",
   "toeflMinSection": "21",
   "pteMinOverall": "58",
-  "pteMinSection": "50"
+  "pteMinSection": "50",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "76722",
+      "currency": "NZD"
+    }
+  ]
 }

@@ -5,8 +5,8 @@
     "City"
   ],
   "availableIntakes": [
-    "2027 Semester One \u2013 1 March",
-    "2027 Semester Two \u2013 19 July"
+    "2027 Semester One – 1 March",
+    "2027 Semester Two – 19 July"
   ],
   "programmeType": "Postgraduate",
   "programmeTypeDescription": "Taught options available",
@@ -54,10 +54,10 @@
     "Science",
     "Technology"
   ],
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "",
-  "intakeInfo": "",
+  "tuitionFee": "58258",
+  "currency": "NZD",
+  "initialDeposit": "58258",
+  "intakeInfo": "March 2027, July 2027",
   "applicationDeadline": "8 December 2026",
   "applicationDeadline2": "8 July 2027",
   "studentServicesFee": 1132.8,
@@ -67,5 +67,6 @@
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-robotics-and-automation-engineering-mroboteng.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

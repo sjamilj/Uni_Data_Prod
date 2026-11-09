@@ -1,8 +1,8 @@
 {
   "courseName": "Bachelor of Commerce / Bachelor of Laws (Honours) Conjoint",
-  "currency": "",
-  "tuitionFee": "",
-  "intakeInfo": "",
+  "currency": "NZD",
+  "tuitionFee": "49578",
+  "intakeInfo": "February 2028",
   "applicationDeadline": "",
   "duration": "",
   "programmeType": "Undergraduate",
@@ -15,5 +15,7 @@
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-commerce-laws-honours.html",
   "courseDuration": "Full-time: 6 years",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "49578"
 }

@@ -5,8 +5,8 @@
   "studyLevel": "postgraduate",
   "programmeType": "Taught & research options available",
   "availableLocations": "City",
-  "intakeInfo": "",
-  "nextStartDates": "2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July",
+  "intakeInfo": "March 2027, July 2027",
+  "nextStartDates": "2027 Semester One – 1 March, 2027 Semester Two – 19 July",
   "courseFees": {
     "international": 58592
   },
@@ -57,8 +57,10 @@
     "tuitionFeesAdditional": []
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-earthquake-engineering-meqeng.html",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "58258",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

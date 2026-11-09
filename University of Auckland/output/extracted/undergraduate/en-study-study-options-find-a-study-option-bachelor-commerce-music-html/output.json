@@ -2,10 +2,10 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Commerce / Bachelor of Music Conjoint BCom/BMus",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-commerce-music.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: 4 years",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "55779",
+  "currency": "NZD",
   "initialDeposit": "55779",
   "applicationFee": "",
   "feesMetaData": [
@@ -70,5 +70,12 @@
   "toeflMinOverall": "80",
   "toeflMinSection": "21",
   "pteMinOverall": "50",
-  "pteMinSection": "42"
+  "pteMinSection": "42",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "55779",
+      "currency": "NZD"
+    }
+  ]
 }

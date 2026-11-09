@@ -6,7 +6,7 @@
   ],
   "coursePoints": 540,
   "courseType": "Undergraduate",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "entryRequirements": [
     {
       "qualification": "International Baccalaureate Diploma",
@@ -33,12 +33,13 @@
       "currency": "NZD"
     }
   },
-  "tuitionFee": "",
+  "tuitionFee": "54479",
   "studentServicesFee": 1274.4,
   "applicationDeadline": "8 December 2026",
-  "initialDeposit": "",
+  "initialDeposit": "54479",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-design-bachelor-science.html",
-  "currency": "",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

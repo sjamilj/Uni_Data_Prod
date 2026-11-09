@@ -1,10 +1,12 @@
 {
-  "tuitionFee": "",
+  "tuitionFee": "47218",
   "courseName": "Master of Creative Writing MCW",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-creative-writing-mcw.html",
-  "intakeInfo": "",
+  "intakeInfo": "July 2027, July 2028",
   "courseDuration": "Full-time: 1 year",
-  "currency": "",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "47218"
 }

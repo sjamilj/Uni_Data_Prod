@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Master of Architecture (Professional) and Urban Design MArch(Prof)UrbDes",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-architecture-professional-and-urban-design-marchprofurdes.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: 30 months",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "58528",
+  "tuitionFee": "58258",
+  "currency": "NZD",
+  "initialDeposit": "58258",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -86,5 +86,12 @@
   "toeflMinOverall": "90",
   "toeflMinSection": "21",
   "pteMinOverall": "58",
-  "pteMinSection": "50"
+  "pteMinSection": "50",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "58258",
+      "currency": "NZD"
+    }
+  ]
 }

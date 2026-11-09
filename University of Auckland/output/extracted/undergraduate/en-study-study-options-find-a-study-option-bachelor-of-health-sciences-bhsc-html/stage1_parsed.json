@@ -1,7 +1,7 @@
 {
   "courseName": "Bachelor of Health Sciences BHSc",
   "courseDuration": "Full-time: 3 years",
-  "nextStartDates": "2027 Semester One - 1 March, 2027 Semester Two \u2013 19 July",
+  "nextStartDates": "2027 Semester One - 1 March, 2027 Semester Two – 19 July",
   "availableLocations": [
     "Grafton"
   ],
@@ -36,10 +36,12 @@
       "4 July 2027"
     ]
   },
-  "currency": "",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-health-sciences-bhsc.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
+  "intakeInfo": "March 2027",
+  "tuitionFee": "47270",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "47270"
 }

@@ -3,7 +3,7 @@
   "courseDescription": "Postgraduate",
   "duration": "Full-time: 15 months",
   "partTimeDuration": "Varies",
-  "nextStartDate": "2027 Quarter Two \u2013 12 April, 2027 Quarter Four \u2013 27 September",
+  "nextStartDate": "2027 Quarter Two – 12 April, 2027 Quarter Four – 27 September",
   "availableLocations": "City",
   "points": "180",
   "programmeType": "Postgraduate",
@@ -27,10 +27,12 @@
     }
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-business-analytics.html",
-  "intakeInfo": "",
+  "intakeInfo": "April 2027",
   "courseDuration": "Full-time: 15 months",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "76722",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "76722"
 }

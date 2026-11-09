@@ -3,15 +3,16 @@
   "courseDuration": "Full-time: Varies",
   "availableLocations": "City",
   "programmeType": "Postgraduate",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "applicationDeadline": "8 December 2026, 8 July 2027",
   "englishScores": null,
-  "tuitionFee": "",
+  "tuitionFee": "58258",
   "studentServicesFee": 1132.8,
-  "initialDeposit": "",
-  "currency": "",
+  "initialDeposit": "58258",
+  "currency": "NZD",
   "programmeDuration": "Full-time: Varies",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-operations-research-mor.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

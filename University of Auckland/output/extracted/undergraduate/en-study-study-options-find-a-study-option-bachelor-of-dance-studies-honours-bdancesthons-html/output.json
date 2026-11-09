@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Dance Studies (Honours) BDanceSt(Hons)",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-dance-studies-honours-bdancesthons.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: 1 year",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "58527.6",
+  "tuitionFee": "58257",
+  "currency": "NZD",
+  "initialDeposit": "58257",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -66,5 +66,12 @@
   "toeflMinOverall": "90",
   "toeflMinSection": "21",
   "pteMinOverall": "58",
-  "pteMinSection": "50"
+  "pteMinSection": "50",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "58257",
+      "currency": "NZD"
+    }
+  ]
 }

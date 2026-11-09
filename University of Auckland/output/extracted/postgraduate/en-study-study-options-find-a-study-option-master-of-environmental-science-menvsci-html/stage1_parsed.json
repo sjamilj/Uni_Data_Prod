@@ -1,11 +1,11 @@
 {
   "courseName": "Master of Environmental Science",
-  "currency": "",
+  "currency": "NZD",
   "fees": {
     "international": 58258
   },
   "duration": "Full-time: 18 months",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "applicationDeadline": "8 December 2026",
   "programmeType": "Postgraduate",
   "programmeRequirements": {
@@ -46,10 +46,11 @@
   "calculateGPE": {
     "url": "http://www.gpecalculator.auckland.ac.nz/?utm_source=auckland&utm_medium=postgraduate"
   },
-  "initialDeposit": "",
+  "initialDeposit": "58258",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-environmental-science-menvsci.html",
   "courseDuration": "Full-time: 18 months",
-  "tuitionFee": "",
+  "tuitionFee": "58258",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

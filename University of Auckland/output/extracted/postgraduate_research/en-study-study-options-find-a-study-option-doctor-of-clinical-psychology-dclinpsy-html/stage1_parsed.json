@@ -9,15 +9,16 @@
   "programmeType": "Doctorate",
   "minimumEnglishScore": 6.5,
   "minimumEnglishScoreBands": 6.0,
-  "currency": "",
+  "currency": "NZD",
   "tuitionFeeInternational": 58178.4,
   "studentServicesFee": 1132.8,
   "applicationDeadline": "1 November 2026",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027",
   "qualificationEligibility": "New Zealand and Australian Citizens or Permanent Residents",
-  "initialDeposit": "",
+  "initialDeposit": "58178",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/doctor-of-clinical-psychology-dclinpsy.html",
-  "tuitionFee": "",
+  "tuitionFee": "58178",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

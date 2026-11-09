@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Commerce / Bachelor of Health Sciences Conjoint BCom/BHSc",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-commerce-health-sciences.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: 4 years",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "50659",
+  "tuitionFee": "50579",
+  "currency": "NZD",
+  "initialDeposit": "50579",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -70,5 +70,12 @@
   "toeflMinOverall": "80",
   "toeflMinSection": "21",
   "pteMinOverall": "50",
-  "pteMinSection": "42"
+  "pteMinSection": "42",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "50579",
+      "currency": "NZD"
+    }
+  ]
 }

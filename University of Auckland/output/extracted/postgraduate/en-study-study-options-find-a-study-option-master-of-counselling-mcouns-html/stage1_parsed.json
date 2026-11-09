@@ -1,7 +1,7 @@
 {
   "courseName": "Master of Counselling MCouns",
   "duration": "Full-time: Varies",
-  "nextStartDate": "2027 Semester One \u2013 1 March, 2028 Semester One \u2013 28 February",
+  "nextStartDate": "2027 Semester One – 1 March, 2028 Semester One – 28 February",
   "availableLocations": "City",
   "points": "120 or 240",
   "programmeType": "Postgraduate",
@@ -22,12 +22,12 @@
         "scoreRequired": "6.5"
       }
     ],
-    "practicalExperience": "At least three years\u2019 practical experience in teaching, counselling, nursing, social work or a similar profession",
+    "practicalExperience": "At least three years’ practical experience in teaching, counselling, nursing, social work or a similar profession",
     "interview": "Satisfactory interview",
     "policeChecks": "Police check/s",
     "safetyChecks": "[safety checks](https://www.education.auckland.ac.nz/en/for/future-undergraduates/entry-requirements/vulnerable-children-act.html)",
     "previousEmployment": "Previous employment",
-    "refereesReports": "Referees\u2019 reports"
+    "refereesReports": "Referees’ reports"
   },
   "tuitionFees": {
     "tuitionFee": "NZ$45,857"
@@ -39,10 +39,12 @@
     "applicationDeadline": "8 December 2026"
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-counselling-mcouns.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: Varies",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "45857",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "45857"
 }

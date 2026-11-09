@@ -7,14 +7,14 @@
   "points": 360,
   "programmeType": "Undergraduate",
   "fees": {
-    "International": "NZ$49,582 \u2013 NZ$51,020"
+    "International": "NZ$49,582 – NZ$51,020"
   },
   "applicationDeadline": [
     "8 December 2026",
     "4 July 2027"
   ],
-  "intakeInfo": "",
-  "initialDeposit": "",
+  "intakeInfo": "March 2027, July 2027",
+  "initialDeposit": "49582",
   "englishScores": {
     "IELTS Academic": "6.0"
   },
@@ -30,8 +30,9 @@
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-communication.html",
   "courseDuration": "Full-time: 3 years",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "49582",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

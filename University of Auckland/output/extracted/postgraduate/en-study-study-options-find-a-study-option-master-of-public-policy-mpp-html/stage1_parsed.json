@@ -10,8 +10,8 @@
     "City, University of Auckland Online"
   ],
   "availableStartDates": [
-    "2027 Semester One \u2013 1 March",
-    "2027 Semester Two \u2013 19 July"
+    "2027 Semester One – 1 March",
+    "2027 Semester Two – 19 July"
   ],
   "programmeType": "Postgraduate",
   "programmeTypeParts": [
@@ -68,9 +68,11 @@
     }
   ],
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-public-policy-mpp.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
-  "currency": "",
+  "intakeInfo": "March 2027, July 2027",
+  "tuitionFee": "47218",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "47218"
 }

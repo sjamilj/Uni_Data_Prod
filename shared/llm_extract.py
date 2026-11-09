@@ -867,6 +867,45 @@ class Stage1MarkdownParser:
         return normalize_short_month_date(text)
 
     @staticmethod
+    def extract_auckland_fields(body: str) -> dict[str, str]:
+        """Parse Auckland quick facts and international tuition from clean markdown."""
+        fields: dict[str, str] = {}
+        start = re.search(r"\*{0,2}Next start date\s*:?\*{0,2}\s*:?\s*([^\n]+)", body, re.I)
+        if start:
+            dates = [start.group(1).strip()]
+            tail = body[start.end():]
+            for line in tail.splitlines():
+                if not line.strip():
+                    continue
+                if re.match(r"^\s*[-*]\s*\d{4}\s+Semester\s+(?:One|Two|1|2)\b", line, re.I):
+                    dates.append(re.sub(r"^\s*[-*]\s*", "", line).strip())
+                elif not re.match(r"^\s*[-*]\s*", line):
+                    break
+            normalized = []
+            for date in dates:
+                match = re.search(r"\b((?:19|20)\d{2})\s+(?:Semester\s+(?:One|Two|1|2)|Quarter\s+(?:One|Two|Three|Four|1|2|3|4)|(?:Late\s+Year\s+)?Term)\s*[–—-]\s*\d{1,2}\s+([A-Za-z]+)", date, re.I)
+                if match:
+                    normalized.append(f"{match.group(2).title()} {match.group(1)}")
+                else:
+                    value = Stage1MarkdownParser.normalize_intake_text(date)
+                    if value:
+                        normalized.extend(value.split(", "))
+            if normalized:
+                fields["intakeInfo"] = ", ".join(dict.fromkeys(normalized))
+
+        fee_context = re.search(r"^\s*[-*]?\s*\*{0,2}International students\*{0,2}\s*:?\s*([^\n]*)", body, re.I | re.M)
+        if fee_context:
+            fee_text = fee_context.group(1)
+            if not fee_text.strip():
+                next_line = re.search(r"^\s*([^\n]+)", body[fee_context.end():])
+                fee_text = next_line.group(1) if next_line else ""
+            fee = re.search(r"NZ\s*\$\s*([\d,]+)(?:\s*[–—-]\s*(?:NZ\s*)?\$?\s*[\d,]+)?", fee_text, re.I)
+            if fee:
+                fields["tuitionFee"] = fee.group(1).replace(",", "")
+                fields["currency"] = "NZD"
+        return fields
+
+    @staticmethod
     def extract_research_fee_difference(body: str) -> str:
         """Partially-funded PhD: difference between Home and Overseas tuition fees is £17,712."""
         match = re.search(
@@ -968,6 +1007,7 @@ class Stage1MarkdownParser:
     fees_meta: dict,
     *,
     tuition_fee: str = "",
+    currency: str = "GBP",
     include_tuition_line: bool = True,
 ) -> list[dict[str, object]]:
         """Convert LLM feesMetaData object into standard subtitle/description blocks."""
@@ -976,16 +1016,16 @@ class Stage1MarkdownParser:
             fee_val = tuition_fee or fees_meta.get('tuitionFee')
             if fee_val not in (None, ''):
                 try:
-                    fee_display = f"£{int(str(fee_val).replace(',', '')):,}"
+                    fee_display = f"{'NZ$' if currency == 'NZD' else '£'}{int(str(fee_val).replace(',', '')):,}"
                 except ValueError:
-                    fee_display = f'£{fee_val}'
+                    fee_display = f"{'NZ$' if currency == 'NZD' else '£'}{fee_val}"
                 descriptions.append(f'International tuition fee: {fee_display} (full-time, per year)')
         placement = fees_meta.get('placementYearFee')
         if placement not in (None, ''):
             try:
-                placement_display = f"£{int(str(placement).replace(',', '')):,}"
+                placement_display = f"{'NZ$' if currency == 'NZD' else '£'}{int(str(placement).replace(',', '')):,}"
             except ValueError:
-                placement_display = f'£{placement}'
+                placement_display = f"{'NZ$' if currency == 'NZD' else '£'}{placement}"
             descriptions.append(f'Placement year fee: {placement_display}')
         if not descriptions:
             return []
@@ -1007,7 +1047,7 @@ class Stage1MarkdownParser:
                 parsed['currency'] = currency
         if not str(parsed.get('currency', '') or '').strip() and fees_meta.get('currency'):
             parsed['currency'] = str(fees_meta.get('currency')).strip()
-        parsed['feesMetaData'] = fees_metadata_object_to_array(fees_meta, tuition_fee=str(parsed.get('tuitionFee', '') or ''))
+        parsed['feesMetaData'] = fees_metadata_object_to_array(fees_meta, tuition_fee=str(parsed.get('tuitionFee', '') or ''), currency=str(parsed.get('currency') or 'GBP'))
 
     @staticmethod
     def extract_keele_key_information_fields(body: str) -> dict[str, str]:
@@ -1077,6 +1117,7 @@ class Stage1MarkdownParser:
     def extract_stage1_fields_from_md(body: str) -> dict[str, str]:
         """Parse intake, fees, duration, and IELTS scalars from clean course markdown."""
         fields: dict[str, str] = {}
+        fields.update(Stage1MarkdownParser.extract_auckland_fields(body))
         if "## Key information" in body:
             fields.update(
                 {
@@ -1745,7 +1786,7 @@ class Stage1Enricher:
                     parsed['currency'] = currency
             if not str(parsed.get('currency', '') or '').strip() and fees_dict.get('currency'):
                 parsed['currency'] = str(fees_dict.get('currency')).strip()
-            parsed['feesMetaData'] = Stage1MarkdownParser.fees_metadata_object_to_array(fees_dict, tuition_fee=str(parsed.get('tuitionFee', '') or ''), include_tuition_line=not bool(str(parsed.get('tuitionFee', '') or '').strip()))
+            parsed['feesMetaData'] = Stage1MarkdownParser.fees_metadata_object_to_array(fees_dict, tuition_fee=str(parsed.get('tuitionFee', '') or ''), currency=str(parsed.get('currency') or 'GBP'), include_tuition_line=not bool(str(parsed.get('tuitionFee', '') or '').strip()))
         elif not hints.get('tuitionFee'):
             Stage1MarkdownParser.coalesce_stage1_fields_from_fees_metadata(parsed, course_body)
         tuition_fee = str(parsed.get('tuitionFee', '') or '').strip()
@@ -1763,6 +1804,17 @@ class Stage1Enricher:
 ) -> dict:
         """Apply parser-owned fields, then drop ungrounded LLM scalars."""
         parsed = dict(stage1_json) if isinstance(stage1_json, dict) else {}
+        # Accept common Stage 1 LLM aliases as fallback inputs; markdown hints below remain authoritative.
+        if not parsed.get('intakeInfo') and parsed.get('nextStartDates'):
+            parsed['intakeInfo'] = parsed.get('nextStartDates')
+        if not parsed.get('tuitionFee') and isinstance(parsed.get('tuitionFees'), dict):
+            tuition_alias = parsed['tuitionFees']
+            international = next((value for key, value in tuition_alias.items() if 'international' in str(key).casefold()), None)
+            if isinstance(international, dict):
+                international = international.get('fee', international.get('tuitionFee', international.get('amount', '')))
+            if international not in (None, ''):
+                parsed['tuitionFee'] = normalize_fee_numeric(str(international))
+                parsed['currency'] = str(parsed.get('currency') or 'NZD').strip()
         if not str(parsed.get('courseName', '') or '').strip():
             parsed['courseName'] = course_name
         if not str(parsed.get('courseUrl', '') or '').strip():
@@ -2752,6 +2804,8 @@ class OutputJsonBuilder:
         deposit_initial = str(llm_json.get('initialDeposit', '') or '').strip()
         if deposit_initial:
             output['initialDeposit'] = deposit_initial
+        if university_name.strip().casefold() == 'university of auckland' and str(output.get('tuitionFee') or '').strip():
+            output['initialDeposit'] = str(output['tuitionFee']).strip()
         tuition_fee = str(output.get('tuitionFee', '') or '').strip()
         currency = str(output.get('currency', '') or '').strip()
         if tuition_fee and currency:

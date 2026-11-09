@@ -33,10 +33,12 @@
     "PTE"
   ],
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-physiotherapy-practice-mphysioprac.html",
-  "intakeInfo": "",
+  "intakeInfo": "February 2027",
   "courseDuration": "Full-time: 2 years",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "58258",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

@@ -2,8 +2,8 @@
   "courseName": "Bachelor of Design / Bachelor of Global Studies Conjoint",
   "courseDuration": "Full-time: 4 years",
   "nextStartDates": [
-    "2027 Semester One \u2013 1 March",
-    "2028 Semester One \u2013 28 February"
+    "2027 Semester One – 1 March",
+    "2028 Semester One – 28 February"
   ],
   "availableLocations": "City",
   "programmeType": "Undergraduate",
@@ -37,9 +37,11 @@
   },
   "applicationClosingDates": "8 December 2026",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-design-bachelor-global-studies.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
-  "currency": "",
+  "intakeInfo": "March 2027, February 2028",
+  "tuitionFee": "61599",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "61599"
 }

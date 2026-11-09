@@ -3,8 +3,8 @@
   "studyLevel": "postgraduate",
   "programmeType": "Taught & research options available",
   "nextStartDates": [
-    "2026 Late Year Term \u2013 1 December",
-    "2027 Semester One \u2013 1 March"
+    "2026 Late Year Term – 1 December",
+    "2027 Semester One – 1 March"
   ],
   "availableLocations": [
     "City"
@@ -54,15 +54,17 @@
     "4 July 2027",
     "11 November 2026"
   ],
-  "currency": "",
+  "currency": "NZD",
   "deposit": "",
-  "intakeInfo": "",
+  "intakeInfo": "December 2026, March 2027",
   "metadata": {
     "pipeline": "course_url=https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-taxation-studies-mtaxs.html study_level=postgraduate"
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-taxation-studies-mtaxs.html",
   "courseDuration": "Full-time: Varies",
-  "tuitionFee": "",
+  "tuitionFee": "63302",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "63302"
 }

@@ -47,10 +47,12 @@
       "date": "8 July 2027"
     }
   ],
-  "currency": "",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-engineering-project-management.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
+  "intakeInfo": "March 2027, July 2027",
+  "tuitionFee": "58258",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

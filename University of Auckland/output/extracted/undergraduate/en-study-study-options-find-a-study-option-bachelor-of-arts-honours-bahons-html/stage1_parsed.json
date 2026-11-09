@@ -1,14 +1,14 @@
 {
   "courseName": "Bachelor of Arts (Honours) BA(Hons)",
   "courseDuration": "Full-time: 1 year",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "availableLocations": [
     "City"
   ],
   "points": 120,
   "programmeType": "Postgraduate",
-  "currency": "",
-  "tuitionFee": "",
+  "currency": "NZD",
+  "tuitionFee": "47218",
   "englishScore": {
     "qualification": "IELTS Academic",
     "score": 6.5
@@ -35,16 +35,17 @@
     }
   },
   "fees": {
-    "internationalStudents": "NZ$47,218 \u2013 $55,480",
+    "internationalStudents": "NZ$47,218 – $55,480",
     "studentServicesFee": "$9.44 per point",
     "estimatedStudentServicesFee": "$1,132.80"
   },
-  "initialDeposit": "",
+  "initialDeposit": "47218",
   "applicationClosingDates": {
     "semesterOne": "8 December 2026",
     "semesterTwo": "4 July 2027"
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-arts-honours-bahons.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

@@ -5,8 +5,8 @@
     "Newmarket"
   ],
   "nextStartDate": [
-    "2027 Semester One \u2013 1 March",
-    "2028 Semester One \u2013 28 February"
+    "2027 Semester One – 1 March",
+    "2028 Semester One – 28 February"
   ],
   "entryRequirements": {
     "minimumRequirements": {
@@ -40,10 +40,12 @@
     }
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-clinical-exercise-physiology.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: 18 months",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "58258",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

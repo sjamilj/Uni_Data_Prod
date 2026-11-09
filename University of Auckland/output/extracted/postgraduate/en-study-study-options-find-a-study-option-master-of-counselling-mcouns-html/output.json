@@ -2,10 +2,10 @@
   "uniName": "University of Auckland",
   "courseName": "Master of Counselling MCouns",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-counselling-mcouns.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: Varies",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "45857",
+  "currency": "NZD",
   "initialDeposit": "45857",
   "applicationFee": "",
   "feesMetaData": [
@@ -90,5 +90,12 @@
   "toeflMinOverall": "90",
   "toeflMinSection": "21",
   "pteMinOverall": "58",
-  "pteMinSection": "50"
+  "pteMinSection": "50",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "45857",
+      "currency": "NZD"
+    }
+  ]
 }

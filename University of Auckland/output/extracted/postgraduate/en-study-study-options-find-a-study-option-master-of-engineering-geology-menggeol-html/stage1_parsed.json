@@ -12,8 +12,8 @@
   "programmeTypeOption": "Taught & research options available",
   "studyLevel": "postgraduate",
   "nextStartDates": [
-    "2027 Semester One \u2013 1 March",
-    "2027 Semester Two \u2013 19 July"
+    "2027 Semester One – 1 March",
+    "2027 Semester Two – 19 July"
   ],
   "studyPoints": [
     "120",
@@ -39,13 +39,15 @@
       }
     }
   },
-  "intakeInfo": "",
-  "applicationDeadline": "2027 Summer School \u2013 1 December 2026",
-  "applicationDeadline2": "2027 Semester One \u2013 8 December 2026",
-  "applicationDeadline3": "2027 Semester Two \u2013 4 July 2027",
+  "intakeInfo": "March 2027, July 2027",
+  "applicationDeadline": "2027 Summer School – 1 December 2026",
+  "applicationDeadline2": "2027 Semester One – 8 December 2026",
+  "applicationDeadline3": "2027 Semester Two – 4 July 2027",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-engineering-geology-menggeol.html",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "58258",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

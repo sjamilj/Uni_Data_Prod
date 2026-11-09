@@ -4,9 +4,9 @@
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/doctor-of-fine-arts-docfa.html",
   "intakeInfo": "",
   "courseDuration": "Full-time: 3 to 4 years",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "58178.4",
+  "tuitionFee": "58178",
+  "currency": "NZD",
+  "initialDeposit": "58178",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -90,5 +90,12 @@
   "toeflMinOverall": "90",
   "toeflMinSection": "21",
   "pteMinOverall": "58",
-  "pteMinSection": "50"
+  "pteMinSection": "50",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "58178",
+      "currency": "NZD"
+    }
+  ]
 }

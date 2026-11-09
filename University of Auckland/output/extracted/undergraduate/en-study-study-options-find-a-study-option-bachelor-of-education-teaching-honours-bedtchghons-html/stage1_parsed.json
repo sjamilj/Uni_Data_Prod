@@ -1,7 +1,7 @@
 {
   "courseName": "Bachelor of Education (Teaching) (Honours) BEd(Tchg)(Hons)",
   "studyLevel": "undergraduate",
-  "currency": "",
+  "currency": "NZD",
   "studyDuration": "Full-time: 1 year",
   "studyDurationPartTime": "Varies",
   "nextStartDateSemesterOne": "1 March 2027",
@@ -30,9 +30,11 @@
     }
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-education-teaching-honours-bedtchghons.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: 1 year",
-  "tuitionFee": "",
+  "tuitionFee": "45857",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "45857"
 }

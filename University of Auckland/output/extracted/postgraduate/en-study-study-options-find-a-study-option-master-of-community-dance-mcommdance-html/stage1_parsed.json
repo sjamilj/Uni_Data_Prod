@@ -39,8 +39,8 @@
   },
   "keyDates": {
     "nextStartDate": [
-      "2026 Late Year Term \u2013 1 December",
-      "2027 Semester One \u2013 1 March"
+      "2026 Late Year Term – 1 December",
+      "2027 Semester One – 1 March"
     ],
     "applicationClosingDates": [
       "8 December 2026",
@@ -49,10 +49,12 @@
       "11 November 2026"
     ]
   },
-  "currency": "",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-community-dance-mcommdance.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
+  "intakeInfo": "December 2026, March 2027",
+  "tuitionFee": "58257",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58257"
 }

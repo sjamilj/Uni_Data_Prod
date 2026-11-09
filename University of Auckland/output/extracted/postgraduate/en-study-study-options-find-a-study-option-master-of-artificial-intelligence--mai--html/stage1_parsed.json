@@ -30,7 +30,7 @@
   ],
   "fees": [
     {
-      "internationalStudents": "NZ$57,292 \u2013 $57,293"
+      "internationalStudents": "NZ$57,292 – $57,293"
     }
   ],
   "keyDates": [
@@ -39,9 +39,11 @@
     }
   ],
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-artificial-intelligence--mai-.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
-  "currency": "",
+  "intakeInfo": "March 2027, February 2028",
+  "tuitionFee": "57292",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "57292"
 }

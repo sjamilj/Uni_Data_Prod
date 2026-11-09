@@ -46,11 +46,13 @@
       "Late Year Semester 2026": "11 November 2026"
     }
   },
-  "currency": "",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-engineering-me.html",
-  "intakeInfo": "",
+  "intakeInfo": "December 2026, March 2027",
   "courseDuration": "Full-time: Varies",
-  "tuitionFee": "",
+  "tuitionFee": "58258",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

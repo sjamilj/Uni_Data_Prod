@@ -7,7 +7,7 @@
     "1 March 2027",
     "28 February 2028"
   ],
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "intakeInfoDates": [
     "1 March 2027",
     "28 February 2028"
@@ -36,8 +36,10 @@
     }
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-bioscience-enterprise-mbioent.html",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "58258",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

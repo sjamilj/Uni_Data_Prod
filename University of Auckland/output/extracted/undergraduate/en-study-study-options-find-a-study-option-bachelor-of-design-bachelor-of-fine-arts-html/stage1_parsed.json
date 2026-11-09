@@ -52,10 +52,12 @@
     "applicationClosingDate": "8 December 2026"
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-design-bachelor-of-fine-arts.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: 4 years",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "58149",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58149"
 }

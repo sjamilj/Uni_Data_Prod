@@ -4,9 +4,9 @@
   "courseType": "Undergraduate",
   "conjointOptions": "Available",
   "coursePoints": 735,
-  "nextStartDate": "2028 Semester One \u2013 28 February; 2028 Semester Two \u2013 17 July",
+  "nextStartDate": "2028 Semester One – 28 February; 2028 Semester Two – 17 July",
   "availableLocations": "City",
-  "currency": "",
+  "currency": "NZD",
   "fees": {
     "internationalStudents": [
       "$49,578",
@@ -24,8 +24,10 @@
     "criteria": "B+ average or higher across all your law courses"
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-arts-laws-honours.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
+  "intakeInfo": "February 2028",
+  "tuitionFee": "49578",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "49578"
 }

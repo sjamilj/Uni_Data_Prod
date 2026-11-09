@@ -7,8 +7,8 @@
   "points": 360,
   "programmeType": "Undergraduate",
   "conjointOptions": true,
-  "nextStartDates": "2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July",
-  "intakeInfo": "",
+  "nextStartDates": "2027 Semester One – 1 March, 2027 Semester Two – 19 July",
+  "intakeInfo": "March 2027, July 2027",
   "fees": [
     {
       "currency": "NZD",
@@ -21,7 +21,7 @@
       "type": "International"
     }
   ],
-  "tuitionFee": "",
+  "tuitionFee": "42236",
   "tuitionFeeCurrency": "NZD",
   "applicationDeadline": "8 December 2026",
   "englishLanguageRequirement": "6.0",
@@ -51,7 +51,9 @@
     "If you are 20 on or before the first day of semester, have no formal University Entrance (UE) qualification, and are a New Zealand or Australian citizen or permanent resident you can apply for special admission ."
   ],
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-arts-ba.html",
-  "currency": "",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "42236"
 }

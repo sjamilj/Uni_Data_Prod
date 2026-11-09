@@ -4,7 +4,7 @@
   "courseType": "Postgraduate",
   "availableLocations": "City",
   "coursePoints": 180,
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "programmeRequirements": {
     "minimumRequirements": {
       "studyOption": "Taught 180 points",
@@ -28,10 +28,12 @@
       }
     }
   },
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "58258",
+  "currency": "NZD",
   "applicationClosingDate": "8 December 2026",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-global-studies-mglobalst.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

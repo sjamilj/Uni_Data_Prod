@@ -5,7 +5,7 @@
   "points": 540,
   "programmeType": "Undergraduate",
   "conjointOptionsAvailable": true,
-  "nextStartDates": "2027 Semester One \u2013 1 March, 2028 Semester One \u2013 28 February",
+  "nextStartDates": "2027 Semester One – 1 March, 2028 Semester One – 28 February",
   "entryRequirements": [
     {
       "qualification": "International Baccalaureate Diploma",
@@ -25,12 +25,13 @@
     "internationalStudents": 61699
   },
   "applicationClosingDates": "8 December 2026",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "applicationDeadline": "",
-  "initialDeposit": "",
+  "initialDeposit": "61599",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-arts-global-studies.html",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "61599",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

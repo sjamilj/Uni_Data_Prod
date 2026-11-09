@@ -34,12 +34,13 @@
       ]
     }
   },
-  "tuitionFee": "",
-  "intakeInfo": "",
+  "tuitionFee": "54479",
+  "intakeInfo": "March 2027, February 2028",
   "applicationDeadline": "8 December 2026",
-  "initialDeposit": "",
-  "currency": "",
+  "initialDeposit": "54479",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-engineering-honours-science.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

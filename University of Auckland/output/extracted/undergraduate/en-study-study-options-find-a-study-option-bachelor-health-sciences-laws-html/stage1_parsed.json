@@ -8,18 +8,19 @@
   "points": 675,
   "programmeType": "Undergraduate",
   "conjointOptions": "Available",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027",
   "applicationDeadline": "8 December 2026",
-  "tuitionFee": "",
+  "tuitionFee": "47270",
   "englishScore": {
     "qualification": "IELTS Academic",
     "score": 6.0
   },
-  "initialDeposit": "",
+  "initialDeposit": "47270",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-health-sciences-laws.html",
   "studyLevel": "Undergraduate",
-  "currency": "",
+  "currency": "NZD",
   "courseDuration": "Full-time: 5 years",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

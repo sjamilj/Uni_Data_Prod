@@ -6,8 +6,8 @@
   ],
   "programmeType": "Undergraduate",
   "nextStartDates": [
-    "2027 Semester One \u2013 1 March",
-    "2028 Semester One \u2013 28 February"
+    "2027 Semester One – 1 March",
+    "2028 Semester One – 28 February"
   ],
   "points": 360,
   "entryRequirements": [
@@ -44,10 +44,12 @@
     "domestic": "8 December 2026",
     "international": "1 November 2026"
   },
-  "currency": "",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-nursing-bnurs.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
+  "intakeInfo": "March 2027, February 2028",
+  "tuitionFee": "44959",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "44959"
 }

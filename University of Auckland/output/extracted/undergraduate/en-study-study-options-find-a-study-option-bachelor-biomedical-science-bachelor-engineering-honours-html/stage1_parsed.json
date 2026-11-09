@@ -7,12 +7,12 @@
   ],
   "points": 690,
   "programmeType": "Undergraduate",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "applicationDeadline": "8 December 2026",
-  "tuitionFee": "",
-  "initialDeposit": "",
+  "tuitionFee": "53179",
+  "initialDeposit": "53179",
   "englishScore": "6.5",
-  "currency": "",
+  "currency": "NZD",
   "qualification": [
     "IB",
     "GCE",
@@ -25,5 +25,6 @@
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-biomedical-science-bachelor-engineering-honours.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

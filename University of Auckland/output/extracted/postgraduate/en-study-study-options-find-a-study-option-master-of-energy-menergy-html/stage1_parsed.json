@@ -4,7 +4,7 @@
   "availableLocations": "City",
   "points": "120 or 180",
   "programmeType": "Postgraduate",
-  "nextStartDates": "2027 Semester One \u2013 1 March, 2027 Semester Two \u2013 19 July",
+  "nextStartDates": "2027 Semester One – 1 March, 2027 Semester Two – 19 July",
   "entryRequirements": [
     {
       "studyOption": "Taught 120 points",
@@ -42,10 +42,12 @@
   ],
   "programmeDescription": "The Master of Energy is a limited entry programme with only 40 students accepted into the programme each year. Applications are reviewed at the same time by the programme selection committee. The application will be ranked based on your academic achievement in relevant tertiary study, and a qualitative assessment of your work experience to date.",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-energy-menergy.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: Varies",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "58258",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

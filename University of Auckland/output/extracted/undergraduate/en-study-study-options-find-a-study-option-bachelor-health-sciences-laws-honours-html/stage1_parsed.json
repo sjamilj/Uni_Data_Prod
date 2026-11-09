@@ -2,16 +2,16 @@
   "courseName": "Bachelor of Health Sciences / Bachelor of Laws (Honours) Conjoint",
   "studyLevel": "undergraduate",
   "courseDuration": "Full-time: Full-time: 5 years",
-  "intakeInfo": "",
+  "intakeInfo": "February 2028",
   "availableLocations": [
     "City",
     "Grafton"
   ],
   "programmeType": "Undergraduate",
   "points": 675,
-  "currency": "",
-  "tuitionFee": "",
-  "initialDeposit": "",
+  "currency": "NZD",
+  "tuitionFee": "47270",
+  "initialDeposit": "47270",
   "entryRequirements": {
     "overseasQualifications": {
       "invitation": "high-achieving Bachelor of Health Sciences/Bachelor of Laws (BHSc/LLB) Part II students"
@@ -41,5 +41,6 @@
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-health-sciences-laws-honours.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

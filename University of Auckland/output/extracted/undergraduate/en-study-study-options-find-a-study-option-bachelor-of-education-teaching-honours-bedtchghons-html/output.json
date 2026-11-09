@@ -2,10 +2,10 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Education (Teaching) (Honours) BEd(Tchg)(Hons)",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-education-teaching-honours-bedtchghons.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: 1 year",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "45857",
+  "currency": "NZD",
   "initialDeposit": "45857",
   "applicationFee": "",
   "feesMetaData": [
@@ -66,5 +66,12 @@
   "toeflMinOverall": "80",
   "toeflMinSection": "",
   "pteMinOverall": "50",
-  "pteMinSection": "42"
+  "pteMinSection": "42",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "45857",
+      "currency": "NZD"
+    }
+  ]
 }

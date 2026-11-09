@@ -1,11 +1,11 @@
 {
   "courseName": "Bachelor of Biomedical Science",
-  "currency": "",
-  "tuitionFee": "",
+  "currency": "NZD",
+  "tuitionFee": "47270",
   "duration": "",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "applicationDeadline": "8 December 2026",
-  "initialDeposit": "",
+  "initialDeposit": "47270",
   "englishScore": 6.0,
   "entryRequirements": [
     {
@@ -24,5 +24,6 @@
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-biomedical-science.html",
   "courseDuration": "Full-time: 3 years",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

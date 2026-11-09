@@ -2,7 +2,7 @@
   "courseName": "Bachelor of Biomedical Science/Bachelor of Science Conjoint",
   "courseCode": "BBiomedSc/BSc",
   "duration": "4 years",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "availableLocations": [
     "City",
     "Grafton"
@@ -33,15 +33,17 @@
   ],
   "fees": {
     "currency": "NZD",
-    "international": "53,179.20 \u2013 68,523"
+    "international": "53,179.20 – 68,523"
   },
   "keyDates": {
-    "applicationDeadline": "2027 Semester One \u2013 8 December 2026"
+    "applicationDeadline": "2027 Semester One – 8 December 2026"
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-biomedical-science-bachelor-science.html",
   "courseDuration": "Full-time: 4 years",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "53179",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "53179"
 }

@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Music / Bachelor of Laws Conjoint BMus/LLB",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-music-laws.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: 5 years",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "49978",
+  "tuitionFee": "49578",
+  "currency": "NZD",
+  "initialDeposit": "49578",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -71,5 +71,12 @@
   "toeflMinOverall": "80",
   "toeflMinSection": "21",
   "pteMinOverall": "50",
-  "pteMinSection": "42"
+  "pteMinSection": "42",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "49578",
+      "currency": "NZD"
+    }
+  ]
 }

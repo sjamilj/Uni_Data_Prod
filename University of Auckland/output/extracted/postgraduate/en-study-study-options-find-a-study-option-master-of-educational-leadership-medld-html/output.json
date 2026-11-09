@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Master of Educational Leadership MEdLd",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-educational-leadership-medld.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: Varies",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "39895",
+  "tuitionFee": "39995",
+  "currency": "NZD",
+  "initialDeposit": "39995",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -86,5 +86,12 @@
   "toeflMinOverall": "90",
   "toeflMinSection": "21",
   "pteMinOverall": "58",
-  "pteMinSection": "50"
+  "pteMinSection": "50",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "39995",
+      "currency": "NZD"
+    }
+  ]
 }

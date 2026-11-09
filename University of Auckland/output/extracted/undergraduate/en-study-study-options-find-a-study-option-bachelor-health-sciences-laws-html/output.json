@@ -2,11 +2,11 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Health Sciences / Bachelor of Laws Conjoint BHSc/LLB",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-health-sciences-laws.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027",
   "courseDuration": "Full-time: 5 years",
-  "tuitionFee": "",
-  "currency": "",
-  "initialDeposit": "47270.4",
+  "tuitionFee": "47270",
+  "currency": "NZD",
+  "initialDeposit": "47270",
   "applicationFee": "",
   "feesMetaData": [
     {
@@ -71,5 +71,12 @@
   "toeflMinOverall": "80",
   "toeflMinSection": "",
   "pteMinOverall": "50",
-  "pteMinSection": "42"
+  "pteMinSection": "42",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "47270",
+      "currency": "NZD"
+    }
+  ]
 }

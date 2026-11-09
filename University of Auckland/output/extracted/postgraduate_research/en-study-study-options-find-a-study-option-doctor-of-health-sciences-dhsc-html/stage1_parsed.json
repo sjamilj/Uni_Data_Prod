@@ -2,10 +2,10 @@
   "courseName": "Doctor of Health Sciences DHSc",
   "courseDuration": "Full-time: Varies",
   "intakeInfo": "",
-  "tuitionFee": "",
+  "tuitionFee": "58178",
   "englishScore": "",
   "applicationDeadline": "",
-  "initialDeposit": "",
+  "initialDeposit": "58178",
   "qualificationSpecificRequirements": [],
   "englishScoreType": "",
   "englishScoreMinSection": "",
@@ -15,7 +15,8 @@
   "englishScoreMinTOEFLType": "",
   "scholarship": [],
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/doctor-of-health-sciences-dhsc.html",
-  "currency": "",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

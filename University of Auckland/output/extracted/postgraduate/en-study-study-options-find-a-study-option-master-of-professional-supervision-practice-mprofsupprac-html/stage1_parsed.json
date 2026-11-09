@@ -45,9 +45,11 @@
     "gradePointEquivalentCalculator": "http://www.gpecalculator.auckland.ac.nz/?utm_source=auckland&utm_medium=postgraduate"
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-professional-supervision-practice-mprofsupprac.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
-  "currency": "",
+  "intakeInfo": "March 2027, July 2027",
+  "tuitionFee": "45857",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "45857"
 }

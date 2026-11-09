@@ -2,10 +2,10 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Social Work (Honours) BSW(Hons)",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-social-work-honours-bswhons.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: 4 years",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "45857",
+  "currency": "NZD",
   "initialDeposit": "45857",
   "applicationFee": "",
   "feesMetaData": [
@@ -66,5 +66,12 @@
   "toeflMinOverall": "80",
   "toeflMinSection": "",
   "pteMinOverall": "50",
-  "pteMinSection": "42"
+  "pteMinSection": "42",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "45857",
+      "currency": "NZD"
+    }
+  ]
 }

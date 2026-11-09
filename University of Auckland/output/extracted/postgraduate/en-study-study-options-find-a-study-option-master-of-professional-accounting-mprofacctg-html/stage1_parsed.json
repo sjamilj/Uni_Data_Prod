@@ -2,8 +2,8 @@
   "courseName": "Master of Professional Accounting MProfAcctg",
   "courseDuration": "Full-time: 15 months",
   "nextStartDates": [
-    "2027 Quarter Two \u2013 12 April",
-    "2027 Quarter Four \u2013 27 September"
+    "2027 Quarter Two – 12 April",
+    "2027 Quarter Four – 27 September"
   ],
   "availableLocations": "City",
   "points": 180,
@@ -41,12 +41,13 @@
     "qualification": "IELTS Academic",
     "score": 6.5
   },
-  "tuitionFee": "",
-  "intakeInfo": "",
+  "tuitionFee": "76722",
+  "intakeInfo": "April 2027",
   "applicationDeadline": "1 March 2027",
-  "initialDeposit": "",
+  "initialDeposit": "76722",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-professional-accounting-mprofacctg.html",
-  "currency": "",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

@@ -27,7 +27,7 @@
     6.0,
     6.0
   ],
-  "tuitionFee": "",
+  "tuitionFee": "53124",
   "keyDates": [
     {
       "date": "8 December 2026"
@@ -37,8 +37,10 @@
     }
   ],
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-arts-fine-arts.html",
-  "intakeInfo": "",
-  "currency": "",
+  "intakeInfo": "March 2027, July 2027",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "53124"
 }

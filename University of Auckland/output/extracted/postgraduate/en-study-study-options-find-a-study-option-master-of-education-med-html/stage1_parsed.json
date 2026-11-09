@@ -5,21 +5,22 @@
   "availableLocations": [
     "City"
   ],
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "studyType": "Taught & research options available",
   "points": [
     "120",
     "180"
   ],
-  "currency": "",
-  "tuitionFee": "",
+  "currency": "NZD",
+  "tuitionFee": "45856",
   "applicationDeadline": "8 December 2026, 4 July 2027",
   "englishScore": 6.5,
-  "initialDeposit": "",
+  "initialDeposit": "45856",
   "courseFees": {
     "link": "https://www.auckland.ac.nz/en/study/fees-and-money-matters/tuition-fees/fees-by-faculty.html"
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-education-med.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

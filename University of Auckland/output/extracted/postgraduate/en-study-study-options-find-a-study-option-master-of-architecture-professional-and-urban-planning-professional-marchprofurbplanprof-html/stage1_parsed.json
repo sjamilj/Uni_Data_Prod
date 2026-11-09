@@ -2,7 +2,7 @@
   "courseName": "Master of Architecture (Professional) and Urban Planning (Professional)",
   "programmeType": "Postgraduate",
   "duration": "Full-time: 3 years",
-  "nextStartDates": "2027 Semester One \u2013 1 March, 2028 Semester One \u2013 28 February",
+  "nextStartDates": "2027 Semester One – 1 March, 2028 Semester One – 28 February",
   "availableLocations": "City",
   "points": 360,
   "researchOptions": "Research options available",
@@ -30,10 +30,12 @@
     "applicationClosingDates": "8 December 2026"
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-architecture-professional-and-urban-planning-professional-marchprofurbplanprof.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: 3 years",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "58258",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

@@ -1,15 +1,16 @@
 {
   "courseName": "Bachelor of Biomedical Science/Bachelor of Laws (Honours) Conjoint",
   "courseDuration": "Full-time: 5 years",
-  "intakeInfo": "",
-  "tuitionFee": "",
+  "intakeInfo": "February 2028",
+  "tuitionFee": "47270",
   "applicationDeadline": "8 December 2026",
-  "initialDeposit": "",
+  "initialDeposit": "47270",
   "entryRequirements": "BBC (112 UCAS Tariff points)",
   "englishScore": 6.5,
   "scholarships": [],
-  "currency": "",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-biomedical-science-bachelor-laws-honours.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

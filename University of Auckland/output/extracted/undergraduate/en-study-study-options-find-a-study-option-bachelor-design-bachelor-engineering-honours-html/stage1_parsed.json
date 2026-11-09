@@ -10,13 +10,14 @@
     "1 March 2027",
     "28 February 2028"
   ],
-  "tuitionFee": "",
+  "tuitionFee": "68523",
   "englishScore": "6.5",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "applicationDeadline": "8 December 2026",
-  "initialDeposit": "",
+  "initialDeposit": "68523",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-design-bachelor-engineering-honours.html",
-  "currency": "",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

@@ -2,10 +2,10 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Engineering (Honours) / Bachelor of Global Studies Conjoint BE(Hons)/BGlobalSt",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-engineering-honours-global-studies.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: 5 years",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "68523",
+  "currency": "NZD",
   "initialDeposit": "68523",
   "applicationFee": "",
   "feesMetaData": [
@@ -70,5 +70,12 @@
   "toeflMinOverall": "80",
   "toeflMinSection": "21",
   "pteMinOverall": "50",
-  "pteMinSection": "42"
+  "pteMinSection": "42",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "68523",
+      "currency": "NZD"
+    }
+  ]
 }

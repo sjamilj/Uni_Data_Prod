@@ -1,17 +1,18 @@
 {
   "courseName": "Bachelor of Arts / Bachelor of Health Sciences Conjoint BA/BHSc",
   "courseDuration": "Full-time: 4 years",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "availableLocations": "City, Grafton",
   "studyLevel": "undergraduate",
   "points": 540,
   "programmeType": "undergraduate",
   "programmeTypeDescription": "Conjoint options available",
-  "currency": "",
-  "tuitionFee": "",
+  "currency": "NZD",
+  "tuitionFee": "50579",
   "applicationDeadline": "8 December 2026",
-  "initialDeposit": "",
+  "initialDeposit": "50579",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-arts-health-sciences.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

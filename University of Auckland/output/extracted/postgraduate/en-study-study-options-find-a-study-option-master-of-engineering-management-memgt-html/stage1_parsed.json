@@ -1,8 +1,8 @@
 {
   "courseName": "Master of Engineering Management MEMgt",
   "courseDescription": "This postgraduate programme is designed to help you develop the skills and knowledge required to manage engineering projects effectively.",
-  "currency": "",
-  "tuitionFee": "",
+  "currency": "NZD",
+  "tuitionFee": "56327",
   "tuitionFeeRange": "NZ$56,327 *",
   "tuitionFeeNote": "Fees are set in advance of each calendar year and will be updated on this website.",
   "availableLocations": [
@@ -10,8 +10,8 @@
     "University of Auckland Online"
   ],
   "nextStartDates": [
-    "2027 Semester One \u2013 1 March",
-    "2027 Semester Two \u2013 19 July"
+    "2027 Semester One – 1 March",
+    "2027 Semester Two – 19 July"
   ],
   "programmeType": "Postgraduate",
   "studyDuration": "Full-time: 1 year",
@@ -44,14 +44,15 @@
     "2027 Semester One: 8 December 2026",
     "2027 Semester Two: 8 July 2027"
   ],
-  "initialDeposit": "",
+  "initialDeposit": "56327",
   "metadata": {
     "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-engineering-management-memgt.html",
     "studyLevel": "postgraduate"
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-engineering-management-memgt.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "courseDuration": "Full-time: 1 year",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

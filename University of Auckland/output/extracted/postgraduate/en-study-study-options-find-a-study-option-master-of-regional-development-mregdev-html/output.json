@@ -4,8 +4,8 @@
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-regional-development-mregdev.html",
   "intakeInfo": "",
   "courseDuration": "",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "58258",
+  "currency": "NZD",
   "initialDeposit": "58258",
   "applicationFee": "",
   "feesMetaData": [
@@ -90,5 +90,12 @@
   "toeflMinOverall": "90",
   "toeflMinSection": "21",
   "pteMinOverall": "58",
-  "pteMinSection": "50"
+  "pteMinSection": "50",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "58258",
+      "currency": "NZD"
+    }
+  ]
 }

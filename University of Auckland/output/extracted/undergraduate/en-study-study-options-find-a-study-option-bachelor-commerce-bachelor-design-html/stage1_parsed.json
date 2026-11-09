@@ -1,7 +1,7 @@
 {
   "courseName": "Bachelor of Commerce / Bachelor of Design Conjoint",
   "courseDuration": "Full-time: 4 years",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "location": "City",
   "points": 540,
   "programmeType": "Undergraduate",
@@ -26,10 +26,11 @@
     "requirement": "one year successful bachelor-degree level study at a recognised university (or similar institution) overseas"
   },
   "applicationDeadline": "8 December 2026",
-  "initialDeposit": "",
+  "initialDeposit": "58149",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-commerce-bachelor-design.html",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "58149",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

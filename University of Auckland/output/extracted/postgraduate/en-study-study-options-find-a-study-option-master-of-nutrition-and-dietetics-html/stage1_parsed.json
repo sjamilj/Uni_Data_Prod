@@ -1,6 +1,6 @@
 {
   "courseName": "Master of Nutrition and Dietetics",
-  "currency": "",
+  "currency": "NZD",
   "courseDuration": "Full-time: 2 years",
   "availableLocations": [
     "Grafton"
@@ -42,7 +42,9 @@
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-nutrition-and-dietetics.html",
   "intakeInfo": "",
-  "tuitionFee": "",
+  "tuitionFee": "57974",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "57974"
 }

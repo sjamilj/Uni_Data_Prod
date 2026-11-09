@@ -4,12 +4,12 @@
   "availableLocations": "City",
   "points": "120",
   "programmeType": "Postgraduate",
-  "intakeInfo": "",
-  "tuitionFee": "",
+  "intakeInfo": "December 2026, March 2027",
+  "tuitionFee": "49582",
   "applicationDeadline": "8 December 2026",
   "englishScore": "6.5",
-  "initialDeposit": "",
-  "currency": "",
+  "initialDeposit": "49582",
+  "currency": "NZD",
   "entryRequirements": [
     "An undergraduate degree in urban planning or planning",
     "GPE of 5.0 in your final year of study"
@@ -20,5 +20,6 @@
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-urban-planning-murbplan.html",
   "courseDuration": "Full-time: 1 year",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

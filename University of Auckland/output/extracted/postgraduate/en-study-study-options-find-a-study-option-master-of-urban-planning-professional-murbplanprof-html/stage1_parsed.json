@@ -2,8 +2,8 @@
   "courseName": "Master of Urban Planning (Professional)",
   "courseDuration": "Full-time: 2 years",
   "nextStartDates": [
-    "2027 Semester One \u2013 1 March",
-    "2028 Semester One \u2013 28 February"
+    "2027 Semester One – 1 March",
+    "2028 Semester One – 28 February"
   ],
   "availableLocations": [
     "City"
@@ -34,9 +34,11 @@
     "applicationNotes": "Applications are welcomed at any time. International students should start the application process as early as possible to allow sufficient time to apply for a visa."
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-urban-planning-professional-murbplanprof.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
-  "currency": "",
+  "intakeInfo": "March 2027, February 2028",
+  "tuitionFee": "58258",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "58258"
 }

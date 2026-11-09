@@ -38,17 +38,18 @@
     }
   },
   "keyDates": [
-    "Next start date: 2027 Semester One \u2013 1 March",
-    "2028 Semester One \u2013 28 February"
+    "Next start date: 2027 Semester One – 1 March",
+    "2028 Semester One – 28 February"
   ],
   "applicationClosingDates": {
     "semesterOne2027": "8 December 2026"
   },
-  "initialDeposit": "",
+  "initialDeposit": "55779",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-engineering-honours-music.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
-  "currency": "",
+  "intakeInfo": "March 2027, February 2028",
+  "tuitionFee": "55779",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

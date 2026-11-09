@@ -45,11 +45,12 @@
   "applicationClosingDates": {
     "2027": "8 December 2026"
   },
-  "initialDeposit": "",
-  "currency": "",
+  "initialDeposit": "49582",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-urban-planning-honours-burbplanhons.html",
-  "intakeInfo": "",
-  "tuitionFee": "",
+  "intakeInfo": "March 2027, February 2028",
+  "tuitionFee": "49582",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

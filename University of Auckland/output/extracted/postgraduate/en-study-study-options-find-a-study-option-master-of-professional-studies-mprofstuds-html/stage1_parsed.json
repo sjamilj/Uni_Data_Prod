@@ -1,7 +1,7 @@
 {
   "courseName": "Master of Professional Studies MProfStuds",
   "courseDuration": "Full-time: 1 year",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "availableLocations": "City",
   "points": "120",
   "programmeType": "Postgraduate",
@@ -29,12 +29,12 @@
     "specialisations": [
       {
         "specialisation": "Education",
-        "experienceRequired": "Three years\u2019 teaching experience",
+        "experienceRequired": "Three years’ teaching experience",
         "positionRequired": null
       },
       {
         "specialisation": "Mathematics Education",
-        "experienceRequired": "Three years\u2019 teaching experience",
+        "experienceRequired": "Three years’ teaching experience",
         "positionRequired": "Currently hold a teaching position"
       },
       {
@@ -53,7 +53,7 @@
     ]
   },
   "fees": {
-    "internationalStudents": "NZ$45,857 \u2013 $58,258",
+    "internationalStudents": "NZ$45,857 – $58,258",
     "studentServicesFee": "15% GST",
     "GST": "Student Services Fee of $9.44 per point, estimated at $1,132.80 for full-time study (120 points)"
   },
@@ -66,8 +66,10 @@
     }
   },
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-professional-studies-mprofstuds.html",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "45857",
+  "currency": "NZD",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": [],
+  "initialDeposit": "45857"
 }

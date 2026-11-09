@@ -1,7 +1,7 @@
 {
   "courseName": "Bachelor of Science BSc",
   "duration": "Full-time: 3 years",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "availableLocations": "City, Grafton",
   "points": "360",
   "programmeType": "Undergraduate",
@@ -10,10 +10,10 @@
     "IB Diploma": "26",
     "GCE A Level/CIE": "BCC"
   },
-  "tuitionFee": "",
-  "initialDeposit": "",
+  "tuitionFee": "48426",
+  "initialDeposit": "48426",
   "applicationDeadline": "8 December 2026, 4 July 2027",
-  "currency": "",
+  "currency": "NZD",
   "qualifications": [
     "IB International Baccalaureate Diploma",
     "GCE A Level/CIE"
@@ -31,5 +31,6 @@
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-science-bsc.html",
   "courseDuration": "Full-time: 3 years",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }

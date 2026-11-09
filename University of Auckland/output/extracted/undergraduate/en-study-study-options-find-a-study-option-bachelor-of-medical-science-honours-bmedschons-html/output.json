@@ -2,10 +2,10 @@
   "uniName": "University of Auckland",
   "courseName": "Bachelor of Medical Science (Honours) BMedSc(Hons)",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-medical-science-honours-bmedschons.html",
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, February 2028",
   "courseDuration": "Full-time: 1 year",
-  "tuitionFee": "",
-  "currency": "",
+  "tuitionFee": "57974",
+  "currency": "NZD",
   "initialDeposit": "57974",
   "applicationFee": "",
   "feesMetaData": [
@@ -66,5 +66,12 @@
   "toeflMinOverall": "90",
   "toeflMinSection": "21",
   "pteMinOverall": "58",
-  "pteMinSection": "50"
+  "pteMinSection": "50",
+  "tuitionFeeCandidates": [
+    {
+      "label": "INTERNATIONAL",
+      "amount": "57974",
+      "currency": "NZD"
+    }
+  ]
 }

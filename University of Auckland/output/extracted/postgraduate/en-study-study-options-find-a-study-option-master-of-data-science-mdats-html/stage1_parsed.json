@@ -13,19 +13,20 @@
     "240"
   ],
   "programmeType": "Postgraduate",
-  "tuitionFee": "",
+  "tuitionFee": "57974",
   "studentServicesFee": 1132.8,
   "applicationClosingDates": [
     "8 December 2026",
     "4 July 2027"
   ],
-  "intakeInfo": "",
+  "intakeInfo": "March 2027, July 2027",
   "englishScores": [
     "6.5"
   ],
-  "initialDeposit": "",
-  "currency": "",
+  "initialDeposit": "57974",
+  "currency": "NZD",
   "courseUrl": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-data-science-mdats.html",
   "ieltsMinOverall": "",
-  "ieltsMinSection": ""
+  "ieltsMinSection": "",
+  "feesMetaData": []
 }
