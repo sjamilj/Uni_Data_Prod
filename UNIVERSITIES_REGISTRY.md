@@ -35,7 +35,9 @@ git tag -l "uni/<slug>/foundation/*"
 | `shared/v1.1.0` | `14cc330` | Audit CSV, degreeName LLM inference, studyLevel export rows |
 | `shared/v1.2.0` | `f99ad58` | CDP/device-profile download, UG higherDegree mapping, `package_uni_backup.py` |
 | `shared/v1.2.1` | `5c43b8f` | degreeName by study level; validate `degreeName` fill; comma `tuitionFee` |
-| `shared/v1.2.2` | `c504489` | **Current reset baseline** — `audit_clean_course_markdown.py`; `test_entry_requirements.py`; course-type filter + scrape/llm tweaks; `git restore --source shared/v1.2.2 -- shared/` |
+| `shared/v1.2.2` | `c504489` | `audit_clean_course_markdown.py`; `test_entry_requirements.py`; course-type filter + scrape/llm tweaks |
+| `shared/v1.2.3` | `c71df56` | AUT quick-facts dates, duration, NZD tuition parser, and scholarship backfill from saved responses |
+| `shared/v1.2.4` | `b8c4699` | **Current reset baseline** — offset-based pagination, all-scope listing support, and dashboard subprocess UTF-8 output handling; `git restore --source shared/v1.2.4 -- shared/` |
 | `infra/onboarding-skills/v1.0.0` | — | Cursor agent skills under `.cursor/skills/` + README operator guide |
 | `infra/onboarding-skills/v1.0.2` | — | Skill YAML trigger descriptions, `docs/PIPELINE.md` links, shared baseline in skills |
 | `uni/{slug}/v1.0.0` | — | Full university complete (all study levels) |
