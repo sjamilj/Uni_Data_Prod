@@ -7,6 +7,13 @@
       "course_url": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-arts-biomedical-science.html",
       "source": "undergraduate_course_urls.csv",
       "precalc_at": "2026-11-05"
+    },
+    "Auckland University of Technology": {
+      "slug": "aut",
+      "study_level": "undergraduate",
+      "course_url": "https://www.aut.ac.nz/courses/bachelor-of-arts",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-11-10"
     }
   }
 }

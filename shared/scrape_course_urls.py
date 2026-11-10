@@ -1464,8 +1464,16 @@ class PaginatedListingExtractor:
             start, end, total = ListingResultParser.get_result_info(html)
             if total is not None and max_pages is None:
                 page_size = (end - start + 1) if start and end else 12
-                max_pages = ListingResultParser.estimated_total_pages(total, page_size)
-                print(f"    [{scope}] {label}: {total} results, ~{max_pages} pages ({page_size} per page)")
+                total_pages = ListingResultParser.estimated_total_pages(total, page_size)
+                # Pagination parameters may be page numbers (1, 2, 3) or result
+                # offsets such as AUT's start_rank (1, 51, 101). The stop check
+                # compares the parameter value, so convert the page count into
+                # the last parameter value for offset-based pagination.
+                max_pages = page_index + max(0, total_pages - 1) * page_step
+                print(
+                    f"    [{scope}] {label}: {total} results, ~{total_pages} pages "
+                    f"({page_size} per page; last page index {max_pages})"
+                )
 
             page_urls = matcher.extract_from_html(html, base_url)
             page_url_set = set(page_urls)
@@ -1594,7 +1602,11 @@ class CourseUrlScraper:
         listings = [
             item
             for item in self.config.degree_listings
-            if item.scope in wanted or scope_to_level(item.scope) in study_levels
+            if (
+                item.scope in wanted
+                or scope_to_level(item.scope) in study_levels
+                or item.scope.strip().upper() in {"ALL", "ALL_COURSE"}
+            )
         ]
         catalogues = [
             item
