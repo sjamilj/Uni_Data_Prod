@@ -39,7 +39,15 @@ class ReviewPackageBuilder:
         self.repo_root = (repo_root or _REPO_ROOT).resolve()
 
     @staticmethod
-    def find_variant_csv(uni_dir: Path) -> Path:
+    def find_variant_csv(uni_dir: Path, variant: str | None = None) -> Path:
+        if variant:
+            if variant not in VARIANT_FILES:
+                names = ", ".join(sorted(VARIANT_FILES))
+                raise ValueError(f"Unknown variant {variant!r}. Expected one of: {names}")
+            selected = uni_dir / variant
+            if not selected.is_file():
+                raise FileNotFoundError(f"Selected variant CSV not found: {selected}")
+            return selected
         matches = sorted(
             path
             for name in VARIANT_FILES
@@ -101,9 +109,10 @@ class ReviewPackageBuilder:
         *,
         force: bool = False,
         dry_run: bool = False,
+        variant: str | None = None,
     ) -> ReviewPackageResult:
         uni_dir = self.resolve_university_dir(university_name)
-        variant_csv = self.find_variant_csv(uni_dir)
+        variant_csv = self.find_variant_csv(uni_dir, variant)
         reviewed_csv = self.reviewed_csv_path(uni_dir, university_name)
 
         if not reviewed_csv.is_file():
@@ -185,6 +194,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help=f"Overwrite existing files in {REVIEW_DIR_NAME}/{{university}}/",
     )
     parser.add_argument(
+        "--variant",
+        choices=sorted(VARIANT_FILES),
+        help="Select a variant CSV when the university folder contains more than one.",
+    )
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="Print destination paths without copying",
@@ -200,6 +214,7 @@ def main(argv: list[str] | None = None) -> int:
             args.university_name,
             force=args.force,
             dry_run=args.dry_run,
+            variant=args.variant,
         )
     except (FileNotFoundError, FileExistsError, ValueError) as exc:
         print(f"Error: {exc}", file=sys.stderr)
