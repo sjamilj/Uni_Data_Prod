@@ -949,6 +949,68 @@ class Stage1MarkdownParser:
         return fields
 
     @staticmethod
+    def extract_waikato_fields(body: str) -> dict[str, str]:
+        """Parse Waikato qualification key facts from saved clean markdown."""
+        fields: dict[str, str] = {}
+        key_info_match = re.search(
+            r"(?im)^## Key information\s*\n(.*?)(?=^## |\Z)", body, re.S
+        )
+        if not key_info_match:
+            return fields
+        key_info = key_info_match.group(1)
+
+        start_match = re.search(
+            r"(?im)^Start Dates\s*\n(.*?)(?=^Estimated fees\s*$|^## |\Z)",
+            key_info,
+            re.S,
+        )
+        if start_match:
+            start_text = start_match.group(1)
+            date_tokens = re.findall(
+                r"\b(?:\d{1,2}\s+)?(January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)(?:\s+((?:19|20)\d{2}))?\b",
+                start_text,
+                re.I,
+            )
+            normalized_dates: list[str] = []
+            for month, year in date_tokens:
+                month_name = Stage1MarkdownParser.normalize_short_month_date(f"{month} {year}" if year else month)
+                if month_name:
+                    normalized_dates.append(month_name)
+            if normalized_dates:
+                fields["intakeInfo"] = ", ".join(dict.fromkeys(normalized_dates))
+
+        duration_match = re.search(
+            r"(?im)^Points and Duration\s*\n(.*?)(?=^Locations\s*$|^## |\Z)",
+            key_info,
+            re.S,
+        )
+        if duration_match:
+            duration_text = duration_match.group(1)
+            duration = re.search(
+                r"\b\d+(?:\.\d+)?\s*(?:-|–|to)\s*\d+(?:\.\d+)?\s*(?:years?|months?)\b|\b\d+(?:\.\d+)?\s*(?:years?|months?)\b",
+                duration_text,
+                re.I,
+            )
+            if duration:
+                fields["courseDuration"] = duration.group(0).strip()
+            elif re.search(r"\bE\s+rua\s+tau\b", duration_text, re.I):
+                fields["courseDuration"] = "2 years"
+
+        fees_match = re.search(
+            r"(?im)^Estimated fees\b\s*(.*?)(?=^## |\Z)", key_info, re.S
+        )
+        if fees_match:
+            international = re.search(
+                r"\bInternational\s*:\s*([^\n]+)", fees_match.group(1), re.I
+            )
+            if international:
+                amount = re.search(r"\$\s*([\d,]+(?:\.\d{1,2})?)", international.group(1))
+                if amount:
+                    fields["tuitionFee"] = amount.group(1).replace(",", "")
+                    fields["currency"] = "NZD"
+        return fields
+
+    @staticmethod
     def extract_research_fee_difference(body: str) -> str:
         """Partially-funded PhD: difference between Home and Overseas tuition fees is £17,712."""
         match = re.search(
@@ -1162,6 +1224,7 @@ class Stage1MarkdownParser:
         fields: dict[str, str] = {}
         fields.update(Stage1MarkdownParser.extract_auckland_fields(body))
         fields.update(Stage1MarkdownParser.extract_aut_fields(body))
+        fields.update(Stage1MarkdownParser.extract_waikato_fields(body))
         if "## Key information" in body:
             fields.update(
                 {
@@ -1277,9 +1340,9 @@ class Stage1MarkdownParser:
         match = re.search('(\\d+)\\s*months?\\b', value, re.I)
         if match:
             return match.group(1)
-        match = re.search('(\\d+)\\s*years?\\b', value, re.I)
+        match = re.search('(\\d+(?:\\.\\d+)?)\\s*years?\\b', value, re.I)
         if match:
-            return str(int(match.group(1)) * 12)
+            return str(int(float(match.group(1)) * 12))
         if value.isdigit():
             return value
         return ''
@@ -1835,7 +1898,9 @@ class Stage1Enricher:
             Stage1MarkdownParser.coalesce_stage1_fields_from_fees_metadata(parsed, course_body)
         tuition_fee = str(parsed.get('tuitionFee', '') or '').strip()
         if tuition_fee:
-            parsed['feesMetaData'] = patch_fees_metadata_international_fee(parsed.get('feesMetaData'), tuition_fee)
+            parsed['feesMetaData'] = patch_fees_metadata_international_fee(
+                parsed.get('feesMetaData'), tuition_fee, str(parsed.get('currency') or '')
+            )
 
     @staticmethod
     def enrich_stage1_from_markdown(
@@ -1889,12 +1954,16 @@ class Stage1Enricher:
     def patch_fees_metadata_international_fee(
     fees_meta: object,
     tuition_fee: str,
+    currency: str = "GBP",
 ) -> list[dict[str, object]]:
         """Replace LLM placeholder fee lines with the parsed international tuition fee."""
+        currency = (currency or "GBP").strip().upper()
+        symbol = {"NZD": "NZ$", "GBP": "£", "AUD": "A$", "USD": "US$", "CAD": "CA$"}.get(currency, "")
         try:
-            fee_display = f"£{int(str(tuition_fee).replace(',', '')):,}"
+            amount_display = f"{int(str(tuition_fee).replace(',', '')):,}"
         except ValueError:
-            fee_display = f'£{tuition_fee}'
+            amount_display = str(tuition_fee)
+        fee_display = f"{symbol}{amount_display}"
         fee_line = f'International tuition fee: {fee_display}'
         meta = Stage2Enricher.normalize_metadata_array(fees_meta)
         patched = False

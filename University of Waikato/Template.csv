@@ -1,8 +1,8 @@
-Course Type,DegreeScopedPaginated.csv,,,,,,,,
-Uni Name,,,,,,,,,
-Uni Link,,,,,,,,,
+﻿Course Type,Paginated.csv,,,,,,,,
+Uni Name,University of Waikato,,,,,,,,
+Uni Link,https://www.waikato.ac.nz,,,,,,,,
 Programme,ALL Course Listing URL,Paginated Course Listing URL - Page 1,Paginated Course Listing URL - Page 2,Course Detail Page URL,Bangladesh Entry Requirements URL,English Language Requirements URL,Scholarship Information URL,Deposit Information URL,Comments
-All,,,,,,,,,
+All,,https://www.waikato.ac.nz/study/qualifications/?page=1,https://www.waikato.ac.nz/study/qualifications/?page=2,https://www.waikato.ac.nz/study/qualifications/bachelor-of-arts/,https://www.waikato.ac.nz/study/apply/international/entry-requirements-for-international-students/,https://www.waikato.ac.nz/study/apply/international/entry-requirements-for-international-students/,https://www.waikato.ac.nz/study/scholarships/find-a-scholarship/vice-chancellors-international-excellence-scholarship/,https://www.waikato.ac.nz/study/apply/international/,
 Foundation,,,,,,,,,
 Undergraduate,,,,,,,,,
 Postgraduate,,,,,,,,,

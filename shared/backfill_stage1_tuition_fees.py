@@ -9,7 +9,7 @@ import re
 import sys
 from pathlib import Path
 
-from llm_extract import enrich_stage1_from_markdown
+from llm_extract import enrich_stage1_from_markdown, normalize_duration_months
 from uni_pages import split_frontmatter
 from uni_paths import resolve_code_dir, resolve_output_dir
 
@@ -44,13 +44,31 @@ def _load_response_json(course_dir: Path, filename: str) -> dict:
         return {}
 
 
-def _backfill_scholarship(course_dir: Path, output: dict) -> None:
-    """Repair scholarship scalars/metadata from the saved response, without an LLM call."""
-    response = _load_response_json(course_dir, "scholarship_response.json")
-    if not response:
-        return
+def _load_clean_scholarship(course_dir: Path) -> dict:
+    """Read the structured university scholarship record as a response fallback."""
+    output_dir = next((parent for parent in course_dir.parents if parent.name == "output"), None)
+    if output_dir is None:
+        return {}
+    path = output_dir / "clean" / "uni" / "scholarships.md"
+    if not path.is_file():
+        return {}
+    text = path.read_text(encoding="utf-8")
+    match = re.search(r"(?m)^\s*\[\s*$", text)
+    if not match:
+        return {}
+    try:
+        payload, _ = json.JSONDecoder().raw_decode(text, text.index("[", match.start()))
+    except json.JSONDecodeError:
+        return {}
+    return payload[0] if isinstance(payload, list) and payload and isinstance(payload[0], dict) else {}
 
-    amount = re.sub(r"[^\d.]", "", str(response.get("scholarshipAmount") or ""))
+
+def _backfill_scholarship(course_dir: Path, output: dict) -> None:
+    """Repair scholarship fields from saved responses or clean uni data, without an LLM call."""
+    response = _load_response_json(course_dir, "scholarship_response.json")
+    clean_record = _load_clean_scholarship(course_dir)
+    raw_amount = response.get("scholarshipAmount") or clean_record.get("Amount") or ""
+    amount = re.sub(r"[^\d.]", "", str(raw_amount))
     if amount:
         try:
             numeric = float(amount)
@@ -60,12 +78,30 @@ def _backfill_scholarship(course_dir: Path, output: dict) -> None:
     if not amount:
         return
 
-    name = str(output.get("scholarshipName") or response.get("scholarshipName") or "").strip()
+    name = str(
+        output.get("scholarshipName")
+        or response.get("scholarshipName")
+        or clean_record.get("scholarshipName")
+        or ""
+    ).strip()
     currency = str(output.get("currency") or "").strip()
     symbol = "NZ$" if currency == "NZD" else "£" if currency == "GBP" else ""
     amount_display = f"{symbol}{float(amount):,.0f}" if symbol else amount
 
     response_meta = response.get("scholarshipMetaData")
+    if clean_record:
+        clean_descriptions = []
+        eligibility = str(clean_record.get("Eligibility") or "").strip()
+        if eligibility:
+            clean_descriptions.append(eligibility)
+        raw_descriptions = clean_record.get("description", [])
+        if isinstance(raw_descriptions, str):
+            raw_descriptions = [raw_descriptions]
+        if isinstance(raw_descriptions, list):
+            clean_descriptions.extend(
+                str(item).strip() for item in raw_descriptions if str(item).strip()
+            )
+        response_meta = [{"subtitle": "Scholarships", "description": clean_descriptions}]
     if isinstance(response_meta, dict):
         response_meta = [response_meta]
     descriptions: list[str] = []
@@ -87,7 +123,12 @@ def _backfill_scholarship(course_dir: Path, output: dict) -> None:
     scholarship = {
         "scholarshipName": name,
         "scholarshipAmount": amount,
-        "scholarshipType": str(response.get("scholarshipType") or output.get("scholarshipType") or "Amount").strip(),
+        "scholarshipType": str(
+            response.get("scholarshipType")
+            or clean_record.get("scholarshipType")
+            or output.get("scholarshipType")
+            or "Amount"
+        ).strip(),
         "scholarshipMetaData": [{"subtitle": "Scholarships", "description": descriptions}],
     }
     scholarship_path = course_dir / "scholarship_parsed.json"
@@ -105,7 +146,18 @@ def _resolve_clean_md(output_dir: Path, study_level: str, slug: str) -> Path | N
         path = output_dir / "clean" / "courses" / level / f"{slug}.md"
         if path.is_file():
             return path
+        pre_setup_path = output_dir / "clean" / "pre_setup_course" / level / f"{slug}.md"
+        if pre_setup_path.is_file():
+            return pre_setup_path
     return None
+
+
+def _extraction_level_and_slug(output_dir: Path, course_dir: Path) -> tuple[str, str] | None:
+    """Support regular extracts and the pre-setup sample extraction tree."""
+    parts = course_dir.relative_to(output_dir / "extracted").parts
+    if parts and parts[0] == "pre_setup_course_extracted":
+        return (parts[1], parts[2]) if len(parts) >= 3 else None
+    return (parts[0], parts[1]) if len(parts) >= 2 else None
 
 
 def backfill_course_dir(output_dir: Path, course_dir: Path) -> bool:
@@ -113,10 +165,10 @@ def backfill_course_dir(output_dir: Path, course_dir: Path) -> bool:
     if not output_path.is_file():
         return False
 
-    parts = course_dir.relative_to(output_dir / "extracted").parts
-    if len(parts) < 2:
+    location = _extraction_level_and_slug(output_dir, course_dir)
+    if not location:
         return False
-    study_level, slug = parts[0], parts[1]
+    study_level, slug = location
 
     md_path = _resolve_clean_md(output_dir, study_level, slug)
     if not md_path:
@@ -141,7 +193,7 @@ def backfill_course_dir(output_dir: Path, course_dir: Path) -> bool:
     new_fee = str(enriched.get("tuitionFee") or "").strip()
     new_currency = str(enriched.get("currency") or "").strip()
     new_intake = str(enriched.get("intakeInfo") or "").strip()
-    new_duration = str(enriched.get("courseDuration") or "").strip()
+    new_duration = normalize_duration_months(str(enriched.get("courseDuration") or ""))
     old_fee = str(output.get("tuitionFee") or "").strip()
     old_intake = str(output.get("intakeInfo") or "").strip()
     old_duration = str(output.get("courseDuration") or "").strip()
@@ -150,14 +202,14 @@ def backfill_course_dir(output_dir: Path, course_dir: Path) -> bool:
     stage1_parsed = json.loads(stage1_parsed_path.read_text(encoding="utf-8")) if stage1_parsed_path.is_file() else {}
     if not isinstance(stage1_parsed, dict):
         stage1_parsed = {}
-    stage1_parsed.update(
-        {
-            "tuitionFee": new_fee,
-            "currency": new_currency,
-            "intakeInfo": enriched.get("intakeInfo", stage1_parsed.get("intakeInfo", "")),
-            "courseDuration": enriched.get("courseDuration", stage1_parsed.get("courseDuration", "")),
-        }
-    )
+    if new_fee:
+        stage1_parsed["tuitionFee"] = new_fee
+    if new_currency:
+        stage1_parsed["currency"] = new_currency
+    if new_intake:
+        stage1_parsed["intakeInfo"] = new_intake
+    if new_duration:
+        stage1_parsed["courseDuration"] = new_duration
     if new_fee:
         stage1_parsed["initialDeposit"] = new_fee
     stage1_parsed_path.write_text(
@@ -165,8 +217,10 @@ def backfill_course_dir(output_dir: Path, course_dir: Path) -> bool:
         encoding="utf-8",
     )
 
-    output["tuitionFee"] = new_fee
-    output["currency"] = new_currency
+    if new_fee:
+        output["tuitionFee"] = new_fee
+    if new_currency:
+        output["currency"] = new_currency
     if new_fee:
         output["initialDeposit"] = new_fee
     if new_intake:
@@ -205,8 +259,8 @@ def backfill_university(code_dir: Path, *, study_levels: set[str] | None = None)
     total = 0
     for output_path in sorted(extracted.rglob("output.json")):
         if study_levels:
-            parts = output_path.parent.relative_to(extracted).parts
-            if not parts or parts[0] not in study_levels:
+            location = _extraction_level_and_slug(output_dir, output_path.parent)
+            if not location or location[0] not in study_levels:
                 continue
         total += 1
         if backfill_course_dir(output_dir, output_path.parent):

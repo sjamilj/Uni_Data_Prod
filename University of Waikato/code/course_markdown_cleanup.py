@@ -1,13 +1,8 @@
-"""University-specific course markdown cleanup (optional).
+"""University of Waikato course markdown cleanup.
 
-Configure simple heading removal in code/.env:
-
-  COURSE_MARKDOWN_REMOVE_SECTIONS="
-  4 :: With placement
-  3 :: UK students
-  "
-
-Add conditional rules here via cleanup_course_markdown_uni() when .env is not enough.
+Waikato qualification pages are extracted through CSS selectors configured in
+code/.env (overview, desktop key facts, entry requirements and fees tabs).
+This hook stays available for future Waikato-specific markdown corrections.
 """
 
 from __future__ import annotations
@@ -23,7 +18,7 @@ from course_markdown_cleanup import main
 
 
 def cleanup_course_markdown_uni(markdown: str) -> str:
-    """Per-university rules after shared .env section removal. Default: no-op."""
+    """Return the selected qualification content without further rewriting."""
     return markdown
 
 
