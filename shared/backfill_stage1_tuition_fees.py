@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -28,6 +29,70 @@ def _load_stage1_llm_json(course_dir: Path) -> dict:
         if isinstance(parsed, dict):
             return parsed
     return {}
+
+
+def _load_response_json(course_dir: Path, filename: str) -> dict:
+    response_path = course_dir / filename
+    if not response_path.is_file():
+        return {}
+    try:
+        payload = json.loads(response_path.read_text(encoding="utf-8"))
+        content = payload.get("message", {}).get("content", "")
+        parsed = json.loads(content) if isinstance(content, str) and content.strip() else {}
+        return parsed if isinstance(parsed, dict) else {}
+    except (OSError, json.JSONDecodeError, AttributeError):
+        return {}
+
+
+def _backfill_scholarship(course_dir: Path, output: dict) -> None:
+    """Repair scholarship scalars/metadata from the saved response, without an LLM call."""
+    response = _load_response_json(course_dir, "scholarship_response.json")
+    if not response:
+        return
+
+    amount = re.sub(r"[^\d.]", "", str(response.get("scholarshipAmount") or ""))
+    if amount:
+        try:
+            numeric = float(amount)
+            amount = str(int(numeric)) if numeric.is_integer() else str(numeric)
+        except ValueError:
+            amount = ""
+    if not amount:
+        return
+
+    name = str(output.get("scholarshipName") or response.get("scholarshipName") or "").strip()
+    currency = str(output.get("currency") or "").strip()
+    symbol = "NZ$" if currency == "NZD" else "£" if currency == "GBP" else ""
+    amount_display = f"{symbol}{float(amount):,.0f}" if symbol else amount
+
+    response_meta = response.get("scholarshipMetaData")
+    if isinstance(response_meta, dict):
+        response_meta = [response_meta]
+    descriptions: list[str] = []
+    if isinstance(response_meta, list):
+        for block in response_meta:
+            if not isinstance(block, dict):
+                continue
+            raw_description = block.get("description", [])
+            if isinstance(raw_description, str):
+                raw_description = [raw_description]
+            if isinstance(raw_description, list):
+                descriptions.extend(
+                    str(item).strip()
+                    for item in raw_description
+                    if isinstance(item, str) and item.strip()
+                )
+    award_line = f"{name}: {amount_display}." if name and symbol else f"Award amount: {amount_display}."
+    descriptions = [award_line] + [item for item in dict.fromkeys(descriptions) if item != award_line]
+    scholarship = {
+        "scholarshipName": name,
+        "scholarshipAmount": amount,
+        "scholarshipType": str(response.get("scholarshipType") or output.get("scholarshipType") or "Amount").strip(),
+        "scholarshipMetaData": [{"subtitle": "Scholarships", "description": descriptions}],
+    }
+    scholarship_path = course_dir / "scholarship_parsed.json"
+    scholarship_path.write_text(json.dumps(scholarship, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    output.update(scholarship)
 
 
 def _resolve_clean_md(output_dir: Path, study_level: str, slug: str) -> Path | None:
@@ -112,6 +177,7 @@ def backfill_course_dir(output_dir: Path, course_dir: Path) -> bool:
         output["tuitionFeeCandidates"] = [
             {"label": "INTERNATIONAL", "amount": new_fee, "currency": new_currency}
         ]
+    _backfill_scholarship(course_dir, output)
     output_path.write_text(
         json.dumps(output, indent=2, ensure_ascii=False, default=str) + "\n",
         encoding="utf-8",

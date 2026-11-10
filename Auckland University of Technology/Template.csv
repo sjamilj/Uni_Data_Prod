@@ -1,8 +1,8 @@
-Course Type,DegreeScopedPaginated.csv,,,,,,,,
-Uni Name,,,,,,,,,
-Uni Link,,,,,,,,,
+Course Type,Paginated.csv,,,,,,,,
+Uni Name,Auckland University of Technology,,,,,,,,
+Uni Link,https://www.aut.ac.nz,,,,,,,,
 Programme,ALL Course Listing URL,Paginated Course Listing URL - Page 1,Paginated Course Listing URL - Page 2,Course Detail Page URL,Bangladesh Entry Requirements URL,English Language Requirements URL,Scholarship Information URL,Deposit Information URL,Comments
-All,,,,,,,,,
+All,,https://www.aut.ac.nz/s/search.html?&collection=aut%7Esp-aut-ac-nz-meta&f.Course+type%7C5=Postgraduate&f.Course+type%7C5=Undergraduate&f.Date%7Cd=d%3D0+%3A%3A+Uncertain&f.Type%7CT=Course&num_ranks=50&profile=main-search&query=&sitetheme=purple&tab=Course&start_rank=1,https://www.aut.ac.nz/s/search.html?&collection=aut%7Esp-aut-ac-nz-meta&f.Course+type%7C5=Postgraduate&f.Course+type%7C5=Undergraduate&f.Date%7Cd=d%3D0+%3A%3A+Uncertain&f.Type%7CT=Course&num_ranks=50&profile=main-search&query=&sitetheme=purple&tab=Course&start_rank=51,,,,,,
 Foundation,,,,,,,,,
 Undergraduate,,,,,,,,,
 Postgraduate,,,,,,,,,

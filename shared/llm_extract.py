@@ -906,6 +906,49 @@ class Stage1MarkdownParser:
         return fields
 
     @staticmethod
+    def extract_aut_fields(body: str) -> dict[str, str]:
+        """Parse AUT quick facts and international fees from clean course markdown."""
+        fields: dict[str, str] = {}
+        if not re.search(r"Programme code:\s*AK\d+", body, re.I):
+            return fields
+
+        starts = re.search(
+            r"\bStarts:\s*(.*?)(?=Key semester dates|\n## |\Z)", body, re.I | re.S
+        )
+        if starts:
+            dates = re.findall(
+                r"\b\d{1,2}\s+(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+((?:19|20)\d{2})\b",
+                starts.group(1),
+                re.I,
+            )
+            if dates:
+                fields["intakeInfo"] = ", ".join(
+                    dict.fromkeys(
+                        Stage1MarkdownParser.normalize_short_month_date(f"{month} {year}")
+                        for month, year in dates
+                    )
+                )
+
+        facts = re.search(r"## Quick facts\s*(.*?)(?=\n## |\Z)", body, re.I | re.S)
+        if facts:
+            duration = re.search(
+                r"\bDuration:\s*(.*?)(?=\s+Campus:|\n|\Z)", facts.group(1), re.I
+            )
+            if duration and re.search(r"\d+\s*(?:years?|months?)", duration.group(1), re.I):
+                fields["courseDuration"] = duration.group(1).strip()
+
+        fees = re.search(
+            r"## International tuition fees\s*(.*?)(?=\n## |\Z)", body, re.I | re.S
+        )
+        if fees:
+            amount = re.search(r"\bInternational\s+(?:NZ\s*)?\$\s*([\d,]+(?:\.\d{1,2})?)", fees.group(1), re.I)
+            if amount:
+                fields["tuitionFee"] = amount.group(1).replace(",", "")
+                # AUT course pages quote New Zealand dollar amounts with a bare '$'.
+                fields["currency"] = "NZD"
+        return fields
+
+    @staticmethod
     def extract_research_fee_difference(body: str) -> str:
         """Partially-funded PhD: difference between Home and Overseas tuition fees is £17,712."""
         match = re.search(
@@ -1118,6 +1161,7 @@ class Stage1MarkdownParser:
         """Parse intake, fees, duration, and IELTS scalars from clean course markdown."""
         fields: dict[str, str] = {}
         fields.update(Stage1MarkdownParser.extract_auckland_fields(body))
+        fields.update(Stage1MarkdownParser.extract_aut_fields(body))
         if "## Key information" in body:
             fields.update(
                 {
