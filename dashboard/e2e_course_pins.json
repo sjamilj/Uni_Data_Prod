@@ -14,6 +14,13 @@
       "course_url": "https://www.aut.ac.nz/courses/bachelor-of-arts",
       "source": "undergraduate_course_urls.csv",
       "precalc_at": "2026-11-10"
+    },
+    "University of Waikato": {
+      "slug": "wu",
+      "study_level": "undergraduate",
+      "course_url": "https://www.waikato.ac.nz/study/qualifications/bachelor-of-applied-computing",
+      "source": "undergraduate_course_urls.csv",
+      "precalc_at": "2026-11-10"
     }
   }
 }
