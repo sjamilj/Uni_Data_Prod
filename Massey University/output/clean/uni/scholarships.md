@@ -1,0 +1,46 @@
+---
+source_html: uni_req/scholarships.html
+source_url: https://www.massey.ac.nz/study/scholarships-and-awards/
+page_type: uni
+university: Massey University
+cleaned_at: 2026-11-15
+---
+# Scholarships
+
+```json
+[
+  {
+    "scholarshipName": "MUC Tuition Fee Scholarships",
+    "scholarshipType": "Percentage",
+    "scholarshipStudyLevel": "Foundation",
+    "Eligibility": "International students enrolling in a Massey University College programme; English language programmes are excluded.",
+    "Amount": "20%",
+    "description": [
+      "In 2026, Massey University College offers a 20% tuition fee scholarship to international students who enrol in an MUC programme, excluding English language programmes."
+    ]
+  },
+  {
+    "scholarshipName": "Undergraduate International Study Grants",
+    "scholarshipType": "Amount",
+    "scholarshipStudyLevel": "Undergraduate",
+    "Eligibility": "New international students enrolling full-time at Massey in 2027 in an eligible undergraduate degree. Onshore study and specific programmes only. Students with fully funded government scholarships (including Fed Aid, SACM, Manaaki or TSLS) are not eligible.",
+    "Amount": "NZ$15,000",
+    "description": [
+      "Tuition fee contribution of NZ$15,000 for one year. Applicants may be from any region and must be new to Massey and intending to study full-time in 2027.",
+      "Eligible programmes: Bachelor Accountancy; Bachelor Agribusiness; Bachelor Agricultural Science; Bachelor Arts; Bachelor of Aviation Management; Bachelor Commercial Music; Bachelor Communication; Bachelor Design / BDes (Honours); Bachelor Fine Arts / BFA (Honours); Bachelor Food Technology with Honours; Bachelor Horticultural and Plant Systems; Bachelor Nursing; Bachelor Resource and Environmental Planning; Bachelor Screen Arts / BSA (Honours); Bachelor Sport and Exercise"
+    ]
+  },
+  {
+    "scholarshipName": "Postgraduate International Study Grants",
+    "scholarshipType": "Amount",
+    "scholarshipStudyLevel": "Postgraduate",
+    "Eligibility": "New international students enrolling full-time at Massey in 2027 in an eligible postgraduate degree. Onshore study and specific programmes only. Students with fully funded government scholarships (including Fed Aid, SACM, Manaaki or TSLS) are not eligible.",
+    "Amount": "NZ$10,000",
+    "description": [
+      "Tuition fee contribution of NZ$10,000. Applicants may be from any region and must be new to Massey and intending to study full-time in 2027.",
+      "Eligible programmes: Executive Master of Business Administration; Master of Agribusiness; Master of Applied Linguistics; Master of Arts; Master of Aviation; Master of Commercial Music; Master of Communication; Master of Design; Master of Emergency Management; Master of Environmental Management; Master of Fine Arts; Master of Food Safety and Quality; Master of Food Technology; Master of Health Service Management; Master of International Development; Master of Resource and Environmental Planning; Master of Science; Master of Screen Arts; Master of Supply Chain Management; Master of Sustainable Development Goals; Master of Veterinary Studies"
+    ]
+  }
+]
+```
+

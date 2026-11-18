@@ -1,8 +1,8 @@
-Course Type,DegreeScopedPaginated.csv,,,,,,,,
-Uni Name,,,,,,,,,
-Uni Link,,,,,,,,,
+﻿Course Type,ALL_COURSE.csv,,,,,,,,
+Uni Name,Massey University,,,,,,,,
+Uni Link,https://www.massey.ac.nz,,,,,,,,
 Programme,ALL Course Listing URL,Paginated Course Listing URL - Page 1,Paginated Course Listing URL - Page 2,Course Detail Page URL,Bangladesh Entry Requirements URL,English Language Requirements URL,Scholarship Information URL,Deposit Information URL,Comments
-All,,,,,,,,,
+All,https://www.massey.ac.nz/search/?size=n_366_n&filters%5B0%5D%5Bfield%5D=__search_type&filters%5B0%5D%5Bvalues%5D%5B0%5D=quals-specs&filters%5B0%5D%5Btype%5D=all&filters%5B1%5D%5Bfield%5D=is_international_available&filters%5B1%5D%5Bvalues%5D%5B0%5D=n_1_n&filters%5B1%5D%5Btype%5D=any&filters%5B2%5D%5Bfield%5D=study_level&filters%5B2%5D%5Bvalues%5D%5B0%5D=Undergraduate%20study&filters%5B2%5D%5Bvalues%5D%5B1%5D=Postgraduate%20study&filters%5B2%5D%5Btype%5D=any,,,https://www.massey.ac.nz/study/all-qualifications-and-degrees/bachelor-of-arts-UBART/sociology-UBART2JSCLG1/,https://www.massey.ac.nz/study/entry-requirements-to-study-at-massey/entry-requirements-for-international-students/,https://www.massey.ac.nz/study/entry-requirements-to-study-at-massey/entry-requirements-for-international-students/,https://www.massey.ac.nz/study/scholarships-and-awards/,,
 Foundation,,,,,,,,,
 Undergraduate,,,,,,,,,
 Postgraduate,,,,,,,,,
